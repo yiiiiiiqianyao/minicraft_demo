@@ -7,9 +7,10 @@ import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { initSky } from "./sky";
 import { initLight, sunSettings } from "./light";
-import { updateRenderInfo, updateStats } from "./dev";
+import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { PlayerParams } from "./player/literal";
+import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -47,12 +48,6 @@ export default class Game {
   initScene() {
     this.scene = new THREE.Scene();
 
-    this.orbitCamera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight
-    );
-    this.orbitCamera.position.set(-32, 64, -32);
-
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -64,12 +59,9 @@ export default class Game {
     const wrap = document.getElementById('canvas_wrap');
     wrap?.appendChild(this.renderer.domElement);
 
-    this.controls = new OrbitControls(
-      this.orbitCamera,
-      this.renderer.domElement
-    );
-    this.controls.target.set(0, 0, 0);
-    this.controls.update();
+    const { orbitCamera, controls } = initOrbitCamera(this.renderer);
+    this.orbitCamera = orbitCamera;
+    this.controls = controls;
 
     // Skybox
     this.sky = initSky(this.scene);
@@ -256,27 +248,29 @@ export default class Game {
       this.draw();
     });
 
+    // TODO 更新天空应该放置在更新世界中
     this.updateSkyColor();
 
+    // 更新物理模拟
     this.physics.update(deltaTime, this.player, this.world);
+
+    // 更新世界 chunk
     this.world.update(this.player);
 
     // update triangle count
-    updateRenderInfo(this.renderer);
+    updateRenderInfoGUI(this.renderer);
     updateStats();
-    // if (this.controls) {
-    //   this.controls.autoRotate = false;
-    //   this.controls.autoRotateSpeed = 2.0;
-    // }
-
-    if (this.controls) this.controls.update();
 
     TWEEN.update();
 
+    // player.controls.isLocked === true 第一人称模式
+    // player.controls.isLocked === false 观察者模式
     this.renderer.render(
       this.scene,
       this.player.controls.isLocked ? this.player.camera : this.orbitCamera
     );
+    // 更新观察相机位置和目标位置
+    updateOrbitControls(this.orbitCamera, this.controls, this.player);
 
     this.previousTime = currentTime;
   }

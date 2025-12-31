@@ -8,6 +8,7 @@ import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";
 import { IWorldParams, IWorldSize } from "./interface";
 import { DefaultWorldParams } from "./literal";
+import { PlayerInitPosition } from "../player/literal";
 
 export class World extends THREE.Group {
   scene: THREE.Scene;
@@ -105,9 +106,9 @@ export class World extends THREE.Group {
           }
 
           const startingPlayerPosition = new THREE.Vector3(
-            player.initialPosition.x,
-            player.initialPosition.y,
-            player.initialPosition.z
+            PlayerInitPosition.x,
+            PlayerInitPosition.y,
+            PlayerInitPosition.z
           );
           for (let y = this.chunkSize.height; y > 0; y--) {
             if (

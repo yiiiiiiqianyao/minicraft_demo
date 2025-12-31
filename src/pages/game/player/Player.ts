@@ -9,9 +9,9 @@ import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { World } from "../world/World";
-import { updatePosition } from "../gui";
+import { updatePositionGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
-import { PlayerParams } from "./literal";
+import { PlayerInitPosition, PlayerParams } from "./literal";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -59,9 +59,7 @@ export class Player {
   input = new THREE.Vector3();
   velocity = new THREE.Vector3();
   #worldVelocity = new THREE.Vector3();
-  // 玩家初始位置
-  initialPosition = new THREE.Vector3(32, 72, 32);
-
+  
   spacePressed = false;
   wKeyPressed = false;
   lastWPressed = 0;
@@ -99,9 +97,9 @@ export class Player {
 
   constructor(scene: THREE.Scene) {
     this.camera.position.set(
-      this.initialPosition.x,
-      this.initialPosition.y,
-      this.initialPosition.z
+      PlayerInitPosition.x,
+      PlayerInitPosition.y,
+      PlayerInitPosition.z
     );
     this.boundsHelper.visible = false;
     this.cameraHelper.visible = false;
@@ -131,7 +129,7 @@ export class Player {
     this.velocity.x = this.input.x;
     this.velocity.z = this.input.z;
 
-    // play step sound
+    // play step sound 在地面上发生移动的时候
     if (this.onGround && this.input.length() > 0) {
       const minTimeout = this.isSprinting ? 300 : 400;
       if (performance.now() - this.lastStepSoundPlayed > minTimeout) {
@@ -143,12 +141,13 @@ export class Player {
     if (this.spacePressed && this.onGround) {
       this.velocity.y = PlayerParams.jumpSpeed;
     }
-
+    // 使用控制器根据速度控制玩家在水平面上移动
     this.controls.moveRight(this.velocity.x * dt);
     this.controls.moveForward(this.velocity.z * dt);
+    // 根据速度 * 时间 更新玩家在垂直方向上的位置
     this.position.y += this.velocity.y * dt;
 
-    updatePosition(this.position);
+    updatePositionGUI(this.position);
   }
 
   private playWalkSound(blockUnderneath: BlockID) {
@@ -178,11 +177,7 @@ export class Player {
 
     // prevent player from falling through
     if (this.position.y < 0) {
-      this.position.set(
-        this.initialPosition.x,
-        this.initialPosition.y,
-        this.initialPosition.z
-      );
+      this.position.copy(PlayerInitPosition);
       this.velocity.set(0, 0, 0);
     }
   }
@@ -309,6 +304,7 @@ export class Player {
 
   onKeyDown(event: KeyboardEvent) {
     const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
+    // 玩家移动 or 重置的时候 控制器解锁
     if (validKeys.includes(event.code) && !this.controls.isLocked) {
       this.controls.lock();
     }
@@ -349,9 +345,9 @@ export class Player {
         break;
       case "KeyR":
         this.position.set(
-          this.initialPosition.x,
-          this.initialPosition.y,
-          this.initialPosition.z
+          PlayerInitPosition.x,
+          PlayerInitPosition.y,
+          PlayerInitPosition.z
         );
         this.velocity.set(0, 0, 0);
         break;

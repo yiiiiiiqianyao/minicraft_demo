@@ -1,0 +1,45 @@
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { Player } from "../player/Player";
+import { PlayerInitPosition } from "../player/literal";
+export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
+  const orbitCamera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight
+    );
+    // 32, 72, 32
+    const { x, y, z } = PlayerInitPosition
+    orbitCamera.position.set(x - 64, y - 20, z - 64);
+
+    const controls = new OrbitControls(
+        orbitCamera,
+        renderer.domElement
+    );
+    controls.target.set(0, 0, 0);
+    controls.update();
+    return {
+        orbitCamera,
+        controls
+    }
+}
+
+/**
+ * 在玩家第一人称模式下 玩家发生位移的时候 更新观察相机位置和目标位置
+ * @param camera 
+ * @param controls 
+ * @param player 
+ */
+export function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: OrbitControls, player: Player) {
+    if(!camera || !controls || !player) return;
+    // player.controls.isLocked === true 第一人称模式
+    // player.controls.isLocked === false 观察者模式
+    if(!controls.target.equals(player.position) && player.controls.isLocked) {
+        const {x, y, z} = player.position;
+        camera.position.set(x - 64, PlayerInitPosition.y - 20, z - 64);
+        controls.target.set(x, y, z);
+    };
+
+    //   this.controls.autoRotate = false;
+    //   this.controls.autoRotateSpeed = 2.0;
+    controls.update();
+}

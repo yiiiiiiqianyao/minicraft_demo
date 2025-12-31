@@ -10,7 +10,7 @@ function numberWithCommas(x: number): string {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export function updateRenderInfo(renderer: THREE.WebGLRenderer) {
+export function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {
     // get element
     if(!triangleCount) {
         triangleCount = document.getElementById("triangle-count");

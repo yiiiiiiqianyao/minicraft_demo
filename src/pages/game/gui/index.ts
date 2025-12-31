@@ -128,7 +128,7 @@ export function initMainMenu(onStart: () => void) {
   });
 }
 
-export function updatePosition(position: THREE.Vector3) {
+export function updatePositionGUI(position: THREE.Vector3) {
     const posX = document.getElementById("player-pos-x");
     if (posX) {
       const inner = `x: ${position.x.toFixed(3)}`;
