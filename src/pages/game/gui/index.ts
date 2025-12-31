@@ -4,6 +4,8 @@ import { oreConfig } from "../Block";
 import { Physics } from "../Physics";
 import { Player } from "../Player";
 import { World } from "../World";
+import { initStats } from "../dev";
+import audioManager from "../audio/AudioManager";
 
 export function createUI(
   world: World,
@@ -106,4 +108,24 @@ export function createUI(
   }
 
   gui.add(world, "regenerate").name("Generate");
+}
+
+
+export function initMainMenu(onStart: () => void) {
+  const mainMenu = document.getElementById("main-menu");
+  const loadingScreen = document.getElementById("loading");
+  const startGameButton = document.getElementById("start-game");
+  startGameButton?.addEventListener("click", () => {
+    if (mainMenu) mainMenu.style.display = "none";
+    if (loadingScreen) loadingScreen.style.display = "block";
+    audioManager.play("gui.button.press");
+    initStats();
+    onStart();
+  });
+
+  const githubButton = document.getElementById("github");
+  githubButton?.addEventListener("click", () => {
+    audioManager.play("gui.button.press");
+    window.open("https://github.com/0kzh/minicraft");
+  });
 }

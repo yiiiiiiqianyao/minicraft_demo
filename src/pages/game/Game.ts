@@ -2,14 +2,13 @@ import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { Howl } from "howler";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import audioManager from "./audio/AudioManager";
-import { createUI } from "./gui";
+import { createUI, initMainMenu } from "./gui";
 import { Physics } from "./Physics";
 import { Player } from "./Player";
 import { World } from "./World";
 import { initSky } from "./sky";
 import { initLight } from "./light";
-import { initStats, updateRenderInfo, updateStats } from "./dev";
+import { updateRenderInfo, updateStats } from "./dev";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -42,27 +41,10 @@ export default class Game {
   constructor() {
     this.previousTime = performance.now();
     this.clock = new THREE.Clock();
-    this.initMainMenu();
-  }
-
-  initMainMenu() {
-    const mainMenu = document.getElementById("main-menu");
-    const loadingScreen = document.getElementById("loading");
-    const startGameButton = document.getElementById("start-game");
-    startGameButton?.addEventListener("click", () => {
-      if (mainMenu) mainMenu.style.display = "none";
-      if (loadingScreen) loadingScreen.style.display = "block";
-      audioManager.play("gui.button.press");
-      initStats();
+    initMainMenu(() => {
       this.initScene();
       this.initListeners();
       this.initAudio();
-    });
-
-    const githubButton = document.getElementById("github");
-    githubButton?.addEventListener("click", () => {
-      audioManager.play("gui.button.press");
-      window.open("https://github.com/0kzh/minicraft");
     });
   }
 
@@ -83,7 +65,8 @@ export default class Game {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setClearColor(0x80abfe);
 
-    document.body.appendChild(this.renderer.domElement);
+    const wrap = document.getElementById('canvas_wrap');
+    wrap?.appendChild(this.renderer.domElement);
 
     this.controls = new OrbitControls(
       this.orbitCamera,

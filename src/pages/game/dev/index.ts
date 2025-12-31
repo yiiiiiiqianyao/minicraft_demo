@@ -3,7 +3,9 @@ import * as THREE from "three";
 import Stats from "three/examples/jsm/libs/stats.module";
 
 let triangleCount: HTMLElement | null = null;
+let triangleCountInnerHtml = '';
 let renderCalls:  HTMLElement | null = null;
+let renderCallsInnerHtml = '';
 function numberWithCommas(x: number): string {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -18,21 +20,30 @@ export function updateRenderInfo(renderer: THREE.WebGLRenderer) {
     }
     // update text
     if (triangleCount) {
-      triangleCount.innerHTML = `triangles: ${numberWithCommas(
+      const inner = `triangles: ${numberWithCommas(
         renderer.info.render.triangles
       )}`;
+      if(inner !== triangleCountInnerHtml) {
+        triangleCountInnerHtml = inner;
+        triangleCount.innerHTML = inner;
+      }
     }
     if (renderCalls) {
-      renderCalls.innerHTML = `draw calls: ${numberWithCommas(
+      const inner = `draw calls: ${numberWithCommas(
         renderer.info.render.calls
       )}`;
+      if(inner !== renderCallsInnerHtml) {
+        renderCallsInnerHtml = inner;
+        renderCalls.innerHTML = inner;
+      }
     }
 }
 
 let stats: Stats;
 export function initStats() {
     stats = new (Stats as any)();
-    document.body.appendChild(stats.dom);
+    const wrap = document.getElementById('canvas_wrap') as HTMLDivElement;
+    wrap.appendChild(stats.dom);
 }
 
 export function updateStats() {
