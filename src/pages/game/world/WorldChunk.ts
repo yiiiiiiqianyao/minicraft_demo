@@ -1,11 +1,12 @@
 import * as THREE from "three";
 
-import audioManager from "./audio/AudioManager";
-import { BlockID } from "./Block";
-import { RenderGeometry } from "./Block/Block";
-import { BlockFactory } from "./Block/BlockFactory";
+import audioManager from "../audio/AudioManager";
+import { BlockID } from "../Block";
+import { RenderGeometry } from "../Block/Block";
+import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
 import * as workerInstance from './chunkWorker';
+import { IWorldParams } from "./interface";
 
 const geometry = new THREE.BoxGeometry();
 const crossGeometry = new THREE.PlaneGeometry();
@@ -15,43 +16,6 @@ export type InstanceData = {
   instanceIds: number[]; // reference to mesh instanceId
 };
 
-export type WorldParams = {
-  seed: number;
-  terrain: {
-    scale: number;
-    magnitude: number;
-    offset: number;
-  };
-  surface: {
-    offset: number;
-    magnitude: number;
-  };
-  bedrock: {
-    offset: number;
-    magnitude: number;
-  };
-  trees: {
-    frequency: number;
-    trunkHeight: {
-      min: number;
-      max: number;
-    };
-    canopy: {
-      size: {
-        min: number;
-        max: number;
-      };
-    };
-  };
-  grass: {
-    frequency: number;
-    patchSize: number;
-  };
-  flowers: {
-    frequency: number;
-  };
-};
-
 export type WorldSize = {
   width: number;
   height: number;
@@ -59,7 +23,7 @@ export type WorldSize = {
 
 export class WorldChunk extends THREE.Group {
   data: InstanceData[][][] = [];
-  params: WorldParams;
+  params: IWorldParams;
   size: WorldSize;
   loaded: boolean;
   dataStore: DataStore;
@@ -67,7 +31,7 @@ export class WorldChunk extends THREE.Group {
 
   constructor(
     size: WorldSize,
-    params: WorldParams,
+    params: IWorldParams,
     dataStore: DataStore,
     wireframeMode = false
   ) {

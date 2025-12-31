@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { oreConfig } from "../Block";
 import { Physics } from "../Physics";
 import { Player } from "../Player";
-import { World } from "../World";
+import { World } from "../world/World";
 import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
 

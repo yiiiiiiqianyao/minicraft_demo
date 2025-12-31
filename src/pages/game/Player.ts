@@ -8,7 +8,7 @@ import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import audioManager from "./audio/AudioManager";
 import { BlockID } from "./Block";
 import { BlockFactory } from "./Block/BlockFactory";
-import { World } from "./World";
+import { World } from "./world/World";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;

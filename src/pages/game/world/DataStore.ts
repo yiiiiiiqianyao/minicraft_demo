@@ -1,4 +1,4 @@
-import { BlockID } from "./Block";
+import { BlockID } from "../Block";
 
 export class DataStore {
   data: Record<string, BlockID>;

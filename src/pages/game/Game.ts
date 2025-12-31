@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { createUI, initMainMenu } from "./gui";
 import { Physics } from "./Physics";
 import { Player } from "./Player";
-import { World } from "./World";
+import { World } from "./world/World";
 import { initSky } from "./sky";
 import { initLight } from "./light";
 import { updateRenderInfo, updateStats } from "./dev";

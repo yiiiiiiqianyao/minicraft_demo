@@ -3,15 +3,14 @@ import * as THREE from "three";
 // @ts-ignore
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise";
 
-import { BlockID, oreConfig } from "./Block";
-import { RNG } from "./RNG";
-import { WorldParams, WorldSize } from "./WorldChunk";
-
-declare const self: DedicatedWorkerGlobalScope;
+import { BlockID, oreConfig } from "../Block";
+import { RNG } from "../RNG";
+import { WorldSize } from "./WorldChunk";
+import { IWorldParams } from "./interface";
 
 export const generateChunk = async (
   chunkSize: WorldSize,
-  params: WorldParams,
+  params: IWorldParams,
   x: number,
   z: number
 ) => {
@@ -80,7 +79,7 @@ export const generateTerrain = (
   rng: RNG,
   input: BlockID[][][],
   size: WorldSize,
-  params: WorldParams,
+  params: IWorldParams,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
   const simplex = new SimplexNoise(rng);
@@ -135,7 +134,7 @@ export const generateTrees = (
   rng: RNG,
   input: BlockID[][][],
   size: WorldSize,
-  params: WorldParams,
+  params: IWorldParams,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
   const simplex = new SimplexNoise(rng);
@@ -242,7 +241,7 @@ export const generateTallGrass = (
   rng: RNG,
   input: BlockID[][][],
   size: WorldSize,
-  params: WorldParams
+  params: IWorldParams
 ): BlockID[][][] => {
   for (let x = 0; x < size.width; x++) {
     for (let z = 0; z < size.width; z++) {
@@ -303,7 +302,7 @@ export const generateFlowers = (
   rng: RNG,
   input: BlockID[][][],
   size: WorldSize,
-  params: WorldParams
+  params: IWorldParams
 ): BlockID[][][] => {
   for (let x = 0; x < size.width; x++) {
     for (let z = 0; z < size.width; z++) {

@@ -1,11 +1,12 @@
 import * as THREE from "three";
 
-import { BlockID } from "./Block";
-import { BlockFactory } from "./Block/BlockFactory";
-import { LightSourceBlock } from "./Block/LightSourceBlock";
+import { BlockID } from "../Block";
+import { BlockFactory } from "../Block/BlockFactory";
+import { LightSourceBlock } from "../Block/LightSourceBlock";
 import { DataStore } from "./DataStore";
-import { Player } from "./Player";
-import { WorldChunk, WorldParams, WorldSize } from "./WorldChunk";
+import { Player } from "../Player";
+import { WorldChunk, WorldSize } from "./WorldChunk";
+import { IWorldParams } from "./interface";
 
 export class World extends THREE.Group {
   scene: THREE.Scene;
@@ -21,7 +22,7 @@ export class World extends THREE.Group {
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
 
-  params: WorldParams = {
+  params: IWorldParams = {
     seed: 0,
     terrain: {
       scale: 50,

@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { BlockID } from "./Block";
 import { BlockFactory } from "./Block/BlockFactory";
 import { Player } from "./Player";
-import { World } from "./World";
+import { World } from "./world/World";
 
 type Candidate = {
   block: BlockID;

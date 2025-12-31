@@ -162,6 +162,25 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
             0
           ]
         },
@@ -253,6 +272,33 @@
             11,
             1,
             2,
+            1,
+            2,
+            3,
+            5,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            5,
+            1,
+            2,
+            2,
+            1,
+            1,
+            1,
+            7,
+            2,
+            2,
+            3,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
             1
           ]
         },
@@ -330,7 +376,26 @@
             7,
             3,
             3,
-            3
+            3,
+            3,
+            4,
+            4,
+            4,
+            5,
+            3,
+            6,
+            3,
+            4,
+            5,
+            7,
+            5,
+            6,
+            3,
+            4,
+            5,
+            4,
+            3,
+            4
           ]
         },
         "register": 37
@@ -347,6 +412,25 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -428,6 +512,20 @@
           ],
           "onPrepareBuildSuccess": [
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -591,6 +689,36 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1688,6 +1816,14 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1762,6 +1898,25 @@
             1,
             0,
             0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
             0
           ],
           "addRuntimePlugin": [
@@ -1810,6 +1965,25 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1953,9 +2127,66 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2161,9 +2392,66 @@
             12,
             11,
             7,
-            7
+            7,
+            7,
+            8,
+            7,
+            6,
+            6,
+            11,
+            9,
+            8,
+            7,
+            12,
+            7,
+            8,
+            15,
+            11,
+            9,
+            13,
+            7,
+            8,
+            11
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2410,6 +2698,44 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -2428,6 +2754,25 @@
         "hooks": {
           "onGenerateFiles": [
             56,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2584,7 +2929,26 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
           ],
           "addBeforeMiddlewares": [
             0
@@ -2719,6 +3083,44 @@
             21,
             1,
             20,
+            1,
+            21,
+            2,
+            26,
+            1,
+            20,
+            1,
+            22,
+            1,
+            22,
+            1,
+            23,
+            1,
+            22,
+            2,
+            24,
+            2,
+            25,
+            1,
+            23,
+            1,
+            20,
+            1,
+            30,
+            1,
+            28,
+            2,
+            23,
+            1,
+            26,
+            2,
+            16,
+            1,
+            20,
+            1,
+            26,
+            1,
+            21,
             1
           ]
         },
@@ -2804,6 +3206,25 @@
             0,
             1,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0
@@ -2894,6 +3315,25 @@
             3,
             5,
             4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            4,
+            5,
+            5,
+            6,
+            5,
+            5,
+            4,
+            5,
+            5,
+            5,
+            4,
+            4,
+            5,
             4,
             4
           ]
@@ -3037,7 +3477,26 @@
             1,
             0,
             0,
-            0
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
           ]
         },
         "register": 1
@@ -3688,6 +4147,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/OakLogBlock.ts"
     },
+    "game/world/chunkWorker": {
+      "path": "game/world/chunkWorker",
+      "id": "game/world/chunkWorker",
+      "file": "game/world/chunkWorker.ts",
+      "absPath": "/game/world/chunkWorker",
+      "__content": "/// <reference lib=\"webworker\" />\nimport * as THREE from \"three\";\n// @ts-ignore\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise\";\n\nimport { BlockID, oreConfig } from \"../Block\";\nimport { RNG } from \"../RNG\";\nimport { WorldSize } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\n\nexport const generateChunk = async (\n  chunkSize: WorldSize,\n  params: IWorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  let data = initEmptyChunk(chunkSize);\n  const rng = new RNG(params.seed);\n  data = generateResources(rng, data, chunkSize, chunkPos);\n  data = generateTerrain(rng, data, chunkSize, params, chunkPos);\n  data = generateTrees(rng, data, chunkSize, params, chunkPos);\n  data = generateTallGrass(rng, data, chunkSize, params);\n  data = generateFlowers(rng, data, chunkSize, params);\n\n  return data;\n};\n\nconst initEmptyChunk = (chunkSize: WorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data;\n};\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      const value = simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let height = Math.floor(size.height * scaledNoise);\n      height = Math.max(0, Math.min(height, size.height - 1));\n\n      const numSurfaceBlocks =\n        params.surface.offset +\n        Math.abs(simplex.noise(x, z) * params.surface.magnitude);\n\n      const numBedrockBlocks =\n        params.bedrock.offset +\n        Math.abs(simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        if (y < height) {\n          if (y < numBedrockBlocks) {\n            input[x][y][z] = BlockID.Bedrock;\n          } else if (y < height - numSurfaceBlocks) {\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            }\n          } else {\n            input[x][y][z] = BlockID.Dirt;\n          }\n        } else if (y === height) {\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > height) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates trees\n */\nexport const generateTrees = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: WorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  const canopySize = params.trees.canopy.size.max;\n  for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {\n    for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {\n      const n =\n        simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;\n      if (n < 1 - params.trees.frequency) {\n        continue;\n      }\n\n      // Find the grass tile\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[baseX][y][baseZ] !== BlockID.Grass) {\n          continue;\n        }\n\n        // Found grass, move one time up\n        const baseY = y + 1;\n\n        const minH = params.trees.trunkHeight.min;\n        const maxH = params.trees.trunkHeight.max;\n        const trunkHeight = Math.round(rng.random() * (maxH - minH)) + minH;\n        const topY = baseY + trunkHeight;\n\n        // Fill in blocks for the trunk\n        for (let i = baseY; i < topY; i++) {\n          input[baseX][i][baseZ] = BlockID.OakLog;\n        }\n\n        // Generate the canopy\n        // generate layer by layer, 4 layers in total\n        for (let i = 0; i < 4; i++) {\n          if (i === 0) {\n            // first layer above the height of tree and has 5 leaves in a + shape\n            input[baseX][topY][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX][topY][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY][baseZ - 1] = BlockID.Leaves;\n          } else if (i === 1) {\n            // base layer\n            input[baseX][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;\n\n            // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk\n            const minR = params.trees.canopy.size.min;\n            const maxR = params.trees.canopy.size.max;\n            const R = Math.round(rng.random() * (maxR - minR)) + minR;\n\n            // grow leaves in a diagonal shape\n            for (let x = -R; x <= R; x++) {\n              for (let z = -R; z <= R; z++) {\n                if (x * x + z * z > R * R) {\n                  continue;\n                }\n\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n                }\n              }\n            }\n          } else if (i === 2 || i == 3) {\n            for (let x = -2; x <= 2; x++) {\n              for (let z = -2; z <= 2; z++) {\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n              }\n            }\n\n            // remove 4 corners randomly\n            for (const x of [-2, 2]) {\n              for (const z of [-2, 2]) {\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Air;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of tall grass across the top surface\n */\n\nexport const generateTallGrass = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since grass doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          if (rng.random() < params.grass.frequency) {\n            input[x][baseY][z] = BlockID.TallGrass;\n\n            // Define the maximum distance from the center\n            const maxDistance = params.grass.patchSize;\n\n            // Random walk algorithm\n            let currentX = x;\n            let currentZ = z;\n            for (let i = 0; i < maxDistance; i++) {\n              const direction = rng.random() * 2 * Math.PI; // Random direction\n              currentX += Math.round(Math.cos(direction));\n              currentZ += Math.round(Math.sin(direction));\n\n              // Check if the new position is within the chunk boundaries and is air\n              if (\n                currentX >= 0 &&\n                currentX < size.width &&\n                currentZ >= 0 &&\n                currentZ < size.width &&\n                input[currentX][baseY][currentZ] === BlockID.Air &&\n                input[currentX][y][currentZ] === BlockID.Grass\n              ) {\n                input[currentX][baseY][currentZ] = BlockID.TallGrass;\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of flowers across the top surface\n */\nexport const generateFlowers = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since flowers doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          // Check if there's a tallgrass block within 3 blocks\n          let isTallGrassNearby = false;\n          for (let dx = -3; dx <= 3; dx++) {\n            for (let dz = -3; dz <= 3; dz++) {\n              const nx = x + dx;\n              const nz = z + dz;\n              if (\n                nx >= 0 &&\n                nx < size.width &&\n                nz >= 0 &&\n                nz < size.width &&\n                input[nx][baseY][nz] === BlockID.TallGrass\n              ) {\n                isTallGrassNearby = true;\n                break;\n              }\n            }\n            if (isTallGrassNearby) {\n              break;\n            }\n          }\n\n          if (isTallGrassNearby) {\n            continue;\n          }\n\n          const flowerId =\n            rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;\n\n          if (rng.random() < params.flowers.frequency) {\n            input[x][baseY][z] = flowerId;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts"
+    },
     "game/Block/GrassBlock": {
       "path": "game/Block/GrassBlock",
       "id": "game/Block/GrassBlock",
@@ -3706,6 +4174,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/StoneBlock.ts"
     },
+    "game/world/WorldChunk": {
+      "path": "game/world/WorldChunk",
+      "id": "game/world/WorldChunk",
+      "file": "game/world/WorldChunk.ts",
+      "absPath": "/game/world/WorldChunk",
+      "__content": "import * as THREE from \"three\";\n\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport * as workerInstance from './chunkWorker';\nimport { IWorldParams } from \"./interface\";\n\nconst geometry = new THREE.BoxGeometry();\nconst crossGeometry = new THREE.PlaneGeometry();\n\nexport type InstanceData = {\n  block: BlockID;\n  instanceIds: number[]; // reference to mesh instanceId\n};\n\nexport type WorldSize = {\n  width: number;\n  height: number;\n};\n\nexport class WorldChunk extends THREE.Group {\n  data: InstanceData[][][] = [];\n  params: IWorldParams;\n  size: WorldSize;\n  loaded: boolean;\n  dataStore: DataStore;\n  wireframeMode = false;\n\n  constructor(\n    size: WorldSize,\n    params: IWorldParams,\n    dataStore: DataStore,\n    wireframeMode = false\n  ) {\n    super();\n    this.size = size;\n    this.params = params;\n    this.dataStore = dataStore;\n    this.loaded = false;\n    this.wireframeMode = wireframeMode;\n  }\n\n  async generate() {\n    // const start = performance.now();\n\n    const data: BlockID[][][] = await workerInstance.generateChunk(\n      this.size,\n      this.params,\n      this.position.x,\n      this.position.z\n    );\n\n    requestIdleCallback(\n      () => {\n        this.initializeTerrain(data);\n        this.loadPlayerChanges();\n        this.generateMeshes(data);\n        this.loaded = true;\n\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    this.data = [];\n    for (let x = 0; x < this.size.width; x++) {\n      const slice: InstanceData[][] = [];\n      for (let y = 0; y < this.size.height; y++) {\n        const row: InstanceData[] = [];\n        for (let z = 0; z < this.size.width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  generateMeshes(data: BlockID[][][]) {\n    this.clear();\n\n    const maxCount = this.size.width * this.size.width * this.size.height;\n\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\n    for (const blockId of blockIDValues) {\n      const block = BlockFactory.getBlock(blockId);\n      const blockGeometry = block.geometry;\n\n      const mesh = new THREE.InstancedMesh(\n        blockGeometry === RenderGeometry.Cube ? geometry : crossGeometry,\n        this.wireframeMode\n          ? new THREE.MeshBasicMaterial({ wireframe: true })\n          : block.material,\n        maxCount\n      );\n\n      mesh.name = block.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !block.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[block.id] = mesh;\n    }\n\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n\n          if (block === BlockID.Air) {\n            continue;\n          }\n\n          const mesh = meshes[block];\n\n          if (!mesh) {\n            continue;\n          }\n\n          if (\n            block &&\n            !this.isBlockObscured(x, y, z) &&\n            !this.isBorderBlock(x, y, z)\n          ) {\n            if (blockClass.geometry == RenderGeometry.Cube) {\n              const instanceId = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n              const matrix = new THREE.Matrix4();\n              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId, matrix);\n            } else if (blockClass.geometry == RenderGeometry.Cross) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n            }\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      if (mesh) {\n        this.add(mesh);\n      }\n    }\n  }\n\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): InstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      return this.data[x][y][z];\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * Removes the block at (x, y, z)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    if (block && block.block !== BlockID.Air) {\n      this.playBlockSound(block.block);\n      this.deleteBlockInstance(x, y, z);\n      this.setBlockId(x, y, z, BlockID.Air);\n      this.dataStore.set(\n        this.position.x,\n        this.position.z,\n        x,\n        y,\n        z,\n        BlockID.Air\n      );\n    }\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n\n      if (mesh) {\n        this.playBlockSound(block.block);\n        if (blockClass.geometry == RenderGeometry.Cube) {\n          const instanceId = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n          const matrix = new THREE.Matrix4();\n          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId, matrix);\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        } else if (blockClass.geometry == RenderGeometry.Cross) {\n          const instanceId1 = mesh.count++;\n          const instanceId2 = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n          const matrix1 = new THREE.Matrix4();\n          matrix1.makeRotationY(Math.PI / 4);\n          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId1, matrix1);\n\n          const matrix2 = new THREE.Matrix4();\n          matrix2.makeRotationY(-Math.PI / 4);\n          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId2, matrix2);\n\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) {\n      return;\n    }\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    block.instanceIds.forEach((instanceId) => {\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      const lastBlockCoords = new THREE.Vector3();\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        [instanceId]\n      );\n\n      // Swap transformation matrices\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    return (\n      x >= 0 &&\n      x < this.size.width &&\n      y >= 0 &&\n      y < this.size.height &&\n      z >= 0 &&\n      z < this.size.width\n    );\n  }\n\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === this.size.width - 1 ||\n      y === 0 ||\n      y === this.size.height - 1 ||\n      z === 0 ||\n      z === this.size.width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/WorldChunk.ts"
+    },
     "game/Block/DirtBlock": {
       "path": "game/Block/DirtBlock",
       "id": "game/Block/DirtBlock",
@@ -3714,6 +4191,24 @@
       "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"./Block\";\nimport { textures, uiTextures } from \"./textures\";\n\nimport { BlockID } from \".\";\n\nconst dirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });\n\nexport class DirtBlock extends Block {\n  id = BlockID.Dirt;\n  material = dirtMaterial;\n  uiTexture = uiTextures.dirt;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/DirtBlock.ts"
+    },
+    "game/world/DataStore": {
+      "path": "game/world/DataStore",
+      "id": "game/world/DataStore",
+      "file": "game/world/DataStore.ts",
+      "absPath": "/game/world/DataStore",
+      "__content": "import { BlockID } from \"../Block\";\n\nexport class DataStore {\n  data: Record<string, BlockID>;\n\n  constructor() {\n    this.data = {};\n  }\n\n  clear() {\n    this.data = {};\n  }\n\n  contains(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    return this.data[key] !== undefined;\n  }\n\n  get(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    const blockId = this.data[key];\n    // console.log(`getting value ${blockId} at key ${key}`);\n    return blockId;\n  }\n\n  set(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number,\n    value: BlockID\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    // console.log(`setting value ${value} at key ${key}`);\n    this.data[key] = value;\n  }\n\n  #getKey(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    return `${chunkX},${chunkZ},${blockX},${blockY},${blockZ}`;\n  }\n}\n",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/DataStore.ts"
+    },
+    "game/world/interface": {
+      "path": "game/world/interface",
+      "id": "game/world/interface",
+      "file": "game/world/interface.ts",
+      "absPath": "/game/world/interface",
+      "__content": "export interface IWorldParams {\n  seed: number;\n  terrain: {\n    scale: number;\n    magnitude: number;\n    offset: number;\n  };\n  surface: {\n    offset: number;\n    magnitude: number;\n  };\n  bedrock: {\n    offset: number;\n    magnitude: number;\n  };\n  trees: {\n    frequency: number;\n    trunkHeight: {\n      min: number;\n      max: number;\n    };\n    canopy: {\n      size: {\n        min: number;\n        max: number;\n      };\n    };\n  };\n  grass: {\n    frequency: number;\n    patchSize: number;\n  };\n  flowers: {\n    frequency: number;\n  };\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/interface.ts"
     },
     "game/Block/AirBlock": {
       "path": "game/Block/AirBlock",
@@ -3760,15 +4255,6 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/index.ts"
     },
-    "game/chunkWorker": {
-      "path": "game/chunkWorker",
-      "id": "game/chunkWorker",
-      "file": "game/chunkWorker.ts",
-      "absPath": "/game/chunkWorker",
-      "__content": "/// <reference lib=\"webworker\" />\nimport * as THREE from \"three\";\n// @ts-ignore\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise\";\n\nimport { BlockID, oreConfig } from \"./Block\";\nimport { RNG } from \"./RNG\";\nimport { WorldParams, WorldSize } from \"./WorldChunk\";\n\ndeclare const self: DedicatedWorkerGlobalScope;\n\nexport const generateChunk = async (\n  chunkSize: WorldSize,\n  params: WorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  let data = initEmptyChunk(chunkSize);\n  const rng = new RNG(params.seed);\n  data = generateResources(rng, data, chunkSize, chunkPos);\n  data = generateTerrain(rng, data, chunkSize, params, chunkPos);\n  data = generateTrees(rng, data, chunkSize, params, chunkPos);\n  data = generateTallGrass(rng, data, chunkSize, params);\n  data = generateFlowers(rng, data, chunkSize, params);\n\n  return data;\n};\n\nconst initEmptyChunk = (chunkSize: WorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data;\n};\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: WorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      const value = simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let height = Math.floor(size.height * scaledNoise);\n      height = Math.max(0, Math.min(height, size.height - 1));\n\n      const numSurfaceBlocks =\n        params.surface.offset +\n        Math.abs(simplex.noise(x, z) * params.surface.magnitude);\n\n      const numBedrockBlocks =\n        params.bedrock.offset +\n        Math.abs(simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        if (y < height) {\n          if (y < numBedrockBlocks) {\n            input[x][y][z] = BlockID.Bedrock;\n          } else if (y < height - numSurfaceBlocks) {\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            }\n          } else {\n            input[x][y][z] = BlockID.Dirt;\n          }\n        } else if (y === height) {\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > height) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates trees\n */\nexport const generateTrees = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: WorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  const canopySize = params.trees.canopy.size.max;\n  for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {\n    for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {\n      const n =\n        simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;\n      if (n < 1 - params.trees.frequency) {\n        continue;\n      }\n\n      // Find the grass tile\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[baseX][y][baseZ] !== BlockID.Grass) {\n          continue;\n        }\n\n        // Found grass, move one time up\n        const baseY = y + 1;\n\n        const minH = params.trees.trunkHeight.min;\n        const maxH = params.trees.trunkHeight.max;\n        const trunkHeight = Math.round(rng.random() * (maxH - minH)) + minH;\n        const topY = baseY + trunkHeight;\n\n        // Fill in blocks for the trunk\n        for (let i = baseY; i < topY; i++) {\n          input[baseX][i][baseZ] = BlockID.OakLog;\n        }\n\n        // Generate the canopy\n        // generate layer by layer, 4 layers in total\n        for (let i = 0; i < 4; i++) {\n          if (i === 0) {\n            // first layer above the height of tree and has 5 leaves in a + shape\n            input[baseX][topY][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX][topY][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY][baseZ - 1] = BlockID.Leaves;\n          } else if (i === 1) {\n            // base layer\n            input[baseX][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;\n\n            // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk\n            const minR = params.trees.canopy.size.min;\n            const maxR = params.trees.canopy.size.max;\n            const R = Math.round(rng.random() * (maxR - minR)) + minR;\n\n            // grow leaves in a diagonal shape\n            for (let x = -R; x <= R; x++) {\n              for (let z = -R; z <= R; z++) {\n                if (x * x + z * z > R * R) {\n                  continue;\n                }\n\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n                }\n              }\n            }\n          } else if (i === 2 || i == 3) {\n            for (let x = -2; x <= 2; x++) {\n              for (let z = -2; z <= 2; z++) {\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n              }\n            }\n\n            // remove 4 corners randomly\n            for (const x of [-2, 2]) {\n              for (const z of [-2, 2]) {\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Air;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of tall grass across the top surface\n */\n\nexport const generateTallGrass = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: WorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since grass doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          if (rng.random() < params.grass.frequency) {\n            input[x][baseY][z] = BlockID.TallGrass;\n\n            // Define the maximum distance from the center\n            const maxDistance = params.grass.patchSize;\n\n            // Random walk algorithm\n            let currentX = x;\n            let currentZ = z;\n            for (let i = 0; i < maxDistance; i++) {\n              const direction = rng.random() * 2 * Math.PI; // Random direction\n              currentX += Math.round(Math.cos(direction));\n              currentZ += Math.round(Math.sin(direction));\n\n              // Check if the new position is within the chunk boundaries and is air\n              if (\n                currentX >= 0 &&\n                currentX < size.width &&\n                currentZ >= 0 &&\n                currentZ < size.width &&\n                input[currentX][baseY][currentZ] === BlockID.Air &&\n                input[currentX][y][currentZ] === BlockID.Grass\n              ) {\n                input[currentX][baseY][currentZ] = BlockID.TallGrass;\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of flowers across the top surface\n */\nexport const generateFlowers = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: WorldSize,\n  params: WorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since flowers doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          // Check if there's a tallgrass block within 3 blocks\n          let isTallGrassNearby = false;\n          for (let dx = -3; dx <= 3; dx++) {\n            for (let dz = -3; dz <= 3; dz++) {\n              const nx = x + dx;\n              const nz = z + dz;\n              if (\n                nx >= 0 &&\n                nx < size.width &&\n                nz >= 0 &&\n                nz < size.width &&\n                input[nx][baseY][nz] === BlockID.TallGrass\n              ) {\n                isTallGrassNearby = true;\n                break;\n              }\n            }\n            if (isTallGrassNearby) {\n              break;\n            }\n          }\n\n          if (isTallGrassNearby) {\n            continue;\n          }\n\n          const flowerId =\n            rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;\n\n          if (rng.random() < params.flowers.frequency) {\n            input[x][baseY][z] = flowerId;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/chunkWorker.ts"
-    },
     "game/light/index": {
       "path": "game/light",
       "id": "game/light/index",
@@ -3778,23 +4264,14 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/light/index.ts"
     },
-    "game/WorldChunk": {
-      "path": "game/WorldChunk",
-      "id": "game/WorldChunk",
-      "file": "game/WorldChunk.ts",
-      "absPath": "/game/WorldChunk",
-      "__content": "import * as THREE from \"three\";\n\nimport audioManager from \"./audio/AudioManager\";\nimport { BlockID } from \"./Block\";\nimport { RenderGeometry } from \"./Block/Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport * as workerInstance from './chunkWorker';\n\nconst geometry = new THREE.BoxGeometry();\nconst crossGeometry = new THREE.PlaneGeometry();\n\nexport type InstanceData = {\n  block: BlockID;\n  instanceIds: number[]; // reference to mesh instanceId\n};\n\nexport type WorldParams = {\n  seed: number;\n  terrain: {\n    scale: number;\n    magnitude: number;\n    offset: number;\n  };\n  surface: {\n    offset: number;\n    magnitude: number;\n  };\n  bedrock: {\n    offset: number;\n    magnitude: number;\n  };\n  trees: {\n    frequency: number;\n    trunkHeight: {\n      min: number;\n      max: number;\n    };\n    canopy: {\n      size: {\n        min: number;\n        max: number;\n      };\n    };\n  };\n  grass: {\n    frequency: number;\n    patchSize: number;\n  };\n  flowers: {\n    frequency: number;\n  };\n};\n\nexport type WorldSize = {\n  width: number;\n  height: number;\n};\n\nexport class WorldChunk extends THREE.Group {\n  data: InstanceData[][][] = [];\n  params: WorldParams;\n  size: WorldSize;\n  loaded: boolean;\n  dataStore: DataStore;\n  wireframeMode = false;\n\n  constructor(\n    size: WorldSize,\n    params: WorldParams,\n    dataStore: DataStore,\n    wireframeMode = false\n  ) {\n    super();\n    this.size = size;\n    this.params = params;\n    this.dataStore = dataStore;\n    this.loaded = false;\n    this.wireframeMode = wireframeMode;\n  }\n\n  async generate() {\n    // const start = performance.now();\n\n    const data: BlockID[][][] = await workerInstance.generateChunk(\n      this.size,\n      this.params,\n      this.position.x,\n      this.position.z\n    );\n\n    requestIdleCallback(\n      () => {\n        this.initializeTerrain(data);\n        this.loadPlayerChanges();\n        this.generateMeshes(data);\n        this.loaded = true;\n\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    this.data = [];\n    for (let x = 0; x < this.size.width; x++) {\n      const slice: InstanceData[][] = [];\n      for (let y = 0; y < this.size.height; y++) {\n        const row: InstanceData[] = [];\n        for (let z = 0; z < this.size.width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  generateMeshes(data: BlockID[][][]) {\n    this.clear();\n\n    const maxCount = this.size.width * this.size.width * this.size.height;\n\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\n    for (const blockId of blockIDValues) {\n      const block = BlockFactory.getBlock(blockId);\n      const blockGeometry = block.geometry;\n\n      const mesh = new THREE.InstancedMesh(\n        blockGeometry === RenderGeometry.Cube ? geometry : crossGeometry,\n        this.wireframeMode\n          ? new THREE.MeshBasicMaterial({ wireframe: true })\n          : block.material,\n        maxCount\n      );\n\n      mesh.name = block.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !block.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[block.id] = mesh;\n    }\n\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n\n          if (block === BlockID.Air) {\n            continue;\n          }\n\n          const mesh = meshes[block];\n\n          if (!mesh) {\n            continue;\n          }\n\n          if (\n            block &&\n            !this.isBlockObscured(x, y, z) &&\n            !this.isBorderBlock(x, y, z)\n          ) {\n            if (blockClass.geometry == RenderGeometry.Cube) {\n              const instanceId = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n              const matrix = new THREE.Matrix4();\n              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId, matrix);\n            } else if (blockClass.geometry == RenderGeometry.Cross) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n            }\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      if (mesh) {\n        this.add(mesh);\n      }\n    }\n  }\n\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): InstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      return this.data[x][y][z];\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * Removes the block at (x, y, z)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    if (block && block.block !== BlockID.Air) {\n      this.playBlockSound(block.block);\n      this.deleteBlockInstance(x, y, z);\n      this.setBlockId(x, y, z, BlockID.Air);\n      this.dataStore.set(\n        this.position.x,\n        this.position.z,\n        x,\n        y,\n        z,\n        BlockID.Air\n      );\n    }\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n\n      if (mesh) {\n        this.playBlockSound(block.block);\n        if (blockClass.geometry == RenderGeometry.Cube) {\n          const instanceId = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n          const matrix = new THREE.Matrix4();\n          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId, matrix);\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        } else if (blockClass.geometry == RenderGeometry.Cross) {\n          const instanceId1 = mesh.count++;\n          const instanceId2 = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n          const matrix1 = new THREE.Matrix4();\n          matrix1.makeRotationY(Math.PI / 4);\n          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId1, matrix1);\n\n          const matrix2 = new THREE.Matrix4();\n          matrix2.makeRotationY(-Math.PI / 4);\n          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId2, matrix2);\n\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) {\n      return;\n    }\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    block.instanceIds.forEach((instanceId) => {\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      const lastBlockCoords = new THREE.Vector3();\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        [instanceId]\n      );\n\n      // Swap transformation matrices\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    return (\n      x >= 0 &&\n      x < this.size.width &&\n      y >= 0 &&\n      y < this.size.height &&\n      z >= 0 &&\n      z < this.size.width\n    );\n  }\n\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === this.size.width - 1 ||\n      y === 0 ||\n      y === this.size.height - 1 ||\n      z === 0 ||\n      z === this.size.width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
+    "game/world/World": {
+      "path": "game/world/World",
+      "id": "game/world/World",
+      "file": "game/world/World.ts",
+      "absPath": "/game/world/World",
+      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../Player\";\nimport { WorldChunk, WorldSize } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\n\nexport class World extends THREE.Group {\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkSize: WorldSize = {\n    width: 16,\n    height: 32,\n  };\n  chunkQueue: { x: number; z: number }[];\n  initialLoadComplete = false;\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 1,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n  };\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n\n  wireframeMode = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    this.scene = scene;\n    this.chunkQueue = [];\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks(player);\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    } else {\n      // console.log(\"Chunk queue empty\");\n      if (!this.initialLoadComplete) {\n        this.initialLoadComplete = true;\n        const menuScreen = document.getElementById(\"menu\");\n        const debugMenu = document.getElementById(\"debug\");\n        if (menuScreen) {\n          menuScreen.style.display = \"none\";\n          if (debugMenu) {\n            debugMenu.style.display = \"flex\";\n          }\n\n          const startingPlayerPosition = new THREE.Vector3(\n            player.initialPosition.x,\n            player.initialPosition.y,\n            player.initialPosition.z\n          );\n          for (let y = this.chunkSize.height; y > 0; y--) {\n            if (\n              this.getBlock(\n                startingPlayerPosition.x,\n                y,\n                startingPlayerPosition.z\n              )?.block === BlockID.Grass\n            ) {\n              startingPlayerPosition.y = y;\n              break;\n            }\n          }\n\n          player.position.set(\n            startingPlayerPosition.x,\n            startingPlayerPosition.y + 10,\n            startingPlayerPosition.z\n          );\n          player.controls.lock();\n        }\n      }\n    }\n\n    if (!this.initialLoadComplete) {\n      const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n      const loadedChunks = this.children.length;\n      const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n\n      const progressBar = document.getElementById(\"loading-progress-bar\");\n      if (progressBar) {\n        progressBar.style.width = `${percentLoaded}%`;\n      }\n    }\n  }\n\n  getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {\n    return this.getBlock(\n      Math.floor(position.x),\n      Math.floor(position.y - playerHeight / 2 - 1),\n      Math.floor(position.z)\n    );\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(player: Player): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    const coords = this.worldToChunkCoords(\n      player.position.x,\n      player.position.y,\n      player.position.z\n    );\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: coords.chunk.x + dx, z: coords.chunk.z + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - coords.chunk.x) ** 2 + (a.z - coords.chunk.z) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - coords.chunk.x) ** 2 + (b.z - coords.chunk.z) ** 2\n      );\n\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const chunk = new WorldChunk(\n      this.chunkSize,\n      this.params,\n      this.dataStore,\n      this.wireframeMode\n    );\n    chunk.position.set(x * this.chunkSize.width, 0, z * this.chunkSize.width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  removeBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n\n    if (blockToRemove?.block === BlockID.Bedrock) {\n      return;\n    }\n\n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the chunk and world coordinates of the block at (x, y, z)\n   *  - `chunk` is the coordinates of the chunk containing the block\n   *  - `block` is the world coordinates of the block\n   */\n  worldToChunkCoords(\n    x: number,\n    y: number,\n    z: number\n  ): {\n    chunk: { x: number; z: number };\n    block: { x: number; y: number; z: number };\n  } {\n    const chunkX = Math.floor(x / this.chunkSize.width);\n    const chunkZ = Math.floor(z / this.chunkSize.width);\n\n    const blockX = x - chunkX * this.chunkSize.width;\n    const blockZ = z - chunkZ * this.chunkSize.width;\n\n    return {\n      chunk: { x: chunkX, z: chunkZ },\n      block: { x: blockX, y, z: blockZ },\n    };\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}\n",
       "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/WorldChunk.ts"
-    },
-    "game/DataStore": {
-      "path": "game/DataStore",
-      "id": "game/DataStore",
-      "file": "game/DataStore.ts",
-      "absPath": "/game/DataStore",
-      "__content": "import { BlockID } from \"./Block\";\n\nexport class DataStore {\n  data: Record<string, BlockID>;\n\n  constructor() {\n    this.data = {};\n  }\n\n  clear() {\n    this.data = {};\n  }\n\n  contains(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    return this.data[key] !== undefined;\n  }\n\n  get(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    const blockId = this.data[key];\n    // console.log(`getting value ${blockId} at key ${key}`);\n    return blockId;\n  }\n\n  set(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number,\n    value: BlockID\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    // console.log(`setting value ${value} at key ${key}`);\n    this.data[key] = value;\n  }\n\n  #getKey(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    return `${chunkX},${chunkZ},${blockX},${blockY},${blockZ}`;\n  }\n}\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/DataStore.ts"
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/World.ts"
     },
     "game/dev/index": {
       "path": "game/dev",
@@ -3810,7 +4287,7 @@
       "id": "game/gui/index",
       "file": "game/gui/index.ts",
       "absPath": "/game/gui",
-      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { oreConfig } from \"../Block\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../Player\";\nimport { World } from \"../World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player, \"maxSpeed\", 1, 50, 1).name(\"Max Speed\");\n  playerFolder.add(player, \"jumpSpeed\", 1, 10, 1).name(\"Jump Speed\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n      const loadingScreen = document.getElementById(\"loading\");\n      const startGameButton = document.getElementById(\"start-game\");\n      startGameButton?.addEventListener(\"click\", () => {\n        if (mainMenu) mainMenu.style.display = \"none\";\n        if (loadingScreen) loadingScreen.style.display = \"block\";\n        audioManager.play(\"gui.button.press\");\n        initStats();\n        onStart();\n      });\n  \n      const githubButton = document.getElementById(\"github\");\n      githubButton?.addEventListener(\"click\", () => {\n        audioManager.play(\"gui.button.press\");\n        window.open(\"https://github.com/0kzh/minicraft\");\n      });\n}",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { oreConfig } from \"../Block\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player, \"maxSpeed\", 1, 50, 1).name(\"Max Speed\");\n  playerFolder.add(player, \"jumpSpeed\", 1, 10, 1).name(\"Jump Speed\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  startGameButton?.addEventListener(\"click\", () => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  });\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts"
     },
@@ -3828,7 +4305,7 @@
       "id": "game/Physics",
       "file": "game/Physics.ts",
       "absPath": "/game/Physics",
-      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { Player } from \"./Player\";\nimport { World } from \"./World\";\n\ntype Candidate = {\n  block: BlockID;\n  x: number;\n  y: number;\n  z: number;\n};\n\ntype Collision = {\n  candidate: Candidate;\n  contactPoint: THREE.Vector3;\n  normal: THREE.Vector3;\n  overlap: number;\n};\n\nconst collisionMaterial = new THREE.MeshBasicMaterial({\n  color: 0xff0000,\n  transparent: true,\n  opacity: 0.2,\n});\nconst collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);\n\nconst contactMaterial = new THREE.MeshBasicMaterial({\n  wireframe: true,\n  color: 0x00ff00,\n});\nconst contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);\n\nexport class Physics {\n  // Acceleration due to gravity\n  static GRAVITY = -32;\n\n  // Physics simulation rate\n  simulationRate = 250;\n  stepSize = 1 / this.simulationRate;\n  // Accumulator to keep track of leftover dt\n  accumulator = 0;\n\n  helpers: THREE.Group;\n\n  constructor(scene: THREE.Scene) {\n    this.helpers = new THREE.Group();\n    this.helpers.visible = false;\n    scene.add(this.helpers);\n  }\n\n  update(dt: number, player: Player, world: World) {\n    this.accumulator += dt;\n    const blockUnderneath =\n      this.getBlockUnderneath(player, world)?.block || BlockID.Air;\n\n    while (this.accumulator >= this.stepSize) {\n      player.velocity.y += Physics.GRAVITY * this.stepSize;\n      player.applyInputs(this.stepSize, blockUnderneath);\n      this.detectCollisions(player, world);\n      this.accumulator -= this.stepSize;\n    }\n\n    player.update(world);\n  }\n\n  getBlockUnderneath(player: Player, world: World) {\n    return world.getBlock(\n      Math.floor(player.position.x),\n      Math.floor(player.position.y - player.height / 2 - 1),\n      Math.floor(player.position.z)\n    );\n  }\n\n  detectCollisions(player: Player, world: World) {\n    player.onGround = false;\n    this.helpers.clear();\n\n    const candidates = this.broadPhase(player, world);\n    const collisions = this.narrowPhase(candidates, player);\n\n    if (collisions.length > 0) {\n      this.resolveCollisions(collisions, player);\n    }\n  }\n\n  broadPhase(player: Player, world: World): Candidate[] {\n    const candidates: Candidate[] = [];\n\n    // Get the block extents of the player\n    const minX = Math.floor(player.position.x - player.radius);\n    const maxX = Math.ceil(player.position.x + player.radius);\n    const minY = Math.floor(player.position.y - player.height);\n    const maxY = Math.ceil(player.position.y);\n    const minZ = Math.floor(player.position.z - player.radius);\n    const maxZ = Math.ceil(player.position.z + player.radius);\n\n    // Iterate over the player's AABB\n    for (let x = minX; x <= maxX; x++) {\n      for (let y = minY; y <= maxY; y++) {\n        for (let z = minZ; z <= maxZ; z++) {\n          const block = world.getBlock(x, y, z);\n          // If the block is solid, add it to the list of candidates\n          if (block) {\n            const blockClass = BlockFactory.getBlock(block.block);\n            if (!blockClass.canPassThrough) {\n              candidates.push({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n              this.addCollisionHelper({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n            }\n          }\n        }\n      }\n    }\n\n    return candidates;\n  }\n\n  narrowPhase(candidates: Candidate[], player: Player): Collision[] {\n    const collisions: Collision[] = [];\n\n    for (const candidate of candidates) {\n      // Get the point of the block closest to the center of the player's bounding cylinder\n      const closestPoint = new THREE.Vector3(\n        Math.max(\n          candidate.x - 0.5,\n          Math.min(player.position.x, candidate.x + 0.5)\n        ),\n        Math.max(\n          candidate.y - 0.5,\n          Math.min(player.position.y - player.height / 2, candidate.y + 0.5)\n        ),\n        Math.max(\n          candidate.z - 0.5,\n          Math.min(player.position.z, candidate.z + 0.5)\n        )\n      );\n\n      // Get distance along each exist between closest point and center\n      const dx = closestPoint.x - player.position.x;\n      const dy = closestPoint.y - (player.position.y - player.height / 2);\n      const dz = closestPoint.z - player.position.z;\n\n      if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {\n        const overlapY = player.height / 2 - Math.abs(dy);\n        const overlapXZ = player.radius - Math.sqrt(dx * dx + dz * dz);\n\n        // Compute the normal of the collision (pointing away from content point)\n        // As well as overlap between the point and the player's bounding cylinder\n        let normal: THREE.Vector3;\n        let overlap: number;\n        if (overlapY < overlapXZ) {\n          normal = new THREE.Vector3(0, -Math.sign(dy), 0);\n          overlap = overlapY;\n          player.onGround = true;\n        } else {\n          normal = new THREE.Vector3(-dx, 0, -dz).normalize();\n          overlap = overlapXZ;\n        }\n\n        collisions.push({\n          candidate,\n          contactPoint: closestPoint,\n          normal,\n          overlap,\n        });\n\n        this.addContactPointerHelper(closestPoint);\n      }\n    }\n\n    return collisions;\n  }\n\n  pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {\n    const dx = p.x - player.position.x;\n    const dy = p.y - (player.position.y - player.height / 2);\n    const dz = p.z - player.position.z;\n    const r_sq = dx * dx + dz * dz;\n\n    // Check if contact point is inside the player's bounding cylinder\n    return (\n      Math.abs(dy) < player.height / 2 && r_sq < player.radius * player.radius\n    );\n  }\n\n  resolveCollisions(collisions: Collision[], player: Player) {\n    // Resolve collisions in order of smallest overlap to largest\n    collisions.sort((a, b) => a.overlap - b.overlap);\n\n    for (const collision of collisions) {\n      // re-check if contact player is inside the player's bounding cylinder\n      // since the player position is updated after each collision is resolved\n      if (!this.pointInPlayerBoundingCylinder(collision.contactPoint, player)) {\n        continue;\n      }\n\n      // Adjust position of player so that block and player are no longer overlapping\n      const deltaPosition = collision.normal.clone();\n      deltaPosition.multiplyScalar(collision.overlap);\n\n      // Don't apply vertical change if player is not on ground\n      if (!player.onGround && deltaPosition.y !== 0) {\n        deltaPosition.y = 0;\n      }\n      player.position.add(deltaPosition);\n\n      // If player is stuck underneath a block, boost him up\n      if (collision.normal.y < 0) {\n        player.velocity.y += 10;\n      }\n\n      // Get the magnitude of player's velocity along collision normal\n      const magnitude = player.worldVelocity.dot(collision.normal);\n      // remove that part of velocity from the player's velocity\n      const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);\n      player.applyWorldDeltaVelocity(velocityAdj.negate());\n    }\n  }\n\n  // visualizes the block the player is colliding with\n  addCollisionHelper(candidate: Candidate) {\n    const blockMesh = new THREE.Mesh(collisionGeometry, collisionMaterial);\n    blockMesh.position.copy(\n      new THREE.Vector3(candidate.x, candidate.y, candidate.z)\n    );\n    this.helpers.add(blockMesh);\n  }\n\n  /**\n   * Visualizes the contact at the point 'p'\n   */\n  addContactPointerHelper(p: THREE.Vector3) {\n    const contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);\n    contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));\n    this.helpers.add(contactMesh);\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { Player } from \"./Player\";\nimport { World } from \"./world/World\";\n\ntype Candidate = {\n  block: BlockID;\n  x: number;\n  y: number;\n  z: number;\n};\n\ntype Collision = {\n  candidate: Candidate;\n  contactPoint: THREE.Vector3;\n  normal: THREE.Vector3;\n  overlap: number;\n};\n\nconst collisionMaterial = new THREE.MeshBasicMaterial({\n  color: 0xff0000,\n  transparent: true,\n  opacity: 0.2,\n});\nconst collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);\n\nconst contactMaterial = new THREE.MeshBasicMaterial({\n  wireframe: true,\n  color: 0x00ff00,\n});\nconst contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);\n\nexport class Physics {\n  // Acceleration due to gravity\n  static GRAVITY = -32;\n\n  // Physics simulation rate\n  simulationRate = 250;\n  stepSize = 1 / this.simulationRate;\n  // Accumulator to keep track of leftover dt\n  accumulator = 0;\n\n  helpers: THREE.Group;\n\n  constructor(scene: THREE.Scene) {\n    this.helpers = new THREE.Group();\n    this.helpers.visible = false;\n    scene.add(this.helpers);\n  }\n\n  update(dt: number, player: Player, world: World) {\n    this.accumulator += dt;\n    const blockUnderneath =\n      this.getBlockUnderneath(player, world)?.block || BlockID.Air;\n\n    while (this.accumulator >= this.stepSize) {\n      player.velocity.y += Physics.GRAVITY * this.stepSize;\n      player.applyInputs(this.stepSize, blockUnderneath);\n      this.detectCollisions(player, world);\n      this.accumulator -= this.stepSize;\n    }\n\n    player.update(world);\n  }\n\n  getBlockUnderneath(player: Player, world: World) {\n    return world.getBlock(\n      Math.floor(player.position.x),\n      Math.floor(player.position.y - player.height / 2 - 1),\n      Math.floor(player.position.z)\n    );\n  }\n\n  detectCollisions(player: Player, world: World) {\n    player.onGround = false;\n    this.helpers.clear();\n\n    const candidates = this.broadPhase(player, world);\n    const collisions = this.narrowPhase(candidates, player);\n\n    if (collisions.length > 0) {\n      this.resolveCollisions(collisions, player);\n    }\n  }\n\n  broadPhase(player: Player, world: World): Candidate[] {\n    const candidates: Candidate[] = [];\n\n    // Get the block extents of the player\n    const minX = Math.floor(player.position.x - player.radius);\n    const maxX = Math.ceil(player.position.x + player.radius);\n    const minY = Math.floor(player.position.y - player.height);\n    const maxY = Math.ceil(player.position.y);\n    const minZ = Math.floor(player.position.z - player.radius);\n    const maxZ = Math.ceil(player.position.z + player.radius);\n\n    // Iterate over the player's AABB\n    for (let x = minX; x <= maxX; x++) {\n      for (let y = minY; y <= maxY; y++) {\n        for (let z = minZ; z <= maxZ; z++) {\n          const block = world.getBlock(x, y, z);\n          // If the block is solid, add it to the list of candidates\n          if (block) {\n            const blockClass = BlockFactory.getBlock(block.block);\n            if (!blockClass.canPassThrough) {\n              candidates.push({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n              this.addCollisionHelper({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n            }\n          }\n        }\n      }\n    }\n\n    return candidates;\n  }\n\n  narrowPhase(candidates: Candidate[], player: Player): Collision[] {\n    const collisions: Collision[] = [];\n\n    for (const candidate of candidates) {\n      // Get the point of the block closest to the center of the player's bounding cylinder\n      const closestPoint = new THREE.Vector3(\n        Math.max(\n          candidate.x - 0.5,\n          Math.min(player.position.x, candidate.x + 0.5)\n        ),\n        Math.max(\n          candidate.y - 0.5,\n          Math.min(player.position.y - player.height / 2, candidate.y + 0.5)\n        ),\n        Math.max(\n          candidate.z - 0.5,\n          Math.min(player.position.z, candidate.z + 0.5)\n        )\n      );\n\n      // Get distance along each exist between closest point and center\n      const dx = closestPoint.x - player.position.x;\n      const dy = closestPoint.y - (player.position.y - player.height / 2);\n      const dz = closestPoint.z - player.position.z;\n\n      if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {\n        const overlapY = player.height / 2 - Math.abs(dy);\n        const overlapXZ = player.radius - Math.sqrt(dx * dx + dz * dz);\n\n        // Compute the normal of the collision (pointing away from content point)\n        // As well as overlap between the point and the player's bounding cylinder\n        let normal: THREE.Vector3;\n        let overlap: number;\n        if (overlapY < overlapXZ) {\n          normal = new THREE.Vector3(0, -Math.sign(dy), 0);\n          overlap = overlapY;\n          player.onGround = true;\n        } else {\n          normal = new THREE.Vector3(-dx, 0, -dz).normalize();\n          overlap = overlapXZ;\n        }\n\n        collisions.push({\n          candidate,\n          contactPoint: closestPoint,\n          normal,\n          overlap,\n        });\n\n        this.addContactPointerHelper(closestPoint);\n      }\n    }\n\n    return collisions;\n  }\n\n  pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {\n    const dx = p.x - player.position.x;\n    const dy = p.y - (player.position.y - player.height / 2);\n    const dz = p.z - player.position.z;\n    const r_sq = dx * dx + dz * dz;\n\n    // Check if contact point is inside the player's bounding cylinder\n    return (\n      Math.abs(dy) < player.height / 2 && r_sq < player.radius * player.radius\n    );\n  }\n\n  resolveCollisions(collisions: Collision[], player: Player) {\n    // Resolve collisions in order of smallest overlap to largest\n    collisions.sort((a, b) => a.overlap - b.overlap);\n\n    for (const collision of collisions) {\n      // re-check if contact player is inside the player's bounding cylinder\n      // since the player position is updated after each collision is resolved\n      if (!this.pointInPlayerBoundingCylinder(collision.contactPoint, player)) {\n        continue;\n      }\n\n      // Adjust position of player so that block and player are no longer overlapping\n      const deltaPosition = collision.normal.clone();\n      deltaPosition.multiplyScalar(collision.overlap);\n\n      // Don't apply vertical change if player is not on ground\n      if (!player.onGround && deltaPosition.y !== 0) {\n        deltaPosition.y = 0;\n      }\n      player.position.add(deltaPosition);\n\n      // If player is stuck underneath a block, boost him up\n      if (collision.normal.y < 0) {\n        player.velocity.y += 10;\n      }\n\n      // Get the magnitude of player's velocity along collision normal\n      const magnitude = player.worldVelocity.dot(collision.normal);\n      // remove that part of velocity from the player's velocity\n      const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);\n      player.applyWorldDeltaVelocity(velocityAdj.negate());\n    }\n  }\n\n  // visualizes the block the player is colliding with\n  addCollisionHelper(candidate: Candidate) {\n    const blockMesh = new THREE.Mesh(collisionGeometry, collisionMaterial);\n    blockMesh.position.copy(\n      new THREE.Vector3(candidate.x, candidate.y, candidate.z)\n    );\n    this.helpers.add(blockMesh);\n  }\n\n  /**\n   * Visualizes the contact at the point 'p'\n   */\n  addContactPointerHelper(p: THREE.Vector3) {\n    const contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);\n    contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));\n    this.helpers.add(contactMesh);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Physics.ts"
     },
@@ -3837,25 +4314,16 @@
       "id": "game/Player",
       "file": "game/Player.ts",
       "absPath": "/game/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\n\nimport audioManager from \"./audio/AudioManager\";\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { World } from \"./World\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  height = 1.75;\n  radius = 0.5;\n  maxSpeed = 4.317;\n  maxSprintSpeed = 5.612;\n  // maxSpeed = 25;\n  jumpSpeed = 10;\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n\n  initialPosition = new THREE.Vector3(32, 72, 32);\n\n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = new THREE.PerspectiveCamera(\n    70,\n    window.innerWidth / window.innerHeight,\n    0.1,\n    5000\n  );\n\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = new THREE.Mesh(\n    new THREE.CylinderGeometry(this.radius, this.radius, this.height, 16),\n    new THREE.MeshBasicMaterial({ wireframe: true })\n  );\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: (BlockID | null)[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n  constructor(scene: THREE.Scene) {\n    this.camera.position.set(\n      this.initialPosition.x,\n      this.initialPosition.y,\n      this.initialPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n    document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? this.maxSprintSpeed : this.maxSpeed);\n    }\n\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = this.jumpSpeed;\n    }\n\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    this.position.y += this.velocity.y * dt;\n\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      posX.innerHTML = `x: ${this.position.x.toFixed(3)}`;\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      posY.innerHTML = `y: ${this.position.y.toFixed(3)}`;\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      posZ.innerHTML = `z: ${this.position.z.toFixed(3)}`;\n    }\n  }\n\n  async playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateToolbar();\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.set(\n        this.initialPosition.x,\n        this.initialPosition.y,\n        this.initialPosition.z\n      );\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= this.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  /**\n   * Updates the toolbar UI\n   */\n  updateToolbar() {\n    for (let i = 1; i <= 9; i++) {\n      const slot = document.getElementById(`toolbar-slot-${i}`);\n      if (slot) {\n        const blockId = this.toolbar[i - 1];\n        if (blockId != null && blockId !== BlockID.Air) {\n          slot.style.backgroundImage = `url('${\n            BlockFactory.getBlock(blockId).uiTexture\n          }')`;\n        }\n      }\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    if (validKeys.includes(event.code) && !this.controls.isLocked) {\n      this.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.activeToolbarIndex = Number(event.key) - 1;\n        document\n          ?.getElementById(\"toolbar-active-border\")\n          ?.setAttribute(\"style\", `left: ${this.activeToolbarIndex * 11}%`);\n        break;\n      case \"KeyW\":\n        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {\n          this.isSprinting = true;\n          this.input.z = this.maxSprintSpeed;\n        } else {\n          this.input.z = this.maxSpeed;\n        }\n        this.wKeyPressed = true;\n        this.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.input.x = -this.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.input.z = -this.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.input.x = this.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.position.set(\n          this.initialPosition.x,\n          this.initialPosition.y,\n          this.initialPosition.z\n        );\n        this.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.input.z = 0;\n        this.wKeyPressed = false;\n        this.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.input.x = 0;\n        break;\n      case \"Space\":\n        this.spacePressed = false;\n        break;\n    }\n  }\n}\n",
+      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\n\nimport audioManager from \"./audio/AudioManager\";\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { World } from \"./world/World\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  height = 1.75;\n  radius = 0.5;\n  maxSpeed = 4.317;\n  maxSprintSpeed = 5.612;\n  // maxSpeed = 25;\n  jumpSpeed = 10;\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n\n  initialPosition = new THREE.Vector3(32, 72, 32);\n\n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = new THREE.PerspectiveCamera(\n    70,\n    window.innerWidth / window.innerHeight,\n    0.1,\n    5000\n  );\n\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = new THREE.Mesh(\n    new THREE.CylinderGeometry(this.radius, this.radius, this.height, 16),\n    new THREE.MeshBasicMaterial({ wireframe: true })\n  );\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: (BlockID | null)[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n  constructor(scene: THREE.Scene) {\n    this.camera.position.set(\n      this.initialPosition.x,\n      this.initialPosition.y,\n      this.initialPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n    document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? this.maxSprintSpeed : this.maxSpeed);\n    }\n\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = this.jumpSpeed;\n    }\n\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    this.position.y += this.velocity.y * dt;\n\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      posX.innerHTML = `x: ${this.position.x.toFixed(3)}`;\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      posY.innerHTML = `y: ${this.position.y.toFixed(3)}`;\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      posZ.innerHTML = `z: ${this.position.z.toFixed(3)}`;\n    }\n  }\n\n  async playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateToolbar();\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.set(\n        this.initialPosition.x,\n        this.initialPosition.y,\n        this.initialPosition.z\n      );\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= this.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  /**\n   * Updates the toolbar UI\n   */\n  updateToolbar() {\n    for (let i = 1; i <= 9; i++) {\n      const slot = document.getElementById(`toolbar-slot-${i}`);\n      if (slot) {\n        const blockId = this.toolbar[i - 1];\n        if (blockId != null && blockId !== BlockID.Air) {\n          slot.style.backgroundImage = `url('${\n            BlockFactory.getBlock(blockId).uiTexture\n          }')`;\n        }\n      }\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    if (validKeys.includes(event.code) && !this.controls.isLocked) {\n      this.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.activeToolbarIndex = Number(event.key) - 1;\n        document\n          ?.getElementById(\"toolbar-active-border\")\n          ?.setAttribute(\"style\", `left: ${this.activeToolbarIndex * 11}%`);\n        break;\n      case \"KeyW\":\n        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {\n          this.isSprinting = true;\n          this.input.z = this.maxSprintSpeed;\n        } else {\n          this.input.z = this.maxSpeed;\n        }\n        this.wKeyPressed = true;\n        this.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.input.x = -this.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.input.z = -this.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.input.x = this.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.position.set(\n          this.initialPosition.x,\n          this.initialPosition.y,\n          this.initialPosition.z\n        );\n        this.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.input.z = 0;\n        this.wKeyPressed = false;\n        this.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.input.x = 0;\n        break;\n      case \"Space\":\n        this.spacePressed = false;\n        break;\n    }\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Player.ts"
-    },
-    "game/World": {
-      "path": "game/World",
-      "id": "game/World",
-      "file": "game/World.ts",
-      "absPath": "/game/World",
-      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { LightSourceBlock } from \"./Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"./Player\";\nimport { WorldChunk, WorldParams, WorldSize } from \"./WorldChunk\";\n\nexport class World extends THREE.Group {\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkSize: WorldSize = {\n    width: 16,\n    height: 32,\n  };\n  chunkQueue: { x: number; z: number }[];\n  initialLoadComplete = false;\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: WorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 1,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n  };\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n\n  wireframeMode = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    this.scene = scene;\n    this.chunkQueue = [];\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks(player);\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    } else {\n      // console.log(\"Chunk queue empty\");\n      if (!this.initialLoadComplete) {\n        this.initialLoadComplete = true;\n        const menuScreen = document.getElementById(\"menu\");\n        const debugMenu = document.getElementById(\"debug\");\n        if (menuScreen) {\n          menuScreen.style.display = \"none\";\n          if (debugMenu) {\n            debugMenu.style.display = \"flex\";\n          }\n\n          const startingPlayerPosition = new THREE.Vector3(\n            player.initialPosition.x,\n            player.initialPosition.y,\n            player.initialPosition.z\n          );\n          for (let y = this.chunkSize.height; y > 0; y--) {\n            if (\n              this.getBlock(\n                startingPlayerPosition.x,\n                y,\n                startingPlayerPosition.z\n              )?.block === BlockID.Grass\n            ) {\n              startingPlayerPosition.y = y;\n              break;\n            }\n          }\n\n          player.position.set(\n            startingPlayerPosition.x,\n            startingPlayerPosition.y + 10,\n            startingPlayerPosition.z\n          );\n          player.controls.lock();\n        }\n      }\n    }\n\n    if (!this.initialLoadComplete) {\n      const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n      const loadedChunks = this.children.length;\n      const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n\n      const progressBar = document.getElementById(\"loading-progress-bar\");\n      if (progressBar) {\n        progressBar.style.width = `${percentLoaded}%`;\n      }\n    }\n  }\n\n  getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {\n    return this.getBlock(\n      Math.floor(position.x),\n      Math.floor(position.y - playerHeight / 2 - 1),\n      Math.floor(position.z)\n    );\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(player: Player): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    const coords = this.worldToChunkCoords(\n      player.position.x,\n      player.position.y,\n      player.position.z\n    );\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: coords.chunk.x + dx, z: coords.chunk.z + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - coords.chunk.x) ** 2 + (a.z - coords.chunk.z) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - coords.chunk.x) ** 2 + (b.z - coords.chunk.z) ** 2\n      );\n\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const chunk = new WorldChunk(\n      this.chunkSize,\n      this.params,\n      this.dataStore,\n      this.wireframeMode\n    );\n    chunk.position.set(x * this.chunkSize.width, 0, z * this.chunkSize.width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  removeBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n\n    if (blockToRemove?.block === BlockID.Bedrock) {\n      return;\n    }\n\n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the chunk and world coordinates of the block at (x, y, z)\n   *  - `chunk` is the coordinates of the chunk containing the block\n   *  - `block` is the world coordinates of the block\n   */\n  worldToChunkCoords(\n    x: number,\n    y: number,\n    z: number\n  ): {\n    chunk: { x: number; z: number };\n    block: { x: number; y: number; z: number };\n  } {\n    const chunkX = Math.floor(x / this.chunkSize.width);\n    const chunkZ = Math.floor(z / this.chunkSize.width);\n\n    const blockX = x - chunkX * this.chunkSize.width;\n    const blockZ = z - chunkZ * this.chunkSize.width;\n\n    return {\n      chunk: { x: chunkX, z: chunkZ },\n      block: { x: blockX, y, z: blockZ },\n    };\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/World.ts"
     },
     "game/Game": {
       "path": "game/Game",
       "id": "game/Game",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Howl } from \"howler\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./Player\";\nimport { World } from \"./World\";\nimport { initSky } from \"./sky\";\nimport { initLight } from \"./light\";\nimport { updateRenderInfo, updateStats } from \"./dev\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private sunSettings = {\n    distance: 400,\n    cycleLength: 600,\n  };\n\n  private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;\n  private sun!: THREE.DirectionalLight;\n  private sunHelper!: THREE.DirectionalLightHelper;\n  private shadowHelper!: THREE.CameraHelper;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  private lastShadowUpdate = 0;\n\n  private dayColor = new THREE.Color(0xc0d8ff);\n  private nightColor = new THREE.Color(0x10121e);\n  private sunsetColor = new THREE.Color(0xcc7a00);\n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      this.initListeners();\n      this.initAudio();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.orbitCamera = new THREE.PerspectiveCamera(\n      75,\n      window.innerWidth / window.innerHeight\n    );\n    this.orbitCamera.position.set(-32, 64, -32);\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    const wrap = document.getElementById('canvas_wrap');\n    wrap?.appendChild(this.renderer.domElement);\n\n    this.controls = new OrbitControls(\n      this.orbitCamera,\n      this.renderer.domElement\n    );\n    this.controls.target.set(0, 0, 0);\n    this.controls.update();\n\n    // Skybox\n    this.sky = initSky(this.scene);\n    this.scene.add(this.sky);\n\n    // init light\n    const { sun, sunHelper, shadowHelper } = initLight(this.scene);\n    this.sun = sun;\n    this.sunHelper = sunHelper;\n    this.shadowHelper = shadowHelper;\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene);\n    this.physics = new Physics(this.scene);\n\n    this.updateSunPosition(0);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      this.sunSettings,\n      this.sunHelper,\n      this.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  initAudio() {\n    const sound = new Howl({\n      src: [\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3\"],\n      loop: true,\n    });\n    sound.play();\n  }\n\n  onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n      if (event.button === 0 && this.player.selectedCoords) {\n        // Left click\n        this.world.removeBlock(\n          Math.ceil(this.player.selectedCoords.x - 0.5),\n          Math.ceil(this.player.selectedCoords.y - 0.5),\n          Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n      } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n          const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n          );\n          const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n          );\n\n          if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;\n\n          this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n          );\n        }\n      }\n    }\n  }\n\n  initListeners() {\n    window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n    document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n  updateSkyColor() {\n    const elapsedTime = this.clock.getElapsedTime();\n    const cycleDuration = this.sunSettings.cycleLength; // Duration of a day in seconds\n    const cycleTime = elapsedTime % cycleDuration;\n\n    let topColor: THREE.Color;\n    let bottomColor: THREE.Color;\n\n    if (cycleTime < cycleDuration / 2) {\n      // Day time\n      topColor = this.dayColor\n        .clone()\n        .lerp(this.nightColor, cycleTime / (cycleDuration / 2));\n      this.sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses\n    } else {\n      // Night time\n      topColor = this.nightColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)\n        );\n      this.sun.intensity =\n        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses\n    }\n\n    const dayStart = 0;\n    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle\n    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle\n    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle\n\n    if (cycleTime >= dayStart && cycleTime < sunsetStart) {\n      // Day time\n      bottomColor = this.dayColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - dayStart) / (sunsetStart - dayStart)\n        );\n    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {\n      // Sunset\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.nightColor,\n          (cycleTime - sunsetStart) / (nightStart - sunsetStart)\n        );\n    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {\n      // Night time\n      bottomColor = this.nightColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - nightStart) / (sunriseStart - nightStart)\n        );\n    } else {\n      // Sunrise\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)\n        );\n    }\n\n    this.sky.material.uniforms.topColor.value = topColor;\n    this.sky.material.uniforms.bottomColor.value = bottomColor;\n\n    // Desaturate the fog slightly\n    this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);\n\n    if (\n      performance.now() - this.lastShadowUpdate <\n      this.sunSettings.cycleLength\n    )\n      return;\n\n    const sunAngle =\n      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4\n    this.updateSunPosition(sunAngle);\n\n    this.lastShadowUpdate = performance.now();\n  }\n\n  updateSunPosition(angle: number) {\n    const sunX = this.sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun\n    const sunY = this.sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun\n    this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun\n    this.sun.position.add(this.player.camera.position);\n\n    this.sun.target.position.copy(this.player.camera.position);\n    this.sun.target.updateMatrixWorld();\n\n    this.sunHelper.update();\n    this.shadowHelper.update();\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    this.updateSkyColor();\n\n    this.physics.update(deltaTime, this.player, this.world);\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfo(this.renderer);\n    updateStats();\n    // if (this.controls) {\n    //   this.controls.autoRotate = false;\n    //   this.controls.autoRotateSpeed = 2.0;\n    // }\n\n    if (this.controls) this.controls.update();\n\n    TWEEN.update();\n\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n\n    this.previousTime = currentTime;\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Howl } from \"howler\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./Player\";\nimport { World } from \"./world/World\";\nimport { initSky } from \"./sky\";\nimport { initLight } from \"./light\";\nimport { updateRenderInfo, updateStats } from \"./dev\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private sunSettings = {\n    distance: 400,\n    cycleLength: 600,\n  };\n\n  private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;\n  private sun!: THREE.DirectionalLight;\n  private sunHelper!: THREE.DirectionalLightHelper;\n  private shadowHelper!: THREE.CameraHelper;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  private lastShadowUpdate = 0;\n\n  private dayColor = new THREE.Color(0xc0d8ff);\n  private nightColor = new THREE.Color(0x10121e);\n  private sunsetColor = new THREE.Color(0xcc7a00);\n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      this.initListeners();\n      this.initAudio();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.orbitCamera = new THREE.PerspectiveCamera(\n      75,\n      window.innerWidth / window.innerHeight\n    );\n    this.orbitCamera.position.set(-32, 64, -32);\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    const wrap = document.getElementById('canvas_wrap');\n    wrap?.appendChild(this.renderer.domElement);\n\n    this.controls = new OrbitControls(\n      this.orbitCamera,\n      this.renderer.domElement\n    );\n    this.controls.target.set(0, 0, 0);\n    this.controls.update();\n\n    // Skybox\n    this.sky = initSky(this.scene);\n    this.scene.add(this.sky);\n\n    // init light\n    const { sun, sunHelper, shadowHelper } = initLight(this.scene);\n    this.sun = sun;\n    this.sunHelper = sunHelper;\n    this.shadowHelper = shadowHelper;\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene);\n    this.physics = new Physics(this.scene);\n\n    this.updateSunPosition(0);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      this.sunSettings,\n      this.sunHelper,\n      this.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  initAudio() {\n    const sound = new Howl({\n      src: [\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3\"],\n      loop: true,\n    });\n    sound.play();\n  }\n\n  onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n      if (event.button === 0 && this.player.selectedCoords) {\n        // Left click\n        this.world.removeBlock(\n          Math.ceil(this.player.selectedCoords.x - 0.5),\n          Math.ceil(this.player.selectedCoords.y - 0.5),\n          Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n      } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n          const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n          );\n          const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n          );\n\n          if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;\n\n          this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n          );\n        }\n      }\n    }\n  }\n\n  initListeners() {\n    window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n    document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n  updateSkyColor() {\n    const elapsedTime = this.clock.getElapsedTime();\n    const cycleDuration = this.sunSettings.cycleLength; // Duration of a day in seconds\n    const cycleTime = elapsedTime % cycleDuration;\n\n    let topColor: THREE.Color;\n    let bottomColor: THREE.Color;\n\n    if (cycleTime < cycleDuration / 2) {\n      // Day time\n      topColor = this.dayColor\n        .clone()\n        .lerp(this.nightColor, cycleTime / (cycleDuration / 2));\n      this.sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses\n    } else {\n      // Night time\n      topColor = this.nightColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)\n        );\n      this.sun.intensity =\n        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses\n    }\n\n    const dayStart = 0;\n    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle\n    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle\n    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle\n\n    if (cycleTime >= dayStart && cycleTime < sunsetStart) {\n      // Day time\n      bottomColor = this.dayColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - dayStart) / (sunsetStart - dayStart)\n        );\n    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {\n      // Sunset\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.nightColor,\n          (cycleTime - sunsetStart) / (nightStart - sunsetStart)\n        );\n    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {\n      // Night time\n      bottomColor = this.nightColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - nightStart) / (sunriseStart - nightStart)\n        );\n    } else {\n      // Sunrise\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)\n        );\n    }\n\n    this.sky.material.uniforms.topColor.value = topColor;\n    this.sky.material.uniforms.bottomColor.value = bottomColor;\n\n    // Desaturate the fog slightly\n    this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);\n\n    if (\n      performance.now() - this.lastShadowUpdate <\n      this.sunSettings.cycleLength\n    )\n      return;\n\n    const sunAngle =\n      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4\n    this.updateSunPosition(sunAngle);\n\n    this.lastShadowUpdate = performance.now();\n  }\n\n  updateSunPosition(angle: number) {\n    const sunX = this.sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun\n    const sunY = this.sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun\n    this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun\n    this.sun.position.add(this.player.camera.position);\n\n    this.sun.target.position.copy(this.player.camera.position);\n    this.sun.target.updateMatrixWorld();\n\n    this.sunHelper.update();\n    this.shadowHelper.update();\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    this.updateSkyColor();\n\n    this.physics.update(deltaTime, this.player, this.world);\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfo(this.renderer);\n    updateStats();\n    // if (this.controls) {\n    //   this.controls.autoRotate = false;\n    //   this.controls.autoRotateSpeed = 2.0;\n    // }\n\n    if (this.controls) this.controls.update();\n\n    TWEEN.update();\n\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n\n    this.previousTime = currentTime;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
     },
@@ -5560,8 +6028,8 @@
             "imports": [],
             "format": "esm"
           },
-          "src/pages/game/chunkWorker.ts": {
-            "bytes": 10957,
+          "src/pages/game/world/chunkWorker.ts": {
+            "bytes": 10946,
             "imports": [
               {
                 "path": "three",
@@ -5576,19 +6044,86 @@
               {
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
-                "original": "./Block"
+                "original": "../Block"
               },
               {
                 "path": "src/pages/game/RNG.ts",
                 "kind": "import-statement",
-                "original": "./RNG"
+                "original": "../RNG"
               },
               {
                 "path": "./WorldChunk",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "./interface",
+                "kind": "import-statement",
+                "external": true
               }
             ],
+            "format": "esm"
+          },
+          "src/pages/game/world/WorldChunk.ts": {
+            "bytes": 12891,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/audio/AudioManager.ts",
+                "kind": "import-statement",
+                "original": "../audio/AudioManager"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../Block"
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "../Block/Block"
+              },
+              {
+                "path": "src/pages/game/Block/BlockFactory.ts",
+                "kind": "import-statement",
+                "original": "../Block/BlockFactory"
+              },
+              {
+                "path": "./DataStore",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/chunkWorker.ts",
+                "kind": "import-statement",
+                "original": "./chunkWorker"
+              },
+              {
+                "path": "./interface",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/DataStore.ts": {
+            "bytes": 1195,
+            "imports": [
+              {
+                "path": "../Block",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/interface.ts": {
+            "bytes": 543,
+            "imports": [],
             "format": "esm"
           },
           "src/pages/game/light/index.ts": {
@@ -5602,8 +6137,8 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/WorldChunk.ts": {
-            "bytes": 13383,
+          "src/pages/game/world/World.ts": {
+            "bytes": 12409,
             "imports": [
               {
                 "path": "three",
@@ -5611,43 +6146,37 @@
                 "external": true
               },
               {
-                "path": "src/pages/game/audio/AudioManager.ts",
-                "kind": "import-statement",
-                "original": "./audio/AudioManager"
-              },
-              {
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block/Block"
+                "original": "../Block"
               },
               {
                 "path": "src/pages/game/Block/BlockFactory.ts",
                 "kind": "import-statement",
-                "original": "./Block/BlockFactory"
+                "original": "../Block/BlockFactory"
               },
               {
-                "path": "./DataStore",
+                "path": "../Block/LightSourceBlock",
                 "kind": "import-statement",
                 "external": true
               },
               {
-                "path": "src/pages/game/chunkWorker.ts",
+                "path": "src/pages/game/world/DataStore.ts",
                 "kind": "import-statement",
-                "original": "./chunkWorker"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/DataStore.ts": {
-            "bytes": 1194,
-            "imports": [
+                "original": "./DataStore"
+              },
               {
-                "path": "./Block",
+                "path": "../Player",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/WorldChunk.ts",
+                "kind": "import-statement",
+                "original": "./WorldChunk"
+              },
+              {
+                "path": "./interface",
                 "kind": "import-statement",
                 "external": true
               }
@@ -5671,7 +6200,7 @@
             "format": "esm"
           },
           "src/pages/game/gui/index.ts": {
-            "bytes": 4874,
+            "bytes": 4880,
             "imports": [
               {
                 "path": "lil-gui",
@@ -5699,7 +6228,7 @@
                 "external": true
               },
               {
-                "path": "../World",
+                "path": "../world/World",
                 "kind": "import-statement",
                 "external": true
               },
@@ -5728,7 +6257,7 @@
             "format": "esm"
           },
           "src/pages/game/Physics.ts": {
-            "bytes": 7767,
+            "bytes": 7773,
             "imports": [
               {
                 "path": "three",
@@ -5751,7 +6280,7 @@
                 "external": true
               },
               {
-                "path": "./World",
+                "path": "./world/World",
                 "kind": "import-statement",
                 "external": true
               }
@@ -5759,7 +6288,7 @@
             "format": "esm"
           },
           "src/pages/game/Player.ts": {
-            "bytes": 11182,
+            "bytes": 11188,
             "imports": [
               {
                 "path": "@tweenjs/tween.js",
@@ -5807,56 +6336,15 @@
                 "original": "./Block/BlockFactory"
               },
               {
-                "path": "./World",
+                "path": "./world/World",
                 "kind": "import-statement",
                 "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/World.ts": {
-            "bytes": 12373,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/BlockFactory.ts",
-                "kind": "import-statement",
-                "original": "./Block/BlockFactory"
-              },
-              {
-                "path": "./Block/LightSourceBlock",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/DataStore.ts",
-                "kind": "import-statement",
-                "original": "./DataStore"
-              },
-              {
-                "path": "./Player",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/WorldChunk.ts",
-                "kind": "import-statement",
-                "original": "./WorldChunk"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/Game.ts": {
-            "bytes": 9037,
+            "bytes": 9043,
             "imports": [
               {
                 "path": "three",
@@ -5894,9 +6382,9 @@
                 "original": "./Player"
               },
               {
-                "path": "src/pages/game/World.ts",
+                "path": "src/pages/game/world/World.ts",
                 "kind": "import-statement",
-                "original": "./World"
+                "original": "./world/World"
               },
               {
                 "path": "src/pages/game/sky/index.ts",
@@ -5943,7 +6431,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 8533,
+            "bytes": 8920,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -6021,6 +6509,11 @@
                 "original": "../../../src/pages/game/Block/OakLogBlock.ts"
               },
               {
+                "path": "src/pages/game/world/chunkWorker.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/chunkWorker.ts"
+              },
+              {
                 "path": "src/pages/game/Block/GrassBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/GrassBlock.ts"
@@ -6031,9 +6524,24 @@
                 "original": "../../../src/pages/game/Block/StoneBlock.ts"
               },
               {
+                "path": "src/pages/game/world/WorldChunk.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/WorldChunk.ts"
+              },
+              {
                 "path": "src/pages/game/Block/DirtBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/DirtBlock.ts"
+              },
+              {
+                "path": "src/pages/game/world/DataStore.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/DataStore.ts"
+              },
+              {
+                "path": "src/pages/game/world/interface.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/interface.ts"
               },
               {
                 "path": "src/pages/game/Block/AirBlock.ts",
@@ -6061,24 +6569,14 @@
                 "original": "../../../src/pages/game/Block/index.ts"
               },
               {
-                "path": "src/pages/game/chunkWorker.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/chunkWorker.ts"
-              },
-              {
                 "path": "src/pages/game/light/index.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/light/index.ts"
               },
               {
-                "path": "src/pages/game/WorldChunk.ts",
+                "path": "src/pages/game/world/World.ts",
                 "kind": "dynamic-import",
-                "original": "../../../src/pages/game/WorldChunk.ts"
-              },
-              {
-                "path": "src/pages/game/DataStore.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/DataStore.ts"
+                "original": "../../../src/pages/game/world/World.ts"
               },
               {
                 "path": "src/pages/game/dev/index.ts",
@@ -6104,11 +6602,6 @@
                 "path": "src/pages/game/Player.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Player.ts"
-              },
-              {
-                "path": "src/pages/game/World.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/World.ts"
               },
               {
                 "path": "src/pages/game/Game.ts",
@@ -6419,6 +6912,11 @@
                 "external": true
               },
               {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three/examples/jsm/libs/stats.module",
                 "kind": "import-statement",
                 "external": true
@@ -6465,11 +6963,6 @@
               },
               {
                 "path": "three/examples/jsm/lines/LineMaterial.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7708,17 +8201,23 @@
               "src/pages/game/RNG.ts": {
                 "bytesInOutput": 810
               },
-              "src/pages/game/chunkWorker.ts": {
-                "bytesInOutput": 9872
+              "src/pages/game/world/chunkWorker.ts": {
+                "bytesInOutput": 9878
+              },
+              "src/pages/game/world/WorldChunk.ts": {
+                "bytesInOutput": 11885
+              },
+              "src/pages/game/world/DataStore.ts": {
+                "bytesInOutput": 1032
+              },
+              "src/pages/game/world/interface.ts": {
+                "bytesInOutput": 125
               },
               "src/pages/game/light/index.ts": {
                 "bytesInOutput": 1024
               },
-              "src/pages/game/WorldChunk.ts": {
-                "bytesInOutput": 11879
-              },
-              "src/pages/game/DataStore.ts": {
-                "bytesInOutput": 1026
+              "src/pages/game/world/World.ts": {
+                "bytesInOutput": 11883
               },
               "src/pages/game/dev/index.ts": {
                 "bytesInOutput": 1488
@@ -7734,9 +8233,6 @@
               },
               "src/pages/game/Player.ts": {
                 "bytesInOutput": 11578
-              },
-              "src/pages/game/World.ts": {
-                "bytesInOutput": 11877
               },
               "src/pages/game/Game.ts": {
                 "bytesInOutput": 8355
@@ -7754,7 +8250,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 7404
+                "bytesInOutput": 7707
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -7775,7 +8271,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 140202
+            "bytes": 140716
           }
         }
       }
@@ -11376,22 +11872,6 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/DataStore.ts": [
-        {
-          "end": 35,
-          "importKind": "value",
-          "source": "./Block",
-          "specifiers": [
-            {
-              "imported": "BlockID",
-              "local": "BlockID",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        }
-      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts": [
         {
           "end": 32,
@@ -11495,9 +11975,9 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 333,
+          "end": 339,
           "importKind": "value",
-          "source": "./World",
+          "source": "./world/World",
           "specifiers": [
             {
               "imported": "World",
@@ -11509,7 +11989,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 366,
+          "end": 372,
           "importKind": "value",
           "source": "./sky",
           "specifiers": [
@@ -11519,11 +11999,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 334,
+          "start": 340,
           "type": "ImportDeclaration"
         },
         {
-          "end": 403,
+          "end": 409,
           "importKind": "value",
           "source": "./light",
           "specifiers": [
@@ -11533,11 +12013,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 367,
+          "start": 373,
           "type": "ImportDeclaration"
         },
         {
-          "end": 458,
+          "end": 464,
           "importKind": "value",
           "source": "./dev",
           "specifiers": [
@@ -11552,7 +12032,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 404,
+          "start": 410,
           "type": "ImportDeclaration"
         }
       ],
@@ -11613,9 +12093,9 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 189,
+          "end": 195,
           "importKind": "value",
-          "source": "./World",
+          "source": "./world/World",
           "specifiers": [
             {
               "imported": "World",
@@ -11752,9 +12232,9 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 537,
+          "end": 543,
           "importKind": "value",
-          "source": "./World",
+          "source": "./world/World",
           "specifiers": [
             {
               "imported": "World",
@@ -11767,212 +12247,6 @@
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/RNG.ts": [],
-      "/Applications/workspace/minicraft_demo/src/pages/game/World.ts": [
-        {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 68,
-          "importKind": "value",
-          "source": "./Block",
-          "specifiers": [
-            {
-              "imported": "BlockID",
-              "local": "BlockID",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 34,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 121,
-          "importKind": "value",
-          "source": "./Block/BlockFactory",
-          "specifiers": [
-            {
-              "imported": "BlockFactory",
-              "local": "BlockFactory",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 69,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 182,
-          "importKind": "value",
-          "source": "./Block/LightSourceBlock",
-          "specifiers": [
-            {
-              "imported": "LightSourceBlock",
-              "local": "LightSourceBlock",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 122,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 223,
-          "importKind": "value",
-          "source": "./DataStore",
-          "specifiers": [
-            {
-              "imported": "DataStore",
-              "local": "DataStore",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 183,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 258,
-          "importKind": "value",
-          "source": "./Player",
-          "specifiers": [
-            {
-              "imported": "Player",
-              "local": "Player",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 224,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 325,
-          "importKind": "value",
-          "source": "./WorldChunk",
-          "specifiers": [
-            {
-              "imported": "WorldChunk",
-              "local": "WorldChunk",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "WorldParams",
-              "local": "WorldParams",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "WorldSize",
-              "local": "WorldSize",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 259,
-          "type": "ImportDeclaration"
-        }
-      ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/WorldChunk.ts": [
-        {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 82,
-          "importKind": "value",
-          "source": "./audio/AudioManager",
-          "specifiers": [
-            {
-              "local": "audioManager",
-              "type": "ImportDefaultSpecifier"
-            }
-          ],
-          "start": 34,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 117,
-          "importKind": "value",
-          "source": "./Block",
-          "specifiers": [
-            {
-              "imported": "BlockID",
-              "local": "BlockID",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 83,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 165,
-          "importKind": "value",
-          "source": "./Block/Block",
-          "specifiers": [
-            {
-              "imported": "RenderGeometry",
-              "local": "RenderGeometry",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 118,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 218,
-          "importKind": "value",
-          "source": "./Block/BlockFactory",
-          "specifiers": [
-            {
-              "imported": "BlockFactory",
-              "local": "BlockFactory",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 166,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 259,
-          "importKind": "value",
-          "source": "./DataStore",
-          "specifiers": [
-            {
-              "imported": "DataStore",
-              "local": "DataStore",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 219,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 308,
-          "importKind": "value",
-          "source": "./chunkWorker",
-          "specifiers": [
-            {
-              "local": "workerInstance",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 260,
-          "type": "ImportDeclaration"
-        }
-      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/audio/AudioManager.ts": [
         {
           "end": 39,
@@ -12031,87 +12305,6 @@
             }
           ],
           "start": 113,
-          "type": "ImportDeclaration"
-        }
-      ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/chunkWorker.ts": [
-        {
-          "end": 66,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 35,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 149,
-          "importKind": "value",
-          "source": "three/examples/jsm/math/SimplexNoise",
-          "specifiers": [
-            {
-              "imported": "SimplexNoise",
-              "local": "SimplexNoise",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 81,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 196,
-          "importKind": "value",
-          "source": "./Block",
-          "specifiers": [
-            {
-              "imported": "BlockID",
-              "local": "BlockID",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "oreConfig",
-              "local": "oreConfig",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 151,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 225,
-          "importKind": "value",
-          "source": "./RNG",
-          "specifiers": [
-            {
-              "imported": "RNG",
-              "local": "RNG",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 197,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 280,
-          "importKind": "value",
-          "source": "./WorldChunk",
-          "specifiers": [
-            {
-              "imported": "WorldParams",
-              "local": "WorldParams",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "WorldSize",
-              "local": "WorldSize",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 226,
           "type": "ImportDeclaration"
         }
       ],
@@ -12213,9 +12406,9 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 205,
+          "end": 211,
           "importKind": "value",
-          "source": "../World",
+          "source": "../world/World",
           "specifiers": [
             {
               "imported": "World",
@@ -12227,7 +12420,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 241,
+          "end": 247,
           "importKind": "value",
           "source": "../dev",
           "specifiers": [
@@ -12237,11 +12430,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 206,
+          "start": 212,
           "type": "ImportDeclaration"
         },
         {
-          "end": 291,
+          "end": 297,
           "importKind": "value",
           "source": "../audio/AudioManager",
           "specifiers": [
@@ -12250,7 +12443,7 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 242,
+          "start": 248,
           "type": "ImportDeclaration"
         }
       ],
@@ -12284,6 +12477,342 @@
           "type": "ImportDeclaration"
         }
       ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/DataStore.ts": [
+        {
+          "end": 36,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/World.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 69,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 34,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 123,
+          "importKind": "value",
+          "source": "../Block/BlockFactory",
+          "specifiers": [
+            {
+              "imported": "BlockFactory",
+              "local": "BlockFactory",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 70,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 185,
+          "importKind": "value",
+          "source": "../Block/LightSourceBlock",
+          "specifiers": [
+            {
+              "imported": "LightSourceBlock",
+              "local": "LightSourceBlock",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 124,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 226,
+          "importKind": "value",
+          "source": "./DataStore",
+          "specifiers": [
+            {
+              "imported": "DataStore",
+              "local": "DataStore",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 186,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 262,
+          "importKind": "value",
+          "source": "../Player",
+          "specifiers": [
+            {
+              "imported": "Player",
+              "local": "Player",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 227,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 316,
+          "importKind": "value",
+          "source": "./WorldChunk",
+          "specifiers": [
+            {
+              "imported": "WorldChunk",
+              "local": "WorldChunk",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "WorldSize",
+              "local": "WorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 263,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 360,
+          "importKind": "value",
+          "source": "./interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 317,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/WorldChunk.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 83,
+          "importKind": "value",
+          "source": "../audio/AudioManager",
+          "specifiers": [
+            {
+              "local": "audioManager",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 34,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 119,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 84,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 168,
+          "importKind": "value",
+          "source": "../Block/Block",
+          "specifiers": [
+            {
+              "imported": "RenderGeometry",
+              "local": "RenderGeometry",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 120,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 222,
+          "importKind": "value",
+          "source": "../Block/BlockFactory",
+          "specifiers": [
+            {
+              "imported": "BlockFactory",
+              "local": "BlockFactory",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 169,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 263,
+          "importKind": "value",
+          "source": "./DataStore",
+          "specifiers": [
+            {
+              "imported": "DataStore",
+              "local": "DataStore",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 223,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 312,
+          "importKind": "value",
+          "source": "./chunkWorker",
+          "specifiers": [
+            {
+              "local": "workerInstance",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 264,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 356,
+          "importKind": "value",
+          "source": "./interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 313,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts": [
+        {
+          "end": 66,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 35,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 149,
+          "importKind": "value",
+          "source": "three/examples/jsm/math/SimplexNoise",
+          "specifiers": [
+            {
+              "imported": "SimplexNoise",
+              "local": "SimplexNoise",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 81,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 197,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "oreConfig",
+              "local": "oreConfig",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 151,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 227,
+          "importKind": "value",
+          "source": "../RNG",
+          "specifiers": [
+            {
+              "imported": "RNG",
+              "local": "RNG",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 198,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 269,
+          "importKind": "value",
+          "source": "./WorldChunk",
+          "specifiers": [
+            {
+              "imported": "WorldSize",
+              "local": "WorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 228,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 313,
+          "importKind": "value",
+          "source": "./interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 270,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/interface.ts": [],
       "/Applications/workspace/minicraft_demo/src/pages/index.tsx": [
         {
           "end": 35,
