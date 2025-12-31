@@ -6,6 +6,7 @@ https://umijs.org/docs/guides/getting-started
 - [ ✅ ] 项目框架初始化
 - [ ✅ ] mini craft 初始化
 - [  ] 角色碰撞盒调整 目前一格大小无法掉落
+- [  ] 角色移动后 第三视角的位置没有更新
 
 ## dev tools
 

@@ -1,3 +1,6 @@
+import { BlockID } from "../Block";
+
+// 创造场景时候的初始参数
 export interface IWorldParams {
   seed: number;
   terrain: {
@@ -34,3 +37,13 @@ export interface IWorldParams {
     frequency: number;
   };
 }
+
+export interface IInstanceData {
+  block: BlockID;
+  instanceIds: number[]; // reference to mesh instanceId
+};
+
+export interface IWorldSize {
+  width: number;
+  height: number;
+};

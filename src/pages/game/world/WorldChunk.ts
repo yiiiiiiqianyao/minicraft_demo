@@ -6,31 +6,21 @@ import { RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
 import * as workerInstance from './chunkWorker';
-import { IWorldParams } from "./interface";
+import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
 
 const geometry = new THREE.BoxGeometry();
 const crossGeometry = new THREE.PlaneGeometry();
 
-export type InstanceData = {
-  block: BlockID;
-  instanceIds: number[]; // reference to mesh instanceId
-};
-
-export type WorldSize = {
-  width: number;
-  height: number;
-};
-
 export class WorldChunk extends THREE.Group {
-  data: InstanceData[][][] = [];
+  data: IInstanceData[][][] = [];
   params: IWorldParams;
-  size: WorldSize;
+  size: IWorldSize;
   loaded: boolean;
   dataStore: DataStore;
   wireframeMode = false;
 
   constructor(
-    size: WorldSize,
+    size: IWorldSize,
     params: IWorldParams,
     dataStore: DataStore,
     wireframeMode = false
@@ -72,9 +62,9 @@ export class WorldChunk extends THREE.Group {
   initializeTerrain(data: BlockID[][][]) {
     this.data = [];
     for (let x = 0; x < this.size.width; x++) {
-      const slice: InstanceData[][] = [];
+      const slice: IInstanceData[][] = [];
       for (let y = 0; y < this.size.height; y++) {
-        const row: InstanceData[] = [];
+        const row: IInstanceData[] = [];
         for (let z = 0; z < this.size.width; z++) {
           row.push({
             block: data[x][y][z],
@@ -209,7 +199,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Gets the block data at (x, y, z) for this chunk
    */
-  getBlock(x: number, y: number, z: number): InstanceData | null {
+  getBlock(x: number, y: number, z: number): IInstanceData | null {
     if (this.inBounds(x, y, z)) {
       return this.data[x][y][z];
     } else {
