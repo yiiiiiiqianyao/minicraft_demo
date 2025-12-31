@@ -5,8 +5,7 @@ import { createUI, initMainMenu } from "./gui";
 import { Physics } from "./Physics";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
-import { initSky } from "./sky";
-import { initLight, sunSettings } from "./light";
+import { SkyManager, sunSettings } from "./sky";
 import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { PlayerParams } from "./player/literal";
@@ -20,20 +19,13 @@ export default class Game {
   private controls!: OrbitControls;
   private clock!: THREE.Clock;
 
-  private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;
-  private sun!: THREE.DirectionalLight;
-  private sunHelper!: THREE.DirectionalLightHelper;
-  private shadowHelper!: THREE.CameraHelper;
+  private skyManager!: SkyManager;
   private world!: World;
   private player!: Player;
   private physics!: Physics;
 
   private previousTime = 0;
-  private lastShadowUpdate = 0;
-
-  private dayColor = new THREE.Color(0xc0d8ff);
-  private nightColor = new THREE.Color(0x10121e);
-  private sunsetColor = new THREE.Color(0xcc7a00);
+  
 
   constructor() {
     this.previousTime = performance.now();
@@ -64,14 +56,7 @@ export default class Game {
     this.controls = controls;
 
     // Skybox
-    this.sky = initSky(this.scene);
-    this.scene.add(this.sky);
-
-    // init light
-    const { sun, sunHelper, shadowHelper } = initLight(this.scene);
-    this.sun = sun;
-    this.sunHelper = sunHelper;
-    this.shadowHelper = shadowHelper;
+    this.skyManager = new SkyManager(this.scene);
     
     this.world = new World(0, this.scene);
     this.scene.add(this.world);
@@ -79,7 +64,7 @@ export default class Game {
     this.player = new Player(this.scene);
     this.physics = new Physics(this.scene);
 
-    this.updateSunPosition(0);
+    this.skyManager.updateSunPosition(0, this.player);
 
     createUI(
       this.world,
@@ -88,8 +73,8 @@ export default class Game {
       this.scene,
       this.renderer,
       sunSettings,
-      this.sunHelper,
-      this.shadowHelper
+      this.skyManager.sunHelper,
+      this.skyManager.shadowHelper
     );
 
     this.draw();
@@ -147,98 +132,7 @@ export default class Game {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
-  updateSkyColor() {
-    const elapsedTime = this.clock.getElapsedTime();
-    const cycleDuration = sunSettings.cycleLength; // Duration of a day in seconds
-    const cycleTime = elapsedTime % cycleDuration;
 
-    let topColor: THREE.Color;
-    let bottomColor: THREE.Color;
-
-    if (cycleTime < cycleDuration / 2) {
-      // Day time
-      topColor = this.dayColor
-        .clone()
-        .lerp(this.nightColor, cycleTime / (cycleDuration / 2));
-      this.sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses
-    } else {
-      // Night time
-      topColor = this.nightColor
-        .clone()
-        .lerp(
-          this.dayColor,
-          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)
-        );
-      this.sun.intensity =
-        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses
-    }
-
-    const dayStart = 0;
-    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle
-    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle
-    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle
-
-    if (cycleTime >= dayStart && cycleTime < sunsetStart) {
-      // Day time
-      bottomColor = this.dayColor
-        .clone()
-        .lerp(
-          this.sunsetColor,
-          (cycleTime - dayStart) / (sunsetStart - dayStart)
-        );
-    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {
-      // Sunset
-      bottomColor = this.sunsetColor
-        .clone()
-        .lerp(
-          this.nightColor,
-          (cycleTime - sunsetStart) / (nightStart - sunsetStart)
-        );
-    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {
-      // Night time
-      bottomColor = this.nightColor
-        .clone()
-        .lerp(
-          this.sunsetColor,
-          (cycleTime - nightStart) / (sunriseStart - nightStart)
-        );
-    } else {
-      // Sunrise
-      bottomColor = this.sunsetColor
-        .clone()
-        .lerp(
-          this.dayColor,
-          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)
-        );
-    }
-
-    this.sky.material.uniforms.topColor.value = topColor;
-    this.sky.material.uniforms.bottomColor.value = bottomColor;
-
-    // Desaturate the fog slightly
-    this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);
-
-    if (performance.now() - this.lastShadowUpdate < sunSettings.cycleLength) return;
-
-    const sunAngle =
-      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4
-    this.updateSunPosition(sunAngle);
-
-    this.lastShadowUpdate = performance.now();
-  }
-
-  updateSunPosition(angle: number) {
-    const sunX = sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
-    const sunY = sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
-    this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun
-    this.sun.position.add(this.player.camera.position);
-
-    this.sun.target.position.copy(this.player.camera.position);
-    this.sun.target.updateMatrixWorld();
-
-    this.sunHelper.update();
-    this.shadowHelper.update();
-  }
 
   draw() {
     const currentTime = performance.now();
@@ -249,7 +143,7 @@ export default class Game {
     });
 
     // TODO 更新天空应该放置在更新世界中
-    this.updateSkyColor();
+    this.skyManager.updateSkyColor(this.clock, this.player);
 
     // 更新物理模拟
     this.physics.update(deltaTime, this.player, this.world);

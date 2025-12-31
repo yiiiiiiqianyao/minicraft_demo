@@ -36,7 +36,3 @@ export const DefaultWorldParams = {
       frequency: 0.0075,
     },
 }
-
-export const dayColor = new THREE.Color(0xc0d8ff);
-export const nightColor = new THREE.Color(0x10121e);
-export const sunsetColor = new THREE.Color(0xcc7a00);

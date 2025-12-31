@@ -128,6 +128,17 @@ export function initMainMenu(onStart: () => void) {
   });
 }
 
+export function swapMenuScreenGUI() {
+  const menuScreen = document.getElementById("menu");
+  const debugMenu = document.getElementById("debug");
+  if (menuScreen) {
+    menuScreen.style.display = "none";
+    if (debugMenu) {
+      debugMenu.style.display = "flex";
+    }
+  }
+}
+
 export function updatePositionGUI(position: THREE.Vector3) {
     const posX = document.getElementById("player-pos-x");
     if (posX) {
@@ -152,4 +163,11 @@ export function updatePositionGUI(position: THREE.Vector3) {
         posZ.innerHTML = inner;
       }
     }
+}
+
+export function updateProgressGUI(percentLoaded: number) {
+  const progressBar = document.getElementById("loading-progress-bar");
+  if (progressBar) {
+    progressBar.style.width = `${percentLoaded}%`;
+  }
 }

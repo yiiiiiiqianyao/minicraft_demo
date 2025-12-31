@@ -9,6 +9,7 @@ import { WorldChunk } from "./WorldChunk";
 import { IWorldParams, IWorldSize } from "./interface";
 import { DefaultWorldParams } from "./literal";
 import { PlayerInitPosition } from "../player/literal";
+import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 
 export class World extends THREE.Group {
   scene: THREE.Scene;
@@ -20,7 +21,6 @@ export class World extends THREE.Group {
     height: 32,
   };
   chunkQueue: { x: number; z: number }[];
-  initialLoadComplete = false;
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
 
@@ -31,6 +31,7 @@ export class World extends THREE.Group {
   pointLights = new Map<string, THREE.PointLight>();
 
   wireframeMode = false;
+  private initialLoadComplete = false;
 
   constructor(seed = 0, scene: THREE.Scene) {
     super();
@@ -68,6 +69,7 @@ export class World extends THREE.Group {
     const chunksToAdd = this.getChunksToAdd(visibleChunks);
     this.removeUnusedChunks(visibleChunks);
 
+    // 有需要添加的 chunk 时，加入 chunk queue
     if (chunksToAdd.length > 0) {
       // console.log("Chunks to add", chunksToAdd);
       this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];
@@ -94,54 +96,40 @@ export class World extends THREE.Group {
         // this.lastChunkLoadTime = performance.now();
       }
     } else {
-      // console.log("Chunk queue empty");
+      // 当 chunk queue 为空时，如果是初始化的场景 则进行初始化操作
       if (!this.initialLoadComplete) {
         this.initialLoadComplete = true;
-        const menuScreen = document.getElementById("menu");
-        const debugMenu = document.getElementById("debug");
-        if (menuScreen) {
-          menuScreen.style.display = "none";
-          if (debugMenu) {
-            debugMenu.style.display = "flex";
-          }
+        swapMenuScreenGUI();
 
-          const startingPlayerPosition = new THREE.Vector3(
-            PlayerInitPosition.x,
-            PlayerInitPosition.y,
-            PlayerInitPosition.z
-          );
-          for (let y = this.chunkSize.height; y > 0; y--) {
-            if (
-              this.getBlock(
-                startingPlayerPosition.x,
-                y,
-                startingPlayerPosition.z
-              )?.block === BlockID.Grass
-            ) {
-              startingPlayerPosition.y = y;
-              break;
-            }
+        const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
+        for (let y = this.chunkSize.height; y > 0; y--) {
+          if (
+            this.getBlock(
+              startingPlayerPosition.x,
+              y,
+              startingPlayerPosition.z
+            )?.block === BlockID.Grass
+          ) {
+            startingPlayerPosition.y = y;
+            break;
           }
-
-          player.position.set(
-            startingPlayerPosition.x,
-            startingPlayerPosition.y + 10,
-            startingPlayerPosition.z
-          );
-          player.controls.lock();
         }
+        // 角色从离地面 10 个单位的位置开始
+        player.position.set(
+          startingPlayerPosition.x,
+          startingPlayerPosition.y + 10,
+          startingPlayerPosition.z
+        );
+        player.controls.lock();
       }
     }
 
+    // 在初始加载未完成前更新加载进度条
     if (!this.initialLoadComplete) {
       const totalChunks = (this.renderDistance * 2 + 1) ** 2;
       const loadedChunks = this.children.length;
       const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
-
-      const progressBar = document.getElementById("loading-progress-bar");
-      if (progressBar) {
-        progressBar.style.width = `${percentLoaded}%`;
-      }
+      updateProgressGUI(percentLoaded);
     }
   }
 
