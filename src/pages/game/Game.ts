@@ -10,31 +10,8 @@ import { Physics } from "./Physics";
 import { Player } from "./Player";
 import { numberWithCommas } from "./util";
 import { World } from "./World";
-
-const vertexShader = `
-  varying vec3 worldPosition;
-  void main() {
-      vec4 mPosition = modelMatrix * vec4( position, 1.0 );
-      worldPosition = mPosition.xyz;
-      gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-  }
-`;
-
-const fragmentShader = `
-  uniform vec3 topColor;
-  uniform vec3 bottomColor;
-  uniform float offset;
-  uniform float exponent;
-
-  varying vec3 worldPosition;
-
-  void main() {
-
-    float h = normalize( worldPosition + offset ).y;
-    gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( h, exponent ), 0.0 ) ), 1.0 );
-
-  }
-`;
+import { initSky } from "./sky";
+import { initLight } from "./light";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -124,55 +101,15 @@ export default class Game {
     this.controls.update();
 
     // Skybox
-    const uniforms = {
-      topColor: { type: "c", value: new THREE.Color(0xa0c0ff) },
-      bottomColor: { type: "c", value: new THREE.Color(0xffffff) },
-      offset: { type: "f", value: 99 },
-      exponent: { type: "f", value: 0.3 },
-    };
-
-    const skyGeo = new THREE.SphereGeometry(4000, 32, 15);
-    const skyMat = new THREE.ShaderMaterial({
-      vertexShader: vertexShader,
-      fragmentShader: fragmentShader,
-      uniforms: uniforms,
-      side: THREE.BackSide,
-    });
-
-    this.sky = new THREE.Mesh(skyGeo, skyMat);
+    this.sky = initSky(this.scene);
     this.scene.add(this.sky);
 
-    this.scene.fog = new THREE.Fog(0x80a0e0, 50, 100);
-    this.scene.fog.color.copy(uniforms.bottomColor.value);
-
-    this.sun = new THREE.DirectionalLight();
-    // this.sun.position.set(50, 50, 50);
-    this.sun.intensity = 1.5;
-    this.sun.castShadow = true;
-
-    // Set the size of the sun's shadow box
-    this.sun.shadow.camera.left = -80;
-    this.sun.shadow.camera.right = 80;
-    this.sun.shadow.camera.top = 80;
-    this.sun.shadow.camera.bottom = -80;
-    this.sun.shadow.camera.near = 0.1;
-    this.sun.shadow.camera.far = 600;
-    this.sun.shadow.bias = -0.005;
-    this.sun.shadow.mapSize = new THREE.Vector2(512, 512);
-
-    this.scene.add(this.sun);
-    this.scene.add(this.sun.target);
-    this.sunHelper = new THREE.DirectionalLightHelper(this.sun);
-    this.sunHelper.visible = false;
-    this.scene.add(this.sunHelper);
-
-    this.shadowHelper = new THREE.CameraHelper(this.sun.shadow.camera);
-    this.shadowHelper.visible = false;
-    this.scene.add(this.shadowHelper);
-
-    const ambient = new THREE.AmbientLight();
-    ambient.intensity = 0.2;
-    this.scene.add(ambient);
+    // init light
+    const { sun, sunHelper, shadowHelper } = initLight(this.scene);
+    this.sun = sun;
+    this.sunHelper = sunHelper;
+    this.shadowHelper = shadowHelper;
+    
 
     this.world = new World(0, this.scene);
     this.scene.add(this.world);
