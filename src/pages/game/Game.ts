@@ -3,12 +3,13 @@ import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { createUI, initMainMenu } from "./gui";
 import { Physics } from "./Physics";
-import { Player } from "./Player";
+import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { initSky } from "./sky";
 import { initLight, sunSettings } from "./light";
 import { updateRenderInfo, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
+import { PlayerParams } from "./player/literal";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -127,7 +128,7 @@ export default class Game {
           );
 
           // 检查是否超出可以放置方块的距离
-          if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;
+          if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;
 
           // Right click 放置方块
           this.world.addBlock(

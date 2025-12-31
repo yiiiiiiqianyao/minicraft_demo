@@ -1,6 +1,5 @@
 import { Howl, Howler } from "howler";
 import { sample } from "lodash";
-
 import soundData from "./sounds.json";
 import spriteData from "./sprite.json";
 
@@ -26,7 +25,7 @@ class AudioManager {
 
   play(name: string) {
     if (!(name in soundData)) {
-      console.error(`Unknown sound: ${name}`);
+      console.warn(`Unknown sound: ${name}`);
       return;
     }
 

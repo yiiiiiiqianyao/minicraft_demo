@@ -2,8 +2,9 @@ import * as THREE from "three";
 
 import { BlockID } from "./Block";
 import { BlockFactory } from "./Block/BlockFactory";
-import { Player } from "./Player";
+import { Player } from "./player/Player";
 import { World } from "./world/World";
+import { PlayerParams } from "./player/literal";
 
 type Candidate = {
   block: BlockID;
@@ -77,7 +78,7 @@ export class Physics {
   getBlockUnderneath(player: Player, world: World) {
     return world.getBlock(
       Math.floor(player.position.x),
-      Math.floor(player.position.y - player.height / 2 - 1),
+      Math.floor(player.position.y - PlayerParams.height / 2 - 1),
       Math.floor(player.position.z)
     );
   }
@@ -98,12 +99,12 @@ export class Physics {
     const candidates: Candidate[] = [];
 
     // Get the block extents of the player
-    const minX = Math.floor(player.position.x - player.radius);
-    const maxX = Math.ceil(player.position.x + player.radius);
-    const minY = Math.floor(player.position.y - player.height);
+    const minX = Math.floor(player.position.x - PlayerParams.radius);
+    const maxX = Math.ceil(player.position.x + PlayerParams.radius);
+    const minY = Math.floor(player.position.y - PlayerParams.height);
     const maxY = Math.ceil(player.position.y);
-    const minZ = Math.floor(player.position.z - player.radius);
-    const maxZ = Math.ceil(player.position.z + player.radius);
+    const minZ = Math.floor(player.position.z - PlayerParams.radius);
+    const maxZ = Math.ceil(player.position.z + PlayerParams.radius);
 
     // Iterate over the player's AABB
     for (let x = minX; x <= maxX; x++) {
@@ -153,7 +154,7 @@ export class Physics {
         ),
         Math.max(
           candidate.y - 0.5,
-          Math.min(player.position.y - player.height / 2, candidate.y + 0.5)
+          Math.min(player.position.y - PlayerParams.height / 2, candidate.y + 0.5)
         ),
         Math.max(
           candidate.z - 0.5,
@@ -163,12 +164,12 @@ export class Physics {
 
       // Get distance along each exist between closest point and center
       const dx = closestPoint.x - player.position.x;
-      const dy = closestPoint.y - (player.position.y - player.height / 2);
+      const dy = closestPoint.y - (player.position.y - PlayerParams.height / 2);
       const dz = closestPoint.z - player.position.z;
 
       if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {
-        const overlapY = player.height / 2 - Math.abs(dy);
-        const overlapXZ = player.radius - Math.sqrt(dx * dx + dz * dz);
+        const overlapY = PlayerParams.height / 2 - Math.abs(dy);
+        const overlapXZ = PlayerParams.radius - Math.sqrt(dx * dx + dz * dz);
 
         // Compute the normal of the collision (pointing away from content point)
         // As well as overlap between the point and the player's bounding cylinder
@@ -205,11 +206,11 @@ export class Physics {
    */
   pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {
     const dx = p.x - player.position.x;
-    const dy = p.y - (player.position.y - player.height / 2);
+    const dy = p.y - (player.position.y - PlayerParams.height / 2);
     const dz = p.z - player.position.z;
     const r_sq = dx * dx + dz * dz;
     return (
-      Math.abs(dy) < player.height / 2 && r_sq < player.radius * player.radius
+      Math.abs(dy) < PlayerParams.height / 2 && r_sq < PlayerParams.radius * PlayerParams.radius
     );
   }
 

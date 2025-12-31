@@ -5,11 +5,13 @@ import { Line2 } from "three/examples/jsm/lines/Line2.js";
 import { LineGeometry } from "three/examples/jsm/lines/LineGeometry.js";
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 
-import audioManager from "./audio/AudioManager";
-import { BlockID } from "./Block";
-import { BlockFactory } from "./Block/BlockFactory";
-import { World } from "./world/World";
-import { updatePosition } from "./gui";
+import audioManager from "../audio/AudioManager";
+import { BlockID } from "../Block";
+import { BlockFactory } from "../Block/BlockFactory";
+import { World } from "../world/World";
+import { updatePosition } from "../gui";
+import { initBoundsHelper, initPlayerCamera } from "./utils";
+import { PlayerParams } from "./literal";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -52,12 +54,6 @@ selectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));
 const CENTER_SCREEN = new THREE.Vector2(0, 0);
 
 export class Player {
-  height = 1.75;
-  radius = 0.5;
-  maxSpeed = 4.317;
-  maxSprintSpeed = 5.612;
-  // maxSpeed = 25;
-  jumpSpeed = 10;
   onGround = false;
 
   input = new THREE.Vector3();
@@ -73,18 +69,9 @@ export class Player {
 
   lastStepSoundPlayed = 0;
 
-  camera = new THREE.PerspectiveCamera(
-    70,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    5000
-  );
-
+  camera = initPlayerCamera();
   cameraHelper = new THREE.CameraHelper(this.camera);
-  boundsHelper = new THREE.Mesh(
-    new THREE.CylinderGeometry(this.radius, this.radius, this.height, 16),
-    new THREE.MeshBasicMaterial({ wireframe: true })
-  );
+  boundsHelper = initBoundsHelper();
   selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);
   controls = new PointerLockControls(this.camera, document.body);
   raycaster = new THREE.Raycaster(
@@ -137,7 +124,7 @@ export class Player {
     if (this.input.length() > 1) {
       this.input
         .normalize()
-        .multiplyScalar(this.isSprinting ? this.maxSprintSpeed : this.maxSpeed);
+        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);
     }
 
     // 玩家当前水平的速度
@@ -154,7 +141,7 @@ export class Player {
     }
 
     if (this.spacePressed && this.onGround) {
-      this.velocity.y = this.jumpSpeed;
+      this.velocity.y = PlayerParams.jumpSpeed;
     }
 
     this.controls.moveRight(this.velocity.x * dt);
@@ -164,7 +151,7 @@ export class Player {
     updatePosition(this.position);
   }
 
-  async playWalkSound(blockUnderneath: BlockID) {
+  private playWalkSound(blockUnderneath: BlockID) {
     switch (blockUnderneath) {
       case BlockID.Grass:
       case BlockID.Dirt:
@@ -205,7 +192,7 @@ export class Player {
    */
   updateBoundsHelper() {
     this.boundsHelper.position.copy(this.camera.position);
-    this.boundsHelper.position.y -= this.height / 2; // set to eye level
+    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
   }
 
   /**
@@ -344,21 +331,21 @@ export class Player {
       case "KeyW":
         if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {
           this.isSprinting = true;
-          this.input.z = this.maxSprintSpeed;
+          this.input.z = PlayerParams.maxSprintSpeed;
         } else {
-          this.input.z = this.maxSpeed;
+          this.input.z = PlayerParams.maxSpeed;
         }
         this.wKeyPressed = true;
         this.lastWPressed = performance.now();
         break;
       case "KeyA":
-        this.input.x = -this.maxSpeed;
+        this.input.x = -PlayerParams.maxSpeed;
         break;
       case "KeyS":
-        this.input.z = -this.maxSpeed;
+        this.input.z = -PlayerParams.maxSpeed;
         break;
       case "KeyD":
-        this.input.x = this.maxSpeed;
+        this.input.x = PlayerParams.maxSpeed;
         break;
       case "KeyR":
         this.position.set(

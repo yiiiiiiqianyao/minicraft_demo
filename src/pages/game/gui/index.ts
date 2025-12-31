@@ -2,7 +2,7 @@ import GUI from "lil-gui";
 import * as THREE from "three";
 import { oreConfig } from "../Block";
 import { Physics } from "../Physics";
-import { Player } from "../Player";
+import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
@@ -29,8 +29,6 @@ export function createUI(
     });
 
   const playerFolder = gui.addFolder("Player");
-  playerFolder.add(player, "maxSpeed", 1, 50, 1).name("Max Speed");
-  playerFolder.add(player, "jumpSpeed", 1, 10, 1).name("Jump Speed");
   playerFolder.add(player.cameraHelper, "visible").name("Camera Helper");
   playerFolder.add(player.boundsHelper, "visible").name("Show Player Bounds");
 

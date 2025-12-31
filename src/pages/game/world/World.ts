@@ -4,7 +4,7 @@ import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { LightSourceBlock } from "../Block/LightSourceBlock";
 import { DataStore } from "./DataStore";
-import { Player } from "../Player";
+import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";
 import { IWorldParams, IWorldSize } from "./interface";
 import { DefaultWorldParams } from "./literal";
