@@ -1,4 +1,9 @@
 import * as THREE from "three";
+
+export const sunSettings = {
+    distance: 400,
+    cycleLength: 600,
+}
 export function initLight(scene: THREE.Scene) {
     const sun = new THREE.DirectionalLight();
     // this.sun.position.set(50, 50, 50);

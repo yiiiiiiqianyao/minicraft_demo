@@ -9,6 +9,7 @@ import audioManager from "./audio/AudioManager";
 import { BlockID } from "./Block";
 import { BlockFactory } from "./Block/BlockFactory";
 import { World } from "./world/World";
+import { updatePosition } from "./gui";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -62,7 +63,7 @@ export class Player {
   input = new THREE.Vector3();
   velocity = new THREE.Vector3();
   #worldVelocity = new THREE.Vector3();
-
+  // 玩家初始位置
   initialPosition = new THREE.Vector3(32, 72, 32);
 
   spacePressed = false;
@@ -139,6 +140,7 @@ export class Player {
         .multiplyScalar(this.isSprinting ? this.maxSprintSpeed : this.maxSpeed);
     }
 
+    // 玩家当前水平的速度
     this.velocity.x = this.input.x;
     this.velocity.z = this.input.z;
 
@@ -159,20 +161,7 @@ export class Player {
     this.controls.moveForward(this.velocity.z * dt);
     this.position.y += this.velocity.y * dt;
 
-    const posX = document.getElementById("player-pos-x");
-    if (posX) {
-      posX.innerHTML = `x: ${this.position.x.toFixed(3)}`;
-    }
-
-    const posY = document.getElementById("player-pos-y");
-    if (posY) {
-      posY.innerHTML = `y: ${this.position.y.toFixed(3)}`;
-    }
-
-    const posZ = document.getElementById("player-pos-z");
-    if (posZ) {
-      posZ.innerHTML = `z: ${this.position.z.toFixed(3)}`;
-    }
+    updatePosition(this.position);
   }
 
   async playWalkSound(blockUnderneath: BlockID) {

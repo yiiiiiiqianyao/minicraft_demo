@@ -1,14 +1,14 @@
 import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
-import { Howl } from "howler";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { createUI, initMainMenu } from "./gui";
 import { Physics } from "./Physics";
 import { Player } from "./Player";
 import { World } from "./world/World";
 import { initSky } from "./sky";
-import { initLight } from "./light";
+import { initLight, sunSettings } from "./light";
 import { updateRenderInfo, updateStats } from "./dev";
+import audioManager from "./audio/AudioManager";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -17,11 +17,6 @@ export default class Game {
 
   private controls!: OrbitControls;
   private clock!: THREE.Clock;
-
-  private sunSettings = {
-    distance: 400,
-    cycleLength: 600,
-  };
 
   private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;
   private sun!: THREE.DirectionalLight;
@@ -44,7 +39,7 @@ export default class Game {
     initMainMenu(() => {
       this.initScene();
       this.initListeners();
-      this.initAudio();
+      audioManager.playBtm();
     });
   }
 
@@ -99,7 +94,7 @@ export default class Game {
       this.physics,
       this.scene,
       this.renderer,
-      this.sunSettings,
+      sunSettings,
       this.sunHelper,
       this.shadowHelper
     );
@@ -107,18 +102,11 @@ export default class Game {
     this.draw();
   }
 
-  initAudio() {
-    const sound = new Howl({
-      src: ["https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3"],
-      loop: true,
-    });
-    sound.play();
-  }
-
+  // 处理鼠标点击事件 目前是移除选中的方块和放置方块
   onMouseDown(event: MouseEvent) {
     if (this.player.controls.isLocked) {
       if (event.button === 0 && this.player.selectedCoords) {
-        // Left click
+        // Left click 移除选中的方块
         this.world.removeBlock(
           Math.ceil(this.player.selectedCoords.x - 0.5),
           Math.ceil(this.player.selectedCoords.y - 0.5),
@@ -138,8 +126,10 @@ export default class Game {
             Math.floor(this.player.blockPlacementCoords.z - 0.5)
           );
 
+          // 检查是否超出可以放置方块的距离
           if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;
 
+          // Right click 放置方块
           this.world.addBlock(
             blockPos.x,
             blockPos.y,
@@ -166,7 +156,7 @@ export default class Game {
 
   updateSkyColor() {
     const elapsedTime = this.clock.getElapsedTime();
-    const cycleDuration = this.sunSettings.cycleLength; // Duration of a day in seconds
+    const cycleDuration = sunSettings.cycleLength; // Duration of a day in seconds
     const cycleTime = elapsedTime % cycleDuration;
 
     let topColor: THREE.Color;
@@ -235,11 +225,7 @@ export default class Game {
     // Desaturate the fog slightly
     this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);
 
-    if (
-      performance.now() - this.lastShadowUpdate <
-      this.sunSettings.cycleLength
-    )
-      return;
+    if (performance.now() - this.lastShadowUpdate < sunSettings.cycleLength) return;
 
     const sunAngle =
       ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4
@@ -249,8 +235,8 @@ export default class Game {
   }
 
   updateSunPosition(angle: number) {
-    const sunX = this.sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
-    const sunY = this.sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
+    const sunX = sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
+    const sunY = sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
     this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun
     this.sun.position.add(this.player.camera.position);
 

@@ -129,3 +129,29 @@ export function initMainMenu(onStart: () => void) {
     window.open("https://github.com/0kzh/minicraft");
   });
 }
+
+export function updatePosition(position: THREE.Vector3) {
+    const posX = document.getElementById("player-pos-x");
+    if (posX) {
+      const inner = `x: ${position.x.toFixed(3)}`;
+      if(posX.innerHTML !== inner) {
+        posX.innerHTML = inner;
+      }
+    }
+
+    const posY = document.getElementById("player-pos-y");
+    if (posY) {
+      const inner = `y: ${position.y.toFixed(3)}`;
+      if(posY.innerHTML !== inner) {
+        posY.innerHTML = inner;
+      }
+    }
+
+    const posZ = document.getElementById("player-pos-z");
+    if (posZ) {
+      const inner = `z: ${position.z.toFixed(3)}`;
+      if(posZ.innerHTML !== inner) {
+        posZ.innerHTML = inner;
+      }
+    }
+}

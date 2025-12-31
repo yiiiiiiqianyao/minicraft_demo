@@ -36,7 +36,7 @@ export class Physics {
   // Acceleration due to gravity
   static GRAVITY = -32;
 
-  // Physics simulation rate
+  // Physics simulation rate 物理模拟的半径
   simulationRate = 250;
   stepSize = 1 / this.simulationRate;
   // Accumulator to keep track of leftover dt
@@ -52,12 +52,15 @@ export class Physics {
 
   update(dt: number, player: Player, world: World) {
     this.accumulator += dt;
+    // 获取玩家脚下的方块
     const blockUnderneath =
       this.getBlockUnderneath(player, world)?.block || BlockID.Air;
 
     while (this.accumulator >= this.stepSize) {
+      // 玩家下落的速度
       player.velocity.y += Physics.GRAVITY * this.stepSize;
       player.applyInputs(this.stepSize, blockUnderneath);
+      // 检测玩家与环境的碰撞
       this.detectCollisions(player, world);
       this.accumulator -= this.stepSize;
     }
@@ -65,6 +68,12 @@ export class Physics {
     player.update(world);
   }
 
+  /**
+   * 获取玩家脚下的方块
+   * @param player 
+   * @param world 
+   * @returns 
+   */
   getBlockUnderneath(player: Player, world: World) {
     return world.getBlock(
       Math.floor(player.position.x),
@@ -126,6 +135,12 @@ export class Physics {
     return candidates;
   }
 
+  /**
+   * 检测玩家与环境的碰撞 靠近检测
+   * @param candidates 
+   * @param player 
+   * @returns 
+   */
   narrowPhase(candidates: Candidate[], player: Player): Collision[] {
     const collisions: Collision[] = [];
 
@@ -182,13 +197,17 @@ export class Physics {
     return collisions;
   }
 
+  /**
+   * Check if contact point is inside the player's bounding cylinder
+   * @param p 
+   * @param player 
+   * @returns 
+   */
   pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {
     const dx = p.x - player.position.x;
     const dy = p.y - (player.position.y - player.height / 2);
     const dz = p.z - player.position.z;
     const r_sq = dx * dx + dz * dz;
-
-    // Check if contact point is inside the player's bounding cylinder
     return (
       Math.abs(dy) < player.height / 2 && r_sq < player.radius * player.radius
     );
@@ -224,6 +243,7 @@ export class Physics {
       const magnitude = player.worldVelocity.dot(collision.normal);
       // remove that part of velocity from the player's velocity
       const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);
+      // 根据与环境的碰撞 作用于玩家的速度
       player.applyWorldDeltaVelocity(velocityAdj.negate());
     }
   }

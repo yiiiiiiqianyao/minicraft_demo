@@ -16,7 +16,10 @@ class AudioManager {
 
   loadSounds() {
     return new Howl({
-      src: ["https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.webm", "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.mp3"],
+      src: [
+        "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.webm", 
+        "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.mp3"
+      ],
       sprite: spriteData.sprite as any,
     });
   }
@@ -35,6 +38,14 @@ class AudioManager {
     const options = soundData[name]["sounds"];
     const soundName = prefix + sample<string>(options).split("/").pop();
     this.sprite.play(soundName);
+  }
+
+  playBtm() {
+     const sound = new Howl({
+      src: ["https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3"],
+      loop: true,
+    });
+    sound.play();
   }
 }
 
