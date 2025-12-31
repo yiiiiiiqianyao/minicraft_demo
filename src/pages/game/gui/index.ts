@@ -1,9 +1,9 @@
 import GUI from "lil-gui";
-
-import { oreConfig } from "./Block";
-import { Physics } from "./Physics";
-import { Player } from "./Player";
-import { World } from "./World";
+import * as THREE from "three";
+import { oreConfig } from "../Block";
+import { Physics } from "../Physics";
+import { Player } from "../Player";
+import { World } from "../World";
 
 export function createUI(
   world: World,

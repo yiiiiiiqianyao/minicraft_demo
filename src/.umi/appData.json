@@ -113,6 +113,30 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -140,6 +164,43 @@
             2,
             2,
             1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            4,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            17,
+            5,
+            2,
+            1,
+            2,
+            7,
+            1,
+            3,
             1,
             1
           ]
@@ -169,7 +230,31 @@
             3,
             5,
             2,
-            3
+            3,
+            8,
+            5,
+            11,
+            3,
+            5,
+            3,
+            8,
+            3,
+            5,
+            6,
+            4,
+            3,
+            7,
+            5,
+            5,
+            2,
+            2,
+            3,
+            4,
+            3,
+            3,
+            3,
+            4,
+            4
           ]
         },
         "register": 37
@@ -186,6 +271,30 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -227,6 +336,34 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
@@ -242,6 +379,41 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1304,6 +1476,20 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1329,9 +1515,57 @@
             0,
             0,
             1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
             0
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1422,9 +1656,81 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1483,9 +1789,81 @@
             11,
             10,
             9,
-            9
+            9,
+            14,
+            9,
+            17,
+            10,
+            9,
+            13,
+            14,
+            9,
+            8,
+            15,
+            11,
+            10,
+            14,
+            13,
+            13,
+            9,
+            7,
+            7,
+            12,
+            9,
+            9,
+            8,
+            11,
+            11
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1536,6 +1914,54 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1554,6 +1980,30 @@
         "hooks": {
           "onGenerateFiles": [
             56,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1612,7 +2062,31 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ],
           "addBeforeMiddlewares": [
             0
@@ -1649,7 +2123,55 @@
             20,
             2,
             25,
-            1
+            1,
+            23,
+            1,
+            32,
+            2,
+            27,
+            2,
+            23,
+            1,
+            24,
+            2,
+            24,
+            1,
+            25,
+            1,
+            24,
+            2,
+            22,
+            1,
+            20,
+            2,
+            23,
+            1,
+            24,
+            1,
+            22,
+            1,
+            25,
+            1,
+            24,
+            1,
+            24,
+            1,
+            25,
+            1,
+            25,
+            1,
+            25,
+            1,
+            25,
+            2,
+            24,
+            1,
+            23,
+            1,
+            21,
+            2,
+            25,
+            0
           ]
         },
         "register": 48
@@ -1687,7 +2209,31 @@
             0,
             0,
             0,
-            0
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ],
           "onBeforeCompiler": [
             2
@@ -1727,7 +2273,31 @@
             5,
             5,
             4,
-            4
+            4,
+            6,
+            6,
+            6,
+            3,
+            6,
+            5,
+            4,
+            5,
+            3,
+            6,
+            5,
+            4,
+            5,
+            4,
+            6,
+            6,
+            4,
+            4,
+            4,
+            5,
+            4,
+            4,
+            4,
+            10
           ]
         },
         "register": 8
@@ -1819,6 +2389,30 @@
             1,
             0,
             1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
             0,
             1
           ]
@@ -2580,7 +3174,7 @@
       "parentId": "@@/global-layout",
       "file": "game/light/index.ts",
       "absPath": "/game/light",
-      "__content": "import * as THREE from \"three\";\nexport function initLight(scene: THREE.Scene) {\n    const sun = new THREE.DirectionalLight();\n    // this.sun.position.set(50, 50, 50);\n    sun.intensity = 1.5;\n    sun.castShadow = true;\n\n    // Set the size of the sun's shadow box\n    sun.shadow.camera.left = -80;\n    sun.shadow.camera.right = 80;\n    sun.shadow.camera.top = 80;\n    sun.shadow.camera.bottom = -80;\n    sun.shadow.camera.near = 0.1;\n    sun.shadow.camera.far = 600;\n    sun.shadow.bias = -0.005;\n    sun.shadow.mapSize = new THREE.Vector2(512, 512);\n\n    scene.add(sun);\n    scene.add(sun.target);\n    const sunHelper = new THREE.DirectionalLightHelper(sun);\n    sunHelper.visible = false;\n    scene.add(sunHelper);\n\n    const shadowHelper = new THREE.CameraHelper(sun.shadow.camera);\n    shadowHelper.visible = false;\n    scene.add(shadowHelper);\n\n    const ambient = new THREE.AmbientLight();\n    ambient.intensity = 0.2;\n    scene.add(ambient);\n\n    return { sun, sunHelper, shadowHelper };\n}",
+      "__content": "import * as THREE from \"three\";\nexport function initLight(scene: THREE.Scene) {\n    const sun = new THREE.DirectionalLight();\n    // this.sun.position.set(50, 50, 50);\n    sun.intensity = 1.5;\n    sun.castShadow = true;\n\n    // Set the size of the sun's shadow box\n    sun.shadow.camera.left = -80;\n    sun.shadow.camera.right = 80;\n    sun.shadow.camera.top = 80;\n    sun.shadow.camera.bottom = -80;\n    sun.shadow.camera.near = 0.1;\n    sun.shadow.camera.far = 600;\n    sun.shadow.bias = -0.005;\n    sun.shadow.mapSize = new THREE.Vector2(512, 512);\n\n    scene.add(sun);\n    scene.add(sun.target);\n\n    const sunHelper = new THREE.DirectionalLightHelper(sun);\n    sunHelper.visible = false;\n    scene.add(sunHelper);\n\n    const shadowHelper = new THREE.CameraHelper(sun.shadow.camera);\n    shadowHelper.visible = false;\n    scene.add(shadowHelper);\n\n    const ambient = new THREE.AmbientLight();\n    ambient.intensity = 0.2;\n    scene.add(ambient);\n\n    return { sun, sunHelper, shadowHelper };\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/light/index.ts"
     },
@@ -2594,16 +3188,6 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/WorldChunk.ts"
     },
-    "game/vite-env.d": {
-      "path": "game/vite-env/d",
-      "id": "game/vite-env.d",
-      "parentId": "@@/global-layout",
-      "file": "game/vite-env.d.ts",
-      "absPath": "/game/vite-env/d",
-      "__content": "/// <reference types=\"vite/client\" />\n/// <reference types=\"vite-plugin-comlink/client\" />\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/vite-env.d.ts"
-    },
     "game/DataStore": {
       "path": "game/DataStore",
       "id": "game/DataStore",
@@ -2613,6 +3197,16 @@
       "__content": "import { BlockID } from \"./Block\";\n\nexport class DataStore {\n  data: Record<string, BlockID>;\n\n  constructor() {\n    this.data = {};\n  }\n\n  clear() {\n    this.data = {};\n  }\n\n  contains(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    return this.data[key] !== undefined;\n  }\n\n  get(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    const blockId = this.data[key];\n    // console.log(`getting value ${blockId} at key ${key}`);\n    return blockId;\n  }\n\n  set(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number,\n    value: BlockID\n  ) {\n    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);\n    // console.log(`setting value ${value} at key ${key}`);\n    this.data[key] = value;\n  }\n\n  #getKey(\n    chunkX: number,\n    chunkZ: number,\n    blockX: number,\n    blockY: number,\n    blockZ: number\n  ) {\n    return `${chunkX},${chunkZ},${blockX},${blockY},${blockZ}`;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/DataStore.ts"
+    },
+    "game/dev/index": {
+      "path": "game/dev",
+      "id": "game/dev/index",
+      "parentId": "@@/global-layout",
+      "file": "game/dev/index.ts",
+      "absPath": "/game/dev",
+      "__content": "import * as THREE from \"three\";\n// @ts-ignore\nimport Stats from \"three/examples/jsm/libs/stats.module\";\n\nlet triangleCount: HTMLElement | null = null;\nlet renderCalls:  HTMLElement | null = null;\nfunction numberWithCommas(x: number): string {\n  return x.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n}\n\nexport function updateRenderInfo(renderer: THREE.WebGLRenderer) {\n    // get element\n    if(!triangleCount) {\n        triangleCount = document.getElementById(\"triangle-count\");\n    }\n    if(!renderCalls) {\n        renderCalls = document.getElementById(\"render-calls\");\n    }\n    // update text\n    if (triangleCount) {\n      triangleCount.innerHTML = `triangles: ${numberWithCommas(\n        renderer.info.render.triangles\n      )}`;\n    }\n    if (renderCalls) {\n      renderCalls.innerHTML = `draw calls: ${numberWithCommas(\n        renderer.info.render.calls\n      )}`;\n    }\n}\n\nlet stats: Stats;\nexport function initStats() {\n    stats = new (Stats as any)();\n    document.body.appendChild(stats.dom);\n}\n\nexport function updateStats() {\n    if (stats) stats.update();\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/dev/index.ts"
     },
     "game/sky/index": {
       "path": "game/sky",
@@ -2633,6 +3227,16 @@
       "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"./Block\";\nimport { BlockFactory } from \"./Block/BlockFactory\";\nimport { Player } from \"./Player\";\nimport { World } from \"./World\";\n\ntype Candidate = {\n  block: BlockID;\n  x: number;\n  y: number;\n  z: number;\n};\n\ntype Collision = {\n  candidate: Candidate;\n  contactPoint: THREE.Vector3;\n  normal: THREE.Vector3;\n  overlap: number;\n};\n\nconst collisionMaterial = new THREE.MeshBasicMaterial({\n  color: 0xff0000,\n  transparent: true,\n  opacity: 0.2,\n});\nconst collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);\n\nconst contactMaterial = new THREE.MeshBasicMaterial({\n  wireframe: true,\n  color: 0x00ff00,\n});\nconst contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);\n\nexport class Physics {\n  // Acceleration due to gravity\n  static GRAVITY = -32;\n\n  // Physics simulation rate\n  simulationRate = 250;\n  stepSize = 1 / this.simulationRate;\n  // Accumulator to keep track of leftover dt\n  accumulator = 0;\n\n  helpers: THREE.Group;\n\n  constructor(scene: THREE.Scene) {\n    this.helpers = new THREE.Group();\n    this.helpers.visible = false;\n    scene.add(this.helpers);\n  }\n\n  update(dt: number, player: Player, world: World) {\n    this.accumulator += dt;\n    const blockUnderneath =\n      this.getBlockUnderneath(player, world)?.block || BlockID.Air;\n\n    while (this.accumulator >= this.stepSize) {\n      player.velocity.y += Physics.GRAVITY * this.stepSize;\n      player.applyInputs(this.stepSize, blockUnderneath);\n      this.detectCollisions(player, world);\n      this.accumulator -= this.stepSize;\n    }\n\n    player.update(world);\n  }\n\n  getBlockUnderneath(player: Player, world: World) {\n    return world.getBlock(\n      Math.floor(player.position.x),\n      Math.floor(player.position.y - player.height / 2 - 1),\n      Math.floor(player.position.z)\n    );\n  }\n\n  detectCollisions(player: Player, world: World) {\n    player.onGround = false;\n    this.helpers.clear();\n\n    const candidates = this.broadPhase(player, world);\n    const collisions = this.narrowPhase(candidates, player);\n\n    if (collisions.length > 0) {\n      this.resolveCollisions(collisions, player);\n    }\n  }\n\n  broadPhase(player: Player, world: World): Candidate[] {\n    const candidates: Candidate[] = [];\n\n    // Get the block extents of the player\n    const minX = Math.floor(player.position.x - player.radius);\n    const maxX = Math.ceil(player.position.x + player.radius);\n    const minY = Math.floor(player.position.y - player.height);\n    const maxY = Math.ceil(player.position.y);\n    const minZ = Math.floor(player.position.z - player.radius);\n    const maxZ = Math.ceil(player.position.z + player.radius);\n\n    // Iterate over the player's AABB\n    for (let x = minX; x <= maxX; x++) {\n      for (let y = minY; y <= maxY; y++) {\n        for (let z = minZ; z <= maxZ; z++) {\n          const block = world.getBlock(x, y, z);\n          // If the block is solid, add it to the list of candidates\n          if (block) {\n            const blockClass = BlockFactory.getBlock(block.block);\n            if (!blockClass.canPassThrough) {\n              candidates.push({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n              this.addCollisionHelper({\n                block: block.block,\n                x: x + 0.5,\n                y: y + 0.5,\n                z: z + 0.5,\n              });\n            }\n          }\n        }\n      }\n    }\n\n    return candidates;\n  }\n\n  narrowPhase(candidates: Candidate[], player: Player): Collision[] {\n    const collisions: Collision[] = [];\n\n    for (const candidate of candidates) {\n      // Get the point of the block closest to the center of the player's bounding cylinder\n      const closestPoint = new THREE.Vector3(\n        Math.max(\n          candidate.x - 0.5,\n          Math.min(player.position.x, candidate.x + 0.5)\n        ),\n        Math.max(\n          candidate.y - 0.5,\n          Math.min(player.position.y - player.height / 2, candidate.y + 0.5)\n        ),\n        Math.max(\n          candidate.z - 0.5,\n          Math.min(player.position.z, candidate.z + 0.5)\n        )\n      );\n\n      // Get distance along each exist between closest point and center\n      const dx = closestPoint.x - player.position.x;\n      const dy = closestPoint.y - (player.position.y - player.height / 2);\n      const dz = closestPoint.z - player.position.z;\n\n      if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {\n        const overlapY = player.height / 2 - Math.abs(dy);\n        const overlapXZ = player.radius - Math.sqrt(dx * dx + dz * dz);\n\n        // Compute the normal of the collision (pointing away from content point)\n        // As well as overlap between the point and the player's bounding cylinder\n        let normal: THREE.Vector3;\n        let overlap: number;\n        if (overlapY < overlapXZ) {\n          normal = new THREE.Vector3(0, -Math.sign(dy), 0);\n          overlap = overlapY;\n          player.onGround = true;\n        } else {\n          normal = new THREE.Vector3(-dx, 0, -dz).normalize();\n          overlap = overlapXZ;\n        }\n\n        collisions.push({\n          candidate,\n          contactPoint: closestPoint,\n          normal,\n          overlap,\n        });\n\n        this.addContactPointerHelper(closestPoint);\n      }\n    }\n\n    return collisions;\n  }\n\n  pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {\n    const dx = p.x - player.position.x;\n    const dy = p.y - (player.position.y - player.height / 2);\n    const dz = p.z - player.position.z;\n    const r_sq = dx * dx + dz * dz;\n\n    // Check if contact point is inside the player's bounding cylinder\n    return (\n      Math.abs(dy) < player.height / 2 && r_sq < player.radius * player.radius\n    );\n  }\n\n  resolveCollisions(collisions: Collision[], player: Player) {\n    // Resolve collisions in order of smallest overlap to largest\n    collisions.sort((a, b) => a.overlap - b.overlap);\n\n    for (const collision of collisions) {\n      // re-check if contact player is inside the player's bounding cylinder\n      // since the player position is updated after each collision is resolved\n      if (!this.pointInPlayerBoundingCylinder(collision.contactPoint, player)) {\n        continue;\n      }\n\n      // Adjust position of player so that block and player are no longer overlapping\n      const deltaPosition = collision.normal.clone();\n      deltaPosition.multiplyScalar(collision.overlap);\n\n      // Don't apply vertical change if player is not on ground\n      if (!player.onGround && deltaPosition.y !== 0) {\n        deltaPosition.y = 0;\n      }\n      player.position.add(deltaPosition);\n\n      // If player is stuck underneath a block, boost him up\n      if (collision.normal.y < 0) {\n        player.velocity.y += 10;\n      }\n\n      // Get the magnitude of player's velocity along collision normal\n      const magnitude = player.worldVelocity.dot(collision.normal);\n      // remove that part of velocity from the player's velocity\n      const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);\n      player.applyWorldDeltaVelocity(velocityAdj.negate());\n    }\n  }\n\n  // visualizes the block the player is colliding with\n  addCollisionHelper(candidate: Candidate) {\n    const blockMesh = new THREE.Mesh(collisionGeometry, collisionMaterial);\n    blockMesh.position.copy(\n      new THREE.Vector3(candidate.x, candidate.y, candidate.z)\n    );\n    this.helpers.add(blockMesh);\n  }\n\n  /**\n   * Visualizes the contact at the point 'p'\n   */\n  addContactPointerHelper(p: THREE.Vector3) {\n    const contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);\n    contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));\n    this.helpers.add(contactMesh);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Physics.ts"
+    },
+    "game/gui/GUI": {
+      "path": "game/gui/GUI",
+      "id": "game/gui/GUI",
+      "parentId": "@@/global-layout",
+      "file": "game/gui/GUI.ts",
+      "absPath": "/game/gui/GUI",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { oreConfig } from \"../Block\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../Player\";\nimport { World } from \"../World\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player, \"maxSpeed\", 1, 50, 1).name(\"Max Speed\");\n  playerFolder.add(player, \"jumpSpeed\", 1, 10, 1).name(\"Jump Speed\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/GUI.ts"
     },
     "game/Player": {
       "path": "game/Player",
@@ -2660,39 +3264,9 @@
       "parentId": "@@/global-layout",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport { Howl, Howler } from \"howler\";\nimport * as THREE from \"three\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\n// @ts-ignore\nimport Stats from \"three/examples/jsm/libs/stats.module\";\nimport audioManager from \"./audio/AudioManager\";\nimport { createUI } from \"./GUI\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./Player\";\nimport { numberWithCommas } from \"./util\";\nimport { World } from \"./World\";\nimport { initSky } from \"./sky\";\nimport { initLight } from \"./light\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private stats!: any;\n  private clock!: THREE.Clock;\n\n  private sunSettings = {\n    distance: 400,\n    cycleLength: 600,\n  };\n\n  private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;\n  private sun!: THREE.DirectionalLight;\n  private sunHelper!: THREE.DirectionalLightHelper;\n  private shadowHelper!: THREE.CameraHelper;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  private lastShadowUpdate = 0;\n\n  private dayColor = new THREE.Color(0xc0d8ff);\n  private nightColor = new THREE.Color(0x10121e);\n  private sunsetColor = new THREE.Color(0xcc7a00);\n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    this.initMainMenu();\n  }\n\n  initMainMenu() {\n    const mainMenu = document.getElementById(\"main-menu\");\n    const loadingScreen = document.getElementById(\"loading\");\n    const startGameButton = document.getElementById(\"start-game\");\n    startGameButton?.addEventListener(\"click\", () => {\n      if (mainMenu) mainMenu.style.display = \"none\";\n      if (loadingScreen) loadingScreen.style.display = \"block\";\n      audioManager.play(\"gui.button.press\");\n      this.initScene();\n      this.initStats();\n      this.initListeners();\n      this.initAudio();\n    });\n\n    const githubButton = document.getElementById(\"github\");\n    githubButton?.addEventListener(\"click\", () => {\n      audioManager.play(\"gui.button.press\");\n      window.open(\"https://github.com/0kzh/minicraft\");\n    });\n  }\n\n  initStats() {\n    this.stats = new (Stats as any)();\n    document.body.appendChild(this.stats.dom);\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.orbitCamera = new THREE.PerspectiveCamera(\n      75,\n      window.innerWidth / window.innerHeight\n    );\n    this.orbitCamera.position.set(-32, 64, -32);\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    document.body.appendChild(this.renderer.domElement);\n\n    this.controls = new OrbitControls(\n      this.orbitCamera,\n      this.renderer.domElement\n    );\n    this.controls.target.set(0, 0, 0);\n    this.controls.update();\n\n    // Skybox\n    this.sky = initSky(this.scene);\n    this.scene.add(this.sky);\n\n    // init light\n    const { sun, sunHelper, shadowHelper } = initLight(this.scene);\n    this.sun = sun;\n    this.sunHelper = sunHelper;\n    this.shadowHelper = shadowHelper;\n    \n\n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene);\n    this.physics = new Physics(this.scene);\n\n    this.updateSunPosition(0);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      this.sunSettings,\n      this.sunHelper,\n      this.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  initAudio() {\n    const sound = new Howl({\n      src: [\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3\"],\n      loop: true,\n    });\n    sound.play();\n  }\n\n  onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n      if (event.button === 0 && this.player.selectedCoords) {\n        // Left click\n        this.world.removeBlock(\n          Math.ceil(this.player.selectedCoords.x - 0.5),\n          Math.ceil(this.player.selectedCoords.y - 0.5),\n          Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n      } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n          const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n          );\n          const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n          );\n\n          if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;\n\n          this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n          );\n        }\n      }\n    }\n  }\n\n  initListeners() {\n    window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n    document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n  updateSkyColor() {\n    const elapsedTime = this.clock.getElapsedTime();\n    const cycleDuration = this.sunSettings.cycleLength; // Duration of a day in seconds\n    const cycleTime = elapsedTime % cycleDuration;\n\n    let topColor: THREE.Color;\n    let bottomColor: THREE.Color;\n\n    if (cycleTime < cycleDuration / 2) {\n      // Day time\n      topColor = this.dayColor\n        .clone()\n        .lerp(this.nightColor, cycleTime / (cycleDuration / 2));\n      this.sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses\n    } else {\n      // Night time\n      topColor = this.nightColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)\n        );\n      this.sun.intensity =\n        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses\n    }\n\n    const dayStart = 0;\n    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle\n    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle\n    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle\n\n    if (cycleTime >= dayStart && cycleTime < sunsetStart) {\n      // Day time\n      bottomColor = this.dayColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - dayStart) / (sunsetStart - dayStart)\n        );\n    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {\n      // Sunset\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.nightColor,\n          (cycleTime - sunsetStart) / (nightStart - sunsetStart)\n        );\n    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {\n      // Night time\n      bottomColor = this.nightColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - nightStart) / (sunriseStart - nightStart)\n        );\n    } else {\n      // Sunrise\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)\n        );\n    }\n\n    this.sky.material.uniforms.topColor.value = topColor;\n    this.sky.material.uniforms.bottomColor.value = bottomColor;\n\n    // Desaturate the fog slightly\n    this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);\n\n    if (\n      performance.now() - this.lastShadowUpdate <\n      this.sunSettings.cycleLength\n    )\n      return;\n\n    const sunAngle =\n      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4\n    this.updateSunPosition(sunAngle);\n\n    this.lastShadowUpdate = performance.now();\n  }\n\n  updateSunPosition(angle: number) {\n    const sunX = this.sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun\n    const sunY = this.sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun\n    this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun\n    this.sun.position.add(this.player.camera.position);\n\n    this.sun.target.position.copy(this.player.camera.position);\n    this.sun.target.updateMatrixWorld();\n\n    this.sunHelper.update();\n    this.shadowHelper.update();\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    this.updateSkyColor();\n\n    this.physics.update(deltaTime, this.player, this.world);\n    this.world.update(this.player);\n\n    // update triangle count\n    const triangleCount = document.getElementById(\"triangle-count\");\n    if (triangleCount) {\n      triangleCount.innerHTML = `triangles: ${numberWithCommas(\n        this.renderer.info.render.triangles\n      )}`;\n    }\n\n    const renderCalls = document.getElementById(\"render-calls\");\n    if (renderCalls) {\n      renderCalls.innerHTML = `draw calls: ${numberWithCommas(\n        this.renderer.info.render.calls\n      )}`;\n    }\n\n    // if (this.controls) {\n    //   this.controls.autoRotate = false;\n    //   this.controls.autoRotateSpeed = 2.0;\n    // }\n\n    if (this.stats) this.stats.update();\n\n    if (this.controls) this.controls.update();\n\n    TWEEN.update();\n\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n\n    this.previousTime = currentTime;\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Howl } from \"howler\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport audioManager from \"./audio/AudioManager\";\nimport { createUI } from \"./gui/GUI\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./Player\";\nimport { World } from \"./World\";\nimport { initSky } from \"./sky\";\nimport { initLight } from \"./light\";\nimport { initStats, updateRenderInfo, updateStats } from \"./dev\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private sunSettings = {\n    distance: 400,\n    cycleLength: 600,\n  };\n\n  private sky!: THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>;\n  private sun!: THREE.DirectionalLight;\n  private sunHelper!: THREE.DirectionalLightHelper;\n  private shadowHelper!: THREE.CameraHelper;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  private lastShadowUpdate = 0;\n\n  private dayColor = new THREE.Color(0xc0d8ff);\n  private nightColor = new THREE.Color(0x10121e);\n  private sunsetColor = new THREE.Color(0xcc7a00);\n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    this.initMainMenu();\n  }\n\n  initMainMenu() {\n    const mainMenu = document.getElementById(\"main-menu\");\n    const loadingScreen = document.getElementById(\"loading\");\n    const startGameButton = document.getElementById(\"start-game\");\n    startGameButton?.addEventListener(\"click\", () => {\n      if (mainMenu) mainMenu.style.display = \"none\";\n      if (loadingScreen) loadingScreen.style.display = \"block\";\n      audioManager.play(\"gui.button.press\");\n      initStats();\n      this.initScene();\n      this.initListeners();\n      this.initAudio();\n    });\n\n    const githubButton = document.getElementById(\"github\");\n    githubButton?.addEventListener(\"click\", () => {\n      audioManager.play(\"gui.button.press\");\n      window.open(\"https://github.com/0kzh/minicraft\");\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.orbitCamera = new THREE.PerspectiveCamera(\n      75,\n      window.innerWidth / window.innerHeight\n    );\n    this.orbitCamera.position.set(-32, 64, -32);\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    document.body.appendChild(this.renderer.domElement);\n\n    this.controls = new OrbitControls(\n      this.orbitCamera,\n      this.renderer.domElement\n    );\n    this.controls.target.set(0, 0, 0);\n    this.controls.update();\n\n    // Skybox\n    this.sky = initSky(this.scene);\n    this.scene.add(this.sky);\n\n    // init light\n    const { sun, sunHelper, shadowHelper } = initLight(this.scene);\n    this.sun = sun;\n    this.sunHelper = sunHelper;\n    this.shadowHelper = shadowHelper;\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene);\n    this.physics = new Physics(this.scene);\n\n    this.updateSunPosition(0);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      this.sunSettings,\n      this.sunHelper,\n      this.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  initAudio() {\n    const sound = new Howl({\n      src: [\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3\"],\n      loop: true,\n    });\n    sound.play();\n  }\n\n  onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n      if (event.button === 0 && this.player.selectedCoords) {\n        // Left click\n        this.world.removeBlock(\n          Math.ceil(this.player.selectedCoords.x - 0.5),\n          Math.ceil(this.player.selectedCoords.y - 0.5),\n          Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n      } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n          const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n          );\n          const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n          );\n\n          if (playerPos.distanceTo(blockPos) <= this.player.radius * 2) return;\n\n          this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n          );\n        }\n      }\n    }\n  }\n\n  initListeners() {\n    window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n    document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n  updateSkyColor() {\n    const elapsedTime = this.clock.getElapsedTime();\n    const cycleDuration = this.sunSettings.cycleLength; // Duration of a day in seconds\n    const cycleTime = elapsedTime % cycleDuration;\n\n    let topColor: THREE.Color;\n    let bottomColor: THREE.Color;\n\n    if (cycleTime < cycleDuration / 2) {\n      // Day time\n      topColor = this.dayColor\n        .clone()\n        .lerp(this.nightColor, cycleTime / (cycleDuration / 2));\n      this.sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses\n    } else {\n      // Night time\n      topColor = this.nightColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)\n        );\n      this.sun.intensity =\n        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses\n    }\n\n    const dayStart = 0;\n    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle\n    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle\n    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle\n\n    if (cycleTime >= dayStart && cycleTime < sunsetStart) {\n      // Day time\n      bottomColor = this.dayColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - dayStart) / (sunsetStart - dayStart)\n        );\n    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {\n      // Sunset\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.nightColor,\n          (cycleTime - sunsetStart) / (nightStart - sunsetStart)\n        );\n    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {\n      // Night time\n      bottomColor = this.nightColor\n        .clone()\n        .lerp(\n          this.sunsetColor,\n          (cycleTime - nightStart) / (sunriseStart - nightStart)\n        );\n    } else {\n      // Sunrise\n      bottomColor = this.sunsetColor\n        .clone()\n        .lerp(\n          this.dayColor,\n          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)\n        );\n    }\n\n    this.sky.material.uniforms.topColor.value = topColor;\n    this.sky.material.uniforms.bottomColor.value = bottomColor;\n\n    // Desaturate the fog slightly\n    this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);\n\n    if (\n      performance.now() - this.lastShadowUpdate <\n      this.sunSettings.cycleLength\n    )\n      return;\n\n    const sunAngle =\n      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4\n    this.updateSunPosition(sunAngle);\n\n    this.lastShadowUpdate = performance.now();\n  }\n\n  updateSunPosition(angle: number) {\n    const sunX = this.sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun\n    const sunY = this.sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun\n    this.sun.position.set(sunX, sunY, this.player.camera.position.z); // Update the position of the sun\n    this.sun.position.add(this.player.camera.position);\n\n    this.sun.target.position.copy(this.player.camera.position);\n    this.sun.target.updateMatrixWorld();\n\n    this.sunHelper.update();\n    this.shadowHelper.update();\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    this.updateSkyColor();\n\n    this.physics.update(deltaTime, this.player, this.world);\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfo(this.renderer);\n    updateStats();\n    // if (this.controls) {\n    //   this.controls.autoRotate = false;\n    //   this.controls.autoRotateSpeed = 2.0;\n    // }\n\n    if (this.controls) this.controls.update();\n\n    TWEEN.update();\n\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n\n    this.previousTime = currentTime;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
-    },
-    "game/main": {
-      "path": "game/main",
-      "id": "game/main",
-      "parentId": "@@/global-layout",
-      "file": "game/main.ts",
-      "absPath": "/game/main",
-      "__content": "\nimport Game from \"./Game\";\n\nwindow.addEventListener(\"DOMContentLoaded\", () => {\n  new Game();\n});\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/main.ts"
-    },
-    "game/util": {
-      "path": "game/util",
-      "id": "game/util",
-      "parentId": "@@/global-layout",
-      "file": "game/util.ts",
-      "absPath": "/game/util",
-      "__content": "export function numberWithCommas(x: number): string {\n  return x.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n}\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/util.ts"
-    },
-    "game/GUI": {
-      "path": "game/GUI",
-      "id": "game/GUI",
-      "parentId": "@@/global-layout",
-      "file": "game/GUI.ts",
-      "absPath": "/game/GUI",
-      "__content": "import GUI from \"lil-gui\";\n\nimport { oreConfig } from \"./Block\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./Player\";\nimport { World } from \"./World\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player, \"maxSpeed\", 1, 50, 1).name(\"Max Speed\");\n  playerFolder.add(player, \"jumpSpeed\", 1, 10, 1).name(\"Jump Speed\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/GUI.ts"
     },
     "game/RNG": {
       "path": "game/RNG",
@@ -2743,7 +3317,9 @@
     ]
   },
   "mfsuBundleStatus": {
-    "done": true
+    "done": true,
+    "percent": 1,
+    "status": ""
   },
   "react": {
     "version": "17.0.2",
@@ -4486,15 +5062,27 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/vite-env.d.ts": {
-            "bytes": 91,
-            "imports": []
-          },
           "src/pages/game/DataStore.ts": {
             "bytes": 1194,
             "imports": [
               {
                 "path": "./Block",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/dev/index.ts": {
+            "bytes": 1078,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three/examples/jsm/libs/stats.module",
                 "kind": "import-statement",
                 "external": true
               }
@@ -4537,6 +5125,42 @@
               },
               {
                 "path": "./World",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/gui/index.ts": {
+            "bytes": 4092,
+            "imports": [
+              {
+                "path": "lil-gui",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../Block"
+              },
+              {
+                "path": "../Physics",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../Player",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../World",
                 "kind": "import-statement",
                 "external": true
               }
@@ -4640,45 +5264,14 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/GUI.ts": {
-            "bytes": 4057,
-            "imports": [
-              {
-                "path": "lil-gui",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "./Physics",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "./Player",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "./World",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/util.ts": {
-            "bytes": 117,
-            "imports": [],
-            "format": "esm"
-          },
           "src/pages/game/Game.ts": {
-            "bytes": 10312,
+            "bytes": 9704,
             "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
               {
                 "path": "@tweenjs/tween.js",
                 "kind": "import-statement",
@@ -4690,17 +5283,7 @@
                 "external": true
               },
               {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three/examples/jsm/controls/OrbitControls.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three/examples/jsm/libs/stats.module",
                 "kind": "import-statement",
                 "external": true
               },
@@ -4710,9 +5293,9 @@
                 "original": "./audio/AudioManager"
               },
               {
-                "path": "src/pages/game/GUI.ts",
+                "path": "src/pages/game/gui/index.ts",
                 "kind": "import-statement",
-                "original": "./GUI"
+                "original": "./gui"
               },
               {
                 "path": "src/pages/game/Physics.ts",
@@ -4723,11 +5306,6 @@
                 "path": "src/pages/game/Player.ts",
                 "kind": "import-statement",
                 "original": "./Player"
-              },
-              {
-                "path": "src/pages/game/util.ts",
-                "kind": "import-statement",
-                "original": "./util"
               },
               {
                 "path": "src/pages/game/World.ts",
@@ -4743,17 +5321,11 @@
                 "path": "src/pages/game/light/index.ts",
                 "kind": "import-statement",
                 "original": "./light"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/main.ts": {
-            "bytes": 99,
-            "imports": [
+              },
               {
-                "path": "src/pages/game/Game.ts",
+                "path": "src/pages/game/dev/index.ts",
                 "kind": "import-statement",
-                "original": "./Game"
+                "original": "./dev"
               }
             ],
             "format": "esm"
@@ -4946,7 +5518,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 10159,
+            "bytes": 9755,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5079,14 +5651,14 @@
                 "original": "../../../src/pages/game/WorldChunk.ts"
               },
               {
-                "path": "src/pages/game/vite-env.d.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/vite-env.d.ts"
-              },
-              {
                 "path": "src/pages/game/DataStore.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/DataStore.ts"
+              },
+              {
+                "path": "src/pages/game/dev/index.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/dev/index.ts"
               },
               {
                 "path": "src/pages/game/sky/index.ts",
@@ -5097,6 +5669,11 @@
                 "path": "src/pages/game/Physics.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Physics.ts"
+              },
+              {
+                "path": "src/pages/game/gui/index.ts",
+                "kind": "dynamic-import",
+                "original": "../../pages/game/gui"
               },
               {
                 "path": "src/pages/game/Player.ts",
@@ -5112,21 +5689,6 @@
                 "path": "src/pages/game/Game.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Game.ts"
-              },
-              {
-                "path": "src/pages/game/main.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/main.ts"
-              },
-              {
-                "path": "src/pages/game/util.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/util.ts"
-              },
-              {
-                "path": "src/pages/game/GUI.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/GUI.ts"
               },
               {
                 "path": "src/pages/game/RNG.ts",
@@ -5297,12 +5859,22 @@
                 "external": true
               },
               {
+                "path": "three/examples/jsm/libs/stats.module",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
               {
                 "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "lil-gui",
                 "kind": "import-statement",
                 "external": true
               },
@@ -5342,7 +5914,7 @@
                 "external": true
               },
               {
-                "path": "lil-gui",
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -5357,17 +5929,7 @@
                 "external": true
               },
               {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three/examples/jsm/controls/OrbitControls.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three/examples/jsm/libs/stats.module",
                 "kind": "import-statement",
                 "external": true
               },
@@ -6608,11 +7170,11 @@
               "src/pages/game/WorldChunk.ts": {
                 "bytesInOutput": 11879
               },
-              "src/pages/game/vite-env.d.ts": {
-                "bytesInOutput": 101
-              },
               "src/pages/game/DataStore.ts": {
                 "bytesInOutput": 1026
+              },
+              "src/pages/game/dev/index.ts": {
+                "bytesInOutput": 1106
               },
               "src/pages/game/sky/index.ts": {
                 "bytesInOutput": 1426
@@ -6620,23 +7182,17 @@
               "src/pages/game/Physics.ts": {
                 "bytesInOutput": 6969
               },
+              "src/pages/game/gui/index.ts": {
+                "bytesInOutput": 3635
+              },
               "src/pages/game/Player.ts": {
                 "bytesInOutput": 11578
               },
               "src/pages/game/World.ts": {
                 "bytesInOutput": 11877
               },
-              "src/pages/game/GUI.ts": {
-                "bytesInOutput": 3629
-              },
-              "src/pages/game/util.ts": {
-                "bytesInOutput": 270
-              },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 9717
-              },
-              "src/pages/game/main.ts": {
-                "bytesInOutput": 203
+                "bytesInOutput": 9071
               },
               "src/pages/index.tsx": {
                 "bytesInOutput": 3564
@@ -6669,7 +7225,7 @@
                 "bytesInOutput": 700
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 9240
+                "bytesInOutput": 8870
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 30022
@@ -6678,7 +7234,7 @@
                 "bytesInOutput": 1944
               }
             },
-            "bytes": 144857
+            "bytes": 143101
           }
         }
       }
@@ -10329,112 +10885,9 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/GUI.ts": [
-        {
-          "end": 27,
-          "importKind": "value",
-          "source": "lil-gui",
-          "specifiers": [
-            {
-              "local": "GUI",
-              "type": "ImportDefaultSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 65,
-          "importKind": "value",
-          "source": "./Block",
-          "specifiers": [
-            {
-              "imported": "oreConfig",
-              "local": "oreConfig",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 29,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 102,
-          "importKind": "value",
-          "source": "./Physics",
-          "specifiers": [
-            {
-              "imported": "Physics",
-              "local": "Physics",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 66,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 137,
-          "importKind": "value",
-          "source": "./Player",
-          "specifiers": [
-            {
-              "imported": "Player",
-              "local": "Player",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 103,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 170,
-          "importKind": "value",
-          "source": "./World",
-          "specifiers": [
-            {
-              "imported": "World",
-              "local": "World",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 138,
-          "type": "ImportDeclaration"
-        }
-      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts": [
         {
-          "end": 39,
-          "importKind": "value",
-          "source": "@tweenjs/tween.js",
-          "specifiers": [
-            {
-              "local": "TWEEN",
-              "type": "ImportDefaultSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 78,
-          "importKind": "value",
-          "source": "howler",
-          "specifiers": [
-            {
-              "imported": "Howl",
-              "local": "Howl",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "Howler",
-              "local": "Howler",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 40,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 110,
+          "end": 32,
           "importKind": "value",
           "source": "three",
           "specifiers": [
@@ -10443,11 +10896,38 @@
               "type": "ImportNamespaceSpecifier"
             }
           ],
-          "start": 79,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 188,
+          "end": 71,
+          "importKind": "value",
+          "source": "@tweenjs/tween.js",
+          "specifiers": [
+            {
+              "local": "TWEEN",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 102,
+          "importKind": "value",
+          "source": "howler",
+          "specifiers": [
+            {
+              "imported": "Howl",
+              "local": "Howl",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 72,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 180,
           "importKind": "value",
           "source": "three/examples/jsm/controls/OrbitControls.js",
           "specifiers": [
@@ -10457,24 +10937,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 111,
+          "start": 103,
           "type": "ImportDeclaration"
         },
         {
-          "end": 260,
-          "importKind": "value",
-          "source": "three/examples/jsm/libs/stats.module",
-          "specifiers": [
-            {
-              "local": "Stats",
-              "type": "ImportDefaultSpecifier"
-            }
-          ],
-          "start": 203,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 309,
+          "end": 229,
           "importKind": "value",
           "source": "./audio/AudioManager",
           "specifiers": [
@@ -10483,13 +10950,13 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 261,
+          "start": 181,
           "type": "ImportDeclaration"
         },
         {
-          "end": 343,
+          "end": 263,
           "importKind": "value",
-          "source": "./GUI",
+          "source": "./gui",
           "specifiers": [
             {
               "imported": "createUI",
@@ -10497,11 +10964,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 310,
+          "start": 230,
           "type": "ImportDeclaration"
         },
         {
-          "end": 380,
+          "end": 300,
           "importKind": "value",
           "source": "./Physics",
           "specifiers": [
@@ -10511,11 +10978,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 344,
+          "start": 264,
           "type": "ImportDeclaration"
         },
         {
-          "end": 415,
+          "end": 335,
           "importKind": "value",
           "source": "./Player",
           "specifiers": [
@@ -10525,25 +10992,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 381,
+          "start": 301,
           "type": "ImportDeclaration"
         },
         {
-          "end": 458,
-          "importKind": "value",
-          "source": "./util",
-          "specifiers": [
-            {
-              "imported": "numberWithCommas",
-              "local": "numberWithCommas",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 416,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 491,
+          "end": 368,
           "importKind": "value",
           "source": "./World",
           "specifiers": [
@@ -10553,11 +11006,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 459,
+          "start": 336,
           "type": "ImportDeclaration"
         },
         {
-          "end": 524,
+          "end": 401,
           "importKind": "value",
           "source": "./sky",
           "specifiers": [
@@ -10567,11 +11020,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 492,
+          "start": 369,
           "type": "ImportDeclaration"
         },
         {
-          "end": 561,
+          "end": 438,
           "importKind": "value",
           "source": "./light",
           "specifiers": [
@@ -10581,7 +11034,31 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 525,
+          "start": 402,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 504,
+          "importKind": "value",
+          "source": "./dev",
+          "specifiers": [
+            {
+              "imported": "initStats",
+              "local": "initStats",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "updateRenderInfo",
+              "local": "updateRenderInfo",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "updateStats",
+              "local": "updateStats",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 439,
           "type": "ImportDeclaration"
         }
       ],
@@ -11144,7 +11621,7 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/light/index.ts": [
+      "/Applications/workspace/minicraft_demo/src/pages/game/dev/index.ts": [
         {
           "end": 32,
           "importKind": "value",
@@ -11157,20 +11634,117 @@
           ],
           "start": 1,
           "type": "ImportDeclaration"
-        }
-      ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/main.ts": [
+        },
         {
-          "end": 28,
+          "end": 104,
           "importKind": "value",
-          "source": "./Game",
+          "source": "three/examples/jsm/libs/stats.module",
           "specifiers": [
             {
-              "local": "Game",
+              "local": "Stats",
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 2,
+          "start": 47,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts": [
+        {
+          "end": 27,
+          "importKind": "value",
+          "source": "lil-gui",
+          "specifiers": [
+            {
+              "local": "GUI",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 59,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 28,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 97,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "oreConfig",
+              "local": "oreConfig",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 60,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 135,
+          "importKind": "value",
+          "source": "../Physics",
+          "specifiers": [
+            {
+              "imported": "Physics",
+              "local": "Physics",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 171,
+          "importKind": "value",
+          "source": "../Player",
+          "specifiers": [
+            {
+              "imported": "Player",
+              "local": "Player",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 136,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 205,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 172,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/light/index.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
           "type": "ImportDeclaration"
         }
       ],
@@ -11189,8 +11763,6 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/util.ts": [],
-      "/Applications/workspace/minicraft_demo/src/pages/game/vite-env.d.ts": [],
       "/Applications/workspace/minicraft_demo/src/pages/index.tsx": [
         {
           "end": 35,

@@ -1,17 +1,15 @@
-import TWEEN from "@tweenjs/tween.js";
-import { Howl, Howler } from "howler";
 import * as THREE from "three";
+import TWEEN from "@tweenjs/tween.js";
+import { Howl } from "howler";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-// @ts-ignore
-import Stats from "three/examples/jsm/libs/stats.module";
 import audioManager from "./audio/AudioManager";
-import { createUI } from "./GUI";
+import { createUI } from "./gui";
 import { Physics } from "./Physics";
 import { Player } from "./Player";
-import { numberWithCommas } from "./util";
 import { World } from "./World";
 import { initSky } from "./sky";
 import { initLight } from "./light";
+import { initStats, updateRenderInfo, updateStats } from "./dev";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -19,7 +17,6 @@ export default class Game {
   private orbitCamera!: THREE.PerspectiveCamera;
 
   private controls!: OrbitControls;
-  private stats!: any;
   private clock!: THREE.Clock;
 
   private sunSettings = {
@@ -56,8 +53,8 @@ export default class Game {
       if (mainMenu) mainMenu.style.display = "none";
       if (loadingScreen) loadingScreen.style.display = "block";
       audioManager.play("gui.button.press");
+      initStats();
       this.initScene();
-      this.initStats();
       this.initListeners();
       this.initAudio();
     });
@@ -67,11 +64,6 @@ export default class Game {
       audioManager.play("gui.button.press");
       window.open("https://github.com/0kzh/minicraft");
     });
-  }
-
-  initStats() {
-    this.stats = new (Stats as any)();
-    document.body.appendChild(this.stats.dom);
   }
 
   initScene() {
@@ -110,7 +102,6 @@ export default class Game {
     this.sunHelper = sunHelper;
     this.shadowHelper = shadowHelper;
     
-
     this.world = new World(0, this.scene);
     this.scene.add(this.world);
 
@@ -301,26 +292,12 @@ export default class Game {
     this.world.update(this.player);
 
     // update triangle count
-    const triangleCount = document.getElementById("triangle-count");
-    if (triangleCount) {
-      triangleCount.innerHTML = `triangles: ${numberWithCommas(
-        this.renderer.info.render.triangles
-      )}`;
-    }
-
-    const renderCalls = document.getElementById("render-calls");
-    if (renderCalls) {
-      renderCalls.innerHTML = `draw calls: ${numberWithCommas(
-        this.renderer.info.render.calls
-      )}`;
-    }
-
+    updateRenderInfo(this.renderer);
+    updateStats();
     // if (this.controls) {
     //   this.controls.autoRotate = false;
     //   this.controls.autoRotateSpeed = 2.0;
     // }
-
-    if (this.stats) this.stats.update();
 
     if (this.controls) this.controls.update();
 
