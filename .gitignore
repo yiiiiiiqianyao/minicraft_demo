@@ -3,4 +3,4 @@ dist
 **/**.DS_Store
 **/*.pdf
 screenshot.png
-src/.umi/*
+/.umi
