@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -74,7 +74,7 @@
             0
           ]
         },
-        "register": 4
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -88,10 +88,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            3
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -143,34 +143,29 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            16,
+            18,
+            2,
+            2,
+            3,
+            2,
+            1,
             2,
             3,
             2,
             2,
-            2,
-            3,
-            3,
-            1,
-            2,
-            2,
             1,
             1,
             2,
-            1,
-            1,
+            2,
+            2,
             1,
             4,
-            2,
             1,
             2,
-            1,
             3,
             3,
             2,
-            2,
-            1,
-            4
+            1
           ]
         },
         "register": 1
@@ -187,31 +182,31 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            51
+            77
           ],
           "onGenerateFiles": [
-            2,
+            1,
             4,
-            4,
+            13,
+            6,
             5,
             5,
             5,
-            9,
             4,
             4,
             4,
-            3,
             4,
-            4,
+            6,
             8,
-            6,
-            10,
-            12,
+            3,
             7,
-            12,
-            5,
             6,
-            41
+            5,
+            5,
+            3,
+            6,
+            5,
+            9
           ]
         },
         "register": 15
@@ -294,13 +289,16 @@
             0,
             0,
             0,
-            0,
             0
           ],
           "onCheckCode": [
             0,
             0,
             0,
+            0,
+            0,
+            1,
+            1,
             0,
             0,
             0,
@@ -385,7 +383,7 @@
             0
           ]
         },
-        "register": 9
+        "register": 10
       },
       "enableBy": "register"
     },
@@ -664,7 +662,7 @@
       "enableBy": "register",
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "virtual: config-svgr": {
@@ -1238,7 +1236,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1255,7 +1253,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1272,7 +1270,7 @@
             6
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1285,7 +1283,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 52
+        "register": 65
       },
       "enableBy": "register"
     },
@@ -1298,7 +1296,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 45
+        "register": 44
       },
       "enableBy": "config"
     },
@@ -1311,7 +1309,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 19
+        "register": 20
       },
       "enableBy": "config"
     },
@@ -1325,12 +1323,20 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            1
+            0
           ],
           "addBeforeMiddlewares": [
             0
           ],
           "modifyHTMLFavicon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1374,28 +1380,28 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
-            0,
-            0,
-            0,
+            2,
             0,
             0,
             1,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
             0,
             1,
             1,
             1,
             0,
+            0,
+            1,
+            0,
+            1,
+            0,
             1,
             1,
-            2
+            0,
+            1,
+            1,
+            0,
+            1,
+            1
           ],
           "addRuntimePlugin": [
             0,
@@ -1422,7 +1428,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1449,7 +1455,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ],
           "addBeforeMiddlewares": [
             1
@@ -1480,7 +1486,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1594,27 +1600,27 @@
           ],
           "onGenerateFiles": [
             52,
-            16,
-            8,
             12,
             12,
-            10,
-            17,
-            8,
-            8,
-            16,
-            9,
-            9,
-            7,
             10,
             9,
             7,
-            12,
-            14,
-            10,
+            7,
             8,
-            18,
-            23
+            8,
+            7,
+            7,
+            7,
+            13,
+            8,
+            9,
+            9,
+            11,
+            7,
+            7,
+            7,
+            10,
+            9
           ],
           "addPolyfillImports": [
             0,
@@ -1648,7 +1654,7 @@
             0,
             0,
             0,
-            1,
+            0,
             0,
             0,
             0,
@@ -1722,7 +1728,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1736,7 +1742,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            69,
+            81,
             0,
             0,
             0,
@@ -1760,7 +1766,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1802,6 +1808,8 @@
           "onGenerateFiles": [
             0,
             0,
+            0,
+            1,
             1,
             0,
             0,
@@ -1811,16 +1819,14 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
             1,
-            0,
+            1,
             1,
             0,
             0,
             0,
-            1,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1841,53 +1847,53 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            10,
-            2,
+            12,
+            3,
             26,
-            2,
-            25,
             1,
-            22,
-            2,
-            19,
-            2,
-            23,
-            1,
-            25,
-            1,
-            25,
-            1,
-            21,
-            1,
-            30,
-            1,
-            22,
-            2,
-            21,
-            0,
-            22,
-            1,
-            21,
-            2,
-            25,
-            2,
-            23,
-            1,
-            28,
+            37,
             2,
             29,
             1,
-            23,
+            21,
+            1,
+            21,
             2,
-            27,
+            28,
+            2,
+            25,
+            1,
+            22,
+            1,
+            25,
+            1,
+            23,
+            1,
+            22,
+            2,
+            24,
+            0,
+            24,
+            1,
+            26,
+            1,
+            30,
+            1,
+            25,
             2,
             22,
             1,
-            57,
-            3
+            24,
+            1,
+            25,
+            0,
+            25,
+            1,
+            27,
+            1
           ]
         },
-        "register": 6
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1900,7 +1906,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1914,7 +1920,6 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
             0,
             0,
             0,
@@ -1926,19 +1931,20 @@
             0,
             1,
             0,
-            1,
-            0,
-            0,
-            1,
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0
           ],
           "onBeforeCompiler": [
-            1
+            2
           ]
         },
         "register": 0
@@ -1953,7 +1959,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1967,28 +1973,28 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            236,
-            8,
+            245,
+            5,
+            7,
             5,
             6,
             7,
             5,
             4,
-            5,
-            5,
-            8,
+            6,
             4,
-            4,
+            5,
+            6,
+            3,
+            3,
             4,
             6,
             4,
             3,
-            5,
-            4,
-            4,
             3,
             4,
-            9
+            5,
+            4
           ]
         },
         "register": 3
@@ -2059,7 +2065,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 14
       },
       "enableBy": "config"
     },
@@ -2076,11 +2082,7 @@
             1,
             1,
             1,
-            0,
-            0,
             1,
-            1,
-            0,
             1,
             0,
             0,
@@ -2088,13 +2090,17 @@
             0,
             0,
             0,
-            1,
             0,
             1,
             0,
+            0,
+            0,
+            0,
             1,
             1,
-            1
+            1,
+            0,
+            0
           ]
         },
         "register": 1
@@ -2109,7 +2115,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2122,7 +2128,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2135,7 +2141,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2148,7 +2154,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -2164,7 +2170,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2202,7 +2208,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -2214,7 +2220,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -2226,7 +2232,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 17
+        "register": 16
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -2238,7 +2244,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2252,7 +2258,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            453
+            543
           ]
         },
         "register": 1
@@ -2268,7 +2274,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2281,7 +2287,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 23
+        "register": 24
       },
       "enableBy": "register"
     },
@@ -2298,7 +2304,7 @@
             8
           ]
         },
-        "register": 35
+        "register": 40
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2323,7 +2329,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2336,7 +2342,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2349,7 +2355,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2362,7 +2368,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2375,7 +2381,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2388,7 +2394,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2401,7 +2407,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2414,7 +2420,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2440,7 +2446,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2557,7 +2563,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2570,7 +2576,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2637,6 +2643,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/FlowerDandelionBlock.ts"
     },
+    "game/world/generate/tallGrass": {
+      "path": "game/world/generate/tallGrass",
+      "id": "game/world/generate/tallGrass",
+      "file": "game/world/generate/tallGrass.ts",
+      "absPath": "/game/world/generate/tallGrass",
+      "__content": "/**\n * Generate random patches of tall grass across the top surface\n */\n\nimport { BlockID } from \"../../Block\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { World } from \"../World\";\n\nexport const generateTallGrass = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since grass doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          if (World.rng.random() < params.grass.frequency) {\n            input[x][baseY][z] = BlockID.TallGrass;\n\n            // Define the maximum distance from the center\n            const maxDistance = params.grass.patchSize;\n\n            // Random walk algorithm\n            let currentX = x;\n            let currentZ = z;\n            for (let i = 0; i < maxDistance; i++) {\n              const direction = World.rng.random() * 2 * Math.PI; // Random direction\n              currentX += Math.round(Math.cos(direction));\n              currentZ += Math.round(Math.sin(direction));\n\n              // Check if the new position is within the chunk boundaries and is air\n              if (\n                currentX >= 0 &&\n                currentX < size.width &&\n                currentZ >= 0 &&\n                currentZ < size.width &&\n                input[currentX][baseY][currentZ] === BlockID.Air &&\n                input[currentX][y][currentZ] === BlockID.Grass\n              ) {\n                input[currentX][baseY][currentZ] = BlockID.TallGrass;\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/tallGrass.ts"
+    },
     "game/Block/RedstoneLampBlock": {
       "path": "game/Block/RedstoneLampBlock",
       "id": "game/Block/RedstoneLampBlock",
@@ -2646,6 +2661,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/RedstoneLampBlock.ts"
     },
+    "game/world/generate/resource": {
+      "path": "game/world/generate/resource",
+      "id": "game/world/generate/resource",
+      "file": "game/world/generate/resource.ts",
+      "absPath": "/game/world/generate/resource",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldSize } from \"../interface\";\nimport { BlockID, oreConfig } from \"../../Block\";\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = World.simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/resource.ts"
+    },
     "game/Block/LightSourceBlock": {
       "path": "game/Block/LightSourceBlock",
       "id": "game/Block/LightSourceBlock",
@@ -2654,6 +2678,15 @@
       "__content": "import { Block } from \"./Block\";\n\nexport abstract class LightSourceBlock extends Block {\n  abstract color: number;\n  abstract intensity: number;\n  abstract distance: number;\n  abstract decay: number;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/LightSourceBlock.ts"
+    },
+    "game/world/generate/terrain": {
+      "path": "game/world/generate/terrain",
+      "id": "game/world/generate/terrain",
+      "file": "game/world/generate/terrain.ts",
+      "absPath": "/game/world/generate/terrain",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { BlockID } from \"../../Block\";\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      const value = World.simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let height = Math.floor(size.height * scaledNoise);\n      height = Math.max(0, Math.min(height, size.height - 1));\n\n      const numSurfaceBlocks =\n        params.surface.offset +\n        Math.abs(World.simplex.noise(x, z) * params.surface.magnitude);\n\n      const numBedrockBlocks =\n        params.bedrock.offset +\n        Math.abs(World.simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        if (y < height) {\n          if (y < numBedrockBlocks) {\n            input[x][y][z] = BlockID.Bedrock;\n          } else if (y < height - numSurfaceBlocks) {\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            }\n          } else {\n            input[x][y][z] = BlockID.Dirt;\n          }\n        } else if (y === height) {\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > height) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/terrain.ts"
     },
     "game/Block/FlowerRoseBlock": {
       "path": "game/Block/FlowerRoseBlock",
@@ -2673,6 +2706,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/StoneBrickBlock.ts"
     },
+    "game/world/generate/flower": {
+      "path": "game/world/generate/flower",
+      "id": "game/world/generate/flower",
+      "file": "game/world/generate/flower.ts",
+      "absPath": "/game/world/generate/flower",
+      "__content": "import { BlockID } from \"../../Block\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { World } from \"../World\";\n\n/**\n * Generate random patches of flowers across the top surface\n */\nexport const generateFlowers = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since flowers doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          // Check if there's a tallgrass block within 3 blocks\n          let isTallGrassNearby = false;\n          for (let dx = -3; dx <= 3; dx++) {\n            for (let dz = -3; dz <= 3; dz++) {\n              const nx = x + dx;\n              const nz = z + dz;\n              if (\n                nx >= 0 &&\n                nx < size.width &&\n                nz >= 0 &&\n                nz < size.width &&\n                input[nx][baseY][nz] === BlockID.TallGrass\n              ) {\n                isTallGrassNearby = true;\n                break;\n              }\n            }\n            if (isTallGrassNearby) {\n              break;\n            }\n          }\n\n          if (isTallGrassNearby) {\n            continue;\n          }\n\n          const flowerId =\n            World.rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;\n\n          if (World.rng.random() < params.flowers.frequency) {\n            input[x][baseY][z] = flowerId;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/flower.ts"
+    },
     "game/Block/TallGrassBlock": {
       "path": "game/Block/TallGrassBlock",
       "id": "game/Block/TallGrassBlock",
@@ -2681,6 +2723,15 @@
       "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"./Block\";\nimport { textures, uiTextures } from \"./textures\";\n\nimport { BlockID } from \".\";\n\nconst tallGrassMaterial = new THREE.MeshBasicMaterial({\n  map: textures.tallGrass,\n});\n\ntallGrassMaterial.transparent = true;\ntallGrassMaterial.side = THREE.DoubleSide;\ntallGrassMaterial.depthWrite = false;\n\nexport class TallGrassBlock extends Block {\n  id = BlockID.TallGrass;\n  material = tallGrassMaterial;\n  uiTexture = uiTextures.tallGrass;\n  geometry = RenderGeometry.Cross;\n  transparent = true;\n  canPassThrough = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/TallGrassBlock.ts"
+    },
+    "game/world/generate/tree": {
+      "path": "game/world/generate/tree",
+      "id": "game/world/generate/tree",
+      "file": "game/world/generate/tree.ts",
+      "absPath": "/game/world/generate/tree",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../../Block\";\nimport { World } from \"../World\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\n\n/**\n * Generates trees\n */\nexport const generateTrees = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const canopySize = params.trees.canopy.size.max;\n  for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {\n    for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {\n      const n =\n        World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;\n      if (n < 1 - params.trees.frequency) {\n        continue;\n      }\n\n      // Find the grass tile\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[baseX][y][baseZ] !== BlockID.Grass) {\n          continue;\n        }\n\n        // Found grass, move one time up\n        const baseY = y + 1;\n\n        const minH = params.trees.trunkHeight.min;\n        const maxH = params.trees.trunkHeight.max;\n        const trunkHeight = Math.round(World.rng.random() * (maxH - minH)) + minH;\n        const topY = baseY + trunkHeight;\n\n        // Fill in blocks for the trunk\n        for (let i = baseY; i < topY; i++) {\n          input[baseX][i][baseZ] = BlockID.OakLog;\n        }\n\n        // Generate the canopy\n        // generate layer by layer, 4 layers in total\n        for (let i = 0; i < 4; i++) {\n          if (i === 0) {\n            // first layer above the height of tree and has 5 leaves in a + shape\n            input[baseX][topY][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX][topY][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY][baseZ - 1] = BlockID.Leaves;\n          } else if (i === 1) {\n            // base layer\n            input[baseX][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;\n\n            // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk\n            const minR = params.trees.canopy.size.min;\n            const maxR = params.trees.canopy.size.max;\n            const R = Math.round(World.rng.random() * (maxR - minR)) + minR;\n\n            // grow leaves in a diagonal shape\n            for (let x = -R; x <= R; x++) {\n              for (let z = -R; z <= R; z++) {\n                if (x * x + z * z > R * R) {\n                  continue;\n                }\n\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                if (World.rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n                }\n              }\n            }\n          } else if (i === 2 || i == 3) {\n            for (let x = -2; x <= 2; x++) {\n              for (let z = -2; z <= 2; z++) {\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n              }\n            }\n\n            // remove 4 corners randomly\n            for (const x of [-2, 2]) {\n              for (const z of [-2, 2]) {\n                if (World.rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Air;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/tree.ts"
     },
     "game/Block/BedrockBlock": {
       "path": "game/Block/BedrockBlock",
@@ -2750,7 +2801,7 @@
       "id": "game/world/chunkWorker",
       "file": "game/world/chunkWorker.ts",
       "absPath": "/game/world/chunkWorker",
-      "__content": "/// <reference lib=\"webworker\" />\nimport * as THREE from \"three\";\n// @ts-ignore\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise\";\n\nimport { BlockID, oreConfig } from \"../Block\";\nimport { RNG } from \"../RNG\";\nimport { IWorldParams, IWorldSize } from \"./interface\";\n\nexport const generateChunk = async (\n  chunkSize: IWorldSize,\n  params: IWorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  let data = initEmptyChunk(chunkSize);\n  const rng = new RNG(params.seed);\n  data = generateResources(rng, data, chunkSize, chunkPos);\n  data = generateTerrain(rng, data, chunkSize, params, chunkPos);\n  data = generateTrees(rng, data, chunkSize, params, chunkPos);\n  data = generateTallGrass(rng, data, chunkSize, params);\n  data = generateFlowers(rng, data, chunkSize, params);\n\n  return data;\n};\n\nconst initEmptyChunk = (chunkSize: IWorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data;\n};\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: IWorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      const value = simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let height = Math.floor(size.height * scaledNoise);\n      height = Math.max(0, Math.min(height, size.height - 1));\n\n      const numSurfaceBlocks =\n        params.surface.offset +\n        Math.abs(simplex.noise(x, z) * params.surface.magnitude);\n\n      const numBedrockBlocks =\n        params.bedrock.offset +\n        Math.abs(simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        if (y < height) {\n          if (y < numBedrockBlocks) {\n            input[x][y][z] = BlockID.Bedrock;\n          } else if (y < height - numSurfaceBlocks) {\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            }\n          } else {\n            input[x][y][z] = BlockID.Dirt;\n          }\n        } else if (y === height) {\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > height) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generates trees\n */\nexport const generateTrees = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  const simplex = new SimplexNoise(rng);\n  const canopySize = params.trees.canopy.size.max;\n  for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {\n    for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {\n      const n =\n        simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;\n      if (n < 1 - params.trees.frequency) {\n        continue;\n      }\n\n      // Find the grass tile\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[baseX][y][baseZ] !== BlockID.Grass) {\n          continue;\n        }\n\n        // Found grass, move one time up\n        const baseY = y + 1;\n\n        const minH = params.trees.trunkHeight.min;\n        const maxH = params.trees.trunkHeight.max;\n        const trunkHeight = Math.round(rng.random() * (maxH - minH)) + minH;\n        const topY = baseY + trunkHeight;\n\n        // Fill in blocks for the trunk\n        for (let i = baseY; i < topY; i++) {\n          input[baseX][i][baseZ] = BlockID.OakLog;\n        }\n\n        // Generate the canopy\n        // generate layer by layer, 4 layers in total\n        for (let i = 0; i < 4; i++) {\n          if (i === 0) {\n            // first layer above the height of tree and has 5 leaves in a + shape\n            input[baseX][topY][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY][baseZ] = BlockID.Leaves;\n            input[baseX][topY][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY][baseZ - 1] = BlockID.Leaves;\n          } else if (i === 1) {\n            // base layer\n            input[baseX][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX + 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX - 1][topY - i][baseZ] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ + 1] = BlockID.Leaves;\n            input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;\n\n            // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk\n            const minR = params.trees.canopy.size.min;\n            const maxR = params.trees.canopy.size.max;\n            const R = Math.round(rng.random() * (maxR - minR)) + minR;\n\n            // grow leaves in a diagonal shape\n            for (let x = -R; x <= R; x++) {\n              for (let z = -R; z <= R; z++) {\n                if (x * x + z * z > R * R) {\n                  continue;\n                }\n\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n                }\n              }\n            }\n          } else if (i === 2 || i == 3) {\n            for (let x = -2; x <= 2; x++) {\n              for (let z = -2; z <= 2; z++) {\n                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {\n                  continue;\n                }\n\n                input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;\n              }\n            }\n\n            // remove 4 corners randomly\n            for (const x of [-2, 2]) {\n              for (const z of [-2, 2]) {\n                if (rng.random() > 0.5) {\n                  input[baseX + x][topY - i][baseZ + z] = BlockID.Air;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of tall grass across the top surface\n */\n\nexport const generateTallGrass = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since grass doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          if (rng.random() < params.grass.frequency) {\n            input[x][baseY][z] = BlockID.TallGrass;\n\n            // Define the maximum distance from the center\n            const maxDistance = params.grass.patchSize;\n\n            // Random walk algorithm\n            let currentX = x;\n            let currentZ = z;\n            for (let i = 0; i < maxDistance; i++) {\n              const direction = rng.random() * 2 * Math.PI; // Random direction\n              currentX += Math.round(Math.cos(direction));\n              currentZ += Math.round(Math.sin(direction));\n\n              // Check if the new position is within the chunk boundaries and is air\n              if (\n                currentX >= 0 &&\n                currentX < size.width &&\n                currentZ >= 0 &&\n                currentZ < size.width &&\n                input[currentX][baseY][currentZ] === BlockID.Air &&\n                input[currentX][y][currentZ] === BlockID.Grass\n              ) {\n                input[currentX][baseY][currentZ] = BlockID.TallGrass;\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n\n/**\n * Generate random patches of flowers across the top surface\n */\nexport const generateFlowers = (\n  rng: RNG,\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // starting from the top of the chunk, find the first grass block\n      // if come in contact with leaves, stop since flowers doesn't grow under trees\n      for (let y = size.height - 1; y >= 0; y--) {\n        if (input[x][y][z] === BlockID.Leaves) {\n          break;\n        }\n\n        if (input[x][y][z] === BlockID.Grass) {\n          // found grass, move one time up\n          const baseY = y + 1;\n\n          if (input[x][baseY][z] !== BlockID.Air) {\n            continue;\n          }\n\n          // Check if there's a tallgrass block within 3 blocks\n          let isTallGrassNearby = false;\n          for (let dx = -3; dx <= 3; dx++) {\n            for (let dz = -3; dz <= 3; dz++) {\n              const nx = x + dx;\n              const nz = z + dz;\n              if (\n                nx >= 0 &&\n                nx < size.width &&\n                nz >= 0 &&\n                nz < size.width &&\n                input[nx][baseY][nz] === BlockID.TallGrass\n              ) {\n                isTallGrassNearby = true;\n                break;\n              }\n            }\n            if (isTallGrassNearby) {\n              break;\n            }\n          }\n\n          if (isTallGrassNearby) {\n            continue;\n          }\n\n          const flowerId =\n            rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;\n\n          if (rng.random() < params.flowers.frequency) {\n            input[x][baseY][z] = flowerId;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};\n",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { IWorldParams, IWorldSize } from \"./interface\";\nimport { World } from \"./World\";\nimport { generateTerrain } from \"./generate/terrain\";\nimport { generateResources } from \"./generate/resource\";\nimport { generateTrees } from \"./generate/tree\";\nimport { generateTallGrass } from \"./generate/tallGrass\";\nimport { generateFlowers } from \"./generate/flower\";\n\nconst initEmptyChunk = (chunkSize: IWorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data as BlockID[][][];\n};\n\nexport const generateChunk = async (\n  chunkSize: IWorldSize,\n  params: IWorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  let data = initEmptyChunk(chunkSize);\n  data = generateResources(data, chunkSize, chunkPos);\n  data = generateTerrain( data, chunkSize, params, chunkPos);\n  data = generateTrees( data, chunkSize, params, chunkPos);\n  data = generateTallGrass( data, chunkSize, params);\n  data = generateFlowers( data, chunkSize, params);\n  return data;\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts"
     },
@@ -2867,7 +2918,7 @@
       "id": "game/world/literal",
       "file": "game/world/literal.ts",
       "absPath": "/game/world/literal",
-      "__content": "import * as THREE from \"three\";\n\nexport const DefaultWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 1,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n}",
+      "__content": "export const DefaultWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 1,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/literal.ts"
     },
@@ -2903,7 +2954,7 @@
       "id": "game/world/World",
       "file": "game/world/World.ts",
       "absPath": "/game/world/World",
-      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams, IWorldSize } from \"./interface\";\nimport { DefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition } from \"../player/literal\";\nimport { updateProgressGUI } from \"../gui\";\n\nexport class World extends THREE.Group {\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkSize: IWorldSize = {\n    width: 16,\n    height: 32,\n  };\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = DefaultWorldParams;\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n\n  wireframeMode = false;\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    this.scene = scene;\n    this.chunkQueue = [];\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks(player);\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    } else {\n      // 当 chunk queue 为空时，如果是初始化的场景 则进行初始化操作\n      if (!this.initialLoadComplete) {\n        this.initialLoadComplete = true;\n        swapMenuScreenGUI();\n\n        const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n        for (let y = this.chunkSize.height; y > 0; y--) {\n          if (\n            this.getBlock(\n              startingPlayerPosition.x,\n              y,\n              startingPlayerPosition.z\n            )?.block === BlockID.Grass\n          ) {\n            startingPlayerPosition.y = y;\n            break;\n          }\n        }\n        // 角色从离地面 10 个单位的位置开始\n        player.position.set(\n          startingPlayerPosition.x,\n          startingPlayerPosition.y + 10,\n          startingPlayerPosition.z\n        );\n        player.controls.lock();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n      const loadedChunks = this.children.length;\n      const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n      updateProgressGUI(percentLoaded);\n    }\n  }\n\n  getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {\n    return this.getBlock(\n      Math.floor(position.x),\n      Math.floor(position.y - playerHeight / 2 - 1),\n      Math.floor(position.z)\n    );\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(player: Player): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    const coords = this.worldToChunkCoords(\n      player.position.x,\n      player.position.y,\n      player.position.z\n    );\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: coords.chunk.x + dx, z: coords.chunk.z + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - coords.chunk.x) ** 2 + (a.z - coords.chunk.z) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - coords.chunk.x) ** 2 + (b.z - coords.chunk.z) ** 2\n      );\n\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const chunk = new WorldChunk(\n      this.chunkSize,\n      this.params,\n      this.dataStore,\n      this.wireframeMode\n    );\n    chunk.position.set(x * this.chunkSize.width, 0, z * this.chunkSize.width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  removeBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n\n    if (blockToRemove?.block === BlockID.Bedrock) {\n      return;\n    }\n\n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the chunk and world coordinates of the block at (x, y, z)\n   *  - `chunk` is the coordinates of the chunk containing the block\n   *  - `block` is the world coordinates of the block\n   */\n  worldToChunkCoords(\n    x: number,\n    y: number,\n    z: number\n  ): {\n    chunk: { x: number; z: number };\n    block: { x: number; y: number; z: number };\n  } {\n    const chunkX = Math.floor(x / this.chunkSize.width);\n    const chunkZ = Math.floor(z / this.chunkSize.width);\n\n    const blockX = x - chunkX * this.chunkSize.width;\n    const blockZ = z - chunkZ * this.chunkSize.width;\n\n    return {\n      chunk: { x: chunkX, z: chunkZ },\n      block: { x: blockX, y, z: blockZ },\n    };\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams, IWorldSize } from \"./interface\";\nimport { DefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition } from \"../player/literal\";\nimport { swapMenuScreenGUI, updateProgressGUI } from \"../gui\";\nimport { RNG } from \"../RNG\";\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise.js\";\n\nexport class World extends THREE.Group {\n  static rng: RNG;\n  static simplex: SimplexNoise;\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkSize: IWorldSize = {\n    width: 16,\n    height: 32,\n  };\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = DefaultWorldParams;\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n\n  wireframeMode = false;\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    World.rng = new RNG(seed);\n    World.simplex = new SimplexNoise(World.rng);\n    this.scene = scene;\n    this.chunkQueue = [];\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks(player);\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    } else {\n      // 当 chunk queue 为空时，如果是初始化的场景 则进行初始化操作\n      if (!this.initialLoadComplete) {\n        this.initialLoadComplete = true;\n        swapMenuScreenGUI();\n\n        const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n        const startX = PlayerInitPosition.x;\n        const startZ = PlayerInitPosition.z;\n        const currentChunkHeight = this.chunkSize.height;\n        for (let y = currentChunkHeight; y > 0; y--) {\n          // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整\n          if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {\n            startingPlayerPosition.y = y;\n            break;\n          }\n        }\n        // 角色从离地面 10 个单位的位置开始\n        player.position.set(startX,startingPlayerPosition.y + 10,startZ);\n        // 角色 PointerLockControls 控制器解锁\n        player.controls.lock();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n      const loadedChunks = this.children.length;\n      const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n      updateProgressGUI(percentLoaded);\n    }\n  }\n\n  /**\n   * 获取角色当前位置下方的方块\n   * @param position \n   * @param playerHeight \n   * @returns \n   */\n  getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {\n    return this.getBlock(\n      Math.floor(position.x),\n      Math.floor(position.y - playerHeight / 2 - 1),\n      Math.floor(position.z)\n    );\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(player: Player): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    const coords = this.worldToChunkCoords(\n      player.position.x,\n      player.position.y,\n      player.position.z\n    );\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: coords.chunk.x + dx, z: coords.chunk.z + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - coords.chunk.x) ** 2 + (a.z - coords.chunk.z) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - coords.chunk.x) ** 2 + (b.z - coords.chunk.z) ** 2\n      );\n\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const chunk = new WorldChunk(\n      this.chunkSize,\n      this.params,\n      this.dataStore,\n      this.wireframeMode\n    );\n    chunk.position.set(x * this.chunkSize.width, 0, z * this.chunkSize.width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  removeBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n\n    if (blockToRemove?.block === BlockID.Bedrock) {\n      return;\n    }\n\n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the chunk and world coordinates of the block at (x, y, z)\n   *  - `chunk` is the coordinates of the chunk containing the block\n   *  - `block` is the world coordinates of the block\n   */\n  worldToChunkCoords(\n    x: number,\n    y: number,\n    z: number\n  ): {\n    chunk: { x: number; z: number };\n    block: { x: number; y: number; z: number };\n  } {\n    const chunkX = Math.floor(x / this.chunkSize.width);\n    const chunkZ = Math.floor(z / this.chunkSize.width);\n\n    const blockX = x - chunkX * this.chunkSize.width;\n    const blockZ = z - chunkZ * this.chunkSize.width;\n\n    return {\n      chunk: { x: chunkX, z: chunkZ },\n      block: { x: blockX, y, z: blockZ },\n    };\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = this.worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/World.ts"
     },
@@ -2991,7 +3042,9 @@
     ]
   },
   "mfsuBundleStatus": {
-    "done": true
+    "done": true,
+    "percent": 1,
+    "status": ""
   },
   "react": {
     "version": "17.0.2",
@@ -4169,117 +4222,13 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/Block/LightSourceBlock.ts": {
-            "bytes": 202,
+          "src/pages/game/Block/AirBlock.ts": {
+            "bytes": 256,
             "imports": [
               {
                 "path": "src/pages/game/Block/Block.ts",
                 "kind": "import-statement",
                 "original": "./Block"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/Block/RedstoneLampBlock.ts": {
-            "bytes": 642,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/LightSourceBlock.ts",
-                "kind": "import-statement",
-                "original": "./LightSourceBlock"
-              },
-              {
-                "path": "src/pages/game/Block/textures.ts",
-                "kind": "import-statement",
-                "original": "./textures"
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "."
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/Block/FlowerRoseBlock.ts": {
-            "bytes": 602,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/textures.ts",
-                "kind": "import-statement",
-                "original": "./textures"
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "."
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/Block/StoneBrickBlock.ts": {
-            "bytes": 483,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/textures.ts",
-                "kind": "import-statement",
-                "original": "./textures"
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "."
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/Block/TallGrassBlock.ts": {
-            "bytes": 594,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block"
-              },
-              {
-                "path": "src/pages/game/Block/textures.ts",
-                "kind": "import-statement",
-                "original": "./textures"
               },
               {
                 "path": "src/pages/game/Block/index.ts",
@@ -4306,22 +4255,6 @@
                 "path": "src/pages/game/Block/textures.ts",
                 "kind": "import-statement",
                 "original": "./textures"
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "."
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/Block/AirBlock.ts": {
-            "bytes": 256,
-            "imports": [
-              {
-                "path": "src/pages/game/Block/Block.ts",
-                "kind": "import-statement",
-                "original": "./Block"
               },
               {
                 "path": "src/pages/game/Block/index.ts",
@@ -4375,6 +4308,32 @@
           },
           "src/pages/game/Block/DirtBlock.ts": {
             "bytes": 444,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "./Block"
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "./textures"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "."
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/Block/FlowerRoseBlock.ts": {
+            "bytes": 602,
             "imports": [
               {
                 "path": "three",
@@ -4508,8 +4467,102 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/Block/LightSourceBlock.ts": {
+            "bytes": 202,
+            "imports": [
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "./Block"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/Block/RedstoneLampBlock.ts": {
+            "bytes": 642,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "./Block"
+              },
+              {
+                "path": "src/pages/game/Block/LightSourceBlock.ts",
+                "kind": "import-statement",
+                "original": "./LightSourceBlock"
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "./textures"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "."
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/Block/StoneBlock.ts": {
             "bytes": 450,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "./Block"
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "./textures"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "."
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/Block/StoneBrickBlock.ts": {
+            "bytes": 483,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "./Block"
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "./textures"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "."
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/Block/TallGrassBlock.ts": {
+            "bytes": 594,
             "imports": [
               {
                 "path": "three",
@@ -4620,6 +4673,17 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/world/DataStore.ts": {
+            "bytes": 1195,
+            "imports": [
+              {
+                "path": "../Block",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/audio/AudioManager.ts": {
             "bytes": 1398,
             "imports": [
@@ -4646,13 +4710,8 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/RNG.ts": {
-            "bytes": 627,
-            "imports": [],
-            "format": "esm"
-          },
-          "src/pages/game/world/chunkWorker.ts": {
-            "bytes": 10923,
+          "src/pages/game/world/generate/terrain.ts": {
+            "bytes": 1660,
             "imports": [
               {
                 "path": "three",
@@ -4660,7 +4719,101 @@
                 "external": true
               },
               {
-                "path": "three/examples/jsm/math/SimplexNoise",
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/generate/resource.ts": {
+            "bytes": 890,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/generate/tree.ts": {
+            "bytes": 3729,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              },
+              {
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/generate/flower.ts": {
+            "bytes": 1912,
+            "imports": [
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/chunkWorker.ts": {
+            "bytes": 1323,
+            "imports": [
+              {
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -4670,14 +4823,34 @@
                 "original": "../Block"
               },
               {
-                "path": "src/pages/game/RNG.ts",
-                "kind": "import-statement",
-                "original": "../RNG"
-              },
-              {
                 "path": "./interface",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/pages/game/world/generate/terrain.ts",
+                "kind": "import-statement",
+                "original": "./generate/terrain"
+              },
+              {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "import-statement",
+                "original": "./generate/resource"
+              },
+              {
+                "path": "src/pages/game/world/generate/tree.ts",
+                "kind": "import-statement",
+                "original": "./generate/tree"
+              },
+              {
+                "path": "src/pages/game/world/generate/tallGrass.ts",
+                "kind": "import-statement",
+                "original": "./generate/tallGrass"
+              },
+              {
+                "path": "src/pages/game/world/generate/flower.ts",
+                "kind": "import-statement",
+                "original": "./generate/flower"
               }
             ],
             "format": "esm"
@@ -4728,59 +4901,16 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/world/literal.ts": {
+            "bytes": 551,
+            "imports": [],
+            "format": "esm"
+          },
           "src/pages/game/player/literal.ts": {
             "bytes": 322,
             "imports": [
               {
                 "path": "three",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/dev/orbitCamera.ts": {
-            "bytes": 1509,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three/examples/jsm/controls/OrbitControls.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "../player/Player",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/player/literal.ts",
-                "kind": "import-statement",
-                "original": "../player/literal"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/world/DataStore.ts": {
-            "bytes": 1195,
-            "imports": [
-              {
-                "path": "../Block",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/world/interface.ts": {
-            "bytes": 798,
-            "imports": [
-              {
-                "path": "../Block",
                 "kind": "import-statement",
                 "external": true
               }
@@ -4845,6 +4975,140 @@
                 "path": "src/pages/game/audio/AudioManager.ts",
                 "kind": "import-statement",
                 "original": "../audio/AudioManager"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/RNG.ts": {
+            "bytes": 627,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/pages/game/world/World.ts": {
+            "bytes": 12241,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../Block"
+              },
+              {
+                "path": "src/pages/game/Block/BlockFactory.ts",
+                "kind": "import-statement",
+                "original": "../Block/BlockFactory"
+              },
+              {
+                "path": "../Block/LightSourceBlock",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/DataStore.ts",
+                "kind": "import-statement",
+                "original": "./DataStore"
+              },
+              {
+                "path": "../player/Player",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/WorldChunk.ts",
+                "kind": "import-statement",
+                "original": "./WorldChunk"
+              },
+              {
+                "path": "./interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/literal.ts",
+                "kind": "import-statement",
+                "original": "./literal"
+              },
+              {
+                "path": "src/pages/game/player/literal.ts",
+                "kind": "import-statement",
+                "original": "../player/literal"
+              },
+              {
+                "path": "src/pages/game/gui/index.ts",
+                "kind": "import-statement",
+                "original": "../gui"
+              },
+              {
+                "path": "src/pages/game/RNG.ts",
+                "kind": "import-statement",
+                "original": "../RNG"
+              },
+              {
+                "path": "three/examples/jsm/math/SimplexNoise.js",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/generate/tallGrass.ts": {
+            "bytes": 2049,
+            "imports": [
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/dev/orbitCamera.ts": {
+            "bytes": 1509,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three/examples/jsm/controls/OrbitControls.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../player/Player",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/player/literal.ts",
+                "kind": "import-statement",
+                "original": "../player/literal"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/world/interface.ts": {
+            "bytes": 798,
+            "imports": [
+              {
+                "path": "../Block",
+                "kind": "import-statement",
+                "external": true
               }
             ],
             "format": "esm"
@@ -4932,78 +5196,6 @@
                 "path": "src/pages/game/player/literal.ts",
                 "kind": "import-statement",
                 "original": "./literal"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/world/literal.ts": {
-            "bytes": 584,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/world/World.ts": {
-            "bytes": 11791,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "../Block"
-              },
-              {
-                "path": "src/pages/game/Block/BlockFactory.ts",
-                "kind": "import-statement",
-                "original": "../Block/BlockFactory"
-              },
-              {
-                "path": "../Block/LightSourceBlock",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/world/DataStore.ts",
-                "kind": "import-statement",
-                "original": "./DataStore"
-              },
-              {
-                "path": "../player/Player",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/world/WorldChunk.ts",
-                "kind": "import-statement",
-                "original": "./WorldChunk"
-              },
-              {
-                "path": "./interface",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/world/literal.ts",
-                "kind": "import-statement",
-                "original": "./literal"
-              },
-              {
-                "path": "src/pages/game/player/literal.ts",
-                "kind": "import-statement",
-                "original": "../player/literal"
-              },
-              {
-                "path": "src/pages/game/gui/index.ts",
-                "kind": "import-statement",
-                "original": "../gui"
               }
             ],
             "format": "esm"
@@ -5153,7 +5345,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 9674,
+            "bytes": 11078,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5171,14 +5363,29 @@
                 "original": "../../../src/pages/game/Block/FlowerDandelionBlock.ts"
               },
               {
+                "path": "src/pages/game/world/generate/tallGrass.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/tallGrass.ts"
+              },
+              {
                 "path": "src/pages/game/Block/RedstoneLampBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/RedstoneLampBlock.ts"
               },
               {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/resource.ts"
+              },
+              {
                 "path": "src/pages/game/Block/LightSourceBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/LightSourceBlock.ts"
+              },
+              {
+                "path": "src/pages/game/world/generate/terrain.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/terrain.ts"
               },
               {
                 "path": "src/pages/game/Block/FlowerRoseBlock.ts",
@@ -5191,9 +5398,19 @@
                 "original": "../../../src/pages/game/Block/StoneBrickBlock.ts"
               },
               {
+                "path": "src/pages/game/world/generate/flower.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/flower.ts"
+              },
+              {
                 "path": "src/pages/game/Block/TallGrassBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/TallGrassBlock.ts"
+              },
+              {
+                "path": "src/pages/game/world/generate/tree.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/tree.ts"
               },
               {
                 "path": "src/pages/game/Block/BedrockBlock.ts",
@@ -5634,27 +5851,12 @@
                 "external": true
               },
               {
-                "path": "three/examples/jsm/math/SimplexNoise",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
               {
                 "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three/examples/jsm/controls/OrbitControls.js",
                 "kind": "import-statement",
                 "external": true
               },
@@ -5665,6 +5867,26 @@
               },
               {
                 "path": "lil-gui",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three/examples/jsm/math/SimplexNoise.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three/examples/jsm/controls/OrbitControls.js",
                 "kind": "import-statement",
                 "external": true
               },
@@ -5700,11 +5922,6 @@
               },
               {
                 "path": "three/examples/jsm/lines/LineMaterial.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -6889,26 +7106,11 @@
               "src/pages/game/Block/FlowerDandelionBlock.ts": {
                 "bytesInOutput": 919
               },
-              "src/pages/game/Block/LightSourceBlock.ts": {
-                "bytesInOutput": 322
-              },
-              "src/pages/game/Block/RedstoneLampBlock.ts": {
-                "bytesInOutput": 877
-              },
-              "src/pages/game/Block/FlowerRoseBlock.ts": {
-                "bytesInOutput": 833
-              },
-              "src/pages/game/Block/StoneBrickBlock.ts": {
-                "bytesInOutput": 702
-              },
-              "src/pages/game/Block/TallGrassBlock.ts": {
-                "bytesInOutput": 816
+              "src/pages/game/Block/AirBlock.ts": {
+                "bytesInOutput": 430
               },
               "src/pages/game/Block/BedrockBlock.ts": {
                 "bytesInOutput": 659
-              },
-              "src/pages/game/Block/AirBlock.ts": {
-                "bytesInOutput": 430
               },
               "src/pages/game/Block/OreBlock.ts": {
                 "bytesInOutput": 258
@@ -6919,47 +7121,68 @@
               "src/pages/game/Block/DirtBlock.ts": {
                 "bytesInOutput": 607
               },
+              "src/pages/game/Block/FlowerRoseBlock.ts": {
+                "bytesInOutput": 833
+              },
               "src/pages/game/Block/GrassBlock.ts": {
-                "bytesInOutput": 1038
+                "bytesInOutput": 1031
               },
               "src/pages/game/Block/IronOreBlock.ts": {
-                "bytesInOutput": 744
+                "bytesInOutput": 742
               },
               "src/pages/game/Block/LeavesBlock.ts": {
-                "bytesInOutput": 731
+                "bytesInOutput": 728
               },
               "src/pages/game/Block/OakLogBlock.ts": {
                 "bytesInOutput": 1033
               },
+              "src/pages/game/Block/LightSourceBlock.ts": {
+                "bytesInOutput": 322
+              },
+              "src/pages/game/Block/RedstoneLampBlock.ts": {
+                "bytesInOutput": 879
+              },
               "src/pages/game/Block/StoneBlock.ts": {
                 "bytesInOutput": 623
+              },
+              "src/pages/game/Block/StoneBrickBlock.ts": {
+                "bytesInOutput": 704
+              },
+              "src/pages/game/Block/TallGrassBlock.ts": {
+                "bytesInOutput": 819
               },
               "src/pages/game/Block/BlockFactory.ts": {
                 "bytesInOutput": 1772
               },
+              "src/pages/game/world/DataStore.ts": {
+                "bytesInOutput": 1032
+              },
               "src/pages/game/audio/AudioManager.ts": {
                 "bytesInOutput": 1579
               },
-              "src/pages/game/RNG.ts": {
-                "bytesInOutput": 810
+              "src/pages/game/world/generate/terrain.ts": {
+                "bytesInOutput": 1711
+              },
+              "src/pages/game/world/generate/resource.ts": {
+                "bytesInOutput": 927
+              },
+              "src/pages/game/world/generate/tree.ts": {
+                "bytesInOutput": 3474
+              },
+              "src/pages/game/world/generate/flower.ts": {
+                "bytesInOutput": 1670
               },
               "src/pages/game/world/chunkWorker.ts": {
-                "bytesInOutput": 9878
+                "bytesInOutput": 1307
               },
               "src/pages/game/world/WorldChunk.ts": {
                 "bytesInOutput": 11885
               },
+              "src/pages/game/world/literal.ts": {
+                "bytesInOutput": 827
+              },
               "src/pages/game/player/literal.ts": {
-                "bytesInOutput": 600
-              },
-              "src/pages/game/dev/orbitCamera.ts": {
-                "bytesInOutput": 1169
-              },
-              "src/pages/game/world/DataStore.ts": {
-                "bytesInOutput": 1032
-              },
-              "src/pages/game/world/interface.ts": {
-                "bytesInOutput": 125
+                "bytesInOutput": 603
               },
               "src/pages/game/dev/index.ts": {
                 "bytesInOutput": 1497
@@ -6967,26 +7190,35 @@
               "src/pages/game/gui/index.ts": {
                 "bytesInOutput": 5495
               },
-              "src/pages/game/player/utils.ts": {
-                "bytesInOutput": 655
-              },
-              "src/pages/game/player/Player.ts": {
-                "bytesInOutput": 10721
-              },
-              "src/pages/game/world/literal.ts": {
-                "bytesInOutput": 830
+              "src/pages/game/RNG.ts": {
+                "bytesInOutput": 810
               },
               "src/pages/game/world/World.ts": {
-                "bytesInOutput": 10741
+                "bytesInOutput": 11076
+              },
+              "src/pages/game/world/generate/tallGrass.ts": {
+                "bytesInOutput": 1652
+              },
+              "src/pages/game/dev/orbitCamera.ts": {
+                "bytesInOutput": 1170
+              },
+              "src/pages/game/world/interface.ts": {
+                "bytesInOutput": 125
+              },
+              "src/pages/game/player/utils.ts": {
+                "bytesInOutput": 656
+              },
+              "src/pages/game/player/Player.ts": {
+                "bytesInOutput": 10722
               },
               "src/pages/game/sky/index.ts": {
                 "bytesInOutput": 6515
               },
               "src/pages/game/Physics.ts": {
-                "bytesInOutput": 7517
+                "bytesInOutput": 7518
               },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 4776
+                "bytesInOutput": 4777
               },
               "src/pages/index.tsx": {
                 "bytesInOutput": 3610
@@ -7001,7 +7233,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 8352
+                "bytesInOutput": 9501
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -7022,7 +7254,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 145129
+            "bytes": 147700
           }
         }
       }
@@ -11448,7 +11680,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 69,
+          "end": 68,
           "importKind": "value",
           "source": "../Block",
           "specifiers": [
@@ -11458,11 +11690,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 33,
           "type": "ImportDeclaration"
         },
         {
-          "end": 123,
+          "end": 122,
           "importKind": "value",
           "source": "../Block/BlockFactory",
           "specifiers": [
@@ -11472,11 +11704,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 70,
+          "start": 69,
           "type": "ImportDeclaration"
         },
         {
-          "end": 185,
+          "end": 184,
           "importKind": "value",
           "source": "../Block/LightSourceBlock",
           "specifiers": [
@@ -11486,11 +11718,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 124,
+          "start": 123,
           "type": "ImportDeclaration"
         },
         {
-          "end": 226,
+          "end": 225,
           "importKind": "value",
           "source": "./DataStore",
           "specifiers": [
@@ -11500,11 +11732,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 186,
+          "start": 185,
           "type": "ImportDeclaration"
         },
         {
-          "end": 269,
+          "end": 268,
           "importKind": "value",
           "source": "../player/Player",
           "specifiers": [
@@ -11514,11 +11746,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 227,
+          "start": 226,
           "type": "ImportDeclaration"
         },
         {
-          "end": 312,
+          "end": 311,
           "importKind": "value",
           "source": "./WorldChunk",
           "specifiers": [
@@ -11528,11 +11760,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 270,
+          "start": 269,
           "type": "ImportDeclaration"
         },
         {
-          "end": 368,
+          "end": 367,
           "importKind": "value",
           "source": "./interface",
           "specifiers": [
@@ -11547,11 +11779,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 313,
+          "start": 312,
           "type": "ImportDeclaration"
         },
         {
-          "end": 416,
+          "end": 415,
           "importKind": "value",
           "source": "./literal",
           "specifiers": [
@@ -11561,11 +11793,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 369,
+          "start": 368,
           "type": "ImportDeclaration"
         },
         {
-          "end": 472,
+          "end": 471,
           "importKind": "value",
           "source": "../player/literal",
           "specifiers": [
@@ -11575,11 +11807,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 417,
+          "start": 416,
           "type": "ImportDeclaration"
         },
         {
-          "end": 535,
+          "end": 534,
           "importKind": "value",
           "source": "../gui",
           "specifiers": [
@@ -11594,7 +11826,35 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 473,
+          "start": 472,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 564,
+          "importKind": "value",
+          "source": "../RNG",
+          "specifiers": [
+            {
+              "imported": "RNG",
+              "local": "RNG",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 535,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 636,
+          "importKind": "value",
+          "source": "three/examples/jsm/math/SimplexNoise.js",
+          "specifiers": [
+            {
+              "imported": "SimplexNoise",
+              "local": "SimplexNoise",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 565,
           "type": "ImportDeclaration"
         }
       ],
@@ -11721,7 +11981,7 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts": [
         {
-          "end": 66,
+          "end": 32,
           "importKind": "value",
           "source": "three",
           "specifiers": [
@@ -11730,25 +11990,11 @@
               "type": "ImportNamespaceSpecifier"
             }
           ],
-          "start": 35,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 149,
-          "importKind": "value",
-          "source": "three/examples/jsm/math/SimplexNoise",
-          "specifiers": [
-            {
-              "imported": "SimplexNoise",
-              "local": "SimplexNoise",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 81,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 197,
+          "end": 68,
           "importKind": "value",
           "source": "../Block",
           "specifiers": [
@@ -11756,32 +12002,13 @@
               "imported": "BlockID",
               "local": "BlockID",
               "type": "ImportSpecifier"
-            },
-            {
-              "imported": "oreConfig",
-              "local": "oreConfig",
-              "type": "ImportSpecifier"
             }
           ],
-          "start": 151,
+          "start": 33,
           "type": "ImportDeclaration"
         },
         {
-          "end": 227,
-          "importKind": "value",
-          "source": "../RNG",
-          "specifiers": [
-            {
-              "imported": "RNG",
-              "local": "RNG",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 198,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 283,
+          "end": 124,
           "importKind": "value",
           "source": "./interface",
           "specifiers": [
@@ -11796,7 +12023,361 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 228,
+          "start": 69,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 178,
+          "importKind": "value",
+          "source": "./generate/terrain",
+          "specifiers": [
+            {
+              "imported": "generateTerrain",
+              "local": "generateTerrain",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 125,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 235,
+          "importKind": "value",
+          "source": "./generate/resource",
+          "specifiers": [
+            {
+              "imported": "generateResources",
+              "local": "generateResources",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 179,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 284,
+          "importKind": "value",
+          "source": "./generate/tree",
+          "specifiers": [
+            {
+              "imported": "generateTrees",
+              "local": "generateTrees",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 236,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 342,
+          "importKind": "value",
+          "source": "./generate/tallGrass",
+          "specifiers": [
+            {
+              "imported": "generateTallGrass",
+              "local": "generateTallGrass",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 285,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 395,
+          "importKind": "value",
+          "source": "./generate/flower",
+          "specifiers": [
+            {
+              "imported": "generateFlowers",
+              "local": "generateFlowers",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 343,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/flower.ts": [
+        {
+          "end": 39,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 96,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 40,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 130,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 97,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/resource.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 66,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 109,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 67,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 159,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "oreConfig",
+              "local": "oreConfig",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 110,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/tallGrass.ts": [
+        {
+          "end": 112,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 74,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 169,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 113,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 203,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 170,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/terrain.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 66,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 123,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 67,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 162,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 124,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/tree.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 71,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 105,
+          "importKind": "value",
+          "source": "../World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 72,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 162,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 106,
           "type": "ImportDeclaration"
         }
       ],
@@ -11816,21 +12397,7 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/world/literal.ts": [
-        {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        }
-      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/literal.ts": [],
       "/Applications/workspace/minicraft_demo/src/pages/index.tsx": [
         {
           "end": 35,

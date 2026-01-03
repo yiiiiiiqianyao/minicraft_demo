@@ -7,6 +7,7 @@ https://umijs.org/docs/guides/getting-started
 - [ ✅ ] mini craft 初始化
 - [ ✅ ] 角色移动后 第三视角的位置没有更新
 - [  ] 角色碰撞盒调整 目前一格大小无法掉落
+- [] 光照效果/照亮区域效果
 
 
 ## dev tools

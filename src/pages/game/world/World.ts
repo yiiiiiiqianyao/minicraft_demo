@@ -1,5 +1,4 @@
 import * as THREE from "three";
-
 import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { LightSourceBlock } from "../Block/LightSourceBlock";
@@ -10,8 +9,12 @@ import { IWorldParams, IWorldSize } from "./interface";
 import { DefaultWorldParams } from "./literal";
 import { PlayerInitPosition } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
+import { RNG } from "../RNG";
+import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 
 export class World extends THREE.Group {
+  static rng: RNG;
+  static simplex: SimplexNoise;
   scene: THREE.Scene;
   seed: number;
   renderDistance = 8;
@@ -36,6 +39,8 @@ export class World extends THREE.Group {
   constructor(seed = 0, scene: THREE.Scene) {
     super();
     this.seed = seed;
+    World.rng = new RNG(seed);
+    World.simplex = new SimplexNoise(World.rng);
     this.scene = scene;
     this.chunkQueue = [];
   }
@@ -102,24 +107,19 @@ export class World extends THREE.Group {
         swapMenuScreenGUI();
 
         const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
-        for (let y = this.chunkSize.height; y > 0; y--) {
-          if (
-            this.getBlock(
-              startingPlayerPosition.x,
-              y,
-              startingPlayerPosition.z
-            )?.block === BlockID.Grass
-          ) {
+        const startX = PlayerInitPosition.x;
+        const startZ = PlayerInitPosition.z;
+        const currentChunkHeight = this.chunkSize.height;
+        for (let y = currentChunkHeight; y > 0; y--) {
+          // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
+          if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
             startingPlayerPosition.y = y;
             break;
           }
         }
         // 角色从离地面 10 个单位的位置开始
-        player.position.set(
-          startingPlayerPosition.x,
-          startingPlayerPosition.y + 10,
-          startingPlayerPosition.z
-        );
+        player.position.set(startX,startingPlayerPosition.y + 10,startZ);
+        // 角色 PointerLockControls 控制器解锁
         player.controls.lock();
       }
     }
@@ -133,6 +133,12 @@ export class World extends THREE.Group {
     }
   }
 
+  /**
+   * 获取角色当前位置下方的方块
+   * @param position 
+   * @param playerHeight 
+   * @returns 
+   */
   getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {
     return this.getBlock(
       Math.floor(position.x),

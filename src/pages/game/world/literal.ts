@@ -1,5 +1,3 @@
-import * as THREE from "three";
-
 export const DefaultWorldParams = {
     seed: 0,
     terrain: {
