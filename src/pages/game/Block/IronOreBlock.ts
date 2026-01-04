@@ -3,8 +3,8 @@ import * as THREE from "three";
 import { RenderGeometry } from "./Block";
 import { OreBlock } from "./OreBlock";
 import { textures, uiTextures } from "./textures";
-
-import { BlockID, oreConfig } from ".";
+import { BlockID } from ".";
+import { oreConfig } from "../world/generate/resource";
 
 const ironMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 

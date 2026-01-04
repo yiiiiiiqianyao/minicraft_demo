@@ -1,11 +1,11 @@
 import GUI from "lil-gui";
 import * as THREE from "three";
-import { oreConfig } from "../Block";
 import { Physics } from "../Physics";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
+import { oreConfig } from "../world/generate/resource";
 
 export function createUI(
   world: World,

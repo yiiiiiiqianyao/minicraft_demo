@@ -1,11 +1,11 @@
 import * as THREE from "three";
-import { BlockID } from "../Block";
-import { IWorldParams, IWorldSize } from "./interface";
-import { generateTerrain } from "./generate/terrain";
-import { generateResources } from "./generate/resource";
-import { generateTrees } from "./generate/tree";
-import { generateTallGrass } from "./generate/tallGrass";
-import { generateFlowers } from "./generate/flower";
+import { BlockID } from "../../Block";
+import { IWorldParams, IWorldSize } from "../interface";
+import { generateTerrain } from "./terrain";
+import { generateResources } from "./resource";
+import { generateTrees } from "./tree";
+import { generateTallGrass } from "./tallGrass";
+import { generateFlowers } from "./flower";
 
 const initEmptyChunk = (chunkSize: IWorldSize) => {
   const data = new Array(chunkSize.width);
@@ -28,6 +28,7 @@ export const generateChunk = async (
   z: number
 ) => {
   const chunkPos = new THREE.Vector3(x, 0, z);
+  // full chunk block data fill with air
   let data = initEmptyChunk(chunkSize);
   data = generateResources(data, chunkSize, chunkPos);
   data = generateTerrain( data, chunkSize, params, chunkPos);

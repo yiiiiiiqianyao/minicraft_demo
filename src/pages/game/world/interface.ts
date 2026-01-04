@@ -1,17 +1,25 @@
 import { BlockID } from "../Block";
 
 // 创造场景时候的初始参数
+/**
+ * level: {
+ *  offset: number; // 层级的基础高度
+ *  magnitude: number; // simplex noise 生成当前层的厚度 simplex(x, z) * magnitude
+ * }
+ */
+
 export interface IWorldParams {
   seed: number;
   terrain: {
     scale: number;
-    magnitude: number;
+    magnitude: number; // 控制地形高度的幅度
     offset: number;
   };
   surface: {
-    offset: number;
+    offset: number; // 层级的基础高度
     magnitude: number;
   };
+  // 基岩
   bedrock: {
     offset: number;
     magnitude: number;
@@ -22,6 +30,7 @@ export interface IWorldParams {
       min: number;
       max: number;
     };
+    // 树冠覆盖大小
     canopy: {
       size: {
         min: number;

@@ -15,30 +15,17 @@ export enum BlockID {
   StoneBrick = 13,
 }
 
-export const oreConfig = {
-  coal: {
-    id: BlockID.CoalOre,
-    scale: { x: 8, y: 8, z: 8 },
-    scarcity: 0.75,
-  },
-  iron: {
-    id: BlockID.IronOre,
-    scale: { x: 5, y: 5, z: 5 },
-    scarcity: 0.8,
-  },
-};
-
 export const blockIdToKey = {
   [BlockID.Air]: "air",
-  [BlockID.Grass]: "grass",
+  [BlockID.Grass]: "grass", // 草方块（目前作为地面）
+  [BlockID.TallGrass]: "tall_grass", // 高草方块（草丛）
   [BlockID.Dirt]: "dirt",
   [BlockID.Stone]: "stone",
   [BlockID.CoalOre]: "coal",
   [BlockID.IronOre]: "iron",
-  [BlockID.Bedrock]: "bedrock",
+  [BlockID.Bedrock]: "bedrock", // 基岩 方块
   [BlockID.OakLog]: "oak_log",
   [BlockID.Leaves]: "leaves",
-  [BlockID.TallGrass]: "tall_grass",
   [BlockID.FlowerRose]: "flower_rose",
   [BlockID.FlowerDandelion]: "flower_dandelion",
   [BlockID.RedstoneLamp]: "redstone_lamp",

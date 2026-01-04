@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -74,7 +74,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -88,10 +88,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            3
+            1
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -105,26 +105,6 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0
           ]
@@ -143,29 +123,10 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            18,
+            16,
             2,
             2,
-            3,
-            2,
-            1,
-            2,
-            3,
-            2,
-            2,
-            1,
-            1,
-            2,
-            2,
-            2,
-            1,
-            4,
-            1,
-            2,
-            3,
-            3,
-            2,
-            1
+            2
           ]
         },
         "register": 1
@@ -182,34 +143,14 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            77
+            53
           ],
           "onGenerateFiles": [
-            1,
-            4,
-            13,
-            6,
-            5,
-            5,
-            5,
-            4,
-            4,
-            4,
-            4,
-            6,
-            8,
-            3,
-            7,
-            6,
-            5,
-            5,
-            3,
-            6,
-            5,
-            9
+            2,
+            5
           ]
         },
-        "register": 15
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -224,30 +165,10 @@
         "hooks": {
           "addEntryCode": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -264,59 +185,15 @@
             0
           ],
           "onCheck": [
-            0
+            1
           ],
           "onPrepareBuildSuccess": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
             0
           ],
           "onCheckCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -383,7 +260,7 @@
             0
           ]
         },
-        "register": 10
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -662,7 +539,7 @@
       "enableBy": "register",
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "virtual: config-svgr": {
@@ -1236,7 +1113,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1253,7 +1130,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1267,10 +1144,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            6
+            5
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1283,7 +1160,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 65
+        "register": 48
       },
       "enableBy": "register"
     },
@@ -1296,7 +1173,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 44
+        "register": 27
       },
       "enableBy": "config"
     },
@@ -1309,7 +1186,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 20
+        "register": 11
       },
       "enableBy": "config"
     },
@@ -1344,29 +1221,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1380,55 +1238,15 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            2,
             0,
-            0,
-            1,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1
+            0
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1455,13 +1273,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 23
+        "register": 20
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1473,7 +1291,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1486,7 +1304,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1500,69 +1318,9 @@
         "hooks": {
           "onGenerateFiles": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addEntryImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1582,7 +1340,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1599,70 +1357,10 @@
             1
           ],
           "onGenerateFiles": [
-            52,
-            12,
-            12,
-            10,
-            9,
-            7,
-            7,
-            8,
-            8,
-            7,
-            7,
-            7,
-            13,
-            8,
-            9,
-            9,
-            11,
-            7,
-            7,
-            7,
-            10,
-            9
+            46,
+            12
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1685,50 +1383,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1742,31 +1400,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            81,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            65,
             0
           ]
         },
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1779,7 +1417,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1792,7 +1430,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1806,26 +1444,6 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
             0,
             0
           ],
@@ -1847,53 +1465,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            12,
+            11,
             3,
-            26,
-            1,
-            37,
-            2,
-            29,
-            1,
-            21,
-            1,
-            21,
-            2,
-            28,
-            2,
-            25,
-            1,
-            22,
-            1,
-            25,
-            1,
-            23,
-            1,
-            22,
-            2,
-            24,
-            0,
-            24,
-            1,
-            26,
-            1,
-            30,
-            1,
-            25,
-            2,
-            22,
-            1,
-            24,
-            1,
-            25,
-            0,
-            25,
-            1,
-            27,
+            39,
             1
           ]
         },
-        "register": 5
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -1906,7 +1484,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1921,30 +1499,10 @@
         "hooks": {
           "onGenerateFiles": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onBeforeCompiler": [
-            2
+            1
           ]
         },
         "register": 0
@@ -1959,7 +1517,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1973,31 +1531,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            245,
-            5,
-            7,
-            5,
-            6,
-            7,
-            5,
-            4,
-            6,
-            4,
-            5,
-            6,
-            3,
-            3,
-            4,
-            6,
-            4,
-            3,
-            3,
-            4,
-            5,
-            4
+            265,
+            5
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2014,7 +1552,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2040,7 +1578,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2053,7 +1591,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -2065,7 +1603,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 11
       },
       "enableBy": "config"
     },
@@ -2080,27 +1618,7 @@
         "hooks": {
           "onGenerateFiles": [
             1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0
+            1
           ]
         },
         "register": 1
@@ -2115,7 +1633,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2128,7 +1646,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2141,7 +1659,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2154,7 +1672,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -2183,7 +1701,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -2232,7 +1750,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 16
+        "register": 15
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -2258,7 +1776,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            543
+            453
           ]
         },
         "register": 1
@@ -2287,7 +1805,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 24
+        "register": 20
       },
       "enableBy": "register"
     },
@@ -2304,7 +1822,7 @@
             8
           ]
         },
-        "register": 40
+        "register": 21
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2368,7 +1886,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2381,7 +1899,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2394,7 +1912,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2407,7 +1925,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2550,7 +2068,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -2589,7 +2107,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     }
@@ -2666,7 +2184,7 @@
       "id": "game/world/generate/resource",
       "file": "game/world/generate/resource.ts",
       "absPath": "/game/world/generate/resource",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldSize } from \"../interface\";\nimport { BlockID, oreConfig } from \"../../Block\";\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = World.simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldSize } from \"../interface\";\nimport { BlockID } from \"../../Block\";\n\nexport const oreConfig = {\n  coal: {\n    id: BlockID.CoalOre,\n    scale: { x: 8, y: 8, z: 8 },\n    scarcity: 0.75,\n  },\n  iron: {\n    id: BlockID.IronOre,\n    scale: { x: 5, y: 5, z: 5 },\n    scarcity: 0.8,\n  },\n};\n\n/**\n * Generates the resources (coal, stone, etc.) for the world\n */\nexport const generateResources = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (const [_, config] of Object.entries(oreConfig)) {\n    for (let x = 0; x < size.width; x++) {\n      for (let y = 0; y < size.height; y++) {\n        for (let z = 0; z < size.width; z++) {\n          const value = World.simplex.noise3d(\n            (chunkPos.x + x) / config.scale.x,\n            (chunkPos.y + y) / config.scale.y,\n            (chunkPos.z + z) / config.scale.z\n          );\n\n          if (value > config.scarcity) {\n            input[x][y][z] = config.id;\n          }\n        }\n      }\n    }\n  }\n\n  return input;\n};",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/resource.ts"
     },
@@ -2684,7 +2202,7 @@
       "id": "game/world/generate/terrain",
       "file": "game/world/generate/terrain.ts",
       "absPath": "/game/world/generate/terrain",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { BlockID } from \"../../Block\";\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      const value = World.simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let height = Math.floor(size.height * scaledNoise);\n      height = Math.max(0, Math.min(height, size.height - 1));\n\n      const numSurfaceBlocks =\n        params.surface.offset +\n        Math.abs(World.simplex.noise(x, z) * params.surface.magnitude);\n\n      const numBedrockBlocks =\n        params.bedrock.offset +\n        Math.abs(World.simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        if (y < height) {\n          if (y < numBedrockBlocks) {\n            input[x][y][z] = BlockID.Bedrock;\n          } else if (y < height - numSurfaceBlocks) {\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            }\n          } else {\n            input[x][y][z] = BlockID.Dirt;\n          }\n        } else if (y === height) {\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > height) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../World\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { BlockID } from \"../../Block\";\n\n/**\n * Generates the terrain data\n */\nexport const generateTerrain = (\n  input: BlockID[][][],\n  size: IWorldSize,\n  params: IWorldParams,\n  chunkPos: THREE.Vector3\n): BlockID[][][] => {\n  for (let x = 0; x < size.width; x++) {\n    for (let z = 0; z < size.width; z++) {\n      // block position of world\n      const value = World.simplex.noise(\n        (chunkPos.x + x) / params.terrain.scale,\n        (chunkPos.z + z) / params.terrain.scale\n      );\n\n      const scaledNoise =\n        params.terrain.offset + params.terrain.magnitude * value;\n\n      let terrainHeight = Math.floor(size.height * scaledNoise);\n      terrainHeight = Math.max(0, Math.min(terrainHeight, size.height - 1));\n\n      // 地表表层方块\n      const surfaceHeight =\n        params.surface.offset +\n        Math.abs(World.simplex.noise(x, z) * params.surface.magnitude);\n\n      // 基岩\n      const bedrockHeight =\n        params.bedrock.offset +\n        Math.abs(World.simplex.noise(x, z) * params.bedrock.magnitude);\n\n      for (let y = 0; y < size.height; y++) {\n        // TODO 生成地形的时候 后续生成洞穴 连续\n        // World.simplex.noise3d(x, y, z)\n        if (y < terrainHeight) {\n          if(y >= terrainHeight - surfaceHeight) {\n            // 地表层到地面是泥土\n            input[x][y][z] = BlockID.Dirt;\n          } else if(y >= bedrockHeight) {\n            // 从基岩层到地表层\n            if (input[x][y][z] === BlockID.Air) {\n              input[x][y][z] = BlockID.Stone;\n            } else {\n              // 其他情况 保持原有方块（生产的各种资源）\n            }\n          } else {\n            // 低于基岩层 都是基岩\n            input[x][y][z] = BlockID.Bedrock;\n          }\n          // if (y < bedrockHeight) {\n          //   input[x][y][z] = BlockID.Bedrock;\n          // } else if (y < terrainHeight - surfaceHeight) {\n          //   if (input[x][y][z] === BlockID.Air) {\n          //     input[x][y][z] = BlockID.Stone;\n          //   }\n          // } else {\n          //   input[x][y][z] = BlockID.Dirt;\n          // }\n        } else if (y === terrainHeight) {\n          // TODO 暂时作为地表的方块\n          input[x][y][z] = BlockID.Grass;\n        } else if (y > terrainHeight) {\n          input[x][y][z] = BlockID.Air;\n        }\n      }\n    }\n  }\n\n  return input;\n};",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/terrain.ts"
     },
@@ -2724,6 +2242,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/TallGrassBlock.ts"
     },
+    "game/world/generate/index": {
+      "path": "game/world/generate",
+      "id": "game/world/generate/index",
+      "file": "game/world/generate/index.ts",
+      "absPath": "/game/world/generate",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../../Block\";\nimport { IWorldParams, IWorldSize } from \"../interface\";\nimport { generateTerrain } from \"./terrain\";\nimport { generateResources } from \"./resource\";\nimport { generateTrees } from \"./tree\";\nimport { generateTallGrass } from \"./tallGrass\";\nimport { generateFlowers } from \"./flower\";\n\nconst initEmptyChunk = (chunkSize: IWorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data as BlockID[][][];\n};\n\nexport const generateChunk = async (\n  chunkSize: IWorldSize,\n  params: IWorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  // full chunk block data fill with air\n  let data = initEmptyChunk(chunkSize);\n  data = generateResources(data, chunkSize, chunkPos);\n  data = generateTerrain( data, chunkSize, params, chunkPos);\n  data = generateTrees( data, chunkSize, params, chunkPos);\n  data = generateTallGrass( data, chunkSize, params);\n  data = generateFlowers( data, chunkSize, params);\n  return data;\n};\n",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/index.ts"
+    },
     "game/world/generate/tree": {
       "path": "game/world/generate/tree",
       "id": "game/world/generate/tree",
@@ -2756,7 +2283,7 @@
       "id": "game/Block/CoalOreBlock",
       "file": "game/Block/CoalOreBlock.ts",
       "absPath": "/game/Block/CoalOreBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { RenderGeometry } from \"./Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { textures, uiTextures } from \"./textures\";\n\nimport { BlockID, oreConfig } from \".\";\n\nconst coalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });\n\nexport const CoalOreBlock = class extends OreBlock {\n  id = BlockID.CoalOre;\n  scale = oreConfig[\"coal\"].scale;\n  scarcity = oreConfig[\"coal\"].scarcity;\n  material = coalOreMaterial;\n  uiTexture = uiTextures.coal;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n};\n",
+      "__content": "import * as THREE from \"three\";\n\nimport { RenderGeometry } from \"./Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { textures, uiTextures } from \"./textures\";\nimport { BlockID } from \".\";\nimport { oreConfig } from \"../world/generate/resource\";\n\nconst coalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });\n\nexport const CoalOreBlock = class extends OreBlock {\n  id = BlockID.CoalOre;\n  scale = oreConfig[\"coal\"].scale;\n  scarcity = oreConfig[\"coal\"].scarcity;\n  material = coalOreMaterial;\n  uiTexture = uiTextures.coal;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/CoalOreBlock.ts"
     },
@@ -2765,7 +2292,7 @@
       "id": "game/Block/IronOreBlock",
       "file": "game/Block/IronOreBlock.ts",
       "absPath": "/game/Block/IronOreBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { RenderGeometry } from \"./Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { textures, uiTextures } from \"./textures\";\n\nimport { BlockID, oreConfig } from \".\";\n\nconst ironMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });\n\nexport const IronOreBlock = class extends OreBlock {\n  id = BlockID.IronOre;\n  scale = oreConfig[\"iron\"].scale;\n  scarcity = oreConfig[\"iron\"].scarcity;\n  material = ironMaterial;\n  uiTexture = uiTextures.iron;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n};\n",
+      "__content": "import * as THREE from \"three\";\n\nimport { RenderGeometry } from \"./Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { textures, uiTextures } from \"./textures\";\nimport { BlockID } from \".\";\nimport { oreConfig } from \"../world/generate/resource\";\n\nconst ironMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });\n\nexport const IronOreBlock = class extends OreBlock {\n  id = BlockID.IronOre;\n  scale = oreConfig[\"iron\"].scale;\n  scarcity = oreConfig[\"iron\"].scarcity;\n  material = ironMaterial;\n  uiTexture = uiTextures.iron;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/IronOreBlock.ts"
     },
@@ -2796,15 +2323,6 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/OakLogBlock.ts"
     },
-    "game/world/chunkWorker": {
-      "path": "game/world/chunkWorker",
-      "id": "game/world/chunkWorker",
-      "file": "game/world/chunkWorker.ts",
-      "absPath": "/game/world/chunkWorker",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { IWorldParams, IWorldSize } from \"./interface\";\nimport { World } from \"./World\";\nimport { generateTerrain } from \"./generate/terrain\";\nimport { generateResources } from \"./generate/resource\";\nimport { generateTrees } from \"./generate/tree\";\nimport { generateTallGrass } from \"./generate/tallGrass\";\nimport { generateFlowers } from \"./generate/flower\";\n\nconst initEmptyChunk = (chunkSize: IWorldSize) => {\n  const data = new Array(chunkSize.width);\n  for (let x = 0; x < chunkSize.width; x++) {\n    data[x] = new Array(chunkSize.height);\n    for (let y = 0; y < chunkSize.height; y++) {\n      data[x][y] = new Array(chunkSize.width);\n      for (let z = 0; z < chunkSize.width; z++) {\n        data[x][y][z] = BlockID.Air;\n      }\n    }\n  }\n  return data as BlockID[][][];\n};\n\nexport const generateChunk = async (\n  chunkSize: IWorldSize,\n  params: IWorldParams,\n  x: number,\n  z: number\n) => {\n  const chunkPos = new THREE.Vector3(x, 0, z);\n  let data = initEmptyChunk(chunkSize);\n  data = generateResources(data, chunkSize, chunkPos);\n  data = generateTerrain( data, chunkSize, params, chunkPos);\n  data = generateTrees( data, chunkSize, params, chunkPos);\n  data = generateTallGrass( data, chunkSize, params);\n  data = generateFlowers( data, chunkSize, params);\n  return data;\n};\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts"
-    },
     "game/Block/GrassBlock": {
       "path": "game/Block/GrassBlock",
       "id": "game/Block/GrassBlock",
@@ -2828,7 +2346,7 @@
       "id": "game/world/WorldChunk",
       "file": "game/world/WorldChunk.ts",
       "absPath": "/game/world/WorldChunk",
-      "__content": "import * as THREE from \"three\";\n\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport * as workerInstance from './chunkWorker';\nimport { IWorldParams, IWorldSize, IInstanceData } from \"./interface\";\n\nconst geometry = new THREE.BoxGeometry();\nconst crossGeometry = new THREE.PlaneGeometry();\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  size: IWorldSize;\n  loaded: boolean;\n  dataStore: DataStore;\n  wireframeMode = false;\n\n  constructor(\n    size: IWorldSize,\n    params: IWorldParams,\n    dataStore: DataStore,\n    wireframeMode = false\n  ) {\n    super();\n    this.size = size;\n    this.params = params;\n    this.dataStore = dataStore;\n    this.loaded = false;\n    this.wireframeMode = wireframeMode;\n  }\n\n  async generate() {\n    // const start = performance.now();\n\n    const data: BlockID[][][] = await workerInstance.generateChunk(\n      this.size,\n      this.params,\n      this.position.x,\n      this.position.z\n    );\n\n    requestIdleCallback(\n      () => {\n        this.initializeTerrain(data);\n        this.loadPlayerChanges();\n        this.generateMeshes(data);\n        this.loaded = true;\n\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    this.data = [];\n    for (let x = 0; x < this.size.width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < this.size.height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < this.size.width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  generateMeshes(data: BlockID[][][]) {\n    this.clear();\n\n    const maxCount = this.size.width * this.size.width * this.size.height;\n\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\n    for (const blockId of blockIDValues) {\n      const block = BlockFactory.getBlock(blockId);\n      const blockGeometry = block.geometry;\n\n      const mesh = new THREE.InstancedMesh(\n        blockGeometry === RenderGeometry.Cube ? geometry : crossGeometry,\n        this.wireframeMode\n          ? new THREE.MeshBasicMaterial({ wireframe: true })\n          : block.material,\n        maxCount\n      );\n\n      mesh.name = block.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !block.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[block.id] = mesh;\n    }\n\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n\n          if (block === BlockID.Air) {\n            continue;\n          }\n\n          const mesh = meshes[block];\n\n          if (!mesh) {\n            continue;\n          }\n\n          if (\n            block &&\n            !this.isBlockObscured(x, y, z) &&\n            !this.isBorderBlock(x, y, z)\n          ) {\n            if (blockClass.geometry == RenderGeometry.Cube) {\n              const instanceId = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n              const matrix = new THREE.Matrix4();\n              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId, matrix);\n            } else if (blockClass.geometry == RenderGeometry.Cross) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n            }\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      if (mesh) {\n        this.add(mesh);\n      }\n    }\n  }\n\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      return this.data[x][y][z];\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * Removes the block at (x, y, z)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    if (block && block.block !== BlockID.Air) {\n      this.playBlockSound(block.block);\n      this.deleteBlockInstance(x, y, z);\n      this.setBlockId(x, y, z, BlockID.Air);\n      this.dataStore.set(\n        this.position.x,\n        this.position.z,\n        x,\n        y,\n        z,\n        BlockID.Air\n      );\n    }\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n\n      if (mesh) {\n        this.playBlockSound(block.block);\n        if (blockClass.geometry == RenderGeometry.Cube) {\n          const instanceId = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n          const matrix = new THREE.Matrix4();\n          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId, matrix);\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        } else if (blockClass.geometry == RenderGeometry.Cross) {\n          const instanceId1 = mesh.count++;\n          const instanceId2 = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n          const matrix1 = new THREE.Matrix4();\n          matrix1.makeRotationY(Math.PI / 4);\n          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId1, matrix1);\n\n          const matrix2 = new THREE.Matrix4();\n          matrix2.makeRotationY(-Math.PI / 4);\n          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId2, matrix2);\n\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) {\n      return;\n    }\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    block.instanceIds.forEach((instanceId) => {\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      const lastBlockCoords = new THREE.Vector3();\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        [instanceId]\n      );\n\n      // Swap transformation matrices\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    return (\n      x >= 0 &&\n      x < this.size.width &&\n      y >= 0 &&\n      y < this.size.height &&\n      z >= 0 &&\n      z < this.size.width\n    );\n  }\n\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === this.size.width - 1 ||\n      y === 0 ||\n      y === this.size.height - 1 ||\n      z === 0 ||\n      z === this.size.width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
+      "__content": "import * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport { IWorldParams, IWorldSize, IInstanceData } from \"./interface\";\nimport { generateChunk } from \"./generate\";\n\nconst geometry = new THREE.BoxGeometry();\nconst crossGeometry = new THREE.PlaneGeometry();\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  size: IWorldSize;\n  loaded: boolean;\n  dataStore: DataStore;\n  wireframeMode = false;\n\n  constructor(\n    size: IWorldSize,\n    params: IWorldParams,\n    dataStore: DataStore,\n    wireframeMode = false\n  ) {\n    super();\n    this.size = size;\n    this.params = params;\n    this.dataStore = dataStore;\n    this.loaded = false;\n    this.wireframeMode = wireframeMode;\n  }\n\n  async generate() {\n    // const start = performance.now();\n    const data: BlockID[][][] = await generateChunk(\n      this.size,\n      this.params,\n      this.position.x,\n      this.position.z\n    );\n\n    requestIdleCallback(\n      () => {\n        this.initializeTerrain(data);\n        this.loadPlayerChanges();\n        this.generateMeshes(data);\n        this.loaded = true;\n\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    this.data = [];\n    for (let x = 0; x < this.size.width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < this.size.height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < this.size.width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  generateMeshes(data: BlockID[][][]) {\n    this.clear();\n\n    const maxCount = this.size.width * this.size.width * this.size.height;\n\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\n    for (const blockId of blockIDValues) {\n      const block = BlockFactory.getBlock(blockId);\n      const blockGeometry = block.geometry;\n\n      const mesh = new THREE.InstancedMesh(\n        blockGeometry === RenderGeometry.Cube ? geometry : crossGeometry,\n        this.wireframeMode\n          ? new THREE.MeshBasicMaterial({ wireframe: true })\n          : block.material,\n        maxCount\n      );\n\n      mesh.name = block.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !block.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[block.id] = mesh;\n    }\n\n    for (let x = 0; x < this.size.width; x++) {\n      for (let y = 0; y < this.size.height; y++) {\n        for (let z = 0; z < this.size.width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n\n          if (block === BlockID.Air) {\n            continue;\n          }\n\n          const mesh = meshes[block];\n\n          if (!mesh) {\n            continue;\n          }\n\n          if (\n            block &&\n            !this.isBlockObscured(x, y, z) &&\n            !this.isBorderBlock(x, y, z)\n          ) {\n            if (blockClass.geometry == RenderGeometry.Cube) {\n              const instanceId = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n              const matrix = new THREE.Matrix4();\n              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId, matrix);\n            } else if (blockClass.geometry == RenderGeometry.Cross) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n            }\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      if (mesh) {\n        this.add(mesh);\n      }\n    }\n  }\n\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      return this.data[x][y][z];\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * Removes the block at (x, y, z)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    if (block && block.block !== BlockID.Air) {\n      this.playBlockSound(block.block);\n      this.deleteBlockInstance(x, y, z);\n      this.setBlockId(x, y, z, BlockID.Air);\n      this.dataStore.set(\n        this.position.x,\n        this.position.z,\n        x,\n        y,\n        z,\n        BlockID.Air\n      );\n    }\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n\n      if (mesh) {\n        this.playBlockSound(block.block);\n        if (blockClass.geometry == RenderGeometry.Cube) {\n          const instanceId = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n          const matrix = new THREE.Matrix4();\n          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId, matrix);\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        } else if (blockClass.geometry == RenderGeometry.Cross) {\n          const instanceId1 = mesh.count++;\n          const instanceId2 = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n          const matrix1 = new THREE.Matrix4();\n          matrix1.makeRotationY(Math.PI / 4);\n          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId1, matrix1);\n\n          const matrix2 = new THREE.Matrix4();\n          matrix2.makeRotationY(-Math.PI / 4);\n          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId2, matrix2);\n\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) {\n      return;\n    }\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    block.instanceIds.forEach((instanceId) => {\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      const lastBlockCoords = new THREE.Vector3();\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        [instanceId]\n      );\n\n      // Swap transformation matrices\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    return (\n      x >= 0 &&\n      x < this.size.width &&\n      y >= 0 &&\n      y < this.size.height &&\n      z >= 0 &&\n      z < this.size.width\n    );\n  }\n\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === this.size.width - 1 ||\n      y === 0 ||\n      y === this.size.height - 1 ||\n      z === 0 ||\n      z === this.size.width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/WorldChunk.ts"
     },
@@ -2864,7 +2382,7 @@
       "id": "game/world/interface",
       "file": "game/world/interface.ts",
       "absPath": "/game/world/interface",
-      "__content": "import { BlockID } from \"../Block\";\n\n// 创造场景时候的初始参数\nexport interface IWorldParams {\n  seed: number;\n  terrain: {\n    scale: number;\n    magnitude: number;\n    offset: number;\n  };\n  surface: {\n    offset: number;\n    magnitude: number;\n  };\n  bedrock: {\n    offset: number;\n    magnitude: number;\n  };\n  trees: {\n    frequency: number;\n    trunkHeight: {\n      min: number;\n      max: number;\n    };\n    canopy: {\n      size: {\n        min: number;\n        max: number;\n      };\n    };\n  };\n  grass: {\n    frequency: number;\n    patchSize: number;\n  };\n  flowers: {\n    frequency: number;\n  };\n}\n\nexport interface IInstanceData {\n  block: BlockID;\n  instanceIds: number[]; // reference to mesh instanceId\n};\n\nexport interface IWorldSize {\n  width: number;\n  height: number;\n};",
+      "__content": "import { BlockID } from \"../Block\";\n\n// 创造场景时候的初始参数\n/**\n * level: {\n *  offset: number; // 层级的基础高度\n *  magnitude: number; // simplex noise 生成当前层的厚度 simplex(x, z) * magnitude\n * }\n */\n\nexport interface IWorldParams {\n  seed: number;\n  terrain: {\n    scale: number;\n    magnitude: number; // 控制地形高度的幅度\n    offset: number;\n  };\n  surface: {\n    offset: number; // 层级的基础高度\n    magnitude: number;\n  };\n  // 基岩\n  bedrock: {\n    offset: number;\n    magnitude: number;\n  };\n  trees: {\n    frequency: number;\n    trunkHeight: {\n      min: number;\n      max: number;\n    };\n    // 树冠覆盖大小\n    canopy: {\n      size: {\n        min: number;\n        max: number;\n      };\n    };\n  };\n  grass: {\n    frequency: number;\n    patchSize: number;\n  };\n  flowers: {\n    frequency: number;\n  };\n}\n\nexport interface IInstanceData {\n  block: BlockID;\n  instanceIds: number[]; // reference to mesh instanceId\n};\n\nexport interface IWorldSize {\n  width: number;\n  height: number;\n};",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/interface.ts"
     },
@@ -2918,7 +2436,7 @@
       "id": "game/world/literal",
       "file": "game/world/literal.ts",
       "absPath": "/game/world/literal",
-      "__content": "export const DefaultWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 1,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n}",
+      "__content": "export const DefaultWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 2,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/literal.ts"
     },
@@ -2945,7 +2463,7 @@
       "id": "game/Block/index",
       "file": "game/Block/index.ts",
       "absPath": "/game/Block",
-      "__content": "export enum BlockID {\n  Air = 0,\n  Grass = 1,\n  Dirt = 2,\n  Stone = 3,\n  CoalOre = 4,\n  IronOre = 5,\n  Bedrock = 6,\n  OakLog = 7,\n  Leaves = 8,\n  TallGrass = 9,\n  FlowerRose = 10,\n  FlowerDandelion = 11,\n  RedstoneLamp = 12,\n  StoneBrick = 13,\n}\n\nexport const oreConfig = {\n  coal: {\n    id: BlockID.CoalOre,\n    scale: { x: 8, y: 8, z: 8 },\n    scarcity: 0.75,\n  },\n  iron: {\n    id: BlockID.IronOre,\n    scale: { x: 5, y: 5, z: 5 },\n    scarcity: 0.8,\n  },\n};\n\nexport const blockIdToKey = {\n  [BlockID.Air]: \"air\",\n  [BlockID.Grass]: \"grass\",\n  [BlockID.Dirt]: \"dirt\",\n  [BlockID.Stone]: \"stone\",\n  [BlockID.CoalOre]: \"coal\",\n  [BlockID.IronOre]: \"iron\",\n  [BlockID.Bedrock]: \"bedrock\",\n  [BlockID.OakLog]: \"oak_log\",\n  [BlockID.Leaves]: \"leaves\",\n  [BlockID.TallGrass]: \"tall_grass\",\n  [BlockID.FlowerRose]: \"flower_rose\",\n  [BlockID.FlowerDandelion]: \"flower_dandelion\",\n  [BlockID.RedstoneLamp]: \"redstone_lamp\",\n  [BlockID.StoneBrick]: \"stone_brick\",\n};\n",
+      "__content": "export enum BlockID {\n  Air = 0,\n  Grass = 1,\n  Dirt = 2,\n  Stone = 3,\n  CoalOre = 4,\n  IronOre = 5,\n  Bedrock = 6,\n  OakLog = 7,\n  Leaves = 8,\n  TallGrass = 9,\n  FlowerRose = 10,\n  FlowerDandelion = 11,\n  RedstoneLamp = 12,\n  StoneBrick = 13,\n}\n\nexport const blockIdToKey = {\n  [BlockID.Air]: \"air\",\n  [BlockID.Grass]: \"grass\", // 草方块（目前作为地面）\n  [BlockID.TallGrass]: \"tall_grass\", // 高草方块（草丛）\n  [BlockID.Dirt]: \"dirt\",\n  [BlockID.Stone]: \"stone\",\n  [BlockID.CoalOre]: \"coal\",\n  [BlockID.IronOre]: \"iron\",\n  [BlockID.Bedrock]: \"bedrock\", // 基岩 方块\n  [BlockID.OakLog]: \"oak_log\",\n  [BlockID.Leaves]: \"leaves\",\n  [BlockID.FlowerRose]: \"flower_rose\",\n  [BlockID.FlowerDandelion]: \"flower_dandelion\",\n  [BlockID.RedstoneLamp]: \"redstone_lamp\",\n  [BlockID.StoneBrick]: \"stone_brick\",\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/index.ts"
     },
@@ -2972,7 +2490,7 @@
       "id": "game/gui/index",
       "file": "game/gui/index.ts",
       "absPath": "/game/gui",
-      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { oreConfig } from \"../Block\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  startGameButton?.addEventListener(\"click\", () => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  });\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  startGameButton?.addEventListener(\"click\", () => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  });\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts"
     },
@@ -3042,9 +2560,7 @@
     ]
   },
   "mfsuBundleStatus": {
-    "done": true,
-    "percent": 1,
-    "status": ""
+    "done": true
   },
   "react": {
     "version": "17.0.2",
@@ -4192,7 +3708,7 @@
             "format": "esm"
           },
           "src/pages/game/Block/index.ts": {
-            "bytes": 960,
+            "bytes": 826,
             "imports": [],
             "format": "esm"
           },
@@ -4275,8 +3791,34 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/world/generate/resource.ts": {
+            "bytes": 1095,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/World.ts",
+                "kind": "import-statement",
+                "original": "../World"
+              },
+              {
+                "path": "../interface",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../../Block"
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/Block/CoalOreBlock.ts": {
-            "bytes": 587,
+            "bytes": 631,
             "imports": [
               {
                 "path": "three",
@@ -4302,6 +3844,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": "."
+              },
+              {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "import-statement",
+                "original": "../world/generate/resource"
               }
             ],
             "format": "esm"
@@ -4385,7 +3932,7 @@
             "format": "esm"
           },
           "src/pages/game/Block/IronOreBlock.ts": {
-            "bytes": 581,
+            "bytes": 625,
             "imports": [
               {
                 "path": "three",
@@ -4411,6 +3958,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": "."
+              },
+              {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "import-statement",
+                "original": "../world/generate/resource"
               }
             ],
             "format": "esm"
@@ -4711,33 +4263,7 @@
             "format": "esm"
           },
           "src/pages/game/world/generate/terrain.ts": {
-            "bytes": 1660,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/world/World.ts",
-                "kind": "import-statement",
-                "original": "../World"
-              },
-              {
-                "path": "../interface",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "../../Block"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/world/generate/resource.ts": {
-            "bytes": 890,
+            "bytes": 2506,
             "imports": [
               {
                 "path": "three",
@@ -4809,7 +4335,7 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/world/chunkWorker.ts": {
+          "src/pages/game/world/generate/index.ts": {
             "bytes": 1323,
             "imports": [
               {
@@ -4820,43 +4346,43 @@
               {
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
-                "original": "../Block"
+                "original": "../../Block"
               },
               {
-                "path": "./interface",
+                "path": "../interface",
                 "kind": "import-statement",
                 "external": true
               },
               {
                 "path": "src/pages/game/world/generate/terrain.ts",
                 "kind": "import-statement",
-                "original": "./generate/terrain"
+                "original": "./terrain"
               },
               {
                 "path": "src/pages/game/world/generate/resource.ts",
                 "kind": "import-statement",
-                "original": "./generate/resource"
+                "original": "./resource"
               },
               {
                 "path": "src/pages/game/world/generate/tree.ts",
                 "kind": "import-statement",
-                "original": "./generate/tree"
+                "original": "./tree"
               },
               {
                 "path": "src/pages/game/world/generate/tallGrass.ts",
                 "kind": "import-statement",
-                "original": "./generate/tallGrass"
+                "original": "./tallGrass"
               },
               {
                 "path": "src/pages/game/world/generate/flower.ts",
                 "kind": "import-statement",
-                "original": "./generate/flower"
+                "original": "./flower"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/world/WorldChunk.ts": {
-            "bytes": 12751,
+            "bytes": 12729,
             "imports": [
               {
                 "path": "three",
@@ -4889,14 +4415,14 @@
                 "external": true
               },
               {
-                "path": "src/pages/game/world/chunkWorker.ts",
-                "kind": "import-statement",
-                "original": "./chunkWorker"
-              },
-              {
                 "path": "./interface",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/pages/game/world/generate/index.ts",
+                "kind": "import-statement",
+                "original": "./generate"
               }
             ],
             "format": "esm"
@@ -4934,7 +4460,7 @@
             "format": "esm"
           },
           "src/pages/game/gui/index.ts": {
-            "bytes": 5927,
+            "bytes": 5945,
             "imports": [
               {
                 "path": "lil-gui",
@@ -4945,11 +4471,6 @@
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
-              },
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "../Block"
               },
               {
                 "path": "../Physics",
@@ -4975,6 +4496,11 @@
                 "path": "src/pages/game/audio/AudioManager.ts",
                 "kind": "import-statement",
                 "original": "../audio/AudioManager"
+              },
+              {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "import-statement",
+                "original": "../world/generate/resource"
               }
             ],
             "format": "esm"
@@ -5103,7 +4629,7 @@
             "format": "esm"
           },
           "src/pages/game/world/interface.ts": {
-            "bytes": 798,
+            "bytes": 1054,
             "imports": [
               {
                 "path": "../Block",
@@ -5345,7 +4871,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 11078,
+            "bytes": 11091,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5408,6 +4934,11 @@
                 "original": "../../../src/pages/game/Block/TallGrassBlock.ts"
               },
               {
+                "path": "src/pages/game/world/generate/index.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/generate/index.ts"
+              },
+              {
                 "path": "src/pages/game/world/generate/tree.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/world/generate/tree.ts"
@@ -5446,11 +4977,6 @@
                 "path": "src/pages/game/Block/OakLogBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/OakLogBlock.ts"
-              },
-              {
-                "path": "src/pages/game/world/chunkWorker.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/world/chunkWorker.ts"
               },
               {
                 "path": "src/pages/game/Block/GrassBlock.ts",
@@ -7101,7 +6627,7 @@
                 "bytesInOutput": 4227
               },
               "src/pages/game/Block/index.ts": {
-                "bytesInOutput": 1928
+                "bytesInOutput": 1740
               },
               "src/pages/game/Block/FlowerDandelionBlock.ts": {
                 "bytesInOutput": 919
@@ -7115,8 +6641,11 @@
               "src/pages/game/Block/OreBlock.ts": {
                 "bytesInOutput": 258
               },
+              "src/pages/game/world/generate/resource.ts": {
+                "bytesInOutput": 1215
+              },
               "src/pages/game/Block/CoalOreBlock.ts": {
-                "bytesInOutput": 751
+                "bytesInOutput": 772
               },
               "src/pages/game/Block/DirtBlock.ts": {
                 "bytesInOutput": 607
@@ -7128,7 +6657,7 @@
                 "bytesInOutput": 1031
               },
               "src/pages/game/Block/IronOreBlock.ts": {
-                "bytesInOutput": 742
+                "bytesInOutput": 763
               },
               "src/pages/game/Block/LeavesBlock.ts": {
                 "bytesInOutput": 728
@@ -7161,10 +6690,7 @@
                 "bytesInOutput": 1579
               },
               "src/pages/game/world/generate/terrain.ts": {
-                "bytesInOutput": 1711
-              },
-              "src/pages/game/world/generate/resource.ts": {
-                "bytesInOutput": 927
+                "bytesInOutput": 1775
               },
               "src/pages/game/world/generate/tree.ts": {
                 "bytesInOutput": 3474
@@ -7172,11 +6698,11 @@
               "src/pages/game/world/generate/flower.ts": {
                 "bytesInOutput": 1670
               },
-              "src/pages/game/world/chunkWorker.ts": {
-                "bytesInOutput": 1307
+              "src/pages/game/world/generate/index.ts": {
+                "bytesInOutput": 1301
               },
               "src/pages/game/world/WorldChunk.ts": {
-                "bytesInOutput": 11885
+                "bytesInOutput": 11882
               },
               "src/pages/game/world/literal.ts": {
                 "bytesInOutput": 827
@@ -7188,7 +6714,7 @@
                 "bytesInOutput": 1497
               },
               "src/pages/game/gui/index.ts": {
-                "bytesInOutput": 5495
+                "bytesInOutput": 5497
               },
               "src/pages/game/RNG.ts": {
                 "bytesInOutput": 810
@@ -7254,7 +6780,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 147700
+            "bytes": 147902
           }
         }
       }
@@ -10028,7 +9554,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 206,
+          "end": 194,
           "importKind": "value",
           "source": ".",
           "specifiers": [
@@ -10036,14 +9562,23 @@
               "imported": "BlockID",
               "local": "BlockID",
               "type": "ImportSpecifier"
-            },
+            }
+          ],
+          "start": 166,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 250,
+          "importKind": "value",
+          "source": "../world/generate/resource",
+          "specifiers": [
             {
               "imported": "oreConfig",
               "local": "oreConfig",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 167,
+          "start": 195,
           "type": "ImportDeclaration"
         }
       ],
@@ -10377,7 +9912,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 206,
+          "end": 194,
           "importKind": "value",
           "source": ".",
           "specifiers": [
@@ -10385,14 +9920,23 @@
               "imported": "BlockID",
               "local": "BlockID",
               "type": "ImportSpecifier"
-            },
+            }
+          ],
+          "start": 166,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 250,
+          "importKind": "value",
+          "source": "../world/generate/resource",
+          "specifiers": [
             {
               "imported": "oreConfig",
               "local": "oreConfig",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 167,
+          "start": 195,
           "type": "ImportDeclaration"
         }
       ],
@@ -11304,20 +10848,6 @@
         {
           "end": 97,
           "importKind": "value",
-          "source": "../Block",
-          "specifiers": [
-            {
-              "imported": "oreConfig",
-              "local": "oreConfig",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 60,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 135,
-          "importKind": "value",
           "source": "../Physics",
           "specifiers": [
             {
@@ -11326,11 +10856,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 98,
+          "start": 60,
           "type": "ImportDeclaration"
         },
         {
-          "end": 178,
+          "end": 140,
           "importKind": "value",
           "source": "../player/Player",
           "specifiers": [
@@ -11340,11 +10870,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 136,
+          "start": 98,
           "type": "ImportDeclaration"
         },
         {
-          "end": 218,
+          "end": 180,
           "importKind": "value",
           "source": "../world/World",
           "specifiers": [
@@ -11354,11 +10884,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 179,
+          "start": 141,
           "type": "ImportDeclaration"
         },
         {
-          "end": 254,
+          "end": 216,
           "importKind": "value",
           "source": "../dev",
           "specifiers": [
@@ -11368,11 +10898,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 219,
+          "start": 181,
           "type": "ImportDeclaration"
         },
         {
-          "end": 304,
+          "end": 266,
           "importKind": "value",
           "source": "../audio/AudioManager",
           "specifiers": [
@@ -11381,7 +10911,21 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 255,
+          "start": 217,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 322,
+          "importKind": "value",
+          "source": "../world/generate/resource",
+          "specifiers": [
+            {
+              "imported": "oreConfig",
+              "local": "oreConfig",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 267,
           "type": "ImportDeclaration"
         }
       ],
@@ -11873,7 +11417,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 83,
+          "end": 82,
           "importKind": "value",
           "source": "../audio/AudioManager",
           "specifiers": [
@@ -11882,11 +11426,11 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 34,
+          "start": 33,
           "type": "ImportDeclaration"
         },
         {
-          "end": 119,
+          "end": 118,
           "importKind": "value",
           "source": "../Block",
           "specifiers": [
@@ -11896,11 +11440,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 84,
+          "start": 83,
           "type": "ImportDeclaration"
         },
         {
-          "end": 168,
+          "end": 167,
           "importKind": "value",
           "source": "../Block/Block",
           "specifiers": [
@@ -11910,11 +11454,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 120,
+          "start": 119,
           "type": "ImportDeclaration"
         },
         {
-          "end": 222,
+          "end": 221,
           "importKind": "value",
           "source": "../Block/BlockFactory",
           "specifiers": [
@@ -11924,11 +11468,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 169,
+          "start": 168,
           "type": "ImportDeclaration"
         },
         {
-          "end": 263,
+          "end": 262,
           "importKind": "value",
           "source": "./DataStore",
           "specifiers": [
@@ -11938,24 +11482,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 223,
+          "start": 222,
           "type": "ImportDeclaration"
         },
         {
-          "end": 312,
-          "importKind": "value",
-          "source": "./chunkWorker",
-          "specifiers": [
-            {
-              "local": "workerInstance",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 264,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 383,
+          "end": 333,
           "importKind": "value",
           "source": "./interface",
           "specifiers": [
@@ -11975,125 +11506,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 313,
-          "type": "ImportDeclaration"
-        }
-      ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/world/chunkWorker.ts": [
-        {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
+          "start": 263,
           "type": "ImportDeclaration"
         },
         {
-          "end": 68,
+          "end": 377,
           "importKind": "value",
-          "source": "../Block",
+          "source": "./generate",
           "specifiers": [
             {
-              "imported": "BlockID",
-              "local": "BlockID",
+              "imported": "generateChunk",
+              "local": "generateChunk",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 33,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 124,
-          "importKind": "value",
-          "source": "./interface",
-          "specifiers": [
-            {
-              "imported": "IWorldParams",
-              "local": "IWorldParams",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "IWorldSize",
-              "local": "IWorldSize",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 69,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 178,
-          "importKind": "value",
-          "source": "./generate/terrain",
-          "specifiers": [
-            {
-              "imported": "generateTerrain",
-              "local": "generateTerrain",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 125,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 235,
-          "importKind": "value",
-          "source": "./generate/resource",
-          "specifiers": [
-            {
-              "imported": "generateResources",
-              "local": "generateResources",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 179,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 284,
-          "importKind": "value",
-          "source": "./generate/tree",
-          "specifiers": [
-            {
-              "imported": "generateTrees",
-              "local": "generateTrees",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 236,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 342,
-          "importKind": "value",
-          "source": "./generate/tallGrass",
-          "specifiers": [
-            {
-              "imported": "generateTallGrass",
-              "local": "generateTallGrass",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 285,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 395,
-          "importKind": "value",
-          "source": "./generate/flower",
-          "specifiers": [
-            {
-              "imported": "generateFlowers",
-              "local": "generateFlowers",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 343,
+          "start": 334,
           "type": "ImportDeclaration"
         }
       ],
@@ -12146,6 +11573,124 @@
           "type": "ImportDeclaration"
         }
       ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/index.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 71,
+          "importKind": "value",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 128,
+          "importKind": "value",
+          "source": "../interface",
+          "specifiers": [
+            {
+              "imported": "IWorldParams",
+              "local": "IWorldParams",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "IWorldSize",
+              "local": "IWorldSize",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 72,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 173,
+          "importKind": "value",
+          "source": "./terrain",
+          "specifiers": [
+            {
+              "imported": "generateTerrain",
+              "local": "generateTerrain",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 129,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 221,
+          "importKind": "value",
+          "source": "./resource",
+          "specifiers": [
+            {
+              "imported": "generateResources",
+              "local": "generateResources",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 174,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 261,
+          "importKind": "value",
+          "source": "./tree",
+          "specifiers": [
+            {
+              "imported": "generateTrees",
+              "local": "generateTrees",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 222,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 310,
+          "importKind": "value",
+          "source": "./tallGrass",
+          "specifiers": [
+            {
+              "imported": "generateTallGrass",
+              "local": "generateTallGrass",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 262,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 354,
+          "importKind": "value",
+          "source": "./flower",
+          "specifiers": [
+            {
+              "imported": "generateFlowers",
+              "local": "generateFlowers",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 311,
+          "type": "ImportDeclaration"
+        }
+      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/resource.ts": [
         {
           "end": 32,
@@ -12189,18 +11734,13 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 159,
+          "end": 148,
           "importKind": "value",
           "source": "../../Block",
           "specifiers": [
             {
               "imported": "BlockID",
               "local": "BlockID",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "oreConfig",
-              "local": "oreConfig",
               "type": "ImportSpecifier"
             }
           ],

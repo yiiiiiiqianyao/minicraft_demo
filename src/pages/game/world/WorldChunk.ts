@@ -1,12 +1,11 @@
 import * as THREE from "three";
-
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
-import * as workerInstance from './chunkWorker';
 import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
+import { generateChunk } from "./generate";
 
 const geometry = new THREE.BoxGeometry();
 const crossGeometry = new THREE.PlaneGeometry();
@@ -35,8 +34,7 @@ export class WorldChunk extends THREE.Group {
 
   async generate() {
     // const start = performance.now();
-
-    const data: BlockID[][][] = await workerInstance.generateChunk(
+    const data: BlockID[][][] = await generateChunk(
       this.size,
       this.params,
       this.position.x,

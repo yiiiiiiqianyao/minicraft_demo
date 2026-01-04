@@ -11,7 +11,7 @@ export const DefaultWorldParams = {
     },
     bedrock: {
       offset: 1,
-      magnitude: 1,
+      magnitude: 2,
     },
     trees: {
       frequency: 0.04,

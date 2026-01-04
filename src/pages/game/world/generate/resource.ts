@@ -1,7 +1,20 @@
 import * as THREE from "three";
 import { World } from "../World";
 import { IWorldSize } from "../interface";
-import { BlockID, oreConfig } from "../../Block";
+import { BlockID } from "../../Block";
+
+export const oreConfig = {
+  coal: {
+    id: BlockID.CoalOre,
+    scale: { x: 8, y: 8, z: 8 },
+    scarcity: 0.75,
+  },
+  iron: {
+    id: BlockID.IronOre,
+    scale: { x: 5, y: 5, z: 5 },
+    scarcity: 0.8,
+  },
+};
 
 /**
  * Generates the resources (coal, stone, etc.) for the world
