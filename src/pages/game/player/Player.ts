@@ -4,12 +4,10 @@ import { PointerLockControls } from "three/examples/jsm/controls/PointerLockCont
 import { Line2 } from "three/examples/jsm/lines/Line2.js";
 import { LineGeometry } from "three/examples/jsm/lines/LineGeometry.js";
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
-
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
-import { BlockFactory } from "../Block/BlockFactory";
 import { World } from "../world/World";
-import { updatePositionGUI } from "../gui";
+import { updatePositionGUI, updateToolBarGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 
@@ -82,7 +80,7 @@ export class Player {
   selectedBlockSize: THREE.Vector3 | null = null;
   blockPlacementCoords: THREE.Vector3 | null = null;
 
-  toolbar: (BlockID | null)[] = [
+  toolbar: BlockID[] = [
     BlockID.Grass,
     BlockID.Dirt,
     BlockID.Stone,
@@ -115,6 +113,9 @@ export class Player {
 
     document.addEventListener("keydown", this.onKeyDown.bind(this));
     document.addEventListener("keyup", this.onKeyUp.bind(this));
+
+    
+    updateToolBarGUI(this.toolbar);
   }
 
   applyInputs(dt: number, blockUnderneath: BlockID) {
@@ -172,7 +173,6 @@ export class Player {
   update(world: World) {
     this.updateBoundsHelper();
     this.updateRaycaster(world);
-    this.updateToolbar();
     this.updateCameraFOV();
 
     // prevent player from falling through
@@ -241,23 +241,6 @@ export class Player {
     } else {
       this.selectedCoords = null;
       this.selectionHelper.visible = false;
-    }
-  }
-
-  /**
-   * Updates the toolbar UI
-   */
-  updateToolbar() {
-    for (let i = 1; i <= 9; i++) {
-      const slot = document.getElementById(`toolbar-slot-${i}`);
-      if (slot) {
-        const blockId = this.toolbar[i - 1];
-        if (blockId != null && blockId !== BlockID.Air) {
-          slot.style.backgroundImage = `url('${
-            BlockFactory.getBlock(blockId).uiTexture
-          }')`;
-        }
-      }
     }
   }
 

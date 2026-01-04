@@ -84,10 +84,12 @@ export class Physics {
   }
 
   detectCollisions(player: Player, world: World) {
+    // 碰撞检测的时候假定玩家不在地面 可能会下落
     player.onGround = false;
     this.helpers.clear();
 
     const candidates = this.broadPhase(player, world);
+    // narrowPhase 检测玩家是否会下落
     const collisions = this.narrowPhase(candidates, player);
 
     if (collisions.length > 0) {
@@ -170,7 +172,6 @@ export class Physics {
       if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {
         const overlapY = PlayerParams.height / 2 - Math.abs(dy);
         const overlapXZ = PlayerParams.radius - Math.sqrt(dx * dx + dz * dz);
-
         // Compute the normal of the collision (pointing away from content point)
         // As well as overlap between the point and the player's bounding cylinder
         let normal: THREE.Vector3;

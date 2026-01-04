@@ -27,13 +27,17 @@ export const generateChunk = async (
   x: number,
   z: number
 ) => {
-  const chunkPos = new THREE.Vector3(x, 0, z);
-  // full chunk block data fill with air
-  let data = initEmptyChunk(chunkSize);
-  data = generateResources(data, chunkSize, chunkPos);
-  data = generateTerrain( data, chunkSize, params, chunkPos);
-  data = generateTrees( data, chunkSize, params, chunkPos);
-  data = generateTallGrass( data, chunkSize, params);
-  data = generateFlowers( data, chunkSize, params);
-  return data;
+    const chunkPos = new THREE.Vector3(x, 0, z);
+    // full chunk block data fill with air
+    let data = initEmptyChunk(chunkSize);
+    // 生产各种资源方块
+    data = generateResources(data, chunkSize, chunkPos);
+    // 从上到下进行分层（在特定的层保留资源方块）
+    data = generateTerrain( data, chunkSize, params, chunkPos);
+    // TODO 下面的 生产树 高草 花朵等可以进行优化
+    data = generateTrees( data, chunkSize, params, chunkPos);
+    // Tip: 高草和花朵都是一格的大小 不会跨越 chunk 因此不需要考虑 chunk position
+    data = generateTallGrass( data, chunkSize, params);
+    data = generateFlowers( data, chunkSize, params);
+    return data;
 };

@@ -187,6 +187,7 @@ body {
 
   #loading {
     display: none;
+    user-select: none;
   }
 
   #loading-progress {

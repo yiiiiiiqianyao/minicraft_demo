@@ -12,6 +12,7 @@ export const generateTrees = (
   params: IWorldParams,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
+  // 树冠大小
   const canopySize = params.trees.canopy.size.max;
   for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {
     for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {
@@ -40,7 +41,7 @@ export const generateTrees = (
           input[baseX][i][baseZ] = BlockID.OakLog;
         }
 
-        // Generate the canopy
+        // Generate the canopy 生产树冠
         // generate layer by layer, 4 layers in total
         for (let i = 0; i < 4; i++) {
           if (i === 0) {

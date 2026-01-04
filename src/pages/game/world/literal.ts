@@ -1,3 +1,4 @@
+// 世界参数的默认值
 export const DefaultWorldParams = {
     seed: 0,
     terrain: {
