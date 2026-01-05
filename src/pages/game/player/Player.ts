@@ -10,6 +10,7 @@ import { World } from "../world/World";
 import { updatePositionGUI, updateToolBarGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams } from "./literal";
+import { MoveInput } from "./move";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -61,6 +62,7 @@ export class Player {
   spacePressed = false;
   wKeyPressed = false;
   lastWPressed = 0;
+  // 玩家是否处于冲刺状态
   isSprinting = false;
 
   lastStepSoundPlayed = 0;
@@ -93,6 +95,25 @@ export class Player {
   ];
   activeToolbarIndex = 0;
 
+    /*
+   * Returns the velocity of the player in world coordinates
+   */
+  get worldVelocity() {
+    this.#worldVelocity.copy(this.velocity);
+    this.#worldVelocity.applyEuler(
+      new THREE.Euler(0, this.camera.rotation.y, 0)
+    );
+    return this.#worldVelocity;
+  }
+
+    get position() {
+    return this.camera.position;
+  }
+
+  get activeBlockId() {
+    return this.toolbar[this.activeToolbarIndex];
+  }
+
   constructor(scene: THREE.Scene) {
     this.camera.position.set(
       PlayerInitPosition.x,
@@ -107,14 +128,14 @@ export class Player {
     scene.add(this.boundsHelper);
     scene.add(this.selectionHelper);
 
+    
+
     setTimeout(() => {
       this.controls.lock();
     }, 2000);
 
-    document.addEventListener("keydown", this.onKeyDown.bind(this));
-    document.addEventListener("keyup", this.onKeyUp.bind(this));
+    new MoveInput(this);
 
-    
     updateToolBarGUI(this.toolbar);
   }
 
@@ -258,107 +279,11 @@ export class Player {
       .start();
   }
 
-  /*
-   * Returns the velocity of the player in world coordinates
-   */
-  get worldVelocity() {
-    this.#worldVelocity.copy(this.velocity);
-    this.#worldVelocity.applyEuler(
-      new THREE.Euler(0, this.camera.rotation.y, 0)
-    );
-    return this.#worldVelocity;
-  }
-
   /**
    * Apply a world delta velocity to the player
    */
   applyWorldDeltaVelocity(dv: THREE.Vector3) {
     dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));
     this.velocity.add(dv);
-  }
-
-  get position() {
-    return this.camera.position;
-  }
-
-  get activeBlockId() {
-    return this.toolbar[this.activeToolbarIndex];
-  }
-
-  onKeyDown(event: KeyboardEvent) {
-    const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
-    // 玩家移动 or 重置的时候 控制器解锁
-    if (validKeys.includes(event.code) && !this.controls.isLocked) {
-      this.controls.lock();
-    }
-
-    switch (event.code) {
-      case "Digit1":
-      case "Digit2":
-      case "Digit3":
-      case "Digit4":
-      case "Digit5":
-      case "Digit6":
-      case "Digit7":
-      case "Digit8":
-      case "Digit9":
-        this.activeToolbarIndex = Number(event.key) - 1;
-        document
-          ?.getElementById("toolbar-active-border")
-          ?.setAttribute("style", `left: ${this.activeToolbarIndex * 11}%`);
-        break;
-      case "KeyW":
-        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {
-          this.isSprinting = true;
-          this.input.z = PlayerParams.maxSprintSpeed;
-        } else {
-          this.input.z = PlayerParams.maxSpeed;
-        }
-        this.wKeyPressed = true;
-        this.lastWPressed = performance.now();
-        break;
-      case "KeyA":
-        this.input.x = -PlayerParams.maxSpeed;
-        break;
-      case "KeyS":
-        this.input.z = -PlayerParams.maxSpeed;
-        break;
-      case "KeyD":
-        this.input.x = PlayerParams.maxSpeed;
-        break;
-      case "KeyR":
-        this.position.set(
-          PlayerInitPosition.x,
-          PlayerInitPosition.y,
-          PlayerInitPosition.z
-        );
-        this.velocity.set(0, 0, 0);
-        break;
-      case "Space":
-        this.spacePressed = true;
-        break;
-    }
-  }
-
-  onKeyUp(event: KeyboardEvent) {
-    switch (event.code) {
-      case "KeyW":
-        this.input.z = 0;
-        this.wKeyPressed = false;
-        this.isSprinting = false;
-        break;
-      case "KeyA":
-        this.input.x = 0;
-        break;
-      case "KeyS":
-        this.input.z = 0;
-        break;
-      case "KeyD":
-        this.input.x = 0;
-        break;
-      case "Space":
-        this.spacePressed = false;
-        break;
-    }
   }
 }

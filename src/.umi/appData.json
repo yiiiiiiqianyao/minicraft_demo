@@ -44,7 +44,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -74,7 +74,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -88,7 +88,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            2
           ]
         },
         "register": 2
@@ -105,23 +105,6 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -154,39 +137,23 @@
         "hooks": {
           "onDevCompileDone": [
             16,
-            2,
-            2,
-            2,
-            2,
-            3,
-            4,
-            2,
-            2,
-            2,
-            2,
-            3,
-            3,
-            2,
             1,
             3,
+            3,
+            2,
             5,
-            3,
-            4,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            3,
-            3,
+            7,
             2,
             4,
-            2,
+            1,
+            3,
             3,
             1,
+            3,
             2,
-            3
+            2,
+            3,
+            2
           ]
         },
         "register": 1
@@ -203,44 +170,27 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            53
+            96
           ],
           "onGenerateFiles": [
-            2,
+            1,
             5,
-            3,
             5,
-            13,
+            11,
+            7,
+            8,
             6,
             4,
-            12,
-            6,
-            9,
-            7,
-            7,
-            10,
-            12,
-            6,
-            15,
-            14,
-            12,
-            13,
-            10,
-            13,
-            6,
-            12,
-            10,
             5,
-            5,
-            8,
-            7,
-            9,
             13,
             6,
-            12
+            7,
+            12,
+            17,
+            5
           ]
         },
-        "register": 13
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -254,23 +204,6 @@
       "time": {
         "hooks": {
           "addEntryCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -326,34 +259,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onCheckCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -438,7 +346,7 @@
             0
           ]
         },
-        "register": 6
+        "register": 8
       },
       "enableBy": "register"
     },
@@ -1291,7 +1199,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1308,7 +1216,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1322,10 +1230,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            5
+            6
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1338,7 +1246,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 48
+        "register": 49
       },
       "enableBy": "register"
     },
@@ -1351,7 +1259,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 27
+        "register": 44
       },
       "enableBy": "config"
     },
@@ -1364,7 +1272,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 18
       },
       "enableBy": "config"
     },
@@ -1402,59 +1310,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -1472,57 +1327,23 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
+            2,
             1,
             1,
             1,
             1,
             1,
             0,
-            0,
-            0,
             1,
             1,
             0,
-            0,
-            0,
-            0,
             1,
             0,
-            0,
-            0
+            1,
+            8,
+            1
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            2,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1573,7 +1394,7 @@
             1
           ]
         },
-        "register": 20
+        "register": 27
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1585,7 +1406,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1611,23 +1432,6 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1674,40 +1478,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
             0
           ]
         },
@@ -1738,77 +1508,26 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            1
+            0
           ],
           "onGenerateFiles": [
-            46,
-            12,
-            12,
-            9,
-            10,
-            7,
-            8,
-            9,
-            10,
-            22,
-            7,
-            12,
-            20,
-            8,
-            9,
-            14,
-            10,
-            14,
+            49,
+            24,
             11,
-            11,
-            10,
-            8,
-            9,
-            10,
-            11,
-            9,
-            11,
-            8,
-            8,
             13,
+            15,
+            10,
+            10,
+            10,
+            9,
+            12,
+            7,
             8,
-            13
+            36,
+            13,
+            9
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1841,7 +1560,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 9
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1868,40 +1587,6 @@
             0,
             0,
             0,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1920,7 +1605,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1934,24 +1619,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            65,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            78,
             0,
             0,
             0,
@@ -1968,7 +1636,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1981,7 +1649,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1994,7 +1662,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2008,7 +1676,8 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
+            1,
+            1,
             0,
             0,
             0,
@@ -2018,27 +1687,9 @@
             0,
             0,
             1,
-            1,
             0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            3,
             0
           ],
           "addBeforeMiddlewares": [
@@ -2060,72 +1711,38 @@
         "hooks": {
           "onGenerateFiles": [
             11,
-            3,
-            39,
-            1,
-            24,
             2,
-            27,
+            61,
             2,
             29,
+            1,
+            42,
             2,
-            24,
-            1,
-            26,
-            1,
-            27,
-            2,
-            26,
-            1,
-            63,
+            38,
             3,
-            28,
-            2,
-            28,
-            2,
-            50,
-            4,
-            27,
-            2,
-            24,
-            2,
-            28,
-            2,
             34,
             2,
-            29,
-            6,
-            28,
+            30,
             1,
-            25,
+            31,
+            1,
+            31,
             2,
-            28,
+            32,
+            2,
+            31,
+            2,
+            31,
             1,
-            28,
+            44,
+            2,
+            51,
             2,
             27,
-            1,
-            28,
-            2,
-            27,
-            2,
-            23,
-            1,
-            33,
-            2,
-            25,
-            2,
-            29,
-            1,
-            25,
-            2,
-            25,
-            1,
-            23,
             2
           ]
         },
-        "register": 4
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -2155,15 +1772,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
             0,
             0,
@@ -2173,23 +1781,15 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             0
           ],
           "onBeforeCompiler": [
-            1
+            2
           ]
         },
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -2201,7 +1801,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2215,41 +1815,24 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            265,
-            5,
-            5,
-            7,
-            5,
+            239,
             6,
-            4,
-            5,
             7,
-            12,
-            5,
-            14,
-            13,
-            5,
-            4,
-            5,
-            4,
-            29,
-            4,
-            4,
-            4,
-            5,
-            5,
-            7,
-            5,
+            10,
+            11,
+            6,
             5,
             4,
             5,
             4,
             4,
             4,
-            4
+            10,
+            6,
+            3
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2263,10 +1846,10 @@
       "time": {
         "hooks": {
           "addBeforeBabelPresets": [
-            0
+            1
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2292,7 +1875,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2305,7 +1888,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -2317,7 +1900,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 14
       },
       "enableBy": "config"
     },
@@ -2331,38 +1914,21 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
+            2,
             1,
             0,
-            0,
-            0,
-            1,
             1,
             0,
             0,
             1,
             0,
             0,
+            0,
+            1,
             1,
             0,
             1,
-            0,
-            0,
-            6,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0
+            1
           ]
         },
         "register": 1
@@ -2445,7 +2011,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -2494,7 +2060,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 16
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -2520,7 +2086,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            453
+            508
           ]
         },
         "register": 1
@@ -2536,7 +2102,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2549,7 +2115,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 20
+        "register": 22
       },
       "enableBy": "register"
     },
@@ -2566,7 +2132,7 @@
             8
           ]
         },
-        "register": 21
+        "register": 40
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2630,7 +2196,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2656,7 +2222,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2669,7 +2235,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2695,7 +2261,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2708,7 +2274,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2734,7 +2300,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2747,7 +2313,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2760,7 +2326,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2773,7 +2339,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2825,7 +2391,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2838,7 +2404,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2851,7 +2417,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     }
@@ -3162,16 +2728,34 @@
       "id": "game/player/literal",
       "file": "game/player/literal.ts",
       "absPath": "/game/player/literal",
-      "__content": "import * as THREE from \"three\";\n\nexport const PlayerParams = {\n    height: 1.75,\n    // radius: 0.5,\n    radius: 0.25,\n    // 玩家最大移动速度\n    maxSpeed: 4.317,\n    // 玩家最大奔跑速度\n    maxSprintSpeed: 5.612,\n    // 玩家跳跃速度\n    jumpSpeed: 10,\n}\n\nexport const PlayerInitPosition = new THREE.Vector3(32, 72, 32);",
+      "__content": "import * as THREE from \"three\";\n\nexport const PlayerParams = {\n    height: 1.75,\n    // radius: 0.5,\n    // 玩家的碰撞盒半径应该调整为 0.25 较为合适\n    radius: 0.25,\n    // 玩家最大移动速度\n    maxSpeed: 4.317,\n    // 玩家最大奔跑速度\n    maxSprintSpeed: 5.612,\n    // 玩家跳跃速度\n    jumpSpeed: 10,\n}\n\nexport const PlayerInitPosition = new THREE.Vector3(32, 72, 32);",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/literal.ts"
+    },
+    "components/loading": {
+      "path": "components/loading",
+      "id": "components/loading",
+      "file": "components/loading.tsx",
+      "absPath": "/components/loading",
+      "__content": "export const Loading = () => {\n    return <div id=\"loading\">\n          <p>Loading Level</p>\n          <p>Generating terrain</p>\n          <div id=\"loading-progress\">\n            <div id=\"loading-progress-bar\"></div>\n          </div>\n        </div>\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/loading.tsx"
+    },
+    "components/toolbar": {
+      "path": "components/toolbar",
+      "id": "components/toolbar",
+      "file": "components/toolbar.tsx",
+      "absPath": "/components/toolbar",
+      "__content": "export const ToolBar = () => {\n     return <div id=\"toolbar\">\n          <img id=\"toolbar-bg\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png\" />\n          <img id=\"toolbar-active-border\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png\" />\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n        </div>\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/toolbar.tsx"
     },
     "game/player/Player": {
       "path": "game/player/Player",
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI, updateToolBarGUI } from \"../gui\";\nimport { initBoundsHelper, initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = initBoundsHelper();\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: BlockID[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n  constructor(scene: THREE.Scene) {\n    this.camera.position.set(\n      PlayerInitPosition.x,\n      PlayerInitPosition.y,\n      PlayerInitPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n    document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n    \n    updateToolBarGUI(this.toolbar);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.controls.isLocked) {\n      this.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.activeToolbarIndex = Number(event.key) - 1;\n        document\n          ?.getElementById(\"toolbar-active-border\")\n          ?.setAttribute(\"style\", `left: ${this.activeToolbarIndex * 11}%`);\n        break;\n      case \"KeyW\":\n        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {\n          this.isSprinting = true;\n          this.input.z = PlayerParams.maxSprintSpeed;\n        } else {\n          this.input.z = PlayerParams.maxSpeed;\n        }\n        this.wKeyPressed = true;\n        this.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.input.x = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.input.z = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.input.x = PlayerParams.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.position.set(\n          PlayerInitPosition.x,\n          PlayerInitPosition.y,\n          PlayerInitPosition.z\n        );\n        this.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.input.z = 0;\n        this.wKeyPressed = false;\n        this.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.input.x = 0;\n        break;\n      case \"Space\":\n        this.spacePressed = false;\n        break;\n    }\n  }\n}\n",
+      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI, updateToolBarActiveGUI, updateToolBarGUI } from \"../gui\";\nimport { initBoundsHelper, initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { MoveInput } from \"./move\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = initBoundsHelper();\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: BlockID[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n    get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  constructor(scene: THREE.Scene) {\n    this.camera.position.set(\n      PlayerInitPosition.x,\n      PlayerInitPosition.y,\n      PlayerInitPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    new MoveInput(this);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n    document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n    \n    updateToolBarGUI(this.toolbar);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.controls.isLocked) {\n      this.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.activeToolbarIndex = Number(event.key) - 1;\n        updateToolBarActiveGUI(this.activeToolbarIndex);\n        break;\n      case \"KeyW\":\n        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {\n          this.isSprinting = true;\n          this.input.z = PlayerParams.maxSprintSpeed;\n        } else {\n          this.input.z = PlayerParams.maxSpeed;\n        }\n        this.wKeyPressed = true;\n        this.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.input.x = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.input.z = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.input.x = PlayerParams.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.position.set(\n          PlayerInitPosition.x,\n          PlayerInitPosition.y,\n          PlayerInitPosition.z\n        );\n        this.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.input.z = 0;\n        this.wKeyPressed = false;\n        this.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.input.x = 0;\n        break;\n      case \"Space\":\n        this.spacePressed = false;\n        break;\n    }\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -3193,6 +2777,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/utils.ts"
     },
+    "components/debug": {
+      "path": "components/debug",
+      "id": "components/debug",
+      "file": "components/debug.tsx",
+      "absPath": "/components/debug",
+      "__content": "export const Debug = () => {\n    return  <div id=\"debug\">\n        <div className=\"stat\" id=\"player-pos-x\"></div>\n        <div className=\"stat\" id=\"player-pos-y\"></div>\n        <div className=\"stat\" id=\"player-pos-z\"></div>\n        <div className=\"stat\" id=\"triangle-count\"></div>\n        <div className=\"stat\" id=\"render-calls\"></div>\n      </div>\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/debug.tsx"
+    },
     "game/Block/Block": {
       "path": "game/Block/Block",
       "id": "game/Block/Block",
@@ -3210,6 +2803,24 @@
       "__content": "export enum BlockID {\n  Air = 0,\n  Grass = 1,\n  Dirt = 2,\n  Stone = 3,\n  CoalOre = 4,\n  IronOre = 5,\n  Bedrock = 6,\n  OakLog = 7,\n  Leaves = 8,\n  TallGrass = 9,\n  FlowerRose = 10,\n  FlowerDandelion = 11,\n  RedstoneLamp = 12,\n  StoneBrick = 13,\n}\n\nexport const blockIdToKey = {\n  [BlockID.Air]: \"air\",\n  [BlockID.Grass]: \"grass\", // 草方块（目前作为地面）\n  [BlockID.TallGrass]: \"tall_grass\", // 高草方块（草丛）\n  [BlockID.Dirt]: \"dirt\",\n  [BlockID.Stone]: \"stone\",\n  [BlockID.CoalOre]: \"coal\",\n  [BlockID.IronOre]: \"iron\",\n  [BlockID.Bedrock]: \"bedrock\", // 基岩 方块\n  [BlockID.OakLog]: \"oak_log\",\n  [BlockID.Leaves]: \"leaves\",\n  [BlockID.FlowerRose]: \"flower_rose\",\n  [BlockID.FlowerDandelion]: \"flower_dandelion\",\n  [BlockID.RedstoneLamp]: \"redstone_lamp\",\n  [BlockID.StoneBrick]: \"stone_brick\",\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/index.ts"
+    },
+    "game/gui/toolbar": {
+      "path": "game/gui/toolbar",
+      "id": "game/gui/toolbar",
+      "file": "game/gui/toolbar.ts",
+      "absPath": "/game/gui/toolbar",
+      "__content": "export function updateToolBarActiveGUI(activeToolbarIndex: number) {\n    document\n          ?.getElementById(\"toolbar-active-border\")\n          ?.setAttribute(\"style\", `left: ${activeToolbarIndex * 11}%`);\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts"
+    },
+    "game/player/move": {
+      "path": "game/player/move",
+      "id": "game/player/move",
+      "file": "game/player/move.ts",
+      "absPath": "/game/player/move",
+      "__content": "import { updateToolBarActiveGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\n\nexport class MoveInput {\n    private player: Player;\n    constructor(player: Player) {\n        this.player = player;\n        document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n        document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n    }\n\n      onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.player.activeToolbarIndex = Number(event.key) - 1;\n        updateToolBarActiveGUI(this.player.activeToolbarIndex);\n        break;\n      case \"KeyW\":\n        if (!this.player.wKeyPressed && performance.now() - this.player.lastWPressed < 200) {\n          this.player.isSprinting = true;\n          this.player.input.z = PlayerParams.maxSprintSpeed;\n        } else {\n          this.player.input.z = PlayerParams.maxSpeed;\n        }\n        this.player.wKeyPressed = true;\n        this.player.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.player.input.x = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.player.input.z = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.player.input.x = PlayerParams.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.player.position.set(\n          PlayerInitPosition.x,\n          PlayerInitPosition.y,\n          PlayerInitPosition.z\n        );\n        this.player.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.player.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.player.input.z = 0;\n        this.player.wKeyPressed = false;\n        this.player.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.player.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.player.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.player.input.x = 0;\n        break;\n      case \"Space\":\n        this.player.spacePressed = false;\n        break;\n    }\n  }\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/move.ts"
     },
     "game/world/World": {
       "path": "game/world/World",
@@ -3234,7 +2845,7 @@
       "id": "game/gui/index",
       "file": "game/gui/index.ts",
       "absPath": "/game/gui",
-      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { debounce } from \"lodash\";\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateToolBarGUI(toolbar: BlockID[]) {\n  for (let i = 1; i <= 9; i++) {\n    const slot = document.getElementById(`toolbar-slot-${i}`);\n    if (slot) {\n      const blockId = toolbar[i - 1];\n      if (blockId != null && blockId !== BlockID.Air) {\n        slot.style.backgroundImage = `url('${\n          BlockFactory.getBlock(blockId).uiTexture\n        }')`;\n      }\n    }\n  }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Physics } from \"../Physics\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { debounce } from \"lodash\";\n\nexport * from './toolbar.ts';\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  const physicsFolder = gui.addFolder(\"Physics\");\n  physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n  physicsFolder\n    .add(physics, \"simulationRate\", 10, 1000)\n    .name(\"Simulation Rate\");\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(world, \"wireframeMode\").name(\"X-ray Mode (Disable Textures)\");\n  terrainFolder.add(world.chunkSize, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(world.chunkSize, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  const treesFolder = terrainFolder.addFolder(\"Trees\");\n  treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n    .name(\"Min Trunk Height\");\n  treesFolder\n    .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n    .name(\"Max Trunk Height\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n    .name(\"Min Canopy Size\");\n  treesFolder\n    .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n    .name(\"Max Canopy Size\");\n\n  const grassFolder = terrainFolder.addFolder(\"Grass\");\n  grassFolder.add(world.params.grass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n  grassFolder\n    .add(world.params.grass, \"patchSize\", 1, 10, 1)\n    .name(\"Grass Patch Size\");\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateToolBarGUI(toolbar: BlockID[]) {\n  for (let i = 1; i <= 9; i++) {\n    const slot = document.getElementById(`toolbar-slot-${i}`);\n    if (slot) {\n      const blockId = toolbar[i - 1];\n      if (blockId != null && blockId !== BlockID.Air) {\n        slot.style.backgroundImage = `url('${\n          BlockFactory.getBlock(blockId).uiTexture\n        }')`;\n      }\n    }\n  }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts"
     },
@@ -3279,7 +2890,7 @@
       "id": "index",
       "file": "index.tsx",
       "absPath": "/",
-      "__content": "import { useEffect } from \"react\";\nimport Game from \"./game/Game\";\nimport './index.scss';\n\nexport default function HomePage() {\n  useEffect(() => {\n   new Game();\n  }, []);\n  return (\n    <div id='canvas_wrap' className=\"_canvas_wrap\">\n      <div id=\"debug\">\n        <div className=\"stat\" id=\"player-pos-x\"></div>\n        <div className=\"stat\" id=\"player-pos-y\"></div>\n        <div className=\"stat\" id=\"player-pos-z\"></div>\n        <div className=\"stat\" id=\"triangle-count\"></div>\n        <div className=\"stat\" id=\"render-calls\"></div>\n      </div>\n      <div id=\"ui\">\n        <svg id=\"cursor\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M3 12H21M12 3L12 21\" stroke=\"white\" strokeWidth=\"2\"/>\n        </svg>\n        <div id=\"toolbar\">\n          <img id=\"toolbar-bg\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png\" />\n          <img id=\"toolbar-active-border\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png\" />\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n        </div>\n      </div>\n      <div id=\"menu\">\n        <div id=\"main-menu\">\n          <img id=\"logo\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/logo.png\" />\n          <div>\n            <div id=\"buttons\">\n              <div className=\"mc-button full\" tabIndex={0} role=\"button\">\n                <div id=\"start-game\" className=\"title\">Create new world</div>\n              </div>\n              <div className=\"mc-button full\" tabIndex={0} role=\"button\">\n                <div id=\"github\" className=\"title\">View GitHub repo</div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div id=\"loading\">\n          <p>Loading Level</p>\n          <p>Generating terrain</p>\n          <div id=\"loading-progress\">\n            <div id=\"loading-progress-bar\"></div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "__content": "import { useEffect } from \"react\";\nimport Game from \"./game/Game\";\nimport './index.scss';\nimport { ToolBar } from \"./components/toolbar\";\nimport { Loading } from \"./components/loading\";\nimport { Debug } from \"./components/debug\";\n\nexport default function HomePage() {\n  useEffect(() => {\n   new Game();\n  }, []);\n  return (\n    <div id='canvas_wrap' className=\"_canvas_wrap\">\n      <Debug />\n      <div id=\"ui\">\n        <svg id=\"cursor\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M3 12H21M12 3L12 21\" stroke=\"white\" strokeWidth=\"2\"/>\n        </svg>\n        <ToolBar />\n      </div>\n      <div id=\"menu\">\n        <div id=\"main-menu\">\n          <img id=\"logo\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/logo.png\" />\n          <div>\n            <div id=\"buttons\">\n              <div className=\"mc-button full\" tabIndex={0} role=\"button\">\n                <div id=\"start-game\" className=\"title\">Create new world</div>\n              </div>\n              <div className=\"mc-button full\" tabIndex={0} role=\"button\">\n                <div id=\"github\" className=\"title\">View GitHub repo</div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <Loading />\n      </div>\n    </div>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/index.tsx"
     }
@@ -5203,8 +4814,13 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/gui/toolbar.ts": {
+            "bytes": 207,
+            "imports": [],
+            "format": "esm"
+          },
           "src/pages/game/gui/index.ts": {
-            "bytes": 6507,
+            "bytes": 6537,
             "imports": [
               {
                 "path": "lil-gui",
@@ -5260,6 +4876,11 @@
                 "path": "lodash",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/pages/game/gui/toolbar.ts",
+                "kind": "import-statement",
+                "original": "./toolbar.ts"
               }
             ],
             "format": "esm"
@@ -5398,6 +5019,28 @@
             ],
             "format": "esm"
           },
+          "src/pages/components/loading.tsx": {
+            "bytes": 249,
+            "imports": [
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/components/toolbar.tsx": {
+            "bytes": 965,
+            "imports": [
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/player/utils.ts": {
             "bytes": 478,
             "imports": [
@@ -5414,8 +5057,29 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/player/move.ts": {
+            "bytes": 2520,
+            "imports": [
+              {
+                "path": "src/pages/game/gui/index.ts",
+                "kind": "import-statement",
+                "original": "../gui"
+              },
+              {
+                "path": "src/pages/game/player/literal.ts",
+                "kind": "import-statement",
+                "original": "./literal"
+              },
+              {
+                "path": "./Player",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/player/Player.ts": {
-            "bytes": 10380,
+            "bytes": 8324,
             "imports": [
               {
                 "path": "@tweenjs/tween.js",
@@ -5476,6 +5140,22 @@
                 "path": "src/pages/game/player/literal.ts",
                 "kind": "import-statement",
                 "original": "./literal"
+              },
+              {
+                "path": "src/pages/game/player/move.ts",
+                "kind": "import-statement",
+                "original": "./move"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/components/debug.tsx": {
+            "bytes": 349,
+            "imports": [
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
               }
             ],
             "format": "esm"
@@ -5599,7 +5279,7 @@
             "format": "esm"
           },
           "src/pages/index.tsx": {
-            "bytes": 2571,
+            "bytes": 1311,
             "imports": [
               {
                 "path": "react",
@@ -5617,6 +5297,21 @@
                 "external": true
               },
               {
+                "path": "src/pages/components/toolbar.tsx",
+                "kind": "import-statement",
+                "original": "./components/toolbar"
+              },
+              {
+                "path": "src/pages/components/loading.tsx",
+                "kind": "import-statement",
+                "original": "./components/loading"
+              },
+              {
+                "path": "src/pages/components/debug.tsx",
+                "kind": "import-statement",
+                "original": "./components/debug"
+              },
+              {
                 "path": "react/jsx-runtime",
                 "kind": "import-statement",
                 "external": true
@@ -5625,7 +5320,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 11091,
+            "bytes": 12190,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5788,6 +5483,16 @@
                 "original": "../../../src/pages/game/player/literal.ts"
               },
               {
+                "path": "src/pages/components/loading.tsx",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/components/loading.tsx"
+              },
+              {
+                "path": "src/pages/components/toolbar.tsx",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/components/toolbar.tsx"
+              },
+              {
                 "path": "src/pages/game/player/Player.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/player/Player.ts"
@@ -5803,6 +5508,11 @@
                 "original": "../../../src/pages/game/player/utils.ts"
               },
               {
+                "path": "src/pages/components/debug.tsx",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/components/debug.tsx"
+              },
+              {
                 "path": "src/pages/game/Block/Block.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/Block.ts"
@@ -5811,6 +5521,16 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/index.ts"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/gui/toolbar.ts"
+              },
+              {
+                "path": "src/pages/game/player/move.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/player/move.ts"
               },
               {
                 "path": "src/pages/game/world/World.ts",
@@ -6176,6 +5896,16 @@
                 "external": true
               },
               {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
@@ -6207,6 +5937,11 @@
               },
               {
                 "path": "three/examples/jsm/lines/LineMaterial.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7472,8 +7207,11 @@
               "src/pages/game/dev/index.ts": {
                 "bytesInOutput": 1497
               },
+              "src/pages/game/gui/toolbar.ts": {
+                "bytesInOutput": 373
+              },
               "src/pages/game/gui/index.ts": {
-                "bytesInOutput": 6019
+                "bytesInOutput": 6095
               },
               "src/pages/game/RNG.ts": {
                 "bytesInOutput": 810
@@ -7490,11 +7228,23 @@
               "src/pages/game/world/interface.ts": {
                 "bytesInOutput": 125
               },
+              "src/pages/components/loading.tsx": {
+                "bytesInOutput": 616
+              },
+              "src/pages/components/toolbar.tsx": {
+                "bytesInOutput": 1516
+              },
               "src/pages/game/player/utils.ts": {
                 "bytesInOutput": 656
               },
+              "src/pages/game/player/move.ts": {
+                "bytesInOutput": 2773
+              },
               "src/pages/game/player/Player.ts": {
-                "bytesInOutput": 10249
+                "bytesInOutput": 7993
+              },
+              "src/pages/components/debug.tsx": {
+                "bytesInOutput": 749
               },
               "src/pages/game/sky/index.ts": {
                 "bytesInOutput": 6515
@@ -7506,7 +7256,7 @@
                 "bytesInOutput": 4777
               },
               "src/pages/index.tsx": {
-                "bytesInOutput": 3610
+                "bytesInOutput": 1809
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 30022
@@ -7518,7 +7268,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 9501
+                "bytesInOutput": 10444
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -7539,7 +7289,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 148041
+            "bytes": 151207
           }
         }
       }
@@ -9907,6 +9657,9 @@
           "type": "ImportDeclaration"
         }
       ],
+      "/Applications/workspace/minicraft_demo/src/pages/components/debug.tsx": [],
+      "/Applications/workspace/minicraft_demo/src/pages/components/loading.tsx": [],
+      "/Applications/workspace/minicraft_demo/src/pages/components/toolbar.tsx": [],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/AirBlock.ts": [
         {
           "end": 49,
@@ -11728,8 +11481,15 @@
           ],
           "start": 413,
           "type": "ImportDeclaration"
+        },
+        {
+          "end": 478,
+          "source": "./toolbar.ts",
+          "start": 449,
+          "type": "ExportAllDeclaration"
         }
       ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts": [],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts": [
         {
           "end": 39,
@@ -11910,6 +11670,20 @@
           ],
           "start": 617,
           "type": "ImportDeclaration"
+        },
+        {
+          "end": 714,
+          "importKind": "value",
+          "source": "./move",
+          "specifiers": [
+            {
+              "imported": "MoveInput",
+              "local": "MoveInput",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 679,
+          "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/literal.ts": [
@@ -11924,6 +11698,55 @@
             }
           ],
           "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/player/move.ts": [
+        {
+          "end": 49,
+          "importKind": "value",
+          "source": "../gui",
+          "specifiers": [
+            {
+              "imported": "updateToolBarActiveGUI",
+              "local": "updateToolBarActiveGUI",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 111,
+          "importKind": "value",
+          "source": "./literal",
+          "specifiers": [
+            {
+              "imported": "PlayerInitPosition",
+              "local": "PlayerInitPosition",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "PlayerParams",
+              "local": "PlayerParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 50,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 146,
+          "importKind": "value",
+          "source": "./Player",
+          "specifiers": [
+            {
+              "imported": "Player",
+              "local": "Player",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 112,
           "type": "ImportDeclaration"
         }
       ],
@@ -12764,6 +12587,48 @@
           "source": "./index.scss",
           "specifiers": [],
           "start": 68,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 138,
+          "importKind": "value",
+          "source": "./components/toolbar",
+          "specifiers": [
+            {
+              "imported": "ToolBar",
+              "local": "ToolBar",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 91,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 186,
+          "importKind": "value",
+          "source": "./components/loading",
+          "specifiers": [
+            {
+              "imported": "Loading",
+              "local": "Loading",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 139,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 230,
+          "importKind": "value",
+          "source": "./components/debug",
+          "specifiers": [
+            {
+              "imported": "Debug",
+              "local": "Debug",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 187,
           "type": "ImportDeclaration"
         }
       ]

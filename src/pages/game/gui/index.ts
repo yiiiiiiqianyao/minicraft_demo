@@ -10,6 +10,8 @@ import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { debounce } from "lodash";
 
+export * from './toolbar.ts';
+
 export function createUI(
   world: World,
   player: Player,
@@ -110,7 +112,6 @@ export function createUI(
 
   gui.add(world, "regenerate").name("Generate");
 }
-
 
 export function initMainMenu(onStart: () => void) {
   const mainMenu = document.getElementById("main-menu");
