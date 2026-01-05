@@ -222,6 +222,7 @@
             0,
             0,
             0,
+            0,
             0
           ]
         },
@@ -362,7 +363,8 @@
             3,
             1,
             1,
-            2
+            2,
+            1
           ]
         },
         "register": 1
@@ -499,7 +501,8 @@
             7,
             8,
             4,
-            13
+            13,
+            7
           ]
         },
         "register": 14
@@ -516,6 +519,7 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
             0,
             0,
             0,
@@ -779,6 +783,7 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onCheckCode": [
@@ -882,6 +887,7 @@
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -2293,9 +2299,11 @@
             1,
             1,
             1,
-            1
+            1,
+            0
           ],
           "addRuntimePlugin": [
+            0,
             0,
             0,
             0,
@@ -2487,6 +2495,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            0,
             0,
             0,
             0,
@@ -2842,6 +2851,8 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ]
         },
@@ -2992,9 +3003,12 @@
             7,
             7,
             6,
+            9,
             9
           ],
           "addPolyfillImports": [
+            0,
+            0,
             0,
             0,
             0,
@@ -3481,6 +3495,8 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ]
         },
@@ -3516,6 +3532,7 @@
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -3756,6 +3773,7 @@
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -4030,7 +4048,9 @@
             31,
             1,
             31,
-            1
+            1,
+            29,
+            2
           ]
         },
         "register": 5
@@ -4177,7 +4197,8 @@
             0,
             0,
             0,
-            0
+            0,
+            1
           ],
           "onBeforeCompiler": [
             2
@@ -4326,6 +4347,7 @@
             6,
             6,
             5,
+            4,
             4
           ]
         },
@@ -4528,6 +4550,7 @@
             1,
             0,
             1,
+            0,
             0
           ]
         },
@@ -5400,7 +5423,7 @@
       "id": "game/Block/Block",
       "file": "game/Block/Block.ts",
       "absPath": "/game/Block/Block",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \".\";\n\n// 渲染的几何形状类型\nexport enum RenderGeometry {\n  Cube,\n  Cross,\n  Flower,\n}\n\ntype MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;\n\nexport abstract class Block {\n  abstract id: BlockID;\n  abstract material: MaterialType | MaterialType[];\n  abstract uiTexture: string;\n  abstract geometry: RenderGeometry;\n  abstract transparent: boolean;\n  abstract canPassThrough: boolean;\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \".\";\n\n// 渲染的几何形状类型\nexport enum RenderGeometry {\n  Cube,\n  // TODO Cross => TallGrass\n  Cross,\n  Flower,\n}\n\ntype MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;\n\nexport abstract class Block {\n  abstract id: BlockID;\n  abstract material: MaterialType | MaterialType[];\n  abstract uiTexture: string;\n  abstract geometry: RenderGeometry;\n  abstract transparent: boolean;\n  abstract canPassThrough: boolean;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/Block.ts"
     },
