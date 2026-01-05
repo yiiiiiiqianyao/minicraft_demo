@@ -8,6 +8,7 @@ import { BlockID } from ".";
 const tallGrassMaterial = new THREE.MeshBasicMaterial({
   map: textures.tallGrass,
 });
+// TODO: 修改草的贴图，使草的贴图和实际大小保持一致
 
 tallGrassMaterial.transparent = true;
 tallGrassMaterial.side = THREE.DoubleSide;

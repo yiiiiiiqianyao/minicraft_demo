@@ -6,8 +6,6 @@ import { World } from "../world/World";
 import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
 import { oreConfig } from "../world/generate/resource";
-import { BlockID } from "../Block";
-import { BlockFactory } from "../Block/BlockFactory";
 import { debounce } from "lodash";
 
 export * from './toolbar.ts';
@@ -168,20 +166,6 @@ export function updatePositionGUI(position: THREE.Vector3) {
         posZ.innerHTML = inner;
       }
     }
-}
-
-export function updateToolBarGUI(toolbar: BlockID[]) {
-  for (let i = 1; i <= 9; i++) {
-    const slot = document.getElementById(`toolbar-slot-${i}`);
-    if (slot) {
-      const blockId = toolbar[i - 1];
-      if (blockId != null && blockId !== BlockID.Air) {
-        slot.style.backgroundImage = `url('${
-          BlockFactory.getBlock(blockId).uiTexture
-        }')`;
-      }
-    }
-  }
 }
 
 export function updateProgressGUI(percentLoaded: number) {

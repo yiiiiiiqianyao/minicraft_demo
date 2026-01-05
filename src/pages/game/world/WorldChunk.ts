@@ -8,7 +8,9 @@ import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
 
 const geometry = new THREE.BoxGeometry();
+// TODO 修改草的实际大小
 const crossGeometry = new THREE.PlaneGeometry();
+const flowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);
 
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
@@ -34,6 +36,7 @@ export class WorldChunk extends THREE.Group {
 
   async generate() {
     // const start = performance.now();
+    // 初始化 chunk 数据
     const data: BlockID[][][] = await generateChunk(
       this.size,
       this.params,
@@ -41,13 +44,16 @@ export class WorldChunk extends THREE.Group {
       this.position.z
     );
 
+    // 空闲时间的 callback
     requestIdleCallback(
       () => {
+        // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
+        // 
         this.loadPlayerChanges();
+        // 生成 chunk 的 mesh
         this.generateMeshes(data);
         this.loaded = true;
-
         // console.log(`Loaded chunk in ${performance.now() - start}ms`);
       },
       { timeout: 1000 }
@@ -116,13 +122,33 @@ export class WorldChunk extends THREE.Group {
       const block = BlockFactory.getBlock(blockId);
       const blockGeometry = block.geometry;
 
-      const mesh = new THREE.InstancedMesh(
-        blockGeometry === RenderGeometry.Cube ? geometry : crossGeometry,
+      const getInstancedGeometry = () => {
+        if (blockGeometry === RenderGeometry.Cube) {
+          return geometry;
+        } else if (blockGeometry === RenderGeometry.Cross) {
+          return crossGeometry;
+        } else if (blockGeometry === RenderGeometry.Flower) {
+          return flowerGeometry;
+        }
+      };
+
+      const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
         this.wireframeMode
           ? new THREE.MeshBasicMaterial({ wireframe: true })
           : block.material,
         maxCount
       );
+      
+      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
+      //   blockGeometry === RenderGeometry.Flower
+      //     ? new THREE.MeshBasicMaterial({ wireframe: true })
+      //     : block.material,
+      //   maxCount
+      // );
+      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
+      //   new THREE.MeshBasicMaterial({ wireframe: true }),
+      //   maxCount
+      // );
 
       mesh.name = block.constructor.name;
       mesh.count = 0;
@@ -174,6 +200,23 @@ export class WorldChunk extends THREE.Group {
               matrix2.makeRotationY(-Math.PI / 4);
               matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);
               mesh.setMatrixAt(instanceId2, matrix2);
+            } else if(blockClass.geometry == RenderGeometry.Flower) {
+              const instanceId1 = mesh.count++;
+              const instanceId2 = mesh.count++;
+              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);
+
+              // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高
+              const matrix1 = new THREE.Matrix4();
+              matrix1.makeRotationY(Math.PI / 4);
+              matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
+              mesh.setMatrixAt(instanceId1, matrix1);
+
+              const matrix2 = new THREE.Matrix4();
+              matrix2.makeRotationY(-Math.PI / 4);
+              matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
+              mesh.setMatrixAt(instanceId2, matrix2);
+
+              mesh.userData.renderGeometry = RenderGeometry.Flower;
             }
           }
         }

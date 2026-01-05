@@ -12,6 +12,7 @@ import { initBoundsHelper, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { MoveInput } from "./move";
 import { MouseInput } from "./mouse";
+import { RenderGeometry } from "../Block/Block";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -138,6 +139,14 @@ export class Player {
 
     updateToolBarGUI(this.toolbar);
   }
+  
+  /**
+   * Apply a world delta velocity to the player
+   */
+  applyWorldDeltaVelocity(dv: THREE.Vector3) {
+    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));
+    this.velocity.add(dv);
+  }
 
   applyInputs(dt: number, blockUnderneath: BlockID) {
     // Normalize the input vector if more than one key is pressed
@@ -172,6 +181,18 @@ export class Player {
     updatePositionGUI(this.position);
   }
 
+  update(world: World) {
+    this.updateBoundsHelper();
+    this.updateRaycaster(world);
+    this.updateCameraFOV();
+
+    // prevent player from falling through
+    if (this.position.y < 0) {
+      this.position.copy(PlayerInitPosition);
+      this.velocity.set(0, 0, 0);
+    }
+  }
+
   private playWalkSound(blockUnderneath: BlockID) {
     switch (blockUnderneath) {
       case BlockID.Grass:
@@ -191,22 +212,10 @@ export class Player {
     }
   }
 
-  update(world: World) {
-    this.updateBoundsHelper();
-    this.updateRaycaster(world);
-    this.updateCameraFOV();
-
-    // prevent player from falling through
-    if (this.position.y < 0) {
-      this.position.copy(PlayerInitPosition);
-      this.velocity.set(0, 0, 0);
-    }
-  }
-
   /**
    * Update the player's bounding cylinder helper
    */
-  updateBoundsHelper() {
+  private updateBoundsHelper() {
     this.boundsHelper.position.copy(this.camera.position);
     this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
   }
@@ -214,13 +223,18 @@ export class Player {
   /**
    * Updates the raycaster used for block selection
    */
-  updateRaycaster(world: World) {
+  private selectedBlockUuid: string | null = null;
+  private updateRaycaster(world: World) {
     this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);
     const intersections = this.raycaster.intersectObjects(world.children, true);
 
     if (intersections.length > 0) {
       const intersection = intersections[0];
-
+      if(this.selectedBlockUuid !== intersection.object.uuid) {
+        this.selectedBlockUuid = intersection.object.uuid;
+        // console.log(intersection.object);
+      }
+      
       // Get the chunk associated with the seclected block
       const chunk = intersection.object.parent;
 
@@ -256,7 +270,12 @@ export class Player {
           .clone()
           .add(intersection.normal);
       }
-
+      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {
+        this.selectionHelper.scale.set(0.3, 0.6, 0.3);
+      } else {
+        this.selectionHelper.scale.set(1, 1, 1);
+      } 
+      // TODO 草方块的选择框需要调整大小
       this.selectionHelper.position.copy(this.selectedCoords);
       this.selectionHelper.visible = true;
     } else {
@@ -265,7 +284,7 @@ export class Player {
     }
   }
 
-  updateCameraFOV() {
+  private updateCameraFOV() {
     const currentFov = { fov: this.camera.fov };
     const targetFov = this.isSprinting ? 80 : 70;
     const update = () => {
@@ -277,13 +296,5 @@ export class Player {
       .easing(TWEEN.Easing.Quadratic.Out)
       .onUpdate(update)
       .start();
-  }
-
-  /**
-   * Apply a world delta velocity to the player
-   */
-  applyWorldDeltaVelocity(dv: THREE.Vector3) {
-    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));
-    this.velocity.add(dv);
   }
 }
