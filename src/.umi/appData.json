@@ -119,6 +119,16 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -153,6 +163,17 @@
             2,
             2,
             3,
+            2,
+            2,
+            5,
+            1,
+            1,
+            5,
+            2,
+            1,
+            4,
+            2,
+            1,
             2
           ]
         },
@@ -187,7 +208,17 @@
             7,
             12,
             17,
-            5
+            5,
+            5,
+            11,
+            6,
+            6,
+            6,
+            9,
+            7,
+            7,
+            6,
+            6
           ]
         },
         "register": 14
@@ -204,6 +235,16 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -259,9 +300,32 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1310,6 +1374,16 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1341,9 +1415,29 @@
             0,
             1,
             8,
-            1
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1446,6 +1540,16 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
@@ -1472,6 +1576,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1525,9 +1649,39 @@
             8,
             36,
             13,
-            9
+            9,
+            11,
+            15,
+            11,
+            8,
+            9,
+            17,
+            9,
+            10,
+            9,
+            7
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1602,6 +1756,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1627,6 +1801,16 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1690,6 +1874,16 @@
             0,
             1,
             3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1739,7 +1933,27 @@
             51,
             2,
             27,
-            2
+            2,
+            30,
+            1,
+            39,
+            2,
+            31,
+            1,
+            31,
+            2,
+            31,
+            1,
+            39,
+            2,
+            35,
+            2,
+            35,
+            2,
+            33,
+            2,
+            32,
+            1
           ]
         },
         "register": 5
@@ -1777,6 +1991,16 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1829,7 +2053,17 @@
             4,
             10,
             6,
-            3
+            3,
+            5,
+            7,
+            4,
+            4,
+            3,
+            4,
+            5,
+            6,
+            4,
+            5
           ]
         },
         "register": 3
@@ -1928,6 +2162,16 @@
             1,
             0,
             1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
             1
           ]
         },
@@ -2755,7 +2999,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI, updateToolBarActiveGUI, updateToolBarGUI } from \"../gui\";\nimport { initBoundsHelper, initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { MoveInput } from \"./move\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = initBoundsHelper();\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: BlockID[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n    get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  constructor(scene: THREE.Scene) {\n    this.camera.position.set(\n      PlayerInitPosition.x,\n      PlayerInitPosition.y,\n      PlayerInitPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    new MoveInput(this);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n    document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n    \n    updateToolBarGUI(this.toolbar);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.controls.isLocked) {\n      this.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        this.activeToolbarIndex = Number(event.key) - 1;\n        updateToolBarActiveGUI(this.activeToolbarIndex);\n        break;\n      case \"KeyW\":\n        if (!this.wKeyPressed && performance.now() - this.lastWPressed < 200) {\n          this.isSprinting = true;\n          this.input.z = PlayerParams.maxSprintSpeed;\n        } else {\n          this.input.z = PlayerParams.maxSpeed;\n        }\n        this.wKeyPressed = true;\n        this.lastWPressed = performance.now();\n        break;\n      case \"KeyA\":\n        this.input.x = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyS\":\n        this.input.z = -PlayerParams.maxSpeed;\n        break;\n      case \"KeyD\":\n        this.input.x = PlayerParams.maxSpeed;\n        break;\n      case \"KeyR\":\n        this.position.set(\n          PlayerInitPosition.x,\n          PlayerInitPosition.y,\n          PlayerInitPosition.z\n        );\n        this.velocity.set(0, 0, 0);\n        break;\n      case \"Space\":\n        this.spacePressed = true;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.input.z = 0;\n        this.wKeyPressed = false;\n        this.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.input.x = 0;\n        break;\n      case \"Space\":\n        this.spacePressed = false;\n        break;\n    }\n  }\n}\n",
+      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { Line2 } from \"three/examples/jsm/lines/Line2.js\";\nimport { LineGeometry } from \"three/examples/jsm/lines/LineGeometry.js\";\nimport { LineMaterial } from \"three/examples/jsm/lines/LineMaterial.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI, updateToolBarGUI } from \"../gui\";\nimport { initBoundsHelper, initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { MoveInput } from \"./move\";\nimport { MouseInput } from \"./mouse\";\n\nfunction cuboid(width: number, height: number, depth: number) {\n  const hw = width * 0.5;\n  const hh = height * 0.5;\n  const hd = depth * 0.5;\n\n  const position = [\n    [-hw, -hh, -hd],\n    [-hw, hh, -hd],\n    [hw, hh, -hd],\n    [hw, -hh, -hd],\n    [-hw, -hh, -hd],\n\n    [-hw, -hh, hd],\n    [-hw, hh, hd],\n    [-hw, hh, -hd],\n    [-hw, hh, hd],\n\n    [hw, hh, hd],\n    [hw, hh, -hd],\n    [hw, hh, hd],\n\n    [hw, -hh, hd],\n    [hw, -hh, -hd],\n    [hw, -hh, hd],\n    [-hw, -hh, hd],\n  ].flat();\n\n  return position;\n}\n\nconst selectionMaterial = new LineMaterial({\n  color: 0x000000,\n  opacity: 0.9,\n  linewidth: 1,\n  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),\n});\nconst selectionLineGeometry = new LineGeometry();\nselectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));\nconst CENTER_SCREEN = new THREE.Vector2(0, 0);\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  boundsHelper = initBoundsHelper();\n  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);\n  controls = new PointerLockControls(this.camera, document.body);\n  raycaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  selectedCoords: THREE.Vector3 | null = null;\n  selectedBlockSize: THREE.Vector3 | null = null;\n  blockPlacementCoords: THREE.Vector3 | null = null;\n\n  toolbar: BlockID[] = [\n    BlockID.Grass,\n    BlockID.Dirt,\n    BlockID.Stone,\n    BlockID.StoneBrick,\n    BlockID.RedstoneLamp,\n    BlockID.CoalOre,\n    BlockID.IronOre,\n    BlockID.OakLog,\n    BlockID.Leaves,\n  ];\n  activeToolbarIndex = 0;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  get activeBlockId() {\n    return this.toolbar[this.activeToolbarIndex];\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.camera.position.set(\n      PlayerInitPosition.x,\n      PlayerInitPosition.y,\n      PlayerInitPosition.z\n    );\n    this.boundsHelper.visible = false;\n    this.cameraHelper.visible = false;\n    this.selectionHelper.visible = false;\n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    scene.add(this.boundsHelper);\n    scene.add(this.selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n\n    new MoveInput(this);\n    new MouseInput(this, world);\n\n    updateToolBarGUI(this.toolbar);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRaycaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  updateBoundsHelper() {\n    this.boundsHelper.position.copy(this.camera.position);\n    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  /**\n   * Updates the raycaster used for block selection\n   */\n  updateRaycaster(world: World) {\n    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);\n    const intersections = this.raycaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n\n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        this.selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      this.selectedCoords = chunk.position.clone();\n      this.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        this.blockPlacementCoords = this.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n\n      this.selectionHelper.position.copy(this.selectedCoords);\n      this.selectionHelper.visible = true;\n    } else {\n      this.selectedCoords = null;\n      this.selectionHelper.visible = false;\n    }\n  }\n\n  updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n\n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -2767,6 +3011,15 @@
       "__content": "// 世界参数的默认值\nexport const DefaultWorldParams = {\n    seed: 0,\n    terrain: {\n      scale: 50,\n      magnitude: 0.1,\n      offset: 0.5,\n    },\n    surface: {\n      offset: 4,\n      magnitude: 4,\n    },\n    bedrock: {\n      offset: 1,\n      magnitude: 2,\n    },\n    trees: {\n      frequency: 0.04,\n      trunkHeight: {\n        min: 5,\n        max: 7,\n      },\n      canopy: {\n        size: {\n          min: 1,\n          max: 3,\n        },\n      },\n    },\n    grass: {\n      frequency: 0.02,\n      patchSize: 5,\n    },\n    flowers: {\n      frequency: 0.0075,\n    },\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/literal.ts"
+    },
+    "game/player/mouse": {
+      "path": "game/player/mouse",
+      "id": "game/player/mouse",
+      "file": "game/player/mouse.ts",
+      "absPath": "/game/player/mouse",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n        if (event.button === 0 && this.player.selectedCoords) {\n        // Left click 移除选中的方块\n        this.world.removeBlock(\n            Math.ceil(this.player.selectedCoords.x - 0.5),\n            Math.ceil(this.player.selectedCoords.y - 0.5),\n            Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n        } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n            const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n            );\n            const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n            );\n\n            // 检查是否超出可以放置方块的距离\n            if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;\n\n            // Right click 放置方块\n            this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n            );\n        }\n        }\n    }\n    }\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
     "game/player/utils": {
       "path": "game/player/utils",
@@ -2872,7 +3125,7 @@
       "id": "game/Game",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { PlayerParams } from \"./player/literal\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      this.initListeners();\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    const wrap = document.getElementById('canvas_wrap');\n    wrap?.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n  onMouseDown(event: MouseEvent) {\n    if (this.player.controls.isLocked) {\n      if (event.button === 0 && this.player.selectedCoords) {\n        // Left click 移除选中的方块\n        this.world.removeBlock(\n          Math.ceil(this.player.selectedCoords.x - 0.5),\n          Math.ceil(this.player.selectedCoords.y - 0.5),\n          Math.ceil(this.player.selectedCoords.z - 0.5)\n        );\n      } else if (event.button === 2 && this.player.blockPlacementCoords) {\n        // console.log(\"adding block\", this.player.activeBlockId);\n        if (this.player.activeBlockId != null) {\n          const playerPos = new THREE.Vector3(\n            Math.floor(this.player.position.x),\n            Math.floor(this.player.position.y) - 1,\n            Math.floor(this.player.position.z)\n          );\n          const blockPos = new THREE.Vector3(\n            Math.floor(this.player.blockPlacementCoords.x - 0.5),\n            Math.floor(this.player.blockPlacementCoords.y - 0.5),\n            Math.floor(this.player.blockPlacementCoords.z - 0.5)\n          );\n\n          // 检查是否超出可以放置方块的距离\n          if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;\n\n          // Right click 放置方块\n          this.world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            this.player.activeBlockId\n          );\n        }\n      }\n    }\n  }\n\n  initListeners() {\n    window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n    document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { PlayerParams } from \"./player/literal\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n    this.renderer.setClearColor(0x80abfe);\n\n    const wrap = document.getElementById('canvas_wrap');\n    wrap?.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  onWindowResize() {\n    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = window.innerWidth / window.innerHeight;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(window.innerWidth, window.innerHeight);\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
     },
@@ -5078,8 +5331,34 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/player/mouse.ts": {
+            "bytes": 1952,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../world/World",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/player/literal.ts",
+                "kind": "import-statement",
+                "original": "./literal"
+              },
+              {
+                "path": "./Player",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/player/Player.ts": {
-            "bytes": 8324,
+            "bytes": 8401,
             "imports": [
               {
                 "path": "@tweenjs/tween.js",
@@ -5145,6 +5424,11 @@
                 "path": "src/pages/game/player/move.ts",
                 "kind": "import-statement",
                 "original": "./move"
+              },
+              {
+                "path": "src/pages/game/player/mouse.ts",
+                "kind": "import-statement",
+                "original": "./mouse"
               }
             ],
             "format": "esm"
@@ -5213,7 +5497,7 @@
             "format": "esm"
           },
           "src/pages/game/Game.ts": {
-            "bytes": 5280,
+            "bytes": 3653,
             "imports": [
               {
                 "path": "three",
@@ -5266,11 +5550,6 @@
                 "original": "./audio/AudioManager"
               },
               {
-                "path": "src/pages/game/player/literal.ts",
-                "kind": "import-statement",
-                "original": "./player/literal"
-              },
-              {
                 "path": "src/pages/game/dev/orbitCamera.ts",
                 "kind": "import-statement",
                 "original": "./dev/orbitCamera"
@@ -5320,7 +5599,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 12190,
+            "bytes": 12411,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5501,6 +5780,11 @@
                 "path": "src/pages/game/world/literal.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/world/literal.ts"
+              },
+              {
+                "path": "src/pages/game/player/mouse.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/player/mouse.ts"
               },
               {
                 "path": "src/pages/game/player/utils.ts",
@@ -5902,6 +6186,11 @@
               },
               {
                 "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7240,8 +7529,11 @@
               "src/pages/game/player/move.ts": {
                 "bytesInOutput": 2773
               },
+              "src/pages/game/player/mouse.ts": {
+                "bytesInOutput": 1887
+              },
               "src/pages/game/player/Player.ts": {
-                "bytesInOutput": 7993
+                "bytesInOutput": 8055
               },
               "src/pages/components/debug.tsx": {
                 "bytesInOutput": 749
@@ -7253,7 +7545,7 @@
                 "bytesInOutput": 7518
               },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 4777
+                "bytesInOutput": 3225
               },
               "src/pages/index.tsx": {
                 "bytesInOutput": 1809
@@ -7268,7 +7560,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 10444
+                "bytesInOutput": 10631
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -7289,7 +7581,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 151207
+            "bytes": 151826
           }
         }
       }
@@ -11065,21 +11357,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 520,
-          "importKind": "value",
-          "source": "./player/literal",
-          "specifiers": [
-            {
-              "imported": "PlayerParams",
-              "local": "PlayerParams",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 472,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 594,
+          "end": 545,
           "importKind": "value",
           "source": "./dev/orbitCamera",
           "specifiers": [
@@ -11094,7 +11372,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 521,
+          "start": 472,
           "type": "ImportDeclaration"
         }
       ],
@@ -11684,6 +11962,20 @@
           ],
           "start": 679,
           "type": "ImportDeclaration"
+        },
+        {
+          "end": 752,
+          "importKind": "value",
+          "source": "./mouse",
+          "specifiers": [
+            {
+              "imported": "MouseInput",
+              "local": "MouseInput",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 715,
+          "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/literal.ts": [
@@ -11698,6 +11990,63 @@
             }
           ],
           "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 72,
+          "importKind": "value",
+          "source": "../world/World",
+          "specifiers": [
+            {
+              "imported": "World",
+              "local": "World",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 114,
+          "importKind": "value",
+          "source": "./literal",
+          "specifiers": [
+            {
+              "imported": "PlayerParams",
+              "local": "PlayerParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 73,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 149,
+          "importKind": "value",
+          "source": "./Player",
+          "specifiers": [
+            {
+              "imported": "Player",
+              "local": "Player",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 115,
           "type": "ImportDeclaration"
         }
       ],

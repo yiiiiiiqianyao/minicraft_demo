@@ -11,6 +11,7 @@ import { updatePositionGUI, updateToolBarGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { MoveInput } from "./move";
+import { MouseInput } from "./mouse";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -106,7 +107,7 @@ export class Player {
     return this.#worldVelocity;
   }
 
-    get position() {
+  get position() {
     return this.camera.position;
   }
 
@@ -114,7 +115,7 @@ export class Player {
     return this.toolbar[this.activeToolbarIndex];
   }
 
-  constructor(scene: THREE.Scene) {
+  constructor(scene: THREE.Scene, world: World) {
     this.camera.position.set(
       PlayerInitPosition.x,
       PlayerInitPosition.y,
@@ -128,13 +129,12 @@ export class Player {
     scene.add(this.boundsHelper);
     scene.add(this.selectionHelper);
 
-    
-
     setTimeout(() => {
       this.controls.lock();
     }, 2000);
 
     new MoveInput(this);
+    new MouseInput(this, world);
 
     updateToolBarGUI(this.toolbar);
   }

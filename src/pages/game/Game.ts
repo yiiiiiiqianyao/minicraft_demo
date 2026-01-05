@@ -8,7 +8,6 @@ import { World } from "./world/World";
 import { SkyManager, sunSettings } from "./sky";
 import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
-import { PlayerParams } from "./player/literal";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 
 export default class Game {
@@ -32,7 +31,8 @@ export default class Game {
     this.clock = new THREE.Clock();
     initMainMenu(() => {
       this.initScene();
-      this.initListeners();
+      // this.initListeners();
+      window.addEventListener("resize", this.onWindowResize.bind(this), false);
       audioManager.playBtm();
     });
   }
@@ -61,7 +61,7 @@ export default class Game {
     this.world = new World(0, this.scene);
     this.scene.add(this.world);
 
-    this.player = new Player(this.scene);
+    this.player = new Player(this.scene, this.world);
     this.physics = new Physics(this.scene);
 
     this.skyManager.updateSunPosition(0, this.player);
@@ -80,50 +80,6 @@ export default class Game {
     this.draw();
   }
 
-  // 处理鼠标点击事件 目前是移除选中的方块和放置方块
-  onMouseDown(event: MouseEvent) {
-    if (this.player.controls.isLocked) {
-      if (event.button === 0 && this.player.selectedCoords) {
-        // Left click 移除选中的方块
-        this.world.removeBlock(
-          Math.ceil(this.player.selectedCoords.x - 0.5),
-          Math.ceil(this.player.selectedCoords.y - 0.5),
-          Math.ceil(this.player.selectedCoords.z - 0.5)
-        );
-      } else if (event.button === 2 && this.player.blockPlacementCoords) {
-        // console.log("adding block", this.player.activeBlockId);
-        if (this.player.activeBlockId != null) {
-          const playerPos = new THREE.Vector3(
-            Math.floor(this.player.position.x),
-            Math.floor(this.player.position.y) - 1,
-            Math.floor(this.player.position.z)
-          );
-          const blockPos = new THREE.Vector3(
-            Math.floor(this.player.blockPlacementCoords.x - 0.5),
-            Math.floor(this.player.blockPlacementCoords.y - 0.5),
-            Math.floor(this.player.blockPlacementCoords.z - 0.5)
-          );
-
-          // 检查是否超出可以放置方块的距离
-          if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;
-
-          // Right click 放置方块
-          this.world.addBlock(
-            blockPos.x,
-            blockPos.y,
-            blockPos.z,
-            this.player.activeBlockId
-          );
-        }
-      }
-    }
-  }
-
-  initListeners() {
-    window.addEventListener("resize", this.onWindowResize.bind(this), false);
-    document.addEventListener("mousedown", this.onMouseDown.bind(this), false);
-  }
-
   onWindowResize() {
     this.orbitCamera.aspect = window.innerWidth / window.innerHeight;
     this.orbitCamera.updateProjectionMatrix();
@@ -131,8 +87,6 @@ export default class Game {
     this.player.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
-
-
 
   draw() {
     const currentTime = performance.now();
