@@ -11,6 +11,7 @@ import audioManager from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
 
+let ScreenWrap: HTMLDivElement;
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
@@ -44,16 +45,14 @@ export default class Game {
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-    const wrap = document.getElementById('canvas_wrap');
-    if (!wrap) return;
-    const { width, height } = wrap.getBoundingClientRect();
+    ScreenWrap = document.getElementById('canvas_wrap') as HTMLDivElement
+    const { width, height } = ScreenWrap.getBoundingClientRect();
     ScreenViewer.width = width;
     ScreenViewer.height = height;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
     this.renderer.setClearColor(0x80abfe);
-    wrap?.appendChild(this.renderer.domElement);
+    ScreenWrap.appendChild(this.renderer.domElement);
 
     const { orbitCamera, controls } = initOrbitCamera(this.renderer);
     this.orbitCamera = orbitCamera;
@@ -85,7 +84,10 @@ export default class Game {
   }
 
   onWindowResize() {
-    // TODO 屏幕大小改变后 raycast 拾取不准确 需要优化
+    const { width, height } = ScreenWrap.getBoundingClientRect();
+    ScreenViewer.width = width;
+    ScreenViewer.height = height;
+
     const aspect = ScreenViewer.width / ScreenViewer.height;
     if(this.orbitCamera) {
       this.orbitCamera.aspect = aspect;

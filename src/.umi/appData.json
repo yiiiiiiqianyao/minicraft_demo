@@ -108,6 +108,9 @@
             0,
             1,
             0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -130,7 +133,10 @@
             3,
             5,
             3,
-            3
+            3,
+            3,
+            3,
+            2
           ]
         },
         "register": 1
@@ -153,7 +159,10 @@
             4,
             8,
             11,
-            10
+            10,
+            9,
+            8,
+            11
           ]
         },
         "register": 14
@@ -173,7 +182,10 @@
             0,
             0,
             0,
-            1
+            1,
+            0,
+            0,
+            0
           ]
         },
         "register": 0
@@ -199,9 +211,15 @@
             0,
             1,
             0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1223,6 +1241,22 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1243,9 +1277,15 @@
             7,
             1,
             1,
+            1,
+            1,
+            1,
             1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1326,9 +1366,18 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1372,12 +1421,21 @@
             50,
             18,
             11,
-            15
+            15,
+            19,
+            10,
+            11
           ],
           "addPolyfillImports": [
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1405,6 +1463,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1423,6 +1487,9 @@
         "hooks": {
           "onGenerateFiles": [
             65,
+            0,
+            0,
+            0,
             0,
             0,
             0
@@ -1471,7 +1538,10 @@
             0,
             0,
             1,
-            0
+            0,
+            0,
+            0,
+            1
           ],
           "addBeforeMiddlewares": [
             0
@@ -1498,6 +1568,12 @@
             29,
             1,
             35,
+            1,
+            35,
+            2,
+            31,
+            2,
+            32,
             1
           ]
         },
@@ -1531,6 +1607,9 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
             0
           ],
           "onBeforeCompiler": [
@@ -1566,7 +1645,10 @@
             250,
             8,
             6,
-            5
+            5,
+            5,
+            6,
+            4
           ]
         },
         "register": 3
@@ -1654,7 +1736,10 @@
             1,
             0,
             1,
-            0
+            0,
+            0,
+            0,
+            1
           ]
         },
         "register": 0
@@ -2625,7 +2710,7 @@
       "id": "game/Game",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    const wrap = document.getElementById('canvas_wrap');\n    if (!wrap) return;\n    const { width, height } = wrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    this.renderer.setClearColor(0x80abfe);\n    wrap?.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  onWindowResize() {\n    // TODO 屏幕大小改变后 raycast 拾取不准确 需要优化\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    if(this.orbitCamera) {\n      this.orbitCamera.aspect = aspect;\n      this.orbitCamera.updateProjectionMatrix();\n    }\n    if (this.player) {\n      this.player.camera.aspect = aspect;\n      this.player.camera.updateProjectionMatrix();\n    }\n    if (this.renderer) {\n      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    }\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\n\nlet ScreenWrap: HTMLDivElement;\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n    ScreenWrap = document.getElementById('canvas_wrap') as HTMLDivElement\n    const { width, height } = ScreenWrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    this.renderer.setClearColor(0x80abfe);\n    ScreenWrap.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  onWindowResize() {\n    const { width, height } = ScreenWrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n    // TODO 屏幕大小改变后 raycast 拾取不准确 需要优化\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    if(this.orbitCamera) {\n      this.orbitCamera.aspect = aspect;\n      this.orbitCamera.updateProjectionMatrix();\n    }\n    if (this.player) {\n      this.player.camera.aspect = aspect;\n      this.player.camera.updateProjectionMatrix();\n    }\n    if (this.renderer) {\n      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    }\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
     },
@@ -5049,7 +5134,7 @@
             "format": "esm"
           },
           "src/pages/game/Game.ts": {
-            "bytes": 4021,
+            "bytes": 4119,
             "imports": [
               {
                 "path": "three",
@@ -7118,7 +7203,7 @@
                 "bytesInOutput": 7518
               },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 3542
+                "bytesInOutput": 3682
               },
               "src/pages/index.tsx": {
                 "bytesInOutput": 1809
@@ -7154,7 +7239,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 155371
+            "bytes": 155511
           }
         }
       }
