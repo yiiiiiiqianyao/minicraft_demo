@@ -11,6 +11,7 @@ import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
 import { boundsHelper, selectionHelper } from "../helper";
+import { Action } from "./action";
 
 export class Player {
   onGround = false;
@@ -37,7 +38,6 @@ export class Player {
     0,
     5
   );
-  blockPlacementCoords: THREE.Vector3 | null = null;
   public keyboardInput = new KeyboardInput(this);
   /**
    * Updates the raycaster used for block selection
@@ -59,10 +59,8 @@ export class Player {
     return this.camera.position;
   }
 
-
   constructor(scene: THREE.Scene, world: World) {
     this.camera.position.copy(PlayerInitPosition);
-    
     this.cameraHelper.visible = false;
     
     scene.add(this.camera);
@@ -204,7 +202,7 @@ export class Player {
 
       if (this.keyboardInput.activeBlockId !== BlockID.Air && intersection.normal) {
         // Update block placement coords to be 1 block over in the direction of the normal
-        this.blockPlacementCoords = PlayerParams.selectedCoords
+        Action.blockPlacementCoords = PlayerParams.selectedCoords
           .clone()
           .add(intersection.normal);
       }

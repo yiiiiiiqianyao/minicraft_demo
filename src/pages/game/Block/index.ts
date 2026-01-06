@@ -15,6 +15,10 @@ export enum BlockID {
   StoneBrick = 13,
 }
 
+export const blockIDValues = Object.values(BlockID).filter(
+      (value) => typeof value === "number"
+    ) as BlockID[];
+
 export const blockIdToKey = {
   [BlockID.Air]: "air",
   [BlockID.Grass]: "grass", // 草方块（目前作为地面）

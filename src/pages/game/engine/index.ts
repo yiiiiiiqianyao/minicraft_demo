@@ -3,7 +3,6 @@ import { ScreenViewer } from "../gui/viewer";
 
 // TODO 统一管理 scene renderer camera 等等
 
-
 export class Engine {
     static screenWrap: HTMLDivElement;
     static scene: THREE.Scene;

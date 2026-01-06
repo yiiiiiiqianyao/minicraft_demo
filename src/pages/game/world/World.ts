@@ -11,6 +11,7 @@ import { PlayerInitPosition } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
+// import { DropManager } from "./drop";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -34,6 +35,7 @@ export class World extends THREE.Group {
   pointLights = new Map<string, THREE.PointLight>();
 
   wireframeMode = false;
+  // dropManager = new DropManager();
   private initialLoadComplete = false;
 
   constructor(seed = 0, scene: THREE.Scene) {
@@ -43,6 +45,10 @@ export class World extends THREE.Group {
     World.simplex = new SimplexNoise(World.rng);
     this.scene = scene;
     this.chunkQueue = [];
+    
+    setTimeout(() => {
+      // this.dropManager.drop(BlockID.Dirt, new THREE.Vector3(32, 72, 32));  
+    }, 5000);
   }
 
   /**
@@ -289,9 +295,8 @@ export class World extends THREE.Group {
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     const blockToRemove = this.getBlock(x, y, z);
 
-    if (blockToRemove?.block === BlockID.Bedrock) {
-      return;
-    }
+    // 不能破坏 基岩 bedrock
+    if (blockToRemove?.block === BlockID.Bedrock) return;
 
     if (chunk && chunk.loaded) {
       // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
@@ -314,9 +319,11 @@ export class World extends THREE.Group {
       this.revealBlock(x, y, z + 1);
 
       // if above block is passthrough, remove it as well
+      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true
       const aboveBlock = this.getBlock(x, y + 1, z);
       if (
         aboveBlock &&
+        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断
         BlockFactory.getBlock(aboveBlock.block).canPassThrough &&
         aboveBlock.block !== BlockID.Air
       ) {

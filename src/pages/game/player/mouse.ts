@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { World } from "../world/World";
 import { PlayerParams } from "./literal";
 import { Player } from "./Player";
+import { Action } from "./action";
 
 export class MouseInput {
     private player: Player;
@@ -24,7 +25,7 @@ export class MouseInput {
             // TODO 需要考虑是否能够破坏和移除方块
             // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
             world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));
-        } else if (event.button === 2 && player.blockPlacementCoords) {
+        } else if (event.button === 2 && Action.blockPlacementCoords) {
             // console.log("adding block", this.player.activeBlockId);
             if (player.keyboardInput.activeBlockId != null) {
                 const playerPos = new THREE.Vector3(
@@ -33,9 +34,9 @@ export class MouseInput {
                 Math.floor(player.position.z)
                 );
                 const blockPos = new THREE.Vector3(
-                Math.floor(player.blockPlacementCoords.x - 0.5),
-                Math.floor(player.blockPlacementCoords.y - 0.5),
-                Math.floor(player.blockPlacementCoords.z - 0.5)
+                Math.floor(Action.blockPlacementCoords.x - 0.5),
+                Math.floor(Action.blockPlacementCoords.y - 0.5),
+                Math.floor(Action.blockPlacementCoords.z - 0.5)
                 );
 
                 // 检查是否超出可以放置方块的距离

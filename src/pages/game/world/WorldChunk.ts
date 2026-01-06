@@ -1,17 +1,12 @@
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
-import { BlockID } from "../Block";
+import { BlockID, blockIDValues } from "../Block";
 import { RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
 import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
-
-const geometry = new THREE.BoxGeometry();
-// TODO 修改草的实际大小
-const crossGeometry = new THREE.PlaneGeometry();
-const flowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);
-
+import { getInstancedGeometry } from "./geometry";
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
@@ -114,25 +109,13 @@ export class WorldChunk extends THREE.Group {
 
     // Create lookup table where key is block id
     const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
-    const blockIDValues = Object.values(BlockID).filter(
-      (value) => typeof value === "number"
-    ) as BlockID[];
 
     for (const blockId of blockIDValues) {
       const block = BlockFactory.getBlock(blockId);
       const blockGeometry = block.geometry;
 
-      const getInstancedGeometry = () => {
-        if (blockGeometry === RenderGeometry.Cube) {
-          return geometry;
-        } else if (blockGeometry === RenderGeometry.Cross) {
-          return crossGeometry;
-        } else if (blockGeometry === RenderGeometry.Flower) {
-          return flowerGeometry;
-        }
-      };
-
-      const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
+      // 每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
+      const mesh = new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
         this.wireframeMode
           ? new THREE.MeshBasicMaterial({ wireframe: true })
           : block.material,
@@ -317,6 +300,7 @@ export class WorldChunk extends THREE.Group {
       ) as THREE.InstancedMesh;
 
       if (mesh) {
+        // 放置方块的时候播放对应的音效
         this.playBlockSound(block.block);
         if (blockClass.geometry == RenderGeometry.Cube) {
           const instanceId = mesh.count++;
@@ -327,6 +311,7 @@ export class WorldChunk extends THREE.Group {
           matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
           mesh.setMatrixAt(instanceId, matrix);
           mesh.instanceMatrix.needsUpdate = true;
+          // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
           mesh.computeBoundingSphere();
         } else if (blockClass.geometry == RenderGeometry.Cross) {
           const instanceId1 = mesh.count++;
@@ -409,13 +394,14 @@ export class WorldChunk extends THREE.Group {
    * Checks if the given coordinates are within the world bounds
    */
   inBounds(x: number, y: number, z: number): boolean {
+    const { width, height } = this.size;
     return (
       x >= 0 &&
-      x < this.size.width &&
+      x < width &&
       y >= 0 &&
-      y < this.size.height &&
+      y < height &&
       z >= 0 &&
-      z < this.size.width
+      z < width
     );
   }
 

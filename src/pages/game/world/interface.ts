@@ -47,6 +47,7 @@ export interface IWorldParams {
   };
 }
 
+// chunk 内固定方块的数据类型
 export interface IInstanceData {
   block: BlockID;
   instanceIds: number[]; // reference to mesh instanceId

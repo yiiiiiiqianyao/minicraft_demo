@@ -3,6 +3,7 @@ import { IPlayerParams } from "./interface";
 
 export const PlayerParams: IPlayerParams = {
     height: 1.75,
+    // height: 2.75,
     // radius: 0.5,
     // 玩家的碰撞盒半径应该调整为 0.25 较为合适
     radius: 0.25,
