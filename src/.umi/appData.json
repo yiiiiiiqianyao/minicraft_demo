@@ -44,7 +44,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 10
       },
       "enableBy": "register"
     },
@@ -88,10 +88,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            5
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -106,29 +106,12 @@
         "hooks": {
           "modifyRoutes": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -142,35 +125,15 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            24,
-            2,
-            2,
-            2,
-            1,
-            2,
-            2,
-            2,
-            2,
+            17,
             2,
             3,
             5,
-            1,
-            2,
-            2,
-            1,
-            2,
-            2,
-            1,
-            1,
-            2,
             3,
-            3,
-            7,
-            2,
-            1
+            3
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -184,33 +147,16 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            95
+            53
           ],
           "onGenerateFiles": [
-            1,
             4,
-            5,
-            4,
-            4,
-            3,
-            5,
-            6,
-            4,
-            4,
-            5,
-            6,
-            6,
-            5,
-            6,
-            4,
-            6,
-            7,
-            6,
-            6,
-            5
+            8,
+            11,
+            10
           ]
         },
-        "register": 16
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -227,24 +173,7 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
+            1
           ]
         },
         "register": 0
@@ -261,63 +190,18 @@
       "time": {
         "hooks": {
           "onCheckConfig": [
-            0
+            1
           ],
           "onCheck": [
             1
           ],
           "onPrepareBuildSuccess": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0
           ],
           "onCheckCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -383,7 +267,7 @@
             0
           ]
         },
-        "register": 9
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -1267,7 +1151,7 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            5
+            6
           ]
         },
         "register": 1
@@ -1283,7 +1167,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 51
+        "register": 49
       },
       "enableBy": "register"
     },
@@ -1296,7 +1180,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 48
+        "register": 39
       },
       "enableBy": "config"
     },
@@ -1309,7 +1193,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 22
+        "register": 15
       },
       "enableBy": "config"
     },
@@ -1356,46 +1240,12 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
-            0,
-            0,
-            1,
-            0,
+            7,
             1,
             1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
             1
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1429,13 +1279,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 25
+        "register": 22
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1476,60 +1326,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addEntryImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1567,66 +1366,15 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            2
+            1
           ],
           "onGenerateFiles": [
-            49,
-            13,
-            9,
-            8,
-            8,
-            7,
-            12,
-            8,
-            9,
-            8,
-            8,
-            15,
-            12,
-            7,
-            8,
-            8,
-            12,
-            10,
-            10,
+            50,
+            18,
             11,
-            8
+            15
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1637,7 +1385,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1650,40 +1398,6 @@
       "time": {
         "hooks": {
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1708,30 +1422,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            81,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            65,
             0,
             0,
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1744,7 +1441,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1757,7 +1454,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1773,31 +1470,14 @@
           "onGenerateFiles": [
             0,
             0,
-            0,
             1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            1
+            0
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1811,51 +1491,17 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            14,
+            11,
             2,
             33,
             2,
-            34,
-            2,
-            44,
-            2,
-            32,
-            1,
-            33,
-            1,
-            34,
-            1,
-            30,
-            1,
-            37,
-            2,
-            31,
-            1,
             29,
             1,
-            40,
-            1,
-            48,
-            2,
-            37,
-            2,
-            42,
-            1,
-            33,
-            1,
             35,
-            2,
-            37,
-            2,
-            34,
-            2,
-            35,
-            1,
-            27,
-            2
+            1
           ]
         },
-        "register": 6
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1883,29 +1529,12 @@
         "hooks": {
           "onGenerateFiles": [
             0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             1,
-            0,
-            0,
-            0,
-            1
+            0
           ],
           "onBeforeCompiler": [
-            1
+            2
           ]
         },
         "register": 0
@@ -1920,7 +1549,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1934,30 +1563,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            239,
-            9,
-            6,
-            5,
-            5,
-            4,
-            6,
-            6,
-            7,
-            5,
-            5,
+            250,
             8,
-            5,
             6,
-            4,
-            4,
-            5,
-            6,
-            5,
-            4,
             5
           ]
         },
-        "register": 4
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -1971,7 +1583,7 @@
       "time": {
         "hooks": {
           "addBeforeBabelPresets": [
-            0
+            1
           ]
         },
         "register": 2
@@ -2013,7 +1625,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -2025,7 +1637,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 16
+        "register": 13
       },
       "enableBy": "config"
     },
@@ -2039,30 +1651,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            2,
             1,
             0,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            1,
             1,
             0
           ]
         },
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -2087,7 +1682,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2100,7 +1695,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2142,7 +1737,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -2154,7 +1749,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2179,7 +1774,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -2217,7 +1812,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            569
+            446
           ]
         },
         "register": 1
@@ -2246,7 +1841,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 24
+        "register": 23
       },
       "enableBy": "register"
     },
@@ -2260,10 +1855,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            9
+            8
           ]
         },
-        "register": 43
+        "register": 34
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2301,7 +1896,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2314,7 +1909,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2327,7 +1922,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2340,7 +1935,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2353,7 +1948,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2366,7 +1961,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2379,7 +1974,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2418,7 +2013,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2431,7 +2026,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2444,7 +2039,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2457,7 +2052,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2470,7 +2065,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2509,7 +2104,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 28
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -2522,7 +2117,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2535,7 +2130,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2985,7 +2580,7 @@
       "id": "game/gui/viewer",
       "file": "game/gui/viewer.ts",
       "absPath": "/game/gui/viewer",
-      "__content": "// 游戏的屏幕\n\nexport const ScreenViewer = {\n    width: window.innerWidth,\n    height: window.innerHeight,\n}",
+      "__content": "// 游戏的屏幕\n// TODO 后续需要改成实际的画布大小\nexport const ScreenViewer = {\n    width: window.innerWidth,\n    height: window.innerHeight,\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/viewer.ts"
     },
@@ -3030,7 +2625,7 @@
       "id": "game/Game",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    this.renderer.setClearColor(0x80abfe);\n\n    const wrap = document.getElementById('canvas_wrap');\n    wrap?.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  onWindowResize() {\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    this.orbitCamera.aspect = aspect;\n    this.orbitCamera.updateProjectionMatrix();\n    this.player.camera.aspect = aspect;\n    this.player.camera.updateProjectionMatrix();\n    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Physics } from \"./Physics\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager, sunSettings } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\n\nexport default class Game {\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n\n    this.renderer = new THREE.WebGLRenderer();\n    this.renderer.shadowMap.enabled = true;\n    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;\n\n    const wrap = document.getElementById('canvas_wrap');\n    if (!wrap) return;\n    const { width, height } = wrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    this.renderer.setClearColor(0x80abfe);\n    wrap?.appendChild(this.renderer.domElement);\n\n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene);\n\n    this.skyManager.updateSunPosition(0, this.player);\n\n    createUI(\n      this.world,\n      this.player,\n      this.physics,\n      this.scene,\n      this.renderer,\n      sunSettings,\n      this.skyManager.sunHelper,\n      this.skyManager.shadowHelper\n    );\n\n    this.draw();\n  }\n\n  onWindowResize() {\n    // TODO 屏幕大小改变后 raycast 拾取不准确 需要优化\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    if(this.orbitCamera) {\n      this.orbitCamera.aspect = aspect;\n      this.orbitCamera.updateProjectionMatrix();\n    }\n    if (this.player) {\n      this.player.camera.aspect = aspect;\n      this.player.camera.updateProjectionMatrix();\n    }\n    if (this.renderer) {\n      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    }\n  }\n\n  draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime, this.player, this.world);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();\n\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    this.renderer.render(\n      this.scene,\n      this.player.controls.isLocked ? this.player.camera : this.orbitCamera\n    );\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
     },
@@ -5454,7 +5049,7 @@
             "format": "esm"
           },
           "src/pages/game/Game.ts": {
-            "bytes": 3699,
+            "bytes": 4021,
             "imports": [
               {
                 "path": "three",
@@ -7523,7 +7118,7 @@
                 "bytesInOutput": 7518
               },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 3249
+                "bytesInOutput": 3542
               },
               "src/pages/index.tsx": {
                 "bytesInOutput": 1809
@@ -7559,7 +7154,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 155078
+            "bytes": 155371
           }
         }
       }

@@ -45,11 +45,14 @@ export default class Game {
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
+    const wrap = document.getElementById('canvas_wrap');
+    if (!wrap) return;
+    const { width, height } = wrap.getBoundingClientRect();
+    ScreenViewer.width = width;
+    ScreenViewer.height = height;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
     this.renderer.setClearColor(0x80abfe);
-
-    const wrap = document.getElementById('canvas_wrap');
     wrap?.appendChild(this.renderer.domElement);
 
     const { orbitCamera, controls } = initOrbitCamera(this.renderer);
@@ -82,12 +85,19 @@ export default class Game {
   }
 
   onWindowResize() {
+    // TODO 屏幕大小改变后 raycast 拾取不准确 需要优化
     const aspect = ScreenViewer.width / ScreenViewer.height;
-    this.orbitCamera.aspect = aspect;
-    this.orbitCamera.updateProjectionMatrix();
-    this.player.camera.aspect = aspect;
-    this.player.camera.updateProjectionMatrix();
-    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
+    if(this.orbitCamera) {
+      this.orbitCamera.aspect = aspect;
+      this.orbitCamera.updateProjectionMatrix();
+    }
+    if (this.player) {
+      this.player.camera.aspect = aspect;
+      this.player.camera.updateProjectionMatrix();
+    }
+    if (this.renderer) {
+      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
+    }
   }
 
   draw() {
