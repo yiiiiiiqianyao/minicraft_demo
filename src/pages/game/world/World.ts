@@ -283,6 +283,7 @@ export class World extends THREE.Group {
     }
   }
 
+  // TODO 破坏 & 移除方块
   removeBlock(x: number, y: number, z: number) {
     const coords = this.worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);

@@ -230,7 +230,6 @@ export class WorldChunk extends THREE.Group {
       }
     }
   }
-
   setBlockId(x: number, y: number, z: number, blockId: BlockID) {
     if (this.inBounds(x, y, z)) {
       this.data[x][y][z].block = blockId;

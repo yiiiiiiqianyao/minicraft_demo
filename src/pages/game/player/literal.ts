@@ -1,6 +1,7 @@
 import * as THREE from "three";
+import { IPlayerParams } from "./interface";
 
-export const PlayerParams = {
+export const PlayerParams: IPlayerParams = {
     height: 1.75,
     // radius: 0.5,
     // 玩家的碰撞盒半径应该调整为 0.25 较为合适
@@ -11,6 +12,10 @@ export const PlayerParams = {
     maxSprintSpeed: 5.612,
     // 玩家跳跃速度
     jumpSpeed: 10,
+    // 玩家选中的方块坐标 可能未选中
+    selectedCoords: null,
+    // 玩家选中的方块大小 可能未选中
+    selectedBlockSize: null,
 }
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);

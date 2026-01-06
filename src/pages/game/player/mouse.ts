@@ -15,40 +15,40 @@ export class MouseInput {
 
     // 处理鼠标点击事件 目前是移除选中的方块和放置方块
     onMouseDown(event: MouseEvent) {
-    if (this.player.controls.isLocked) {
-        if (event.button === 0 && this.player.selectedCoords) {
-        // Left click 移除选中的方块
-        this.world.removeBlock(
-            Math.ceil(this.player.selectedCoords.x - 0.5),
-            Math.ceil(this.player.selectedCoords.y - 0.5),
-            Math.ceil(this.player.selectedCoords.z - 0.5)
-        );
-        } else if (event.button === 2 && this.player.blockPlacementCoords) {
-        // console.log("adding block", this.player.activeBlockId);
-        if (this.player.activeBlockId != null) {
-            const playerPos = new THREE.Vector3(
-            Math.floor(this.player.position.x),
-            Math.floor(this.player.position.y) - 1,
-            Math.floor(this.player.position.z)
-            );
-            const blockPos = new THREE.Vector3(
-            Math.floor(this.player.blockPlacementCoords.x - 0.5),
-            Math.floor(this.player.blockPlacementCoords.y - 0.5),
-            Math.floor(this.player.blockPlacementCoords.z - 0.5)
-            );
+        const { player, world } = this;
+        if (!player || !world) return;
+        if (!player.controls.isLocked) return;
+        if (event.button === 0 && PlayerParams.selectedCoords) {
+            const { x, y, z } = PlayerParams.selectedCoords;
+            // Left click 移除选中的方块
+            // TODO 需要考虑是否能够破坏和移除方块
+            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
+            world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));
+        } else if (event.button === 2 && player.blockPlacementCoords) {
+            // console.log("adding block", this.player.activeBlockId);
+            if (player.activeBlockId != null) {
+                const playerPos = new THREE.Vector3(
+                Math.floor(player.position.x),
+                Math.floor(player.position.y) - 1,
+                Math.floor(player.position.z)
+                );
+                const blockPos = new THREE.Vector3(
+                Math.floor(player.blockPlacementCoords.x - 0.5),
+                Math.floor(player.blockPlacementCoords.y - 0.5),
+                Math.floor(player.blockPlacementCoords.z - 0.5)
+                );
 
-            // 检查是否超出可以放置方块的距离
-            if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;
+                // 检查是否超出可以放置方块的距离
+                if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;
 
-            // Right click 放置方块
-            this.world.addBlock(
-            blockPos.x,
-            blockPos.y,
-            blockPos.z,
-            this.player.activeBlockId
-            );
+                // Right click 放置方块
+                world.addBlock(
+                    blockPos.x,
+                    blockPos.y,
+                    blockPos.z,
+                    player.activeBlockId
+                    );
+            }
         }
-        }
-    }
     }
 }

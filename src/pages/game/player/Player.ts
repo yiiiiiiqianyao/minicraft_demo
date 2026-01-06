@@ -80,8 +80,6 @@ export class Player {
     0,
     5
   );
-  selectedCoords: THREE.Vector3 | null = null;
-  selectedBlockSize: THREE.Vector3 | null = null;
   blockPlacementCoords: THREE.Vector3 | null = null;
 
   toolbar: BlockID[] = [
@@ -96,6 +94,11 @@ export class Player {
     BlockID.Leaves,
   ];
   activeToolbarIndex = 0;
+
+  /**
+   * Updates the raycaster used for block selection
+   */
+  private selectedBlockUuid: string | null = null;
 
     /*
    * Returns the velocity of the player in world coordinates
@@ -220,10 +223,6 @@ export class Player {
     this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
   }
 
-  /**
-   * Updates the raycaster used for block selection
-   */
-  private selectedBlockUuid: string | null = null;
   private updateRaycaster(world: World) {
     this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);
     const intersections = this.raycaster.intersectObjects(world.children, true);
@@ -257,16 +256,16 @@ export class Player {
 
       // Set the selected coordinates to origin of chunk
       // Then apply transformation matrix of block to get block coords
-      this.selectedCoords = chunk.position.clone();
-      this.selectedCoords.applyMatrix4(blockMatrix);
+      PlayerParams.selectedCoords = chunk.position.clone();
+      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);
 
       // Get the bounding box of the selected block
       const boundingBox = new THREE.Box3().setFromObject(intersection.object);
-      this.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
+      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
 
       if (this.activeBlockId !== BlockID.Air && intersection.normal) {
         // Update block placement coords to be 1 block over in the direction of the normal
-        this.blockPlacementCoords = this.selectedCoords
+        this.blockPlacementCoords = PlayerParams.selectedCoords
           .clone()
           .add(intersection.normal);
       }
@@ -276,10 +275,13 @@ export class Player {
         this.selectionHelper.scale.set(1, 1, 1);
       } 
       // TODO 草方块的选择框需要调整大小
-      this.selectionHelper.position.copy(this.selectedCoords);
+      this.selectionHelper.position.copy(PlayerParams.selectedCoords);
       this.selectionHelper.visible = true;
     } else {
-      this.selectedCoords = null;
+      // 没有选中的方块时，将选中坐标设为 null
+      PlayerParams.selectedCoords = null;
+      // 没有选中的方块时，将选中方块大小设为 null
+      PlayerParams.selectedBlockSize = null;
       this.selectionHelper.visible = false;
     }
   }
