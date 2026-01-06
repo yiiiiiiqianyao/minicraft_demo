@@ -9,6 +9,7 @@ import { SkyManager, sunSettings } from "./sky";
 import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
+import { ScreenViewer } from "./gui/viewer";
 
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
@@ -45,7 +46,7 @@ export default class Game {
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
     this.renderer.setClearColor(0x80abfe);
 
     const wrap = document.getElementById('canvas_wrap');
@@ -81,11 +82,12 @@ export default class Game {
   }
 
   onWindowResize() {
-    this.orbitCamera.aspect = window.innerWidth / window.innerHeight;
+    const aspect = ScreenViewer.width / ScreenViewer.height;
+    this.orbitCamera.aspect = aspect;
     this.orbitCamera.updateProjectionMatrix();
-    this.player.camera.aspect = window.innerWidth / window.innerHeight;
+    this.player.camera.aspect = aspect;
     this.player.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
   }
 
   draw() {

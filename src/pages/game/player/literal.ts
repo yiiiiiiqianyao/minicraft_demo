@@ -19,3 +19,6 @@ export const PlayerParams: IPlayerParams = {
 }
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
+
+// 玩家视线中心 鼠标屏幕坐标
+export const RayCenterScreen = new THREE.Vector2(0, 0);

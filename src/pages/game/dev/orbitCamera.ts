@@ -2,10 +2,11 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Player } from "../player/Player";
 import { PlayerInitPosition } from "../player/literal";
+import { ScreenViewer } from "../gui/viewer";
 export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
   const orbitCamera = new THREE.PerspectiveCamera(
     75,
-    window.innerWidth / window.innerHeight
+    ScreenViewer.width / ScreenViewer.height
     );
     // 32, 72, 32
     const { x, y, z } = PlayerInitPosition

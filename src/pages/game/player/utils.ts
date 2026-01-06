@@ -1,10 +1,11 @@
 import * as THREE from "three";
 import { PlayerParams } from "./literal";
+import { ScreenViewer } from "../gui/viewer";
 
 export function initPlayerCamera() {
     return new THREE.PerspectiveCamera(
         70,
-        window.innerWidth / window.innerHeight,
+        ScreenViewer.width / ScreenViewer.height,
         0.1,
         5000
       );

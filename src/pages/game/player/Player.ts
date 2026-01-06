@@ -9,10 +9,11 @@ import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { updatePositionGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
-import { PlayerInitPosition, PlayerParams } from "./literal";
+import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
+import { ScreenViewer } from "../gui/viewer";
 
 function cuboid(width: number, height: number, depth: number) {
   const hw = width * 0.5;
@@ -48,11 +49,10 @@ const selectionMaterial = new LineMaterial({
   color: 0x000000,
   opacity: 0.9,
   linewidth: 1,
-  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
+  resolution: new THREE.Vector2(ScreenViewer.width, ScreenViewer.height),
 });
 const selectionLineGeometry = new LineGeometry();
 selectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));
-const CENTER_SCREEN = new THREE.Vector2(0, 0);
 
 export class Player {
   onGround = false;
@@ -74,7 +74,7 @@ export class Player {
   boundsHelper = initBoundsHelper();
   selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);
   controls = new PointerLockControls(this.camera, document.body);
-  raycaster = new THREE.Raycaster(
+  rayCaster = new THREE.Raycaster(
     new THREE.Vector3(),
     new THREE.Vector3(),
     0,
@@ -166,7 +166,7 @@ export class Player {
 
   update(world: World) {
     this.updateBoundsHelper();
-    this.updateRaycaster(world);
+    this.updateRayCaster(world);
     this.updateCameraFOV();
 
     // prevent player from falling through
@@ -203,9 +203,11 @@ export class Player {
     this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
   }
 
-  private updateRaycaster(world: World) {
-    this.raycaster.setFromCamera(CENTER_SCREEN, this.camera);
-    const intersections = this.raycaster.intersectObjects(world.children, true);
+  private updateRayCaster(world: World) {
+    const rayCaster = this.rayCaster;
+    if(!rayCaster) return;
+    rayCaster.setFromCamera(RayCenterScreen, this.camera);
+    const intersections = rayCaster.intersectObjects(world.children, true);
 
     if (intersections.length > 0) {
       const intersection = intersections[0];
