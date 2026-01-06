@@ -11,7 +11,6 @@ import { PlayerInitPosition } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
-// import { DropManager } from "./drop";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -35,7 +34,6 @@ export class World extends THREE.Group {
   pointLights = new Map<string, THREE.PointLight>();
 
   wireframeMode = false;
-  // dropManager = new DropManager();
   private initialLoadComplete = false;
 
   constructor(seed = 0, scene: THREE.Scene) {
@@ -45,10 +43,6 @@ export class World extends THREE.Group {
     World.simplex = new SimplexNoise(World.rng);
     this.scene = scene;
     this.chunkQueue = [];
-    
-    setTimeout(() => {
-      // this.dropManager.drop(BlockID.Dirt, new THREE.Vector3(32, 72, 32));  
-    }, 5000);
   }
 
   /**
@@ -250,6 +244,7 @@ export class World extends THREE.Group {
     chunk.userData = { x, z };
 
     chunk.generate();
+
 
     this.add(chunk);
   }

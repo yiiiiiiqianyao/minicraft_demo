@@ -7,6 +7,7 @@ import { DataStore } from "./DataStore";
 import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
 import { getInstancedGeometry } from "./geometry";
+import { DropGroup } from "./drop";
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
@@ -14,6 +15,7 @@ export class WorldChunk extends THREE.Group {
   loaded: boolean;
   dataStore: DataStore;
   wireframeMode = false;
+  dropGroup = new DropGroup();
 
   constructor(
     size: IWorldSize,
@@ -30,6 +32,7 @@ export class WorldChunk extends THREE.Group {
   }
 
   async generate() {
+    
     // const start = performance.now();
     // 初始化 chunk 数据
     const data: BlockID[][][] = await generateChunk(
@@ -42,12 +45,15 @@ export class WorldChunk extends THREE.Group {
     // 空闲时间的 callback
     requestIdleCallback(
       () => {
+                 
         // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
         // 
         this.loadPlayerChanges();
+
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
+
         this.loaded = true;
         // console.log(`Loaded chunk in ${performance.now() - start}ms`);
       },
@@ -105,6 +111,9 @@ export class WorldChunk extends THREE.Group {
   generateMeshes(data: BlockID[][][]) {
     this.clear();
 
+    // 添加掉落物品组
+    this.add(this.dropGroup);
+
     const maxCount = this.size.width * this.size.width * this.size.height;
 
     // Create lookup table where key is block id
@@ -121,6 +130,7 @@ export class WorldChunk extends THREE.Group {
           : block.material,
         maxCount
       );
+      // mesh.visible = false;
       
       // const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
       //   blockGeometry === RenderGeometry.Flower
@@ -251,7 +261,12 @@ export class WorldChunk extends THREE.Group {
     if (block && block.block !== BlockID.Air) {
       this.playBlockSound(block.block);
       this.deleteBlockInstance(x, y, z);
+      
+      // 触发掉落物品
+      this.dropGroup.drop(block.block, new THREE.Vector3(x, y, z));
+
       this.setBlockId(x, y, z, BlockID.Air);
+      // 更新数据存储 设置方块为Air
       this.dataStore.set(
         this.position.x,
         this.position.z,
