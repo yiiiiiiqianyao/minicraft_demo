@@ -26,7 +26,7 @@ export class MouseInput {
             world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));
         } else if (event.button === 2 && player.blockPlacementCoords) {
             // console.log("adding block", this.player.activeBlockId);
-            if (player.activeBlockId != null) {
+            if (player.keyboardInput.activeBlockId != null) {
                 const playerPos = new THREE.Vector3(
                 Math.floor(player.position.x),
                 Math.floor(player.position.y) - 1,
@@ -46,7 +46,7 @@ export class MouseInput {
                     blockPos.x,
                     blockPos.y,
                     blockPos.z,
-                    player.activeBlockId
+                    player.keyboardInput.activeBlockId
                     );
             }
         }

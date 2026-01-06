@@ -1,16 +1,34 @@
-import { updateToolBarActiveGUI } from "../gui";
+import { BlockID } from "../Block";
+import { updateToolBarActiveGUI, updateToolBarGUI } from "../gui";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { Player } from "./Player";
 
-export class MoveInput {
+export class KeyboardInput {
     private player: Player;
+    private toolbar: BlockID[] = [
+      BlockID.Grass,
+      BlockID.Dirt,
+      BlockID.Stone,
+      BlockID.StoneBrick,
+      BlockID.RedstoneLamp,
+      BlockID.CoalOre,
+      BlockID.IronOre,
+      BlockID.OakLog,
+      BlockID.Leaves,
+    ];
+    private activeToolbarIndex = 0;
+    get activeBlockId() {
+      return this.toolbar[this.activeToolbarIndex];
+    }
     constructor(player: Player) {
         this.player = player;
         document.addEventListener("keydown", this.onKeyDown.bind(this));
         document.addEventListener("keyup", this.onKeyUp.bind(this));
+
+        updateToolBarGUI(this.toolbar);
     }
 
-      onKeyDown(event: KeyboardEvent) {
+  onKeyDown(event: KeyboardEvent) {
     const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
     // 玩家移动 or 重置的时候 控制器解锁
     if (validKeys.includes(event.code) && !this.player.controls.isLocked) {
@@ -27,8 +45,8 @@ export class MoveInput {
       case "Digit7":
       case "Digit8":
       case "Digit9":
-        this.player.activeToolbarIndex = Number(event.key) - 1;
-        updateToolBarActiveGUI(this.player.activeToolbarIndex);
+        this.activeToolbarIndex = Number(event.key) - 1;
+        updateToolBarActiveGUI(this.activeToolbarIndex);
         break;
       case "KeyW":
         if (!this.player.wKeyPressed && performance.now() - this.player.lastWPressed < 200) {

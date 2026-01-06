@@ -7,10 +7,10 @@ import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
-import { updatePositionGUI, updateToolBarGUI } from "../gui";
+import { updatePositionGUI } from "../gui";
 import { initBoundsHelper, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams } from "./literal";
-import { MoveInput } from "./move";
+import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
 
@@ -81,20 +81,7 @@ export class Player {
     5
   );
   blockPlacementCoords: THREE.Vector3 | null = null;
-
-  toolbar: BlockID[] = [
-    BlockID.Grass,
-    BlockID.Dirt,
-    BlockID.Stone,
-    BlockID.StoneBrick,
-    BlockID.RedstoneLamp,
-    BlockID.CoalOre,
-    BlockID.IronOre,
-    BlockID.OakLog,
-    BlockID.Leaves,
-  ];
-  activeToolbarIndex = 0;
-
+  public keyboardInput = new KeyboardInput(this);
   /**
    * Updates the raycaster used for block selection
    */
@@ -115,9 +102,6 @@ export class Player {
     return this.camera.position;
   }
 
-  get activeBlockId() {
-    return this.toolbar[this.activeToolbarIndex];
-  }
 
   constructor(scene: THREE.Scene, world: World) {
     this.camera.position.set(
@@ -136,11 +120,7 @@ export class Player {
     setTimeout(() => {
       this.controls.lock();
     }, 2000);
-
-    new MoveInput(this);
     new MouseInput(this, world);
-
-    updateToolBarGUI(this.toolbar);
   }
   
   /**
@@ -263,7 +243,7 @@ export class Player {
       const boundingBox = new THREE.Box3().setFromObject(intersection.object);
       PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
 
-      if (this.activeBlockId !== BlockID.Air && intersection.normal) {
+      if (this.keyboardInput.activeBlockId !== BlockID.Air && intersection.normal) {
         // Update block placement coords to be 1 block over in the direction of the normal
         this.blockPlacementCoords = PlayerParams.selectedCoords
           .clone()
