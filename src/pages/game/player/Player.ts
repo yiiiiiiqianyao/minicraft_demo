@@ -1,58 +1,16 @@
 import TWEEN from "@tweenjs/tween.js";
 import * as THREE from "three";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
-import { Line2 } from "three/examples/jsm/lines/Line2.js";
-import { LineGeometry } from "three/examples/jsm/lines/LineGeometry.js";
-import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { updatePositionGUI } from "../gui";
-import { initBoundsHelper, initPlayerCamera } from "./utils";
+import { initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
-import { ScreenViewer } from "../gui/viewer";
-
-function cuboid(width: number, height: number, depth: number) {
-  const hw = width * 0.5;
-  const hh = height * 0.5;
-  const hd = depth * 0.5;
-
-  const position = [
-    [-hw, -hh, -hd],
-    [-hw, hh, -hd],
-    [hw, hh, -hd],
-    [hw, -hh, -hd],
-    [-hw, -hh, -hd],
-
-    [-hw, -hh, hd],
-    [-hw, hh, hd],
-    [-hw, hh, -hd],
-    [-hw, hh, hd],
-
-    [hw, hh, hd],
-    [hw, hh, -hd],
-    [hw, hh, hd],
-
-    [hw, -hh, hd],
-    [hw, -hh, -hd],
-    [hw, -hh, hd],
-    [-hw, -hh, hd],
-  ].flat();
-
-  return position;
-}
-
-const selectionMaterial = new LineMaterial({
-  color: 0x000000,
-  opacity: 0.9,
-  linewidth: 1,
-  resolution: new THREE.Vector2(ScreenViewer.width, ScreenViewer.height),
-});
-const selectionLineGeometry = new LineGeometry();
-selectionLineGeometry.setPositions(cuboid(1.001, 1.001, 1.001));
+import { boundsHelper, selectionHelper } from "../helper";
 
 export class Player {
   onGround = false;
@@ -71,8 +29,7 @@ export class Player {
 
   camera = initPlayerCamera();
   cameraHelper = new THREE.CameraHelper(this.camera);
-  boundsHelper = initBoundsHelper();
-  selectionHelper = new Line2(selectionLineGeometry, selectionMaterial);
+  
   controls = new PointerLockControls(this.camera, document.body);
   rayCaster = new THREE.Raycaster(
     new THREE.Vector3(),
@@ -104,18 +61,18 @@ export class Player {
 
 
   constructor(scene: THREE.Scene, world: World) {
-    this.camera.position.set(
-      PlayerInitPosition.x,
-      PlayerInitPosition.y,
-      PlayerInitPosition.z
-    );
-    this.boundsHelper.visible = false;
+    this.camera.position.copy(PlayerInitPosition);
+    
     this.cameraHelper.visible = false;
-    this.selectionHelper.visible = false;
+    
     scene.add(this.camera);
     scene.add(this.cameraHelper);
-    scene.add(this.boundsHelper);
-    scene.add(this.selectionHelper);
+
+    boundsHelper.visible = false;
+    scene.add(boundsHelper);
+
+    selectionHelper.visible = false;
+    scene.add(selectionHelper);
 
     setTimeout(() => {
       this.controls.lock();
@@ -199,8 +156,8 @@ export class Player {
    * Update the player's bounding cylinder helper
    */
   private updateBoundsHelper() {
-    this.boundsHelper.position.copy(this.camera.position);
-    this.boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
+    boundsHelper.position.copy(this.camera.position);
+    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
   }
 
   private updateRayCaster(world: World) {
@@ -220,7 +177,7 @@ export class Player {
       const chunk = intersection.object.parent;
 
       if (intersection.instanceId == null || !chunk) {
-        this.selectionHelper.visible = false;
+        selectionHelper.visible = false;
         return;
       }
 
@@ -252,19 +209,19 @@ export class Player {
           .add(intersection.normal);
       }
       if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {
-        this.selectionHelper.scale.set(0.3, 0.6, 0.3);
+        selectionHelper.scale.set(0.3, 0.6, 0.3);
       } else {
-        this.selectionHelper.scale.set(1, 1, 1);
+        selectionHelper.scale.set(1, 1, 1);
       } 
       // TODO 草方块的选择框需要调整大小
-      this.selectionHelper.position.copy(PlayerParams.selectedCoords);
-      this.selectionHelper.visible = true;
+      selectionHelper.position.copy(PlayerParams.selectedCoords);
+      selectionHelper.visible = true;
     } else {
       // 没有选中的方块时，将选中坐标设为 null
       PlayerParams.selectedCoords = null;
       // 没有选中的方块时，将选中方块大小设为 null
       PlayerParams.selectedBlockSize = null;
-      this.selectionHelper.visible = false;
+      selectionHelper.visible = false;
     }
   }
 

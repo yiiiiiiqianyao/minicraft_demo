@@ -3,6 +3,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Player } from "../player/Player";
 import { PlayerInitPosition } from "../player/literal";
 import { ScreenViewer } from "../gui/viewer";
+
+// 第三视角观察使用
 export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
   const orbitCamera = new THREE.PerspectiveCamera(
     75,

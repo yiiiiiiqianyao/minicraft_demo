@@ -1,12 +1,13 @@
 import GUI from "lil-gui";
 import * as THREE from "three";
-import { Physics } from "../Physics";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
 import { oreConfig } from "../world/generate/resource";
 import { debounce } from "lodash";
+import { boundsHelper } from "../helper/index.ts";
+import { Physics } from "../physics/index.ts";
 
 export * from './toolbar.ts';
 
@@ -33,7 +34,7 @@ export function createUI(
 
   const playerFolder = gui.addFolder("Player");
   playerFolder.add(player.cameraHelper, "visible").name("Camera Helper");
-  playerFolder.add(player.boundsHelper, "visible").name("Show Player Bounds");
+  playerFolder.add(boundsHelper, "visible").name("Show Player Bounds");
 
   const physicsFolder = gui.addFolder("Physics");
   physicsFolder.add(physics.helpers, "visible").name("Visualize Collisions");

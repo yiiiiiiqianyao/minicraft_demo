@@ -1,10 +1,10 @@
 import * as THREE from "three";
 
-import { BlockID } from "./Block";
-import { BlockFactory } from "./Block/BlockFactory";
-import { Player } from "./player/Player";
-import { World } from "./world/World";
-import { PlayerParams } from "./player/literal";
+import { BlockID } from "../Block";
+import { BlockFactory } from "../Block/BlockFactory";
+import { Player } from "../player/Player";
+import { World } from "../world/World";
+import { PlayerParams } from "../player/literal";
 
 type Candidate = {
   block: BlockID;

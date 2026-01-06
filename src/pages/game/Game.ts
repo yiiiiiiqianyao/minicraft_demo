@@ -2,7 +2,6 @@ import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { createUI, initMainMenu } from "./gui";
-import { Physics } from "./Physics";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager, sunSettings } from "./sky";
@@ -10,8 +9,9 @@ import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
+import { Physics } from "./physics";
+import { Engine } from "./engine";
 
-let ScreenWrap: HTMLDivElement;
 export default class Game {
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
@@ -40,20 +40,10 @@ export default class Game {
   }
 
   initScene() {
-    this.scene = new THREE.Scene();
-
-    this.renderer = new THREE.WebGLRenderer();
-    this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    ScreenWrap = document.getElementById('canvas_wrap') as HTMLDivElement
-    const { width, height } = ScreenWrap.getBoundingClientRect();
-    ScreenViewer.width = width;
-    ScreenViewer.height = height;
-    this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);
-    this.renderer.setClearColor(0x80abfe);
-    ScreenWrap.appendChild(this.renderer.domElement);
-
+    Engine.init();
+    this.renderer = Engine.renderer;
+    this.scene = Engine.scene;
+        
     const { orbitCamera, controls } = initOrbitCamera(this.renderer);
     this.orbitCamera = orbitCamera;
     this.controls = controls;
@@ -84,7 +74,7 @@ export default class Game {
   }
 
   onWindowResize() {
-    const { width, height } = ScreenWrap.getBoundingClientRect();
+    const { width, height } = Engine.screenWrap.getBoundingClientRect();
     ScreenViewer.width = width;
     ScreenViewer.height = height;
 
@@ -123,17 +113,25 @@ export default class Game {
     updateRenderInfoGUI(this.renderer);
     updateStats();
 
-    TWEEN.update();
-
-    // player.controls.isLocked === true 第一人称模式
-    // player.controls.isLocked === false 观察者模式
-    this.renderer.render(
-      this.scene,
-      this.player.controls.isLocked ? this.player.camera : this.orbitCamera
-    );
+    TWEEN.update();    
+    const renderCamera = this.getRenderCamera();
+    this.renderer.render(this.scene, renderCamera);
     // 更新观察相机位置和目标位置
     updateOrbitControls(this.orbitCamera, this.controls, this.player);
 
     this.previousTime = currentTime;
+  }
+
+  private getRenderCamera() {
+    // TODO 第三人称视角 增加支持角色的控制移动
+    // player.controls.isLocked === true 第一人称模式
+    // player.controls.isLocked === false 观察者模式
+    const renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';
+    switch(renderMode) {
+      case 'firstPerson':
+        return this.player.camera;
+      case 'thirdPerson':
+        return this.orbitCamera;
+    }
   }
 }
