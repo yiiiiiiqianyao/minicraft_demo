@@ -1,3 +1,5 @@
+import './index.scss';
+
 export const Debug = () => {
     return  <div id="debug">
         <div className="stat" id="player-pos-x"></div>

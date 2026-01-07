@@ -24,104 +24,12 @@ body {
   height: 100%;
 }
 
-#debug {
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  top: 64px;
-  left: 16px;
-  color: white;
-  text-shadow: 1.5px 1.5px 0px rgba(75, 75, 75, 0.8);
-  font-family: "Minecraft", mono;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  z-index: 1000;
-}
-
-.stat {
-  padding: 0px 8px;
-  background: rgba(255, 255, 255, 0.1);
-  width: "100%";
-  text-align: left;
-}
-
 #cursor {
   position: absolute;
   top: 50%;
   left: 50%;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-}
-
-#toolbar {
-  position: absolute;
-  display: flex;
-  width: min(720px, 45vw);
-  left: 50%;
-  bottom: 0px;
-  transform: translateX(-50%);
-
-  #toolbar-bg {
-    position: relative;
-    width: 100%;
-    image-rendering: pixelated;
-  }
-
-  #toolbar-active-border {
-    position: absolute;
-    left: 0%;
-    width: 13.5%;
-    transform: translateX(-4.5%) translateY(-4.5%);
-    image-rendering: pixelated;
-  }
-
-  .toolbar-slot {
-    position: absolute;
-    left: 0%;
-    width: 13.5%;
-    aspect-ratio: 1;
-    transform: translateX(-4.5%) translateY(-4.5%) scale(0.65);
-    image-rendering: pixelated;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #toolbar-slot-1 {
-    left: 0%;
-  }
-
-  #toolbar-slot-2 {
-    left: 11%;
-  }
-
-  #toolbar-slot-3 {
-    left: 22%;
-  }
-
-  #toolbar-slot-4 {
-    left: 33%;
-  }
-
-  #toolbar-slot-5 {
-    left: 44%;
-  }
-
-  #toolbar-slot-6 {
-    left: 55%;
-  }
-
-  #toolbar-slot-7 {
-    left: 66%;
-  }
-
-  #toolbar-slot-8 {
-    left: 77%;
-  }
-
-  #toolbar-slot-9 {
-    left: 88%;
-  }
 }
 
 #main-menu {

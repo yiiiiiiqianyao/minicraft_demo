@@ -44,7 +44,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -88,7 +88,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            3
+            2
           ]
         },
         "register": 3
@@ -112,10 +112,36 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -129,19 +155,45 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            40,
+            17,
+            2,
+            6,
+            2,
+            14,
+            1,
             2,
             3,
-            12,
+            4,
+            2,
             2,
             2,
             4,
-            3,
+            2,
+            2,
             5,
+            2,
+            1,
+            2,
+            1,
+            2,
+            3,
+            1,
+            2,
+            2,
+            2,
+            3,
+            4,
+            3,
+            2,
+            3,
+            1,
+            3,
+            1,
+            2,
             1
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -155,17 +207,43 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            57
+            90
           ],
           "onGenerateFiles": [
             2,
             8,
+            11,
+            5,
+            5,
+            11,
             4,
+            7,
+            4,
+            10,
+            6,
             9,
+            3,
+            9,
+            13,
+            4,
+            4,
+            12,
+            14,
+            10,
+            6,
+            10,
+            12,
+            14,
+            12,
+            10,
+            5,
+            5,
+            5,
+            5,
+            5,
             7,
             5,
-            4,
-            7
+            6
           ]
         },
         "register": 15
@@ -189,10 +267,36 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -209,9 +313,18 @@
             0
           ],
           "onCheck": [
-            0
+            1
           ],
           "onPrepareBuildSuccess": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -245,10 +358,21 @@
             0,
             0,
             0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -265,7 +389,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -278,7 +402,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1165,7 +1289,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1179,10 +1303,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            13
+            5
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1195,7 +1319,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 55
+        "register": 52
       },
       "enableBy": "register"
     },
@@ -1208,7 +1332,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 42
+        "register": 41
       },
       "enableBy": "config"
     },
@@ -1221,7 +1345,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 21
+        "register": 18
       },
       "enableBy": "config"
     },
@@ -1235,7 +1359,7 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            1
+            0
           ],
           "addBeforeMiddlewares": [
             0
@@ -1256,11 +1380,69 @@
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1277,10 +1459,36 @@
             1,
             1,
             1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
             1,
             1,
             1,
             0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
             0
           ],
           "addRuntimePlugin": [
@@ -1291,10 +1499,36 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1321,13 +1555,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ],
           "addBeforeMiddlewares": [
-            4
+            1
           ]
         },
-        "register": 24
+        "register": 23
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1339,7 +1573,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1352,7 +1586,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1372,9 +1606,87 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1420,19 +1732,97 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            1
+            0
           ],
           "onGenerateFiles": [
-            52,
-            20,
+            48,
+            16,
+            16,
+            8,
+            9,
+            11,
+            10,
+            9,
+            8,
+            13,
+            6,
+            9,
+            9,
+            10,
+            14,
+            8,
+            9,
+            10,
+            9,
+            8,
+            7,
+            11,
+            12,
+            13,
             9,
             12,
-            9,
-            13,
             11,
-            13
+            15,
+            7,
+            9,
+            7,
+            8,
+            7,
+            7
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1479,10 +1869,62 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1496,7 +1938,33 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            130,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1506,7 +1974,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1550,7 +2018,33 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0
@@ -1573,25 +2067,77 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            12,
+            13,
+            3,
+            42,
             2,
+            37,
+            1,
+            33,
+            2,
+            36,
+            2,
+            33,
+            1,
+            35,
+            1,
             31,
-            2,
-            32,
-            1,
-            29,
-            1,
-            30,
             1,
             32,
+            1,
+            33,
+            1,
+            41,
             1,
             34,
             1,
+            30,
+            1,
+            36,
+            1,
+            50,
+            3,
+            38,
+            2,
+            40,
+            1,
+            36,
+            1,
+            36,
+            1,
+            43,
+            1,
+            37,
+            1,
+            36,
+            1,
+            40,
+            2,
+            42,
+            1,
+            43,
+            1,
+            43,
+            2,
             32,
-            1
+            2,
+            35,
+            2,
+            31,
+            2,
+            37,
+            2,
+            38,
+            1,
+            35,
+            1,
+            38,
+            1,
+            32,
+            2
           ]
         },
-        "register": 5
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -1618,6 +2164,9 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            1,
+            0,
+            1,
             0,
             0,
             0,
@@ -1625,10 +2174,33 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
           ],
           "onBeforeCompiler": [
-            15
+            1
           ]
         },
         "register": 0
@@ -1657,17 +2229,43 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            273,
-            8,
+            237,
+            10,
+            5,
+            7,
+            5,
+            5,
+            4,
             6,
+            4,
             5,
+            4,
+            5,
+            4,
+            4,
+            5,
+            4,
+            6,
+            4,
+            5,
+            4,
+            4,
+            4,
             5,
             6,
-            5,
-            6
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            3,
+            4,
+            4
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1710,7 +2308,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1735,7 +2333,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 14
       },
       "enableBy": "config"
     },
@@ -1749,13 +2347,39 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            2,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
             1,
             0,
             1,
             0,
             0,
+            0,
+            0,
+            0,
             1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
             0
           ]
         },
@@ -1771,7 +2395,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1784,7 +2408,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1797,7 +2421,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1839,7 +2463,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -1876,7 +2500,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -1888,7 +2512,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 17
+        "register": 16
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -1914,10 +2538,10 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            591
+            576
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1930,7 +2554,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1943,7 +2567,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 22
+        "register": 23
       },
       "enableBy": "register"
     },
@@ -1957,10 +2581,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            9
+            8
           ]
         },
-        "register": 31
+        "register": 35
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2037,7 +2661,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2050,7 +2674,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2063,7 +2687,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2102,7 +2726,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2128,7 +2752,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2141,7 +2765,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2154,7 +2778,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2167,7 +2791,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2206,7 +2830,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -2407,6 +3031,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/generate/index.ts"
     },
+    "components/toolbar/index": {
+      "path": "components/toolbar",
+      "id": "components/toolbar/index",
+      "file": "components/toolbar/index.tsx",
+      "absPath": "/components/toolbar",
+      "__content": "import './index.scss';\n\nconst ToolBarBg = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png';\nconst ToolBarActive = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png';\nexport const ToolBar = () => {\n     \n    return <div id=\"toolbar\">\n        <img id=\"toolbar-bg\" src={ToolBarBg} />\n        <img id=\"toolbar-active-border\" src={ToolBarActive} />\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n    </div>\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/toolbar/index.tsx"
+    },
     "game/world/generate/tree": {
       "path": "game/world/generate/tree",
       "id": "game/world/generate/tree",
@@ -2460,6 +3093,15 @@
       "__content": "import { Howl, Howler } from \"howler\";\nimport { sample } from \"lodash\";\nimport soundData from \"./sounds.json\";\nimport spriteData from \"./sprite.json\";\n\n// TODO: remove this, add volume slider\nHowler.volume(0.3);\n\nclass AudioManager {\n  sprite: Howl;\n\n  constructor() {\n    this.sprite = this.loadSounds();\n  }\n\n  loadSounds() {\n    return new Howl({\n      src: [\n        \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.webm\", \n        \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.mp3\"\n      ],\n      sprite: spriteData.sprite as any,\n    });\n  }\n\n  play(name: string) {\n    if (!(name in soundData)) {\n      console.warn(`Unknown sound: ${name}`);\n      return;\n    }\n\n    // dig and step sounds have same names and need to be differentiated\n    const prefix = name.split(\".\")[0] === \"dig\" ? \"dig_\" : \"\";\n\n    // eslint-disable-next-line @typescript-eslint/ban-ts-comment\n    // @ts-ignore\n    const options = soundData[name][\"sounds\"];\n    const soundName = prefix + sample<string>(options).split(\"/\").pop();\n    this.sprite.play(soundName);\n  }\n\n  playBtm() {\n     const sound = new Howl({\n      src: [\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3\"],\n      loop: true,\n    });\n    sound.play();\n  }\n}\n\nconst audioManager = new AudioManager();\nexport default audioManager;\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/audio/AudioManager.ts"
+    },
+    "components/debug/index": {
+      "path": "components/debug",
+      "id": "components/debug/index",
+      "file": "components/debug/index.tsx",
+      "absPath": "/components/debug",
+      "__content": "import './index.scss';\n\nexport const Debug = () => {\n    return  <div id=\"debug\">\n        <div className=\"stat\" id=\"player-pos-x\"></div>\n        <div className=\"stat\" id=\"player-pos-y\"></div>\n        <div className=\"stat\" id=\"player-pos-z\"></div>\n        <div className=\"stat\" id=\"triangle-count\"></div>\n        <div className=\"stat\" id=\"render-calls\"></div>\n      </div>\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/debug/index.tsx"
     },
     "game/Block/LeavesBlock": {
       "path": "game/Block/LeavesBlock",
@@ -2538,7 +3180,7 @@
       "id": "game/player/keyboard",
       "file": "game/player/keyboard.ts",
       "absPath": "/game/player/keyboard",
-      "__content": "import { ToolBar } from \"../gui\";\nimport { Action } from \"./action\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n    private player: Player;\n    \n    constructor(player: Player) {\n        this.player = player;\n        document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n        document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n        ToolBar.updateToolBarGUI();\n    }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        // TODO 工具栏切换功能优化\n        ToolBar.activeToolbarIndex = Number(event.key) - 1;\n        ToolBar.updateToolBarActiveGUI();\n        break;\n      case \"Comma\":  // 左箭头\n      case \"Period\":  // 右箭头\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code, false);\n        break;\n    }\n  }\n}",
+      "__content": "import { ToolBar } from \"../gui\";\nimport { Action } from \"./action\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n    private player: Player;\n    \n    constructor(player: Player) {\n        this.player = player;\n        document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n        document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n        ToolBar.updateToolBarGUI();\n    }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        ToolBar.setToolBarGUI(Number(event.key) - 1);\n        break;\n      case \"KeyZ\":  // 左箭头\n      case \"KeyC\":  // 右箭头\n        ToolBar.scrollToolBarGUI(event.code);\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code, false);\n        break;\n    }\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/keyboard.ts"
     },
@@ -2614,15 +3256,6 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/loading.tsx"
     },
-    "components/toolbar": {
-      "path": "components/toolbar",
-      "id": "components/toolbar",
-      "file": "components/toolbar.tsx",
-      "absPath": "/components/toolbar",
-      "__content": "export const ToolBar = () => {\n     return <div id=\"toolbar\">\n          <img id=\"toolbar-bg\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png\" />\n          <img id=\"toolbar-active-border\" src=\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png\" />\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n          <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n        </div>\n}",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/toolbar.tsx"
-    },
     "game/physics/index": {
       "path": "game/physics",
       "id": "game/physics/index",
@@ -2695,15 +3328,6 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/utils.ts"
     },
-    "components/debug": {
-      "path": "components/debug",
-      "id": "components/debug",
-      "file": "components/debug.tsx",
-      "absPath": "/components/debug",
-      "__content": "export const Debug = () => {\n    return  <div id=\"debug\">\n        <div className=\"stat\" id=\"player-pos-x\"></div>\n        <div className=\"stat\" id=\"player-pos-y\"></div>\n        <div className=\"stat\" id=\"player-pos-z\"></div>\n        <div className=\"stat\" id=\"triangle-count\"></div>\n        <div className=\"stat\" id=\"render-calls\"></div>\n      </div>\n}",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/debug.tsx"
-    },
     "game/Block/Block": {
       "path": "game/Block/Block",
       "id": "game/Block/Block",
@@ -2727,7 +3351,7 @@
       "id": "game/gui/toolbar",
       "file": "game/gui/toolbar.ts",
       "absPath": "/game/gui/toolbar",
-      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport class ToolBar {\n    static toolbar: BlockID[] = [\n      BlockID.Grass,\n      BlockID.Dirt,\n      BlockID.Stone,\n      BlockID.StoneBrick,\n      BlockID.RedstoneLamp,\n      BlockID.CoalOre,\n      BlockID.IronOre,\n      BlockID.OakLog,\n      BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId() {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static scrollToolBarGUI(key: string) {\n      // TODO: 实现滚动切换工具条\n    }\n\n    static updateToolBarGUI() {\n      for (let i = 1; i <= 9; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId != null && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${\n              BlockFactory.getBlock(blockId).uiTexture\n            }')`;\n          }\n        }\n      }\n    }\n\n    static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
+      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport class ToolBar {\n    static toolbar: BlockID[] = [\n      BlockID.Grass,\n      BlockID.Dirt,\n      BlockID.Stone,\n      BlockID.StoneBrick,\n      BlockID.RedstoneLamp,\n      BlockID.CoalOre,\n      BlockID.IronOre,\n      BlockID.OakLog,\n      BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId() {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      ToolBar.updateToolBarActiveGUI();\n    }\n\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n      // TODO: 实现滚动切换工具条\n    }\n\n    static updateToolBarGUI() {\n      for (let i = 1; i <= 9; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId != null && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${\n              BlockFactory.getBlock(blockId).uiTexture\n            }')`;\n          }\n        }\n      }\n    }\n\n    static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts"
     },
@@ -2763,7 +3387,7 @@
       "id": "game/dev/index",
       "file": "game/dev/index.ts",
       "absPath": "/game/dev",
-      "__content": "import * as THREE from \"three\";\n// @ts-ignore\nimport Stats from \"three/examples/jsm/libs/stats.module\";\n\nlet triangleCount: HTMLElement | null = null;\nlet triangleCountInnerHtml = '';\nlet renderCalls:  HTMLElement | null = null;\nlet renderCallsInnerHtml = '';\nfunction numberWithCommas(x: number): string {\n  return x.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n}\n\nexport function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {\n    // get element\n    if(!triangleCount) {\n        triangleCount = document.getElementById(\"triangle-count\");\n    }\n    if(!renderCalls) {\n        renderCalls = document.getElementById(\"render-calls\");\n    }\n    // update text\n    if (triangleCount) {\n      const inner = `triangles: ${numberWithCommas(\n        renderer.info.render.triangles\n      )}`;\n      if(inner !== triangleCountInnerHtml) {\n        triangleCountInnerHtml = inner;\n        triangleCount.innerHTML = inner;\n      }\n    }\n    if (renderCalls) {\n      const inner = `draw calls: ${numberWithCommas(\n        renderer.info.render.calls\n      )}`;\n      if(inner !== renderCallsInnerHtml) {\n        renderCallsInnerHtml = inner;\n        renderCalls.innerHTML = inner;\n      }\n    }\n}\n\nlet stats: Stats;\nexport function initStats() {\n    stats = new (Stats as any)();\n    const wrap = document.getElementById('canvas_wrap') as HTMLDivElement;\n    wrap.appendChild(stats.dom);\n}\n\nexport function updateStats() {\n    if (stats) stats.update();\n}",
+      "__content": "import * as THREE from \"three\";\n// @ts-expect-error import umi\nimport Stats from \"three/examples/jsm/libs/stats.module\";\n\nlet triangleCount: HTMLElement | null = null;\nlet triangleCountInnerHtml = '';\nlet renderCalls:  HTMLElement | null = null;\nlet renderCallsInnerHtml = '';\nfunction numberWithCommas(x: number): string {\n  return x.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n}\n\nexport function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {\n    // get element\n    if(!triangleCount) {\n        triangleCount = document.getElementById(\"triangle-count\");\n    }\n    if(!renderCalls) {\n        renderCalls = document.getElementById(\"render-calls\");\n    }\n    // update text\n    if (triangleCount) {\n      const inner = `triangles: ${numberWithCommas(\n        renderer.info.render.triangles\n      )}`;\n      if(inner !== triangleCountInnerHtml) {\n        triangleCountInnerHtml = inner;\n        triangleCount.innerHTML = inner;\n      }\n    }\n    if (renderCalls) {\n      const inner = `draw calls: ${numberWithCommas(\n        renderer.info.render.calls\n      )}`;\n      if(inner !== renderCallsInnerHtml) {\n        renderCallsInnerHtml = inner;\n        renderCalls.innerHTML = inner;\n      }\n    }\n}\n\nlet stats: Stats;\nexport function initStats() {\n  stats = new Stats();\n  document.body.appendChild(stats.dom);\n  stats.dom.style = 'position: fixed; bottom: 20px; left: 20px; cursor: pointer; opacity: 0.9; z-index: 10000;'\n}\n\nexport function updateStats() {\n    if (stats) stats.update();\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/dev/index.ts"
     },
@@ -2860,7 +3484,7 @@
   "faviconFiles": [],
   "port": 8000,
   "host": "0.0.0.0",
-  "ip": "100.82.206.117",
+  "ip": "192.168.0.178",
   "prepare": {
     "buildResult": {
       "errors": [],
@@ -4795,7 +5419,7 @@
             "format": "esm"
           },
           "src/pages/game/dev/index.ts": {
-            "bytes": 1451,
+            "bytes": 1501,
             "imports": [
               {
                 "path": "three",
@@ -4863,7 +5487,7 @@
             "format": "esm"
           },
           "src/pages/game/gui/toolbar.ts": {
-            "bytes": 1193,
+            "bytes": 1692,
             "imports": [
               {
                 "path": "src/pages/game/Block/index.ts",
@@ -5036,6 +5660,38 @@
             ],
             "format": "esm"
           },
+          "src/pages/components/toolbar/index.tsx": {
+            "bytes": 1038,
+            "imports": [
+              {
+                "path": "./index.scss",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/components/debug/index.tsx": {
+            "bytes": 373,
+            "imports": [
+              {
+                "path": "./index.scss",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/player/interface.ts": {
             "bytes": 352,
             "imports": [
@@ -5105,7 +5761,7 @@
             "format": "esm"
           },
           "src/pages/game/player/keyboard.ts": {
-            "bytes": 1691,
+            "bytes": 1639,
             "imports": [
               {
                 "path": "src/pages/game/gui/index.ts",
@@ -5138,17 +5794,6 @@
           },
           "src/pages/components/loading.tsx": {
             "bytes": 249,
-            "imports": [
-              {
-                "path": "react/jsx-runtime",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/components/toolbar.tsx": {
-            "bytes": 965,
             "imports": [
               {
                 "path": "react/jsx-runtime",
@@ -5338,17 +5983,6 @@
             ],
             "format": "esm"
           },
-          "src/pages/components/debug.tsx": {
-            "bytes": 349,
-            "imports": [
-              {
-                "path": "react/jsx-runtime",
-                "kind": "import-statement",
-                "external": true
-              }
-            ],
-            "format": "esm"
-          },
           "src/pages/game/sky/index.ts": {
             "bytes": 6948,
             "imports": [
@@ -5455,7 +6089,7 @@
                 "external": true
               },
               {
-                "path": "src/pages/components/toolbar.tsx",
+                "path": "src/pages/components/toolbar/index.tsx",
                 "kind": "import-statement",
                 "original": "./components/toolbar"
               },
@@ -5465,7 +6099,7 @@
                 "original": "./components/loading"
               },
               {
-                "path": "src/pages/components/debug.tsx",
+                "path": "src/pages/components/debug/index.tsx",
                 "kind": "import-statement",
                 "original": "./components/debug"
               },
@@ -5478,7 +6112,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 14587,
+            "bytes": 14649,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -5556,6 +6190,11 @@
                 "original": "../../../src/pages/game/world/generate/index.ts"
               },
               {
+                "path": "src/pages/components/toolbar/index.tsx",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/components/toolbar/index.tsx"
+              },
+              {
                 "path": "src/pages/game/world/generate/tree.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/world/generate/tree.ts"
@@ -5584,6 +6223,11 @@
                 "path": "src/pages/game/audio/AudioManager.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/audio/AudioManager.ts"
+              },
+              {
+                "path": "src/pages/components/debug/index.tsx",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/components/debug/index.tsx"
               },
               {
                 "path": "src/pages/game/Block/LeavesBlock.ts",
@@ -5671,11 +6315,6 @@
                 "original": "../../../src/pages/components/loading.tsx"
               },
               {
-                "path": "src/pages/components/toolbar.tsx",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/components/toolbar.tsx"
-              },
-              {
                 "path": "src/pages/game/physics/index.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/physics/index.ts"
@@ -5714,11 +6353,6 @@
                 "path": "src/pages/game/player/utils.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/player/utils.ts"
-              },
-              {
-                "path": "src/pages/components/debug.tsx",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/components/debug.tsx"
               },
               {
                 "path": "src/pages/game/Block/Block.ts",
@@ -6129,17 +6763,32 @@
                 "external": true
               },
               {
+                "path": "./index.scss",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "./index.scss",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
               {
                 "path": "three/examples/jsm/controls/OrbitControls.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "react/jsx-runtime",
                 "kind": "import-statement",
                 "external": true
               },
@@ -6180,11 +6829,6 @@
               },
               {
                 "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "react/jsx-runtime",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7452,7 +8096,7 @@
                 "bytesInOutput": 830
               },
               "src/pages/game/dev/index.ts": {
-                "bytesInOutput": 1497
+                "bytesInOutput": 1564
               },
               "src/pages/game/gui/viewer.ts": {
                 "bytesInOutput": 291
@@ -7464,7 +8108,7 @@
                 "bytesInOutput": 281
               },
               "src/pages/game/gui/toolbar.ts": {
-                "bytesInOutput": 1311
+                "bytesInOutput": 1801
               },
               "src/pages/game/gui/index.ts": {
                 "bytesInOutput": 5635
@@ -7478,6 +8122,12 @@
               "src/pages/game/world/generate/tallGrass.ts": {
                 "bytesInOutput": 1652
               },
+              "src/pages/components/toolbar/index.tsx": {
+                "bytesInOutput": 1607
+              },
+              "src/pages/components/debug/index.tsx": {
+                "bytesInOutput": 778
+              },
               "src/pages/game/player/interface.ts": {
                 "bytesInOutput": 126
               },
@@ -7488,16 +8138,13 @@
                 "bytesInOutput": 2051
               },
               "src/pages/game/player/keyboard.ts": {
-                "bytesInOutput": 1779
+                "bytesInOutput": 1724
               },
               "src/pages/game/world/interface.ts": {
                 "bytesInOutput": 127
               },
               "src/pages/components/loading.tsx": {
-                "bytesInOutput": 616
-              },
-              "src/pages/components/toolbar.tsx": {
-                "bytesInOutput": 1519
+                "bytesInOutput": 638
               },
               "src/pages/game/physics/index.ts": {
                 "bytesInOutput": 7523
@@ -7513,9 +8160,6 @@
               },
               "src/pages/game/engine/index.ts": {
                 "bytesInOutput": 1068
-              },
-              "src/pages/components/debug.tsx": {
-                "bytesInOutput": 749
               },
               "src/pages/game/sky/index.ts": {
                 "bytesInOutput": 6515
@@ -7536,7 +8180,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 12504
+                "bytesInOutput": 12540
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -7557,7 +8201,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 162514
+            "bytes": 163203
           }
         }
       }
@@ -9925,9 +10569,27 @@
           "type": "ImportDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/components/debug.tsx": [],
+      "/Applications/workspace/minicraft_demo/src/pages/components/debug/index.tsx": [
+        {
+          "end": 23,
+          "importKind": "value",
+          "source": "./index.scss",
+          "specifiers": [],
+          "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
       "/Applications/workspace/minicraft_demo/src/pages/components/loading.tsx": [],
-      "/Applications/workspace/minicraft_demo/src/pages/components/toolbar.tsx": [],
+      "/Applications/workspace/minicraft_demo/src/pages/components/toolbar/index.tsx": [
+        {
+          "end": 23,
+          "importKind": "value",
+          "source": "./index.scss",
+          "specifiers": [],
+          "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/AirBlock.ts": [
         {
           "end": 49,
@@ -11470,7 +12132,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 104,
+          "end": 121,
           "importKind": "value",
           "source": "three/examples/jsm/libs/stats.module",
           "specifiers": [
@@ -11479,7 +12141,7 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 47,
+          "start": 64,
           "type": "ImportDeclaration"
         }
       ],

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-// @ts-ignore
+// @ts-expect-error import umi
 import Stats from "three/examples/jsm/libs/stats.module";
 
 let triangleCount: HTMLElement | null = null;
@@ -41,9 +41,9 @@ export function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {
 
 let stats: Stats;
 export function initStats() {
-    stats = new (Stats as any)();
-    const wrap = document.getElementById('canvas_wrap') as HTMLDivElement;
-    wrap.appendChild(stats.dom);
+  stats = new Stats();
+  document.body.appendChild(stats.dom);
+  stats.dom.style = 'position: fixed; bottom: 20px; left: 20px; cursor: pointer; opacity: 0.9; z-index: 10000;'
 }
 
 export function updateStats() {

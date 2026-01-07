@@ -18,7 +18,20 @@ export class ToolBar {
       return ToolBar.toolbar[ToolBar.activeToolbarIndex];
     }
 
+    static setToolBarGUI(index: number) {
+      ToolBar.activeToolbarIndex = index;
+      ToolBar.updateToolBarActiveGUI();
+    }
+
     static scrollToolBarGUI(key: string) {
+      // 0 - 8
+      if(key === 'KeyZ') { // left
+        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;
+        ToolBar.setToolBarGUI(index);
+      } else if(key === 'KeyC') { // right
+        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;
+        ToolBar.setToolBarGUI(index);
+      }
       // TODO: 实现滚动切换工具条
     }
 

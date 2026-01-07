@@ -12,7 +12,7 @@ export class KeyboardInput {
         this.player = player;
         document.addEventListener("keydown", this.onKeyDown.bind(this));
         document.addEventListener("keyup", this.onKeyUp.bind(this));
-
+        // TODO 后续不再设置初始化
         ToolBar.updateToolBarGUI();
     }
 
@@ -32,12 +32,10 @@ export class KeyboardInput {
       case "Digit7":
       case "Digit8":
       case "Digit9":
-        // TODO 工具栏切换功能优化
-        ToolBar.activeToolbarIndex = Number(event.key) - 1;
-        ToolBar.updateToolBarActiveGUI();
+        ToolBar.setToolBarGUI(Number(event.key) - 1);
         break;
-      case "Comma":  // 左箭头
-      case "Period":  // 右箭头
+      case "KeyZ":  // 左箭头
+      case "KeyC":  // 右箭头
         ToolBar.scrollToolBarGUI(event.code);
         break;
       case "KeyW":

@@ -1,0 +1,20 @@
+#debug {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 16px;
+  left: 16px;
+  padding: 4px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-family: "Minecraft", mono;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 1000;
+  background-color: #81d5ff87;
+  .stat {
+        padding: 0px 8px;
+        width: "100%";
+        text-align: left;
+    }
+}
