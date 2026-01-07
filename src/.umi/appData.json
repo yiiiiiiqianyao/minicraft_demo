@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -88,7 +88,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            3
           ]
         },
         "register": 3
@@ -105,6 +105,12 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0
           ]
@@ -123,10 +129,16 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            16,
-            3,
+            40,
             2,
-            3
+            3,
+            12,
+            2,
+            2,
+            4,
+            3,
+            5,
+            1
           ]
         },
         "register": 1
@@ -143,11 +155,17 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            111
+            57
           ],
           "onGenerateFiles": [
             2,
-            6
+            8,
+            4,
+            9,
+            7,
+            5,
+            4,
+            7
           ]
         },
         "register": 15
@@ -164,6 +182,12 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0
           ]
@@ -190,11 +214,20 @@
           "onPrepareBuildSuccess": [
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
             0,
-            1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -215,7 +248,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -262,7 +295,7 @@
             0
           ]
         },
-        "register": 12
+        "register": 9
       },
       "enableBy": "register"
     },
@@ -1132,7 +1165,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1146,10 +1179,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            7
+            13
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1162,7 +1195,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 54
+        "register": 55
       },
       "enableBy": "register"
     },
@@ -1188,7 +1221,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 20
+        "register": 21
       },
       "enableBy": "config"
     },
@@ -1202,7 +1235,7 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            0
+            1
           ],
           "addBeforeMiddlewares": [
             0
@@ -1213,10 +1246,21 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1230,15 +1274,27 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            2,
-            1
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1268,10 +1324,10 @@
             1
           ],
           "addBeforeMiddlewares": [
-            1
+            4
           ]
         },
-        "register": 22
+        "register": 24
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1283,7 +1339,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1296,7 +1352,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1310,9 +1366,27 @@
         "hooks": {
           "onGenerateFiles": [
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1349,10 +1423,28 @@
             1
           ],
           "onGenerateFiles": [
-            57,
-            12
+            52,
+            20,
+            9,
+            12,
+            9,
+            13,
+            11,
+            13
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1375,6 +1467,18 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1392,7 +1496,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            86,
+            130,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1437,7 +1547,13 @@
         "hooks": {
           "onGenerateFiles": [
             0,
-            1
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
           ],
           "addBeforeMiddlewares": [
             0
@@ -1457,9 +1573,21 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            13,
+            12,
             2,
-            40,
+            31,
+            2,
+            32,
+            1,
+            29,
+            1,
+            30,
+            1,
+            32,
+            1,
+            34,
+            1,
+            32,
             1
           ]
         },
@@ -1491,10 +1619,16 @@
         "hooks": {
           "onGenerateFiles": [
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onBeforeCompiler": [
-            3
+            15
           ]
         },
         "register": 0
@@ -1509,7 +1643,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1523,8 +1657,14 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            264,
-            8
+            273,
+            8,
+            6,
+            5,
+            5,
+            6,
+            5,
+            6
           ]
         },
         "register": 3
@@ -1595,7 +1735,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 13
       },
       "enableBy": "config"
     },
@@ -1609,8 +1749,14 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            2,
             1,
-            1
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
           ]
         },
         "register": 1
@@ -1625,7 +1771,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1638,7 +1784,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1651,7 +1797,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1664,7 +1810,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -1680,7 +1826,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1730,7 +1876,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -1742,7 +1888,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 17
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -1754,7 +1900,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1768,7 +1914,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            500
+            591
           ]
         },
         "register": 1
@@ -1797,7 +1943,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 23
+        "register": 22
       },
       "enableBy": "register"
     },
@@ -1811,10 +1957,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            10
+            9
           ]
         },
-        "register": 38
+        "register": 31
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -1852,7 +1998,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1865,7 +2011,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1878,7 +2024,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1891,7 +2037,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1930,7 +2076,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1943,7 +2089,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1956,7 +2102,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1969,7 +2115,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2060,7 +2206,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -2073,7 +2219,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2086,7 +2232,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2099,7 +2245,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     }
@@ -2392,7 +2538,7 @@
       "id": "game/player/keyboard",
       "file": "game/player/keyboard.ts",
       "absPath": "/game/player/keyboard",
-      "__content": "import { BlockID } from \"../Block\";\nimport { updateToolBarActiveGUI, updateToolBarGUI } from \"../gui\";\nimport { Action } from \"./action\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n    private player: Player;\n    private toolbar: BlockID[] = [\n      BlockID.Grass,\n      BlockID.Dirt,\n      BlockID.Stone,\n      BlockID.StoneBrick,\n      BlockID.RedstoneLamp,\n      BlockID.CoalOre,\n      BlockID.IronOre,\n      BlockID.OakLog,\n      BlockID.Leaves,\n    ];\n    private activeToolbarIndex = 0;\n    get activeBlockId() {\n      return this.toolbar[this.activeToolbarIndex];\n    }\n    constructor(player: Player) {\n        this.player = player;\n        document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n        document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n        updateToolBarGUI(this.toolbar);\n    }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        // TODO 工具栏切换功能优化\n        this.activeToolbarIndex = Number(event.key) - 1;\n        updateToolBarActiveGUI(this.activeToolbarIndex);\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n        this.player.input.z = 0;\n        this.player.wKeyPressed = false;\n        this.player.isSprinting = false;\n        break;\n      case \"KeyA\":\n        this.player.input.x = 0;\n        break;\n      case \"KeyS\":\n        this.player.input.z = 0;\n        break;\n      case \"KeyD\":\n        this.player.input.x = 0;\n        break;\n      case \"Space\":\n        this.player.spacePressed = false;\n        break;\n    }\n  }\n}",
+      "__content": "import { ToolBar } from \"../gui\";\nimport { Action } from \"./action\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n    private player: Player;\n    \n    constructor(player: Player) {\n        this.player = player;\n        document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n        document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n\n        ToolBar.updateToolBarGUI();\n    }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        // TODO 工具栏切换功能优化\n        ToolBar.activeToolbarIndex = Number(event.key) - 1;\n        ToolBar.updateToolBarActiveGUI();\n        break;\n      case \"Comma\":  // 左箭头\n      case \"Period\":  // 右箭头\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code, false);\n        break;\n    }\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/keyboard.ts"
     },
@@ -2491,7 +2637,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams, RayCenterScreen } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { boundsHelper, selectionHelper } from \"../helper\";\nimport { Action } from \"./action\";\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  \n  controls = new PointerLockControls(this.camera, document.body);\n  rayCaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  public keyboardInput = new KeyboardInput(this);\n  /**\n   * Updates the raycaster used for block selection\n   */\n  private selectedBlockUuid: string | null = null;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.camera.position.copy(PlayerInitPosition);\n    this.cameraHelper.visible = false;\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n\n    boundsHelper.visible = false;\n    scene.add(boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRayCaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  private updateBoundsHelper() {\n    boundsHelper.position.copy(this.camera.position);\n    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  private updateRayCaster(world: World) {\n    const rayCaster = this.rayCaster;\n    if(!rayCaster) return;\n    rayCaster.setFromCamera(RayCenterScreen, this.camera);\n    const intersections = rayCaster.intersectObjects(world.children, true);\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n      if(this.selectedBlockUuid !== intersection.object.uuid) {\n        this.selectedBlockUuid = intersection.object.uuid;\n        // console.log(intersection.object);\n      }\n      \n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      PlayerParams.selectedCoords = chunk.position.clone();\n      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (this.keyboardInput.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        Action.blockPlacementCoords = PlayerParams.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n        selectionHelper.scale.set(0.3, 0.6, 0.3);\n      } else {\n        selectionHelper.scale.set(1, 1, 1);\n      } \n      // TODO 草方块的选择框需要调整大小\n      selectionHelper.position.copy(PlayerParams.selectedCoords);\n      selectionHelper.visible = true;\n    } else {\n      // 没有选中的方块时，将选中坐标设为 null\n      PlayerParams.selectedCoords = null;\n      // 没有选中的方块时，将选中方块大小设为 null\n      PlayerParams.selectedBlockSize = null;\n      selectionHelper.visible = false;\n    }\n  }\n\n  private updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n}\n",
+      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { ToolBar, updatePositionGUI } from \"../gui\";\nimport { initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams, RayCenterScreen } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { boundsHelper, selectionHelper } from \"../helper\";\nimport { Action } from \"./action\";\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  spacePressed = false;\n  wKeyPressed = false;\n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  \n  controls = new PointerLockControls(this.camera, document.body);\n  rayCaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  public keyboardInput = new KeyboardInput(this);\n  /**\n   * Updates the raycaster used for block selection\n   */\n  private selectedBlockUuid: string | null = null;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.camera.position.copy(PlayerInitPosition);\n    this.cameraHelper.visible = false;\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n\n    boundsHelper.visible = false;\n    scene.add(boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n\n    if (this.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRayCaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  private updateBoundsHelper() {\n    boundsHelper.position.copy(this.camera.position);\n    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  private updateRayCaster(world: World) {\n    const rayCaster = this.rayCaster;\n    if(!rayCaster) return;\n    rayCaster.setFromCamera(RayCenterScreen, this.camera);\n    const intersections = rayCaster.intersectObjects(world.children, true).filter((intersection) => {\n      // 排除掉掉落的方块\n      return intersection.object.userData.type !== 'drop';\n    });\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n      if(this.selectedBlockUuid !== intersection.object.uuid) {\n        this.selectedBlockUuid = intersection.object.uuid;\n        // console.log(intersection.object);\n      }\n      \n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      PlayerParams.selectedCoords = chunk.position.clone();\n      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (ToolBar.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        Action.blockPlacementCoords = PlayerParams.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n        selectionHelper.scale.set(0.3, 0.6, 0.3);\n      } else {\n        selectionHelper.scale.set(1, 1, 1);\n      } \n      // TODO 草方块的选择框需要调整大小\n      selectionHelper.position.copy(PlayerParams.selectedCoords);\n      selectionHelper.visible = true;\n    } else {\n      // 没有选中的方块时，将选中坐标设为 null\n      PlayerParams.selectedCoords = null;\n      // 没有选中的方块时，将选中方块大小设为 null\n      PlayerParams.selectedBlockSize = null;\n      selectionHelper.visible = false;\n    }\n  }\n\n  private updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -2500,7 +2646,7 @@
       "id": "game/player/action",
       "file": "game/player/action.ts",
       "absPath": "/game/player/action",
-      "__content": "import * as THREE from \"three\";\nimport { Player } from \"./Player\";\nimport { PlayerEventKey } from \"./interface\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\n\n/**\n * @desc 处理玩角色的动作 & 玩家的交互操作\n */\nexport class Action {\n    \n    /** @desc 玩家点击鼠标右键 放置方块的坐标*/\n    static blockPlacementCoords: THREE.Vector3;\n\n    /** @desc 处理角色的动作 */\n    static handlePlayerEvent(player: Player, eventKey: PlayerEventKey) {\n        switch (eventKey) {\n            case \"KeyW\":\n            case \"KeyS\":\n            case \"KeyA\":\n            case \"KeyD\":\n                handlePlayerMove(player, eventKey);\n                break;\n            case \"Space\": // jump\n                player.spacePressed = true;\n                break;\n            case \"KeyR\": // reset player position & velocity\n                player.position.copy(PlayerInitPosition);\n                player.velocity.set(0, 0, 0);\n                break;\n        }\n    }\n}\n\nfunction handlePlayerMove(player: Player, eventKey: PlayerEventKey) {\n    switch (eventKey) {\n        case \"KeyW\": // move forward\n            // 处理前进移动和前进跑步\n            if (!player.wKeyPressed && performance.now() - player.lastWPressed < 200) {\n                player.isSprinting = true;\n                player.input.z = PlayerParams.maxSprintSpeed;\n            } else {\n                player.input.z = PlayerParams.maxSpeed;\n            }\n            player.wKeyPressed = true;\n            player.lastWPressed = performance.now();\n            break;\n        case \"KeyA\": // move left\n            player.input.x = -PlayerParams.maxSpeed;\n            break;\n        case \"KeyS\": // move backward\n            player.input.z = -PlayerParams.maxSpeed;\n            break;\n        case \"KeyD\": // move right\n            player.input.x = PlayerParams.maxSpeed;\n            break;\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { Player } from \"./Player\";\nimport { PlayerEventKey } from \"./interface\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\n\n/**\n * @desc 处理玩角色的动作 & 玩家的交互操作\n */\nexport class Action {\n    \n    /** @desc 玩家点击鼠标右键 放置方块的坐标*/\n    static blockPlacementCoords: THREE.Vector3;\n\n    /** @desc 处理角色的动作 */\n    static handlePlayerEvent(player: Player, eventKey: PlayerEventKey, isKeyDown = true) {\n        switch (eventKey) {\n            case \"KeyW\":\n            case \"KeyS\":\n            case \"KeyA\":\n            case \"KeyD\":\n                handlePlayerMove(player, eventKey, isKeyDown);\n                break;\n            case \"Space\": // jump\n                if(isKeyDown) {\n                    player.spacePressed = true;\n                } else {\n                    player.spacePressed = false;\n                }\n                break;\n            case \"KeyR\": // reset player position & velocity\n                player.position.copy(PlayerInitPosition);\n                player.velocity.set(0, 0, 0);\n                break;\n        }\n    }\n}\n\nfunction handlePlayerMove(player: Player, eventKey: PlayerEventKey, isKeyDown = true) {\n    // TODO 在 key up 的时候 不应该直接把 input 设置为 0 需要保留一个速度 需要在 physics 中模拟一个减速过程\n    switch (eventKey) {\n        case \"KeyW\": // move forward\n            if(isKeyDown) {\n                // 处理前进移动和前进跑步\n                if (!player.wKeyPressed && performance.now() - player.lastWPressed < 200) {\n                    player.isSprinting = true;\n                    player.input.z = PlayerParams.maxSprintSpeed;\n                } else {\n                    player.input.z = PlayerParams.maxSpeed;\n                }\n                player.wKeyPressed = true;\n                player.lastWPressed = performance.now();\n            } else {\n                player.input.z = 0;\n                player.wKeyPressed = false;\n                player.isSprinting = false;\n            }\n            break;\n        case \"KeyA\": // move left\n            if(isKeyDown) {\n                player.input.x = -PlayerParams.maxSpeed;\n            } else {\n                player.input.x = 0;\n            }\n            break;\n        case \"KeyS\": // move backward\n            if(isKeyDown) {\n                player.input.z = -PlayerParams.maxSpeed;\n            } else {\n                player.input.z = 0;\n            }\n            break;\n        case \"KeyD\": // move right\n            if(isKeyDown) {\n                player.input.x = PlayerParams.maxSpeed;\n            } else {\n                player.input.x = 0;\n            }\n            break;\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/action.ts"
     },
@@ -2536,7 +2682,7 @@
       "id": "game/player/mouse",
       "file": "game/player/mouse.ts",
       "absPath": "/game/player/mouse",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            // console.log(\"adding block\", this.player.activeBlockId);\n            if (player.keyboardInput.activeBlockId != null) {\n                const playerPos = new THREE.Vector3(\n                Math.floor(player.position.x),\n                Math.floor(player.position.y) - 1,\n                Math.floor(player.position.z)\n                );\n                const blockPos = new THREE.Vector3(\n                Math.floor(Action.blockPlacementCoords.x - 0.5),\n                Math.floor(Action.blockPlacementCoords.y - 0.5),\n                Math.floor(Action.blockPlacementCoords.z - 0.5)\n                );\n\n                // 检查是否超出可以放置方块的距离\n                if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;\n\n                // Right click 放置方块\n                world.addBlock(\n                    blockPos.x,\n                    blockPos.y,\n                    blockPos.z,\n                    player.keyboardInput.activeBlockId\n                    );\n            }\n        }\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            // console.log(\"adding block\", this.player.activeBlockId);\n            if (ToolBar.activeBlockId != null) {\n                const playerPos = new THREE.Vector3(\n                Math.floor(player.position.x),\n                Math.floor(player.position.y) - 1,\n                Math.floor(player.position.z)\n                );\n                const blockPos = new THREE.Vector3(\n                Math.floor(Action.blockPlacementCoords.x - 0.5),\n                Math.floor(Action.blockPlacementCoords.y - 0.5),\n                Math.floor(Action.blockPlacementCoords.z - 0.5)\n                );\n\n                // 检查是否超出可以放置方块的距离\n                if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;\n\n                // Right click 放置方块\n                world.addBlock(\n                    blockPos.x,\n                    blockPos.y,\n                    blockPos.z,\n                    ToolBar.activeBlockId\n                    );\n            }\n        }\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
@@ -2581,7 +2727,7 @@
       "id": "game/gui/toolbar",
       "file": "game/gui/toolbar.ts",
       "absPath": "/game/gui/toolbar",
-      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport function updateToolBarActiveGUI(activeToolbarIndex: number) {\n    document?.getElementById(\"toolbar-active-border\")\n      ?.setAttribute(\"style\", `left: ${activeToolbarIndex * 11}%`);\n}\n\nexport function updateToolBarGUI(toolbar: BlockID[]) {\n  for (let i = 1; i <= 9; i++) {\n    const slot = document.getElementById(`toolbar-slot-${i}`);\n    if (slot) {\n      const blockId = toolbar[i - 1];\n      if (blockId != null && blockId !== BlockID.Air) {\n        slot.style.backgroundImage = `url('${\n          BlockFactory.getBlock(blockId).uiTexture\n        }')`;\n      }\n    }\n  }\n}",
+      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport class ToolBar {\n    static toolbar: BlockID[] = [\n      BlockID.Grass,\n      BlockID.Dirt,\n      BlockID.Stone,\n      BlockID.StoneBrick,\n      BlockID.RedstoneLamp,\n      BlockID.CoalOre,\n      BlockID.IronOre,\n      BlockID.OakLog,\n      BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId() {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static scrollToolBarGUI(key: string) {\n      // TODO: 实现滚动切换工具条\n    }\n\n    static updateToolBarGUI() {\n      for (let i = 1; i <= 9; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId != null && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${\n              BlockFactory.getBlock(blockId).uiTexture\n            }')`;\n          }\n        }\n      }\n    }\n\n    static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts"
     },
@@ -2608,7 +2754,7 @@
       "id": "game/world/drop",
       "file": "game/world/drop.ts",
       "absPath": "/game/world/drop",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"./geometry\";\n\n\n// TIP 暂定每种掉落物的最大数量为 1000 个\nconst maxCount = 1000;\n\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    constructor() {\n       super();\n       this.initInstanceMesh();\n    }\n\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, maxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        })\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        const mesh = this.meshes[blockType];\n        if (!mesh) {\n            return;\n        }\n        const instanceId = mesh.count++;\n        // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        \n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        mesh.computeBoundingSphere();\n    }\n\n    attract() {\n        // TODO 吸引掉落物品到玩家位置\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"./geometry\";\n\n\n// TIP 暂定每种掉落物的最大数量为 1000 个\nconst maxCount = 1000;\n\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    constructor() {\n       super();\n       this.initInstanceMesh();\n    }\n\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, maxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.userData.type = 'drop';\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        })\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        const mesh = this.meshes[blockType];\n        if (!mesh) {\n            return;\n        }\n        const instanceId = mesh.count++;\n        // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        \n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        mesh.computeBoundingSphere();\n    }\n\n    attract() {\n        // TODO 吸引掉落物品到玩家位置\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/drop.ts"
     },
@@ -4562,7 +4708,7 @@
             "format": "esm"
           },
           "src/pages/game/world/drop.ts": {
-            "bytes": 2121,
+            "bytes": 2162,
             "imports": [
               {
                 "path": "three",
@@ -4717,7 +4863,7 @@
             "format": "esm"
           },
           "src/pages/game/gui/toolbar.ts": {
-            "bytes": 676,
+            "bytes": 1193,
             "imports": [
               {
                 "path": "src/pages/game/Block/index.ts",
@@ -4933,7 +5079,7 @@
             "format": "esm"
           },
           "src/pages/game/player/action.ts": {
-            "bytes": 1908,
+            "bytes": 2756,
             "imports": [
               {
                 "path": "three",
@@ -4959,13 +5105,8 @@
             "format": "esm"
           },
           "src/pages/game/player/keyboard.ts": {
-            "bytes": 2322,
+            "bytes": 1691,
             "imports": [
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "../Block"
-              },
               {
                 "path": "src/pages/game/gui/index.ts",
                 "kind": "import-statement",
@@ -4975,11 +5116,6 @@
                 "path": "src/pages/game/player/action.ts",
                 "kind": "import-statement",
                 "original": "./action"
-              },
-              {
-                "path": "./literal",
-                "kind": "import-statement",
-                "external": true
               },
               {
                 "path": "./Player",
@@ -5075,7 +5211,7 @@
             "format": "esm"
           },
           "src/pages/game/player/mouse.ts": {
-            "bytes": 2274,
+            "bytes": 2282,
             "imports": [
               {
                 "path": "three",
@@ -5101,12 +5237,17 @@
                 "path": "src/pages/game/player/action.ts",
                 "kind": "import-statement",
                 "original": "./action"
+              },
+              {
+                "path": "src/pages/game/gui/index.ts",
+                "kind": "import-statement",
+                "original": "../gui"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/player/Player.ts": {
-            "bytes": 7582,
+            "bytes": 7707,
             "imports": [
               {
                 "path": "@tweenjs/tween.js",
@@ -7302,7 +7443,7 @@
                 "bytesInOutput": 1299
               },
               "src/pages/game/world/drop.ts": {
-                "bytesInOutput": 1540
+                "bytesInOutput": 1579
               },
               "src/pages/game/world/WorldChunk.ts": {
                 "bytesInOutput": 12611
@@ -7323,10 +7464,10 @@
                 "bytesInOutput": 281
               },
               "src/pages/game/gui/toolbar.ts": {
-                "bytesInOutput": 815
+                "bytesInOutput": 1311
               },
               "src/pages/game/gui/index.ts": {
-                "bytesInOutput": 5709
+                "bytesInOutput": 5635
               },
               "src/pages/game/RNG.ts": {
                 "bytesInOutput": 810
@@ -7344,10 +7485,10 @@
                 "bytesInOutput": 1190
               },
               "src/pages/game/player/action.ts": {
-                "bytesInOutput": 1505
+                "bytesInOutput": 2051
               },
               "src/pages/game/player/keyboard.ts": {
-                "bytesInOutput": 2358
+                "bytesInOutput": 1779
               },
               "src/pages/game/world/interface.ts": {
                 "bytesInOutput": 127
@@ -7356,7 +7497,7 @@
                 "bytesInOutput": 616
               },
               "src/pages/components/toolbar.tsx": {
-                "bytesInOutput": 1516
+                "bytesInOutput": 1519
               },
               "src/pages/game/physics/index.ts": {
                 "bytesInOutput": 7523
@@ -7365,10 +7506,10 @@
                 "bytesInOutput": 388
               },
               "src/pages/game/player/mouse.ts": {
-                "bytesInOutput": 1826
+                "bytesInOutput": 1816
               },
               "src/pages/game/player/Player.ts": {
-                "bytesInOutput": 6845
+                "bytesInOutput": 6935
               },
               "src/pages/game/engine/index.ts": {
                 "bytesInOutput": 1068
@@ -7383,7 +7524,7 @@
                 "bytesInOutput": 3410
               },
               "src/pages/index.tsx": {
-                "bytesInOutput": 1809
+                "bytesInOutput": 1810
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 30022
@@ -7416,7 +7557,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 162002
+            "bytes": 162514
           }
         }
       }
@@ -11900,10 +12041,15 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 331,
+          "end": 340,
           "importKind": "value",
           "source": "../gui",
           "specifiers": [
+            {
+              "imported": "ToolBar",
+              "local": "ToolBar",
+              "type": "ImportSpecifier"
+            },
             {
               "imported": "updatePositionGUI",
               "local": "updatePositionGUI",
@@ -11914,7 +12060,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 375,
+          "end": 384,
           "importKind": "value",
           "source": "./utils",
           "specifiers": [
@@ -11924,11 +12070,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 332,
+          "start": 341,
           "type": "ImportDeclaration"
         },
         {
-          "end": 454,
+          "end": 463,
           "importKind": "value",
           "source": "./literal",
           "specifiers": [
@@ -11948,11 +12094,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 376,
+          "start": 385,
           "type": "ImportDeclaration"
         },
         {
-          "end": 498,
+          "end": 507,
           "importKind": "value",
           "source": "./keyboard",
           "specifiers": [
@@ -11962,11 +12108,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 455,
+          "start": 464,
           "type": "ImportDeclaration"
         },
         {
-          "end": 536,
+          "end": 545,
           "importKind": "value",
           "source": "./mouse",
           "specifiers": [
@@ -11976,11 +12122,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 499,
+          "start": 508,
           "type": "ImportDeclaration"
         },
         {
-          "end": 585,
+          "end": 594,
           "importKind": "value",
           "source": "../Block/Block",
           "specifiers": [
@@ -11990,11 +12136,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 537,
+          "start": 546,
           "type": "ImportDeclaration"
         },
         {
-          "end": 644,
+          "end": 653,
           "importKind": "value",
           "source": "../helper",
           "specifiers": [
@@ -12009,11 +12155,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 586,
+          "start": 595,
           "type": "ImportDeclaration"
         },
         {
-          "end": 679,
+          "end": 688,
           "importKind": "value",
           "source": "./action",
           "specifiers": [
@@ -12023,7 +12169,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 645,
+          "start": 654,
           "type": "ImportDeclaration"
         }
       ],
@@ -12106,13 +12252,13 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/keyboard.ts": [
         {
-          "end": 36,
+          "end": 34,
           "importKind": "value",
-          "source": "../Block",
+          "source": "../gui",
           "specifiers": [
             {
-              "imported": "BlockID",
-              "local": "BlockID",
+              "imported": "ToolBar",
+              "local": "ToolBar",
               "type": "ImportSpecifier"
             }
           ],
@@ -12120,26 +12266,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 103,
-          "importKind": "value",
-          "source": "../gui",
-          "specifiers": [
-            {
-              "imported": "updateToolBarActiveGUI",
-              "local": "updateToolBarActiveGUI",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "updateToolBarGUI",
-              "local": "updateToolBarGUI",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 37,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 138,
+          "end": 69,
           "importKind": "value",
           "source": "./action",
           "specifiers": [
@@ -12149,30 +12276,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 104,
+          "start": 35,
           "type": "ImportDeclaration"
         },
         {
-          "end": 200,
-          "importKind": "value",
-          "source": "./literal",
-          "specifiers": [
-            {
-              "imported": "PlayerInitPosition",
-              "local": "PlayerInitPosition",
-              "type": "ImportSpecifier"
-            },
-            {
-              "imported": "PlayerParams",
-              "local": "PlayerParams",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 139,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 235,
+          "end": 104,
           "importKind": "value",
           "source": "./Player",
           "specifiers": [
@@ -12182,7 +12290,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 201,
+          "start": 70,
           "type": "ImportDeclaration"
         }
       ],
@@ -12283,6 +12391,20 @@
             }
           ],
           "start": 150,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 218,
+          "importKind": "value",
+          "source": "../gui",
+          "specifiers": [
+            {
+              "imported": "ToolBar",
+              "local": "ToolBar",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 185,
           "type": "ImportDeclaration"
         }
       ],

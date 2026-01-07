@@ -23,6 +23,7 @@ export class DropGroup extends THREE.Group {
             const mesh = new THREE.InstancedMesh(dropGeometry, block.material, maxCount);
             mesh.name = block.constructor.name;
             mesh.count = 0;
+            mesh.userData.type = 'drop';
             // mesh.castShadow = !block.canPassThrough;
             // 暂时关闭阴影投射
             mesh.castShadow = false;

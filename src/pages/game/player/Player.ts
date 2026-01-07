@@ -4,7 +4,7 @@ import { PointerLockControls } from "three/examples/jsm/controls/PointerLockCont
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
-import { updatePositionGUI } from "../gui";
+import { ToolBar, updatePositionGUI } from "../gui";
 import { initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
@@ -162,7 +162,10 @@ export class Player {
     const rayCaster = this.rayCaster;
     if(!rayCaster) return;
     rayCaster.setFromCamera(RayCenterScreen, this.camera);
-    const intersections = rayCaster.intersectObjects(world.children, true);
+    const intersections = rayCaster.intersectObjects(world.children, true).filter((intersection) => {
+      // 排除掉掉落的方块
+      return intersection.object.userData.type !== 'drop';
+    });
 
     if (intersections.length > 0) {
       const intersection = intersections[0];
@@ -200,7 +203,7 @@ export class Player {
       const boundingBox = new THREE.Box3().setFromObject(intersection.object);
       PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
 
-      if (this.keyboardInput.activeBlockId !== BlockID.Air && intersection.normal) {
+      if (ToolBar.activeBlockId !== BlockID.Air && intersection.normal) {
         // Update block placement coords to be 1 block over in the direction of the normal
         Action.blockPlacementCoords = PlayerParams.selectedCoords
           .clone()

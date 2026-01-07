@@ -3,6 +3,7 @@ import { World } from "../world/World";
 import { PlayerParams } from "./literal";
 import { Player } from "./Player";
 import { Action } from "./action";
+import { ToolBar } from "../gui";
 
 export class MouseInput {
     private player: Player;
@@ -27,7 +28,7 @@ export class MouseInput {
             world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             // console.log("adding block", this.player.activeBlockId);
-            if (player.keyboardInput.activeBlockId != null) {
+            if (ToolBar.activeBlockId != null) {
                 const playerPos = new THREE.Vector3(
                 Math.floor(player.position.x),
                 Math.floor(player.position.y) - 1,
@@ -47,7 +48,7 @@ export class MouseInput {
                     blockPos.x,
                     blockPos.y,
                     blockPos.z,
-                    player.keyboardInput.activeBlockId
+                    ToolBar.activeBlockId
                     );
             }
         }
