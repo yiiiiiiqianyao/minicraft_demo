@@ -9,3 +9,5 @@ export interface IPlayerParams {
     selectedCoords: THREE.Vector3 | null;
     selectedBlockSize: THREE.Vector3 | null;
 }
+
+export type PlayerEventKey = "KeyW" | "KeyS" | "KeyA" | "KeyD" | "KeyR" | "Space";

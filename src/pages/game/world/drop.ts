@@ -33,13 +33,12 @@ export class DropGroup extends THREE.Group {
         })
     }
 
-    drop(blockType: BlockID, dropPosition: THREE.Vector3) {
+    drop(blockType: BlockID, x: number, y: number, z: number) {
         // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
         const mesh = this.meshes[blockType];
         if (!mesh) {
             return;
         }
-        const { x, y, z } = dropPosition;
         const instanceId = mesh.count++;
         // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works
         const matrix = new THREE.Matrix4();

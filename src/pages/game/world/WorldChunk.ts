@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
-import { RenderGeometry } from "../Block/Block";
+import { Block, RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
 import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
@@ -258,24 +258,23 @@ export class WorldChunk extends THREE.Group {
   removeBlock(x: number, y: number, z: number) {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
     const block = this.getBlock(x, y, z);
-    if (block && block.block !== BlockID.Air) {
-      this.playBlockSound(block.block);
-      this.deleteBlockInstance(x, y, z);
-      
-      // 触发掉落物品
-      this.dropGroup.drop(block.block, new THREE.Vector3(x, y, z));
+    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
+    this.playBlockSound(block.block);
+    this.deleteBlockInstance(x, y, z);
+    
+    // 触发掉落物品
+    this.dropGroup.drop(block.block, x, y, z);
 
-      this.setBlockId(x, y, z, BlockID.Air);
-      // 更新数据存储 设置方块为Air
-      this.dataStore.set(
-        this.position.x,
-        this.position.z,
-        x,
-        y,
-        z,
-        BlockID.Air
-      );
-    }
+    this.setBlockId(x, y, z, BlockID.Air);
+    // 更新数据存储 设置方块为Air
+    this.dataStore.set(
+      this.position.x,
+      this.position.z,
+      x,
+      y,
+      z,
+      BlockID.Air
+    );
   }
 
   async playBlockSound(blockId: BlockID) {

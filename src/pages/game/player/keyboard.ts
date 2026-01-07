@@ -1,8 +1,12 @@
 import { BlockID } from "../Block";
 import { updateToolBarActiveGUI, updateToolBarGUI } from "../gui";
+import { Action } from "./action";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { Player } from "./Player";
 
+/**
+ * @desc 处理玩家键盘输入事件
+ */
 export class KeyboardInput {
     private player: Player;
     private toolbar: BlockID[] = [
@@ -45,38 +49,17 @@ export class KeyboardInput {
       case "Digit7":
       case "Digit8":
       case "Digit9":
+        // TODO 工具栏切换功能优化
         this.activeToolbarIndex = Number(event.key) - 1;
         updateToolBarActiveGUI(this.activeToolbarIndex);
         break;
       case "KeyW":
-        if (!this.player.wKeyPressed && performance.now() - this.player.lastWPressed < 200) {
-          this.player.isSprinting = true;
-          this.player.input.z = PlayerParams.maxSprintSpeed;
-        } else {
-          this.player.input.z = PlayerParams.maxSpeed;
-        }
-        this.player.wKeyPressed = true;
-        this.player.lastWPressed = performance.now();
-        break;
       case "KeyA":
-        this.player.input.x = -PlayerParams.maxSpeed;
-        break;
       case "KeyS":
-        this.player.input.z = -PlayerParams.maxSpeed;
-        break;
       case "KeyD":
-        this.player.input.x = PlayerParams.maxSpeed;
-        break;
       case "KeyR":
-        this.player.position.set(
-          PlayerInitPosition.x,
-          PlayerInitPosition.y,
-          PlayerInitPosition.z
-        );
-        this.player.velocity.set(0, 0, 0);
-        break;
       case "Space":
-        this.player.spacePressed = true;
+        Action.handlePlayerEvent(this.player, event.code);
         break;
     }
   }
