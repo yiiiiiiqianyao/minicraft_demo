@@ -1,13 +1,13 @@
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
-import { Block, RenderGeometry } from "../Block/Block";
+import { RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
 import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
 import { getInstancedGeometry } from "./geometry";
-import { DropGroup } from "./drop";
+import { DropGroup } from "./drop/drop";
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
@@ -32,7 +32,6 @@ export class WorldChunk extends THREE.Group {
   }
 
   async generate() {
-    
     // const start = performance.now();
     // 初始化 chunk 数据
     const data: BlockID[][][] = await generateChunk(
@@ -120,14 +119,14 @@ export class WorldChunk extends THREE.Group {
     const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
 
     for (const blockId of blockIDValues) {
-      const block = BlockFactory.getBlock(blockId);
-      const blockGeometry = block.geometry;
+      const blockEntity = BlockFactory.getBlock(blockId);
+      const blockGeometry = blockEntity.geometry;
 
       // 每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
       const mesh = new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
         this.wireframeMode
           ? new THREE.MeshBasicMaterial({ wireframe: true })
-          : block.material,
+          : blockEntity.material,
         maxCount
       );
       // mesh.visible = false;
@@ -143,12 +142,12 @@ export class WorldChunk extends THREE.Group {
       //   maxCount
       // );
 
-      mesh.name = block.constructor.name;
+      mesh.name = blockEntity.constructor.name;
       mesh.count = 0;
-      mesh.castShadow = !block.canPassThrough;
+      mesh.castShadow = !blockEntity.canPassThrough;
       mesh.receiveShadow = true;
       mesh.matrixAutoUpdate = false;
-      meshes[block.id] = mesh;
+      meshes[blockEntity.id] = mesh;
     }
 
     for (let x = 0; x < this.size.width; x++) {
@@ -259,11 +258,16 @@ export class WorldChunk extends THREE.Group {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
     const block = this.getBlock(x, y, z);
     if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
-    this.playBlockSound(block.block);
-    this.deleteBlockInstance(x, y, z);
+    const blockId = block.block;
+    this.playBlockSound(blockId);
+    this.deleteBlockInstance(x, y, z, block);
     
-    // 触发掉落物品
-    this.dropGroup.drop(block.block, x, y, z);
+    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
+    const blockEntity = BlockFactory.getBlock(blockId);
+    if(blockEntity.canDrop) {
+      // 触发掉落物品
+      this.dropGroup.drop(block.block, x, y, z);
+    }    
 
     this.setBlockId(x, y, z, BlockID.Air);
     // 更新数据存储 设置方块为Air
@@ -352,12 +356,10 @@ export class WorldChunk extends THREE.Group {
   /**
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
-  deleteBlockInstance(x: number, y: number, z: number) {
-    const block = this.getBlock(x, y, z);
+  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {
+    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);
 
-    if (block?.block === BlockID.Air || !block?.instanceIds.length) {
-      return;
-    }
+    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;
 
     // Get the mesh of the block
     const mesh = this.children.find(

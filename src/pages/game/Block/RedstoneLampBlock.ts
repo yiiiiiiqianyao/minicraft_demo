@@ -17,6 +17,7 @@ export class RedstoneLampBlock extends LightSourceBlock {
   geometry = RenderGeometry.Cube;
   transparent = true;
   canPassThrough = false;
+  canDrop = true;
 
   // Light properties
   color = 0xdfa658;

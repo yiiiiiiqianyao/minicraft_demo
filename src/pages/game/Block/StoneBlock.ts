@@ -14,4 +14,5 @@ export class StoneBlock extends Block {
   geometry = RenderGeometry.Cube;
   transparent = false;
   canPassThrough = false;
+  canDrop = true;
 }

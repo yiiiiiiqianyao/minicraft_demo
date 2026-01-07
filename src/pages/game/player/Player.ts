@@ -131,6 +131,26 @@ export class Player {
     }
   }
 
+  /**
+   * 更新角色的位置 水平 垂直
+   * @param deltaPosition 
+   */
+  updatePosition(deltaPosition: THREE.Vector3) {
+    this.position.add(deltaPosition);
+    this.updateByPosition();
+  }
+
+  /**
+   * 随着角色的位置变化而刷新的一些属性 PlayerParams
+   */
+  updateByPosition() {
+    // TODO
+    // 更新角色所处的 chunk
+    // PlayerParams.chunkID = world.getChunkIDFromPosition(this.position);
+    // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
+    // 角色一定距离内执行粒子动画、野怪刷新、植物生长等
+  }
+
   private playWalkSound(blockUnderneath: BlockID) {
     switch (blockUnderneath) {
       case BlockID.Grass:

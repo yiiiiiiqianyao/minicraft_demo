@@ -18,4 +18,5 @@ export class LeavesBlock extends Block {
   geometry = RenderGeometry.Cube;
   transparent = true;
   canPassThrough = false;
+  canDrop = true;
 }

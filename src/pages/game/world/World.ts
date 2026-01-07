@@ -121,6 +121,7 @@ export class World extends THREE.Group {
         player.position.set(startX,startingPlayerPosition.y + 10,startZ);
         // 角色 PointerLockControls 控制器解锁
         player.controls.lock();
+        player.updateByPosition();
       }
     }
 

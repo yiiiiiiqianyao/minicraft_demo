@@ -21,4 +21,5 @@ export class TallGrassBlock extends Block {
   geometry = RenderGeometry.Cross;
   transparent = true;
   canPassThrough = true;
+  canDrop = false;
 }

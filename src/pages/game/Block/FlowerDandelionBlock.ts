@@ -23,4 +23,5 @@ export class FlowerDandelionBlock extends Block {
   geometry = RenderGeometry.Flower;
   transparent = true;
   canPassThrough = true;
+  canDrop = true;
 }

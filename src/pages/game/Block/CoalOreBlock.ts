@@ -17,4 +17,5 @@ export const CoalOreBlock = class extends OreBlock {
   geometry = RenderGeometry.Cube;
   transparent = false;
   canPassThrough = false;
+  canDrop = true;
 };

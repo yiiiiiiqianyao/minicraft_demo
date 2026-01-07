@@ -1,7 +1,8 @@
 import * as THREE from "three";
-import { BlockID, blockIDValues } from "../Block";
-import { BlockFactory } from "../Block/BlockFactory";
-import { getDropInstancedGeometry } from "./geometry";
+import { BlockID, blockIDValues } from "../../Block";
+import { BlockFactory } from "../../Block/BlockFactory";
+import { getDropInstancedGeometry } from "../geometry";
+import { IInstanceData } from "../interface";
 
 
 // TIP 暂定每种掉落物的最大数量为 1000 个
@@ -31,15 +32,29 @@ export class DropGroup extends THREE.Group {
             mesh.matrixAutoUpdate = false;
             meshes[block.id] = mesh;
             this.add(mesh);
-        })
+        });
+        // console.log('meshes', meshes);
     }
 
     drop(blockType: BlockID, x: number, y: number, z: number) {
-        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
         const mesh = this.meshes[blockType];
-        if (!mesh) {
-            return;
-        }
+        if (!mesh) return;
+        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
+        this.addInstance(mesh, x, y, z);
+    }
+
+    attract(block: IInstanceData) {
+        // TODO 吸引掉落物品到玩家位置 待优化
+        // Get the mesh of the block
+        const mesh = this.meshes[block.block]
+        if (!mesh) return;
+
+        block.instanceIds.forEach((instanceId) => {
+            this.deleteInstance(mesh, instanceId);
+        });
+    }
+
+    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
         const instanceId = mesh.count++;
         // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works
         const matrix = new THREE.Matrix4();
@@ -49,9 +64,25 @@ export class DropGroup extends THREE.Group {
         
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
         mesh.computeBoundingSphere();
+        return instanceId;
     }
 
-    attract() {
-        // TODO 吸引掉落物品到玩家位置
+    private deleteInstance(mesh: THREE.InstancedMesh, instanceId: number) {
+        const lastMatrix = new THREE.Matrix4();
+        mesh.getMatrixAt(mesh.count - 1, lastMatrix);
+
+        // Also need to get block coords of instance to update instance id of the block
+        const lastBlockCoords = new THREE.Vector3();
+        lastBlockCoords.setFromMatrixPosition(lastMatrix);
+ 
+        // Swap transformation matrices
+        mesh.setMatrixAt(instanceId, lastMatrix);
+
+        // Decrement instance count
+        mesh.count--;
+
+        // Notify the instanced mesh we updated the instance matrix
+        mesh.instanceMatrix.needsUpdate = true;
+        mesh.computeBoundingSphere();
     }
 }

@@ -234,7 +234,8 @@ export class Physics {
       if (!player.onGround && deltaPosition.y !== 0) {
         deltaPosition.y = 0;
       }
-      player.position.add(deltaPosition);
+      // 更新角色的位置
+      player.updatePosition(deltaPosition);
 
       // If player is stuck underneath a block, boost him up
       if (collision.normal.y < 0) {

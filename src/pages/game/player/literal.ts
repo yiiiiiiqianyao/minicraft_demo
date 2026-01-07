@@ -17,6 +17,10 @@ export const PlayerParams: IPlayerParams = {
     selectedCoords: null,
     // 玩家选中的方块大小 可能未选中
     selectedBlockSize: null,
+    // 玩家所处的 chunkID
+    chunkID: null,
+    // 玩家相邻的最小 4 个 chunkID
+    nearFourChunks: null,
 }
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);

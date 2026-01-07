@@ -18,4 +18,5 @@ export abstract class Block {
   abstract geometry: RenderGeometry;
   abstract transparent: boolean;
   abstract canPassThrough: boolean;
+  abstract canDrop: boolean;
 }

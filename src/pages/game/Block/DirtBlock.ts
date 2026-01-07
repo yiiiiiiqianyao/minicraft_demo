@@ -14,4 +14,5 @@ export class DirtBlock extends Block {
   geometry = RenderGeometry.Cube;
   transparent = false;
   canPassThrough = false;
+  canDrop = true;
 }

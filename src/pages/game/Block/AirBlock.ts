@@ -9,4 +9,5 @@ export class AirBlock extends Block {
   geometry = RenderGeometry.Cube;
   transparent = true;
   canPassThrough = true;
+  canDrop = false;
 }
