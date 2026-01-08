@@ -5,13 +5,15 @@ import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { ToolBar, updatePositionGUI } from "../gui";
-import { initPlayerCamera, updatePlayerCoords } from "./utils";
+import { initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
 import { boundsHelper, selectionHelper } from "../helper";
 import { Action } from "./action";
+import { worldToCeilBlockCoord, worldToChunkCoords } from "../world/chunk/utils";
+import { updateBlockCoordGUI, updateChunkCoordGUI, updateWorldBlockCoordGUI } from "../dev";
 
 export class Player {
   onGround = false;
@@ -148,7 +150,19 @@ export class Player {
     PlayerParams.position.copy(this.position);
     // const { x, z} = this.position;
     // 更新角色的坐标信息
-    updatePlayerCoords();
+    // updatePlayerCoords();
+
+    const { x, y, z } = PlayerParams.position;
+    // 更新角色所处的 chunkID
+    const { chunk, block } = worldToChunkCoords(x, y, z);
+    updateChunkCoordGUI(chunk.x, chunk.z);
+    // 更新角色所处的 chunk blockID
+    const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);
+    updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);
+    // 更新角色所处的世界 blockID
+    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);
+    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);
+
     // 更新角色所处的 chunk
     // PlayerParams.chunkID = world.getChunkIDFromPosition(this.position);
     // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
