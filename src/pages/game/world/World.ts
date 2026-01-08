@@ -5,12 +5,13 @@ import { LightSourceBlock } from "../Block/LightSourceBlock";
 import { DataStore } from "./DataStore";
 import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";
-import { IWorldParams, IWorldSize } from "./interface";
+import { IWorldParams } from "./interface";
 import { DefaultWorldParams } from "./literal";
 import { PlayerInitPosition } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
+import { ChunkParams } from "./chunk/literal";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -19,10 +20,6 @@ export class World extends THREE.Group {
   seed: number;
   renderDistance = 8;
   asyncLoading = true;
-  chunkSize: IWorldSize = {
-    width: 16,
-    height: 32,
-  };
   chunkQueue: { x: number; z: number }[];
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
@@ -109,7 +106,7 @@ export class World extends THREE.Group {
         const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
         const startX = PlayerInitPosition.x;
         const startZ = PlayerInitPosition.z;
-        const currentChunkHeight = this.chunkSize.height;
+        const currentChunkHeight = ChunkParams.height;
         for (let y = currentChunkHeight; y > 0; y--) {
           // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
           if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
@@ -235,13 +232,13 @@ export class World extends THREE.Group {
    * Generates the chunk at (x, z) coordinates
    */
   async generateChunk(x: number, z: number) {
+    const { width } = ChunkParams;
     const chunk = new WorldChunk(
-      this.chunkSize,
       this.params,
       this.dataStore,
       this.wireframeMode
     );
-    chunk.position.set(x * this.chunkSize.width, 0, z * this.chunkSize.width);
+    chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };
 
     chunk.generate();
@@ -353,11 +350,12 @@ export class World extends THREE.Group {
     chunk: { x: number; z: number };
     block: { x: number; y: number; z: number };
   } {
-    const chunkX = Math.floor(x / this.chunkSize.width);
-    const chunkZ = Math.floor(z / this.chunkSize.width);
+    const { width } = ChunkParams;
+    const chunkX = Math.floor(x / width);
+    const chunkZ = Math.floor(z / width);
 
-    const blockX = x - chunkX * this.chunkSize.width;
-    const blockZ = z - chunkZ * this.chunkSize.width;
+    const blockX = x - chunkX * width;
+    const blockZ = z - chunkZ * width;
 
     return {
       chunk: { x: chunkX, z: chunkZ },

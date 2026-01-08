@@ -1,21 +1,22 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { World } from "../World";
-import { IWorldParams, IWorldSize } from "../interface";
+import { IWorldParams } from "../interface";
+import { ChunkParams } from "../chunk/literal";
 
 /**
  * Generates trees
  */
 export const generateTrees = (
   input: BlockID[][][],
-  size: IWorldSize,
   params: IWorldParams,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
+  const { width, height } = ChunkParams;
   // 树冠大小
   const canopySize = params.trees.canopy.size.max;
-  for (let baseX = canopySize; baseX < size.width - canopySize; baseX++) {
-    for (let baseZ = canopySize; baseZ < size.width - canopySize; baseZ++) {
+  for (let baseX = canopySize; baseX < width - canopySize; baseX++) {
+    for (let baseZ = canopySize; baseZ < width - canopySize; baseZ++) {
       const n =
         World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;
       if (n < 1 - params.trees.frequency) {
@@ -23,7 +24,7 @@ export const generateTrees = (
       }
 
       // Find the grass tile
-      for (let y = size.height - 1; y >= 0; y--) {
+      for (let y = height - 1; y >= 0; y--) {
         if (input[baseX][y][baseZ] !== BlockID.Grass) {
           continue;
         }

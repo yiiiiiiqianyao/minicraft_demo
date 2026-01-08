@@ -1,19 +1,20 @@
 import * as THREE from "three";
 import { World } from "../World";
-import { IWorldParams, IWorldSize } from "../interface";
+import { IWorldParams } from "../interface";
 import { BlockID } from "../../Block";
+import { ChunkParams } from "../chunk/literal";
 
 /**
  * Generates the terrain data
  */
 export const generateTerrain = (
   input: BlockID[][][],
-  size: IWorldSize,
   params: IWorldParams,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
-  for (let x = 0; x < size.width; x++) {
-    for (let z = 0; z < size.width; z++) {
+  const { width, height } = ChunkParams;
+  for (let x = 0; x < width; x++) {
+    for (let z = 0; z < width; z++) {
       // block position of world
       const value = World.simplex.noise(
         (chunkPos.x + x) / params.terrain.scale,
@@ -23,8 +24,8 @@ export const generateTerrain = (
       const scaledNoise =
         params.terrain.offset + params.terrain.magnitude * value;
 
-      let terrainHeight = Math.floor(size.height * scaledNoise);
-      terrainHeight = Math.max(0, Math.min(terrainHeight, size.height - 1));
+      let terrainHeight = Math.floor(height * scaledNoise);
+      terrainHeight = Math.max(0, Math.min(terrainHeight, height - 1));
 
       // 地表表层方块
       const surfaceHeight =
@@ -36,7 +37,7 @@ export const generateTerrain = (
         params.bedrock.offset +
         Math.abs(World.simplex.noise(x, z) * params.bedrock.magnitude);
 
-      for (let y = 0; y < size.height; y++) {
+      for (let y = 0; y < height; y++) {
         // TODO 生成地形的时候 后续生成洞穴 连续
         // World.simplex.noise3d(x, y, z)
         if (y < terrainHeight) {

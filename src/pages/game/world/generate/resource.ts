@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { World } from "../World";
-import { IWorldSize } from "../interface";
 import { BlockID } from "../../Block";
+import { ChunkParams } from "../chunk/literal";
 
 export const oreConfig = {
   coal: {
@@ -21,13 +21,13 @@ export const oreConfig = {
  */
 export const generateResources = (
   input: BlockID[][][],
-  size: IWorldSize,
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
+  const { width, height } = ChunkParams;
   for (const [_, config] of Object.entries(oreConfig)) {
-    for (let x = 0; x < size.width; x++) {
-      for (let y = 0; y < size.height; y++) {
-        for (let z = 0; z < size.width; z++) {
+    for (let x = 0; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        for (let z = 0; z < width; z++) {
           const value = World.simplex.noise3d(
             (chunkPos.x + x) / config.scale.x,
             (chunkPos.y + y) / config.scale.y,

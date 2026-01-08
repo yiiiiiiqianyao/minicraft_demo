@@ -3,19 +3,20 @@
  */
 
 import { BlockID } from "../../Block";
-import { IWorldParams, IWorldSize } from "../interface";
+import { ChunkParams } from "../chunk/literal";
+import { IWorldParams } from "../interface";
 import { World } from "../World";
 
 export const generateTallGrass = (
   input: BlockID[][][],
-  size: IWorldSize,
   params: IWorldParams
 ): BlockID[][][] => {
-  for (let x = 0; x < size.width; x++) {
-    for (let z = 0; z < size.width; z++) {
+  const { width, height } = ChunkParams;
+  for (let x = 0; x < width; x++) {
+    for (let z = 0; z < width; z++) {
       // starting from the top of the chunk, find the first grass block
       // if come in contact with leaves, stop since grass doesn't grow under trees
-      for (let y = size.height - 1; y >= 0; y--) {
+      for (let y = height - 1; y >= 0; y--) {
         if (input[x][y][z] === BlockID.Leaves) {
           break;
         }
@@ -45,9 +46,9 @@ export const generateTallGrass = (
               // Check if the new position is within the chunk boundaries and is air
               if (
                 currentX >= 0 &&
-                currentX < size.width &&
+                currentX < width &&
                 currentZ >= 0 &&
-                currentZ < size.width &&
+                currentZ < width &&
                 input[currentX][baseY][currentZ] === BlockID.Air &&
                 input[currentX][y][currentZ] === BlockID.Grass
               ) {

@@ -4,27 +4,25 @@ import { BlockID, blockIDValues } from "../Block";
 import { RenderGeometry } from "../Block/Block";
 import { BlockFactory } from "../Block/BlockFactory";
 import { DataStore } from "./DataStore";
-import { IWorldParams, IWorldSize, IInstanceData } from "./interface";
+import { IWorldParams, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
 import { getInstancedGeometry } from "./geometry";
 import { DropGroup } from "./drop/drop";
+import { ChunkParams } from "./chunk/literal";
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
-  size: IWorldSize;
   loaded: boolean;
   dataStore: DataStore;
   wireframeMode = false;
   dropGroup = new DropGroup();
 
   constructor(
-    size: IWorldSize,
     params: IWorldParams,
     dataStore: DataStore,
     wireframeMode = false
   ) {
     super();
-    this.size = size;
     this.params = params;
     this.dataStore = dataStore;
     this.loaded = false;
@@ -35,15 +33,13 @@ export class WorldChunk extends THREE.Group {
     // const start = performance.now();
     // 初始化 chunk 数据
     const data: BlockID[][][] = await generateChunk(
-      this.size,
       this.params,
       this.position.x,
       this.position.z
     );
 
     // 空闲时间的 callback
-    requestIdleCallback(
-      () => {
+    requestIdleCallback(() => {
                  
         // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
@@ -64,12 +60,13 @@ export class WorldChunk extends THREE.Group {
    * Initializes the terrain data
    */
   initializeTerrain(data: BlockID[][][]) {
+    const { width, height } = ChunkParams;
     this.data = [];
-    for (let x = 0; x < this.size.width; x++) {
+    for (let x = 0; x < width; x++) {
       const slice: IInstanceData[][] = [];
-      for (let y = 0; y < this.size.height; y++) {
+      for (let y = 0; y < height; y++) {
         const row: IInstanceData[] = [];
-        for (let z = 0; z < this.size.width; z++) {
+        for (let z = 0; z < width; z++) {
           row.push({
             block: data[x][y][z],
             instanceIds: [],
@@ -85,9 +82,10 @@ export class WorldChunk extends THREE.Group {
    * Loads player changes from the data store
    */
   loadPlayerChanges() {
-    for (let x = 0; x < this.size.width; x++) {
-      for (let y = 0; y < this.size.height; y++) {
-        for (let z = 0; z < this.size.width; z++) {
+    const { width, height } = ChunkParams;
+    for (let x = 0; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        for (let z = 0; z < width; z++) {
           // Overwrite with value in data store if it exists
           if (
             this.dataStore.contains(this.position.x, this.position.z, x, y, z)
@@ -108,12 +106,13 @@ export class WorldChunk extends THREE.Group {
   }
 
   generateMeshes(data: BlockID[][][]) {
+    const { width, height } = ChunkParams;
     this.clear();
 
     // 添加掉落物品组
     this.add(this.dropGroup);
 
-    const maxCount = this.size.width * this.size.width * this.size.height;
+    const maxCount = width * width * height;
 
     // Create lookup table where key is block id
     const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
@@ -150,9 +149,9 @@ export class WorldChunk extends THREE.Group {
       meshes[blockEntity.id] = mesh;
     }
 
-    for (let x = 0; x < this.size.width; x++) {
-      for (let y = 0; y < this.size.height; y++) {
-        for (let z = 0; z < this.size.width; z++) {
+    for (let x = 0; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        for (let z = 0; z < width; z++) {
           const block = data[x][y][z];
           const blockClass = BlockFactory.getBlock(block);
 
@@ -410,7 +409,7 @@ export class WorldChunk extends THREE.Group {
    * Checks if the given coordinates are within the world bounds
    */
   inBounds(x: number, y: number, z: number): boolean {
-    const { width, height } = this.size;
+    const { width, height } = ChunkParams;
     return (
       x >= 0 &&
       x < width &&
@@ -452,7 +451,16 @@ export class WorldChunk extends THREE.Group {
     return true;
   }
 
+  /**
+   * 判断一个方块是否在 chunk 的边界上
+   * @param x 
+   * @param y 
+   * @param z 
+   * @returns 
+   */
   isBorderBlock(x: number, y: number, z: number): boolean {
+    const { width, height } = ChunkParams;
+    // TODO 看上去是一个优化判断 暂时待理解
     const up = this.getBlock(x, y + 1, z);
     const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;
     if (upBlockClass?.canPassThrough) {
@@ -461,11 +469,11 @@ export class WorldChunk extends THREE.Group {
 
     return (
       x === 0 ||
-      x === this.size.width - 1 ||
+      x === width - 1 ||
       y === 0 ||
-      y === this.size.height - 1 ||
+      y === height - 1 ||
       z === 0 ||
-      z === this.size.width - 1
+      z === width - 1
     );
   }
 

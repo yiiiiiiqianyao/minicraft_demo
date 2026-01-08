@@ -53,8 +53,3 @@ export interface IInstanceData {
   // 一个方块可能由多个 instance 组成 如 flower 就是由两个 instance plane 组成的
   instanceIds: number[]; // reference to mesh instanceId
 };
-
-export interface IWorldSize {
-  width: number;
-  height: number;
-};

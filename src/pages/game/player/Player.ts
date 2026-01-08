@@ -145,6 +145,7 @@ export class Player {
    */
   updateByPosition() {
     // TODO
+    const { x, z} = this.position;
     // 更新角色所处的 chunk
     // PlayerParams.chunkID = world.getChunkIDFromPosition(this.position);
     // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
