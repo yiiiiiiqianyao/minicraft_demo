@@ -7,5 +7,8 @@ export const Debug = () => {
         <div className="stat" id="player-pos-z"></div>
         <div className="stat" id="triangle-count"></div>
         <div className="stat" id="render-calls"></div>
+        <div className="stat" id="chunk-coord"></div>
+        <div className="stat" id="chunk-block-coord"></div>
+        <div className="stat" id="world-block-coord"></div>
       </div>
 }

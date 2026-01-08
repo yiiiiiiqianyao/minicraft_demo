@@ -40,7 +40,6 @@ export class WorldChunk extends THREE.Group {
 
     // 空闲时间的 callback
     requestIdleCallback(() => {
-                 
         // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
         // 
@@ -48,7 +47,6 @@ export class WorldChunk extends THREE.Group {
 
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
-
         this.loaded = true;
         // console.log(`Loaded chunk in ${performance.now() - start}ms`);
       },

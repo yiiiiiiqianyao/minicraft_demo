@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { IPlayerParams } from "./interface";
 
 export const PlayerParams: IPlayerParams = {
+    position: new THREE.Vector3(),
     height: 1.75,
     // height: 2.75,
     // radius: 0.5,

@@ -1,6 +1,7 @@
 import * as THREE from "three";
 
 export interface IPlayerParams {
+    position: THREE.Vector3;
     height: number;
     radius: number;
     maxSpeed: number;

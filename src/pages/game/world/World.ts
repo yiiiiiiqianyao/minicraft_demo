@@ -12,6 +12,7 @@ import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
+import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -151,11 +152,7 @@ export class World extends THREE.Group {
    */
   getVisibleChunks(player: Player): { x: number; z: number }[] {
     // get coordinates of the chunk the player is currently on
-    const coords = this.worldToChunkCoords(
-      player.position.x,
-      player.position.y,
-      player.position.z
-    );
+    const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
 
     const visibleChunks: { x: number; z: number }[] = [];
     const range = Array.from(
@@ -166,17 +163,17 @@ export class World extends THREE.Group {
 
     for (const dx of range) {
       for (const dz of range) {
-        visibleChunks.push({ x: coords.chunk.x + dx, z: coords.chunk.z + dz });
+        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });
       }
     }
 
     // sort chunks by distance from player
     visibleChunks.sort((a, b) => {
       const distA = Math.sqrt(
-        (a.x - coords.chunk.x) ** 2 + (a.z - coords.chunk.z) ** 2
+        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2
       );
       const distB = Math.sqrt(
-        (b.x - coords.chunk.x) ** 2 + (b.z - coords.chunk.z) ** 2
+        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2
       );
 
       return distA - distB;
@@ -243,7 +240,6 @@ export class World extends THREE.Group {
 
     chunk.generate();
 
-
     this.add(chunk);
   }
 
@@ -251,7 +247,7 @@ export class World extends THREE.Group {
    * Adds a new block at (x, y, z)
    */
   addBlock(x: number, y: number, z: number, block: BlockID) {
-    const coords = this.worldToChunkCoords(x, y, z);
+    const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
@@ -284,7 +280,7 @@ export class World extends THREE.Group {
 
   // TODO 破坏 & 移除方块
   removeBlock(x: number, y: number, z: number) {
-    const coords = this.worldToChunkCoords(x, y, z);
+    const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     const blockToRemove = this.getBlock(x, y, z);
 
@@ -329,38 +325,12 @@ export class World extends THREE.Group {
    * Gets the block data at (x, y, z)
    */
   getBlock(x: number, y: number, z: number) {
-    const coords = this.worldToChunkCoords(x, y, z);
+    const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
       return chunk.getBlock(coords.block.x, y, coords.block.z);
     }
-  }
-
-  /**
-   * Returns the chunk and world coordinates of the block at (x, y, z)
-   *  - `chunk` is the coordinates of the chunk containing the block
-   *  - `block` is the world coordinates of the block
-   */
-  worldToChunkCoords(
-    x: number,
-    y: number,
-    z: number
-  ): {
-    chunk: { x: number; z: number };
-    block: { x: number; y: number; z: number };
-  } {
-    const { width } = ChunkParams;
-    const chunkX = Math.floor(x / width);
-    const chunkZ = Math.floor(z / width);
-
-    const blockX = x - chunkX * width;
-    const blockZ = z - chunkZ * width;
-
-    return {
-      chunk: { x: chunkX, z: chunkZ },
-      block: { x: blockX, y, z: blockZ },
-    };
   }
 
   /**
@@ -377,7 +347,7 @@ export class World extends THREE.Group {
    */
   revealBlock(x: number, y: number, z: number) {
     // console.log(`Revealing block at ${x}, ${y}, ${z}`);
-    const coords = this.worldToChunkCoords(x, y, z);
+    const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
@@ -389,7 +359,7 @@ export class World extends THREE.Group {
    * Hides block at (x, y, z) by removing mesh instance
    */
   hideBlockIfNeeded(x: number, y: number, z: number) {
-    const coords = this.worldToChunkCoords(x, y, z);
+    const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (

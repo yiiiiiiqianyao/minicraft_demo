@@ -5,7 +5,7 @@ import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { ToolBar, updatePositionGUI } from "../gui";
-import { initPlayerCamera } from "./utils";
+import { initPlayerCamera, updatePlayerCoords } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
@@ -145,7 +145,10 @@ export class Player {
    */
   updateByPosition() {
     // TODO
-    const { x, z} = this.position;
+    PlayerParams.position.copy(this.position);
+    // const { x, z} = this.position;
+    // 更新角色的坐标信息
+    updatePlayerCoords();
     // 更新角色所处的 chunk
     // PlayerParams.chunkID = world.getChunkIDFromPosition(this.position);
     // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收

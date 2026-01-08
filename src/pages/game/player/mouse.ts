@@ -4,6 +4,7 @@ import { PlayerParams } from "./literal";
 import { Player } from "./Player";
 import { Action } from "./action";
 import { ToolBar } from "../gui";
+import { worldToCeilBlockCoord } from "../world/chunk/utils";
 
 export class MouseInput {
     private player: Player;
@@ -25,7 +26,8 @@ export class MouseInput {
             // Left click 移除选中的方块
             // TODO 需要考虑是否能够破坏和移除方块
             // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
-            world.removeBlock(Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5));
+            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
+            world.removeBlock(blockX, blockY, blockZ);
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             // console.log("adding block", this.player.activeBlockId);
             if (ToolBar.activeBlockId != null) {

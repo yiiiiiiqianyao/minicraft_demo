@@ -39,6 +39,36 @@ export function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {
     }
 }
 
+export function updateChunkCoordGUI(chunkX: number, chunkZ: number) {
+    const chunkCoord = document.getElementById("chunk-coord");
+    if (chunkCoord) {
+      const inner = `chunk: ${chunkX}, ${chunkZ}`;
+      if(chunkCoord.innerHTML !== inner) {
+        chunkCoord.innerHTML = inner;
+      }
+    }
+}
+
+export function updateBlockCoordGUI(blockX: number, blockY: number, blockZ: number) {
+    const blockCoord = document.getElementById("chunk-block-coord");
+    if (blockCoord) {
+      const inner = `chunk block: ${blockX}, ${blockY}, ${blockZ}`;
+      if(blockCoord.innerHTML !== inner) {
+        blockCoord.innerHTML = inner;
+      }
+    }
+}
+
+export function updateWorldBlockCoordGUI(blockX: number, blockY: number, blockZ: number) {
+    const blockCoord = document.getElementById("world-block-coord");
+    if (blockCoord) {
+      const inner = `world block: ${blockX}, ${blockY}, ${blockZ}`;
+      if(blockCoord.innerHTML !== inner) {
+        blockCoord.innerHTML = inner;
+      }
+    }
+}
+
 let stats: Stats;
 export function initStats() {
   stats = new Stats();
