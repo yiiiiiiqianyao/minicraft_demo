@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+export type IChunkKey = {x: number, z: number};
+
 export interface IPlayerParams {
     position: THREE.Vector3;
     height: number;
@@ -9,8 +11,9 @@ export interface IPlayerParams {
     jumpSpeed: number;
     selectedCoords: THREE.Vector3 | null;
     selectedBlockSize: THREE.Vector3 | null;
-    chunkID: null | number[];
-    nearFourChunks: null | number[][];
+    chunkID: IChunkKey | null;
+    nearFourChunks: IChunkKey[];
+    lastNearFourChunks: IChunkKey[];
 }
 
 export type PlayerEventKey = "KeyW" | "KeyS" | "KeyA" | "KeyD" | "KeyR" | "Space";

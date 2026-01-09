@@ -12,8 +12,9 @@ import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
 import { boundsHelper, selectionHelper } from "../helper";
 import { Action } from "./action";
-import { worldToCeilBlockCoord, worldToChunkCoords } from "../world/chunk/utils";
+import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateBlockCoordGUI, updateChunkCoordGUI, updateWorldBlockCoordGUI } from "../dev";
+import { updatePlayerNearFourHelper } from "../helper/chunkHelper";
 
 export class Player {
   onGround = false;
@@ -29,7 +30,7 @@ export class Player {
   isSprinting = false;
 
   lastStepSoundPlayed = 0;
-
+  world: World;
   camera = initPlayerCamera();
   cameraHelper = new THREE.CameraHelper(this.camera);
   
@@ -62,12 +63,13 @@ export class Player {
   }
 
   constructor(scene: THREE.Scene, world: World) {
+    this.world = world;
     this.camera.position.copy(PlayerInitPosition);
     this.cameraHelper.visible = false;
     
     scene.add(this.camera);
     scene.add(this.cameraHelper);
-
+    // for dev test
     boundsHelper.visible = false;
     scene.add(boundsHelper);
 
@@ -137,8 +139,8 @@ export class Player {
    * 更新角色的位置 水平 垂直
    * @param deltaPosition 
    */
-  updatePosition(deltaPosition: THREE.Vector3) {
-    this.position.add(deltaPosition);
+  updatePosition() {
+    // console.log('this.position', this.position);
     this.updateByPosition();
   }
 
@@ -154,7 +156,11 @@ export class Player {
 
     const { x, y, z } = PlayerParams.position;
     // 更新角色所处的 chunkID
-    const { chunk, block } = worldToChunkCoords(x, y, z);
+    const { chunk, nearFourChunks, block } = playerToChunkCoords(x, y, z);
+
+    PlayerParams.chunkID = chunk;
+    updatePlayerNearFourHelper(nearFourChunks, this.world);
+    
     updateChunkCoordGUI(chunk.x, chunk.z);
     // 更新角色所处的 chunk blockID
     const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);

@@ -21,7 +21,9 @@ export const PlayerParams: IPlayerParams = {
     // 玩家所处的 chunkID
     chunkID: null,
     // 玩家相邻的最小 4 个 chunkID
-    nearFourChunks: null,
+    nearFourChunks: [],
+    // 上一次检测玩家相邻的最小 4 个 chunkID
+    lastNearFourChunks: [],
 }
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);

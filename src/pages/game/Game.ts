@@ -13,6 +13,7 @@ import { Physics } from "./physics";
 import { Engine } from "./engine";
 
 export default class Game {
+  static v = -1;
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private orbitCamera!: THREE.PerspectiveCamera;
@@ -126,6 +127,13 @@ export default class Game {
     // TODO 第三人称视角 增加支持角色的控制移动
     // player.controls.isLocked === true 第一人称模式
     // player.controls.isLocked === false 观察者模式
+    if(Game.v !== -1) {
+      if(Game.v === 1) {
+        return this.player.camera;
+      } else {
+        return this.orbitCamera;
+      }
+    }
     const renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';
     switch(renderMode) {
       case 'firstPerson':

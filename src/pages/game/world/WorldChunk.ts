@@ -9,6 +9,7 @@ import { generateChunk } from "./generate";
 import { getInstancedGeometry } from "./geometry";
 import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
+import { initChunkHelper } from "../helper/chunkHelper";
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
@@ -16,6 +17,10 @@ export class WorldChunk extends THREE.Group {
   dataStore: DataStore;
   wireframeMode = false;
   dropGroup = new DropGroup();
+  // for dev test
+  helper = initChunkHelper();
+  // for dev test
+  // wc = new THREE.Color(Math.random(), Math.random(), Math.random())
 
   constructor(
     params: IWorldParams,
@@ -26,6 +31,7 @@ export class WorldChunk extends THREE.Group {
     this.params = params;
     this.dataStore = dataStore;
     this.loaded = false;
+    this.helper.visible = false;
     this.wireframeMode = wireframeMode;
   }
 
@@ -109,6 +115,8 @@ export class WorldChunk extends THREE.Group {
 
     // 添加掉落物品组
     this.add(this.dropGroup);
+    // add chunk helper for dev test
+    // this.add(this.helper);
 
     const maxCount = width * width * height;
 
@@ -134,8 +142,9 @@ export class WorldChunk extends THREE.Group {
       //     : block.material,
       //   maxCount
       // );
-      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
-      //   new THREE.MeshBasicMaterial({ wireframe: true }),
+      // Tip dev mat
+      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+      //   new THREE.MeshBasicMaterial({ wireframe: false, color: this.wc }),
       //   maxCount
       // );
 

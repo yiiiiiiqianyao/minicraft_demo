@@ -1,3 +1,4 @@
+import Game from "../Game";
 import { ToolBar } from "../gui";
 import { Action } from "./action";
 import { Player } from "./Player";
@@ -45,6 +46,10 @@ export class KeyboardInput {
       case "KeyR":
       case "Space":
         Action.handlePlayerEvent(this.player, event.code);
+        break;
+      case "KeyV":
+        if(!Game.v) Game.v = 2;
+        Game.v = Game.v === 1 ? 2 : 1;
         break;
     }
   }

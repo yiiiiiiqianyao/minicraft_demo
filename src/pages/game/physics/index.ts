@@ -57,6 +57,7 @@ export class Physics {
     const blockUnderneath =
       this.getBlockUnderneath(player, world)?.block || BlockID.Air;
 
+    const { x: o_x, y: o_y, z: o_z } = player.position;
     while (this.accumulator >= this.stepSize) {
       // 玩家下落的速度
       player.velocity.y += Physics.GRAVITY * this.stepSize;
@@ -65,8 +66,12 @@ export class Physics {
       this.detectCollisions(player, world);
       this.accumulator -= this.stepSize;
     }
-
     player.update(world);
+    const { x, y, z } = player.position;
+    const positionUpdate = x !== o_x || y !== o_y || z !== o_z;
+    
+    // player 发生位移的时候触发更新
+    positionUpdate && player.updatePosition();
   }
 
   /**
@@ -234,8 +239,9 @@ export class Physics {
       if (!player.onGround && deltaPosition.y !== 0) {
         deltaPosition.y = 0;
       }
-      // 更新角色的位置
-      player.updatePosition(deltaPosition);
+      
+      // player.updatePosition(deltaPosition);
+      player.position.add(deltaPosition);
 
       // If player is stuck underneath a block, boost him up
       if (collision.normal.y < 0) {

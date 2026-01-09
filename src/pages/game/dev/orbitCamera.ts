@@ -4,6 +4,15 @@ import { Player } from "../player/Player";
 import { PlayerInitPosition } from "../player/literal";
 import { ScreenViewer } from "../gui/viewer";
 
+export function setOrbitCameraPosition(orbitCamera: THREE.PerspectiveCamera, x: number, y: number, z: number) {
+    // orbitCamera.position.set(x - 64, y - 20, z - 64);
+    // orbitCamera.position.set(x , y - 20, z );
+    // middle high
+    // orbitCamera.position.set(x , y - 20, z + 10 );
+    // top high
+    orbitCamera.position.set(x , y - 5, z );
+}
+
 // 第三视角观察使用
 export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
   const orbitCamera = new THREE.PerspectiveCamera(
@@ -12,7 +21,7 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
     );
     // 32, 72, 32
     const { x, y, z } = PlayerInitPosition
-    orbitCamera.position.set(x - 64, y - 20, z - 64);
+    setOrbitCameraPosition(orbitCamera, x, y, z);
 
     const controls = new OrbitControls(
         orbitCamera,
@@ -38,7 +47,9 @@ export function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: O
     // player.controls.isLocked === false 观察者模式
     if(!controls.target.equals(player.position) && player.controls.isLocked) {
         const {x, y, z} = player.position;
-        camera.position.set(x - 64, PlayerInitPosition.y - 20, z - 64);
+        // camera.position.set(x - 64, PlayerInitPosition.y - 20, z - 64);
+        // camera.position.set(x , PlayerInitPosition.y - 20, z );
+        setOrbitCameraPosition(camera, x, PlayerInitPosition.y, z);
         controls.target.set(x, y, z);
     };
 

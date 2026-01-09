@@ -4,6 +4,7 @@ import './index.scss';
 import { ToolBar } from "./components/toolbar";
 import { Loading } from "./components/loading";
 import { Debug } from "./components/debug";
+import { Logo } from "./components/logo";
 
 export default function HomePage() {
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function HomePage() {
       </div>
       <div id="menu">
         <div id="main-menu">
-          <img id="logo" src="https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/logo.png" />
+          <Logo />
           <div>
             <div id="buttons">
               <div className="mc-button full" tabIndex={0} role="button">

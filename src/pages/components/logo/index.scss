@@ -1,0 +1,11 @@
+.poster_logo {
+    user-select: none;
+    /* Webkit内核浏览器（Chrome/Safari/Edge） */
+    -webkit-user-drag: none;
+    /* 标准属性（Firefox/新版浏览器） */
+    user-drag: none;
+    /* 可选：禁止图片被选中（辅助防止拖拽） */
+    user-select: none;
+    /* 可选：Firefox 旧版本兼容 */
+    -moz-user-select: none;
+}

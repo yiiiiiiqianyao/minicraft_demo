@@ -16,7 +16,6 @@ export function worldToChunkCoords(
     chunk: { x: number; z: number };
     block: { x: number; y: number; z: number };
   } {
-    
     const { width } = ChunkParams;
     const [chunkX, chunkZ] = worldToChunkCoordsXZ(x, z);
 
@@ -25,6 +24,39 @@ export function worldToChunkCoords(
 
     return {
       chunk: { x: chunkX, z: chunkZ },
+      block: { x: blockX, y, z: blockZ },
+    };
+}
+
+export function playerToChunkCoords(
+    x: number,
+    y: number,
+    z: number
+  ): {
+    chunk: { x: number; z: number };
+    nearFourChunks: { x: number; z: number }[];
+    block: { x: number; y: number; z: number };
+  } {
+    const { width } = ChunkParams;
+    const [chunkX, chunkZ] = worldToChunkCoordsXZ(x, z);
+
+    const blockX = x - chunkX * width;
+    const blockZ = z - chunkZ * width;
+
+    const toX = blockX < width / 2;
+    const toZ = blockZ < width / 2;
+    // Tip: chunk id for player coord
+    const cx = chunkX + 1;
+    const cz = chunkZ + 1;
+
+    return {
+      chunk: { x: cx, z: cz },
+      nearFourChunks: [
+        { x: cx,                    z: cz },
+        { x: toX ? cx - 1 : cx + 1, z: cz },
+        { x: cx,                    z: toZ ? cz - 1 : cz + 1 },
+        { x: toX ? cx - 1 : cx + 1, z: toZ ? cz - 1 : cz + 1 },
+      ],
       block: { x: blockX, y, z: blockZ },
     };
 }

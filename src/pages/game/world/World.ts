@@ -128,6 +128,8 @@ export class World extends THREE.Group {
       const totalChunks = (this.renderDistance * 2 + 1) ** 2;
       const loadedChunks = this.children.length;
       const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
+      // 初始化更新一次 player 信息
+      if(percentLoaded === 100) player.updateByPosition();
       updateProgressGUI(percentLoaded);
     }
   }
@@ -223,6 +225,7 @@ export class World extends THREE.Group {
       //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`
       // );
     });
+    return chunksToRemove;
   }
 
   /**
