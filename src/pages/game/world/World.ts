@@ -30,8 +30,6 @@ export class World extends THREE.Group {
   // Used for persisting changes to the world
   dataStore = new DataStore();
   pointLights = new Map<string, THREE.PointLight>();
-
-  wireframeMode = false;
   private initialLoadComplete = false;
 
   constructor(seed = 0, scene: THREE.Scene) {
@@ -236,7 +234,6 @@ export class World extends THREE.Group {
     const chunk = new WorldChunk(
       this.params,
       this.dataStore,
-      this.wireframeMode
     );
     chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };

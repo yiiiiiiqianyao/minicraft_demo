@@ -1,5 +1,7 @@
 import { BlockID } from "../Block";
 
+export type WorldType = 'flat' | 'terrain';
+
 // 创造场景时候的初始参数
 /**
  * level: {

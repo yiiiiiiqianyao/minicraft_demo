@@ -10,29 +10,31 @@ import { getInstancedGeometry } from "./geometry";
 import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
+import { DevControl } from "../dev";
+
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
   loaded: boolean;
   dataStore: DataStore;
-  wireframeMode = false;
   dropGroup = new DropGroup();
   // for dev test
-  helper = initChunkHelper();
-  // for dev test
-  // wc = new THREE.Color(Math.random(), Math.random(), Math.random())
+  helper: THREE.Mesh | null = null;
+  helperColor: THREE.Color | null = null;
 
   constructor(
     params: IWorldParams,
     dataStore: DataStore,
-    wireframeMode = false
   ) {
     super();
     this.params = params;
     this.dataStore = dataStore;
     this.loaded = false;
-    this.helper.visible = false;
-    this.wireframeMode = wireframeMode;
+    if(DevControl.chunkHelperVisible) {
+      this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())
+      this.helper = initChunkHelper()
+      this.helper.visible = true;
+    }
   }
 
   async generate() {
@@ -109,45 +111,36 @@ export class WorldChunk extends THREE.Group {
     }
   }
 
+  // 生成 chunk 中的 block 对应的 mesh
   generateMeshes(data: BlockID[][][]) {
     const { width, height } = ChunkParams;
+    const { chunkHelperVisible, chunkWireframeMode } = DevControl;
     this.clear();
 
-    // 添加掉落物品组
-    this.add(this.dropGroup);
-    // add chunk helper for dev test
-    // this.add(this.helper);
-
     const maxCount = width * width * height;
-
     // Create lookup table where key is block id
     const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
 
+    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
     for (const blockId of blockIDValues) {
       const blockEntity = BlockFactory.getBlock(blockId);
       const blockGeometry = blockEntity.geometry;
-
-      // 每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
-      const mesh = new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
-        this.wireframeMode
-          ? new THREE.MeshBasicMaterial({ wireframe: true })
-          : blockEntity.material,
-        maxCount
-      );
-      // mesh.visible = false;
-      
-      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(),
-      //   blockGeometry === RenderGeometry.Flower
-      //     ? new THREE.MeshBasicMaterial({ wireframe: true })
-      //     : block.material,
-      //   maxCount
-      // );
-      // Tip dev mat
-      // const mesh = new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
-      //   new THREE.MeshBasicMaterial({ wireframe: false, color: this.wc }),
-      //   maxCount
-      // );
-
+      const initChunkMesh = () => {
+        if(chunkHelperVisible) { // make dev chunk
+          const helperColor = this.helperColor as THREE.Color;
+          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),
+            maxCount
+          )
+        } else {
+          const material = chunkWireframeMode ? new THREE.MeshBasicMaterial({ wireframe: true }) : blockEntity.material;
+          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+            material,
+            maxCount
+          );
+        }
+      }
+      const mesh = initChunkMesh();
       mesh.name = blockEntity.constructor.name;
       mesh.count = 0;
       mesh.castShadow = !blockEntity.canPassThrough;
@@ -155,28 +148,19 @@ export class WorldChunk extends THREE.Group {
       mesh.matrixAutoUpdate = false;
       meshes[blockEntity.id] = mesh;
     }
-
+    // 根据类型为每个 block 类型创建 Mesh
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
         for (let z = 0; z < width; z++) {
           const block = data[x][y][z];
           const blockClass = BlockFactory.getBlock(block);
-
-          if (block === BlockID.Air) {
-            continue;
-          }
-
+          // 空气块不生成 mesh
+          if (block === BlockID.Air) continue;
+          // 当前 block 对应的 InstanceMesh
           const mesh = meshes[block];
-
-          if (!mesh) {
-            continue;
-          }
-
-          if (
-            block &&
-            !this.isBlockObscured(x, y, z) &&
-            !this.isBorderBlock(x, y, z)
-          ) {
+          if (!mesh) continue;
+          // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
+          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
             if (blockClass.geometry == RenderGeometry.Cube) {
               const instanceId = mesh.count++;
               this.setBlockInstanceIds(x, y, z, [instanceId]);
@@ -227,6 +211,10 @@ export class WorldChunk extends THREE.Group {
         this.add(mesh);
       }
     }
+    // 添加掉落物品组
+    this.add(this.dropGroup);
+    // add chunk helper for dev test
+    this.helper && this.add(this.helper);
   }
   setBlockId(x: number, y: number, z: number, blockId: BlockID) {
     if (this.inBounds(x, y, z)) {
@@ -427,6 +415,13 @@ export class WorldChunk extends THREE.Group {
     );
   }
 
+  /**
+   * 判断一个方块是否被其他方块遮挡
+   * @param x 
+   * @param y 
+   * @param z 
+   * @returns 是否被其他方块遮挡
+   */
   isBlockObscured(x: number, y: number, z: number): boolean {
     const up = this.getBlock(x, y + 1, z);
     const down = this.getBlock(x, y - 1, z);
@@ -460,6 +455,7 @@ export class WorldChunk extends THREE.Group {
 
   /**
    * 判断一个方块是否在 chunk 的边界上
+   * 边界的表面，其上方的方块可以通过 其也不算边界
    * @param x 
    * @param y 
    * @param z 
@@ -470,6 +466,7 @@ export class WorldChunk extends THREE.Group {
     // TODO 看上去是一个优化判断 暂时待理解
     const up = this.getBlock(x, y + 1, z);
     const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;
+    // 
     if (upBlockClass?.canPassThrough) {
       return false;
     }
