@@ -12,7 +12,7 @@ export interface IPlayerParams {
     selectedCoords: THREE.Vector3 | null;
     selectedBlockSize: THREE.Vector3 | null;
     isInChunkCenter: boolean;
-    chunkID: IChunkKey | null;
+    currentChunk: IChunkKey | null;
     nearFourChunks: IChunkKey[];
 }
 

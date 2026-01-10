@@ -155,9 +155,9 @@ export class Player {
     // updatePlayerCoords();
 
     const { x, y, z } = PlayerParams.position;
-    // 更新角色所处的 chunkID
+    // 更新角色所处的 currentChunk
     const { isInChunkCenter, chunk, nearFourChunks, block } = playerToChunkCoords(x, y, z);
-    PlayerParams.chunkID = chunk;
+    PlayerParams.currentChunk = chunk;
     updatePlayerNearHelpers(chunk, nearFourChunks, this.world, isInChunkCenter);
     updateChunkCoordGUI(chunk.x, chunk.z);
     // 更新角色所处的 chunk blockID
@@ -167,8 +167,6 @@ export class Player {
     const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);
     updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);
 
-    // 更新角色所处的 chunk
-    // PlayerParams.chunkID = world.getChunkIDFromPosition(this.position);
     // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
     // 角色一定距离内执行粒子动画、野怪刷新、植物生长等
   }
@@ -256,7 +254,7 @@ export class Player {
       } else {
         selectionHelper.scale.set(1, 1, 1);
       } 
-      // TODO 草方块的选择框需要调整大小
+      // TODO TallGrass 草方块的选择框需要调整大小
       selectionHelper.position.copy(PlayerParams.selectedCoords);
       selectionHelper.visible = true;
     } else {

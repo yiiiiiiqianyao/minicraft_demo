@@ -21,7 +21,7 @@ export const PlayerParams: IPlayerParams = {
     // 玩家是否处于 chunk 中心
     isInChunkCenter: false,
     // 玩家所处的 chunkID
-    chunkID: null,
+    currentChunk: null,
     // 玩家相邻的最小 4 个 chunkID
     nearFourChunks: [],
 }

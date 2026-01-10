@@ -341,11 +341,11 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
+   * TODO delete block TallGrass 的时候存在 bug 有一个 grass 的 plane 没有被删除
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
   deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {
     const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);
-
     if (block?.block === BlockID.Air || !block?.instanceIds.length) return;
 
     // Get the mesh of the block
@@ -363,6 +363,7 @@ export class WorldChunk extends THREE.Group {
       // Also need to get block coords of instance to update instance id of the block
       const lastBlockCoords = new THREE.Vector3();
       lastBlockCoords.setFromMatrixPosition(lastMatrix);
+      console.log('deleteBlockInstance:', lastBlockCoords.x, lastBlockCoords.y, lastBlockCoords.z, [instanceId]);
       this.setBlockInstanceIds(
         Math.floor(lastBlockCoords.x),
         Math.floor(lastBlockCoords.y),
@@ -389,6 +390,9 @@ export class WorldChunk extends THREE.Group {
    */
   setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {
     if (this.inBounds(x, y, z)) {
+      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {
+        console.log('setBlockInstanceIds:', x, y, z,instanceIds);
+      }
       this.data[x][y][z].instanceIds = instanceIds;
     }
   }

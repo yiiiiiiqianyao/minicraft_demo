@@ -77,5 +77,13 @@ export function worldToChunkCoordsXZ(x: number, z: number) {
  * @returns 
  */
 export function worldToCeilBlockCoord(x: number, y: number, z: number) {
-  return [Math.ceil(x - 0.5), Math.ceil(y - 0.5), Math.ceil(z - 0.5)];
+  // Tip: Important 传入的坐标为 block 的中心坐标 由于 js 计算可能存在误差 所以需要先将坐标四舍五入到最近的 0.5
+  const safeX = roundToHalf(x);
+  const safeY = roundToHalf(y);
+  const safeZ = roundToHalf(z);
+  return [Math.ceil(safeX - 0.5), Math.ceil(safeY - 0.5), Math.ceil(safeZ - 0.5)];
+}
+
+function roundToHalf(num: number) {
+  return Math.round(num * 2) / 2;
 }

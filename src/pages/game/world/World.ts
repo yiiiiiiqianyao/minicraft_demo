@@ -12,7 +12,7 @@ import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
-import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
+import { worldToChunkCoords } from "./chunk/utils";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -152,10 +152,10 @@ export class World extends THREE.Group {
    */
   getVisibleChunks(player: Player): { x: number; z: number }[] {
     // get coordinates of the chunk the player is currently on
-    const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
-    // if (!PlayerParams.chunkID) return [];
+    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
+    if (!PlayerParams.currentChunk) return [];
     // console.log('chunkX, chunkZ', chunkX, chunkZ);
-    // const {x: chunkX, z: chunkZ} = PlayerParams.chunkID;
+    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;
 
     const visibleChunks: { x: number; z: number }[] = [];
     const range = Array.from(
@@ -283,13 +283,14 @@ export class World extends THREE.Group {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     const blockToRemove = this.getBlock(x, y, z);
+    // console.log('chunk', chunk);
+    console.log('blockToRemove', x, y, z, JSON.stringify(blockToRemove));
 
-    // 不能破坏 基岩 bedrock
+    // 不能破坏基岩 bedrock
     if (blockToRemove?.block === BlockID.Bedrock) return;
-
+    
     if (chunk && chunk.loaded) {
       // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
-
       chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);
       if (this.pointLights.has(this.getBlockKey(x, y, z))) {
         const light = this.pointLights.get(this.getBlockKey(x, y, z));
