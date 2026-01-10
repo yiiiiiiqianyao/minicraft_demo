@@ -22,10 +22,7 @@ export class WorldChunk extends THREE.Group {
   helper: THREE.Mesh | null = null;
   helperColor: THREE.Color | null = null;
 
-  constructor(
-    params: IWorldParams,
-    dataStore: DataStore,
-  ) {
+  constructor(params: IWorldParams, dataStore: DataStore) {
     super();
     this.params = params;
     this.dataStore = dataStore;
@@ -40,11 +37,8 @@ export class WorldChunk extends THREE.Group {
   async generate() {
     // const start = performance.now();
     // 初始化 chunk 数据
-    const data: BlockID[][][] = await generateChunk(
-      this.params,
-      this.position.x,
-      this.position.z
-    );
+    const { x, z } = this.position;
+    const data: BlockID[][][] = await generateChunk(this.params, x, z);
 
     // 空闲时间的 callback
     requestIdleCallback(() => {

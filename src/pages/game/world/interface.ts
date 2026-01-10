@@ -10,15 +10,37 @@ export type WorldType = 'flat' | 'terrain';
  * }
  */
 
+interface ITrees {
+  frequency: number;
+  trunkHeight: {
+    min: number;
+    max: number;
+  };
+  // 树冠覆盖大小
+  canopy: {
+    size: {
+      min: number;
+      max: number;
+    };
+  };
+}
+
+interface ITerrain {
+  scale: number;
+  magnitude: number; // 控制地形高度的幅度
+  offset: number;
+}
+
+interface ITallGrass {
+  frequency: number;
+  patchSize: number;
+}
+
 export interface IWorldParams {
   seed: number;
-  terrain: {
-    scale: number;
-    magnitude: number; // 控制地形高度的幅度
-    offset: number;
-  };
-  surface: {
-    offset: number; // 层级的基础高度
+  terrain: ITerrain;
+  surface: { // 表层方块的高度
+    offset: number; 
     magnitude: number;
   };
   // 基岩
@@ -26,24 +48,8 @@ export interface IWorldParams {
     offset: number;
     magnitude: number;
   };
-  trees: {
-    frequency: number;
-    trunkHeight: {
-      min: number;
-      max: number;
-    };
-    // 树冠覆盖大小
-    canopy: {
-      size: {
-        min: number;
-        max: number;
-      };
-    };
-  };
-  grass: {
-    frequency: number;
-    patchSize: number;
-  };
+  trees: ITrees | null;
+  tallGrass: ITallGrass | null;
   flowers: {
     frequency: number;
   };

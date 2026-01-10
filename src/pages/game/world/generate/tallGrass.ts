@@ -12,6 +12,9 @@ export const generateTallGrass = (
   params: IWorldParams
 ): BlockID[][][] => {
   const { width, height } = ChunkParams;
+  const { tallGrass } = params;
+  if (!tallGrass) return input;
+
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // starting from the top of the chunk, find the first grass block
@@ -29,11 +32,11 @@ export const generateTallGrass = (
             continue;
           }
 
-          if (World.rng.random() < params.grass.frequency) {
+          if (World.rng.random() < tallGrass.frequency) {
             input[x][baseY][z] = BlockID.TallGrass;
 
             // Define the maximum distance from the center
-            const maxDistance = params.grass.patchSize;
+            const maxDistance = tallGrass.patchSize;
 
             // Random walk algorithm
             let currentX = x;

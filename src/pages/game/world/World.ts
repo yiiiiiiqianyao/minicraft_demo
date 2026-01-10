@@ -6,7 +6,7 @@ import { DataStore } from "./DataStore";
 import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";
 import { IWorldParams } from "./interface";
-import { DefaultWorldParams } from "./literal";
+import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../RNG";
@@ -25,7 +25,7 @@ export class World extends THREE.Group {
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
 
-  params: IWorldParams = DefaultWorldParams;
+  params: IWorldParams = getDefaultWorldParams();
 
   // Used for persisting changes to the world
   dataStore = new DataStore();
@@ -231,10 +231,7 @@ export class World extends THREE.Group {
    */
   async generateChunk(x: number, z: number) {
     const { width } = ChunkParams;
-    const chunk = new WorldChunk(
-      this.params,
-      this.dataStore,
-    );
+    const chunk = new WorldChunk(this.params, this.dataStore);
     chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };
 

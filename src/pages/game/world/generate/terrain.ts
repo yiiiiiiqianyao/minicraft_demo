@@ -10,32 +10,28 @@ import { ChunkParams } from "../chunk/literal";
 export const generateTerrain = (
   input: BlockID[][][],
   params: IWorldParams,
-  chunkPos: THREE.Vector3
-): BlockID[][][] => {
+  chunkPos: THREE.Vector3): BlockID[][][] => {
   const { width, height } = ChunkParams;
+  const { terrain, surface, bedrock } = params;
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // block position of world
       const value = World.simplex.noise(
-        (chunkPos.x + x) / params.terrain.scale,
-        (chunkPos.z + z) / params.terrain.scale
+        (chunkPos.x + x) / terrain.scale,
+        (chunkPos.z + z) / terrain.scale
       );
-
-      const scaledNoise =
-        params.terrain.offset + params.terrain.magnitude * value;
+      const scaledNoise = terrain.offset + terrain.magnitude * value;
 
       let terrainHeight = Math.floor(height * scaledNoise);
       terrainHeight = Math.max(0, Math.min(terrainHeight, height - 1));
 
       // 地表表层方块
-      const surfaceHeight =
-        params.surface.offset +
-        Math.abs(World.simplex.noise(x, z) * params.surface.magnitude);
+      const surfaceHeight = surface.offset +
+        Math.abs(World.simplex.noise(x, z) * surface.magnitude);
 
       // 基岩
-      const bedrockHeight =
-        params.bedrock.offset +
-        Math.abs(World.simplex.noise(x, z) * params.bedrock.magnitude);
+      const bedrockHeight = bedrock.offset +
+        Math.abs(World.simplex.noise(x, z) * bedrock.magnitude);
 
       for (let y = 0; y < height; y++) {
         // TODO 生成地形的时候 后续生成洞穴 连续

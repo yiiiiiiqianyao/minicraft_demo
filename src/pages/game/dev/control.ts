@@ -1,5 +1,7 @@
+import { GlobalProps } from "./query";
+
 export const DevControl = {
     chunkHelperVisible: false,
     chunkWireframeMode: false,
-    worldType: 'terrain', // 'flat'
+    worldType: GlobalProps.world || 'terrain', // 'flat'
 }

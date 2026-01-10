@@ -64,26 +64,29 @@ export function createUI(
   terrainFolder.add(world.params.terrain, "magnitude", 0, 1).name("Magnitude");
   terrainFolder.add(world.params.terrain, "offset", 0, 1).name("Offset");
 
-  const treesFolder = terrainFolder.addFolder("Trees");
-  treesFolder.add(world.params.trees, "frequency", 0, 1, 0.1).name("Frequency");
-  treesFolder
-    .add(world.params.trees.trunkHeight, "min", 0, 10, 1)
-    .name("Min Trunk Height");
-  treesFolder
-    .add(world.params.trees.trunkHeight, "max", 0, 10, 1)
-    .name("Max Trunk Height");
-  treesFolder
-    .add(world.params.trees.canopy.size, "min", 0, 10, 1)
-    .name("Min Canopy Size");
-  treesFolder
-    .add(world.params.trees.canopy.size, "max", 0, 10, 1)
-    .name("Max Canopy Size");
-
-  const grassFolder = terrainFolder.addFolder("Grass");
-  grassFolder.add(world.params.grass, "frequency", 0, 1, 0.1).name("Frequency");
-  grassFolder
-    .add(world.params.grass, "patchSize", 1, 10, 1)
-    .name("Grass Patch Size");
+  if(world.params.trees) {
+    const treesFolder = terrainFolder.addFolder("Trees");
+    treesFolder.add(world.params.trees, "frequency", 0, 1, 0.1).name("Frequency");
+    treesFolder
+      .add(world.params.trees.trunkHeight, "min", 0, 10, 1)
+      .name("Min Trunk Height");
+    treesFolder
+      .add(world.params.trees.trunkHeight, "max", 0, 10, 1)
+      .name("Max Trunk Height");
+    treesFolder
+      .add(world.params.trees.canopy.size, "min", 0, 10, 1)
+      .name("Min Canopy Size");
+    treesFolder
+      .add(world.params.trees.canopy.size, "max", 0, 10, 1)
+      .name("Max Canopy Size");
+  }
+  if(world.params.tallGrass) {
+    const grassFolder = terrainFolder.addFolder("Grass");
+    grassFolder.add(world.params.tallGrass, "frequency", 0, 1, 0.1).name("Frequency");
+    grassFolder
+      .add(world.params.tallGrass, "patchSize", 1, 10, 1)
+      .name("Grass Patch Size");
+  }
 
   terrainFolder
     .add(world.params.flowers, "frequency", 0, 1, 0.1)

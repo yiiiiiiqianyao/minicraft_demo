@@ -13,13 +13,15 @@ export const generateTrees = (
   chunkPos: THREE.Vector3
 ): BlockID[][][] => {
   const { width, height } = ChunkParams;
+  const { trees } = params;
+  if (!trees) return input;
   // 树冠大小
-  const canopySize = params.trees.canopy.size.max;
+  const canopySize = trees.canopy.size.max;
   for (let baseX = canopySize; baseX < width - canopySize; baseX++) {
     for (let baseZ = canopySize; baseZ < width - canopySize; baseZ++) {
       const n =
         World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;
-      if (n < 1 - params.trees.frequency) {
+      if (n < 1 - trees.frequency) {
         continue;
       }
 
@@ -32,8 +34,8 @@ export const generateTrees = (
         // Found grass, move one time up
         const baseY = y + 1;
 
-        const minH = params.trees.trunkHeight.min;
-        const maxH = params.trees.trunkHeight.max;
+        const minH = trees.trunkHeight.min;
+        const maxH = trees.trunkHeight.max;
         const trunkHeight = Math.round(World.rng.random() * (maxH - minH)) + minH;
         const topY = baseY + trunkHeight;
 
@@ -61,8 +63,8 @@ export const generateTrees = (
             input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;
 
             // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk
-            const minR = params.trees.canopy.size.min;
-            const maxR = params.trees.canopy.size.max;
+            const minR = trees.canopy.size.min;
+            const maxR = trees.canopy.size.max;
             const R = Math.round(World.rng.random() * (maxR - minR)) + minR;
 
             // grow leaves in a diagonal shape
