@@ -11,9 +11,9 @@ export interface IPlayerParams {
     jumpSpeed: number;
     selectedCoords: THREE.Vector3 | null;
     selectedBlockSize: THREE.Vector3 | null;
+    isInChunkCenter: boolean;
     chunkID: IChunkKey | null;
     nearFourChunks: IChunkKey[];
-    lastNearFourChunks: IChunkKey[];
 }
 
 export type PlayerEventKey = "KeyW" | "KeyS" | "KeyA" | "KeyD" | "KeyR" | "Space";

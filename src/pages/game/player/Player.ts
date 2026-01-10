@@ -14,7 +14,7 @@ import { boundsHelper, selectionHelper } from "../helper";
 import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateBlockCoordGUI, updateChunkCoordGUI, updateWorldBlockCoordGUI } from "../dev";
-import { updatePlayerNearFourHelper } from "../helper/chunkHelper";
+import { updatePlayerNearHelpers } from "../helper/chunkHelper";
 
 export class Player {
   onGround = false;
@@ -156,11 +156,9 @@ export class Player {
 
     const { x, y, z } = PlayerParams.position;
     // 更新角色所处的 chunkID
-    const { chunk, nearFourChunks, block } = playerToChunkCoords(x, y, z);
-
+    const { isInChunkCenter, chunk, nearFourChunks, block } = playerToChunkCoords(x, y, z);
     PlayerParams.chunkID = chunk;
-    updatePlayerNearFourHelper(nearFourChunks, this.world);
-    
+    updatePlayerNearHelpers(chunk, nearFourChunks, this.world, isInChunkCenter);
     updateChunkCoordGUI(chunk.x, chunk.z);
     // 更新角色所处的 chunk blockID
     const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);

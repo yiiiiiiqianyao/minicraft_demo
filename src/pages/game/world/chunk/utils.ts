@@ -27,29 +27,30 @@ export function worldToChunkCoords(
       block: { x: blockX, y, z: blockZ },
     };
 }
-
 export function playerToChunkCoords(
     x: number,
     y: number,
     z: number
   ): {
+    isInChunkCenter: boolean;
     chunk: { x: number; z: number };
     nearFourChunks: { x: number; z: number }[];
     block: { x: number; y: number; z: number };
   } {
-    const { width } = ChunkParams;
+    const { width, halfSize, centerRadius } = ChunkParams;
     const [chunkX, chunkZ] = worldToChunkCoordsXZ(x, z);
 
     const blockX = x - chunkX * width;
     const blockZ = z - chunkZ * width;
-
+    const isInChunkCenter = Math.abs(blockX - halfSize) < centerRadius && Math.abs(blockZ - halfSize) < centerRadius;
+    
     const toX = blockX < width / 2;
     const toZ = blockZ < width / 2;
-    // Tip: chunk id for player coord
-    const cx = chunkX + 1;
-    const cz = chunkZ + 1;
+    const cx = chunkX;
+    const cz = chunkZ;
 
     return {
+      isInChunkCenter,
       chunk: { x: cx, z: cz },
       nearFourChunks: [
         { x: cx,                    z: cz },
