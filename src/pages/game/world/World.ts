@@ -284,14 +284,14 @@ export class World extends THREE.Group {
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     const blockToRemove = this.getBlock(x, y, z);
     // console.log('chunk', chunk);
-    console.log('blockToRemove', x, y, z, JSON.stringify(blockToRemove));
-
+    // console.log('blockToRemove', x, y, z, JSON.stringify(blockToRemove));
     // 不能破坏基岩 bedrock
     if (blockToRemove?.block === BlockID.Bedrock) return;
     
     if (chunk && chunk.loaded) {
       // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
       chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);
+      // 如果是光源方块 则需要移除对应的点光源
       if (this.pointLights.has(this.getBlockKey(x, y, z))) {
         const light = this.pointLights.get(this.getBlockKey(x, y, z));
         if (light) {

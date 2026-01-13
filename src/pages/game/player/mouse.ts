@@ -23,14 +23,12 @@ export class MouseInput {
         if (!player.controls.isLocked) return;
         if (event.button === 0 && PlayerParams.selectedCoords) {
             const { x, y, z } = PlayerParams.selectedCoords;
-            // console.log('selectedCoords', x, y, z);
             // Left click 移除选中的方块
             // TODO 需要考虑是否能够破坏和移除方块
             // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
             const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
             // console.log('[blockX, blockY, blockZ]', [blockX, blockY, blockZ]);
             world.removeBlock(blockX, blockY, blockZ);
-            // world.removeBlock(12, 17, -14);
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             // console.log("adding block", this.player.activeBlockId);
             if (ToolBar.activeBlockId != null) {
