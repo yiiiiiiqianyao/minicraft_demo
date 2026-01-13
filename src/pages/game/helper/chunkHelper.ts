@@ -3,7 +3,7 @@ import { ChunkParams } from "../world/chunk/literal";
 import { PlayerParams } from "../player/literal";
 import { World } from "../world/World";
 import { IChunkKey } from "../player/interface";
-import { DevControl } from "../dev";
+import { DevControl, updateChunkCoordGUI } from "../dev";
 
 function initChunkHelper() {
     const chunkHelper = new THREE.Mesh(
@@ -36,7 +36,9 @@ function inActiveChunkHelper(helper: THREE.Mesh) {
  * @param world 
  */
 let lastNearFourChunks: IChunkKey[] = [];
-function updatePlayerNearHelpers(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: World, isInChunkCenter: boolean) {
+function updatePlayerNear(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: World, isInChunkCenter: boolean) {
+    updateChunkCoordGUI(chunk.x, chunk.z);
+    PlayerParams.currentChunk = chunk;
     PlayerParams.nearFourChunks = nearFourChunks;
     PlayerParams.isInChunkCenter = isInChunkCenter;
 
@@ -62,5 +64,5 @@ export {
     activeChunkHelper,
     inActiveChunkHelper,
     initChunkHelper,
-    updatePlayerNearHelpers,
+    updatePlayerNear,
 }

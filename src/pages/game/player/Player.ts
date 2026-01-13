@@ -13,8 +13,8 @@ import { RenderGeometry } from "../Block/Block";
 import { boundsHelper, selectionHelper } from "../helper";
 import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
-import { updateBlockCoordGUI, updateChunkCoordGUI, updateWorldBlockCoordGUI } from "../dev";
-import { updatePlayerNearHelpers } from "../helper/chunkHelper";
+import { updateWorldBlockCoordGUI } from "../dev";
+import { updatePlayerNear } from "../helper/chunkHelper";
 
 export class Player {
   onGround = false;
@@ -148,27 +148,23 @@ export class Player {
    * 随着角色的位置变化而刷新的一些属性 PlayerParams
    */
   updateByPosition() {
-    // TODO
+    const { x, y, z } = this.position;
+    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);
     PlayerParams.position.copy(this.position);
-    // const { x, z} = this.position;
-    // 更新角色的坐标信息
-    // updatePlayerCoords();
-
-    const { x, y, z } = PlayerParams.position;
+    
     // 更新角色所处的 currentChunk
-    const { isInChunkCenter, chunk, nearFourChunks, block } = playerToChunkCoords(x, y, z);
-    PlayerParams.currentChunk = chunk;
-    updatePlayerNearHelpers(chunk, nearFourChunks, this.world, isInChunkCenter);
-    updateChunkCoordGUI(chunk.x, chunk.z);
+    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  
     // 更新角色所处的 chunk blockID
-    const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);
-    updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);
+    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);
+    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);
     // 更新角色所处的世界 blockID
     const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);
     updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);
 
+    // 角色移动后检测吸收掉落的物品
+    Action.absorbDrops(this.world);
     // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
-    // 角色一定距离内执行粒子动画、野怪刷新、植物生长等
+    // 角色一定距离内执行粒子动画、野怪刷新、植物生长
   }
 
   private playWalkSound(blockUnderneath: BlockID) {

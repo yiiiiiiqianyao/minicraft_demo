@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { Player } from "./Player";
 import { PlayerEventKey } from "./interface";
 import { PlayerInitPosition, PlayerParams } from "./literal";
+import { World } from "../world/World";
 
 /**
  * @desc 处理玩角色的动作 & 玩家的交互操作
@@ -32,6 +33,19 @@ export class Action {
                 player.velocity.set(0, 0, 0);
                 break;
         }
+    }
+
+    /** @desc 玩家吸收掉落的物品 */
+    static absorbDrops(world: World) {
+        const activeChunks = PlayerParams.isInChunkCenter ? [PlayerParams.currentChunk!] : PlayerParams.nearFourChunks;
+        activeChunks.forEach(chunkKey => {
+            const chunk = world.getChunk(chunkKey.x, chunkKey.z);
+            if (!chunk) return;
+            // chunk.dropGroup.attract();
+            // TODO 这里需要根据玩家的位置 来判断是否需要吸收掉落的物品
+            console.log('active chunkKey:', PlayerParams.position);
+            // chunk.dropGroup.absorbDrops(world);
+        });
     }
 }
 
