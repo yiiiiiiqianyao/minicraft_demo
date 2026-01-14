@@ -4,3 +4,4 @@ dist
 **/*.pdf
 screenshot.png
 /.umi
+src/.umi/appData.json
