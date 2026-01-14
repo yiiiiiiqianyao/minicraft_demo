@@ -1,10 +1,16 @@
 import { DevControl } from "../dev";
 
+/***
+ * 普通世界的参数
+ * TODO 地形的多样性需要添加
+*/
 const terrain = {
   scale: 50,
   magnitude: 0.1,
   offset: 0.5,
 }
+
+// 平坦世界的参数
 const flatTerrain = {
   scale: 50,
   magnitude: 0.0,

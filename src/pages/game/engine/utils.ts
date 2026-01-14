@@ -7,3 +7,11 @@ export function getFloorVec3(vec3: THREE.Vector3) {
         Math.floor(vec3.z)
     )
 }
+
+export function getFloorXYZ(x: number, y: number, z: number) {
+    return [
+        Math.floor(x),
+        Math.floor(y),
+        Math.floor(z),
+    ]
+}

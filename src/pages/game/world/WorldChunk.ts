@@ -11,12 +11,14 @@ import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
+import { wireframeMaterial } from "../engine/material";
+
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
   params: IWorldParams;
   loaded: boolean;
   dataStore: DataStore;
-  dropGroup = new DropGroup();
+  dropGroup: DropGroup;
   // for dev test
   helper: THREE.Mesh | null = null;
   helperColor: THREE.Color | null = null;
@@ -25,6 +27,7 @@ export class WorldChunk extends THREE.Group {
     super();
     this.params = params;
     this.dataStore = dataStore;
+     this.dropGroup = new DropGroup(this.position);
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
       this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())
@@ -126,7 +129,7 @@ export class WorldChunk extends THREE.Group {
             maxCount
           )
         } else {
-          const material = chunkWireframeMode ? new THREE.MeshBasicMaterial({ wireframe: true }) : blockEntity.material;
+          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
           return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
             material,
             maxCount

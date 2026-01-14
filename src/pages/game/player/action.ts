@@ -43,8 +43,7 @@ export class Action {
             if (!chunk) return;
             // chunk.dropGroup.attract();
             // TODO 这里需要根据玩家的位置 来判断是否需要吸收掉落的物品
-            console.log('active chunkKey:', PlayerParams.position);
-            // chunk.dropGroup.absorbDrops(world);
+            chunk.dropGroup.attract(PlayerParams.position);
         });
     }
 }

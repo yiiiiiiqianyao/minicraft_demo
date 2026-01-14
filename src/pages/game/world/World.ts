@@ -13,6 +13,7 @@ import { RNG } from "../RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords } from "./chunk/utils";
+import { getFloorXYZ } from "../engine/utils";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -133,17 +134,15 @@ export class World extends THREE.Group {
   }
 
   /**
-   * 获取角色当前位置下方的方块
-   * @param position 
+   * @desc 获取角色当前位置下方的方块
+   * @param position 世界坐标的位置
    * @param playerHeight 
    * @returns 
    */
-  getBlockUnderneath(position: THREE.Vector3, playerHeight: number) {
-    return this.getBlock(
-      Math.floor(position.x),
-      Math.floor(position.y - playerHeight / 2 - 1),
-      Math.floor(position.z)
-    );
+  getBlockUnderneath(position: THREE.Vector3) {
+    const {x, y, z} = position;
+    const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);
+    return this.getBlock(floorX, floorY, floorZ);
   }
 
   /**

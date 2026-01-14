@@ -5,6 +5,7 @@ import { BlockFactory } from "../Block/BlockFactory";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { PlayerParams } from "../player/literal";
+import { getFloorXYZ } from "../engine/utils";
 
 type Candidate = {
   block: BlockID;
@@ -75,17 +76,15 @@ export class Physics {
   }
 
   /**
-   * 获取玩家脚下的方块
+   * @desc 获取玩家脚下的方块
    * @param player 
    * @param world 
    * @returns 
    */
   getBlockUnderneath(player: Player, world: World) {
-    return world.getBlock(
-      Math.floor(player.position.x),
-      Math.floor(player.position.y - PlayerParams.height / 2 - 1),
-      Math.floor(player.position.z)
-    );
+    const { x, y, z} = player.position;
+    const [fx, fy, fz] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z)
+    return world.getBlock(fx, fy, fz);
   }
 
   detectCollisions(player: Player, world: World) {
