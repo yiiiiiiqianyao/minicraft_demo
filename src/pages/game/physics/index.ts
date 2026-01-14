@@ -6,50 +6,25 @@ import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { PlayerParams } from "../player/literal";
 import { getFloorXYZ } from "../engine/utils";
-
-type Candidate = {
-  block: BlockID;
-  x: number;
-  y: number;
-  z: number;
-};
-
-type Collision = {
-  candidate: Candidate;
-  contactPoint: THREE.Vector3;
-  normal: THREE.Vector3;
-  overlap: number;
-};
-
-const collisionMaterial = new THREE.MeshBasicMaterial({
-  color: 0xff0000,
-  transparent: true,
-  opacity: 0.2,
-});
-const collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);
-
-const contactMaterial = new THREE.MeshBasicMaterial({
-  wireframe: true,
-  color: 0x00ff00,
-});
-const contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);
+import { Candidate, Collision } from "./interface";
+import { PhysicsHelper } from "../helper";
+import { PhysicsParams } from "./literal";
+import { DevControl } from "../dev";
 
 export class Physics {
-  // Acceleration due to gravity
-  static GRAVITY = -32;
-
   // Physics simulation rate 物理模拟的半径
   simulationRate = 250;
   stepSize = 1 / this.simulationRate;
   // Accumulator to keep track of leftover dt
   accumulator = 0;
 
-  helpers: THREE.Group;
-
+  helpers: PhysicsHelper | null = null;
   constructor(scene: THREE.Scene) {
-    this.helpers = new THREE.Group();
-    this.helpers.visible = false;
-    scene.add(this.helpers);
+    if (DevControl.physicsHelperVisible) {
+      this.helpers = new PhysicsHelper();
+      this.helpers.visible = true;
+      scene.add(this.helpers);
+    }
   }
 
   update(dt: number, player: Player, world: World) {
@@ -61,7 +36,7 @@ export class Physics {
     const { x: o_x, y: o_y, z: o_z } = player.position;
     while (this.accumulator >= this.stepSize) {
       // 玩家下落的速度
-      player.velocity.y += Physics.GRAVITY * this.stepSize;
+      player.velocity.y += PhysicsParams.GRAVITY * this.stepSize;
       player.applyInputs(this.stepSize, blockUnderneath);
       // 检测玩家与环境的碰撞
       this.detectCollisions(player, world);
@@ -90,7 +65,8 @@ export class Physics {
   detectCollisions(player: Player, world: World) {
     // 碰撞检测的时候假定玩家不在地面 可能会下落
     player.onGround = false;
-    this.helpers.clear();
+    // 清除之前的碰撞辅助可视化
+    this.helpers?.clear();
 
     const candidates = this.broadPhase(player, world);
     // narrowPhase 检测玩家是否会下落
@@ -127,7 +103,7 @@ export class Physics {
                 y: y + 0.5,
                 z: z + 0.5,
               });
-              this.addCollisionHelper({
+              this.helpers?.addBlockCollisionHelper({
                 block: block.block,
                 x: x + 0.5,
                 y: y + 0.5,
@@ -196,7 +172,7 @@ export class Physics {
           overlap,
         });
 
-        this.addContactPointerHelper(closestPoint);
+        this.helpers?.addContactPointerHelper(closestPoint);
       }
     }
 
@@ -254,23 +230,5 @@ export class Physics {
       // 根据与环境的碰撞 作用于玩家的速度
       player.applyWorldDeltaVelocity(velocityAdj.negate());
     }
-  }
-
-  // visualizes the block the player is colliding with
-  addCollisionHelper(candidate: Candidate) {
-    const blockMesh = new THREE.Mesh(collisionGeometry, collisionMaterial);
-    blockMesh.position.copy(
-      new THREE.Vector3(candidate.x, candidate.y, candidate.z)
-    );
-    this.helpers.add(blockMesh);
-  }
-
-  /**
-   * Visualizes the contact at the point 'p'
-   */
-  addContactPointerHelper(p: THREE.Vector3) {
-    const contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);
-    contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));
-    this.helpers.add(contactMesh);
   }
 }

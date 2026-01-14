@@ -37,11 +37,14 @@ export function createUI(
   playerFolder.add(player.cameraHelper, "visible").name("Camera Helper");
   playerFolder.add(boundsHelper, "visible").name("Show Player Bounds");
 
-  const physicsFolder = gui.addFolder("Physics");
-  physicsFolder.add(physics.helpers, "visible").name("Visualize Collisions");
-  physicsFolder
-    .add(physics, "simulationRate", 10, 1000)
-    .name("Simulation Rate");
+  if(physics.helpers) {
+    const physicsFolder = gui.addFolder("Physics");
+    physicsFolder.add(physics.helpers, "visible").name("Visualize Collisions");
+    physicsFolder
+      .add(physics, "simulationRate", 10, 1000)
+      .name("Simulation Rate");
+  }
+
 
   const worldFolder = gui.addFolder("World");
   worldFolder.add(renderer.shadowMap, "enabled").name("Enable Shadows");

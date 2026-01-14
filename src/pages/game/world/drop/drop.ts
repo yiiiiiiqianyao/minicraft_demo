@@ -4,8 +4,8 @@ import { BlockFactory } from "../../Block/BlockFactory";
 import { getDropInstancedGeometry } from "../geometry";
 
 
-// TIP 暂定每种掉落物的最大数量为 1000 个
-const maxCount = 1000;
+// TIP 暂定每种掉落物的最大数量为 200 个
+const maxCount = 200;
 
 export class DropGroup extends THREE.Group {
     private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
@@ -34,7 +34,6 @@ export class DropGroup extends THREE.Group {
             meshes[block.id] = mesh;
             this.add(mesh);
         });
-        // console.log('meshes', meshes);
     }
 
     drop(blockType: BlockID, x: number, y: number, z: number) {
@@ -49,17 +48,16 @@ export class DropGroup extends THREE.Group {
      * @param origin 吸引物品的目标位置
      */
     attract(origin: THREE.Vector3) {
-        const meshes = this.meshes;
-        blockIDValues.map((key) => {
-            const mesh = meshes[key];
-            if (!mesh || mesh.count === 0) return;
-            // 距离筛选 + 批量删除
-            const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵
-            const instancePos = new THREE.Vector3(); // 存储单个实例的位置
-            const toDeleteIds = [];
-            // 吸收的物品最大距离
-            const maxDistance = 1.8;
+        const availableMeshes = this.getAvailableMeshes();
+        if (availableMeshes.length === 0) return;
+         // 距离筛选 + 批量删除
+        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵
+        const instancePos = new THREE.Vector3(); // 存储单个实例的位置
 
+        // 吸收的物品最大距离
+        const maxDistance = 1.8;
+        availableMeshes.forEach((mesh) => {
+            const toDeleteIds = [];
             // 遍历所有有效实例，筛选距离 <2 的 ID
             for (let instanceId = 0; instanceId < mesh.count; instanceId++) {
                 mesh.getMatrixAt(instanceId, tempMatrix);
@@ -71,30 +69,20 @@ export class DropGroup extends THREE.Group {
                     toDeleteIds.push(instanceId);
                 }
             }
-            
-            // 批量处理待删ID
-            for (const instanceId of toDeleteIds) {
-                // 跳过已因缩容失效的ID（批量删除中count会动态减少）
-                if (instanceId >= mesh.count) continue;
+            // 批量删除距离小于 maxDistance 的实例
+            this.deleteInstance(mesh, toDeleteIds, tempMatrix);
+        });
+    }
 
-                const lastIndex = mesh.count - 1;
-                // 仅当待删ID不是最后一个实例时，执行覆盖
-                if (instanceId !== lastIndex) {
-                    // 读取最后一个实例的矩阵（覆盖待删位置）
-                    mesh.getMatrixAt(lastIndex, tempMatrix);
-                    mesh.setMatrixAt(instanceId, tempMatrix);
-
-                    mesh.count--;
-
-                } else {
-                    // 最后一个实例直接删除
-                    mesh.count--;
-                }
+    private getAvailableMeshes() {
+        const availableMeshes: THREE.InstancedMesh[] = [];
+        blockIDValues.map((key) => {
+            const mesh = this.meshes[key];
+            if(mesh && mesh.count > 0) {
+                availableMeshes.push(mesh);
             }
-            // toDeleteIds 
-            mesh.instanceMatrix.needsUpdate = true;
-            mesh.computeBoundingSphere();
         })
+        return availableMeshes;
     }
 
     private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
@@ -108,5 +96,28 @@ export class DropGroup extends THREE.Group {
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
         mesh.computeBoundingSphere();
         return instanceId;
+    }
+
+    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {
+        // 批量处理待删ID
+        for (const instanceId of toDeleteIds) {
+            // 跳过已因缩容失效的ID（批量删除中count会动态减少）
+            if (instanceId >= mesh.count) continue;
+
+            const lastIndex = mesh.count - 1;
+            // 仅当待删ID不是最后一个实例时，执行覆盖
+            if (instanceId !== lastIndex) {
+                // 读取最后一个实例的矩阵（覆盖待删位置）
+                mesh.getMatrixAt(lastIndex, tempMatrix);
+                mesh.setMatrixAt(instanceId, tempMatrix);
+                mesh.count--;
+            } else {
+                // 最后一个实例直接删除
+                mesh.count--;
+            }
+        }
+        // toDeleteIds 
+        mesh.instanceMatrix.needsUpdate = true;
+        mesh.computeBoundingSphere();
     }
 }

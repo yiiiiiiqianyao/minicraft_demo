@@ -9,7 +9,7 @@ import { IWorldParams } from "./interface";
 import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
 import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
-import { RNG } from "../RNG";
+import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords } from "./chunk/utils";

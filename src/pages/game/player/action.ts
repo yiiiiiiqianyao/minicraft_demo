@@ -8,7 +8,6 @@ import { World } from "../world/World";
  * @desc 处理玩角色的动作 & 玩家的交互操作
  */
 export class Action {
-    
     /** @desc 玩家点击鼠标右键 放置方块的坐标*/
     static blockPlacementCoords: THREE.Vector3;
 
@@ -41,7 +40,6 @@ export class Action {
         activeChunks.forEach(chunkKey => {
             const chunk = world.getChunk(chunkKey.x, chunkKey.z);
             if (!chunk) return;
-            // chunk.dropGroup.attract();
             // TODO 这里需要根据玩家的位置 来判断是否需要吸收掉落的物品
             chunk.dropGroup.attract(PlayerParams.position);
         });

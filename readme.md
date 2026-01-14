@@ -11,3 +11,6 @@ create flat world
 
 ### chunk_helper=1
 view chunk helper
+
+### physics_helper=1
+view player around physics helper
