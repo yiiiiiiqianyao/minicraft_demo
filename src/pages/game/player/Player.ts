@@ -18,14 +18,9 @@ import { updatePlayerNear } from "../helper/chunkHelper";
 
 export class Player {
   onGround = false;
-
   input = new THREE.Vector3();
   velocity = new THREE.Vector3();
   #worldVelocity = new THREE.Vector3();
-  
-  spacePressed = false;
-  wKeyPressed = false;
-  lastWPressed = 0;
   // 玩家是否处于冲刺状态
   isSprinting = false;
 
@@ -110,8 +105,8 @@ export class Player {
         this.lastStepSoundPlayed = performance.now();
       }
     }
-
-    if (this.spacePressed && this.onGround) {
+    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间
+    if (KeyboardInput.spacePressed && this.onGround) {
       this.velocity.y = PlayerParams.jumpSpeed;
     }
     // 使用控制器根据速度控制玩家在水平面上移动

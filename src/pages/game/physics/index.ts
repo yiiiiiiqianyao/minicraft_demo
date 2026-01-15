@@ -5,15 +5,16 @@ import { BlockFactory } from "../Block/BlockFactory";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { PlayerParams } from "../player/literal";
-import { getFloorXYZ } from "../engine/utils";
 import { Candidate, Collision } from "./interface";
 import { PhysicsHelper } from "../helper";
 import { PhysicsParams } from "./literal";
 import { DevControl } from "../dev";
+import { getBlockUnderneath } from "../player/utils";
 
 export class Physics {
   // Physics simulation rate 物理模拟的半径
   simulationRate = 250;
+  // 控制物理碰撞计算的精度（减少性能消耗）
   stepSize = 1 / this.simulationRate;
   // Accumulator to keep track of leftover dt
   accumulator = 0;
@@ -27,11 +28,11 @@ export class Physics {
     }
   }
 
+  // physics 更新物理碰撞
   update(dt: number, player: Player, world: World) {
     this.accumulator += dt;
     // 获取玩家脚下的方块
-    const blockUnderneath =
-      this.getBlockUnderneath(player, world)?.block || BlockID.Air;
+    const blockUnderneath = getBlockUnderneath(player, world)?.block || BlockID.Air;
 
     const { x: o_x, y: o_y, z: o_z } = player.position;
     while (this.accumulator >= this.stepSize) {
@@ -41,25 +42,15 @@ export class Physics {
       // 检测玩家与环境的碰撞
       this.detectCollisions(player, world);
       this.accumulator -= this.stepSize;
-    }
-    player.update(world);
-    const { x, y, z } = player.position;
-    const positionUpdate = x !== o_x || y !== o_y || z !== o_z;
-    
-    // player 发生位移的时候触发更新
-    positionUpdate && player.updatePosition();
-  }
 
-  /**
-   * @desc 获取玩家脚下的方块
-   * @param player 
-   * @param world 
-   * @returns 
-   */
-  getBlockUnderneath(player: Player, world: World) {
-    const { x, y, z} = player.position;
-    const [fx, fy, fz] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z)
-    return world.getBlock(fx, fy, fz);
+      player.update(world);
+    
+      // player 发生位移的时候触发更新
+      const { x, y, z } = player.position;
+      const positionUpdate = x !== o_x || y !== o_y || z !== o_z;
+      positionUpdate && player.updatePosition();
+    }
+    
   }
 
   detectCollisions(player: Player, world: World) {
@@ -77,44 +68,46 @@ export class Physics {
     }
   }
 
+  /**
+   * @desc 获取当前 player 周围不能穿过的 block
+   * @param player 
+   * @param world 
+   * @returns 
+   */
   broadPhase(player: Player, world: World): Candidate[] {
+    const { position } = player;
+    const { radius, height } = PlayerParams;
     const candidates: Candidate[] = [];
 
     // Get the block extents of the player
-    const minX = Math.floor(player.position.x - PlayerParams.radius);
-    const maxX = Math.ceil(player.position.x + PlayerParams.radius);
-    const minY = Math.floor(player.position.y - PlayerParams.height);
-    const maxY = Math.ceil(player.position.y);
-    const minZ = Math.floor(player.position.z - PlayerParams.radius);
-    const maxZ = Math.ceil(player.position.z + PlayerParams.radius);
+    // 获取玩家角色的包围盒范围
+    const minX = Math.floor(position.x - radius);
+    const maxX = Math.ceil(position.x + radius);
+    const minY = Math.floor(position.y - height);
+    const maxY = Math.ceil(position.y);
+    const minZ = Math.floor(position.z - radius);
+    const maxZ = Math.ceil(position.z + radius);
 
     // Iterate over the player's AABB
     for (let x = minX; x <= maxX; x++) {
       for (let y = minY; y <= maxY; y++) {
         for (let z = minZ; z <= maxZ; z++) {
-          const block = world.getBlock(x, y, z);
+          const blockData = world.getBlock(x, y, z);
+          if (!blockData) continue;
           // If the block is solid, add it to the list of candidates
-          if (block) {
-            const blockClass = BlockFactory.getBlock(block.block);
-            if (!blockClass.canPassThrough) {
-              candidates.push({
-                block: block.block,
-                x: x + 0.5,
-                y: y + 0.5,
-                z: z + 0.5,
-              });
-              this.helpers?.addBlockCollisionHelper({
-                block: block.block,
-                x: x + 0.5,
-                y: y + 0.5,
-                z: z + 0.5,
-              });
-            }
-          }
+          const blockClass = BlockFactory.getBlock(blockData.block);
+          if(!blockClass || blockClass.canPassThrough) continue;
+          const aroundBlock = {
+            block: blockData.block,
+            x: x + 0.5,
+            y: y + 0.5,
+            z: z + 0.5,
+          };
+          candidates.push(aroundBlock);
+          this.helpers?.addBlockCollisionHelper(aroundBlock);
         }
       }
     }
-
     return candidates;
   }
 

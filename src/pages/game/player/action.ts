@@ -3,6 +3,7 @@ import { Player } from "./Player";
 import { PlayerEventKey } from "./interface";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { World } from "../world/World";
+import { KeyboardInput } from "./keyboard";
 
 /**
  * @desc 处理玩角色的动作 & 玩家的交互操作
@@ -22,9 +23,9 @@ export class Action {
                 break;
             case "Space": // jump
                 if(isKeyDown) {
-                    player.spacePressed = true;
+                    KeyboardInput.spacePressed = true;
                 } else {
-                    player.spacePressed = false;
+                    KeyboardInput.spacePressed = false;
                 }
                 break;
             case "KeyR": // reset player position & velocity
@@ -52,17 +53,17 @@ function handlePlayerMove(player: Player, eventKey: PlayerEventKey, isKeyDown = 
         case "KeyW": // move forward
             if(isKeyDown) {
                 // 处理前进移动和前进跑步
-                if (!player.wKeyPressed && performance.now() - player.lastWPressed < 200) {
+                if (!KeyboardInput.wKeyPressed && performance.now() - KeyboardInput.lastWPressed < 200) {
                     player.isSprinting = true;
                     player.input.z = PlayerParams.maxSprintSpeed;
                 } else {
                     player.input.z = PlayerParams.maxSpeed;
                 }
-                player.wKeyPressed = true;
-                player.lastWPressed = performance.now();
+                KeyboardInput.wKeyPressed = true;
+                KeyboardInput.lastWPressed = performance.now();
             } else {
                 player.input.z = 0;
-                player.wKeyPressed = false;
+                KeyboardInput.wKeyPressed = false;
                 player.isSprinting = false;
             }
             break;

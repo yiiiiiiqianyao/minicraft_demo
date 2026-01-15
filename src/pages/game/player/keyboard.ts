@@ -7,15 +7,21 @@ import { Player } from "./Player";
  * @desc 处理玩家键盘输入事件
  */
 export class KeyboardInput {
-    private player: Player;
-    
-    constructor(player: Player) {
-        this.player = player;
-        document.addEventListener("keydown", this.onKeyDown.bind(this));
-        document.addEventListener("keyup", this.onKeyUp.bind(this));
-        // TODO 后续不再设置初始化
-        ToolBar.updateToolBarGUI();
-    }
+  /**@desc 用户是否按下空格键 */
+  static spacePressed = false;
+  /**@desc 用户是否按下 w 键  */
+  static wKeyPressed = false;
+  /**@desc 用户上次按下 w 键的时间  */
+  static lastWPressed = 0;
+  private player: Player;
+  
+  constructor(player: Player) {
+      this.player = player;
+      document.addEventListener("keydown", this.onKeyDown.bind(this));
+      document.addEventListener("keyup", this.onKeyUp.bind(this));
+      // TODO 后续不再设置初始化
+      ToolBar.updateToolBarGUI();
+  }
 
   onKeyDown(event: KeyboardEvent) {
     const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
