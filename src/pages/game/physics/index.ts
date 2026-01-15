@@ -28,7 +28,7 @@ export class Physics {
     }
   }
 
-  // physics 更新物理碰撞
+  /**@desc physics 更新 player 物理计算 */
   update(dt: number, player: Player, world: World) {
     this.accumulator += dt;
     // 获取玩家脚下的方块
@@ -53,14 +53,18 @@ export class Physics {
     
   }
 
-  detectCollisions(player: Player, world: World) {
+  /**
+   * @desc 碰撞检测
+   * @param player 
+   * @param world 
+   */
+  private detectCollisions(player: Player, world: World) {
     // 碰撞检测的时候假定玩家不在地面 可能会下落
     player.onGround = false;
     // 清除之前的碰撞辅助可视化
     this.helpers?.clear();
 
     const candidates = this.broadPhase(player, world);
-    // narrowPhase 检测玩家是否会下落
     const collisions = this.narrowPhase(candidates, player);
 
     if (collisions.length > 0) {
@@ -69,12 +73,12 @@ export class Physics {
   }
 
   /**
-   * @desc 获取当前 player 周围不能穿过的 block
+   * @desc 碰撞检测的宽阶段处理 筛选出玩家周边的碰撞候选方块
    * @param player 
    * @param world 
    * @returns 
    */
-  broadPhase(player: Player, world: World): Candidate[] {
+  private broadPhase(player: Player, world: World): Candidate[] {
     const { position } = player;
     const { radius, height } = PlayerParams;
     const candidates: Candidate[] = [];
@@ -112,63 +116,59 @@ export class Physics {
   }
 
   /**
-   * 检测玩家与环境的碰撞 靠近检测
+   * @desc 碰撞检测的窄阶段处理 根据 player 对每个候选方块做精准碰撞计算，最终返回包含「接触点、碰撞法向量、重叠量」的碰撞信息数组
    * @param candidates 
    * @param player 
    * @returns 
    */
-  narrowPhase(candidates: Candidate[], player: Player): Collision[] {
+  private narrowPhase(candidates: Candidate[], player: Player): Collision[] {
+    const { position } = player;
+    const { halfHeight, radius } = PlayerParams;
+    // 玩家圆柱中心
+    const playerCenter = position.y - halfHeight;
     const collisions: Collision[] = [];
-
     for (const candidate of candidates) {
       // Get the point of the block closest to the center of the player's bounding cylinder
-      const closestPoint = new THREE.Vector3(
-        Math.max(
-          candidate.x - 0.5,
-          Math.min(player.position.x, candidate.x + 0.5)
-        ),
-        Math.max(
-          candidate.y - 0.5,
-          Math.min(player.position.y - PlayerParams.height / 2, candidate.y + 0.5)
-        ),
-        Math.max(
-          candidate.z - 0.5,
-          Math.min(player.position.z, candidate.z + 0.5)
-        )
-      );
+      // 获取 player 周围的 block 距离 player 最近的一个 point
+      const closestPointX = Math.max(candidate.x - 0.5,Math.min(position.x, candidate.x + 0.5));
+      const closestPointY = Math.max(candidate.y - 0.5,Math.min(playerCenter, candidate.y + 0.5));
+      const closestPointZ = Math.max(candidate.z - 0.5,Math.min(position.z, candidate.z + 0.5));
+      const closePoint = [closestPointX, closestPointY, closestPointZ];
 
+      // 过滤掉在 player 碰撞体内的 point 点位
+      if (!this.pointInPlayerBoundingCylinder(closePoint, player)) continue;
       // Get distance along each exist between closest point and center
-      const dx = closestPoint.x - player.position.x;
-      const dy = closestPoint.y - (player.position.y - PlayerParams.height / 2);
-      const dz = closestPoint.z - player.position.z;
-
-      if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {
-        const overlapY = PlayerParams.height / 2 - Math.abs(dy);
-        const overlapXZ = PlayerParams.radius - Math.sqrt(dx * dx + dz * dz);
-        // Compute the normal of the collision (pointing away from content point)
-        // As well as overlap between the point and the player's bounding cylinder
-        let normal: THREE.Vector3;
-        let overlap: number;
-        if (overlapY < overlapXZ) {
-          normal = new THREE.Vector3(0, -Math.sign(dy), 0);
-          overlap = overlapY;
-          player.onGround = true;
-        } else {
-          normal = new THREE.Vector3(-dx, 0, -dz).normalize();
-          overlap = overlapXZ;
-        }
-
-        collisions.push({
-          candidate,
-          contactPoint: closestPoint,
-          normal,
-          overlap,
-        });
-
-        this.helpers?.addContactPointerHelper(closestPoint);
+      // 计算最近点距离碰撞体圆柱中心的偏移量
+      const dx = closestPointX - position.x;
+      const dy = closestPointY - playerCenter;
+      const dz = closestPointZ - position.z;
+      /**
+       * 碰撞重叠量: 正数表示有碰撞，数值是 “玩家需要向法向量方向移动的距离” 才能脱离碰撞；负数 or 零表示无碰撞
+       * 取重叠量更小的方向作为主要碰撞方向（因为更小的重叠量代表 “更先接触” 的方向）
+      */
+      const overlapY = halfHeight - Math.abs(dy);
+      const overlapXZ = radius - Math.sqrt(dx * dx + dz * dz);
+      if (overlapY <= 0 && overlapXZ <= 0) continue; // 无重叠，跳过
+      // Compute the normal of the collision (pointing away from content point)
+      // As well as overlap between the point and the player's bounding cylinder
+      let normal: THREE.Vector3; // 最终的作用力
+      let overlap: number;
+      if (overlapY < overlapXZ) {
+        normal = new THREE.Vector3(0, -Math.sign(dy), 0);
+        overlap = overlapY;
+        player.onGround = true;
+      } else {
+        normal = new THREE.Vector3(-dx, 0, -dz).normalize();
+        overlap = overlapXZ;
       }
+      collisions.push({
+        candidate,
+        contactPoint: closePoint, // 碰撞点
+        normal, // 法向量
+        overlap, // 重叠量
+      });
+      this.helpers?.addContactPointerHelper(closePoint);
     }
-
     return collisions;
   }
 
@@ -178,18 +178,19 @@ export class Physics {
    * @param player 
    * @returns 
    */
-  pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {
-    const dx = p.x - player.position.x;
-    const dy = p.y - (player.position.y - PlayerParams.height / 2);
-    const dz = p.z - player.position.z;
+  private pointInPlayerBoundingCylinder(p: number[], player: Player) {
+    const { radius, halfHeight } = PlayerParams;
+    const { x, y, z } = player.position;
+    const dx = p[0] - x;
+    const dy = p[1] - (y - halfHeight);
+    const dz = p[2] - z;
     const r_sq = dx * dx + dz * dz;
-    return (
-      Math.abs(dy) < PlayerParams.height / 2 && r_sq < PlayerParams.radius * PlayerParams.radius
-    );
+    return Math.abs(dy) < halfHeight && r_sq < radius * radius;
   }
 
-  resolveCollisions(collisions: Collision[], player: Player) {
+  private resolveCollisions(collisions: Collision[], player: Player) {
     // Resolve collisions in order of smallest overlap to largest
+    // 根据重叠量进行排序 重叠量越小越先发生碰撞
     collisions.sort((a, b) => a.overlap - b.overlap);
 
     for (const collision of collisions) {

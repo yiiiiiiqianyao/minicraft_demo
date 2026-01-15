@@ -5,6 +5,7 @@ export type IChunkKey = {x: number, z: number};
 export interface IPlayerParams {
     position: THREE.Vector3;
     height: number;
+    halfHeight: number;
     radius: number;
     maxSpeed: number;
     maxSprintSpeed: number;

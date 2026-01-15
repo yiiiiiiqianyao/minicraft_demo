@@ -44,7 +44,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -71,10 +71,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -91,7 +91,7 @@
             2
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -105,15 +105,6 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -140,31 +131,22 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            15,
+            18,
+            2,
+            2,
+            2,
             2,
             3,
             3,
-            2,
-            2,
-            2,
-            2,
             5,
-            2,
             3,
             4,
             2,
-            3,
-            2,
-            5,
-            4,
-            2,
-            2,
-            3,
             1,
-            2
+            3
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -178,31 +160,22 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            110
+            65
           ],
           "onGenerateFiles": [
-            2,
-            12,
+            1,
+            11,
+            7,
+            6,
             6,
             5,
-            6,
-            13,
-            6,
-            14,
-            13,
-            6,
+            7,
             4,
             6,
-            5,
-            6,
-            6,
-            15,
-            4,
-            5,
             6
           ]
         },
-        "register": 25
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -220,16 +193,7 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -237,7 +201,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -264,13 +228,6 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -280,21 +237,9 @@
           ],
           "onCheckCode": [
             0,
+            0,
+            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -331,10 +276,10 @@
       "time": {
         "hooks": {
           "onCheck": [
-            1
+            0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -364,7 +309,7 @@
             0
           ]
         },
-        "register": 13
+        "register": 11
       },
       "enableBy": "register"
     },
@@ -1217,7 +1162,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1231,10 +1176,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1251,7 +1196,7 @@
             5
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1264,7 +1209,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 48
+        "register": 55
       },
       "enableBy": "register"
     },
@@ -1277,7 +1222,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 48
+        "register": 46
       },
       "enableBy": "config"
     },
@@ -1319,13 +1264,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -1344,37 +1282,19 @@
         "hooks": {
           "onGenerateFiles": [
             1,
-            0,
-            0,
-            0,
-            0,
+            1,
+            1,
             1,
             1,
             0,
             0,
             0,
             0,
-            0,
-            1,
-            0,
-            1,
-            1,
-            1,
-            2,
             0
           ],
           "addRuntimePlugin": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1412,13 +1332,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 24
+        "register": 23
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1465,36 +1385,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addEntryImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1547,45 +1440,18 @@
             1
           ],
           "onGenerateFiles": [
-            48,
-            14,
-            9,
+            57,
+            16,
             8,
             7,
-            9,
-            11,
-            15,
             7,
-            14,
+            7,
             8,
-            10,
             8,
-            9,
-            10,
-            8,
-            9,
-            10,
-            7
+            12,
+            8
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1640,24 +1506,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -1675,16 +1523,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            75,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            53,
             0,
             0,
             0,
@@ -1709,7 +1548,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1722,7 +1561,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1736,6 +1575,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            1,
             0,
             1,
             0,
@@ -1743,24 +1583,14 @@
             0,
             0,
             0,
-            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1774,44 +1604,26 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            12,
+            10,
             3,
-            47,
-            1,
-            43,
+            54,
             2,
-            43,
-            1,
-            34,
-            1,
-            41,
+            44,
             2,
-            51,
-            3,
-            43,
-            1,
             42,
-            1,
-            37,
-            1,
-            44,
-            1,
-            41,
             2,
-            40,
-            2,
-            38,
-            1,
-            44,
-            1,
-            41,
-            1,
             39,
             1,
-            42,
+            44,
             2,
-            38,
-            1
+            46,
+            2,
+            40,
+            0,
+            46,
+            1,
+            45,
+            2
           ]
         },
         "register": 5
@@ -1841,21 +1653,12 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
-            0,
             1,
             1,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
+            0,
+            0,
             0,
             0,
             0,
@@ -1865,7 +1668,7 @@
             1
           ]
         },
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -1877,7 +1680,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1891,28 +1694,19 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            240,
+            261,
             6,
             5,
-            6,
-            6,
-            6,
+            4,
             7,
-            4,
-            6,
-            6,
+            18,
             5,
             4,
             5,
-            4,
-            3,
-            5,
-            4,
-            6,
-            4
+            5
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -1929,7 +1723,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1955,7 +1749,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1980,7 +1774,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 16
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -1996,26 +1790,17 @@
           "onGenerateFiles": [
             1,
             1,
-            1,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
             0,
             1,
             1,
             1,
             0,
-            0,
+            1,
+            1,
             1
           ]
         },
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -2156,7 +1941,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2170,7 +1955,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            493
+            711
           ]
         },
         "register": 1
@@ -2186,7 +1971,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2199,7 +1984,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 22
+        "register": 23
       },
       "enableBy": "register"
     },
@@ -2213,10 +1998,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            8
+            9
           ]
         },
-        "register": 42
+        "register": 31
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2228,7 +2013,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2241,7 +2026,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2293,7 +2078,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2306,7 +2091,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2332,7 +2117,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2345,7 +2130,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2358,7 +2143,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2384,7 +2169,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2397,7 +2182,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2462,7 +2247,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -2475,7 +2260,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2488,7 +2273,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2501,7 +2286,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     }
@@ -2776,7 +2561,7 @@
       "id": "game/physics/interface",
       "file": "game/physics/interface.ts",
       "absPath": "/game/physics/interface",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\n\nexport type Candidate = {\n  block: BlockID;\n  x: number;\n  y: number;\n  z: number;\n};\n\nexport type Collision = {\n  candidate: Candidate;\n  contactPoint: THREE.Vector3;\n  normal: THREE.Vector3;\n  overlap: number;\n};",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\n\nexport type Candidate = {\n  block: BlockID;\n  x: number;\n  y: number;\n  z: number;\n};\n\nexport type Collision = {\n  candidate: Candidate;\n  contactPoint: number[];\n  normal: THREE.Vector3;\n  overlap: number;\n};",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/physics/interface.ts"
     },
@@ -2821,7 +2606,7 @@
       "id": "game/player/interface",
       "file": "game/player/interface.ts",
       "absPath": "/game/player/interface",
-      "__content": "import * as THREE from \"three\";\n\nexport type IChunkKey = {x: number, z: number};\n\nexport interface IPlayerParams {\n    position: THREE.Vector3;\n    height: number;\n    radius: number;\n    maxSpeed: number;\n    maxSprintSpeed: number;\n    jumpSpeed: number;\n    selectedCoords: THREE.Vector3 | null;\n    selectedBlockSize: THREE.Vector3 | null;\n    isInChunkCenter: boolean;\n    currentChunk: IChunkKey | null;\n    nearFourChunks: IChunkKey[];\n}\n\nexport type PlayerEventKey = \"KeyW\" | \"KeyS\" | \"KeyA\" | \"KeyD\" | \"KeyR\" | \"Space\";\n",
+      "__content": "import * as THREE from \"three\";\n\nexport type IChunkKey = {x: number, z: number};\n\nexport interface IPlayerParams {\n    position: THREE.Vector3;\n    height: number;\n    halfHeight: number;\n    radius: number;\n    maxSpeed: number;\n    maxSprintSpeed: number;\n    jumpSpeed: number;\n    selectedCoords: THREE.Vector3 | null;\n    selectedBlockSize: THREE.Vector3 | null;\n    isInChunkCenter: boolean;\n    currentChunk: IChunkKey | null;\n    nearFourChunks: IChunkKey[];\n}\n\nexport type PlayerEventKey = \"KeyW\" | \"KeyS\" | \"KeyA\" | \"KeyD\" | \"KeyR\" | \"Space\";\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/interface.ts"
     },
@@ -2938,7 +2723,7 @@
       "id": "game/helper/physics",
       "file": "game/helper/physics.ts",
       "absPath": "/game/helper/physics",
-      "__content": "import * as THREE from \"three\";\nimport { collisionHelperMaterial } from \"../engine/material\";\nimport { Candidate } from \"../physics/interface\";\n\nexport class PhysicsHelper extends THREE.Group {\n  constructor() {\n    super();\n  }\n\n  // visualizes the block the player is colliding with\n  addBlockCollisionHelper(candidate: Candidate) {\n    const blockMesh = initBlockCollisionMesh(candidate);\n    this.add(blockMesh);\n  }\n\n  /**\n   * Visualizes the contact at the point 'p'\n   */\n  addContactPointerHelper(p: THREE.Vector3) {\n    const contactMesh = initContactPointerMesh(p);\n    this.add(contactMesh);\n  }\n}\n\n// 辅助与 player 碰撞检测的方块的 helper\nconst collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);\nfunction  initBlockCollisionMesh(candidate: Candidate) {\n    const blockMesh = new THREE.Mesh(collisionGeometry, collisionHelperMaterial);\n    blockMesh.position.copy(\n      new THREE.Vector3(candidate.x, candidate.y, candidate.z)\n    );\n    return blockMesh;\n}\n\nconst contactMaterial = new THREE.MeshBasicMaterial({\n  wireframe: true,\n  color: 0x00ff00,\n});\nconst contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);\nlet contactMesh: THREE.Mesh | null = null;\n/**\n * @desc 可视化碰撞点 'p'\n * Visualizes the contact at the point 'p'\n */\nfunction initContactPointerMesh(p: THREE.Vector3) {\n  if (!contactMesh) {\n    contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);\n  }\n  contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));\n  return contactMesh;\n}",
+      "__content": "import * as THREE from \"three\";\nimport { collisionHelperMaterial } from \"../engine/material\";\nimport { Candidate } from \"../physics/interface\";\n\nexport class PhysicsHelper extends THREE.Group {\n  constructor() {\n    super();\n  }\n\n  // visualizes the block the player is colliding with\n  addBlockCollisionHelper(candidate: Candidate) {\n    const blockMesh = initBlockCollisionMesh(candidate);\n    this.add(blockMesh);\n  }\n\n  /**\n   * Visualizes the contact at the point 'p'\n   */\n  addContactPointerHelper(p: number[]) {\n    const contactMesh = initContactPointerMesh(p);\n    this.add(contactMesh);\n  }\n}\n\n// 辅助与 player 碰撞检测的方块的 helper\nconst collisionGeometry = new THREE.BoxGeometry(1.001, 1.001, 1.001);\nfunction  initBlockCollisionMesh(candidate: Candidate) {\n    const blockMesh = new THREE.Mesh(collisionGeometry, collisionHelperMaterial);\n    blockMesh.position.copy(\n      new THREE.Vector3(candidate.x, candidate.y, candidate.z)\n    );\n    return blockMesh;\n}\n\nconst contactMaterial = new THREE.MeshBasicMaterial({\n  wireframe: true,\n  color: 0x00ff00,\n});\nconst contactGeometry = new THREE.SphereGeometry(0.05, 6, 6);\nlet contactMesh: THREE.Mesh | null = null;\n/**\n * @desc 可视化碰撞点 'p'\n * Visualizes the contact at the point 'p'\n */\nfunction initContactPointerMesh(p: number[]) {\n  if (!contactMesh) {\n    contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);\n  }\n  contactMesh.position.copy(new THREE.Vector3(p[0], p[1], p[2]));\n  return contactMesh;\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/helper/physics.ts"
     },
@@ -2947,7 +2732,7 @@
       "id": "game/player/literal",
       "file": "game/player/literal.ts",
       "absPath": "/game/player/literal",
-      "__content": "import * as THREE from \"three\";\nimport { IPlayerParams } from \"./interface\";\n\nexport const PlayerParams: IPlayerParams = {\n    position: new THREE.Vector3(),\n    height: 1.75,\n    // height: 2.75,\n    // radius: 0.5,\n    // 玩家的碰撞盒半径应该调整为 0.25 较为合适\n    radius: 0.25,\n    // 玩家最大移动速度\n    maxSpeed: 4.317,\n    // 玩家最大奔跑速度\n    maxSprintSpeed: 5.612,\n    // 玩家跳跃速度\n    jumpSpeed: 10,\n    // 玩家选中的方块坐标 可能未选中\n    selectedCoords: null,\n    // 玩家选中的方块大小 可能未选中\n    selectedBlockSize: null,\n    // 玩家是否处于 chunk 中心\n    isInChunkCenter: false,\n    // 玩家所处的 chunkID\n    currentChunk: null,\n    // 玩家相邻的最小 4 个 chunkID\n    nearFourChunks: [],\n}\n\nexport const PlayerInitPosition = new THREE.Vector3(32, 72, 32);\n\n// 玩家视线中心 鼠标屏幕坐标\nexport const RayCenterScreen = new THREE.Vector2(0, 0);",
+      "__content": "import * as THREE from \"three\";\nimport { IPlayerParams } from \"./interface\";\n\nexport const PlayerParams: IPlayerParams = {\n    position: new THREE.Vector3(),\n    height: 1.75,\n    halfHeight: 1.75 / 2,\n    // height: 2.75,\n    // radius: 0.5,\n    // 玩家的碰撞盒半径应该调整为 0.25 较为合适\n    radius: 0.25,\n    // 玩家最大移动速度\n    maxSpeed: 4.317,\n    // 玩家最大奔跑速度\n    maxSprintSpeed: 5.612,\n    // 玩家跳跃速度\n    jumpSpeed: 10,\n    // 玩家选中的方块坐标 可能未选中\n    selectedCoords: null,\n    // 玩家选中的方块大小 可能未选中\n    selectedBlockSize: null,\n    // 玩家是否处于 chunk 中心\n    isInChunkCenter: false,\n    // 玩家所处的 chunkID\n    currentChunk: null,\n    // 玩家相邻的最小 4 个 chunkID\n    nearFourChunks: [],\n}\n\nexport const PlayerInitPosition = new THREE.Vector3(32, 72, 32);\n\n// 玩家视线中心 鼠标屏幕坐标\nexport const RayCenterScreen = new THREE.Vector2(0, 0);",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/literal.ts"
     },
@@ -2974,7 +2759,7 @@
       "id": "game/physics/index",
       "file": "game/physics/index.ts",
       "absPath": "/game/physics",
-      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"../player/literal\";\nimport { Candidate, Collision } from \"./interface\";\nimport { PhysicsHelper } from \"../helper\";\nimport { PhysicsParams } from \"./literal\";\nimport { DevControl } from \"../dev\";\nimport { getBlockUnderneath } from \"../player/utils\";\n\nexport class Physics {\n  // Physics simulation rate 物理模拟的半径\n  simulationRate = 250;\n  // 控制物理碰撞计算的精度（减少性能消耗）\n  stepSize = 1 / this.simulationRate;\n  // Accumulator to keep track of leftover dt\n  accumulator = 0;\n\n  helpers: PhysicsHelper | null = null;\n  constructor(scene: THREE.Scene) {\n    if (DevControl.physicsHelperVisible) {\n      this.helpers = new PhysicsHelper();\n      this.helpers.visible = true;\n      scene.add(this.helpers);\n    }\n  }\n\n  // physics 更新物理碰撞\n  update(dt: number, player: Player, world: World) {\n    this.accumulator += dt;\n    // 获取玩家脚下的方块\n    const blockUnderneath = getBlockUnderneath(player, world)?.block || BlockID.Air;\n\n    const { x: o_x, y: o_y, z: o_z } = player.position;\n    while (this.accumulator >= this.stepSize) {\n      // 玩家下落的速度\n      player.velocity.y += PhysicsParams.GRAVITY * this.stepSize;\n      player.applyInputs(this.stepSize, blockUnderneath);\n      // 检测玩家与环境的碰撞\n      this.detectCollisions(player, world);\n      this.accumulator -= this.stepSize;\n\n      player.update(world);\n    \n      // player 发生位移的时候触发更新\n      const { x, y, z } = player.position;\n      const positionUpdate = x !== o_x || y !== o_y || z !== o_z;\n      positionUpdate && player.updatePosition();\n    }\n    \n  }\n\n  detectCollisions(player: Player, world: World) {\n    // 碰撞检测的时候假定玩家不在地面 可能会下落\n    player.onGround = false;\n    // 清除之前的碰撞辅助可视化\n    this.helpers?.clear();\n\n    const candidates = this.broadPhase(player, world);\n    // narrowPhase 检测玩家是否会下落\n    const collisions = this.narrowPhase(candidates, player);\n\n    if (collisions.length > 0) {\n      this.resolveCollisions(collisions, player);\n    }\n  }\n\n  /**\n   * @desc 获取当前 player 周围不能穿过的 block\n   * @param player \n   * @param world \n   * @returns \n   */\n  broadPhase(player: Player, world: World): Candidate[] {\n    const { position } = player;\n    const { radius, height } = PlayerParams;\n    const candidates: Candidate[] = [];\n\n    // Get the block extents of the player\n    // 获取玩家角色的包围盒范围\n    const minX = Math.floor(position.x - radius);\n    const maxX = Math.ceil(position.x + radius);\n    const minY = Math.floor(position.y - height);\n    const maxY = Math.ceil(position.y);\n    const minZ = Math.floor(position.z - radius);\n    const maxZ = Math.ceil(position.z + radius);\n\n    // Iterate over the player's AABB\n    for (let x = minX; x <= maxX; x++) {\n      for (let y = minY; y <= maxY; y++) {\n        for (let z = minZ; z <= maxZ; z++) {\n          const blockData = world.getBlock(x, y, z);\n          if (!blockData) continue;\n          // If the block is solid, add it to the list of candidates\n          const blockClass = BlockFactory.getBlock(blockData.block);\n          if(!blockClass || blockClass.canPassThrough) continue;\n          const aroundBlock = {\n            block: blockData.block,\n            x: x + 0.5,\n            y: y + 0.5,\n            z: z + 0.5,\n          };\n          candidates.push(aroundBlock);\n          this.helpers?.addBlockCollisionHelper(aroundBlock);\n        }\n      }\n    }\n    return candidates;\n  }\n\n  /**\n   * 检测玩家与环境的碰撞 靠近检测\n   * @param candidates \n   * @param player \n   * @returns \n   */\n  narrowPhase(candidates: Candidate[], player: Player): Collision[] {\n    const collisions: Collision[] = [];\n\n    for (const candidate of candidates) {\n      // Get the point of the block closest to the center of the player's bounding cylinder\n      const closestPoint = new THREE.Vector3(\n        Math.max(\n          candidate.x - 0.5,\n          Math.min(player.position.x, candidate.x + 0.5)\n        ),\n        Math.max(\n          candidate.y - 0.5,\n          Math.min(player.position.y - PlayerParams.height / 2, candidate.y + 0.5)\n        ),\n        Math.max(\n          candidate.z - 0.5,\n          Math.min(player.position.z, candidate.z + 0.5)\n        )\n      );\n\n      // Get distance along each exist between closest point and center\n      const dx = closestPoint.x - player.position.x;\n      const dy = closestPoint.y - (player.position.y - PlayerParams.height / 2);\n      const dz = closestPoint.z - player.position.z;\n\n      if (this.pointInPlayerBoundingCylinder(closestPoint, player)) {\n        const overlapY = PlayerParams.height / 2 - Math.abs(dy);\n        const overlapXZ = PlayerParams.radius - Math.sqrt(dx * dx + dz * dz);\n        // Compute the normal of the collision (pointing away from content point)\n        // As well as overlap between the point and the player's bounding cylinder\n        let normal: THREE.Vector3;\n        let overlap: number;\n        if (overlapY < overlapXZ) {\n          normal = new THREE.Vector3(0, -Math.sign(dy), 0);\n          overlap = overlapY;\n          player.onGround = true;\n        } else {\n          normal = new THREE.Vector3(-dx, 0, -dz).normalize();\n          overlap = overlapXZ;\n        }\n\n        collisions.push({\n          candidate,\n          contactPoint: closestPoint,\n          normal,\n          overlap,\n        });\n\n        this.helpers?.addContactPointerHelper(closestPoint);\n      }\n    }\n\n    return collisions;\n  }\n\n  /**\n   * Check if contact point is inside the player's bounding cylinder\n   * @param p \n   * @param player \n   * @returns \n   */\n  pointInPlayerBoundingCylinder(p: THREE.Vector3, player: Player) {\n    const dx = p.x - player.position.x;\n    const dy = p.y - (player.position.y - PlayerParams.height / 2);\n    const dz = p.z - player.position.z;\n    const r_sq = dx * dx + dz * dz;\n    return (\n      Math.abs(dy) < PlayerParams.height / 2 && r_sq < PlayerParams.radius * PlayerParams.radius\n    );\n  }\n\n  resolveCollisions(collisions: Collision[], player: Player) {\n    // Resolve collisions in order of smallest overlap to largest\n    collisions.sort((a, b) => a.overlap - b.overlap);\n\n    for (const collision of collisions) {\n      // re-check if contact player is inside the player's bounding cylinder\n      // since the player position is updated after each collision is resolved\n      if (!this.pointInPlayerBoundingCylinder(collision.contactPoint, player)) {\n        continue;\n      }\n\n      // Adjust position of player so that block and player are no longer overlapping\n      const deltaPosition = collision.normal.clone();\n      deltaPosition.multiplyScalar(collision.overlap);\n\n      // Don't apply vertical change if player is not on ground\n      if (!player.onGround && deltaPosition.y !== 0) {\n        deltaPosition.y = 0;\n      }\n      \n      // player.updatePosition(deltaPosition);\n      player.position.add(deltaPosition);\n\n      // If player is stuck underneath a block, boost him up\n      if (collision.normal.y < 0) {\n        player.velocity.y += 10;\n      }\n\n      // Get the magnitude of player's velocity along collision normal\n      const magnitude = player.worldVelocity.dot(collision.normal);\n      // remove that part of velocity from the player's velocity\n      const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);\n      // 根据与环境的碰撞 作用于玩家的速度\n      player.applyWorldDeltaVelocity(velocityAdj.negate());\n    }\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\n\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"../player/literal\";\nimport { Candidate, Collision } from \"./interface\";\nimport { PhysicsHelper } from \"../helper\";\nimport { PhysicsParams } from \"./literal\";\nimport { DevControl } from \"../dev\";\nimport { getBlockUnderneath } from \"../player/utils\";\n\nexport class Physics {\n  // Physics simulation rate 物理模拟的半径\n  simulationRate = 250;\n  // 控制物理碰撞计算的精度（减少性能消耗）\n  stepSize = 1 / this.simulationRate;\n  // Accumulator to keep track of leftover dt\n  accumulator = 0;\n\n  helpers: PhysicsHelper | null = null;\n  constructor(scene: THREE.Scene) {\n    if (DevControl.physicsHelperVisible) {\n      this.helpers = new PhysicsHelper();\n      this.helpers.visible = true;\n      scene.add(this.helpers);\n    }\n  }\n\n  /**@desc physics 更新 player 物理计算 */\n  update(dt: number, player: Player, world: World) {\n    this.accumulator += dt;\n    // 获取玩家脚下的方块\n    const blockUnderneath = getBlockUnderneath(player, world)?.block || BlockID.Air;\n\n    const { x: o_x, y: o_y, z: o_z } = player.position;\n    while (this.accumulator >= this.stepSize) {\n      // 玩家下落的速度\n      player.velocity.y += PhysicsParams.GRAVITY * this.stepSize;\n      player.applyInputs(this.stepSize, blockUnderneath);\n      // 检测玩家与环境的碰撞\n      this.detectCollisions(player, world);\n      this.accumulator -= this.stepSize;\n\n      player.update(world);\n    \n      // player 发生位移的时候触发更新\n      const { x, y, z } = player.position;\n      const positionUpdate = x !== o_x || y !== o_y || z !== o_z;\n      positionUpdate && player.updatePosition();\n    }\n    \n  }\n\n  /**\n   * @desc 碰撞检测\n   * @param player \n   * @param world \n   */\n  private detectCollisions(player: Player, world: World) {\n    // 碰撞检测的时候假定玩家不在地面 可能会下落\n    player.onGround = false;\n    // 清除之前的碰撞辅助可视化\n    this.helpers?.clear();\n\n    const candidates = this.broadPhase(player, world);\n    const collisions = this.narrowPhase(candidates, player);\n\n    if (collisions.length > 0) {\n      this.resolveCollisions(collisions, player);\n    }\n  }\n\n  /**\n   * @desc 碰撞检测的宽阶段处理 筛选出玩家周边的碰撞候选方块\n   * @param player \n   * @param world \n   * @returns \n   */\n  private broadPhase(player: Player, world: World): Candidate[] {\n    const { position } = player;\n    const { radius, height } = PlayerParams;\n    const candidates: Candidate[] = [];\n\n    // Get the block extents of the player\n    // 获取玩家角色的包围盒范围\n    const minX = Math.floor(position.x - radius);\n    const maxX = Math.ceil(position.x + radius);\n    const minY = Math.floor(position.y - height);\n    const maxY = Math.ceil(position.y);\n    const minZ = Math.floor(position.z - radius);\n    const maxZ = Math.ceil(position.z + radius);\n\n    // Iterate over the player's AABB\n    for (let x = minX; x <= maxX; x++) {\n      for (let y = minY; y <= maxY; y++) {\n        for (let z = minZ; z <= maxZ; z++) {\n          const blockData = world.getBlock(x, y, z);\n          if (!blockData) continue;\n          // If the block is solid, add it to the list of candidates\n          const blockClass = BlockFactory.getBlock(blockData.block);\n          if(!blockClass || blockClass.canPassThrough) continue;\n          const aroundBlock = {\n            block: blockData.block,\n            x: x + 0.5,\n            y: y + 0.5,\n            z: z + 0.5,\n          };\n          candidates.push(aroundBlock);\n          this.helpers?.addBlockCollisionHelper(aroundBlock);\n        }\n      }\n    }\n    return candidates;\n  }\n\n  /**\n   * @desc 碰撞检测的窄阶段处理 根据 player 对每个候选方块做精准碰撞计算，最终返回包含「接触点、碰撞法向量、重叠量」的碰撞信息数组\n   * @param candidates \n   * @param player \n   * @returns \n   */\n  private narrowPhase(candidates: Candidate[], player: Player): Collision[] {\n    const { position } = player;\n    const { halfHeight, radius } = PlayerParams;\n    // 玩家圆柱中心\n    const playerCenter = position.y - halfHeight;\n    const collisions: Collision[] = [];\n    for (const candidate of candidates) {\n      // Get the point of the block closest to the center of the player's bounding cylinder\n      // 获取 player 周围的 block 距离 player 最近的一个 point\n      \n    const closestPointX = Math.max(candidate.x - 0.5,Math.min(position.x, candidate.x + 0.5));\n    const closestPointY = Math.max(candidate.y - 0.5,Math.min(playerCenter, candidate.y + 0.5));\n    const closestPointZ = Math.max(candidate.z - 0.5,Math.min(position.z, candidate.z + 0.5));\n    const closePoint = [closestPointX, closestPointY, closestPointZ];\n\n      // 过滤掉在 player 碰撞体内的 point 点位\n      if (!this.pointInPlayerBoundingCylinder(closePoint, player)) continue;\n      // Get distance along each exist between closest point and center\n      // 计算最近点距离碰撞体圆柱中心的偏移量\n      const dx = closestPointX - position.x;\n      const dy = closestPointY - playerCenter;\n      const dz = closestPointZ - position.z;\n      /**\n       * 碰撞重叠量: 正数表示有碰撞，数值是 “玩家需要向法向量方向移动的距离” 才能脱离碰撞；负数 or 零表示无碰撞\n       * 取重叠量更小的方向作为主要碰撞方向（因为更小的重叠量代表 “更先接触” 的方向）\n      */\n      const overlapY = halfHeight - Math.abs(dy);\n      const overlapXZ = radius - Math.sqrt(dx * dx + dz * dz);\n      if (overlapY <= 0 && overlapXZ <= 0) continue; // 无重叠，跳过\n      // Compute the normal of the collision (pointing away from content point)\n      // As well as overlap between the point and the player's bounding cylinder\n      let normal: THREE.Vector3; // 最终的作用力\n      let overlap: number;\n      if (overlapY < overlapXZ) {\n        normal = new THREE.Vector3(0, -Math.sign(dy), 0);\n        overlap = overlapY;\n        player.onGround = true;\n      } else {\n        normal = new THREE.Vector3(-dx, 0, -dz).normalize();\n        overlap = overlapXZ;\n      }\n      collisions.push({\n        candidate,\n        contactPoint: closePoint, // 碰撞点\n        normal, // 法向量\n        overlap, // 重叠量\n      });\n      this.helpers?.addContactPointerHelper(closePoint);\n    }\n    return collisions;\n  }\n\n  /**\n   * Check if contact point is inside the player's bounding cylinder\n   * @param p \n   * @param player \n   * @returns \n   */\n  private pointInPlayerBoundingCylinder(p: number[], player: Player) {\n    const { radius, halfHeight } = PlayerParams;\n    const { x, y, z } = player.position;\n    const dx = p[0] - x;\n    const dy = p[1] - (y - halfHeight);\n    const dz = p[2] - z;\n    const r_sq = dx * dx + dz * dz;\n    return Math.abs(dy) < halfHeight && r_sq < radius * radius;\n  }\n\n  private resolveCollisions(collisions: Collision[], player: Player) {\n    // Resolve collisions in order of smallest overlap to largest\n    // 根据重叠量进行排序 重叠量越小越先发生碰撞\n    collisions.sort((a, b) => a.overlap - b.overlap);\n\n    for (const collision of collisions) {\n      // re-check if contact player is inside the player's bounding cylinder\n      // since the player position is updated after each collision is resolved\n      if (!this.pointInPlayerBoundingCylinder(collision.contactPoint, player)) {\n        continue;\n      }\n\n      // Adjust position of player so that block and player are no longer overlapping\n      const deltaPosition = collision.normal.clone();\n      deltaPosition.multiplyScalar(collision.overlap);\n\n      // Don't apply vertical change if player is not on ground\n      if (!player.onGround && deltaPosition.y !== 0) {\n        deltaPosition.y = 0;\n      }\n      \n      // player.updatePosition(deltaPosition);\n      player.position.add(deltaPosition);\n\n      // If player is stuck underneath a block, boost him up\n      if (collision.normal.y < 0) {\n        player.velocity.y += 10;\n      }\n\n      // Get the magnitude of player's velocity along collision normal\n      const magnitude = player.worldVelocity.dot(collision.normal);\n      // remove that part of velocity from the player's velocity\n      const velocityAdj = collision.normal.clone().multiplyScalar(magnitude);\n      // 根据与环境的碰撞 作用于玩家的速度\n      player.applyWorldDeltaVelocity(velocityAdj.negate());\n    }\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/physics/index.ts"
     },
@@ -2983,7 +2768,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { ToolBar, updatePositionGUI } from \"../gui\";\nimport { initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams, RayCenterScreen } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { boundsHelper, selectionHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\n\nexport class Player {\n  onGround = false;\n\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  \n  lastWPressed = 0;\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n  world: World;\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  \n  controls = new PointerLockControls(this.camera, document.body);\n  rayCaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  public keyboardInput = new KeyboardInput(this);\n  /**\n   * Updates the raycaster used for block selection\n   */\n  private selectedBlockUuid: string | null = null;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n    this.camera.position.copy(PlayerInitPosition);\n    this.cameraHelper.visible = false;\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    boundsHelper.visible = false;\n    scene.add(boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRayCaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    // console.log('this.position', this.position);\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n    // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收\n    // 角色一定距离内执行粒子动画、野怪刷新、植物生长\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  private updateBoundsHelper() {\n    boundsHelper.position.copy(this.camera.position);\n    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  private updateRayCaster(world: World) {\n    const rayCaster = this.rayCaster;\n    if(!rayCaster) return;\n    rayCaster.setFromCamera(RayCenterScreen, this.camera);\n    const intersections = rayCaster.intersectObjects(world.children, true).filter((intersection) => {\n      // 排除掉掉落的方块\n      return intersection.object.userData.type !== 'drop';\n    });\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n      if(this.selectedBlockUuid !== intersection.object.uuid) {\n        this.selectedBlockUuid = intersection.object.uuid;\n        // console.log(intersection.object);\n      }\n      \n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      PlayerParams.selectedCoords = chunk.position.clone();\n      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (ToolBar.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        Action.blockPlacementCoords = PlayerParams.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n        selectionHelper.scale.set(0.3, 0.6, 0.3);\n      } else {\n        selectionHelper.scale.set(1, 1, 1);\n      } \n      // TODO TallGrass 草方块的选择框需要调整大小\n      selectionHelper.position.copy(PlayerParams.selectedCoords);\n      selectionHelper.visible = true;\n    } else {\n      // 没有选中的方块时，将选中坐标设为 null\n      PlayerParams.selectedCoords = null;\n      // 没有选中的方块时，将选中方块大小设为 null\n      PlayerParams.selectedBlockSize = null;\n      selectionHelper.visible = false;\n    }\n  }\n\n  private updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n}\n",
+      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { ToolBar, updatePositionGUI } from \"../gui\";\nimport { initPlayerCamera } from \"./utils\";\nimport { PlayerInitPosition, PlayerParams, RayCenterScreen } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { boundsHelper, selectionHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\n\nexport class Player {\n  onGround = false;\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n  world: World;\n  camera = initPlayerCamera();\n  cameraHelper = new THREE.CameraHelper(this.camera);\n  \n  controls = new PointerLockControls(this.camera, document.body);\n  rayCaster = new THREE.Raycaster(\n    new THREE.Vector3(),\n    new THREE.Vector3(),\n    0,\n    5\n  );\n  public keyboardInput = new KeyboardInput(this);\n  /**\n   * Updates the raycaster used for block selection\n   */\n  private selectedBlockUuid: string | null = null;\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n    this.camera.position.copy(PlayerInitPosition);\n    this.cameraHelper.visible = false;\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    boundsHelper.visible = false;\n    scene.add(boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    // Normalize the input vector if more than one key is pressed\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        this.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  update(world: World) {\n    this.updateBoundsHelper();\n    this.updateRayCaster(world);\n    this.updateCameraFOV();\n\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    // console.log('this.position', this.position);\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n    // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收\n    // 角色一定距离内执行粒子动画、野怪刷新、植物生长\n  }\n\n  private playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        audioManager.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        audioManager.play(\"step.stone\");\n        break;\n    }\n  }\n\n  /**\n   * Update the player's bounding cylinder helper\n   */\n  private updateBoundsHelper() {\n    boundsHelper.position.copy(this.camera.position);\n    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level\n  }\n\n  private updateRayCaster(world: World) {\n    const rayCaster = this.rayCaster;\n    if(!rayCaster) return;\n    rayCaster.setFromCamera(RayCenterScreen, this.camera);\n    const intersections = rayCaster.intersectObjects(world.children, true).filter((intersection) => {\n      // 排除掉掉落的方块\n      return intersection.object.userData.type !== 'drop';\n    });\n\n    if (intersections.length > 0) {\n      const intersection = intersections[0];\n      if(this.selectedBlockUuid !== intersection.object.uuid) {\n        this.selectedBlockUuid = intersection.object.uuid;\n        // console.log(intersection.object);\n      }\n      \n      // Get the chunk associated with the seclected block\n      const chunk = intersection.object.parent;\n\n      if (intersection.instanceId == null || !chunk) {\n        selectionHelper.visible = false;\n        return;\n      }\n\n      // Get the transformation matrix for the selected block\n      const blockMatrix = new THREE.Matrix4();\n      (intersection.object as THREE.InstancedMesh).getMatrixAt(\n        intersection.instanceId,\n        blockMatrix\n      );\n\n      // Undo rotation from block matrix\n      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n      const inverseRotationMatrix = rotationMatrix.invert();\n      blockMatrix.multiply(inverseRotationMatrix);\n\n      // Set the selected coordinates to origin of chunk\n      // Then apply transformation matrix of block to get block coords\n      PlayerParams.selectedCoords = chunk.position.clone();\n      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);\n\n      // Get the bounding box of the selected block\n      const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n\n      if (ToolBar.activeBlockId !== BlockID.Air && intersection.normal) {\n        // Update block placement coords to be 1 block over in the direction of the normal\n        Action.blockPlacementCoords = PlayerParams.selectedCoords\n          .clone()\n          .add(intersection.normal);\n      }\n      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n        selectionHelper.scale.set(0.3, 0.6, 0.3);\n      } else {\n        selectionHelper.scale.set(1, 1, 1);\n      } \n      // TODO TallGrass 草方块的选择框需要调整大小\n      selectionHelper.position.copy(PlayerParams.selectedCoords);\n      selectionHelper.visible = true;\n    } else {\n      // 没有选中的方块时，将选中坐标设为 null\n      PlayerParams.selectedCoords = null;\n      // 没有选中的方块时，将选中方块大小设为 null\n      PlayerParams.selectedBlockSize = null;\n      selectionHelper.visible = false;\n    }\n  }\n\n  private updateCameraFOV() {\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -4372,7 +4157,7 @@
             "format": "esm"
           },
           "src/pages/game/player/literal.ts": {
-            "bytes": 968,
+            "bytes": 994,
             "imports": [
               {
                 "path": "three",
@@ -5326,7 +5111,7 @@
             "format": "esm"
           },
           "src/pages/game/helper/physics.ts": {
-            "bytes": 1511,
+            "bytes": 1504,
             "imports": [
               {
                 "path": "three",
@@ -5621,7 +5406,7 @@
             "format": "esm"
           },
           "src/pages/game/physics/interface.ts": {
-            "bytes": 283,
+            "bytes": 278,
             "imports": [
               {
                 "path": "three",
@@ -5653,7 +5438,7 @@
             "format": "esm"
           },
           "src/pages/game/player/interface.ts": {
-            "bytes": 529,
+            "bytes": 553,
             "imports": [
               {
                 "path": "three",
@@ -5920,7 +5705,7 @@
             "format": "esm"
           },
           "src/pages/game/physics/index.ts": {
-            "bytes": 7798,
+            "bytes": 8699,
             "imports": [
               {
                 "path": "three",
@@ -8144,7 +7929,7 @@
                 "bytesInOutput": 1045
               },
               "src/pages/game/player/literal.ts": {
-                "bytesInOutput": 1222
+                "bytesInOutput": 1250
               },
               "src/pages/game/engine/material.ts": {
                 "bytesInOutput": 551
@@ -8255,7 +8040,7 @@
                 "bytesInOutput": 1404
               },
               "src/pages/game/helper/physics.ts": {
-                "bytesInOutput": 1559
+                "bytesInOutput": 1562
               },
               "src/pages/game/helper/index.ts": {
                 "bytesInOutput": 339
@@ -8318,7 +8103,7 @@
                 "bytesInOutput": 6515
               },
               "src/pages/game/physics/index.ts": {
-                "bytesInOutput": 6521
+                "bytesInOutput": 6851
               },
               "src/pages/game/engine/index.ts": {
                 "bytesInOutput": 1068
@@ -8369,7 +8154,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 182173
+            "bytes": 182534
           }
         }
       }

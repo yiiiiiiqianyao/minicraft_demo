@@ -16,7 +16,7 @@ export class PhysicsHelper extends THREE.Group {
   /**
    * Visualizes the contact at the point 'p'
    */
-  addContactPointerHelper(p: THREE.Vector3) {
+  addContactPointerHelper(p: number[]) {
     const contactMesh = initContactPointerMesh(p);
     this.add(contactMesh);
   }
@@ -42,10 +42,10 @@ let contactMesh: THREE.Mesh | null = null;
  * @desc 可视化碰撞点 'p'
  * Visualizes the contact at the point 'p'
  */
-function initContactPointerMesh(p: THREE.Vector3) {
+function initContactPointerMesh(p: number[]) {
   if (!contactMesh) {
     contactMesh = new THREE.Mesh(contactGeometry, contactMaterial);
   }
-  contactMesh.position.copy(new THREE.Vector3(p.x, p.y, p.z));
+  contactMesh.position.copy(new THREE.Vector3(p[0], p[1], p[2]));
   return contactMesh;
 }

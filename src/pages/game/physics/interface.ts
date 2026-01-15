@@ -10,7 +10,7 @@ export type Candidate = {
 
 export type Collision = {
   candidate: Candidate;
-  contactPoint: THREE.Vector3;
+  contactPoint: number[];
   normal: THREE.Vector3;
   overlap: number;
 };
