@@ -135,7 +135,6 @@ export class Player {
    * @param deltaPosition 
    */
   updatePosition() {
-    // console.log('this.position', this.position);
     this.updateByPosition();
   }
 

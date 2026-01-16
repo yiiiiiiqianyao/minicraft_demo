@@ -57,7 +57,7 @@ export default class Game {
     this.scene.add(this.world);
 
     this.player = new Player(this.scene, this.world);
-    this.physics = new Physics(this.scene, this.player);
+    this.physics = new Physics(this.scene, this.player, this.world);
 
     this.skyManager.updateSunPosition(0, this.player);
 

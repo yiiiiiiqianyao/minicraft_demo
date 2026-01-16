@@ -50,7 +50,7 @@ export class PlayerPhysics {
      * @param player 
      * @param world 
      */
-     detectCollisions(player: Player, world: World) {
+    private detectCollisions(player: Player, world: World) {
         // 碰撞检测的时候假定玩家不在地面 可能会下落
         player.onGround = false;
 

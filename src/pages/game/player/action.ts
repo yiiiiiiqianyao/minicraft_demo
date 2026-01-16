@@ -37,11 +37,10 @@ export class Action {
 
     /** @desc 玩家吸收掉落的物品 */
     static absorbDrops(world: World) {
-        const activeChunks = PlayerParams.isInChunkCenter ? [PlayerParams.currentChunk!] : PlayerParams.nearFourChunks;
-        activeChunks.forEach(chunkKey => {
+        // 玩家吸收掉落的物品 只需要在玩家当前活动的 chunk 检测即可
+        PlayerParams.activeChunks.forEach(chunkKey => {
             const chunk = world.getChunk(chunkKey.x, chunkKey.z);
             if (!chunk) return;
-            // TODO 这里需要根据玩家的位置 来判断是否需要吸收掉落的物品
             chunk.dropGroup.attract(PlayerParams.position);
         });
     }
