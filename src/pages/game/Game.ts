@@ -4,13 +4,14 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { createUI, initMainMenu } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
-import { SkyManager, sunSettings } from "./sky";
+import { SkyManager } from "./sky";
 import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
 import { Physics } from "./physics";
 import { Engine } from "./engine";
+import { sunSettings } from "./sky/literal";
 
 export default class Game {
   static v = -1;
