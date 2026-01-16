@@ -11,3 +11,12 @@ function initBoundsHelper() {
 }
 
 export const boundsHelper = initBoundsHelper();
+
+
+/**
+ *@desc Update the player's bounding cylinder helper
+*/
+export function updateBoundsHelper(position: THREE.Vector3) {
+  boundsHelper.position.copy(position);
+  boundsHelper.position.y -= PlayerParams.height / 2;
+}

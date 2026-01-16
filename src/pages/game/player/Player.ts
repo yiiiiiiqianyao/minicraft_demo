@@ -10,7 +10,7 @@ import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
-import { boundsHelper, selectionHelper } from "../helper";
+import { boundsHelper, selectionHelper, updateBoundsHelper } from "../helper";
 import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
@@ -118,11 +118,11 @@ export class Player {
     updatePositionGUI(this.position);
   }
 
+  /**@desc 更新玩家 */
   update(world: World) {
-    this.updateBoundsHelper();
+    boundsHelper.visible && updateBoundsHelper(this.camera.position);
     this.updateRayCaster(world);
     this.updateCameraFOV();
-
     // prevent player from falling through
     if (this.position.y < 0) {
       this.position.copy(PlayerInitPosition);
@@ -181,14 +181,7 @@ export class Player {
     }
   }
 
-  /**
-   * Update the player's bounding cylinder helper
-   */
-  private updateBoundsHelper() {
-    boundsHelper.position.copy(this.camera.position);
-    boundsHelper.position.y -= PlayerParams.height / 2; // set to eye level
-  }
-
+  /**@desc 更新 player 的拾取射线 */
   private updateRayCaster(world: World) {
     const rayCaster = this.rayCaster;
     if(!rayCaster) return;
@@ -257,7 +250,9 @@ export class Player {
     }
   }
 
+  /**@desc 更新 player 角色相机的 FOV */
   private updateCameraFOV() {
+    // TODO 需要根据玩家是否 sprinting 来动态调整相机 FOV 待优化
     const currentFov = { fov: this.camera.fov };
     const targetFov = this.isSprinting ? 80 : 70;
     const update = () => {

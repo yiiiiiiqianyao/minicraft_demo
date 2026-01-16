@@ -56,7 +56,7 @@ export default class Game {
     this.scene.add(this.world);
 
     this.player = new Player(this.scene, this.world);
-    this.physics = new Physics(this.scene);
+    this.physics = new Physics(this.scene, this.player);
 
     this.skyManager.updateSunPosition(0, this.player);
 
@@ -74,7 +74,7 @@ export default class Game {
     this.draw();
   }
 
-  onWindowResize() {
+  private onWindowResize() {
     const { width, height } = Engine.screenWrap.getBoundingClientRect();
     ScreenViewer.width = width;
     ScreenViewer.height = height;
@@ -93,7 +93,8 @@ export default class Game {
     }
   }
 
-  draw() {
+  /**@desc 游戏主循环 */
+  private draw() {
     const currentTime = performance.now();
     const deltaTime = (currentTime - this.previousTime) / 1000;
 
@@ -105,7 +106,7 @@ export default class Game {
     this.skyManager.updateSkyColor(this.clock, this.player);
 
     // 更新物理模拟
-    this.physics.update(deltaTime, this.player, this.world);
+    this.physics.update(deltaTime);
 
     // 更新世界 chunk
     this.world.update(this.player);
