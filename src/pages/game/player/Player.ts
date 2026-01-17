@@ -5,17 +5,18 @@ import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { ToolBar, updatePositionGUI } from "../gui";
-import { getNearChunks, initPlayerCamera } from "./utils";
+import { getNearChunks } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
 import { RenderGeometry } from "../Block/Block";
-import { boundsHelper, selectionHelper, updateBoundsHelper } from "../helper";
+import { initBoundsHelper, selectionHelper, updateBoundsHelper } from "../helper";
 import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
-import { Layers } from "../engine";
+import { Engine, Layers } from "../engine";
+import { initPlayerCamera } from "./camera";
 
 export class Player {
   onGround = false;
@@ -27,12 +28,12 @@ export class Player {
 
   lastStepSoundPlayed = 0;
   world: World;
-  camera = initPlayerCamera();
-  cameraHelper = new THREE.CameraHelper(this.camera);
-  
-  controls = new PointerLockControls(this.camera, document.body);
-  rayCaster: THREE.Raycaster;
-  public keyboardInput = new KeyboardInput(this);
+  keyboardInput = new KeyboardInput(this);
+  camera: THREE.PerspectiveCamera;
+  cameraHelper: THREE.CameraHelper;
+  controls: PointerLockControls;
+  boundsHelper: THREE.Mesh;
+  private rayCaster: THREE.Raycaster;
   /**
    * Updates the raycaster used for block selection
    */
@@ -55,11 +56,13 @@ export class Player {
 
   constructor(scene: THREE.Scene, world: World) {
     this.world = world;
-    this.camera.position.copy(PlayerInitPosition);
+
+    this.camera = initPlayerCamera();
+    this.cameraHelper = new THREE.CameraHelper(this.camera);
+    this.cameraHelper.layers.set(Layers.One);
     this.cameraHelper.visible = false;
-    this.camera.layers.disableAll();
-    this.camera.layers.enable(Layers.Zero);
-    this.camera.layers.enable(Layers.One);
+    
+    this.controls = new PointerLockControls(this.camera, document.body);
 
     this.rayCaster = new THREE.Raycaster(
       new THREE.Vector3(),
@@ -72,8 +75,9 @@ export class Player {
     scene.add(this.camera);
     scene.add(this.cameraHelper);
     // for dev test
-    boundsHelper.visible = false;
-    scene.add(boundsHelper);
+    this.boundsHelper = initBoundsHelper();
+    this.boundsHelper.visible = false;
+    scene.add(this.boundsHelper);
 
     selectionHelper.visible = false;
     scene.add(selectionHelper);
@@ -127,7 +131,7 @@ export class Player {
 
   /**@desc 更新玩家 */
   update(world: World) {
-    boundsHelper.visible && updateBoundsHelper(this.camera.position);
+    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);
     this.updateRayCaster(world);
     this.updateCameraFOV();
     // prevent player from falling through

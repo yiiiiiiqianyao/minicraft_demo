@@ -1,19 +1,8 @@
-import * as THREE from "three";
-import { ScreenViewer } from "../gui/viewer";
 import { PlayerParams } from "./literal";
 import { World } from "../world/World";
 import { Player } from "./Player";
 import { getFloorXYZ } from "../engine/utils";
 import { WorldChunk } from "../world/WorldChunk";
-
-export function initPlayerCamera() {
-    return new THREE.PerspectiveCamera(
-        70,
-        ScreenViewer.width / ScreenViewer.height,
-        0.1,
-        5000
-      );
-}
 
 /**
  * @desc 获取玩家脚下的方块

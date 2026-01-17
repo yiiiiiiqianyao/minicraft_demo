@@ -27,8 +27,10 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
         orbitCamera,
         renderer.domElement
     );
+    orbitCamera.layers.enableAll();
     controls.target.set(0, 0, 0);
     controls.update();
+    
     return {
         orbitCamera,
         controls

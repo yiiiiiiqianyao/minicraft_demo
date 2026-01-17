@@ -6,7 +6,6 @@ import { initStats } from "../dev";
 import audioManager from "../audio/AudioManager";
 import { oreConfig } from "../world/generate/resource";
 import { debounce } from "lodash";
-import { boundsHelper } from "../helper/index.ts";
 import { Physics } from "../physics/index.ts";
 import { ChunkParams } from "../world/chunk/literal.ts";
 
@@ -35,7 +34,7 @@ export function createUI(
 
   const playerFolder = gui.addFolder("Player");
   playerFolder.add(player.cameraHelper, "visible").name("Camera Helper");
-  playerFolder.add(boundsHelper, "visible").name("Show Player Bounds");
+  playerFolder.add(player.boundsHelper, "visible").name("Show Player Bounds");
 
   if(physics.helpers) {
     const physicsFolder = gui.addFolder("Physics");
