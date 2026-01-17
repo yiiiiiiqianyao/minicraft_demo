@@ -130,6 +130,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -174,7 +203,36 @@
             3,
             2,
             4,
-            1
+            1,
+            3,
+            3,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            2,
+            3,
+            2,
+            3,
+            1,
+            2,
+            2,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2,
+            3,
+            3,
+            1,
+            2
           ]
         },
         "register": 1
@@ -219,7 +277,36 @@
             6,
             6,
             5,
-            13
+            13,
+            12,
+            9,
+            7,
+            10,
+            5,
+            10,
+            6,
+            11,
+            12,
+            10,
+            4,
+            6,
+            6,
+            12,
+            5,
+            11,
+            12,
+            13,
+            13,
+            4,
+            6,
+            5,
+            5,
+            6,
+            7,
+            7,
+            7,
+            6,
+            14
           ]
         },
         "register": 15
@@ -261,7 +348,36 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ]
         },
         "register": 1
@@ -311,9 +427,67 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1383,6 +1557,53 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1425,9 +1646,67 @@
             0,
             0,
             0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
             1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1552,9 +1831,96 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1664,9 +2030,96 @@
             9,
             8,
             12,
-            12
+            12,
+            10,
+            11,
+            8,
+            7,
+            11,
+            8,
+            12,
+            23,
+            9,
+            17,
+            7,
+            13,
+            8,
+            8,
+            7,
+            7,
+            9,
+            8,
+            9,
+            8,
+            10,
+            8,
+            7,
+            11,
+            8,
+            14,
+            7,
+            11,
+            7
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1785,6 +2238,64 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1813,6 +2324,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1895,6 +2435,35 @@
             1,
             0,
             0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1966,7 +2535,65 @@
             39,
             1,
             46,
-            1
+            1,
+            47,
+            0,
+            45,
+            1,
+            44,
+            1,
+            44,
+            1,
+            37,
+            2,
+            50,
+            1,
+            38,
+            1,
+            62,
+            1,
+            48,
+            1,
+            53,
+            1,
+            46,
+            1,
+            51,
+            2,
+            42,
+            2,
+            61,
+            2,
+            51,
+            1,
+            46,
+            1,
+            43,
+            1,
+            46,
+            2,
+            45,
+            1,
+            42,
+            1,
+            45,
+            1,
+            46,
+            1,
+            46,
+            1,
+            49,
+            1,
+            47,
+            1,
+            51,
+            1,
+            53,
+            3,
+            44,
+            2,
+            44,
+            2
           ]
         },
         "register": 6
@@ -2019,6 +2646,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0
@@ -2077,6 +2733,35 @@
             4,
             4,
             4,
+            5,
+            4,
+            4,
+            4,
+            5,
+            3,
+            5,
+            4,
+            5,
+            6,
+            4,
+            4,
+            4,
+            5,
+            5,
+            4,
+            5,
+            4,
+            4,
+            5,
+            4,
+            4,
+            4,
+            4,
+            5,
+            4,
+            3,
+            4,
+            5,
             5,
             4
           ]
@@ -2188,7 +2873,36 @@
             1,
             0,
             1,
-            1
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
           ]
         },
         "register": 1
@@ -2853,7 +3567,7 @@
       "id": "components/toolbar/index",
       "file": "components/toolbar/index.tsx",
       "absPath": "/components/toolbar",
-      "__content": "import './index.scss';\n\nconst ToolBarBg = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png';\nconst ToolBarActive = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png';\nexport const ToolBar = () => {\n     \n    return <div id=\"toolbar\">\n        <img id=\"toolbar-bg\" src={ToolBarBg} />\n        <img id=\"toolbar-active-border\" src={ToolBarActive} />\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n    </div>\n}",
+      "__content": "import './index.scss';\n\nconst ToolBarBg = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png';\nconst ToolBarActive = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png';\nexport const ToolBar = () => {\n    return <div id=\"toolbar\">\n        <img id=\"toolbar-bg\" src={ToolBarBg} />\n        <img id=\"toolbar-active-border\" src={ToolBarActive} />\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n    </div>\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/toolbar/index.tsx"
     },
@@ -3069,7 +3783,7 @@
       "id": "game/player/keyboard",
       "file": "game/player/keyboard.ts",
       "absPath": "/game/player/keyboard",
-      "__content": "import Game from \"../Game\";\nimport { ToolBar } from \"../gui\";\nimport { Action } from \"./action\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n  /**@desc 用户是否按下空格键 */\n  static spacePressed = false;\n  /**@desc 用户是否按下 w 键  */\n  static wKeyPressed = false;\n  /**@desc 用户上次按下 w 键的时间  */\n  static lastWPressed = 0;\n  private player: Player;\n  \n  constructor(player: Player) {\n      this.player = player;\n      document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n      document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n      // TODO 后续不再设置初始化\n      ToolBar.updateToolBarGUI();\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        ToolBar.setToolBarGUI(Number(event.key) - 1);\n        break;\n      case \"KeyZ\":  // 左箭头\n      case \"KeyC\":  // 右箭头\n        ToolBar.scrollToolBarGUI(event.code);\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n      case \"KeyV\":\n        if(!Game.v) Game.v = 2;\n        Game.v = Game.v === 1 ? 2 : 1;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code, false);\n        break;\n    }\n  }\n}",
+      "__content": "import Game from \"../Game\";\nimport { ToolBar } from \"../gui\";\nimport { Action } from \"./action\";\nimport { Player } from \"./Player\";\n\n/**\n * @desc 处理玩家键盘输入事件\n */\nexport class KeyboardInput {\n  /**@desc 用户是否按下空格键 */\n  static spacePressed = false;\n  /**@desc 用户是否按下 w 键  */\n  static wKeyPressed = false;\n  /**@desc 用户上次按下 w 键的时间  */\n  static lastWPressed = 0;\n  private player: Player;\n  \n  constructor(player: Player) {\n      this.player = player;\n      document.addEventListener(\"keydown\", this.onKeyDown.bind(this));\n      document.addEventListener(\"keyup\", this.onKeyUp.bind(this));\n  }\n\n  onKeyDown(event: KeyboardEvent) {\n    const validKeys = [\"KeyW\", \"KeyA\", \"KeyS\", \"KeyD\", \"KeyR\"];\n    // 玩家移动 or 重置的时候 控制器解锁\n    if (validKeys.includes(event.code) && !this.player.controls.isLocked) {\n      this.player.controls.lock();\n    }\n    switch (event.code) {\n      case \"Digit1\":\n      case \"Digit2\":\n      case \"Digit3\":\n      case \"Digit4\":\n      case \"Digit5\":\n      case \"Digit6\":\n      case \"Digit7\":\n      case \"Digit8\":\n      case \"Digit9\":\n        ToolBar.setToolBarGUI(Number(event.key) - 1);\n        break;\n      case \"KeyZ\":  // 左箭头\n      case \"KeyC\":  // 右箭头\n        ToolBar.scrollToolBarGUI(event.code);\n        break;\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"KeyR\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code);\n        break;\n      case \"KeyV\":\n        if(!Game.v) Game.v = 2;\n        Game.v = Game.v === 1 ? 2 : 1;\n        break;\n    }\n  }\n\n  onKeyUp(event: KeyboardEvent) {\n    switch (event.code) {\n      case \"KeyW\":\n      case \"KeyA\":\n      case \"KeyS\":\n      case \"KeyD\":\n      case \"Space\":\n        Action.handlePlayerEvent(this.player, event.code, false);\n        break;\n    }\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/keyboard.ts"
     },
@@ -3078,7 +3792,7 @@
       "id": "game/player/selector",
       "file": "game/player/selector.ts",
       "absPath": "/game/player/selector",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams, RayCenterScreen } from \"./literal\";\nimport { getNearChunks } from \"./utils\";\nimport { Layers } from \"../engine\";\nimport { Action } from \"./action\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { ToolBar } from \"../gui\";\nimport { BlockID } from \"../Block\";\n\n/**@desc 玩家的拾取/选择器 */\nexport class Selector {\n    private static _rayCaster: THREE.Raycaster | null = null;\n    /**@desc 垂直同步次数 性能优化使用 */\n    private static _vSyncCount = 2;\n    private static _updateCount = 0;\n    /**\n     * Updates the raycaster used for block selection\n     */\n    static selectedBlockUuid: string | null = null;\n    static get rayCaster() {\n        if(!Selector._rayCaster) {\n            Selector._rayCaster = new THREE.Raycaster(\n                new THREE.Vector3(),\n                new THREE.Vector3(),\n                0,\n                5\n            );\n            this.rayCaster.layers.set(Layers.Zero);\n        }\n        return Selector._rayCaster;\n    }\n\n    static update(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        Selector._updateCount++;\n        if(Selector._updateCount === Selector._vSyncCount) {\n            Selector.select(camera, world, selectionHelper);\n            Selector._updateCount = 0;\n        }\n    }\n\n    static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        const rayCaster = Selector.rayCaster;\n        rayCaster.setFromCamera(RayCenterScreen, camera);\n        \n        // 过滤 player 所在的 chunk or 相邻 4 个 chunk\n        const chunks = getNearChunks(world);\n        // TODO 实际的拾取对象 可以使用 layer 进行过滤优化\n        const intersection = rayCaster.intersectObjects(chunks, true)[0];\n        if (intersection) {\n            Selector.selectedBlockUuid = intersection.object.uuid;\n            \n            // Get the chunk associated with the seclected block\n            // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块\n            const chunk = intersection.object.parent;\n            if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);\n\n            // Update the selected coordinates\n            Selector.updateSelectCoord(intersection, chunk);\n            // Update the block placement coordinates\n            Selector.updateBlockPlacementCoords(intersection);\n            // Update the selection helper\n            Selector.updateSelectionHelper(intersection, selectionHelper);\n        } else {\n            Selector.unSelect(selectionHelper);\n        }\n    }\n\n    static unSelect(selectionHelper: THREE.Mesh) {\n        // 没有选中的方块时，将选中坐标设为 null\n        PlayerParams.selectedCoords = null;\n        // 没有选中的方块时，将选中方块大小设为 null\n        // PlayerParams.selectedBlockSize = null;\n        selectionHelper.visible = false;\n    }\n\n    static _tempBlockMatrix = new THREE.Matrix4();\n    static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {\n        if (intersection.instanceId == null) return;\n\n        // TODO 目前只能选中 InstancedMesh 类型的方块\n        // Get the transformation matrix for the selected block\n        (intersection.object as THREE.InstancedMesh).getMatrixAt(\n            intersection.instanceId,\n            Selector._tempBlockMatrix\n        );\n\n        // Undo rotation from block matrix\n        const rotationMatrix = new THREE.Matrix4().extractRotation(Selector._tempBlockMatrix);\n        const inverseRotationMatrix = rotationMatrix.invert();\n        Selector._tempBlockMatrix.multiply(inverseRotationMatrix);\n\n        // Set the selected coordinates to origin of chunk\n        // Then apply transformation matrix of block to get block coords\n        PlayerParams.selectedCoords = chunk.position.clone();\n        PlayerParams.selectedCoords.applyMatrix4(Selector._tempBlockMatrix);\n\n        // Get the bounding box of the selected block\n        // const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n        // PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n    }\n\n    /**\n     * @desc 更新玩家方块放置坐标\n     */\n    static updateBlockPlacementCoords(intersection: THREE.Intersection) {\n        // 未选中方块 或 缺少法线 时 不更新方块放置坐标\n        if (!PlayerParams.selectedCoords || !intersection.normal) return;\n        // TODO 待优化\n        if (ToolBar.activeBlockId !== BlockID.Air) {\n            // Update block placement coords to be 1 block over in the direction of the normal\n            Action.blockPlacementCoords = PlayerParams.selectedCoords\n            .clone()\n            .add(intersection.normal);\n        }\n    }\n\n    static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {\n        if (!PlayerParams.selectedCoords) return;\n        if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n            selectionHelper.scale.set(0.3, 0.6, 0.3);\n        } else {\n            selectionHelper.scale.set(1, 1, 1);\n        } \n        // TODO TallGrass 草方块的选择框需要调整大小\n        selectionHelper.position.copy(PlayerParams.selectedCoords);\n        selectionHelper.visible = true;\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams, RayCenterScreen } from \"./literal\";\nimport { getNearChunks } from \"./utils\";\nimport { Layers } from \"../engine\";\nimport { Action } from \"./action\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { ToolBar } from \"../gui\";\nimport { BlockID } from \"../Block\";\n\n/**@desc 玩家的拾取/选择器 */\nexport class Selector {\n    private static _rayCaster: THREE.Raycaster | null = null;\n    /**@desc 垂直同步次数 性能优化使用 */\n    private static _vSyncCount = 2;\n    private static _updateCount = 0;\n    /**\n     * Updates the raycaster used for block selection\n     */\n    static selectedBlockUuid: string | null = null;\n    static get rayCaster() {\n        if(!Selector._rayCaster) {\n            Selector._rayCaster = new THREE.Raycaster(\n                new THREE.Vector3(),\n                new THREE.Vector3(),\n                0,\n                5\n            );\n            this.rayCaster.layers.set(Layers.Zero);\n        }\n        return Selector._rayCaster;\n    }\n\n    static update(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        Selector._updateCount++;\n        if(Selector._updateCount === Selector._vSyncCount) {\n            Selector.select(camera, world, selectionHelper);\n            Selector._updateCount = 0;\n        }\n    }\n\n    static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        const rayCaster = Selector.rayCaster;\n        rayCaster.setFromCamera(RayCenterScreen, camera);\n        \n        // 过滤 player 所在的 chunk or 相邻 4 个 chunk\n        const chunks = getNearChunks(world);\n        // TODO 实际的拾取对象 可以使用 layer 进行过滤优化\n        const intersection = rayCaster.intersectObjects(chunks, true)[0];\n        if (intersection) {\n            Selector.selectedBlockUuid = intersection.object.uuid;\n            \n            // Get the chunk associated with the seclected block\n            // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块\n            const chunk = intersection.object.parent;\n            if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);\n\n            // Update the selected coordinates\n            Selector.updateSelectCoord(intersection, chunk);\n            // Update the block placement coordinates\n            Selector.updateBlockPlacementCoords(intersection);\n            // Update the selection helper\n            Selector.updateSelectionHelper(intersection, selectionHelper);\n        } else {\n            Selector.unSelect(selectionHelper);\n        }\n    }\n\n    static unSelect(selectionHelper: THREE.Mesh) {\n        // 没有选中的方块时，将选中坐标设为 null\n        PlayerParams.selectedCoords = null;\n        // 没有选中的方块时，将选中方块大小设为 null\n        // PlayerParams.selectedBlockSize = null;\n        selectionHelper.visible = false;\n    }\n\n    static _tempBlockMatrix = new THREE.Matrix4();\n    static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {\n        if (intersection.instanceId == null) return;\n\n        // TODO 目前只能选中 InstancedMesh 类型的方块\n        // Get the transformation matrix for the selected block\n        (intersection.object as THREE.InstancedMesh).getMatrixAt(\n            intersection.instanceId,\n            Selector._tempBlockMatrix\n        );\n\n        // Undo rotation from block matrix\n        const rotationMatrix = new THREE.Matrix4().extractRotation(Selector._tempBlockMatrix);\n        const inverseRotationMatrix = rotationMatrix.invert();\n        Selector._tempBlockMatrix.multiply(inverseRotationMatrix);\n\n        // Set the selected coordinates to origin of chunk\n        // Then apply transformation matrix of block to get block coords\n        PlayerParams.selectedCoords = chunk.position.clone();\n        PlayerParams.selectedCoords.applyMatrix4(Selector._tempBlockMatrix);\n\n        // Get the bounding box of the selected block\n        // const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n        // PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n    }\n\n    /**\n     * @desc 更新玩家方块放置坐标\n     */\n    static updateBlockPlacementCoords(intersection: THREE.Intersection) {\n        // 未选中方块 或 缺少法线 时 不更新方块放置坐标\n        if (!PlayerParams.selectedCoords || !intersection.normal) return;\n        // TODO 待优化\n        // TODO flower 类型的方块 放置坐标位置错误\n        if (ToolBar.activeBlockId !== BlockID.Air) {\n            // Update block placement coords to be 1 block over in the direction of the normal\n            Action.blockPlacementCoords = PlayerParams.selectedCoords\n            .clone()\n            .add(intersection.normal);\n        }\n    }\n\n    static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {\n        if (!PlayerParams.selectedCoords) return;\n        if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n            selectionHelper.scale.set(0.3, 0.6, 0.3);\n        } else {\n            selectionHelper.scale.set(1, 1, 1);\n        } \n        // TODO TallGrass 草方块的选择框需要调整大小\n        selectionHelper.position.copy(PlayerParams.selectedCoords);\n        selectionHelper.visible = true;\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/selector.ts"
     },
@@ -3096,7 +3810,7 @@
       "id": "game/world/drop/drop",
       "file": "game/world/drop/drop.ts",
       "absPath": "/game/world/drop/drop",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n                // console.log('drop float:', drop);\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n                // console.log('drop float:', drop);\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/drop/drop.ts"
     },
@@ -3204,7 +3918,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { Layers } from \"../engine\";\nimport { initPlayerCamera, updateCameraFOV } from \"./camera\";\nimport { Selector } from \"./selector\";\n\nexport class Player {\n  onGround = false;\n  input = new THREE.Vector3();\n  /**@desc 玩家是否处于冲刺状态 */ \n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  camera: THREE.PerspectiveCamera;\n  cameraHelper: THREE.CameraHelper;\n  controls: PointerLockControls;\n  boundsHelper: THREE.Mesh;\n  velocity = new THREE.Vector3();\n  private _worldVelocity = new THREE.Vector3();\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this._worldVelocity.copy(this.velocity);\n    this._worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this._worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n\n    this.camera = initPlayerCamera();\n    this.cameraHelper = new THREE.CameraHelper(this.camera);\n    this.cameraHelper.layers.set(Layers.One);\n    this.cameraHelper.visible = false;\n    \n    this.controls = new PointerLockControls(this.camera, document.body);\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    updateCameraFOV(this.camera, this.isSprinting);\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n  }\n}\n",
+      "__content": "\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { Layers } from \"../engine\";\nimport { initPlayerCamera, updateCameraFOV } from \"./camera\";\nimport { Selector } from \"./selector\";\n\nexport class Player {\n  onGround = false;\n  input = new THREE.Vector3();\n  /**@desc 玩家是否处于冲刺状态 */ \n  isSprinting = false;\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  camera: THREE.PerspectiveCamera;\n  cameraHelper: THREE.CameraHelper;\n  controls: PointerLockControls;\n  boundsHelper: THREE.Mesh;\n  velocity = new THREE.Vector3();\n  private _worldVelocity = new THREE.Vector3();\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this._worldVelocity.copy(this.velocity);\n    this._worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this._worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n\n    this.camera = initPlayerCamera();\n    this.cameraHelper = new THREE.CameraHelper(this.camera);\n    this.cameraHelper.layers.set(Layers.One);\n    this.cameraHelper.visible = false;\n    \n    this.controls = new PointerLockControls(this.camera, document.body);\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    updateCameraFOV(this.camera, this.isSprinting);\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -3276,7 +3990,7 @@
       "id": "game/player/mouse",
       "file": "game/player/mouse.ts",
       "absPath": "/game/player/mouse",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n            world.removeBlock(blockX, blockY, blockZ);\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            if (ToolBar.activeBlockId != null) {\n                const playerPos = new THREE.Vector3(\n                Math.floor(player.position.x),\n                Math.floor(player.position.y) - 1,\n                Math.floor(player.position.z)\n                );\n                const blockPos = new THREE.Vector3(\n                Math.floor(Action.blockPlacementCoords.x - 0.5),\n                Math.floor(Action.blockPlacementCoords.y - 0.5),\n                Math.floor(Action.blockPlacementCoords.z - 0.5)\n                );\n\n                // 检查是否超出可以放置方块的距离\n                if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;\n\n                // Right click 放置方块\n                world.addBlock(\n                    blockPos.x,\n                    blockPos.y,\n                    blockPos.z,\n                    ToolBar.activeBlockId\n                    );\n            }\n        }\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n            world.removeBlock(blockX, blockY, blockZ);\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            if (!ToolBar.activeBlockId) return;\n            const playerPos = new THREE.Vector3(\n                Math.floor(player.position.x),\n                Math.floor(player.position.y) - PlayerParams.halfHeight,\n                Math.floor(player.position.z)\n                );\n                const blockPos = new THREE.Vector3(\n                Math.floor(Action.blockPlacementCoords.x - 0.5),\n                Math.floor(Action.blockPlacementCoords.y - 0.5),\n                Math.floor(Action.blockPlacementCoords.z - 0.5)\n                );\n\n                // TODO 需要精细判断\n                // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n                if (playerPos.distanceTo(blockPos) <= 1) return;\n\n                // Right click 放置方块\n                world.addBlock(\n                    blockPos.x,\n                    blockPos.y,\n                    blockPos.z,\n                    ToolBar.activeBlockId\n                );\n        }\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
@@ -3321,7 +4035,7 @@
       "id": "game/gui/toolbar",
       "file": "game/gui/toolbar.ts",
       "absPath": "/game/gui/toolbar",
-      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport class ToolBar {\n    static toolbar: BlockID[] = [\n      BlockID.Grass,\n      BlockID.Dirt,\n      BlockID.Stone,\n      BlockID.StoneBrick,\n      BlockID.RedstoneLamp,\n      BlockID.CoalOre,\n      BlockID.IronOre,\n      BlockID.OakLog,\n      BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId() {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      ToolBar.updateToolBarActiveGUI();\n    }\n\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n      // TODO: 实现滚动切换工具条\n    }\n\n    static updateToolBarGUI() {\n      for (let i = 1; i <= 9; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId != null && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${\n              BlockFactory.getBlock(blockId).uiTexture\n            }')`;\n          }\n        }\n      }\n    }\n\n    static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
+      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\nexport class ToolBar {\n    static _barCount = 9;\n    static toolbar: BlockID[] = [\n      // BlockID.Grass,\n      // BlockID.Dirt,\n      // BlockID.Stone,\n      // BlockID.StoneBrick,\n      // BlockID.RedstoneLamp,\n      // BlockID.CoalOre,\n      // BlockID.IronOre,\n      // BlockID.OakLog,\n      // BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId(): BlockID | undefined {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static pushBlockId(blockId: BlockID) {\n      if (ToolBar.toolbar.includes(blockId)) return;\n      if (ToolBar.toolbar.length > ToolBar._barCount) return;\n      ToolBar.toolbar.push(blockId);\n      ToolBar.updateToolBarGUI();\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      ToolBar.updateToolBarActiveGUI();\n    }\n\n    /**@desc 滚动玩家物品栏的选中框 */\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n    }\n\n    /**@desc 更新玩家物品栏中 block 对应的 ui */\n    static updateToolBarGUI() {\n      // TODO 玫瑰花对应的 ui 图标错误 后续需要修复\n      for (let i = 1; i <= ToolBar._barCount; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId !== undefined && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;\n          }\n        }\n      }\n    }\n\n    /**@desc 更新玩家物品栏的选中框 ui */\n    private static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts"
     },
@@ -5426,8 +6140,122 @@
             "imports": [],
             "format": "esm"
           },
+          "src/pages/game/dev/query.ts": {
+            "bytes": 1066,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/pages/game/dev/control.ts": {
+            "bytes": 367,
+            "imports": [
+              {
+                "path": "src/pages/game/dev/query.ts",
+                "kind": "import-statement",
+                "original": "./query"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/dev/index.ts": {
+            "bytes": 2524,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three/examples/jsm/libs/stats.module",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/dev/control.ts",
+                "kind": "import-statement",
+                "original": "./control"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/gui/toolbar.ts": {
+            "bytes": 2192,
+            "imports": [
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "../Block"
+              },
+              {
+                "path": "src/pages/game/Block/BlockFactory.ts",
+                "kind": "import-statement",
+                "original": "../Block/BlockFactory"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/gui/index.ts": {
+            "bytes": 6179,
+            "imports": [
+              {
+                "path": "lil-gui",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../player/Player",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../world/World",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/dev/index.ts",
+                "kind": "import-statement",
+                "original": "../dev"
+              },
+              {
+                "path": "src/pages/game/audio/AudioManager.ts",
+                "kind": "import-statement",
+                "original": "../audio/AudioManager"
+              },
+              {
+                "path": "src/pages/game/world/generate/resource.ts",
+                "kind": "import-statement",
+                "original": "../world/generate/resource"
+              },
+              {
+                "path": "lodash",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "../physics/index.ts",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/world/chunk/literal.ts",
+                "kind": "import-statement",
+                "original": "../world/chunk/literal.ts"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar.ts",
+                "kind": "import-statement",
+                "original": "./toolbar.ts"
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/world/drop/drop.ts": {
-            "bytes": 10965,
+            "bytes": 11107,
             "imports": [
               {
                 "path": "three",
@@ -5473,43 +6301,11 @@
                 "path": "src/pages/game/engine/index.ts",
                 "kind": "import-statement",
                 "original": "../../engine"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/dev/query.ts": {
-            "bytes": 1066,
-            "imports": [],
-            "format": "esm"
-          },
-          "src/pages/game/dev/control.ts": {
-            "bytes": 367,
-            "imports": [
-              {
-                "path": "src/pages/game/dev/query.ts",
-                "kind": "import-statement",
-                "original": "./query"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/dev/index.ts": {
-            "bytes": 2524,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
               },
               {
-                "path": "three/examples/jsm/libs/stats.module",
+                "path": "src/pages/game/gui/index.ts",
                 "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/dev/control.ts",
-                "kind": "import-statement",
-                "original": "./control"
+                "original": "../../gui"
               }
             ],
             "format": "esm"
@@ -5633,83 +6429,6 @@
                 "path": "src/pages/game/dev/index.ts",
                 "kind": "import-statement",
                 "original": "../dev"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/gui/toolbar.ts": {
-            "bytes": 1692,
-            "imports": [
-              {
-                "path": "src/pages/game/Block/index.ts",
-                "kind": "import-statement",
-                "original": "../Block"
-              },
-              {
-                "path": "src/pages/game/Block/BlockFactory.ts",
-                "kind": "import-statement",
-                "original": "../Block/BlockFactory"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/gui/index.ts": {
-            "bytes": 6179,
-            "imports": [
-              {
-                "path": "lil-gui",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "../player/Player",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "../world/World",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/dev/index.ts",
-                "kind": "import-statement",
-                "original": "../dev"
-              },
-              {
-                "path": "src/pages/game/audio/AudioManager.ts",
-                "kind": "import-statement",
-                "original": "../audio/AudioManager"
-              },
-              {
-                "path": "src/pages/game/world/generate/resource.ts",
-                "kind": "import-statement",
-                "original": "../world/generate/resource"
-              },
-              {
-                "path": "lodash",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "../physics/index.ts",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/world/chunk/literal.ts",
-                "kind": "import-statement",
-                "original": "../world/chunk/literal.ts"
-              },
-              {
-                "path": "src/pages/game/gui/toolbar.ts",
-                "kind": "import-statement",
-                "original": "./toolbar.ts"
               }
             ],
             "format": "esm"
@@ -5906,7 +6625,7 @@
             "format": "esm"
           },
           "src/pages/components/toolbar/index.tsx": {
-            "bytes": 1038,
+            "bytes": 1032,
             "imports": [
               {
                 "path": "./index.scss",
@@ -6048,7 +6767,7 @@
             "format": "esm"
           },
           "src/pages/game/player/mouse.ts": {
-            "bytes": 2314,
+            "bytes": 2367,
             "imports": [
               {
                 "path": "three",
@@ -6193,7 +6912,7 @@
             "format": "esm"
           },
           "src/pages/game/player/selector.ts": {
-            "bytes": 5452,
+            "bytes": 5535,
             "imports": [
               {
                 "path": "three",
@@ -6576,7 +7295,7 @@
             "format": "esm"
           },
           "src/pages/game/player/keyboard.ts": {
-            "bytes": 1973,
+            "bytes": 1897,
             "imports": [
               {
                 "path": "src/pages/game/Game.ts",
@@ -7381,22 +8100,7 @@
                 "external": true
               },
               {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three/examples/jsm/libs/stats.module",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7407,6 +8111,21 @@
               },
               {
                 "path": "lodash",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -8810,9 +9529,6 @@
               "src/pages/game/world/drop/literal.ts": {
                 "bytesInOutput": 422
               },
-              "src/pages/game/world/drop/drop.ts": {
-                "bytesInOutput": 7638
-              },
               "src/pages/game/dev/query.ts": {
                 "bytesInOutput": 689
               },
@@ -8822,6 +9538,15 @@
               "src/pages/game/dev/index.ts": {
                 "bytesInOutput": 2644
               },
+              "src/pages/game/gui/toolbar.ts": {
+                "bytesInOutput": 2287
+              },
+              "src/pages/game/gui/index.ts": {
+                "bytesInOutput": 5682
+              },
+              "src/pages/game/world/drop/drop.ts": {
+                "bytesInOutput": 7753
+              },
               "src/pages/game/helper/chunkHelper.ts": {
                 "bytesInOutput": 2258
               },
@@ -8830,12 +9555,6 @@
               },
               "src/pages/game/world/literal.ts": {
                 "bytesInOutput": 1234
-              },
-              "src/pages/game/gui/toolbar.ts": {
-                "bytesInOutput": 1801
-              },
-              "src/pages/game/gui/index.ts": {
-                "bytesInOutput": 5682
               },
               "src/pages/game/seed/RNG.ts": {
                 "bytesInOutput": 815
@@ -8883,7 +9602,7 @@
                 "bytesInOutput": 2432
               },
               "src/pages/game/player/mouse.ts": {
-                "bytesInOutput": 1874
+                "bytesInOutput": 1827
               },
               "src/pages/game/helper/physics.ts": {
                 "bytesInOutput": 1562
@@ -8925,7 +9644,7 @@
                 "bytesInOutput": 3671
               },
               "src/pages/game/player/keyboard.ts": {
-                "bytesInOutput": 2106
+                "bytesInOutput": 2070
               },
               "src/pages/game/world/interface.ts": {
                 "bytesInOutput": 127
@@ -8967,7 +9686,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 195713
+            "bytes": 196231
           }
         }
       }
@@ -15481,6 +16200,20 @@
             }
           ],
           "start": 382,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 457,
+          "importKind": "value",
+          "source": "../../gui",
+          "specifiers": [
+            {
+              "imported": "ToolBar",
+              "local": "ToolBar",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 421,
           "type": "ImportDeclaration"
         }
       ],

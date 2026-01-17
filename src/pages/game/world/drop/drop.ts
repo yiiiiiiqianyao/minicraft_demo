@@ -7,6 +7,7 @@ import { WorldChunk } from "../WorldChunk";
 import { jitterNumber } from "../../utils";
 import { DropDt, DropLimit, MaxCount } from "./literal";
 import { Layers } from "../../engine";
+import { ToolBar } from "../../gui";
 
 /**@desc 掉落物的 Group */
 export class DropGroup extends THREE.Group {
@@ -35,6 +36,7 @@ export class DropGroup extends THREE.Group {
             mesh.count = 0;
             mesh.layers.set(Layers.One);
             mesh.userData.type = 'drop';
+            mesh.userData.blockId = blockId;
             mesh.userData.instanceCache = {};
             // 初始时将所有实例设为不可见
             mesh.visible = false;
@@ -87,6 +89,7 @@ export class DropGroup extends THREE.Group {
             if(toDeleteIds.length > 0) {
                 // 批量删除距离小于 maxDistance 的实例
                 this.deleteInstance(mesh, toDeleteIds, tempMatrix);
+                ToolBar.pushBlockId(mesh.userData.blockId);
             }
         });
     }

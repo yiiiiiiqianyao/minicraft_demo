@@ -2,20 +2,28 @@ import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/BlockFactory";
 
 export class ToolBar {
+    static _barCount = 9;
     static toolbar: BlockID[] = [
-      BlockID.Grass,
-      BlockID.Dirt,
-      BlockID.Stone,
-      BlockID.StoneBrick,
-      BlockID.RedstoneLamp,
-      BlockID.CoalOre,
-      BlockID.IronOre,
-      BlockID.OakLog,
-      BlockID.Leaves,
+      // BlockID.Grass,
+      // BlockID.Dirt,
+      // BlockID.Stone,
+      // BlockID.StoneBrick,
+      // BlockID.RedstoneLamp,
+      // BlockID.CoalOre,
+      // BlockID.IronOre,
+      // BlockID.OakLog,
+      // BlockID.Leaves,
     ];
     static activeToolbarIndex = 0;
-    static get activeBlockId() {
+    static get activeBlockId(): BlockID | undefined {
       return ToolBar.toolbar[ToolBar.activeToolbarIndex];
+    }
+
+    static pushBlockId(blockId: BlockID) {
+      if (ToolBar.toolbar.includes(blockId)) return;
+      if (ToolBar.toolbar.length > ToolBar._barCount) return;
+      ToolBar.toolbar.push(blockId);
+      ToolBar.updateToolBarGUI();
     }
 
     static setToolBarGUI(index: number) {
@@ -23,6 +31,7 @@ export class ToolBar {
       ToolBar.updateToolBarActiveGUI();
     }
 
+    /**@desc 滚动玩家物品栏的选中框 */
     static scrollToolBarGUI(key: string) {
       // 0 - 8
       if(key === 'KeyZ') { // left
@@ -32,24 +41,24 @@ export class ToolBar {
         const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;
         ToolBar.setToolBarGUI(index);
       }
-      // TODO: 实现滚动切换工具条
     }
 
+    /**@desc 更新玩家物品栏中 block 对应的 ui */
     static updateToolBarGUI() {
-      for (let i = 1; i <= 9; i++) {
+      // TODO 玫瑰花对应的 ui 图标错误 后续需要修复
+      for (let i = 1; i <= ToolBar._barCount; i++) {
         const slot = document.getElementById(`toolbar-slot-${i}`);
         if (slot) {
           const blockId = ToolBar.toolbar[i - 1];
-          if (blockId != null && blockId !== BlockID.Air) {
-            slot.style.backgroundImage = `url('${
-              BlockFactory.getBlock(blockId).uiTexture
-            }')`;
+          if (blockId !== undefined && blockId !== BlockID.Air) {
+            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;
           }
         }
       }
     }
 
-    static updateToolBarActiveGUI() {
+    /**@desc 更新玩家物品栏的选中框 ui */
+    private static updateToolBarActiveGUI() {
       document?.getElementById("toolbar-active-border")
         ?.setAttribute("style", `left: ${ToolBar.activeToolbarIndex * 11}%`);
     }

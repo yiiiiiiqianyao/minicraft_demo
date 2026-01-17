@@ -29,10 +29,10 @@ export class MouseInput {
             const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
             world.removeBlock(blockX, blockY, blockZ);
         } else if (event.button === 2 && Action.blockPlacementCoords) {
-            if (ToolBar.activeBlockId != null) {
-                const playerPos = new THREE.Vector3(
+            if (!ToolBar.activeBlockId) return;
+            const playerPos = new THREE.Vector3(
                 Math.floor(player.position.x),
-                Math.floor(player.position.y) - 1,
+                Math.floor(player.position.y) - PlayerParams.halfHeight,
                 Math.floor(player.position.z)
                 );
                 const blockPos = new THREE.Vector3(
@@ -41,8 +41,9 @@ export class MouseInput {
                 Math.floor(Action.blockPlacementCoords.z - 0.5)
                 );
 
-                // 检查是否超出可以放置方块的距离
-                if (playerPos.distanceTo(blockPos) <= PlayerParams.radius * 2) return;
+                // TODO 需要精细判断
+                // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
+                if (playerPos.distanceTo(blockPos) <= 1) return;
 
                 // Right click 放置方块
                 world.addBlock(
@@ -50,8 +51,7 @@ export class MouseInput {
                     blockPos.y,
                     blockPos.z,
                     ToolBar.activeBlockId
-                    );
-            }
+                );
         }
     }
 }

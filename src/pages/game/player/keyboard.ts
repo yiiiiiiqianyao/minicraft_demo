@@ -19,8 +19,6 @@ export class KeyboardInput {
       this.player = player;
       document.addEventListener("keydown", this.onKeyDown.bind(this));
       document.addEventListener("keyup", this.onKeyUp.bind(this));
-      // TODO 后续不再设置初始化
-      ToolBar.updateToolBarGUI();
   }
 
   onKeyDown(event: KeyboardEvent) {
