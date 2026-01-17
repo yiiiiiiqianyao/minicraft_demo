@@ -27,7 +27,7 @@ export class WorldChunk extends THREE.Group {
     super();
     this.params = params;
     this.dataStore = dataStore;
-     this.dropGroup = new DropGroup(this.position);
+     this.dropGroup = new DropGroup(this.position, this);
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
       this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())
@@ -223,7 +223,11 @@ export class WorldChunk extends THREE.Group {
    */
   getBlock(x: number, y: number, z: number): IInstanceData | null {
     if (this.inBounds(x, y, z)) {
-      return this.data[x][y][z];
+      if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {
+        return this.data[x][y][z];
+      } else {
+        return null;
+      }
     } else {
       return null;
     }
@@ -247,6 +251,7 @@ export class WorldChunk extends THREE.Group {
   removeBlock(x: number, y: number, z: number) {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
     const block = this.getBlock(x, y, z);
+    // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
     if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
     const blockId = block.block;
     this.playBlockSound(blockId);
@@ -291,11 +296,11 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
-   * Creates a new instance for the block at (x, y, z)
+   * @desc Creates a new instance for the block at (x, y, z)
    */
   addBlockInstance(x: number, y: number, z: number) {
     const block = this.getBlock(x, y, z);
-
+    // TODO 在增加 block instance 的同时 需要更新 block data 的数据
     // If the block is not air and doesn't have an instance id, create a new instance
     if (
       block &&
@@ -344,7 +349,6 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
-   * TODO delete block TallGrass 的时候存在 bug 有一个 grass 的 plane 没有被删除
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
   deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {

@@ -283,7 +283,7 @@ export class World extends THREE.Group {
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     const blockToRemove = this.getBlock(x, y, z);
     // console.log('chunk', chunk);
-    // console.log('blockToRemove', x, y, z, JSON.stringify(blockToRemove));
+    // console.log('blockToRemove', blockToRemove);
     // 不能破坏基岩 bedrock
     if (blockToRemove?.block === BlockID.Bedrock) return;
     

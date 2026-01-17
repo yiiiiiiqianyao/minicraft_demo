@@ -3,7 +3,7 @@ import { RenderGeometry } from "../Block/Block";
 
 // 方块的大小为 1x1x1
 const geometry = new THREE.BoxGeometry()
-const dropBoxSize = 0.3;
+const dropBoxSize = 0.25;
 const geometry_drop = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);
 // TODO 修改草的实际大小
 const crossGeometry = new THREE.PlaneGeometry();

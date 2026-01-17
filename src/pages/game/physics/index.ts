@@ -14,12 +14,14 @@ export class Physics {
   dropPhysics: DropPhysics;
   /**@desc 物理碰撞辅助可视化 */
   helpers: PhysicsHelper | null = null;
+  world: World;
   constructor(scene: THREE.Scene, player: Player, world: World) {
     if (DevControl.physicsHelperVisible) {
       this.helpers = new PhysicsHelper();
       this.helpers.visible = true;
       scene.add(this.helpers);
     }
+    this.world = world;
     this.playerPhysics = new PlayerPhysics(player, this.helpers);
     this.dropPhysics = new DropPhysics(world);
   }
@@ -28,13 +30,14 @@ export class Physics {
   update(dt: number) {
     PhysicsParams.accumulator += dt;
     while (PhysicsParams.accumulator >= PhysicsParams.stepSize) {
-      // TODO 待优化
+      // TODO 待优化 现在频繁计算
       PhysicsParams.accumulator -= PhysicsParams.stepSize;
       // 清除之前的碰撞辅助可视化
       this.helpers?.clear();
       // 玩家物理模拟
       this.playerPhysics.update();
       // 掉落物品物理模拟
+      // TODO 待优化性能
       this.dropPhysics.update();
     }
   }

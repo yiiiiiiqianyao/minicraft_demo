@@ -2,17 +2,27 @@ import * as THREE from "three";
 import { BlockID, blockIDValues } from "../../Block";
 import { BlockFactory } from "../../Block/BlockFactory";
 import { getDropInstancedGeometry } from "../geometry";
+import { IDrop } from "./interface";
+import { WorldChunk } from "../WorldChunk";
 
 
 // TIP 暂定每种掉落物的最大数量为 200 个
 const maxCount = 200;
+const floatHeight = 0.15;
+const dropDt = 0.022;
+const dropLimit = floatHeight + dropDt
 
 export class DropGroup extends THREE.Group {
     private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
     private chunkPosition: THREE.Vector3;
-    constructor(chunkPosition: THREE.Vector3) {
+    private chunk: WorldChunk;
+    private dropList: IDrop[] = [];
+    private dropMatrix = new THREE.Matrix4;
+    
+    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {
        super();
        this.chunkPosition = chunkPosition;
+       this.chunk = chunk;
        this.initInstanceMesh();
     }
 
@@ -41,6 +51,7 @@ export class DropGroup extends THREE.Group {
         if (!mesh) return;
         // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
         this.addInstance(mesh, x, y, z);
+        this.updateDropState(x, z);
     }
 
     /**
@@ -74,6 +85,64 @@ export class DropGroup extends THREE.Group {
         });
     }
 
+    /**@desc 在 physics 中触发更新 检测掉落 */
+    update() {
+        this.dropList.forEach((drop) => {
+            const { state, mesh, instanceId, x, y, z } = drop;
+            if (state === 'float' || state === 'stable') return;
+            
+            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化
+            // mesh.getMatrixAt(instanceId, this.dropMatrix);
+            // const posX = this.dropMatrix.elements[12];
+            // const posY = this.dropMatrix.elements[13];
+            // const posZ = this.dropMatrix.elements[14];
+
+            const isOverFloatHeight = y % 1 >= dropLimit;
+            if (isOverFloatHeight || state === 'fall_cross') {
+                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落
+                const nextY = y - dropDt;
+                drop.y = nextY;
+                if(isOverFloatHeight) {
+                    drop.state = 'fall';
+                }
+                mesh.getMatrixAt(instanceId, this.dropMatrix);
+                this.dropMatrix.setPosition(x, nextY, z);
+                
+                mesh.setMatrixAt(instanceId, this.dropMatrix)
+                mesh.instanceMatrix.needsUpdate = true;
+                return;
+            }
+            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落
+            const blockX = Math.floor(x);
+            const underBlockY = Math.floor(y) - 1;
+            const blockZ = Math.floor(z);
+            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);
+            if (!underBlockData) {
+                // ERROR 下方的 block 不存在的时候
+                console.warn('下方的 block 不存在');
+                drop.state = 'stable';
+                return;
+            }
+            // console.log('underBlockData', underBlockData);
+            const blockClass = BlockFactory.getBlock(underBlockData.block);
+            // console.log('blockClass', blockClass);
+            if (blockClass.canPassThrough) {
+                mesh.getMatrixAt(instanceId, this.dropMatrix);
+                this.dropMatrix.setPosition(x, y - dropDt, z);
+                drop.y = y - dropDt;
+                // 穿过下方的 block
+                drop.state = 'fall_cross';
+                mesh.setMatrixAt(instanceId, this.dropMatrix)
+                mesh.instanceMatrix.needsUpdate = true;
+            } else {
+                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态
+                drop.state = 'float';
+                mesh.computeBoundingSphere();
+                // console.log('drop float:', drop);
+            }           
+        })
+    }
+
     private getAvailableMeshes() {
         const availableMeshes: THREE.InstancedMesh[] = [];
         blockIDValues.map((key) => {
@@ -85,25 +154,41 @@ export class DropGroup extends THREE.Group {
         return availableMeshes;
     }
 
+    /**
+     * @desc 增加一个 drop 实例
+     * 一个 drop instance 对应一个实际的 THREE.Object
+     */
     private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
+        const dropX = x + 0.5;
+        const dropY = y + 0.5;
+        const dropZ = z + 0.5;
         const instanceId = mesh.count++;
         // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works
         const matrix = new THREE.Matrix4();
-        matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
+        matrix.setPosition(dropX, dropY, dropZ);
         mesh.setMatrixAt(instanceId, matrix);
         mesh.instanceMatrix.needsUpdate = true;
         
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
         mesh.computeBoundingSphere();
-        return instanceId;
+
+        this.dropList.push({
+            state: 'init',
+            mesh,
+            instanceId,
+            needUpdate: true,
+            x: dropX,
+            y: dropY,
+            z: dropZ,
+        });
     }
 
     private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {
+        this.deleteDropList(toDeleteIds);
         // 批量处理待删ID
         for (const instanceId of toDeleteIds) {
             // 跳过已因缩容失效的ID（批量删除中count会动态减少）
             if (instanceId >= mesh.count) continue;
-
             const lastIndex = mesh.count - 1;
             // 仅当待删ID不是最后一个实例时，执行覆盖
             if (instanceId !== lastIndex) {
@@ -119,5 +204,23 @@ export class DropGroup extends THREE.Group {
         // toDeleteIds 
         mesh.instanceMatrix.needsUpdate = true;
         mesh.computeBoundingSphere();
+    }
+
+    private updateDropState(x: number, z: number) {
+        this.dropList.forEach(drop => {
+            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {
+                // 重新设置 drop 的状态
+                drop.state = 'init';
+            }
+        });
+    }
+
+    /**@desc 在删除 instance 的时候 更新 dropList */
+    private deleteDropList(toDeleteIds: number[]) {
+        // TODO 更新错误需要优化
+        this.dropList = this.dropList.filter((d => {
+            return !toDeleteIds.includes(d.instanceId);
+        }));
+        
     }
 }
