@@ -6,6 +6,7 @@ import { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
 import { jitterNumber } from "../../utils";
 import { DropDt, DropLimit, MaxCount } from "./literal";
+import { Layers } from "../../engine";
 
 /**@desc 掉落物的 Group */
 export class DropGroup extends THREE.Group {
@@ -32,6 +33,7 @@ export class DropGroup extends THREE.Group {
             const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
             mesh.name = block.constructor.name;
             mesh.count = 0;
+            mesh.layers.set(Layers.One);
             mesh.userData.type = 'drop';
             // 初始时将所有实例设为不可见
             mesh.visible = false;

@@ -5,7 +5,7 @@ import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { ToolBar, updatePositionGUI } from "../gui";
-import { initPlayerCamera } from "./utils";
+import { getNearChunks, initPlayerCamera } from "./utils";
 import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
@@ -15,7 +15,7 @@ import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
-import { WorldChunk } from "../world/WorldChunk";
+import { Layers } from "../engine";
 
 export class Player {
   onGround = false;
@@ -31,12 +31,7 @@ export class Player {
   cameraHelper = new THREE.CameraHelper(this.camera);
   
   controls = new PointerLockControls(this.camera, document.body);
-  rayCaster = new THREE.Raycaster(
-    new THREE.Vector3(),
-    new THREE.Vector3(),
-    0,
-    5
-  );
+  rayCaster: THREE.Raycaster;
   public keyboardInput = new KeyboardInput(this);
   /**
    * Updates the raycaster used for block selection
@@ -62,6 +57,17 @@ export class Player {
     this.world = world;
     this.camera.position.copy(PlayerInitPosition);
     this.cameraHelper.visible = false;
+    this.camera.layers.disableAll();
+    this.camera.layers.enable(Layers.Zero);
+    this.camera.layers.enable(Layers.One);
+
+    this.rayCaster = new THREE.Raycaster(
+      new THREE.Vector3(),
+      new THREE.Vector3(),
+      0,
+      5
+    );
+    this.rayCaster.layers.set(Layers.Zero);
     
     scene.add(this.camera);
     scene.add(this.cameraHelper);
@@ -187,18 +193,11 @@ export class Player {
     if(!rayCaster) return;
     // if(Math.random() > 0) return;
     rayCaster.setFromCamera(RayCenterScreen, this.camera);
-    // rayCaster.intersectObjects()
-    const chunks: WorldChunk[] = [];
-    PlayerParams.activeChunks.forEach((chunkKey) => {
-      const chunk = world.getChunk(chunkKey.x, chunkKey.z);
-      chunk && chunks.push(chunk);
-    });
-    // 只拾取相邻被激活的 chunk
-    const intersections = rayCaster.intersectObjects(chunks, true).filter((intersection) => {
-      // 排除掉掉落的方块
-      return intersection.object.userData.type !== 'drop';
-    });
-
+    
+    // 过滤 player 所在的 chunk or 相邻 4 个 chunk
+    const chunks = getNearChunks(world);
+    // TODO 实际的拾取对象 可以使用 layer 进行过滤优化
+    const intersections = rayCaster.intersectObjects(chunks, true);
     if (intersections.length > 0) {
       const intersection = intersections[0];
       if(this.selectedBlockUuid !== intersection.object.uuid) {
