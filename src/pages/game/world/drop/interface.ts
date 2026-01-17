@@ -1,6 +1,7 @@
 import * as THREE from "three";
 
 export interface IDrop {
+    uuid: string;
     /**
      * @desc 掉落物的状态
      * - init 初始状态 进入检测下落

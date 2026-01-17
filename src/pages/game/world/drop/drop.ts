@@ -35,6 +35,7 @@ export class DropGroup extends THREE.Group {
             mesh.count = 0;
             mesh.layers.set(Layers.One);
             mesh.userData.type = 'drop';
+            mesh.userData.instanceCache = {};
             // 初始时将所有实例设为不可见
             mesh.visible = false;
             // mesh.castShadow = !block.canPassThrough;
@@ -68,7 +69,9 @@ export class DropGroup extends THREE.Group {
 
         // 吸收的物品最大距离
         const maxDistance = 1.8;
+        // TODO 待优化性能
         availableMeshes.forEach((mesh) => {
+            // 当前 InstancedMesh 中被拾取的实例 ID
             const toDeleteIds = [];
             // 遍历所有有效实例，筛选距离 <2 的 ID
             for (let instanceId = 0; instanceId < mesh.count; instanceId++) {
@@ -81,8 +84,10 @@ export class DropGroup extends THREE.Group {
                     toDeleteIds.push(instanceId);
                 }
             }
-            // 批量删除距离小于 maxDistance 的实例
-            this.deleteInstance(mesh, toDeleteIds, tempMatrix);
+            if(toDeleteIds.length > 0) {
+                // 批量删除距离小于 maxDistance 的实例
+                this.deleteInstance(mesh, toDeleteIds, tempMatrix);
+            }
         });
     }
 
@@ -171,29 +176,53 @@ export class DropGroup extends THREE.Group {
         mesh.visible = true
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
         // mesh.computeBoundingSphere();
-
-        this.dropList.push({
+        const drop: IDrop = {
+            // drop instance 对应的 uuid
+            uuid: THREE.MathUtils.generateUUID(),
             state: 'init',
             mesh,
             instanceId,
             needUpdate: true,
             // block xyz
             x, y, z,
-        });
+        };
+        this.dropList.push(drop);
+        mesh.userData.instanceCache[drop.uuid] = drop;
+        // console.log('add drop instance', drop.uuid);
     }
 
     /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */
     private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {
-        this.deleteDropList(toDeleteIds);
+        // console.log('****** deleteInstance ******')
+        // console.log('toDeleteIds', toDeleteIds);
+        // console.log('instanceCache', this.instanceCache);
+        // console.log('dropList.length', this.dropList.length)
         // 批量处理待删ID
         for (const instanceId of toDeleteIds) {
             // 跳过已因缩容失效的ID（批量删除中count会动态减少）
-            if (instanceId >= mesh.count) continue;
-            const lastIndex = mesh.count - 1;
+            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);
+            // if (instanceId >= mesh.count) continue;
+            const lastInstanceId = mesh.count - 1;
+
+            let currentInstanceUUID = 'none';
+            let lastInstanceUUID = 'none';
+            const instanceCache = mesh.userData.instanceCache;
+            Object.keys(instanceCache).forEach((uuid) => {
+                // console.log('uuid', uuid, instanceCache[uuid].instanceId);
+                if(instanceCache[uuid].instanceId === instanceId) {
+                    currentInstanceUUID = uuid;
+                }
+                if(instanceCache[uuid].instanceId === lastInstanceId) {
+                    lastInstanceUUID = uuid;
+                }
+            })
+            instanceCache[lastInstanceUUID].instanceId = instanceId;
+            delete instanceCache[currentInstanceUUID];
+            this.deleteDrop(currentInstanceUUID);
             // 仅当待删ID不是最后一个实例时，执行覆盖
-            if (instanceId !== lastIndex) {
+            if (instanceId !== lastInstanceId) {
                 // 读取最后一个实例的矩阵（覆盖待删位置）
-                mesh.getMatrixAt(lastIndex, tempMatrix);
+                mesh.getMatrixAt(lastInstanceId, tempMatrix);
                 mesh.setMatrixAt(instanceId, tempMatrix);
                 mesh.count--;
             } else {
@@ -212,6 +241,7 @@ export class DropGroup extends THREE.Group {
 
     /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */
     private updateDropState(x: number, z: number) {
+        // console.log('updateDropState', this.dropList, x, z);
         this.dropList.forEach(drop => {
             if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {
                 // 重新设置 drop 的状态
@@ -221,10 +251,9 @@ export class DropGroup extends THREE.Group {
     }
 
     /**@desc 在删除 instance 的时候 更新 dropList */
-    private deleteDropList(toDeleteIds: number[]) {
-        // TODO 更新错误需要优化
+    private deleteDrop(uuid: string) {
         this.dropList = this.dropList.filter((d => {
-            return !toDeleteIds.includes(d.instanceId);
+            return d.uuid !== uuid
         }));
     }
 }
