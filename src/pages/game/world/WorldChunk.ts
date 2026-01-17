@@ -27,7 +27,7 @@ export class WorldChunk extends THREE.Group {
     super();
     this.params = params;
     this.dataStore = dataStore;
-     this.dropGroup = new DropGroup(this.position, this);
+    this.dropGroup = new DropGroup(this.position, this);
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
       this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())

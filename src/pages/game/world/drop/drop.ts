@@ -4,14 +4,10 @@ import { BlockFactory } from "../../Block/BlockFactory";
 import { getDropInstancedGeometry } from "../geometry";
 import { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
+import { jitterNumber } from "../../utils";
+import { DropDt, DropLimit, MaxCount } from "./literal";
 
-
-// TIP 暂定每种掉落物的最大数量为 200 个
-const maxCount = 200;
-const floatHeight = 0.15;
-const dropDt = 0.022;
-const dropLimit = floatHeight + dropDt
-
+/**@desc 掉落物的 Group */
 export class DropGroup extends THREE.Group {
     private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
     private chunkPosition: THREE.Vector3;
@@ -26,16 +22,19 @@ export class DropGroup extends THREE.Group {
        this.initInstanceMesh();
     }
 
+    /** @desc 初始化掉落物的 InstancedMesh */
     private initInstanceMesh() {
         const meshes = this.meshes
         blockIDValues.forEach((blockId) => {
             const block = BlockFactory.getBlock(blockId);
             const blockGeometry = block.geometry;
             const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
-            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, maxCount);
+            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
             mesh.name = block.constructor.name;
             mesh.count = 0;
             mesh.userData.type = 'drop';
+            // 初始时将所有实例设为不可见
+            mesh.visible = false;
             // mesh.castShadow = !block.canPassThrough;
             // 暂时关闭阴影投射
             mesh.castShadow = false;
@@ -97,10 +96,10 @@ export class DropGroup extends THREE.Group {
             const posY = this.dropMatrix.elements[13];
             const posZ = this.dropMatrix.elements[14];
 
-            const isOverFloatHeight = posY % 1 >= dropLimit;
+            const isOverFloatHeight = posY % 1 >= DropLimit;
             if (isOverFloatHeight || state === 'fall_cross') {
                 // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落
-                const nextY = posY - dropDt;
+                const nextY = posY - DropDt;
                 drop.y = nextY;
                 if(isOverFloatHeight) {
                     drop.state = 'fall';
@@ -125,7 +124,7 @@ export class DropGroup extends THREE.Group {
             const blockClass = BlockFactory.getBlock(underBlockData.block);
             // 穿过下方的 block
             if (blockClass.canPassThrough) {
-                const nextY = posY - dropDt;
+                const nextY = posY - DropDt;
                 this.dropMatrix.setPosition(posX, nextY, posZ);
                 drop.y = nextY;
                 drop.state = 'fall_cross';
@@ -140,6 +139,7 @@ export class DropGroup extends THREE.Group {
         })
     }
 
+    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */
     private getAvailableMeshes() {
         const availableMeshes: THREE.InstancedMesh[] = [];
         blockIDValues.map((key) => {
@@ -156,18 +156,19 @@ export class DropGroup extends THREE.Group {
      * 一个 drop instance 对应一个实际的 THREE.Object
      */
     private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
-        const dropX = x + 0.5;
-        const dropY = y + 0.5;
-        const dropZ = z + 0.5;
+        // 给 drop 实例添加随机抖动
+        const dropX = jitterNumber(x + 0.5, 0.1);
+        const dropY = jitterNumber(y + 0.5, 0.05);
+        const dropZ = jitterNumber(z + 0.5, 0.1);
         const instanceId = mesh.count++;
-        // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works
         const matrix = new THREE.Matrix4();
         matrix.setPosition(dropX, dropY, dropZ);
         mesh.setMatrixAt(instanceId, matrix);
         mesh.instanceMatrix.needsUpdate = true;
-        
+        // 当存在一个 instance 时，将其设为可见
+        mesh.visible = true
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
-        mesh.computeBoundingSphere();
+        // mesh.computeBoundingSphere();
 
         this.dropList.push({
             state: 'init',
@@ -179,6 +180,7 @@ export class DropGroup extends THREE.Group {
         });
     }
 
+    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */
     private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {
         this.deleteDropList(toDeleteIds);
         // 批量处理待删ID
@@ -199,9 +201,14 @@ export class DropGroup extends THREE.Group {
         }
         // toDeleteIds 
         mesh.instanceMatrix.needsUpdate = true;
-        mesh.computeBoundingSphere();
+        // mesh.computeBoundingSphere();
+        if(mesh.count === 0) {
+            // 当所有 instance 都被删除时，将 mesh 设为不可见
+            mesh.visible = false;
+        }
     }
 
+    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */
     private updateDropState(x: number, z: number) {
         this.dropList.forEach(drop => {
             if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {
@@ -217,6 +224,5 @@ export class DropGroup extends THREE.Group {
         this.dropList = this.dropList.filter((d => {
             return !toDeleteIds.includes(d.instanceId);
         }));
-        
     }
 }

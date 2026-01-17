@@ -15,6 +15,7 @@ import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
+import { WorldChunk } from "../world/WorldChunk";
 
 export class Player {
   onGround = false;
@@ -184,8 +185,16 @@ export class Player {
   private updateRayCaster(world: World) {
     const rayCaster = this.rayCaster;
     if(!rayCaster) return;
+    // if(Math.random() > 0) return;
     rayCaster.setFromCamera(RayCenterScreen, this.camera);
-    const intersections = rayCaster.intersectObjects(world.children, true).filter((intersection) => {
+    // rayCaster.intersectObjects()
+    const chunks: WorldChunk[] = [];
+    PlayerParams.activeChunks.forEach((chunkKey) => {
+      const chunk = world.getChunk(chunkKey.x, chunkKey.z);
+      chunk && chunks.push(chunk);
+    });
+    // 只拾取相邻被激活的 chunk
+    const intersections = rayCaster.intersectObjects(chunks, true).filter((intersection) => {
       // 排除掉掉落的方块
       return intersection.object.userData.type !== 'drop';
     });
@@ -194,7 +203,6 @@ export class Player {
       const intersection = intersections[0];
       if(this.selectedBlockUuid !== intersection.object.uuid) {
         this.selectedBlockUuid = intersection.object.uuid;
-        // console.log(intersection.object);
       }
       
       // Get the chunk associated with the seclected block
