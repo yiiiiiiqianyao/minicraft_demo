@@ -12,8 +12,9 @@ import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
-import { worldToChunkCoords } from "./chunk/utils";
+import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
+import { PhysicsParams } from "../physics/literal";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -67,7 +68,7 @@ export class World extends THREE.Group {
    * Updates the visible portions of the world based on the current player position
    */
   update(player: Player) {
-    const visibleChunks = this.getVisibleChunks(player);
+    const visibleChunks = this.getVisibleChunks();
     const chunksToAdd = this.getChunksToAdd(visibleChunks);
     this.removeUnusedChunks(visibleChunks);
 
@@ -97,39 +98,49 @@ export class World extends THREE.Group {
         this.generateChunk(chunk.x, chunk.z);
         // this.lastChunkLoadTime = performance.now();
       }
-    } else {
-      // 当 chunk queue 为空时，如果是初始化的场景 则进行初始化操作
-      if (!this.initialLoadComplete) {
-        this.initialLoadComplete = true;
-        swapMenuScreenGUI();
-
-        const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
-        const startX = PlayerInitPosition.x;
-        const startZ = PlayerInitPosition.z;
-        const currentChunkHeight = ChunkParams.height;
-        for (let y = currentChunkHeight; y > 0; y--) {
-          // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
-          if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
-            startingPlayerPosition.y = y;
-            break;
-          }
-        }
-        // 角色从离地面 10 个单位的位置开始
-        player.position.set(startX,startingPlayerPosition.y + 10,startZ);
-        // 角色 PointerLockControls 控制器解锁
-        player.controls.lock();
-        player.updateByPosition();
-      }
     }
 
     // 在初始加载未完成前更新加载进度条
     if (!this.initialLoadComplete) {
-      const totalChunks = (this.renderDistance * 2 + 1) ** 2;
-      const loadedChunks = this.children.length;
-      const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
-      // 初始化更新一次 player 信息
-      if(percentLoaded === 100) player.updateByPosition();
-      updateProgressGUI(percentLoaded);
+      this.updateInitialLoad(player);
+    }
+  }
+
+  updateInitialLoad(player: Player) {
+    const totalChunks = (this.renderDistance * 2 + 1) ** 2;
+    const loadedChunks = this.children.length;
+    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
+    const startX = PlayerInitPosition.x;
+    const startZ = PlayerInitPosition.z;
+    if(!PlayerParams.currentChunk) {  
+      const [chunkX, chunkZ] = worldToChunkCoordsXZ(startX, startZ);
+      PlayerParams.currentChunk = {x: chunkX, z: chunkZ};
+    }
+    
+
+    updateProgressGUI(percentLoaded);
+    // 初始化更新一次 player 信息
+    if(percentLoaded === 100) {
+      this.initialLoadComplete = true;
+      player.updateByPosition();
+      
+      const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
+     
+      const currentChunkHeight = ChunkParams.height;
+      for (let y = currentChunkHeight; y > 0; y--) {
+        // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
+        if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
+          startingPlayerPosition.y = y;
+          break;
+        }
+      }
+      // 角色从离地面 10 个单位的位置开始
+      player.position.set(startX,startingPlayerPosition.y + 10,startZ);
+      // 角色 PointerLockControls 控制器解锁
+      player.controls.lock();
+      player.updateByPosition();
+      PhysicsParams.enabled = true;
+      swapMenuScreenGUI();
     }
   }
 
@@ -149,7 +160,7 @@ export class World extends THREE.Group {
    * Returns an array containing the coordinates of the chunks
    * that are currently visible to the player, starting from the center
    */
-  getVisibleChunks(player: Player): { x: number; z: number }[] {
+  getVisibleChunks(): { x: number; z: number }[] {
     // get coordinates of the chunk the player is currently on
     // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
     if (!PlayerParams.currentChunk) return [];
@@ -177,7 +188,6 @@ export class World extends THREE.Group {
       const distB = Math.sqrt(
         (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2
       );
-
       return distA - distB;
     });
 

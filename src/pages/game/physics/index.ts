@@ -28,6 +28,7 @@ export class Physics {
 
   /**@desc physics 更新 player 物理计算 */
   update(dt: number) {
+    if (!PhysicsParams.enabled) return;
     PhysicsParams.accumulator += dt;
     while (PhysicsParams.accumulator >= PhysicsParams.stepSize) {
       // TODO 待优化 现在频繁计算

@@ -92,22 +92,20 @@ export class DropGroup extends THREE.Group {
             if (state === 'float' || state === 'stable') return;
             
             // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化
-            // mesh.getMatrixAt(instanceId, this.dropMatrix);
-            // const posX = this.dropMatrix.elements[12];
-            // const posY = this.dropMatrix.elements[13];
-            // const posZ = this.dropMatrix.elements[14];
+            mesh.getMatrixAt(instanceId, this.dropMatrix);
+            const posX = this.dropMatrix.elements[12];
+            const posY = this.dropMatrix.elements[13];
+            const posZ = this.dropMatrix.elements[14];
 
-            const isOverFloatHeight = y % 1 >= dropLimit;
+            const isOverFloatHeight = posY % 1 >= dropLimit;
             if (isOverFloatHeight || state === 'fall_cross') {
                 // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落
-                const nextY = y - dropDt;
+                const nextY = posY - dropDt;
                 drop.y = nextY;
                 if(isOverFloatHeight) {
                     drop.state = 'fall';
                 }
-                mesh.getMatrixAt(instanceId, this.dropMatrix);
-                this.dropMatrix.setPosition(x, nextY, z);
-                
+                this.dropMatrix.setPosition(posX, nextY, posZ);
                 mesh.setMatrixAt(instanceId, this.dropMatrix)
                 mesh.instanceMatrix.needsUpdate = true;
                 return;
@@ -125,12 +123,11 @@ export class DropGroup extends THREE.Group {
             }
             // console.log('underBlockData', underBlockData);
             const blockClass = BlockFactory.getBlock(underBlockData.block);
-            // console.log('blockClass', blockClass);
+            // 穿过下方的 block
             if (blockClass.canPassThrough) {
-                mesh.getMatrixAt(instanceId, this.dropMatrix);
-                this.dropMatrix.setPosition(x, y - dropDt, z);
-                drop.y = y - dropDt;
-                // 穿过下方的 block
+                const nextY = posY - dropDt;
+                this.dropMatrix.setPosition(posX, nextY, posZ);
+                drop.y = nextY;
                 drop.state = 'fall_cross';
                 mesh.setMatrixAt(instanceId, this.dropMatrix)
                 mesh.instanceMatrix.needsUpdate = true;
@@ -177,9 +174,8 @@ export class DropGroup extends THREE.Group {
             mesh,
             instanceId,
             needUpdate: true,
-            x: dropX,
-            y: dropY,
-            z: dropZ,
+            // block xyz
+            x, y, z,
         });
     }
 

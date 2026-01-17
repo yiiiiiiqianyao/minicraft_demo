@@ -1,4 +1,5 @@
 export class PhysicsParams {
+    static enabled = false;
     // Acceleration due to gravity
     static GRAVITY = -32;
     /**@desc Physics simulation rate 物理模拟的半径 */

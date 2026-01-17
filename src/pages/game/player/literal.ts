@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { ICurrentChunk, INearFourChunks, ISelectedBlockSize, ISelectedCoords } from "./interface";
+import { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedBlockSize, ISelectedCoords } from "./interface";
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
 export class PlayerParams {
@@ -28,13 +28,7 @@ export class PlayerParams {
     /**@desc 玩家相邻的最小 4 个 chunkID */
     static nearFourChunks: INearFourChunks = [];
     /**@desc 玩家当前活动的 chunkID 列表 1 or 4 */
-    static get activeChunks() {
-        if (PlayerParams.isInChunkCenter && PlayerParams.currentChunk) {
-            return [PlayerParams.currentChunk];
-        } else {
-            return PlayerParams.nearFourChunks;
-        }
-    }
+    static activeChunks: IChunkKey[] = [];
 }
 
 // 玩家视线中心 鼠标屏幕坐标

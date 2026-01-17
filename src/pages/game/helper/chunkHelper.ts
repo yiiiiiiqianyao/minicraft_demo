@@ -41,10 +41,10 @@ function updatePlayerNear(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: 
     PlayerParams.currentChunk = chunk;
     PlayerParams.nearFourChunks = nearFourChunks;
     PlayerParams.isInChunkCenter = isInChunkCenter;
+    PlayerParams.activeChunks = isInChunkCenter ? [chunk] : nearFourChunks;
 
     const { chunkHelperVisible } = DevControl;
-    const activeChunks = isInChunkCenter ? [chunk] : nearFourChunks;
-    chunkHelperVisible && activeChunks.forEach((nearChunk) => {
+    chunkHelperVisible && PlayerParams.activeChunks.forEach((nearChunk) => {
         const chunk = world.getChunk(nearChunk.x, nearChunk.z);
         // console.log(chunk?.userData)
         const nearChunkHelper = chunk?.helper;
@@ -52,12 +52,12 @@ function updatePlayerNear(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: 
     });
     chunkHelperVisible && lastNearFourChunks.forEach((lastNearChunk) => {
         // 过滤 当前的 4 个最近 chunk
-        if(activeChunks.filter(chunk => chunk.x === lastNearChunk.x && chunk.z === lastNearChunk.z).length > 0) return;
+        if(PlayerParams.activeChunks.filter(chunk => chunk.x === lastNearChunk.x && chunk.z === lastNearChunk.z).length > 0) return;
         const lastChunkHelper = world.getChunk(lastNearChunk.x, lastNearChunk.z)?.helper;
         lastChunkHelper && inActiveChunkHelper(lastChunkHelper);
     });
     // for dev test
-    lastNearFourChunks = activeChunks;
+    lastNearFourChunks = PlayerParams.activeChunks;
 }
 
 export {

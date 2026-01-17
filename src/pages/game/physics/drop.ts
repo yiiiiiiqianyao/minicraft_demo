@@ -18,7 +18,6 @@ export class DropPhysics {
     /**@desc 获取掉落物品的候选列表 */
     private getCandidatesDrops() {
         const drops: DropGroup[] = [];
-        // TODO 可以优化 减少计算
         PlayerParams.activeChunks.forEach(chunkKey => {
             const chunk = this.world.getChunk(chunkKey.x, chunkKey.z);
             if (!chunk) return;
