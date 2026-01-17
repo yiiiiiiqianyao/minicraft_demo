@@ -1,4 +1,4 @@
-import TWEEN from "@tweenjs/tween.js";
+
 import * as THREE from "three";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
 import audioManager from "../audio/AudioManager";
@@ -14,17 +14,14 @@ import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
 import { Layers } from "../engine";
-import { initPlayerCamera } from "./camera";
+import { initPlayerCamera, updateCameraFOV } from "./camera";
 import { Selector } from "./selector";
 
 export class Player {
   onGround = false;
   input = new THREE.Vector3();
-  velocity = new THREE.Vector3();
-  #worldVelocity = new THREE.Vector3();
-  // 玩家是否处于冲刺状态
+  /**@desc 玩家是否处于冲刺状态 */ 
   isSprinting = false;
-
   lastStepSoundPlayed = 0;
   world: World;
   keyboardInput = new KeyboardInput(this);
@@ -32,18 +29,18 @@ export class Player {
   cameraHelper: THREE.CameraHelper;
   controls: PointerLockControls;
   boundsHelper: THREE.Mesh;
-  private rayCaster: THREE.Raycaster;
+  velocity = new THREE.Vector3();
+  private _worldVelocity = new THREE.Vector3();
 
-
-    /*
+  /*
    * Returns the velocity of the player in world coordinates
    */
   get worldVelocity() {
-    this.#worldVelocity.copy(this.velocity);
-    this.#worldVelocity.applyEuler(
+    this._worldVelocity.copy(this.velocity);
+    this._worldVelocity.applyEuler(
       new THREE.Euler(0, this.camera.rotation.y, 0)
     );
-    return this.#worldVelocity;
+    return this._worldVelocity;
   }
 
   get position() {
@@ -59,14 +56,6 @@ export class Player {
     this.cameraHelper.visible = false;
     
     this.controls = new PointerLockControls(this.camera, document.body);
-
-    this.rayCaster = new THREE.Raycaster(
-      new THREE.Vector3(),
-      new THREE.Vector3(),
-      0,
-      5
-    );
-    this.rayCaster.layers.set(Layers.Zero);
     
     scene.add(this.camera);
     scene.add(this.cameraHelper);
@@ -131,7 +120,7 @@ export class Player {
     // 更新用户的拾取选中方块
     Selector.update(this.camera, world, selectionHelper);
     Selector.select(this.camera, world, selectionHelper);
-    this.updateCameraFOV();
+    updateCameraFOV(this.camera, this.isSprinting);
     // prevent player from falling through
     if (this.position.y < 0) {
       this.position.copy(PlayerInitPosition);
@@ -166,28 +155,5 @@ export class Player {
 
     // 角色移动后检测吸收掉落的物品
     Action.absorbDrops(this.world);
-    // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收
-    // 角色一定距离内执行粒子动画、野怪刷新、植物生长
-  }
-
-  /**@desc 更新 player 的拾取射线 */
-  private updateRayCaster(world: World) {
-    
-  }
-
-  /**@desc 更新 player 角色相机的 FOV */
-  private updateCameraFOV() {
-    // TODO 需要根据玩家是否 sprinting 来动态调整相机 FOV 待优化
-    const currentFov = { fov: this.camera.fov };
-    const targetFov = this.isSprinting ? 80 : 70;
-    const update = () => {
-      this.camera.fov = currentFov.fov;
-      this.camera.updateProjectionMatrix();
-    };
-    new TWEEN.Tween(currentFov)
-      .to({ fov: targetFov }, 30)
-      .easing(TWEEN.Easing.Quadratic.Out)
-      .onUpdate(update)
-      .start();
   }
 }

@@ -110,6 +110,26 @@
             0,
             0,
             0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -134,7 +154,27 @@
             5,
             4,
             3,
-            5
+            5,
+            2,
+            4,
+            4,
+            3,
+            3,
+            2,
+            4,
+            2,
+            2,
+            5,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            3,
+            2,
+            4,
+            1
           ]
         },
         "register": 1
@@ -159,7 +199,27 @@
             13,
             12,
             14,
-            8
+            8,
+            6,
+            6,
+            7,
+            5,
+            6,
+            6,
+            5,
+            9,
+            6,
+            6,
+            6,
+            5,
+            6,
+            8,
+            5,
+            12,
+            6,
+            6,
+            5,
+            13
           ]
         },
         "register": 15
@@ -176,6 +236,26 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -211,9 +291,49 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1241,6 +1361,28 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1263,9 +1405,49 @@
             0,
             0,
             0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
             1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1350,9 +1532,69 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1402,9 +1644,69 @@
             11,
             10,
             13,
-            7
+            7,
+            10,
+            11,
+            12,
+            10,
+            8,
+            11,
+            8,
+            11,
+            7,
+            7,
+            13,
+            9,
+            10,
+            14,
+            13,
+            9,
+            9,
+            8,
+            12,
+            12
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1443,6 +1745,46 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1461,6 +1803,26 @@
         "hooks": {
           "onGenerateFiles": [
             72,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1513,6 +1875,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1544,6 +1926,46 @@
             47,
             1,
             77,
+            1,
+            46,
+            2,
+            48,
+            2,
+            48,
+            1,
+            44,
+            1,
+            45,
+            1,
+            55,
+            2,
+            40,
+            1,
+            49,
+            1,
+            43,
+            1,
+            44,
+            1,
+            41,
+            2,
+            49,
+            2,
+            50,
+            1,
+            48,
+            2,
+            51,
+            2,
+            49,
+            2,
+            51,
+            2,
+            40,
+            1,
+            39,
+            1,
+            46,
             1
           ]
         },
@@ -1574,6 +1996,26 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1616,7 +2058,27 @@
             5,
             5,
             4,
-            6
+            6,
+            4,
+            5,
+            4,
+            5,
+            6,
+            4,
+            5,
+            4,
+            5,
+            4,
+            5,
+            5,
+            4,
+            7,
+            5,
+            4,
+            4,
+            4,
+            5,
+            4
           ]
         },
         "register": 2
@@ -1706,7 +2168,27 @@
             0,
             0,
             1,
-            0
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1
           ]
         },
         "register": 1
@@ -2596,7 +3078,7 @@
       "id": "game/player/selector",
       "file": "game/player/selector.ts",
       "absPath": "/game/player/selector",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams, RayCenterScreen } from \"./literal\";\nimport { getNearChunks } from \"./utils\";\nimport { Layers } from \"../engine\";\nimport { Action } from \"./action\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { ToolBar } from \"../gui\";\nimport { BlockID } from \"../Block\";\n\nexport class Selector {\n    private static _rayCaster: THREE.Raycaster | null = null;\n    /**@desc 垂直同步次数 */\n    private static _vSyncCount = 2;\n    private static _updateCount = 0;\n    /**\n     * Updates the raycaster used for block selection\n     */\n    static selectedBlockUuid: string | null = null;\n    static get rayCaster() {\n        if(!Selector._rayCaster) {\n            Selector._rayCaster = new THREE.Raycaster(\n                new THREE.Vector3(),\n                new THREE.Vector3(),\n                0,\n                5\n            );\n            this.rayCaster.layers.set(Layers.Zero);\n        }\n        return Selector._rayCaster;\n    }\n\n    static update(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        Selector._updateCount++;\n        if(Selector._updateCount === Selector._vSyncCount) {\n            Selector.select(camera, world, selectionHelper);\n            Selector._updateCount = 0;\n        }\n    }\n\n    static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        const rayCaster = Selector.rayCaster;\n        rayCaster.setFromCamera(RayCenterScreen, camera);\n        \n        // 过滤 player 所在的 chunk or 相邻 4 个 chunk\n        const chunks = getNearChunks(world);\n        // TODO 实际的拾取对象 可以使用 layer 进行过滤优化\n        const intersection = rayCaster.intersectObjects(chunks, true)[0];\n        if (intersection) {\n            Selector.selectedBlockUuid = intersection.object.uuid;\n            \n            // Get the chunk associated with the seclected block\n            // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块\n            const chunk = intersection.object.parent;\n            if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);\n\n            // Update the selected coordinates\n            Selector.updateSelectCoord(intersection, chunk);\n            // Update the block placement coordinates\n            Selector.updateBlockPlacementCoords(intersection);\n            // Update the selection helper\n            Selector.updateSelectionHelper(intersection, selectionHelper);\n        } else {\n            Selector.unSelect(selectionHelper);\n        }\n    }\n\n    static unSelect(selectionHelper: THREE.Mesh) {\n        // 没有选中的方块时，将选中坐标设为 null\n        PlayerParams.selectedCoords = null;\n        // 没有选中的方块时，将选中方块大小设为 null\n        // PlayerParams.selectedBlockSize = null;\n        selectionHelper.visible = false;\n    }\n\n    static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {\n        if (intersection.instanceId == null) return;\n\n        // TODO 目前只能选中 InstancedMesh 类型的方块\n        // Get the transformation matrix for the selected block\n        const blockMatrix = new THREE.Matrix4();\n        (intersection.object as THREE.InstancedMesh).getMatrixAt(\n            intersection.instanceId,\n            blockMatrix\n        );\n\n        // Undo rotation from block matrix\n        const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);\n        const inverseRotationMatrix = rotationMatrix.invert();\n        blockMatrix.multiply(inverseRotationMatrix);\n\n        // Set the selected coordinates to origin of chunk\n        // Then apply transformation matrix of block to get block coords\n        PlayerParams.selectedCoords = chunk.position.clone();\n        PlayerParams.selectedCoords.applyMatrix4(blockMatrix);\n\n        // Get the bounding box of the selected block\n        // const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n        // PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n    }\n\n    /**\n     * @desc 更新玩家方块放置坐标\n     */\n    static updateBlockPlacementCoords(intersection: THREE.Intersection) {\n        // 未选中方块 或 缺少法线 时 不更新方块放置坐标\n        if (!PlayerParams.selectedCoords || !intersection.normal) return;\n        // TODO 待优化\n        if (ToolBar.activeBlockId !== BlockID.Air) {\n            // Update block placement coords to be 1 block over in the direction of the normal\n            Action.blockPlacementCoords = PlayerParams.selectedCoords\n            .clone()\n            .add(intersection.normal);\n        }\n    }\n\n    static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {\n        if (!PlayerParams.selectedCoords) return;\n        if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n            selectionHelper.scale.set(0.3, 0.6, 0.3);\n        } else {\n            selectionHelper.scale.set(1, 1, 1);\n        } \n        // TODO TallGrass 草方块的选择框需要调整大小\n        selectionHelper.position.copy(PlayerParams.selectedCoords);\n        selectionHelper.visible = true;\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams, RayCenterScreen } from \"./literal\";\nimport { getNearChunks } from \"./utils\";\nimport { Layers } from \"../engine\";\nimport { Action } from \"./action\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { ToolBar } from \"../gui\";\nimport { BlockID } from \"../Block\";\n\n/**@desc 玩家的拾取/选择器 */\nexport class Selector {\n    private static _rayCaster: THREE.Raycaster | null = null;\n    /**@desc 垂直同步次数 性能优化使用 */\n    private static _vSyncCount = 2;\n    private static _updateCount = 0;\n    /**\n     * Updates the raycaster used for block selection\n     */\n    static selectedBlockUuid: string | null = null;\n    static get rayCaster() {\n        if(!Selector._rayCaster) {\n            Selector._rayCaster = new THREE.Raycaster(\n                new THREE.Vector3(),\n                new THREE.Vector3(),\n                0,\n                5\n            );\n            this.rayCaster.layers.set(Layers.Zero);\n        }\n        return Selector._rayCaster;\n    }\n\n    static update(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        Selector._updateCount++;\n        if(Selector._updateCount === Selector._vSyncCount) {\n            Selector.select(camera, world, selectionHelper);\n            Selector._updateCount = 0;\n        }\n    }\n\n    static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {\n        const rayCaster = Selector.rayCaster;\n        rayCaster.setFromCamera(RayCenterScreen, camera);\n        \n        // 过滤 player 所在的 chunk or 相邻 4 个 chunk\n        const chunks = getNearChunks(world);\n        // TODO 实际的拾取对象 可以使用 layer 进行过滤优化\n        const intersection = rayCaster.intersectObjects(chunks, true)[0];\n        if (intersection) {\n            Selector.selectedBlockUuid = intersection.object.uuid;\n            \n            // Get the chunk associated with the seclected block\n            // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块\n            const chunk = intersection.object.parent;\n            if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);\n\n            // Update the selected coordinates\n            Selector.updateSelectCoord(intersection, chunk);\n            // Update the block placement coordinates\n            Selector.updateBlockPlacementCoords(intersection);\n            // Update the selection helper\n            Selector.updateSelectionHelper(intersection, selectionHelper);\n        } else {\n            Selector.unSelect(selectionHelper);\n        }\n    }\n\n    static unSelect(selectionHelper: THREE.Mesh) {\n        // 没有选中的方块时，将选中坐标设为 null\n        PlayerParams.selectedCoords = null;\n        // 没有选中的方块时，将选中方块大小设为 null\n        // PlayerParams.selectedBlockSize = null;\n        selectionHelper.visible = false;\n    }\n\n    static _tempBlockMatrix = new THREE.Matrix4();\n    static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {\n        if (intersection.instanceId == null) return;\n\n        // TODO 目前只能选中 InstancedMesh 类型的方块\n        // Get the transformation matrix for the selected block\n        (intersection.object as THREE.InstancedMesh).getMatrixAt(\n            intersection.instanceId,\n            Selector._tempBlockMatrix\n        );\n\n        // Undo rotation from block matrix\n        const rotationMatrix = new THREE.Matrix4().extractRotation(Selector._tempBlockMatrix);\n        const inverseRotationMatrix = rotationMatrix.invert();\n        Selector._tempBlockMatrix.multiply(inverseRotationMatrix);\n\n        // Set the selected coordinates to origin of chunk\n        // Then apply transformation matrix of block to get block coords\n        PlayerParams.selectedCoords = chunk.position.clone();\n        PlayerParams.selectedCoords.applyMatrix4(Selector._tempBlockMatrix);\n\n        // Get the bounding box of the selected block\n        // const boundingBox = new THREE.Box3().setFromObject(intersection.object);\n        // PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());\n    }\n\n    /**\n     * @desc 更新玩家方块放置坐标\n     */\n    static updateBlockPlacementCoords(intersection: THREE.Intersection) {\n        // 未选中方块 或 缺少法线 时 不更新方块放置坐标\n        if (!PlayerParams.selectedCoords || !intersection.normal) return;\n        // TODO 待优化\n        if (ToolBar.activeBlockId !== BlockID.Air) {\n            // Update block placement coords to be 1 block over in the direction of the normal\n            Action.blockPlacementCoords = PlayerParams.selectedCoords\n            .clone()\n            .add(intersection.normal);\n        }\n    }\n\n    static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {\n        if (!PlayerParams.selectedCoords) return;\n        if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {\n            selectionHelper.scale.set(0.3, 0.6, 0.3);\n        } else {\n            selectionHelper.scale.set(1, 1, 1);\n        } \n        // TODO TallGrass 草方块的选择框需要调整大小\n        selectionHelper.position.copy(PlayerParams.selectedCoords);\n        selectionHelper.visible = true;\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/selector.ts"
     },
@@ -2722,7 +3204,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "import TWEEN from \"@tweenjs/tween.js\";\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { Layers } from \"../engine\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Selector } from \"./selector\";\n\nexport class Player {\n  onGround = false;\n  input = new THREE.Vector3();\n  velocity = new THREE.Vector3();\n  #worldVelocity = new THREE.Vector3();\n  // 玩家是否处于冲刺状态\n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  camera: THREE.PerspectiveCamera;\n  cameraHelper: THREE.CameraHelper;\n  controls: PointerLockControls;\n  boundsHelper: THREE.Mesh;\n  private rayCaster: THREE.Raycaster;\n\n\n    /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this.#worldVelocity.copy(this.velocity);\n    this.#worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this.#worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n\n    this.camera = initPlayerCamera();\n    this.cameraHelper = new THREE.CameraHelper(this.camera);\n    this.cameraHelper.layers.set(Layers.One);\n    this.cameraHelper.visible = false;\n    \n    this.controls = new PointerLockControls(this.camera, document.body);\n\n    this.rayCaster = new THREE.Raycaster(\n      new THREE.Vector3(),\n      new THREE.Vector3(),\n      0,\n      5\n    );\n    this.rayCaster.layers.set(Layers.Zero);\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    this.updateCameraFOV();\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n    // 更新角色相邻的最小 4 个chunk => 角色移动的时候需要计算相邻 4 个 chunk 中 drop 掉落物体是否被吸收\n    // 角色一定距离内执行粒子动画、野怪刷新、植物生长\n  }\n\n  /**@desc 更新 player 的拾取射线 */\n  private updateRayCaster(world: World) {\n    \n  }\n\n  /**@desc 更新 player 角色相机的 FOV */\n  private updateCameraFOV() {\n    // TODO 需要根据玩家是否 sprinting 来动态调整相机 FOV 待优化\n    const currentFov = { fov: this.camera.fov };\n    const targetFov = this.isSprinting ? 80 : 70;\n    const update = () => {\n      this.camera.fov = currentFov.fov;\n      this.camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n      .to({ fov: targetFov }, 30)\n      .easing(TWEEN.Easing.Quadratic.Out)\n      .onUpdate(update)\n      .start();\n  }\n}\n",
+      "__content": "\nimport * as THREE from \"three\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { Layers } from \"../engine\";\nimport { initPlayerCamera, updateCameraFOV } from \"./camera\";\nimport { Selector } from \"./selector\";\n\nexport class Player {\n  onGround = false;\n  input = new THREE.Vector3();\n  /**@desc 玩家是否处于冲刺状态 */ \n  isSprinting = false;\n\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  camera: THREE.PerspectiveCamera;\n  cameraHelper: THREE.CameraHelper;\n  controls: PointerLockControls;\n  boundsHelper: THREE.Mesh;\n  velocity = new THREE.Vector3();\n  private _worldVelocity = new THREE.Vector3();\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this._worldVelocity.copy(this.velocity);\n    this._worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this._worldVelocity;\n  }\n\n  get position() {\n    return this.camera.position;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    this.world = world;\n\n    this.camera = initPlayerCamera();\n    this.cameraHelper = new THREE.CameraHelper(this.camera);\n    this.cameraHelper.layers.set(Layers.One);\n    this.cameraHelper.visible = false;\n    \n    this.controls = new PointerLockControls(this.camera, document.body);\n    \n    scene.add(this.camera);\n    scene.add(this.cameraHelper);\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    new MouseInput(this, world);\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    updateCameraFOV(this.camera, this.isSprinting);\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -2740,7 +3222,7 @@
       "id": "game/player/camera",
       "file": "game/player/camera.ts",
       "absPath": "/game/player/camera",
-      "__content": "import { ScreenViewer } from \"../gui/viewer\";\nimport * as THREE from \"three\";\nimport { PlayerInitPosition } from \"./literal\";\nimport { Layers } from \"../engine\";\nexport function initPlayerCamera() {\n    const camera = new THREE.PerspectiveCamera(\n    70,\n    ScreenViewer.width / ScreenViewer.height,\n    0.1,\n    5000\n    );\n\n    camera.position.copy(PlayerInitPosition);\n    camera.layers.disableAll();\n    camera.layers.enable(Layers.Zero);\n    camera.layers.enable(Layers.One);\n    return camera;\n}",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { ScreenViewer } from \"../gui/viewer\";\nimport { PlayerInitPosition } from \"./literal\";\nimport { Layers } from \"../engine\";\nexport function initPlayerCamera() {\n    const camera = new THREE.PerspectiveCamera(\n    70,\n    ScreenViewer.width / ScreenViewer.height,\n    0.1,\n    5000\n    );\n\n    camera.position.copy(PlayerInitPosition);\n    camera.layers.disableAll();\n    camera.layers.enable(Layers.Zero);\n    camera.layers.enable(Layers.One);\n    return camera;\n}\n\n\nlet lastIsSprinting = false;\n/**@desc 更新 player 角色相机的 FOV */\nexport function updateCameraFOV(camera: THREE.PerspectiveCamera, isSprinting: boolean) {\n    // 避免重复更新\n    if (lastIsSprinting === isSprinting) return;\n    lastIsSprinting = isSprinting;\n\n    const currentFov = { fov: camera.fov };\n    const targetFov = isSprinting ? 80 : 70;\n    const update = () => {\n        camera.fov = currentFov.fov;\n        camera.updateProjectionMatrix();\n    };\n    new TWEEN.Tween(currentFov)\n        .to({ fov: targetFov }, 150)\n        .easing(TWEEN.Easing.Quadratic.Out)\n        .onUpdate(update)\n        .start();\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/camera.ts"
     },
@@ -5649,17 +6131,22 @@
             "format": "esm"
           },
           "src/pages/game/player/camera.ts": {
-            "bytes": 502,
+            "bytes": 1178,
             "imports": [
-              {
-                "path": "src/pages/game/gui/viewer.ts",
-                "kind": "import-statement",
-                "original": "../gui/viewer"
-              },
               {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "@tweenjs/tween.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/gui/viewer.ts",
+                "kind": "import-statement",
+                "original": "../gui/viewer"
               },
               {
                 "path": "src/pages/game/player/literal.ts",
@@ -5706,7 +6193,7 @@
             "format": "esm"
           },
           "src/pages/game/player/selector.ts": {
-            "bytes": 5356,
+            "bytes": 5452,
             "imports": [
               {
                 "path": "three",
@@ -5757,13 +6244,8 @@
             "format": "esm"
           },
           "src/pages/game/player/Player.ts": {
-            "bytes": 6485,
+            "bytes": 5457,
             "imports": [
-              {
-                "path": "@tweenjs/tween.js",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "three",
                 "kind": "import-statement",
@@ -7019,12 +7501,12 @@
                 "external": true
               },
               {
-                "path": "three",
+                "path": "@tweenjs/tween.js",
                 "kind": "import-statement",
                 "external": true
               },
               {
-                "path": "@tweenjs/tween.js",
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -8410,16 +8892,16 @@
                 "bytesInOutput": 395
               },
               "src/pages/game/player/camera.ts": {
-                "bytesInOutput": 605
+                "bytesInOutput": 1170
               },
               "src/pages/game/player/utils.ts": {
                 "bytesInOutput": 690
               },
               "src/pages/game/player/selector.ts": {
-                "bytesInOutput": 3630
+                "bytesInOutput": 3694
               },
               "src/pages/game/player/Player.ts": {
-                "bytesInOutput": 5366
+                "bytesInOutput": 4608
               },
               "src/pages/game/sky/shader.ts": {
                 "bytesInOutput": 835
@@ -8485,7 +8967,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 195842
+            "bytes": 195713
           }
         }
       }
@@ -13413,20 +13895,7 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts": [
         {
-          "end": 39,
-          "importKind": "value",
-          "source": "@tweenjs/tween.js",
-          "specifiers": [
-            {
-              "local": "TWEEN",
-              "type": "ImportDefaultSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 71,
+          "end": 33,
           "importKind": "value",
           "source": "three",
           "specifiers": [
@@ -13435,11 +13904,11 @@
               "type": "ImportNamespaceSpecifier"
             }
           ],
-          "start": 40,
+          "start": 2,
           "type": "ImportDeclaration"
         },
         {
-          "end": 161,
+          "end": 123,
           "importKind": "value",
           "source": "three/examples/jsm/controls/PointerLockControls.js",
           "specifiers": [
@@ -13449,11 +13918,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 72,
+          "start": 34,
           "type": "ImportDeclaration"
         },
         {
-          "end": 211,
+          "end": 173,
           "importKind": "value",
           "source": "../audio/AudioManager",
           "specifiers": [
@@ -13462,11 +13931,11 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 162,
+          "start": 124,
           "type": "ImportDeclaration"
         },
         {
-          "end": 247,
+          "end": 209,
           "importKind": "value",
           "source": "../Block",
           "specifiers": [
@@ -13476,11 +13945,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 212,
+          "start": 174,
           "type": "ImportDeclaration"
         },
         {
-          "end": 287,
+          "end": 249,
           "importKind": "value",
           "source": "../world/World",
           "specifiers": [
@@ -13490,11 +13959,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 248,
+          "start": 210,
           "type": "ImportDeclaration"
         },
         {
-          "end": 331,
+          "end": 293,
           "importKind": "value",
           "source": "../gui",
           "specifiers": [
@@ -13504,11 +13973,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 288,
+          "start": 250,
           "type": "ImportDeclaration"
         },
         {
-          "end": 393,
+          "end": 355,
           "importKind": "value",
           "source": "./literal",
           "specifiers": [
@@ -13523,11 +13992,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 332,
+          "start": 294,
           "type": "ImportDeclaration"
         },
         {
-          "end": 437,
+          "end": 399,
           "importKind": "value",
           "source": "./keyboard",
           "specifiers": [
@@ -13537,11 +14006,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 394,
+          "start": 356,
           "type": "ImportDeclaration"
         },
         {
-          "end": 475,
+          "end": 437,
           "importKind": "value",
           "source": "./mouse",
           "specifiers": [
@@ -13551,11 +14020,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 438,
+          "start": 400,
           "type": "ImportDeclaration"
         },
         {
-          "end": 558,
+          "end": 520,
           "importKind": "value",
           "source": "../helper",
           "specifiers": [
@@ -13575,11 +14044,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 476,
+          "start": 438,
           "type": "ImportDeclaration"
         },
         {
-          "end": 593,
+          "end": 555,
           "importKind": "value",
           "source": "./action",
           "specifiers": [
@@ -13589,11 +14058,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 559,
+          "start": 521,
           "type": "ImportDeclaration"
         },
         {
-          "end": 676,
+          "end": 638,
           "importKind": "value",
           "source": "../world/chunk/utils",
           "specifiers": [
@@ -13608,11 +14077,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 594,
+          "start": 556,
           "type": "ImportDeclaration"
         },
         {
-          "end": 727,
+          "end": 689,
           "importKind": "value",
           "source": "../dev",
           "specifiers": [
@@ -13622,11 +14091,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 677,
+          "start": 639,
           "type": "ImportDeclaration"
         },
         {
-          "end": 785,
+          "end": 747,
           "importKind": "value",
           "source": "../helper/chunkHelper",
           "specifiers": [
@@ -13636,11 +14105,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 728,
+          "start": 690,
           "type": "ImportDeclaration"
         },
         {
-          "end": 821,
+          "end": 783,
           "importKind": "value",
           "source": "../engine",
           "specifiers": [
@@ -13650,11 +14119,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 786,
+          "start": 748,
           "type": "ImportDeclaration"
         },
         {
-          "end": 866,
+          "end": 845,
           "importKind": "value",
           "source": "./camera",
           "specifiers": [
@@ -13662,13 +14131,18 @@
               "imported": "initPlayerCamera",
               "local": "initPlayerCamera",
               "type": "ImportSpecifier"
+            },
+            {
+              "imported": "updateCameraFOV",
+              "local": "updateCameraFOV",
+              "type": "ImportSpecifier"
             }
           ],
-          "start": 822,
+          "start": 784,
           "type": "ImportDeclaration"
         },
         {
-          "end": 905,
+          "end": 884,
           "importKind": "value",
           "source": "./selector",
           "specifiers": [
@@ -13678,7 +14152,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 867,
+          "start": 846,
           "type": "ImportDeclaration"
         }
       ],
@@ -13774,7 +14248,33 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/camera.ts": [
         {
-          "end": 46,
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 71,
+          "importKind": "value",
+          "source": "@tweenjs/tween.js",
+          "specifiers": [
+            {
+              "local": "TWEEN",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 117,
           "importKind": "value",
           "source": "../gui/viewer",
           "specifiers": [
@@ -13784,24 +14284,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 1,
+          "start": 72,
           "type": "ImportDeclaration"
         },
         {
-          "end": 78,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 47,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 126,
+          "end": 165,
           "importKind": "value",
           "source": "./literal",
           "specifiers": [
@@ -13811,11 +14298,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 79,
+          "start": 118,
           "type": "ImportDeclaration"
         },
         {
-          "end": 162,
+          "end": 201,
           "importKind": "value",
           "source": "../engine",
           "specifiers": [
@@ -13825,7 +14312,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 127,
+          "start": 166,
           "type": "ImportDeclaration"
         }
       ],

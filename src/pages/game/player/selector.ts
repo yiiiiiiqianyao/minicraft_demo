@@ -8,6 +8,7 @@ import { RenderGeometry } from "../Block/Block";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
 
+/**@desc 玩家的拾取/选择器 */
 export class Selector {
     private static _rayCaster: THREE.Raycaster | null = null;
     /**@desc 垂直同步次数 性能优化使用 */
@@ -73,26 +74,26 @@ export class Selector {
         selectionHelper.visible = false;
     }
 
+    static _tempBlockMatrix = new THREE.Matrix4();
     static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
         if (intersection.instanceId == null) return;
 
         // TODO 目前只能选中 InstancedMesh 类型的方块
         // Get the transformation matrix for the selected block
-        const blockMatrix = new THREE.Matrix4();
         (intersection.object as THREE.InstancedMesh).getMatrixAt(
             intersection.instanceId,
-            blockMatrix
+            Selector._tempBlockMatrix
         );
 
         // Undo rotation from block matrix
-        const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);
+        const rotationMatrix = new THREE.Matrix4().extractRotation(Selector._tempBlockMatrix);
         const inverseRotationMatrix = rotationMatrix.invert();
-        blockMatrix.multiply(inverseRotationMatrix);
+        Selector._tempBlockMatrix.multiply(inverseRotationMatrix);
 
         // Set the selected coordinates to origin of chunk
         // Then apply transformation matrix of block to get block coords
         PlayerParams.selectedCoords = chunk.position.clone();
-        PlayerParams.selectedCoords.applyMatrix4(blockMatrix);
+        PlayerParams.selectedCoords.applyMatrix4(Selector._tempBlockMatrix);
 
         // Get the bounding box of the selected block
         // const boundingBox = new THREE.Box3().setFromObject(intersection.object);
