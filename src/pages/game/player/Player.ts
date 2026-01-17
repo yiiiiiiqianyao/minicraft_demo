@@ -4,19 +4,18 @@ import { PointerLockControls } from "three/examples/jsm/controls/PointerLockCont
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
-import { ToolBar, updatePositionGUI } from "../gui";
-import { getNearChunks } from "./utils";
-import { PlayerInitPosition, PlayerParams, RayCenterScreen } from "./literal";
+import { updatePositionGUI } from "../gui";
+import { PlayerInitPosition, PlayerParams } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
-import { RenderGeometry } from "../Block/Block";
 import { initBoundsHelper, selectionHelper, updateBoundsHelper } from "../helper";
 import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
-import { Engine, Layers } from "../engine";
+import { Layers } from "../engine";
 import { initPlayerCamera } from "./camera";
+import { Selector } from "./selector";
 
 export class Player {
   onGround = false;
@@ -34,10 +33,7 @@ export class Player {
   controls: PointerLockControls;
   boundsHelper: THREE.Mesh;
   private rayCaster: THREE.Raycaster;
-  /**
-   * Updates the raycaster used for block selection
-   */
-  private selectedBlockUuid: string | null = null;
+
 
     /*
    * Returns the velocity of the player in world coordinates
@@ -96,8 +92,8 @@ export class Player {
     this.velocity.add(dv);
   }
 
+  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */
   applyInputs(dt: number, blockUnderneath: BlockID) {
-    // Normalize the input vector if more than one key is pressed
     if (this.input.length() > 1) {
       this.input
         .normalize()
@@ -112,7 +108,7 @@ export class Player {
     if (this.onGround && this.input.length() > 0) {
       const minTimeout = this.isSprinting ? 300 : 400;
       if (performance.now() - this.lastStepSoundPlayed > minTimeout) {
-        this.playWalkSound(blockUnderneath);
+        audioManager.playWalkSound(blockUnderneath);
         this.lastStepSoundPlayed = performance.now();
       }
     }
@@ -132,7 +128,9 @@ export class Player {
   /**@desc 更新玩家 */
   update(world: World) {
     this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);
-    this.updateRayCaster(world);
+    // 更新用户的拾取选中方块
+    Selector.update(this.camera, world, selectionHelper);
+    Selector.select(this.camera, world, selectionHelper);
     this.updateCameraFOV();
     // prevent player from falling through
     if (this.position.y < 0) {
@@ -172,92 +170,9 @@ export class Player {
     // 角色一定距离内执行粒子动画、野怪刷新、植物生长
   }
 
-  private playWalkSound(blockUnderneath: BlockID) {
-    switch (blockUnderneath) {
-      case BlockID.Grass:
-      case BlockID.Dirt:
-      case BlockID.Leaves:
-        audioManager.play("step.grass");
-        break;
-      case BlockID.OakLog:
-        audioManager.play("step.wood");
-        break;
-      case BlockID.Stone:
-      case BlockID.CoalOre:
-      case BlockID.IronOre:
-      case BlockID.Bedrock:
-        audioManager.play("step.stone");
-        break;
-    }
-  }
-
   /**@desc 更新 player 的拾取射线 */
   private updateRayCaster(world: World) {
-    const rayCaster = this.rayCaster;
-    if(!rayCaster) return;
-    // if(Math.random() > 0) return;
-    rayCaster.setFromCamera(RayCenterScreen, this.camera);
     
-    // 过滤 player 所在的 chunk or 相邻 4 个 chunk
-    const chunks = getNearChunks(world);
-    // TODO 实际的拾取对象 可以使用 layer 进行过滤优化
-    const intersections = rayCaster.intersectObjects(chunks, true);
-    if (intersections.length > 0) {
-      const intersection = intersections[0];
-      if(this.selectedBlockUuid !== intersection.object.uuid) {
-        this.selectedBlockUuid = intersection.object.uuid;
-      }
-      
-      // Get the chunk associated with the seclected block
-      const chunk = intersection.object.parent;
-
-      if (intersection.instanceId == null || !chunk) {
-        selectionHelper.visible = false;
-        return;
-      }
-
-      // Get the transformation matrix for the selected block
-      const blockMatrix = new THREE.Matrix4();
-      (intersection.object as THREE.InstancedMesh).getMatrixAt(
-        intersection.instanceId,
-        blockMatrix
-      );
-
-      // Undo rotation from block matrix
-      const rotationMatrix = new THREE.Matrix4().extractRotation(blockMatrix);
-      const inverseRotationMatrix = rotationMatrix.invert();
-      blockMatrix.multiply(inverseRotationMatrix);
-
-      // Set the selected coordinates to origin of chunk
-      // Then apply transformation matrix of block to get block coords
-      PlayerParams.selectedCoords = chunk.position.clone();
-      PlayerParams.selectedCoords.applyMatrix4(blockMatrix);
-
-      // Get the bounding box of the selected block
-      const boundingBox = new THREE.Box3().setFromObject(intersection.object);
-      PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
-
-      if (ToolBar.activeBlockId !== BlockID.Air && intersection.normal) {
-        // Update block placement coords to be 1 block over in the direction of the normal
-        Action.blockPlacementCoords = PlayerParams.selectedCoords
-          .clone()
-          .add(intersection.normal);
-      }
-      if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {
-        selectionHelper.scale.set(0.3, 0.6, 0.3);
-      } else {
-        selectionHelper.scale.set(1, 1, 1);
-      } 
-      // TODO TallGrass 草方块的选择框需要调整大小
-      selectionHelper.position.copy(PlayerParams.selectedCoords);
-      selectionHelper.visible = true;
-    } else {
-      // 没有选中的方块时，将选中坐标设为 null
-      PlayerParams.selectedCoords = null;
-      // 没有选中的方块时，将选中方块大小设为 null
-      PlayerParams.selectedBlockSize = null;
-      selectionHelper.visible = false;
-    }
   }
 
   /**@desc 更新 player 角色相机的 FOV */

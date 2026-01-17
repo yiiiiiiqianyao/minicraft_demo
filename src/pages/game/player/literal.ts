@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedBlockSize, ISelectedCoords } from "./interface";
+import { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from "./interface";
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
 export class PlayerParams {
@@ -19,8 +19,6 @@ export class PlayerParams {
     static jumpSpeed = 10;
     /**@desc 玩家选中的方块坐标 可能未选中 */
     static selectedCoords: ISelectedCoords = null;
-    /**@desc 玩家选中的方块大小 可能未选中 */
-    static selectedBlockSize: ISelectedBlockSize = null;
     /**@desc 玩家是否处于 chunk 中心 */
     static isInChunkCenter = false;
     /**@desc 玩家所处的 chunkID */

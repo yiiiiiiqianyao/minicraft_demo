@@ -2,6 +2,7 @@ import { Howl, Howler } from "howler";
 import { sample } from "lodash";
 import soundData from "./sounds.json";
 import spriteData from "./sprite.json";
+import { BlockID } from "../Block";
 
 // TODO: remove this, add volume slider
 Howler.volume(0.3);
@@ -45,6 +46,25 @@ class AudioManager {
       loop: true,
     });
     sound.play();
+  }
+
+  playWalkSound(blockUnderneath: BlockID) {
+    switch (blockUnderneath) {
+      case BlockID.Grass:
+      case BlockID.Dirt:
+      case BlockID.Leaves:
+        this.play("step.grass");
+        break;
+      case BlockID.OakLog:
+        this.play("step.wood");
+        break;
+      case BlockID.Stone:
+      case BlockID.CoalOre:
+      case BlockID.IronOre:
+      case BlockID.Bedrock:
+        this.play("step.stone");
+        break;
+    }
   }
 }
 
