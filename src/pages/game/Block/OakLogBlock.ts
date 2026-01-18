@@ -12,6 +12,7 @@ const oakLogTopMaterial = new THREE.MeshLambertMaterial({
   map: textures.oakLogTop,
 });
 
+/**@desc 橡木原木块 */
 export class OakLogBlock extends Block {
   id = BlockID.OakLog;
   material = [

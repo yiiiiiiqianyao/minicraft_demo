@@ -8,6 +8,7 @@ import { oreConfig } from "../world/generate/resource";
 
 const ironMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 
+/**@desc 铁矿方块 */
 export const IronOreBlock = class extends OreBlock {
   id = BlockID.IronOre;
   scale = oreConfig["iron"].scale;

@@ -14,6 +14,7 @@ tallGrassMaterial.transparent = true;
 tallGrassMaterial.side = THREE.DoubleSide;
 tallGrassMaterial.depthWrite = false;
 
+/**@desc 长草方块 */
 export class TallGrassBlock extends Block {
   id = BlockID.TallGrass;
   material = tallGrassMaterial;

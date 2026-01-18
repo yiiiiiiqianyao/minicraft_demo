@@ -7,6 +7,7 @@ import { BlockID } from ".";
 
 const stoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
 
+/**@desc 石头方块 */
 export class StoneBlock extends Block {
   id = BlockID.Stone;
   material = stoneMaterial;

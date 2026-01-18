@@ -263,6 +263,7 @@ export class World extends THREE.Group {
       chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);
 
       // if adding a light, convert to point light
+      // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理
       if (block === BlockID.RedstoneLamp) {
         const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;
         const light = new THREE.PointLight(

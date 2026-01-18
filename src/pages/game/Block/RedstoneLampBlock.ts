@@ -10,6 +10,7 @@ const redstoneLampMaterial = new THREE.MeshBasicMaterial({
   map: textures.redstoneLamp,
 });
 
+/**@desc 红石灯方块 */
 export class RedstoneLampBlock extends LightSourceBlock {
   id = BlockID.RedstoneLamp;
   material = redstoneLampMaterial;

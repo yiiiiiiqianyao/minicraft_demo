@@ -11,6 +11,7 @@ const leavesMaterial = new THREE.MeshLambertMaterial({
 leavesMaterial.transparent = true;
 leavesMaterial.side = THREE.DoubleSide;
 
+/**@desc 树叶方块 */
 export class LeavesBlock extends Block {
   id = BlockID.Leaves;
   material = leavesMaterial;
