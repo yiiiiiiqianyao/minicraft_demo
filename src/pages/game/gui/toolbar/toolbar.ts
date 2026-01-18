@@ -16,6 +16,7 @@ export class ToolBar {
       // BlockID.IronOre,
       // BlockID.OakLog,
       // BlockID.Leaves,
+      BlockID.FlowerRose
     ];
     static activeToolbarIndex = 0;
     static get activeBlockId(): BlockID | undefined {

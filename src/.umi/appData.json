@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -88,7 +88,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            3
+            2
           ]
         },
         "register": 3
@@ -139,24 +139,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1
+            0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -170,63 +156,46 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            19,
+            18,
             2,
+            3,
             4,
-            5,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            3,
+            3,
+            4,
+            6,
+            3,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
             7,
             2,
             2,
+            4,
             2,
-            4,
-            4,
-            5,
-            2,
-            4,
             3,
-            3,
-            2,
-            4,
-            2,
-            2,
-            5,
-            3,
-            2,
-            2,
-            4,
-            3,
-            4,
-            12,
             6,
             3,
-            1,
-            3,
             2,
             2,
             2,
-            5,
-            4,
-            4,
-            3,
             2,
-            4,
-            4,
-            4,
             2,
-            4,
-            2,
-            4,
-            2,
-            3,
-            2,
-            4,
-            2,
-            3,
-            4,
-            3
+            1
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -240,58 +209,44 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            111
+            80
           ],
           "onGenerateFiles": [
-            3,
-            7,
-            5,
-            6,
-            7,
-            5,
-            6,
-            5,
-            7,
-            6,
-            6,
-            6,
-            4,
-            4,
-            6,
-            6,
-            7,
-            7,
-            4,
-            5,
-            5,
-            6,
-            6,
+            1,
             10,
-            5,
-            4,
-            5,
             7,
             6,
+            8,
+            6,
+            7,
+            5,
+            6,
+            7,
             7,
             6,
-            4,
             6,
-            5,
-            5,
-            6,
-            12,
-            6,
-            5,
             7,
+            10,
             4,
             6,
             5,
-            5,
-            5,
             6,
             5,
+            6,
+            6,
+            6,
+            7,
+            6,
+            4,
             5,
-            6
+            6,
+            6,
+            5,
+            7,
+            7,
+            7,
+            18,
+            7
           ]
         },
         "register": 16
@@ -308,20 +263,6 @@
       "time": {
         "hooks": {
           "addEntryCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -414,44 +355,11 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onCheckCode": [
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             0,
@@ -548,7 +456,7 @@
             0
           ]
         },
-        "register": 9
+        "register": 8
       },
       "enableBy": "register"
     },
@@ -1448,7 +1356,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 46
+        "register": 47
       },
       "enableBy": "register"
     },
@@ -1461,7 +1369,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 44
+        "register": 43
       },
       "enableBy": "config"
     },
@@ -1474,7 +1382,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 19
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -1494,6 +1402,44 @@
             0
           ],
           "modifyHTMLFavicon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             1,
             0,
             0,
@@ -1524,16 +1470,7 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
+            1
           ]
         },
         "register": 1
@@ -1550,40 +1487,27 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            12,
-            1,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
             1,
             0,
             0,
             1,
             0,
+            1,
+            1,
+            1,
+            1,
             0,
-            1,
-            1,
-            1,
             1,
             1,
             0,
             0,
             1,
             1,
-            1,
             0,
             0,
             1,
+            1,
+            0,
             0,
             1,
             0,
@@ -1592,13 +1516,12 @@
             0,
             0,
             0,
-            1,
-            1,
-            0,
-            1,
             0,
             0,
-            1
+            0,
+            0,
+            0,
+            0
           ],
           "addRuntimePlugin": [
             0,
@@ -1635,24 +1558,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1685,7 +1594,7 @@
             1
           ]
         },
-        "register": 25
+        "register": 22
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1697,7 +1606,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1723,20 +1632,6 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1843,34 +1738,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -1904,85 +1771,43 @@
             1
           ],
           "onGenerateFiles": [
-            64,
+            77,
             16,
-            8,
-            8,
-            9,
-            8,
-            12,
             11,
-            11,
-            9,
-            12,
             8,
-            11,
+            16,
             10,
+            13,
             9,
+            11,
+            11,
+            11,
+            13,
             9,
+            12,
+            30,
+            10,
             10,
             10,
             9,
             7,
             11,
-            7,
             12,
-            17,
+            12,
             7,
             6,
             12,
-            7,
-            9,
-            12,
-            10,
-            7,
-            10,
-            7,
-            8,
-            7,
-            15,
-            9,
-            8,
-            11,
-            9,
-            9,
-            7,
-            7,
-            20,
-            9,
-            7,
             6,
-            9
+            9,
+            8,
+            12,
+            8,
+            9,
+            8,
+            23,
+            10
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2055,7 +1880,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -2068,34 +1893,6 @@
       "time": {
         "hooks": {
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2182,21 +1979,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            81,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            76,
             0,
             0,
             0,
@@ -2281,13 +2064,7 @@
             0,
             0,
             0,
-            1,
             0,
-            0,
-            0,
-            1,
-            1,
-            1,
             0,
             0,
             0,
@@ -2296,9 +2073,6 @@
             0,
             0,
             0,
-            1,
-            0,
-            1,
             0,
             0,
             0,
@@ -2306,16 +2080,11 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             1,
-            1,
+            0,
+            0,
             0,
             0,
             0,
@@ -2341,104 +2110,76 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            14,
-            7,
-            51,
+            15,
             2,
-            46,
+            44,
+            2,
+            61,
+            3,
+            52,
             1,
-            48,
-            5,
+            49,
+            2,
             45,
             1,
+            48,
+            2,
             44,
             1,
-            78,
+            42,
             2,
-            51,
-            1,
             45,
-            2,
-            40,
-            1,
-            47,
-            2,
-            48,
             1,
             45,
             1,
-            56,
+            45,
+            0,
+            44,
+            3,
+            43,
             1,
-            46,
-            1,
-            50,
+            114,
             2,
-            46,
+            45,
             1,
-            48,
-            2,
             42,
             1,
-            45,
+            80,
+            2,
+            49,
+            1,
+            46,
+            1,
+            46,
+            1,
+            48,
+            1,
+            47,
+            1,
+            50,
+            1,
+            48,
+            1,
+            43,
             1,
             41,
-            2,
+            1,
+            52,
+            1,
             46,
             2,
-            44,
+            47,
             1,
-            55,
-            2,
-            44,
+            45,
             1,
-            49,
+            43,
             1,
             48,
-            1,
-            45,
-            1,
-            46,
-            1,
-            58,
-            1,
-            45,
-            1,
+            2,
             53,
-            3,
-            57,
-            2,
-            47,
-            0,
-            45,
             1,
-            47,
-            1,
-            50,
-            1,
-            49,
-            2,
             51,
-            1,
-            49,
-            1,
-            45,
-            1,
-            47,
-            1,
-            50,
-            1,
-            48,
-            1,
-            56,
-            1,
-            48,
-            1,
-            48,
-            1,
-            45,
-            1,
-            45,
-            1
+            2
           ]
         },
         "register": 5
@@ -2468,21 +2209,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
             1,
             0,
             0,
             0,
             1,
             0,
-            0,
-            0,
             1,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2506,23 +2239,17 @@
             0,
             0,
             0,
-            1,
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1
+            0
           ],
           "onBeforeCompiler": [
             1
           ]
         },
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -2534,7 +2261,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2548,55 +2275,41 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            239,
+            224,
+            9,
+            9,
+            5,
+            5,
+            6,
+            5,
+            5,
+            5,
+            5,
+            4,
+            5,
+            5,
+            5,
             8,
             5,
-            15,
-            5,
-            8,
-            5,
-            6,
             4,
             7,
-            5,
-            5,
-            5,
-            5,
-            5,
-            7,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            5,
-            6,
-            5,
-            4,
-            5,
-            4,
-            4,
-            6,
-            4,
-            4,
-            4,
-            4,
-            6,
-            4,
-            5,
-            5,
-            5,
             4,
             3,
             5,
-            5,
-            4,
-            4,
             4,
             5,
-            3,
-            4
+            4,
+            5,
+            6,
+            5,
+            4,
+            6,
+            4,
+            4,
+            5,
+            6,
+            5,
+            5
           ]
         },
         "register": 3
@@ -2616,7 +2329,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2667,7 +2380,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 13
       },
       "enableBy": "config"
     },
@@ -2681,25 +2394,18 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
-            1,
-            1,
             2,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
             0,
             1,
             1,
-            1,
-            1,
+            0,
             1,
             0,
             0,
+            0,
+            1,
+            1,
+            1,
             0,
             0,
             0,
@@ -2707,32 +2413,25 @@
             1,
             0,
             1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
             1,
             0,
             1,
             0,
             0,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
             0,
             0,
             0,
             1,
-            0
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
           ]
         },
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -2757,7 +2456,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2770,7 +2469,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2799,7 +2498,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2812,7 +2511,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -2824,7 +2523,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2837,7 +2536,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -2849,7 +2548,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -2873,7 +2572,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2887,7 +2586,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            495
+            464
           ]
         },
         "register": 1
@@ -2903,7 +2602,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2930,10 +2629,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            9
+            7
           ]
         },
-        "register": 39
+        "register": 37
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2945,7 +2644,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2971,7 +2670,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2984,7 +2683,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2997,7 +2696,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -3010,7 +2709,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -3036,7 +2735,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -3049,7 +2748,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -3179,7 +2878,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -3205,7 +2904,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -3380,6 +3079,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/TallGrassBlock.ts"
     },
+    "game/world/chunk/instance": {
+      "path": "game/world/chunk/instance",
+      "id": "game/world/chunk/instance",
+      "file": "game/world/chunk/instance.ts",
+      "absPath": "/game/world/chunk/instance",
+      "__content": "import * as THREE from \"three\";\nimport { Block, RenderGeometry } from \"../../Block/Block\";\n\nexport function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {\n    switch (blockClass.geometry) {\n        case RenderGeometry.Cube:\n            return InstanceMeshAddCube(mesh, x, y, z);\n        case RenderGeometry.Cross:\n            return InstanceMeshAddCross(mesh, x, y, z);\n        case RenderGeometry.Flower:\n            return InstanceMeshAddFlower(mesh, x, y, z);\n        default:\n            console.warn(`Unknown geometry ${blockClass.geometry}`);\n            return null;\n    }\n}\n\nfunction InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId = mesh.count++;\n    const matrix = new THREE.Matrix4();\n    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId, matrix);\n\n    return [instanceId];\n}\n\nfunction InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    return [instanceId1, instanceId2];\n}\n\nfunction InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    mesh.userData.renderGeometry = RenderGeometry.Flower;\n    return [instanceId1, instanceId2];\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/chunk/instance.ts"
+    },
     "game/world/drop/interface": {
       "path": "game/world/drop/interface",
       "id": "game/world/drop/interface",
@@ -3421,7 +3129,7 @@
       "id": "game/gui/toolbar/toolbar",
       "file": "game/gui/toolbar/toolbar.ts",
       "absPath": "/game/gui/toolbar/toolbar",
-      "__content": "import { BlockID } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { setActive } from \"./dom\";\nimport { ToolBarMaxCount } from \"./literal\";\n\n/**@desc 玩家物品栏 */\nexport class ToolBar {\n    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个\n    static toolbar: BlockID[] = [\n      // BlockID.Grass,\n      // BlockID.Dirt,\n      // BlockID.Stone,\n      // BlockID.StoneBrick,\n      // BlockID.RedstoneLamp,\n      // BlockID.CoalOre,\n      // BlockID.IronOre,\n      // BlockID.OakLog,\n      // BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId(): BlockID | undefined {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    /**@desc 往玩家物品栏中添加物品 */\n    static pushBlockId(blockId: BlockID) {\n      if (ToolBar.toolbar.includes(blockId)) return;\n      if (ToolBar.toolbar.length > ToolBarMaxCount) return;\n      ToolBar.toolbar.push(blockId);\n      ToolBar.updateToolBarGUI();\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      setActive(index);\n    }\n\n    /**@desc 滚动玩家物品栏的选中框 */\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n    }\n\n    /**@desc 更新玩家物品栏中 block 对应的 ui */\n    static updateToolBarGUI() {\n      for (let i = 1; i <= ToolBarMaxCount; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId !== undefined && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;\n          }\n        }\n      }\n    }\n}\n",
+      "__content": "import { BlockID } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { setActive } from \"./dom\";\nimport { ToolBarMaxCount } from \"./literal\";\n\n/**@desc 玩家物品栏 */\nexport class ToolBar {\n    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个，待升级为 IToolBarItem\n    static toolbar: BlockID[] = [\n      // BlockID.Grass,\n      // BlockID.Dirt,\n      // BlockID.Stone,\n      // BlockID.StoneBrick,\n      // BlockID.RedstoneLamp,\n      // BlockID.CoalOre,\n      // BlockID.IronOre,\n      // BlockID.OakLog,\n      // BlockID.Leaves,\n      BlockID.FlowerRose\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId(): BlockID | undefined {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    /**@desc 往玩家物品栏中添加物品 */\n    static pushBlockId(blockId: BlockID) {\n      if (ToolBar.toolbar.includes(blockId)) return;\n      if (ToolBar.toolbar.length > ToolBarMaxCount) return;\n      ToolBar.toolbar.push(blockId);\n      ToolBar.updateToolBarGUI();\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      setActive(index);\n    }\n\n    /**@desc 滚动玩家物品栏的选中框 */\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n    }\n\n    /**@desc 更新玩家物品栏中 block 对应的 ui */\n    static updateToolBarGUI() {\n      for (let i = 1; i <= ToolBarMaxCount; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId !== undefined && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;\n          }\n        }\n      }\n    }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/toolbar.ts"
     },
@@ -3592,7 +3300,7 @@
       "id": "game/world/WorldChunk",
       "file": "game/world/WorldChunk.ts",
       "absPath": "/game/world/WorldChunk",
-      "__content": "import * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport { IWorldParams, IInstanceData } from \"./interface\";\nimport { generateChunk } from \"./generate\";\nimport { getInstancedGeometry } from \"./geometry\";\nimport { DropGroup } from \"./drop/drop\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { initChunkHelper } from \"../helper/chunkHelper\";\nimport { DevControl } from \"../dev\";\nimport { wireframeMaterial } from \"../engine/material\";\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  loaded: boolean;\n  dataStore: DataStore;\n  dropGroup: DropGroup;\n  // for dev test\n  helper: THREE.Mesh | null = null;\n  helperColor: THREE.Color | null = null;\n\n  constructor(params: IWorldParams, dataStore: DataStore) {\n    super();\n    this.params = params;\n    this.dataStore = dataStore;\n    this.dropGroup = new DropGroup(this.position, this);\n    this.loaded = false;\n    if(DevControl.chunkHelperVisible) {\n      this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())\n      this.helper = initChunkHelper()\n      this.helper.visible = true;\n    }\n  }\n\n  async generate() {\n    // const start = performance.now();\n    // 初始化 chunk 数据\n    const { x, z } = this.position;\n    const data: BlockID[][][] = await generateChunk(this.params, x, z);\n\n    // 空闲时间的 callback\n    requestIdleCallback(() => {\n        // 设置初始化的 chunk 数据\n        this.initializeTerrain(data);\n        // \n        this.loadPlayerChanges();\n\n        // 生成 chunk 的 mesh\n        this.generateMeshes(data);\n        this.loaded = true;\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    this.data = [];\n    for (let x = 0; x < width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    const { width, height } = ChunkParams;\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  // 生成 chunk 中的 block 对应的 mesh\n  generateMeshes(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    const { chunkHelperVisible, chunkWireframeMode } = DevControl;\n    this.clear();\n\n    const maxCount = width * width * height;\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n\n    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh\n    for (const blockId of blockIDValues) {\n      const blockEntity = BlockFactory.getBlock(blockId);\n      const blockGeometry = blockEntity.geometry;\n      const initChunkMesh = () => {\n        if(chunkHelperVisible) { // make dev chunk\n          const helperColor = this.helperColor as THREE.Color;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),\n            maxCount\n          )\n        } else {\n          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n            material,\n            maxCount\n          );\n        }\n      }\n      const mesh = initChunkMesh();\n      mesh.name = blockEntity.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !blockEntity.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[blockEntity.id] = mesh;\n    }\n    // 根据类型为每个 block 类型创建 Mesh\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n          // 空气块不生成 mesh\n          if (block === BlockID.Air) continue;\n          // 当前 block 对应的 InstanceMesh\n          const mesh = meshes[block];\n          if (!mesh) continue;\n          // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）\n          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {\n            if (blockClass.geometry == RenderGeometry.Cube) {\n              const instanceId = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n              const matrix = new THREE.Matrix4();\n              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId, matrix);\n            } else if (blockClass.geometry == RenderGeometry.Cross) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n            } else if(blockClass.geometry == RenderGeometry.Flower) {\n              const instanceId1 = mesh.count++;\n              const instanceId2 = mesh.count++;\n              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n              // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高\n              const matrix1 = new THREE.Matrix4();\n              matrix1.makeRotationY(Math.PI / 4);\n              matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n              mesh.setMatrixAt(instanceId1, matrix1);\n\n              const matrix2 = new THREE.Matrix4();\n              matrix2.makeRotationY(-Math.PI / 4);\n              matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n              mesh.setMatrixAt(instanceId2, matrix2);\n\n              mesh.userData.renderGeometry = RenderGeometry.Flower;\n            }\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      if (mesh) {\n        this.add(mesh);\n      }\n    }\n    // 添加掉落物品组\n    this.add(this.dropGroup);\n    // add chunk helper for dev test\n    this.helper && this.add(this.helper);\n  }\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {\n        return this.data[x][y][z];\n      } else {\n        return null;\n      }\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * @desc Removes the block at (x, y, z => chunk coords)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));\n    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;\n    const blockId = block.block;\n    this.playBlockSound(blockId);\n    this.deleteBlockInstance(x, y, z, block);\n    \n    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率\n    const blockEntity = BlockFactory.getBlock(blockId);\n    if(blockEntity.canDrop) {\n      // 触发掉落物品\n      this.dropGroup.drop(block.block, x, y, z);\n    }    \n\n    this.setBlockId(x, y, z, BlockID.Air);\n    // 更新数据存储 设置方块为Air\n    this.dataStore.set(\n      this.position.x,\n      this.position.z,\n      x,\n      y,\n      z,\n      BlockID.Air\n    );\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * @desc Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n    // TODO 在增加 block instance 的同时 需要更新 block data 的数据\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n\n      if (mesh) {\n        // 放置方块的时候播放对应的音效\n        this.playBlockSound(block.block);\n        if (blockClass.geometry == RenderGeometry.Cube) {\n          const instanceId = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId]);\n\n          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works\n          const matrix = new THREE.Matrix4();\n          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId, matrix);\n          mesh.instanceMatrix.needsUpdate = true;\n          // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n          mesh.computeBoundingSphere();\n        } else if (blockClass.geometry == RenderGeometry.Cross) {\n          const instanceId1 = mesh.count++;\n          const instanceId2 = mesh.count++;\n          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);\n\n          const matrix1 = new THREE.Matrix4();\n          matrix1.makeRotationY(Math.PI / 4);\n          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId1, matrix1);\n\n          const matrix2 = new THREE.Matrix4();\n          matrix2.makeRotationY(-Math.PI / 4);\n          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n          mesh.setMatrixAt(instanceId2, matrix2);\n\n          mesh.instanceMatrix.needsUpdate = true;\n          mesh.computeBoundingSphere();\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {\n    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例\n     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg\n     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id\n     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后\n     * 通过 mesh.count-- 来删除 instance id 列表后序的实例\n     */\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    const lastBlockInstanceIds: number[] = [];\n    const lastBlockCoords = new THREE.Vector3();\n    block.instanceIds.forEach((instanceId) => {\n      // 获取 instanceMesh 中最后一个 instance id 的矩阵\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      // const lastBlockCoords = new THREE.Vector3();\n      // 获取instanceMesh 中最后一个 instance 的 block 位置\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      // this.setBlockInstanceIds(\n      //   Math.floor(lastBlockCoords.x),\n      //   Math.floor(lastBlockCoords.y),\n      //   Math.floor(lastBlockCoords.z),\n      //   [instanceId]\n      // );\n      // 最后一个 instance 实例\n      lastBlockInstanceIds.push(instanceId);\n\n      // Swap transformation matrices\n      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，\n      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n    /**\n     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block 的 instanceIds\n     */\n     this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        lastBlockInstanceIds,\n      );\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {\n        // console.log('setBlockInstanceIds:', x, y, z,instanceIds);\n      }\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    return (\n      x >= 0 &&\n      x < width &&\n      y >= 0 &&\n      y < height &&\n      z >= 0 &&\n      z < width\n    );\n  }\n\n  /**\n   * 判断一个方块是否被其他方块遮挡\n   * @param x \n   * @param y \n   * @param z \n   * @returns 是否被其他方块遮挡\n   */\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  /**\n   * 判断一个方块是否在 chunk 的边界上\n   * 边界的表面，其上方的方块可以通过 其也不算边界\n   * @param x \n   * @param y \n   * @param z \n   * @returns \n   */\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    // TODO 看上去是一个优化判断 暂时待理解\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    // \n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === width - 1 ||\n      y === 0 ||\n      y === height - 1 ||\n      z === 0 ||\n      z === width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
+      "__content": "import * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { RenderGeometry } from \"../Block/Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport { IWorldParams, IInstanceData } from \"./interface\";\nimport { generateChunk } from \"./generate\";\nimport { getInstancedGeometry } from \"./geometry\";\nimport { DropGroup } from \"./drop/drop\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { initChunkHelper } from \"../helper/chunkHelper\";\nimport { DevControl } from \"../dev\";\nimport { wireframeMaterial } from \"../engine/material\";\nimport { InstanceMeshAdd } from \"./chunk/instance\";\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  loaded: boolean;\n  dataStore: DataStore;\n  dropGroup: DropGroup;\n  // for dev test\n  helper: THREE.Mesh | null = null;\n  helperColor: THREE.Color | null = null;\n\n  constructor(params: IWorldParams, dataStore: DataStore) {\n    super();\n    this.params = params;\n    this.dataStore = dataStore;\n    this.dropGroup = new DropGroup(this.position, this);\n    this.loaded = false;\n    if(DevControl.chunkHelperVisible) {\n      this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())\n      this.helper = initChunkHelper()\n      this.helper.visible = true;\n    }\n  }\n\n  async generate() {\n    // const start = performance.now();\n    // 初始化 chunk 数据\n    const { x, z } = this.position;\n    const data: BlockID[][][] = await generateChunk(this.params, x, z);\n\n    // 空闲时间的 callback\n    requestIdleCallback(() => {\n        // 设置初始化的 chunk 数据\n        this.initializeTerrain(data);\n        // \n        this.loadPlayerChanges();\n\n        // 生成 chunk 的 mesh\n        this.generateMeshes(data);\n        this.loaded = true;\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    this.data = [];\n    for (let x = 0; x < width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    const { width, height } = ChunkParams;\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  // 生成 chunk 中的 block 对应的 mesh\n  generateMeshes(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    const { chunkHelperVisible, chunkWireframeMode } = DevControl;\n    this.clear();\n\n    const maxCount = width * width * height;\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n\n    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh\n    for (const blockId of blockIDValues) {\n      const blockEntity = BlockFactory.getBlock(blockId);\n      const blockGeometry = blockEntity.geometry;\n      const initChunkMesh = () => {\n        if(chunkHelperVisible) { // make dev chunk\n          const helperColor = this.helperColor as THREE.Color;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),\n            maxCount\n          )\n        } else {\n          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n            material,\n            maxCount\n          );\n        }\n      }\n      const mesh = initChunkMesh();\n      mesh.name = blockEntity.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !blockEntity.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[blockEntity.id] = mesh;\n    }\n    // 根据类型为每个 block 类型创建 Mesh\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n          // 空气块不生成 mesh\n          if (block === BlockID.Air) continue;\n          // 当前 block 对应的 InstanceMesh\n          const mesh = meshes[block];\n          if (!mesh) continue;\n          // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）\n          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {\n            const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n            ids && this.setBlockInstanceIds(x, y, z, ids);\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      // mesh 在 add 的时候会自动更新矩阵\n      mesh && this.add(mesh);\n    }\n    // 添加掉落物品组\n    this.add(this.dropGroup);\n    // add chunk helper for dev test\n    this.helper && this.add(this.helper);\n  }\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {\n        return this.data[x][y][z];\n      } else {\n        return null;\n      }\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * @desc Removes the block at (x, y, z => chunk coords)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));\n    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;\n    const blockId = block.block;\n    this.playBlockSound(blockId);\n    this.deleteBlockInstance(x, y, z, block);\n    \n    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率\n    const blockEntity = BlockFactory.getBlock(blockId);\n    if(blockEntity.canDrop) {\n      // 触发掉落物品\n      this.dropGroup.drop(block.block, x, y, z);\n    }    \n\n    this.setBlockId(x, y, z, BlockID.Air);\n    // 更新数据存储 设置方块为Air\n    this.dataStore.set(\n      this.position.x,\n      this.position.z,\n      x,\n      y,\n      z,\n      BlockID.Air\n    );\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * @desc Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n    // TODO 在增加 block instance 的同时 需要更新 block data 的数据\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n      if (mesh) {\n        // 放置方块的时候播放对应的音效\n        this.playBlockSound(block.block);\n        const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n        if(ids) {\n          this.setBlockInstanceIds(x, y, z, ids);\n          mesh.instanceMatrix.needsUpdate = true;\n          // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n          mesh.computeBoundingSphere();\n        } else {\n          console.warn(`Failed to add instance for block ${block.block}`);\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {\n    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例\n     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg\n     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id\n     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后\n     * 通过 mesh.count-- 来删除 instance id 列表后序的实例\n     */\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    const lastBlockInstanceIds: number[] = [];\n    const lastBlockCoords = new THREE.Vector3();\n    block.instanceIds.forEach((instanceId) => {\n      // 获取 instanceMesh 中最后一个 instance id 的矩阵\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      // const lastBlockCoords = new THREE.Vector3();\n      // 获取instanceMesh 中最后一个 instance 的 block 位置\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      // this.setBlockInstanceIds(\n      //   Math.floor(lastBlockCoords.x),\n      //   Math.floor(lastBlockCoords.y),\n      //   Math.floor(lastBlockCoords.z),\n      //   [instanceId]\n      // );\n      // 最后一个 instance 实例\n      lastBlockInstanceIds.push(instanceId);\n\n      // Swap transformation matrices\n      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，\n      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n    /**\n     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block 的 instanceIds\n     */\n     this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        lastBlockInstanceIds,\n      );\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {\n        // console.log('setBlockInstanceIds:', x, y, z,instanceIds);\n      }\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    return (\n      x >= 0 &&\n      x < width &&\n      y >= 0 &&\n      y < height &&\n      z >= 0 &&\n      z < width\n    );\n  }\n\n  /**\n   * 判断一个方块是否被其他方块遮挡\n   * @param x \n   * @param y \n   * @param z \n   * @returns 是否被其他方块遮挡\n   */\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  /**\n   * 判断一个方块是否在 chunk 的边界上\n   * 边界的表面，其上方的方块可以通过 其也不算边界\n   * @param x \n   * @param y \n   * @param z \n   * @returns \n   */\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    // TODO 看上去是一个优化判断 暂时待理解\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    // \n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === width - 1 ||\n      y === 0 ||\n      y === height - 1 ||\n      z === 0 ||\n      z === width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/WorldChunk.ts"
     },
@@ -3673,7 +3381,7 @@
       "id": "game/world/drop/drop",
       "file": "game/world/drop/drop.ts",
       "absPath": "/game/world/drop/drop",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // Tip 在掉落 落地的时候计算\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/drop/drop.ts"
     },
@@ -3916,7 +3624,7 @@
       "id": "game/world/World",
       "file": "game/world/World.ts",
       "absPath": "/game/world/World",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\nimport { getDefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition, PlayerParams } from \"../player/literal\";\nimport { swapMenuScreenGUI, updateProgressGUI } from \"../gui\";\nimport { RNG } from \"../seed/RNG\";\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise.js\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { worldToChunkCoords, worldToChunkCoordsXZ } from \"./chunk/utils\";\nimport { getFloorXYZ } from \"../engine/utils\";\nimport { PhysicsParams } from \"../physics/literal\";\n\nexport class World extends THREE.Group {\n  static rng: RNG;\n  static simplex: SimplexNoise;\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = getDefaultWorldParams();\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    World.rng = new RNG(seed);\n    World.simplex = new SimplexNoise(World.rng);\n    this.scene = scene;\n    this.chunkQueue = [];\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks();\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      this.updateInitialLoad(player);\n    }\n  }\n\n  updateInitialLoad(player: Player) {\n    const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n    const loadedChunks = this.children.length;\n    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n    const startX = PlayerInitPosition.x;\n    const startZ = PlayerInitPosition.z;\n    if(!PlayerParams.currentChunk) {  \n      const [chunkX, chunkZ] = worldToChunkCoordsXZ(startX, startZ);\n      PlayerParams.currentChunk = {x: chunkX, z: chunkZ};\n    }\n    \n\n    updateProgressGUI(percentLoaded);\n    // 初始化更新一次 player 信息\n    if(percentLoaded === 100) {\n      this.initialLoadComplete = true;\n      player.updateByPosition();\n      \n      const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n     \n      const currentChunkHeight = ChunkParams.height;\n      for (let y = currentChunkHeight; y > 0; y--) {\n        // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整\n        if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {\n          startingPlayerPosition.y = y;\n          break;\n        }\n      }\n      // 角色从离地面 10 个单位的位置开始\n      player.position.set(startX,startingPlayerPosition.y + 10,startZ);\n      // 角色 PointerLockControls 控制器解锁\n      player.controls.lock();\n      player.updateByPosition();\n      PhysicsParams.enabled = true;\n      swapMenuScreenGUI();\n    }\n  }\n\n  /**\n   * @desc 获取角色当前位置下方的方块\n   * @param position 世界坐标的位置\n   * @param playerHeight \n   * @returns \n   */\n  getBlockUnderneath(position: THREE.Vector3) {\n    const {x, y, z} = position;\n    const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);\n    return this.getBlock(floorX, floorY, floorZ);\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);\n    if (!PlayerParams.currentChunk) return [];\n    // console.log('chunkX, chunkZ', chunkX, chunkZ);\n    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2\n      );\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n    return chunksToRemove;\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const { width } = ChunkParams;\n    const chunk = new WorldChunk(this.params, this.dataStore);\n    chunk.position.set(x * width, 0, z * width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  // TODO 破坏 & 移除方块\n  removeBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n    // console.log('chunk', chunk);\n    // console.log('blockToRemove', blockToRemove);\n    // 不能破坏基岩 bedrock\n    if (blockToRemove?.block === BlockID.Bedrock) return;\n    \n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      // 如果是光源方块 则需要移除对应的点光源\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\nimport { getDefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition, PlayerParams } from \"../player/literal\";\nimport { swapMenuScreenGUI, ToolBar, updateProgressGUI } from \"../gui\";\nimport { RNG } from \"../seed/RNG\";\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise.js\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { worldToChunkCoords, worldToChunkCoordsXZ } from \"./chunk/utils\";\nimport { getFloorXYZ } from \"../engine/utils\";\nimport { PhysicsParams } from \"../physics/literal\";\n\nexport class World extends THREE.Group {\n  static rng: RNG;\n  static simplex: SimplexNoise;\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = getDefaultWorldParams();\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    World.rng = new RNG(seed);\n    World.simplex = new SimplexNoise(World.rng);\n    this.scene = scene;\n    this.chunkQueue = [];\n\n    ToolBar.updateToolBarGUI();\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks();\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      this.updateInitialLoad(player);\n    }\n  }\n\n  updateInitialLoad(player: Player) {\n    const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n    const loadedChunks = this.children.length;\n    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n    const startX = PlayerInitPosition.x;\n    const startZ = PlayerInitPosition.z;\n    if(!PlayerParams.currentChunk) {  \n      const [chunkX, chunkZ] = worldToChunkCoordsXZ(startX, startZ);\n      PlayerParams.currentChunk = {x: chunkX, z: chunkZ};\n    }\n    \n\n    updateProgressGUI(percentLoaded);\n    // 初始化更新一次 player 信息\n    if(percentLoaded === 100) {\n      this.initialLoadComplete = true;\n      player.updateByPosition();\n      \n      const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n     \n      const currentChunkHeight = ChunkParams.height;\n      for (let y = currentChunkHeight; y > 0; y--) {\n        // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整\n        if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {\n          startingPlayerPosition.y = y;\n          break;\n        }\n      }\n      // 角色从离地面 10 个单位的位置开始\n      player.position.set(startX,startingPlayerPosition.y + 10,startZ);\n      // 角色 PointerLockControls 控制器解锁\n      player.controls.lock();\n      player.updateByPosition();\n      PhysicsParams.enabled = true;\n      swapMenuScreenGUI();\n    }\n  }\n\n  /**\n   * @desc 获取角色当前位置下方的方块\n   * @param position 世界坐标的位置\n   * @param playerHeight \n   * @returns \n   */\n  getBlockUnderneath(position: THREE.Vector3) {\n    const {x, y, z} = position;\n    const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);\n    return this.getBlock(floorX, floorY, floorZ);\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);\n    if (!PlayerParams.currentChunk) return [];\n    // console.log('chunkX, chunkZ', chunkX, chunkZ);\n    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2\n      );\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n    return chunksToRemove;\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const { width } = ChunkParams;\n    const chunk = new WorldChunk(this.params, this.dataStore);\n    chunk.position.set(x * width, 0, z * width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  // TODO 破坏 & 移除方块\n  removeBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n    // console.log('chunk', chunk);\n    // console.log('blockToRemove', blockToRemove);\n    // 不能破坏基岩 bedrock\n    if (blockToRemove?.block === BlockID.Bedrock) return;\n    \n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      // 如果是光源方块 则需要移除对应的点光源\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/World.ts"
     },
@@ -6042,7 +5750,7 @@
             "format": "esm"
           },
           "src/pages/game/gui/toolbar/toolbar.ts": {
-            "bytes": 2120,
+            "bytes": 2145,
             "imports": [
               {
                 "path": "src/pages/game/Block/index.ts",
@@ -6129,7 +5837,7 @@
             "format": "esm"
           },
           "src/pages/game/world/drop/drop.ts": {
-            "bytes": 11054,
+            "bytes": 11098,
             "imports": [
               {
                 "path": "three",
@@ -6220,8 +5928,24 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/world/chunk/instance.ts": {
+            "bytes": 2208,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/Block.ts",
+                "kind": "import-statement",
+                "original": "../../Block/Block"
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/world/WorldChunk.ts": {
-            "bytes": 17849,
+            "bytes": 15262,
             "imports": [
               {
                 "path": "three",
@@ -6239,9 +5963,9 @@
                 "original": "../Block"
               },
               {
-                "path": "src/pages/game/Block/Block.ts",
+                "path": "../Block/Block",
                 "kind": "import-statement",
-                "original": "../Block/Block"
+                "external": true
               },
               {
                 "path": "src/pages/game/Block/BlockFactory.ts",
@@ -6292,6 +6016,11 @@
                 "path": "src/pages/game/engine/material.ts",
                 "kind": "import-statement",
                 "original": "../engine/material"
+              },
+              {
+                "path": "src/pages/game/world/chunk/instance.ts",
+                "kind": "import-statement",
+                "original": "./chunk/instance"
               }
             ],
             "format": "esm"
@@ -6340,7 +6069,7 @@
             "format": "esm"
           },
           "src/pages/game/world/World.ts": {
-            "bytes": 12538,
+            "bytes": 12580,
             "imports": [
               {
                 "path": "three",
@@ -7274,7 +7003,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 20462,
+            "bytes": 20732,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -7350,6 +7079,11 @@
                 "path": "src/pages/game/Block/TallGrassBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/TallGrassBlock.ts"
+              },
+              {
+                "path": "src/pages/game/world/chunk/instance.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/world/chunk/instance.ts"
               },
               {
                 "path": "src/pages/game/world/drop/interface.ts",
@@ -8011,6 +7745,11 @@
               },
               {
                 "path": "lodash",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -9445,19 +9184,22 @@
                 "bytesInOutput": 247
               },
               "src/pages/game/gui/toolbar/toolbar.ts": {
-                "bytesInOutput": 2222
+                "bytesInOutput": 2250
               },
               "src/pages/game/gui/index.ts": {
                 "bytesInOutput": 5682
               },
               "src/pages/game/world/drop/drop.ts": {
-                "bytesInOutput": 7753
+                "bytesInOutput": 7791
               },
               "src/pages/game/helper/chunkHelper.ts": {
                 "bytesInOutput": 2258
               },
+              "src/pages/game/world/chunk/instance.ts": {
+                "bytesInOutput": 1963
+              },
               "src/pages/game/world/WorldChunk.ts": {
-                "bytesInOutput": 14441
+                "bytesInOutput": 11797
               },
               "src/pages/game/world/literal.ts": {
                 "bytesInOutput": 1234
@@ -9475,7 +9217,7 @@
                 "bytesInOutput": 650
               },
               "src/pages/game/world/World.ts": {
-                "bytesInOutput": 10760
+                "bytesInOutput": 10796
               },
               "src/pages/game/world/generate/tallGrass.ts": {
                 "bytesInOutput": 1768
@@ -9574,7 +9316,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 17458
+                "bytesInOutput": 17683
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -9595,7 +9337,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 197916
+            "bytes": 197605
           }
         }
       }
@@ -15685,13 +15427,18 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 539,
+          "end": 548,
           "importKind": "value",
           "source": "../gui",
           "specifiers": [
             {
               "imported": "swapMenuScreenGUI",
               "local": "swapMenuScreenGUI",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "ToolBar",
+              "local": "ToolBar",
               "type": "ImportSpecifier"
             },
             {
@@ -15704,7 +15451,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 574,
+          "end": 583,
           "importKind": "value",
           "source": "../seed/RNG",
           "specifiers": [
@@ -15714,11 +15461,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 540,
+          "start": 549,
           "type": "ImportDeclaration"
         },
         {
-          "end": 646,
+          "end": 655,
           "importKind": "value",
           "source": "three/examples/jsm/math/SimplexNoise.js",
           "specifiers": [
@@ -15728,11 +15475,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 575,
+          "start": 584,
           "type": "ImportDeclaration"
         },
         {
-          "end": 693,
+          "end": 702,
           "importKind": "value",
           "source": "./chunk/literal",
           "specifiers": [
@@ -15742,11 +15489,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 647,
+          "start": 656,
           "type": "ImportDeclaration"
         },
         {
-          "end": 767,
+          "end": 776,
           "importKind": "value",
           "source": "./chunk/utils",
           "specifiers": [
@@ -15761,11 +15508,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 694,
+          "start": 703,
           "type": "ImportDeclaration"
         },
         {
-          "end": 814,
+          "end": 823,
           "importKind": "value",
           "source": "../engine/utils",
           "specifiers": [
@@ -15775,11 +15522,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 768,
+          "start": 777,
           "type": "ImportDeclaration"
         },
         {
-          "end": 866,
+          "end": 875,
           "importKind": "value",
           "source": "../physics/literal",
           "specifiers": [
@@ -15789,7 +15536,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 815,
+          "start": 824,
           "type": "ImportDeclaration"
         }
       ],
@@ -15996,6 +15743,54 @@
             }
           ],
           "start": 614,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 721,
+          "importKind": "value",
+          "source": "./chunk/instance",
+          "specifiers": [
+            {
+              "imported": "InstanceMeshAdd",
+              "local": "InstanceMeshAdd",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 670,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/world/chunk/instance.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 91,
+          "importKind": "value",
+          "source": "../../Block/Block",
+          "specifiers": [
+            {
+              "imported": "Block",
+              "local": "Block",
+              "type": "ImportSpecifier"
+            },
+            {
+              "imported": "RenderGeometry",
+              "local": "RenderGeometry",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
           "type": "ImportDeclaration"
         }
       ],

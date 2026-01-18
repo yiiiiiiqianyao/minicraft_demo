@@ -177,6 +177,7 @@ export class DropGroup extends THREE.Group {
         // 当存在一个 instance 时，将其设为可见
         mesh.visible = true
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
+        // Tip 在掉落 落地的时候计算
         // mesh.computeBoundingSphere();
         const drop: IDrop = {
             // drop instance 对应的 uuid
@@ -234,7 +235,7 @@ export class DropGroup extends THREE.Group {
         }
         // toDeleteIds 
         mesh.instanceMatrix.needsUpdate = true;
-        // mesh.computeBoundingSphere();
+        mesh.computeBoundingSphere();
         if(mesh.count === 0) {
             // 当所有 instance 都被删除时，将 mesh 设为不可见
             mesh.visible = false;

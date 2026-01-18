@@ -8,7 +8,7 @@ import { WorldChunk } from "./WorldChunk";
 import { IWorldParams } from "./interface";
 import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
-import { swapMenuScreenGUI, updateProgressGUI } from "../gui";
+import { swapMenuScreenGUI, ToolBar, updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
@@ -41,6 +41,8 @@ export class World extends THREE.Group {
     World.simplex = new SimplexNoise(World.rng);
     this.scene = scene;
     this.chunkQueue = [];
+
+    ToolBar.updateToolBarGUI();
   }
 
   /**

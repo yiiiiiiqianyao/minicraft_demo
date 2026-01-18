@@ -12,6 +12,7 @@ import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
 import { wireframeMaterial } from "../engine/material";
+import { InstanceMeshAdd } from "./chunk/instance";
 
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
@@ -157,45 +158,8 @@ export class WorldChunk extends THREE.Group {
           if (!mesh) continue;
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
           if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
-            if (blockClass.geometry == RenderGeometry.Cube) {
-              const instanceId = mesh.count++;
-              this.setBlockInstanceIds(x, y, z, [instanceId]);
-
-              const matrix = new THREE.Matrix4();
-              matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
-              mesh.setMatrixAt(instanceId, matrix);
-            } else if (blockClass.geometry == RenderGeometry.Cross) {
-              const instanceId1 = mesh.count++;
-              const instanceId2 = mesh.count++;
-              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);
-
-              const matrix1 = new THREE.Matrix4();
-              matrix1.makeRotationY(Math.PI / 4);
-              matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);
-              mesh.setMatrixAt(instanceId1, matrix1);
-
-              const matrix2 = new THREE.Matrix4();
-              matrix2.makeRotationY(-Math.PI / 4);
-              matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);
-              mesh.setMatrixAt(instanceId2, matrix2);
-            } else if(blockClass.geometry == RenderGeometry.Flower) {
-              const instanceId1 = mesh.count++;
-              const instanceId2 = mesh.count++;
-              this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);
-
-              // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高
-              const matrix1 = new THREE.Matrix4();
-              matrix1.makeRotationY(Math.PI / 4);
-              matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
-              mesh.setMatrixAt(instanceId1, matrix1);
-
-              const matrix2 = new THREE.Matrix4();
-              matrix2.makeRotationY(-Math.PI / 4);
-              matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
-              mesh.setMatrixAt(instanceId2, matrix2);
-
-              mesh.userData.renderGeometry = RenderGeometry.Flower;
-            }
+            const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
+            ids && this.setBlockInstanceIds(x, y, z, ids);
           }
         }
       }
@@ -203,9 +167,8 @@ export class WorldChunk extends THREE.Group {
 
     // Add meshes to group
     for (const mesh of Object.values(meshes)) {
-      if (mesh) {
-        this.add(mesh);
-      }
+      // mesh 在 add 的时候会自动更新矩阵
+      mesh && this.add(mesh);
     }
     // 添加掉落物品组
     this.add(this.dropGroup);
@@ -311,38 +274,17 @@ export class WorldChunk extends THREE.Group {
       const mesh = this.children.find(
         (instanceMesh) => instanceMesh.name === blockClass.constructor.name
       ) as THREE.InstancedMesh;
-
       if (mesh) {
         // 放置方块的时候播放对应的音效
         this.playBlockSound(block.block);
-        if (blockClass.geometry == RenderGeometry.Cube) {
-          const instanceId = mesh.count++;
-          this.setBlockInstanceIds(x, y, z, [instanceId]);
-
-          // Update the appropriate instanced mesh and re-compute the bounding sphere so raycasting works
-          const matrix = new THREE.Matrix4();
-          matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
-          mesh.setMatrixAt(instanceId, matrix);
+        const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
+        if(ids) {
+          this.setBlockInstanceIds(x, y, z, ids);
           mesh.instanceMatrix.needsUpdate = true;
           // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
           mesh.computeBoundingSphere();
-        } else if (blockClass.geometry == RenderGeometry.Cross) {
-          const instanceId1 = mesh.count++;
-          const instanceId2 = mesh.count++;
-          this.setBlockInstanceIds(x, y, z, [instanceId1, instanceId2]);
-
-          const matrix1 = new THREE.Matrix4();
-          matrix1.makeRotationY(Math.PI / 4);
-          matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);
-          mesh.setMatrixAt(instanceId1, matrix1);
-
-          const matrix2 = new THREE.Matrix4();
-          matrix2.makeRotationY(-Math.PI / 4);
-          matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);
-          mesh.setMatrixAt(instanceId2, matrix2);
-
-          mesh.instanceMatrix.needsUpdate = true;
-          mesh.computeBoundingSphere();
+        } else {
+          console.warn(`Failed to add instance for block ${block.block}`);
         }
       }
     }
