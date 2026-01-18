@@ -144,7 +144,6 @@ export class DropGroup extends THREE.Group {
                 // 下方的 block 不支持穿过下落 则 drop 进入 float 状态
                 drop.state = 'float';
                 mesh.computeBoundingSphere();
-                // console.log('drop float:', drop);
             }           
         })
     }

@@ -1,10 +1,11 @@
-import { BlockID } from "../Block";
-import { BlockFactory } from "../Block/BlockFactory";
+import { BlockID } from "../../Block";
+import { BlockFactory } from "../../Block/BlockFactory";
+import { setActive } from "./dom";
+import { ToolBarMaxCount } from "./literal";
 
 /**@desc 玩家物品栏 */
 export class ToolBar {
-    static _barCount = 9;
-    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个
+    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个，待升级为 IToolBarItem
     static toolbar: BlockID[] = [
       // BlockID.Grass,
       // BlockID.Dirt,
@@ -21,16 +22,17 @@ export class ToolBar {
       return ToolBar.toolbar[ToolBar.activeToolbarIndex];
     }
 
+    /**@desc 往玩家物品栏中添加物品 */
     static pushBlockId(blockId: BlockID) {
       if (ToolBar.toolbar.includes(blockId)) return;
-      if (ToolBar.toolbar.length > ToolBar._barCount) return;
+      if (ToolBar.toolbar.length > ToolBarMaxCount) return;
       ToolBar.toolbar.push(blockId);
       ToolBar.updateToolBarGUI();
     }
 
     static setToolBarGUI(index: number) {
       ToolBar.activeToolbarIndex = index;
-      ToolBar.updateToolBarActiveGUI();
+      setActive(index);
     }
 
     /**@desc 滚动玩家物品栏的选中框 */
@@ -47,22 +49,14 @@ export class ToolBar {
 
     /**@desc 更新玩家物品栏中 block 对应的 ui */
     static updateToolBarGUI() {
-      for (let i = 1; i <= ToolBar._barCount; i++) {
+      for (let i = 1; i <= ToolBarMaxCount; i++) {
         const slot = document.getElementById(`toolbar-slot-${i}`);
         if (slot) {
           const blockId = ToolBar.toolbar[i - 1];
           if (blockId !== undefined && blockId !== BlockID.Air) {
-            // const blockClass = BlockFactory.getBlock(blockId);
-            // console.log('updateToolBarGUI', blockId, ToolBar.toolbar, blockClass);
             slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;
           }
         }
       }
-    }
-
-    /**@desc 更新玩家物品栏的选中框 ui */
-    private static updateToolBarActiveGUI() {
-      document?.getElementById("toolbar-active-border")
-        ?.setAttribute("style", `left: ${ToolBar.activeToolbarIndex * 11}%`);
     }
 }

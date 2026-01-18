@@ -6,6 +6,7 @@ import { Action } from "./action";
 import { ToolBar } from "../gui";
 import { worldToCeilBlockCoord } from "../world/chunk/utils";
 
+/**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
     private player: Player;
     private world: World;
@@ -31,27 +32,27 @@ export class MouseInput {
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             if (!ToolBar.activeBlockId) return;
             const playerPos = new THREE.Vector3(
-                Math.floor(player.position.x),
-                Math.floor(player.position.y) - PlayerParams.halfHeight,
-                Math.floor(player.position.z)
-                );
-                const blockPos = new THREE.Vector3(
-                Math.floor(Action.blockPlacementCoords.x - 0.5),
-                Math.floor(Action.blockPlacementCoords.y - 0.5),
-                Math.floor(Action.blockPlacementCoords.z - 0.5)
-                );
+            Math.floor(player.position.x),
+            Math.floor(player.position.y) - PlayerParams.halfHeight,
+            Math.floor(player.position.z)
+            );
+            const blockPos = new THREE.Vector3(
+            Math.floor(Action.blockPlacementCoords.x - 0.5),
+            Math.floor(Action.blockPlacementCoords.y - 0.5),
+            Math.floor(Action.blockPlacementCoords.z - 0.5)
+            );
 
-                // TODO 需要精细判断
-                // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
-                if (playerPos.distanceTo(blockPos) <= 1) return;
+            // TODO 需要精细判断
+            // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
+            if (playerPos.distanceTo(blockPos) <= 1) return;
 
-                // Right click 放置方块
-                world.addBlock(
-                    blockPos.x,
-                    blockPos.y,
-                    blockPos.z,
-                    ToolBar.activeBlockId
-                );
+            // Right click 放置方块
+            world.addBlock(
+                blockPos.x,
+                blockPos.y,
+                blockPos.z,
+                ToolBar.activeBlockId
+            );
         }
     }
 }

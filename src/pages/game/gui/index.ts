@@ -9,7 +9,7 @@ import { debounce } from "lodash";
 import { Physics } from "../physics/index.ts";
 import { ChunkParams } from "../world/chunk/literal.ts";
 
-export * from './toolbar.ts';
+export * from './toolbar/toolbar.ts';
 
 export function createUI(
   world: World,

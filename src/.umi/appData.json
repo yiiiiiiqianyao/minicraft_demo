@@ -126,7 +126,34 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ]
         },
         "register": 1
@@ -168,7 +195,35 @@
             2,
             4,
             3,
-            4
+            4,
+            12,
+            6,
+            3,
+            1,
+            3,
+            2,
+            2,
+            2,
+            5,
+            4,
+            4,
+            3,
+            2,
+            4,
+            4,
+            4,
+            2,
+            4,
+            2,
+            4,
+            2,
+            3,
+            2,
+            4,
+            2,
+            3,
+            4,
+            3
           ]
         },
         "register": 0
@@ -209,6 +264,33 @@
             4,
             5,
             5,
+            6,
+            6,
+            10,
+            5,
+            4,
+            5,
+            7,
+            6,
+            7,
+            6,
+            4,
+            6,
+            5,
+            5,
+            6,
+            12,
+            6,
+            5,
+            7,
+            4,
+            6,
+            5,
+            5,
+            5,
+            6,
+            5,
+            5,
             6
           ]
         },
@@ -226,6 +308,33 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -294,6 +403,30 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
@@ -319,6 +452,37 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1343,6 +1507,32 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1381,9 +1571,63 @@
             1,
             0,
             0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
             1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1500,9 +1744,90 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1600,9 +1925,90 @@
             9,
             7,
             11,
-            7
+            7,
+            12,
+            17,
+            7,
+            6,
+            12,
+            7,
+            9,
+            12,
+            10,
+            7,
+            10,
+            7,
+            8,
+            7,
+            15,
+            9,
+            8,
+            11,
+            9,
+            9,
+            7,
+            7,
+            20,
+            9,
+            7,
+            6,
+            9
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1705,6 +2111,60 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1723,6 +2183,33 @@
         "hooks": {
           "onGenerateFiles": [
             81,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1807,6 +2294,33 @@
             0,
             1,
             0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1870,7 +2384,61 @@
             41,
             2,
             46,
-            2
+            2,
+            44,
+            1,
+            55,
+            2,
+            44,
+            1,
+            49,
+            1,
+            48,
+            1,
+            45,
+            1,
+            46,
+            1,
+            58,
+            1,
+            45,
+            1,
+            53,
+            3,
+            57,
+            2,
+            47,
+            0,
+            45,
+            1,
+            47,
+            1,
+            50,
+            1,
+            49,
+            2,
+            51,
+            1,
+            49,
+            1,
+            45,
+            1,
+            47,
+            1,
+            50,
+            1,
+            48,
+            1,
+            56,
+            1,
+            48,
+            1,
+            48,
+            1,
+            45,
+            1,
+            45,
+            1
           ]
         },
         "register": 5
@@ -1921,7 +2489,34 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ],
           "onBeforeCompiler": [
             1
@@ -1974,6 +2569,33 @@
             4,
             4,
             4,
+            4,
+            5,
+            6,
+            5,
+            4,
+            5,
+            4,
+            4,
+            6,
+            4,
+            4,
+            4,
+            4,
+            6,
+            4,
+            5,
+            5,
+            5,
+            4,
+            3,
+            5,
+            5,
+            4,
+            4,
+            4,
+            5,
+            3,
             4
           ]
         },
@@ -2080,6 +2702,33 @@
             0,
             0,
             0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
             0
           ]
         },
@@ -2695,6 +3344,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/StoneBrickBlock.ts"
     },
+    "game/gui/toolbar/interface": {
+      "path": "game/gui/toolbar/interface",
+      "id": "game/gui/toolbar/interface",
+      "file": "game/gui/toolbar/interface.ts",
+      "absPath": "/game/gui/toolbar/interface",
+      "__content": "import { BlockID } from \"../../Block\";\n\nexport interface IToolBarItem {\n    blockId: BlockID;\n    count: number;\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/interface.ts"
+    },
     "game/helper/selectorHelper": {
       "path": "game/helper/selectorHelper",
       "id": "game/helper/selectorHelper",
@@ -2748,6 +3406,24 @@
       "__content": "import './index.scss';\n\nconst ToolBarBg = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png';\nconst ToolBarActive = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png';\nexport const ToolBar = () => {\n    return <div id=\"toolbar\">\n        <img id=\"toolbar-bg\" src={ToolBarBg} />\n        <img id=\"toolbar-active-border\" src={ToolBarActive} />\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-1\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-2\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-3\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-4\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-5\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-6\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-7\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-8\"></div>\n        <div className=\"toolbar-slot\" id=\"toolbar-slot-9\"></div>\n    </div>\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/components/toolbar/index.tsx"
+    },
+    "game/gui/toolbar/literal": {
+      "path": "game/gui/toolbar/literal",
+      "id": "game/gui/toolbar/literal",
+      "file": "game/gui/toolbar/literal.ts",
+      "absPath": "/game/gui/toolbar/literal",
+      "__content": "/**@desc 玩家物品栏最大数量 */\nexport const ToolBarMaxCount = 9;",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/literal.ts"
+    },
+    "game/gui/toolbar/toolbar": {
+      "path": "game/gui/toolbar/toolbar",
+      "id": "game/gui/toolbar/toolbar",
+      "file": "game/gui/toolbar/toolbar.ts",
+      "absPath": "/game/gui/toolbar/toolbar",
+      "__content": "import { BlockID } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { setActive } from \"./dom\";\nimport { ToolBarMaxCount } from \"./literal\";\n\n/**@desc 玩家物品栏 */\nexport class ToolBar {\n    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个\n    static toolbar: BlockID[] = [\n      // BlockID.Grass,\n      // BlockID.Dirt,\n      // BlockID.Stone,\n      // BlockID.StoneBrick,\n      // BlockID.RedstoneLamp,\n      // BlockID.CoalOre,\n      // BlockID.IronOre,\n      // BlockID.OakLog,\n      // BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId(): BlockID | undefined {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    /**@desc 往玩家物品栏中添加物品 */\n    static pushBlockId(blockId: BlockID) {\n      if (ToolBar.toolbar.includes(blockId)) return;\n      if (ToolBar.toolbar.length > ToolBarMaxCount) return;\n      ToolBar.toolbar.push(blockId);\n      ToolBar.updateToolBarGUI();\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      setActive(index);\n    }\n\n    /**@desc 滚动玩家物品栏的选中框 */\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n    }\n\n    /**@desc 更新玩家物品栏中 block 对应的 ui */\n    static updateToolBarGUI() {\n      for (let i = 1; i <= ToolBarMaxCount; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId !== undefined && blockId !== BlockID.Air) {\n            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;\n          }\n        }\n      }\n    }\n}\n",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/toolbar.ts"
     },
     "game/world/chunk/literal": {
       "path": "game/world/chunk/literal",
@@ -2947,6 +3623,15 @@
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/material.ts"
     },
+    "game/gui/toolbar/dom": {
+      "path": "game/gui/toolbar/dom",
+      "id": "game/gui/toolbar/dom",
+      "file": "game/gui/toolbar/dom.ts",
+      "absPath": "/game/gui/toolbar/dom",
+      "__content": "let toolbarActiveBorder: HTMLElement | null = null;\n/**@desc 更新玩家物品栏的选中框 ui */\nexport function setActive(activeIndex: number) {\n    if(!toolbarActiveBorder) {\n        toolbarActiveBorder = document.getElementById(\"toolbar-active-border\")\n        if(!toolbarActiveBorder) {\n            console.error(\"toolbar-active-border not found\");\n            return;\n        }\n    }\n    toolbarActiveBorder.setAttribute(\"style\", `left: ${activeIndex * 11}%`);\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/dom.ts"
+    },
     "game/physics/literal": {
       "path": "game/physics/literal",
       "id": "game/physics/literal",
@@ -2988,7 +3673,7 @@
       "id": "game/world/drop/drop",
       "file": "game/world/drop/drop.ts",
       "absPath": "/game/world/drop/drop",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n                // console.log('drop float:', drop);\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        // mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/drop/drop.ts"
     },
@@ -3168,7 +3853,7 @@
       "id": "game/player/mouse",
       "file": "game/player/mouse.ts",
       "absPath": "/game/player/mouse",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n            world.removeBlock(blockX, blockY, blockZ);\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            if (!ToolBar.activeBlockId) return;\n            const playerPos = new THREE.Vector3(\n                Math.floor(player.position.x),\n                Math.floor(player.position.y) - PlayerParams.halfHeight,\n                Math.floor(player.position.z)\n                );\n                const blockPos = new THREE.Vector3(\n                Math.floor(Action.blockPlacementCoords.x - 0.5),\n                Math.floor(Action.blockPlacementCoords.y - 0.5),\n                Math.floor(Action.blockPlacementCoords.z - 0.5)\n                );\n\n                // TODO 需要精细判断\n                // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n                if (playerPos.distanceTo(blockPos) <= 1) return;\n\n                // Right click 放置方块\n                world.addBlock(\n                    blockPos.x,\n                    blockPos.y,\n                    blockPos.z,\n                    ToolBar.activeBlockId\n                );\n        }\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\n/**@desc 处理玩家鼠标输入事件 */\nexport class MouseInput {\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0 && PlayerParams.selectedCoords) {\n            const { x, y, z } = PlayerParams.selectedCoords;\n            // Left click 移除选中的方块\n            // TODO 需要考虑是否能够破坏和移除方块\n            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n            world.removeBlock(blockX, blockY, blockZ);\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            if (!ToolBar.activeBlockId) return;\n            const playerPos = new THREE.Vector3(\n            Math.floor(player.position.x),\n            Math.floor(player.position.y) - PlayerParams.halfHeight,\n            Math.floor(player.position.z)\n            );\n            const blockPos = new THREE.Vector3(\n            Math.floor(Action.blockPlacementCoords.x - 0.5),\n            Math.floor(Action.blockPlacementCoords.y - 0.5),\n            Math.floor(Action.blockPlacementCoords.z - 0.5)\n            );\n\n            // TODO 需要精细判断\n            // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n            if (playerPos.distanceTo(blockPos) <= 1) return;\n\n            // Right click 放置方块\n            world.addBlock(\n                blockPos.x,\n                blockPos.y,\n                blockPos.z,\n                ToolBar.activeBlockId\n            );\n        }\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
@@ -3207,15 +3892,6 @@
       "__content": "import { GlobalProps } from \"./query\";\n\n/**\n * 开发控制参数\n */\nexport class DevControl {\n    static chunkHelperVisible = GlobalProps.chunk_helper === '1' ? true : false;\n    static chunkWireframeMode = false;\n    static worldType = GlobalProps.world || 'terrain'; // 'flat'\n    static physicsHelperVisible = GlobalProps.physics_helper === '1' ? true : false;\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/dev/control.ts"
-    },
-    "game/gui/toolbar": {
-      "path": "game/gui/toolbar",
-      "id": "game/gui/toolbar",
-      "file": "game/gui/toolbar.ts",
-      "absPath": "/game/gui/toolbar",
-      "__content": "import { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/BlockFactory\";\n\n/**@desc 玩家物品栏 */\nexport class ToolBar {\n    static _barCount = 9;\n    // TODO 需要增加计数能力\n    static toolbar: BlockID[] = [\n      // BlockID.Grass,\n      // BlockID.Dirt,\n      // BlockID.Stone,\n      // BlockID.StoneBrick,\n      // BlockID.RedstoneLamp,\n      // BlockID.CoalOre,\n      // BlockID.IronOre,\n      // BlockID.OakLog,\n      // BlockID.Leaves,\n    ];\n    static activeToolbarIndex = 0;\n    static get activeBlockId(): BlockID | undefined {\n      return ToolBar.toolbar[ToolBar.activeToolbarIndex];\n    }\n\n    static pushBlockId(blockId: BlockID) {\n      if (ToolBar.toolbar.includes(blockId)) return;\n      if (ToolBar.toolbar.length > ToolBar._barCount) return;\n      ToolBar.toolbar.push(blockId);\n      ToolBar.updateToolBarGUI();\n    }\n\n    static setToolBarGUI(index: number) {\n      ToolBar.activeToolbarIndex = index;\n      ToolBar.updateToolBarActiveGUI();\n    }\n\n    /**@desc 滚动玩家物品栏的选中框 */\n    static scrollToolBarGUI(key: string) {\n      // 0 - 8\n      if(key === 'KeyZ') { // left\n        const index = ToolBar.activeToolbarIndex - 1 >= 0 ? ToolBar.activeToolbarIndex - 1 : 8;\n        ToolBar.setToolBarGUI(index);\n      } else if(key === 'KeyC') { // right\n        const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;\n        ToolBar.setToolBarGUI(index);\n      }\n    }\n\n    /**@desc 更新玩家物品栏中 block 对应的 ui */\n    static updateToolBarGUI() {\n      for (let i = 1; i <= ToolBar._barCount; i++) {\n        const slot = document.getElementById(`toolbar-slot-${i}`);\n        if (slot) {\n          const blockId = ToolBar.toolbar[i - 1];\n          if (blockId !== undefined && blockId !== BlockID.Air) {\n            // const blockClass = BlockFactory.getBlock(blockId);\n            // console.log('updateToolBarGUI', blockId, ToolBar.toolbar, blockClass);\n            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;\n          }\n        }\n      }\n    }\n\n    /**@desc 更新玩家物品栏的选中框 ui */\n    private static updateToolBarActiveGUI() {\n      document?.getElementById(\"toolbar-active-border\")\n        ?.setAttribute(\"style\", `left: ${ToolBar.activeToolbarIndex * 11}%`);\n    }\n}\n",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts"
     },
     "game/sky/literal": {
       "path": "game/sky/literal",
@@ -3285,7 +3961,7 @@
       "id": "game/gui/index",
       "file": "game/gui/index.ts",
       "absPath": "/game/gui",
-      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { debounce } from \"lodash\";\nimport { Physics } from \"../physics/index.ts\";\nimport { ChunkParams } from \"../world/chunk/literal.ts\";\n\nexport * from './toolbar.ts';\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  if(physics.helpers) {\n    const physicsFolder = gui.addFolder(\"Physics\");\n    physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n    physicsFolder\n      .add(physics, \"simulationRate\", 10, 1000)\n      .name(\"Simulation Rate\");\n  }\n\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(ChunkParams, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(ChunkParams, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  if(world.params.trees) {\n    const treesFolder = terrainFolder.addFolder(\"Trees\");\n    treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n      .name(\"Min Trunk Height\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n      .name(\"Max Trunk Height\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n      .name(\"Min Canopy Size\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n      .name(\"Max Canopy Size\");\n  }\n  if(world.params.tallGrass) {\n    const grassFolder = terrainFolder.addFolder(\"Grass\");\n    grassFolder.add(world.params.tallGrass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    grassFolder\n      .add(world.params.tallGrass, \"patchSize\", 1, 10, 1)\n      .name(\"Grass Patch Size\");\n  }\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { debounce } from \"lodash\";\nimport { Physics } from \"../physics/index.ts\";\nimport { ChunkParams } from \"../world/chunk/literal.ts\";\n\nexport * from './toolbar/toolbar.ts';\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n\n  if(physics.helpers) {\n    const physicsFolder = gui.addFolder(\"Physics\");\n    physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n    physicsFolder\n      .add(physics, \"simulationRate\", 10, 1000)\n      .name(\"Simulation Rate\");\n  }\n\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(ChunkParams, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(ChunkParams, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n\n  if(world.params.trees) {\n    const treesFolder = terrainFolder.addFolder(\"Trees\");\n    treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n      .name(\"Min Trunk Height\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n      .name(\"Max Trunk Height\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n      .name(\"Min Canopy Size\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n      .name(\"Max Canopy Size\");\n  }\n  if(world.params.tallGrass) {\n    const grassFolder = terrainFolder.addFolder(\"Grass\");\n    grassFolder.add(world.params.tallGrass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    grassFolder\n      .add(world.params.tallGrass, \"patchSize\", 1, 10, 1)\n      .name(\"Grass Patch Size\");\n  }\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts"
     },
@@ -5355,24 +6031,44 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/gui/toolbar.ts": {
-            "bytes": 2394,
+          "src/pages/game/gui/toolbar/dom.ts": {
+            "bytes": 471,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/pages/game/gui/toolbar/literal.ts": {
+            "bytes": 73,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/pages/game/gui/toolbar/toolbar.ts": {
+            "bytes": 2120,
             "imports": [
               {
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
-                "original": "../Block"
+                "original": "../../Block"
               },
               {
                 "path": "src/pages/game/Block/BlockFactory.ts",
                 "kind": "import-statement",
-                "original": "../Block/BlockFactory"
+                "original": "../../Block/BlockFactory"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar/dom.ts",
+                "kind": "import-statement",
+                "original": "./dom"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar/literal.ts",
+                "kind": "import-statement",
+                "original": "./literal"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/gui/index.ts": {
-            "bytes": 6179,
+            "bytes": 6187,
             "imports": [
               {
                 "path": "lil-gui",
@@ -5425,15 +6121,15 @@
                 "original": "../world/chunk/literal.ts"
               },
               {
-                "path": "src/pages/game/gui/toolbar.ts",
+                "path": "src/pages/game/gui/toolbar/toolbar.ts",
                 "kind": "import-statement",
-                "original": "./toolbar.ts"
+                "original": "./toolbar/toolbar.ts"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/world/drop/drop.ts": {
-            "bytes": 11107,
+            "bytes": 11054,
             "imports": [
               {
                 "path": "three",
@@ -5760,6 +6456,17 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/gui/toolbar/interface.ts": {
+            "bytes": 114,
+            "imports": [
+              {
+                "path": "../../Block",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/helper/selectorHelper.ts": {
             "bytes": 1173,
             "imports": [
@@ -5945,7 +6652,7 @@
             "format": "esm"
           },
           "src/pages/game/player/mouse.ts": {
-            "bytes": 2367,
+            "bytes": 2334,
             "imports": [
               {
                 "path": "three",
@@ -6567,7 +7274,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 19633,
+            "bytes": 20462,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -6625,6 +7332,11 @@
                 "original": "../../../src/pages/game/Block/StoneBrickBlock.ts"
               },
               {
+                "path": "src/pages/game/gui/toolbar/interface.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/gui/toolbar/interface.ts"
+              },
+              {
                 "path": "src/pages/game/helper/selectorHelper.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/helper/selectorHelper.ts"
@@ -6653,6 +7365,16 @@
                 "path": "src/pages/components/toolbar/index.tsx",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/components/toolbar/index.tsx"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar/literal.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/gui/toolbar/literal.ts"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar/toolbar.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/gui/toolbar/toolbar.ts"
               },
               {
                 "path": "src/pages/game/world/chunk/literal.ts",
@@ -6763,6 +7485,11 @@
                 "path": "src/pages/game/engine/material.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/engine/material.ts"
+              },
+              {
+                "path": "src/pages/game/gui/toolbar/dom.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/gui/toolbar/dom.ts"
               },
               {
                 "path": "src/pages/game/physics/literal.ts",
@@ -6908,11 +7635,6 @@
                 "path": "src/pages/game/dev/control.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/dev/control.ts"
-              },
-              {
-                "path": "src/pages/game/gui/toolbar.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/gui/toolbar.ts"
               },
               {
                 "path": "src/pages/game/sky/literal.ts",
@@ -8716,8 +9438,14 @@
               "src/pages/game/dev/index.ts": {
                 "bytesInOutput": 2644
               },
-              "src/pages/game/gui/toolbar.ts": {
-                "bytesInOutput": 2379
+              "src/pages/game/gui/toolbar/dom.ts": {
+                "bytesInOutput": 556
+              },
+              "src/pages/game/gui/toolbar/literal.ts": {
+                "bytesInOutput": 247
+              },
+              "src/pages/game/gui/toolbar/toolbar.ts": {
+                "bytesInOutput": 2222
               },
               "src/pages/game/gui/index.ts": {
                 "bytesInOutput": 5682
@@ -8752,11 +9480,14 @@
               "src/pages/game/world/generate/tallGrass.ts": {
                 "bytesInOutput": 1768
               },
+              "src/pages/game/gui/toolbar/interface.ts": {
+                "bytesInOutput": 131
+              },
               "src/pages/game/helper/selectorHelper.ts": {
                 "bytesInOutput": 1404
               },
               "src/pages/game/world/drop/interface.ts": {
-                "bytesInOutput": 130
+                "bytesInOutput": 132
               },
               "src/pages/components/toolbar/index.tsx": {
                 "bytesInOutput": 1607
@@ -8843,7 +9574,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 16777
+                "bytesInOutput": 17458
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -8864,7 +9595,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 196324
+            "bytes": 197916
           }
         }
       }
@@ -13139,17 +13870,35 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 454,
-          "source": "./toolbar.ts",
+          "end": 462,
+          "source": "./toolbar/toolbar.ts",
           "start": 425,
           "type": "ExportAllDeclaration"
         }
       ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar.ts": [
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/dom.ts": [],
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/interface.ts": [
         {
-          "end": 36,
+          "end": 39,
           "importKind": "value",
-          "source": "../Block",
+          "source": "../../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/literal.ts": [],
+      "/Applications/workspace/minicraft_demo/src/pages/game/gui/toolbar/toolbar.ts": [
+        {
+          "end": 39,
+          "importKind": "value",
+          "source": "../../Block",
           "specifiers": [
             {
               "imported": "BlockID",
@@ -13161,9 +13910,9 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 90,
+          "end": 96,
           "importKind": "value",
-          "source": "../Block/BlockFactory",
+          "source": "../../Block/BlockFactory",
           "specifiers": [
             {
               "imported": "BlockFactory",
@@ -13171,7 +13920,35 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 37,
+          "start": 40,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 131,
+          "importKind": "value",
+          "source": "./dom",
+          "specifiers": [
+            {
+              "imported": "setActive",
+              "local": "setActive",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 97,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 176,
+          "importKind": "value",
+          "source": "./literal",
+          "specifiers": [
+            {
+              "imported": "ToolBarMaxCount",
+              "local": "ToolBarMaxCount",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 132,
           "type": "ImportDeclaration"
         }
       ],
