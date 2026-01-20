@@ -223,6 +223,9 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -363,6 +366,9 @@
             3,
             2,
             4,
+            4,
+            4,
+            3,
             4
           ]
         },
@@ -501,7 +507,10 @@
             7,
             8,
             7,
-            8
+            8,
+            6,
+            7,
+            7
           ]
         },
         "register": 16
@@ -636,6 +645,9 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -750,6 +762,9 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -914,6 +929,9 @@
             0,
             0,
             0,
+            0,
+            0,
+            1,
             0,
             0
           ]
@@ -2295,6 +2313,23 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
             0
           ]
         },
@@ -2430,7 +2465,10 @@
             2,
             1,
             1,
-            1
+            1,
+            0,
+            1,
+            0
           ],
           "addRuntimePlugin": [
             0,
@@ -2474,6 +2512,9 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2634,6 +2675,9 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2983,6 +3027,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -3134,9 +3184,18 @@
             11,
             21,
             10,
-            13
+            13,
+            11,
+            11,
+            14
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -3627,6 +3686,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -3695,6 +3760,9 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -3923,7 +3991,10 @@
             0,
             1,
             0,
-            0
+            0,
+            0,
+            0,
+            1
           ],
           "addBeforeMiddlewares": [
             0
@@ -4180,7 +4251,13 @@
             51,
             1,
             65,
-            1
+            1,
+            59,
+            1,
+            54,
+            1,
+            76,
+            3
           ]
         },
         "register": 6
@@ -4315,6 +4392,9 @@
             1,
             1,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -4478,7 +4558,10 @@
             4,
             4,
             5,
-            5
+            5,
+            4,
+            4,
+            12
           ]
         },
         "register": 4
@@ -4680,6 +4763,9 @@
             1,
             1,
             0,
+            1,
+            1,
+            1,
             1,
             1
           ]
@@ -5337,7 +5423,7 @@
       "id": "game/world/chunk/instance",
       "file": "game/world/chunk/instance.ts",
       "absPath": "/game/world/chunk/instance",
-      "__content": "import * as THREE from \"three\";\nimport { Block, RenderGeometry } from \"../../Block/Block\";\n\nexport function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {\n    switch (blockClass.geometry) {\n        case RenderGeometry.Cube:\n            return InstanceMeshAddCube(mesh, x, y, z);\n        case RenderGeometry.Cross:\n            return InstanceMeshAddCross(mesh, x, y, z);\n        case RenderGeometry.Flower:\n            return InstanceMeshAddFlower(mesh, x, y, z);\n        default:\n            console.warn(`Unknown geometry ${blockClass.geometry}`);\n            return null;\n    }\n}\n\nfunction InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId = mesh.count++;\n    const matrix = new THREE.Matrix4();\n    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId, matrix);\n\n    return [instanceId];\n}\n\nfunction InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    return [instanceId1, instanceId2];\n}\n\nfunction InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    mesh.userData.renderGeometry = RenderGeometry.Flower;\n    return [instanceId1, instanceId2];\n}",
+      "__content": "import * as THREE from \"three\";\nimport { Block, RenderGeometry } from \"../../Block/Block\";\nimport { jitterNumber } from \"../../utils\";\n\nexport function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {\n    switch (blockClass.geometry) {\n        case RenderGeometry.Cube:\n            return InstanceMeshAddCube(mesh, x, y, z);\n        case RenderGeometry.Cross:\n            return InstanceMeshAddCross(mesh, x, y, z);\n        case RenderGeometry.Flower:\n            return InstanceMeshAddFlower(mesh, x, y, z);\n        default:\n            console.warn(`Unknown geometry ${blockClass.geometry}`);\n            return null;\n    }\n}\n\nfunction InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId = mesh.count++;\n    const matrix = new THREE.Matrix4();\n    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId, matrix);\n\n    return [instanceId];\n}\n\nfunction InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    return [instanceId1, instanceId2];\n}\n\nfunction InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n    const instanceId1 = mesh.count++;\n    const instanceId2 = mesh.count++;\n\n    // 在添加花实例的时候需要有一点偏移\n    const xOffset = jitterNumber(0.5, 0.1);\n    const zOffset = jitterNumber(0.5, 0.1);\n    // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高\n    const matrix1 = new THREE.Matrix4();\n    matrix1.makeRotationY(Math.PI / 4);\n    matrix1.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);\n    mesh.setMatrixAt(instanceId1, matrix1);\n\n    const matrix2 = new THREE.Matrix4();\n    matrix2.makeRotationY(-Math.PI / 4);\n    matrix2.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);\n    mesh.setMatrixAt(instanceId2, matrix2);\n\n    mesh.userData.renderGeometry = RenderGeometry.Flower;\n    return [instanceId1, instanceId2];\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/chunk/instance.ts"
     },
@@ -5823,7 +5909,7 @@
       "id": "game/player/mouse",
       "file": "game/player/mouse.ts",
       "absPath": "/game/player/mouse",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\n/**@desc 处理玩家鼠标输入事件 */\nexport class MouseInput {\n    onLeftClick?(): void;\n    onRightClick?(): void;\n    private isClickEvent = false;\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0) {\n            if (this.onLeftClick && !this.isClickEvent) {\n                this.isClickEvent = true;\n                setTimeout(() => this.isClickEvent = false, 64);\n                this.onLeftClick();\n            }\n            if(PlayerParams.selectedCoords) {\n                const { x, y, z } = PlayerParams.selectedCoords;\n                // Left click 移除选中的方块\n                // TODO 需要考虑是否能够破坏和移除方块\n                // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n                const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n                world.removeBlock(blockX, blockY, blockZ);\n            }\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            if (!ToolBar.activeBlockId) return;\n            const playerPos = new THREE.Vector3(\n            Math.floor(player.position.x),\n            Math.floor(player.position.y) - PlayerParams.halfHeight,\n            Math.floor(player.position.z)\n            );\n            const blockPos = new THREE.Vector3(\n            Math.floor(Action.blockPlacementCoords.x - 0.5),\n            Math.floor(Action.blockPlacementCoords.y - 0.5),\n            Math.floor(Action.blockPlacementCoords.z - 0.5)\n            );\n\n            // TODO 需要精细判断\n            // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n            if (playerPos.distanceTo(blockPos) <= 1) return;\n\n            // Right click 放置方块\n            world.addBlock(\n                blockPos.x,\n                blockPos.y,\n                blockPos.z,\n                ToolBar.activeBlockId\n            );\n        }\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\n/**@desc 处理玩家鼠标输入事件 */\nexport class MouseInput {\n    onLeftClick?(): void;\n    onRightClick?(): void;\n    private isClickEvent = false;\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0) {\n            this.handleLeftClick();\n            this.handleBreak();\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            this.handlePlacement();\n        }\n    }\n\n    private handleLeftClick() {\n        if (this.onLeftClick && !this.isClickEvent) {\n            this.isClickEvent = true;\n            setTimeout(() => this.isClickEvent = false, 64);\n            this.onLeftClick();\n        }\n    }\n\n    private handleBreak() {\n        if(!PlayerParams.selectedCoords) return;\n        const { x, y, z } = PlayerParams.selectedCoords;\n        // Left click 移除选中的方块\n        // TODO 需要考虑是否能够破坏和移除方块\n        // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n        const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n        this.world.removeBlock(blockX, blockY, blockZ);\n    }\n\n    private handlePlacement() {\n        const { world, player } = this;\n        if (!ToolBar.activeBlockId) return;\n            const playerPos = new THREE.Vector3(\n            Math.floor(player.position.x),\n            Math.floor(player.position.y) - PlayerParams.halfHeight,\n            Math.floor(player.position.z)\n            );\n            const blockPos = new THREE.Vector3(\n            Math.floor(Action.blockPlacementCoords.x - 0.5),\n            Math.floor(Action.blockPlacementCoords.y - 0.5),\n            Math.floor(Action.blockPlacementCoords.z - 0.5)\n            );\n\n            // TODO 需要精细判断\n            // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n            if (playerPos.distanceTo(blockPos) <= 1) return;\n\n            // Right click 放置方块\n            world.addBlock(\n                blockPos.x,\n                blockPos.y,\n                blockPos.z,\n                ToolBar.activeBlockId\n            );\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
@@ -5940,7 +6026,7 @@
       "id": "game/gui/index",
       "file": "game/gui/index.ts",
       "absPath": "/game/gui",
-      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { debounce } from \"lodash\";\nimport { Physics } from \"../physics/index.ts\";\nimport { ChunkParams } from \"../world/chunk/literal.ts\";\n\nexport * from './toolbar/toolbar.ts';\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n\n  // TIP 设置默认 close\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n  soundFolder.close();\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n  playerFolder.close();\n\n  if(physics.helpers) {\n    const physicsFolder = gui.addFolder(\"Physics\");\n    physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n    physicsFolder\n      .add(physics, \"simulationRate\", 10, 1000)\n      .name(\"Simulation Rate\");\n    physicsFolder.close();\n  }\n\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n  worldFolder.close();\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(ChunkParams, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(ChunkParams, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n  terrainFolder.close();\n\n  if(world.params.trees) {\n    const treesFolder = terrainFolder.addFolder(\"Trees\");\n    treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n      .name(\"Min Trunk Height\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n      .name(\"Max Trunk Height\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n      .name(\"Min Canopy Size\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n      .name(\"Max Canopy Size\");\n\n    treesFolder.close();\n  }\n  if(world.params.tallGrass) {\n    const grassFolder = terrainFolder.addFolder(\"Grass\");\n    grassFolder.add(world.params.tallGrass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    grassFolder\n      .add(world.params.tallGrass, \"patchSize\", 1, 10, 1)\n      .name(\"Grass Patch Size\");\n    grassFolder.close();\n  }\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/0kzh/minicraft\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
+      "__content": "import GUI from \"lil-gui\";\nimport * as THREE from \"three\";\nimport { Player } from \"../player/Player\";\nimport { World } from \"../world/World\";\nimport { initStats } from \"../dev\";\nimport audioManager from \"../audio/AudioManager\";\nimport { oreConfig } from \"../world/generate/resource\";\nimport { debounce } from \"lodash\";\nimport { Physics } from \"../physics/index.ts\";\nimport { ChunkParams } from \"../world/chunk/literal.ts\";\n\nexport * from './toolbar/toolbar.ts';\n\nexport function createUI(\n  world: World,\n  player: Player,\n  physics: Physics,\n  scene: THREE.Scene,\n  renderer: THREE.WebGLRenderer,\n  sunSettings: { distance: number; cycleLength: number },\n  sunHelper: THREE.DirectionalLightHelper,\n  shadowHelper: THREE.CameraHelper\n) {\n\n  // TIP 设置默认 close\n  const gui = new GUI();\n  const custom = { volume: 0.3 };\n\n  const soundFolder = gui.addFolder(\"Sound\");\n  soundFolder\n    .add(custom, \"volume\", 0, 1, 0.01)\n    .name(\"Volume\")\n    .onChange((value: number) => {\n      Howler.volume(value);\n    });\n  soundFolder.close();\n\n  const playerFolder = gui.addFolder(\"Player\");\n  playerFolder.add(player.cameraHelper, \"visible\").name(\"Camera Helper\");\n  playerFolder.add(player.boundsHelper, \"visible\").name(\"Show Player Bounds\");\n  playerFolder.close();\n\n  if(physics.helpers) {\n    const physicsFolder = gui.addFolder(\"Physics\");\n    physicsFolder.add(physics.helpers, \"visible\").name(\"Visualize Collisions\");\n    physicsFolder\n      .add(physics, \"simulationRate\", 10, 1000)\n      .name(\"Simulation Rate\");\n    physicsFolder.close();\n  }\n\n\n  const worldFolder = gui.addFolder(\"World\");\n  worldFolder.add(renderer.shadowMap, \"enabled\").name(\"Enable Shadows\");\n  worldFolder.add(sunHelper, \"visible\").name(\"Show Sun Helper\");\n  worldFolder.add(shadowHelper, \"visible\").name(\"Show Shadow Helper\");\n  worldFolder\n    .add(sunSettings, \"cycleLength\", 0, 1000, 1)\n    .name(\"Day Length (s)\");\n  worldFolder.add(world, \"renderDistance\", 1, 16, 1).name(\"Render Distance\");\n  if (scene.fog) {\n    worldFolder.add(scene.fog, \"near\", 1, 200, 1).name(\"Fog Near\");\n    worldFolder.add(scene.fog, \"far\", 1, 200, 1).name(\"Fog Far\");\n  }\n  worldFolder.close();\n\n  const terrainFolder = gui.addFolder(\"Terrain\");\n  terrainFolder.add(ChunkParams, \"width\", 8, 128, 1).name(\"Width\");\n  terrainFolder.add(ChunkParams, \"height\", 8, 64, 1).name(\"Height\");\n  terrainFolder.add(world.params, \"seed\", 1, 10000, 1).name(\"Seed\");\n  terrainFolder.add(world.params.terrain, \"scale\", 10, 100, 1).name(\"Scale\");\n  terrainFolder.add(world.params.terrain, \"magnitude\", 0, 1).name(\"Magnitude\");\n  terrainFolder.add(world.params.terrain, \"offset\", 0, 1).name(\"Offset\");\n  terrainFolder.close();\n\n  if(world.params.trees) {\n    const treesFolder = terrainFolder.addFolder(\"Trees\");\n    treesFolder.add(world.params.trees, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"min\", 0, 10, 1)\n      .name(\"Min Trunk Height\");\n    treesFolder\n      .add(world.params.trees.trunkHeight, \"max\", 0, 10, 1)\n      .name(\"Max Trunk Height\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"min\", 0, 10, 1)\n      .name(\"Min Canopy Size\");\n    treesFolder\n      .add(world.params.trees.canopy.size, \"max\", 0, 10, 1)\n      .name(\"Max Canopy Size\");\n\n    treesFolder.close();\n  }\n  if(world.params.tallGrass) {\n    const grassFolder = terrainFolder.addFolder(\"Grass\");\n    grassFolder.add(world.params.tallGrass, \"frequency\", 0, 1, 0.1).name(\"Frequency\");\n    grassFolder\n      .add(world.params.tallGrass, \"patchSize\", 1, 10, 1)\n      .name(\"Grass Patch Size\");\n    grassFolder.close();\n  }\n\n  terrainFolder\n    .add(world.params.flowers, \"frequency\", 0, 1, 0.1)\n    .name(\"Frequency\");\n\n  const resourcesFolder = gui.addFolder(\"Resources\");\n\n  for (const resource of Object.keys(oreConfig)) {\n    const resourceFolder = resourcesFolder.addFolder(resource);\n    resourceFolder\n      .add(oreConfig[resource as keyof typeof oreConfig], \"scarcity\", 0, 1)\n      .name(\"Scarcity\");\n\n    const scaleFolder = resourceFolder.addFolder(\"Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"x\", 1, 100)\n      .name(\"X Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"y\", 1, 100)\n      .name(\"Y Scale\");\n    scaleFolder\n      .add(oreConfig[resource as keyof typeof oreConfig].scale, \"z\", 1, 100)\n      .name(\"Z Scale\");\n  }\n\n  gui.add(world, \"regenerate\").name(\"Generate\");\n}\n\nexport function initMainMenu(onStart: () => void) {\n  const mainMenu = document.getElementById(\"main-menu\");\n  const loadingScreen = document.getElementById(\"loading\");\n  const startGameButton = document.getElementById(\"start-game\");\n  const handleClick = debounce(() => {\n    if (mainMenu) mainMenu.style.display = \"none\";\n    if (loadingScreen) loadingScreen.style.display = \"block\";\n    audioManager.play(\"gui.button.press\");\n    initStats();\n    onStart();\n  })\n  startGameButton?.addEventListener(\"click\", handleClick);\n\n  const githubButton = document.getElementById(\"github\");\n  githubButton?.addEventListener(\"click\", () => {\n    audioManager.play(\"gui.button.press\");\n    window.open(\"https://github.com/yiiiiiiqianyao/minicraft_demo\");\n  });\n}\n\nexport function swapMenuScreenGUI() {\n  const menuScreen = document.getElementById(\"menu\");\n  const debugMenu = document.getElementById(\"debug\");\n  if (menuScreen) {\n    menuScreen.style.display = \"none\";\n    if (debugMenu) {\n      debugMenu.style.display = \"flex\";\n    }\n  }\n}\n\nexport function updatePositionGUI(position: THREE.Vector3) {\n    const posX = document.getElementById(\"player-pos-x\");\n    if (posX) {\n      const inner = `x: ${position.x.toFixed(3)}`;\n      if(posX.innerHTML !== inner) {\n        posX.innerHTML = inner;\n      }\n    }\n\n    const posY = document.getElementById(\"player-pos-y\");\n    if (posY) {\n      const inner = `y: ${position.y.toFixed(3)}`;\n      if(posY.innerHTML !== inner) {\n        posY.innerHTML = inner;\n      }\n    }\n\n    const posZ = document.getElementById(\"player-pos-z\");\n    if (posZ) {\n      const inner = `z: ${position.z.toFixed(3)}`;\n      if(posZ.innerHTML !== inner) {\n        posZ.innerHTML = inner;\n      }\n    }\n}\n\nexport function updateProgressGUI(percentLoaded: number) {\n  const progressBar = document.getElementById(\"loading-progress-bar\");\n  if (progressBar) {\n    progressBar.style.width = `${percentLoaded}%`;\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/gui/index.ts"
     },
@@ -8200,7 +8286,7 @@
             "format": "esm"
           },
           "src/pages/game/world/chunk/instance.ts": {
-            "bytes": 2208,
+            "bytes": 2414,
             "imports": [
               {
                 "path": "three",
@@ -8211,6 +8297,11 @@
                 "path": "src/pages/game/Block/Block.ts",
                 "kind": "import-statement",
                 "original": "../../Block/Block"
+              },
+              {
+                "path": "src/pages/game/utils/index.ts",
+                "kind": "import-statement",
+                "original": "../../utils"
               }
             ],
             "format": "esm"
@@ -8652,7 +8743,7 @@
             "format": "esm"
           },
           "src/pages/game/player/mouse.ts": {
-            "bytes": 2689,
+            "bytes": 2868,
             "imports": [
               {
                 "path": "three",
@@ -11528,7 +11619,7 @@
                 "bytesInOutput": 2258
               },
               "src/pages/game/world/chunk/instance.ts": {
-                "bytesInOutput": 1963
+                "bytesInOutput": 2083
               },
               "src/pages/game/world/WorldChunk.ts": {
                 "bytesInOutput": 11797
@@ -11585,7 +11676,7 @@
                 "bytesInOutput": 2432
               },
               "src/pages/game/player/mouse.ts": {
-                "bytesInOutput": 2086
+                "bytesInOutput": 2262
               },
               "src/pages/game/helper/physics.ts": {
                 "bytesInOutput": 1562
@@ -11675,7 +11766,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 200962
+            "bytes": 201258
           }
         }
       }
@@ -18209,6 +18300,20 @@
             }
           ],
           "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 135,
+          "importKind": "value",
+          "source": "../../utils",
+          "specifiers": [
+            {
+              "imported": "jitterNumber",
+              "local": "jitterNumber",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 92,
           "type": "ImportDeclaration"
         }
       ],

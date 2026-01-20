@@ -26,21 +26,34 @@ export class MouseInput {
         if (!player || !world) return;
         if (!player.controls.isLocked) return;
         if (event.button === 0) {
-            if (this.onLeftClick && !this.isClickEvent) {
-                this.isClickEvent = true;
-                setTimeout(() => this.isClickEvent = false, 64);
-                this.onLeftClick();
-            }
-            if(PlayerParams.selectedCoords) {
-                const { x, y, z } = PlayerParams.selectedCoords;
-                // Left click 移除选中的方块
-                // TODO 需要考虑是否能够破坏和移除方块
-                // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
-                const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
-                world.removeBlock(blockX, blockY, blockZ);
-            }
+            this.handleLeftClick();
+            this.handleBreak();
         } else if (event.button === 2 && Action.blockPlacementCoords) {
-            if (!ToolBar.activeBlockId) return;
+            this.handlePlacement();
+        }
+    }
+
+    private handleLeftClick() {
+        if (this.onLeftClick && !this.isClickEvent) {
+            this.isClickEvent = true;
+            setTimeout(() => this.isClickEvent = false, 64);
+            this.onLeftClick();
+        }
+    }
+
+    private handleBreak() {
+        if(!PlayerParams.selectedCoords) return;
+        const { x, y, z } = PlayerParams.selectedCoords;
+        // Left click 移除选中的方块
+        // TODO 需要考虑是否能够破坏和移除方块
+        // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
+        const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
+        this.world.removeBlock(blockX, blockY, blockZ);
+    }
+
+    private handlePlacement() {
+        const { world, player } = this;
+        if (!ToolBar.activeBlockId) return;
             const playerPos = new THREE.Vector3(
             Math.floor(player.position.x),
             Math.floor(player.position.y) - PlayerParams.halfHeight,
@@ -63,6 +76,5 @@ export class MouseInput {
                 blockPos.z,
                 ToolBar.activeBlockId
             );
-        }
     }
 }

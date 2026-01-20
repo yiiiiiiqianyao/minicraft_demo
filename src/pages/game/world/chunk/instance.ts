@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { Block, RenderGeometry } from "../../Block/Block";
+import { jitterNumber } from "../../utils";
 
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {
     switch (blockClass.geometry) {
@@ -45,15 +46,18 @@ function InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, 
     const instanceId1 = mesh.count++;
     const instanceId2 = mesh.count++;
 
+    // 在添加花实例的时候需要有一点偏移
+    const xOffset = jitterNumber(0.5, 0.15);
+    const zOffset = jitterNumber(0.5, 0.15);
     // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高
     const matrix1 = new THREE.Matrix4();
     matrix1.makeRotationY(Math.PI / 4);
-    matrix1.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
+    matrix1.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);
     mesh.setMatrixAt(instanceId1, matrix1);
 
     const matrix2 = new THREE.Matrix4();
     matrix2.makeRotationY(-Math.PI / 4);
-    matrix2.setPosition(x + 0.5, y + 0.5 - 0.2, z + 0.5);
+    matrix2.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);
     mesh.setMatrixAt(instanceId2, matrix2);
 
     mesh.userData.renderGeometry = RenderGeometry.Flower;
