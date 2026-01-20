@@ -21,6 +21,8 @@ export function createUI(
   sunHelper: THREE.DirectionalLightHelper,
   shadowHelper: THREE.CameraHelper
 ) {
+
+  // TIP 设置默认 close
   const gui = new GUI();
   const custom = { volume: 0.3 };
 
@@ -31,10 +33,12 @@ export function createUI(
     .onChange((value: number) => {
       Howler.volume(value);
     });
+  soundFolder.close();
 
   const playerFolder = gui.addFolder("Player");
   playerFolder.add(player.cameraHelper, "visible").name("Camera Helper");
   playerFolder.add(player.boundsHelper, "visible").name("Show Player Bounds");
+  playerFolder.close();
 
   if(physics.helpers) {
     const physicsFolder = gui.addFolder("Physics");
@@ -42,6 +46,7 @@ export function createUI(
     physicsFolder
       .add(physics, "simulationRate", 10, 1000)
       .name("Simulation Rate");
+    physicsFolder.close();
   }
 
 
@@ -57,6 +62,7 @@ export function createUI(
     worldFolder.add(scene.fog, "near", 1, 200, 1).name("Fog Near");
     worldFolder.add(scene.fog, "far", 1, 200, 1).name("Fog Far");
   }
+  worldFolder.close();
 
   const terrainFolder = gui.addFolder("Terrain");
   terrainFolder.add(ChunkParams, "width", 8, 128, 1).name("Width");
@@ -65,6 +71,7 @@ export function createUI(
   terrainFolder.add(world.params.terrain, "scale", 10, 100, 1).name("Scale");
   terrainFolder.add(world.params.terrain, "magnitude", 0, 1).name("Magnitude");
   terrainFolder.add(world.params.terrain, "offset", 0, 1).name("Offset");
+  terrainFolder.close();
 
   if(world.params.trees) {
     const treesFolder = terrainFolder.addFolder("Trees");
@@ -81,6 +88,8 @@ export function createUI(
     treesFolder
       .add(world.params.trees.canopy.size, "max", 0, 10, 1)
       .name("Max Canopy Size");
+
+    treesFolder.close();
   }
   if(world.params.tallGrass) {
     const grassFolder = terrainFolder.addFolder("Grass");
@@ -88,6 +97,7 @@ export function createUI(
     grassFolder
       .add(world.params.tallGrass, "patchSize", 1, 10, 1)
       .name("Grass Patch Size");
+    grassFolder.close();
   }
 
   terrainFolder
@@ -133,7 +143,7 @@ export function initMainMenu(onStart: () => void) {
   const githubButton = document.getElementById("github");
   githubButton?.addEventListener("click", () => {
     audioManager.play("gui.button.press");
-    window.open("https://github.com/0kzh/minicraft");
+    window.open("https://github.com/yiiiiiiqianyao/minicraft_demo");
   });
 }
 

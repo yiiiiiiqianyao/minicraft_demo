@@ -60,17 +60,19 @@ export default class Game {
     this.physics = new Physics(this.scene, this.player, this.world);
 
     this.skyManager.updateSunPosition(0, this.player);
-
-    createUI(
-      this.world,
-      this.player,
-      this.physics,
-      this.scene,
-      this.renderer,
-      sunSettings,
-      this.skyManager.sunHelper,
-      this.skyManager.shadowHelper
-    );
+    // TODO 暂时关掉 具体的调试打开待优化
+    if(Math.random() < 0) {
+      createUI(
+        this.world,
+        this.player,
+        this.physics,
+        this.scene,
+        this.renderer,
+        sunSettings,
+        this.skyManager.sunHelper,
+        this.skyManager.shadowHelper
+      );
+    }
 
     this.draw();
   }

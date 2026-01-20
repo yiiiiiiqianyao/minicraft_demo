@@ -8,6 +8,9 @@ import { worldToCeilBlockCoord } from "../world/chunk/utils";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
+    onLeftClick?(): void;
+    onRightClick?(): void;
+    private isClickEvent = false;
     private player: Player;
     private world: World;
     constructor(player: Player, world: World) {
@@ -22,13 +25,20 @@ export class MouseInput {
         const { player, world } = this;
         if (!player || !world) return;
         if (!player.controls.isLocked) return;
-        if (event.button === 0 && PlayerParams.selectedCoords) {
-            const { x, y, z } = PlayerParams.selectedCoords;
-            // Left click 移除选中的方块
-            // TODO 需要考虑是否能够破坏和移除方块
-            // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
-            const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
-            world.removeBlock(blockX, blockY, blockZ);
+        if (event.button === 0) {
+            if (this.onLeftClick && !this.isClickEvent) {
+                this.isClickEvent = true;
+                setTimeout(() => this.isClickEvent = false, 64);
+                this.onLeftClick();
+            }
+            if(PlayerParams.selectedCoords) {
+                const { x, y, z } = PlayerParams.selectedCoords;
+                // Left click 移除选中的方块
+                // TODO 需要考虑是否能够破坏和移除方块
+                // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
+                const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
+                world.removeBlock(blockX, blockY, blockZ);
+            }
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             if (!ToolBar.activeBlockId) return;
             const playerPos = new THREE.Vector3(

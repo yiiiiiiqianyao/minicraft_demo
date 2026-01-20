@@ -1,6 +1,5 @@
 
 import * as THREE from "three";
-import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
 import audioManager from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
@@ -13,11 +12,11 @@ import { Action } from "./action";
 import { playerToChunkCoords, worldToCeilBlockCoord } from "../world/chunk/utils";
 import { updateWorldBlockCoordGUI } from "../dev";
 import { updatePlayerNear } from "../helper/chunkHelper";
-import { Layers } from "../engine";
-import { initPlayerCamera, updateCameraFOV } from "./camera";
+import { updateCameraFOV } from "./camera";
 import { Selector } from "./selector";
+import { PlayerGroup } from "./group";
 
-export class Player {
+export class Player extends PlayerGroup {
   onGround = false;
   input = new THREE.Vector3();
   /**@desc 玩家是否处于冲刺状态 */ 
@@ -25,9 +24,6 @@ export class Player {
   lastStepSoundPlayed = 0;
   world: World;
   keyboardInput = new KeyboardInput(this);
-  camera: THREE.PerspectiveCamera;
-  cameraHelper: THREE.CameraHelper;
-  controls: PointerLockControls;
   boundsHelper: THREE.Mesh;
   velocity = new THREE.Vector3();
   private _worldVelocity = new THREE.Vector3();
@@ -43,22 +39,9 @@ export class Player {
     return this._worldVelocity;
   }
 
-  get position() {
-    return this.camera.position;
-  }
-
   constructor(scene: THREE.Scene, world: World) {
+    super(scene);
     this.world = world;
-
-    this.camera = initPlayerCamera();
-    this.cameraHelper = new THREE.CameraHelper(this.camera);
-    this.cameraHelper.layers.set(Layers.One);
-    this.cameraHelper.visible = false;
-    
-    this.controls = new PointerLockControls(this.camera, document.body);
-    
-    scene.add(this.camera);
-    scene.add(this.cameraHelper);
     // for dev test
     this.boundsHelper = initBoundsHelper();
     this.boundsHelper.visible = false;
@@ -70,7 +53,10 @@ export class Player {
     setTimeout(() => {
       this.controls.lock();
     }, 2000);
-    new MouseInput(this, world);
+    const mouseInput = new MouseInput(this, world);
+    mouseInput.onLeftClick = () => {
+      this.waveHand();
+    }
   }
   
   /**
@@ -120,6 +106,7 @@ export class Player {
     // 更新用户的拾取选中方块
     Selector.update(this.camera, world, selectionHelper);
     Selector.select(this.camera, world, selectionHelper);
+    // 更新玩家的视角
     updateCameraFOV(this.camera, this.isSprinting);
     // prevent player from falling through
     if (this.position.y < 0) {
