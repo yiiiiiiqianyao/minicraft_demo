@@ -57,6 +57,8 @@ export class Player extends PlayerGroup {
     mouseInput.onLeftClick = () => {
       this.waveHand();
     }
+
+    PlayerParams.playerInstance = this;
   }
   
   /**

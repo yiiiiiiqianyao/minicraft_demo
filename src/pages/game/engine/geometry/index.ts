@@ -18,5 +18,6 @@ export const getInstancedGeometry = (blockGeometry: RenderGeometry) => {
 export * from './drop';
 
 export {
+    CubeGeometry,
     FlowerGeometry,
 }

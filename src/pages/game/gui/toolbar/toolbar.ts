@@ -1,5 +1,6 @@
 import { BlockID } from "../../Block";
 import { BlockFactory } from "../../Block/base/BlockFactory";
+import { PlayerParams } from "../../player/literal";
 import { setActive } from "./dom";
 import { ToolBarMaxCount } from "./literal";
 
@@ -25,10 +26,27 @@ export class ToolBar {
 
     /**@desc 往玩家物品栏中添加物品 */
     static pushBlockId(blockId: BlockID) {
-      if (ToolBar.toolbar.includes(blockId)) return;
+      // if (ToolBar.toolbar.includes(blockId)) return;
       if (ToolBar.toolbar.length > ToolBarMaxCount) return;
+      for(let i = 0; i < ToolBar.toolbar.length; i++) {
+        if(ToolBar.toolbar[i] === BlockID.Air) {
+          ToolBar.toolbar[i] = blockId;
+          ToolBar.updateToolBarGUI();
+          PlayerParams.playerInstance?.updateHand();
+          return;
+        }
+      }
+      // 如果物品栏中没有空位置 则直接添加到最后
       ToolBar.toolbar.push(blockId);
       ToolBar.updateToolBarGUI();
+      PlayerParams.playerInstance?.updateHand();
+    }
+
+    /**@desc 从玩家物品栏中移除物品 */
+    static removeBlockId() {
+      ToolBar.toolbar.splice(ToolBar.activeToolbarIndex, 1, BlockID.Air);
+      ToolBar.updateToolBarGUI();
+      PlayerParams.playerInstance?.updateHand();
     }
 
     static setToolBarGUI(index: number) {
@@ -56,6 +74,8 @@ export class ToolBar {
           const blockId = ToolBar.toolbar[i - 1];
           if (blockId !== undefined && blockId !== BlockID.Air) {
             slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;
+          } else {
+            slot.style.backgroundImage = '';
           }
         }
       }

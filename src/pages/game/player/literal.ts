@@ -1,8 +1,11 @@
 import * as THREE from "three";
 import { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from "./interface";
+import { Player } from "./Player";
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
 export class PlayerParams {
+    /**@desc 玩家实例 */
+    static playerInstance: Player | null = null;
     /**@desc 玩家的位置 初始值为 PlayerInitPosition */
     static position = new THREE.Vector3().copy(PlayerInitPosition);
     /**@desc 玩家的高度 */

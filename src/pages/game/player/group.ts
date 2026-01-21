@@ -8,6 +8,7 @@ import { quadraticFunction } from "../engine/math";
 import { MeshPool } from "../engine/mesh";
 import { MeshType } from "../engine/mesh/constant";
 import { BlockID } from "../Block";
+import { ToolBar } from "../gui";
 
 /**
  * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合
@@ -24,6 +25,7 @@ export class PlayerGroup {
     private handPoint!: THREE.Group;
     private scene: Scene;
     private basePoint!: THREE.PerspectiveCamera;
+    private currentHandBlockID: BlockID | null | undefined = null;
     get position() {
         return this.basePoint.position;
     }
@@ -65,17 +67,40 @@ export class PlayerGroup {
         point.add(handPoint);
 
         this.handPoint = handPoint;
-        this.updateHand(null);
+        // this.updateHand(null);
     }
 
     /**
      * @desc 根据 blockID 更新手的模型
      */
-    updateHand(blockID: BlockID | null) {
-        if(!blockID) {
-            this.handPoint.clear();
-            const hand = MeshPool.getMesh(MeshType.Hand) as THREE.Mesh;
-            this.handPoint.add(hand);
+    updateHand() {
+        const blockID = ToolBar.activeBlockId
+        if (this.currentHandBlockID === blockID) return;
+        this.currentHandBlockID = blockID;
+        this.handPoint.clear();
+        if (!blockID) {
+            this.handPoint.add(MeshPool.getMesh(MeshType.Hand) as THREE.Mesh);
+        } else {
+            // TODO 待补全
+            switch (blockID) {
+                case BlockID.Grass:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.GrassBlock) as THREE.Mesh);
+                case BlockID.Dirt:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.DirtBlock) as THREE.Mesh);
+                case BlockID.Stone:
+                case BlockID.CoalOre:
+                case BlockID.IronOre:
+                case BlockID.Bedrock:
+                case BlockID.OakLog:
+                case BlockID.Leaves:
+                case BlockID.TallGrass:
+                case BlockID.FlowerRose:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerRose) as THREE.Mesh);
+                case BlockID.FlowerDandelion:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerDandelion) as THREE.Mesh);
+                case BlockID.RedstoneLamp:
+                case BlockID.StoneBrick:
+            }
         }
     }
 
