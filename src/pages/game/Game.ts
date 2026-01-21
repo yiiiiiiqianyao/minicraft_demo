@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { createUI, initMainMenu } from "./gui";
+import { createUI, initMainMenu, swapMenuScreenGUI } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
@@ -12,6 +12,10 @@ import { ScreenViewer } from "./gui/viewer";
 import { Physics } from "./physics";
 import { Engine } from "./engine";
 import { sunSettings } from "./sky/literal";
+import { PhysicsParams } from "./physics/literal";
+import { ChunkParams } from "./world/chunk/literal";
+import { PlayerInitPosition } from "./player/literal";
+import { BlockID } from "./Block";
 
 export default class Game {
   static v = -1;
@@ -60,7 +64,10 @@ export default class Game {
     this.physics = new Physics(this.scene, this.player, this.world);
 
     this.skyManager.updateSunPosition(0, this.player);
-    // TODO 暂时关掉 具体的调试打开待优化
+    this.world.onLoad = () => {
+      this.onStart();
+    }
+        // TODO 暂时关掉 具体的调试打开待优化
     if(Math.random() < 0) {
       createUI(
         this.world,
@@ -73,7 +80,6 @@ export default class Game {
         this.skyManager.shadowHelper
       );
     }
-
     this.draw();
   }
 
@@ -145,5 +151,29 @@ export default class Game {
       case 'thirdPerson':
         return this.orbitCamera;
     }
+  }
+
+  /**@desc world chunk 初始化完成后 开始游戏*/
+  private onStart() {
+    const startX = PlayerInitPosition.x;
+    const startZ = PlayerInitPosition.z;
+      
+    this.player.updateByPosition();
+          
+    const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
+    for (let y = ChunkParams.height; y > 0; y--) {
+      // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
+      if (this.world.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
+        startingPlayerPosition.y = y;
+        break;
+      }
+    }
+    // 角色从离地面 10 个单位的位置开始
+    this.player.position.set(startX,startingPlayerPosition.y + 10,startZ);
+    // 角色 PointerLockControls 控制器解锁
+    this.player.controls.lock();
+    this.player.updateByPosition();
+    PhysicsParams.enabled = true;
+    swapMenuScreenGUI();
   }
 }

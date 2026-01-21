@@ -3,4 +3,6 @@ export enum MeshType {
     FlowerRose = "FlowerRose",
     /**@desc 蒲公英 */
     FlowerDandelion = "FlowerDandelion",
+    /**@desc 模拟的 手 */
+    Hand = 'Hand'
 }

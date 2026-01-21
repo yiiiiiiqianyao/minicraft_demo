@@ -13,6 +13,19 @@ export class MeshPool {
             const mesh = initRoseMesh();
             MeshPool.pool.set(type, mesh);
             return mesh;
+        } else if (type === MeshType.Hand) {
+            const mesh = initHandMesh();
+            MeshPool.pool.set(type, mesh);
+            return mesh;
         }
     }
+}
+
+function initHandMesh() {
+    const handLength = 0.5;
+    const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);
+    const material = new THREE.MeshLambertMaterial();
+    const hand = new THREE.Mesh(geometry, material);
+    hand.position.set(0, -handLength / 2, 0);
+    return hand;
 }

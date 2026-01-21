@@ -231,6 +231,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -382,7 +411,37 @@
             5,
             2,
             3,
-            2
+            2,
+            3,
+            4,
+            4,
+            5,
+            5,
+            4,
+            5,
+            5,
+            3,
+            1,
+            7,
+            6,
+            2,
+            5,
+            2,
+            5,
+            3,
+            4,
+            2,
+            4,
+            4,
+            3,
+            3,
+            3,
+            5,
+            3,
+            3,
+            4,
+            13,
+            5
           ]
         },
         "register": 1
@@ -528,7 +587,36 @@
             5,
             6,
             5,
-            6
+            6,
+            7,
+            6,
+            6,
+            7,
+            7,
+            6,
+            6,
+            7,
+            7,
+            7,
+            5,
+            7,
+            6,
+            5,
+            7,
+            6,
+            6,
+            7,
+            13,
+            7,
+            6,
+            6,
+            6,
+            7,
+            8,
+            7,
+            7,
+            80,
+            7
           ]
         },
         "register": 14
@@ -671,6 +759,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0
           ]
         },
@@ -816,6 +933,32 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
@@ -927,6 +1070,36 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2270,6 +2443,36 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -2413,7 +2616,36 @@
             0,
             1,
             0,
-            1
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            10,
+            0
           ],
           "addRuntimePlugin": [
             0,
@@ -2426,6 +2658,35 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2616,6 +2877,35 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2998,6 +3288,64 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -3157,9 +3505,96 @@
             12,
             7,
             7,
+            8,
+            17,
+            8,
+            9,
+            10,
+            9,
+            13,
+            7,
+            14,
+            11,
+            7,
+            7,
+            11,
+            9,
+            10,
+            11,
+            8,
+            9,
+            16,
+            12,
+            10,
+            7,
+            7,
+            14,
+            11,
+            10,
+            8,
+            17,
+            24,
             8
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -3682,6 +4117,64 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -3820,6 +4313,35 @@
             0,
             0,
             2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -3994,6 +4516,35 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0
           ],
           "addBeforeMiddlewares": [
@@ -4267,6 +4818,64 @@
             56,
             1,
             54,
+            1,
+            62,
+            1,
+            52,
+            1,
+            68,
+            1,
+            53,
+            1,
+            61,
+            2,
+            64,
+            1,
+            55,
+            2,
+            64,
+            2,
+            67,
+            2,
+            57,
+            2,
+            50,
+            2,
+            60,
+            1,
+            59,
+            1,
+            84,
+            1,
+            57,
+            1,
+            67,
+            1,
+            61,
+            1,
+            58,
+            1,
+            63,
+            2,
+            56,
+            1,
+            51,
+            1,
+            58,
+            1,
+            62,
+            2,
+            55,
+            1,
+            57,
+            2,
+            61,
+            2,
+            59,
+            1,
+            63,
+            2,
+            52,
             1
           ]
         },
@@ -4421,6 +5030,35 @@
             1,
             0,
             0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0
@@ -4581,7 +5219,36 @@
             4,
             4,
             4,
-            4
+            4,
+            5,
+            4,
+            4,
+            4,
+            4,
+            5,
+            4,
+            4,
+            5,
+            7,
+            5,
+            4,
+            4,
+            3,
+            4,
+            3,
+            7,
+            5,
+            5,
+            4,
+            4,
+            4,
+            5,
+            4,
+            5,
+            4,
+            5,
+            7,
+            8
           ]
         },
         "register": 3
@@ -4792,7 +5459,36 @@
             1,
             0,
             1,
-            1
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
           ]
         },
         "register": 1
@@ -5592,7 +6288,7 @@
       "id": "game/engine/mesh/constant",
       "file": "game/engine/mesh/constant.ts",
       "absPath": "/game/engine/mesh/constant",
-      "__content": "export enum MeshType {\n    /**@desc 玫瑰花 */\n    FlowerRose = \"FlowerRose\",\n    /**@desc 蒲公英 */\n    FlowerDandelion = \"FlowerDandelion\",\n}",
+      "__content": "export enum MeshType {\n    /**@desc 玫瑰花 */\n    FlowerRose = \"FlowerRose\",\n    /**@desc 蒲公英 */\n    FlowerDandelion = \"FlowerDandelion\",\n    /**@desc 模拟的 手 */\n    Hand = 'Hand'\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/mesh/constant.ts"
     },
@@ -5718,7 +6414,7 @@
       "id": "game/engine/mesh/index",
       "file": "game/engine/mesh/index.ts",
       "absPath": "/game/engine/mesh",
-      "__content": "import * as THREE from \"three\";\nimport { MeshType } from \"./constant\";\nimport { initRoseMesh } from \"./flower\";\n\n/**@desc 网格池 */\nexport class MeshPool {\n    private static pool: Map<MeshType, THREE.Mesh> = new Map();\n    static getMesh(type: MeshType) {\n        if (MeshPool.pool.get(type)) {\n            return MeshPool.pool.get(type)!;\n        }\n        if (type === MeshType.FlowerRose) {\n            const mesh = initRoseMesh();\n            MeshPool.pool.set(type, mesh);\n            return mesh;\n        }\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { MeshType } from \"./constant\";\nimport { initRoseMesh } from \"./flower\";\n\n/**@desc 网格池 */\nexport class MeshPool {\n    private static pool: Map<MeshType, THREE.Mesh> = new Map();\n    static getMesh(type: MeshType) {\n        if (MeshPool.pool.get(type)) {\n            return MeshPool.pool.get(type)!;\n        }\n        if (type === MeshType.FlowerRose) {\n            const mesh = initRoseMesh();\n            MeshPool.pool.set(type, mesh);\n            return mesh;\n        } else if (type === MeshType.Hand) {\n            const mesh = initHandMesh();\n            MeshPool.pool.set(type, mesh);\n            return mesh;\n        }\n    }\n}\n\nfunction initHandMesh() {\n    const handLength = 0.5;\n    const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n    const material = new THREE.MeshLambertMaterial();\n    const hand = new THREE.Mesh(geometry, material);\n    hand.position.set(0, -handLength / 2, 0);\n    return hand;\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/mesh/index.ts"
     },
@@ -5853,7 +6549,7 @@
       "id": "game/Block/constant",
       "file": "game/Block/constant.ts",
       "absPath": "/game/Block/constant",
-      "__content": "export enum BlockID {\n  Air = 0,\n  Grass = 1,\n  Dirt = 2,\n  Stone = 3,\n  CoalOre = 4,\n  IronOre = 5,\n  Bedrock = 6,\n  OakLog = 7,\n  Leaves = 8,\n  TallGrass = 9,\n  FlowerRose = 10,\n  FlowerDandelion = 11,\n  RedstoneLamp = 12,\n  StoneBrick = 13,\n}\n\nexport const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\nexport const blockIdToKey = {\n  [BlockID.Air]: \"air\",\n  [BlockID.Grass]: \"grass\", // 草方块（目前作为地面）\n  [BlockID.TallGrass]: \"tall_grass\", // 高草方块（草丛）\n  [BlockID.Dirt]: \"dirt\",\n  [BlockID.Stone]: \"stone\",\n  [BlockID.CoalOre]: \"coal\",\n  [BlockID.IronOre]: \"iron\",\n  [BlockID.Bedrock]: \"bedrock\", // 基岩 方块\n  [BlockID.OakLog]: \"oak_log\",\n  [BlockID.Leaves]: \"leaves\",\n  [BlockID.FlowerRose]: \"flower_rose\",\n  [BlockID.FlowerDandelion]: \"flower_dandelion\",\n  [BlockID.RedstoneLamp]: \"redstone_lamp\",\n  [BlockID.StoneBrick]: \"stone_brick\",\n};\n",
+      "__content": "/**@desc 方块ID 目前游戏中所有方块的类型 ID */\nexport enum BlockID {\n  Air = 0,\n  Grass = 1,\n  Dirt = 2,\n  Stone = 3,\n  CoalOre = 4,\n  IronOre = 5,\n  Bedrock = 6,\n  OakLog = 7,\n  Leaves = 8,\n  TallGrass = 9,\n  FlowerRose = 10,\n  FlowerDandelion = 11,\n  RedstoneLamp = 12,\n  StoneBrick = 13,\n}\n\nexport const blockIDValues = Object.values(BlockID).filter(\n      (value) => typeof value === \"number\"\n    ) as BlockID[];\n\nexport const blockIdToKey = {\n  [BlockID.Air]: \"air\",\n  [BlockID.Grass]: \"grass\", // 草方块（目前作为地面）\n  [BlockID.TallGrass]: \"tall_grass\", // 高草方块（草丛）\n  [BlockID.Dirt]: \"dirt\",\n  [BlockID.Stone]: \"stone\",\n  [BlockID.CoalOre]: \"coal\",\n  [BlockID.IronOre]: \"iron\",\n  [BlockID.Bedrock]: \"bedrock\", // 基岩 方块\n  [BlockID.OakLog]: \"oak_log\",\n  [BlockID.Leaves]: \"leaves\",\n  [BlockID.FlowerRose]: \"flower_rose\",\n  [BlockID.FlowerDandelion]: \"flower_dandelion\",\n  [BlockID.RedstoneLamp]: \"redstone_lamp\",\n  [BlockID.StoneBrick]: \"stone_brick\",\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/constant.ts"
     },
@@ -5997,7 +6693,7 @@
       "id": "game/player/group",
       "file": "game/player/group.ts",
       "absPath": "/game/player/group",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nconst handLength = 0.5;\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    hand!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n        const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n        const material = new THREE.MeshLambertMaterial();\n        const mesh = new THREE.Mesh(geometry, material);\n        mesh.position.set(0, -handLength / 2, 0);\n        handPoint.add(mesh);\n\n        this.hand = handPoint;\n    }\n\n    protected waveHand() {\n        if (!this.hand) return;\n        const update = (o: { t: number }) => {\n            this.hand.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.hand.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.hand.position.z = quadraticFunction(o.t) * 0.1;\n            // this.hand.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.hand.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\nimport { MeshPool } from \"../engine/mesh\";\nimport { MeshType } from \"../engine/mesh/constant\";\nimport { BlockID } from \"../Block\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    private handPoint!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n        this.handPoint = handPoint;\n        this.updateHand(null);\n    }\n\n    /**\n     * @desc 根据 blockID 更新手的模型\n     */\n    updateHand(blockID: BlockID | null) {\n        if(!blockID) {\n            this.handPoint.clear();\n            const hand = MeshPool.getMesh(MeshType.Hand) as THREE.Mesh;\n            this.handPoint.add(hand);\n        }\n    }\n\n    protected waveHand() {\n        if (!this.handPoint) return;\n        const update = (o: { t: number }) => {\n            this.handPoint.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.handPoint.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.handPoint.position.z = quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/group.ts"
     },
@@ -6069,7 +6765,7 @@
       "id": "game/world/World",
       "file": "game/world/World.ts",
       "absPath": "/game/world/World",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/base/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/blocks/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\nimport { getDefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition, PlayerParams } from \"../player/literal\";\nimport { swapMenuScreenGUI, ToolBar, updateProgressGUI } from \"../gui\";\nimport { RNG } from \"../seed/RNG\";\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise.js\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { worldToChunkCoords, worldToChunkCoordsXZ } from \"./chunk/utils\";\nimport { getFloorXYZ } from \"../engine/utils\";\nimport { PhysicsParams } from \"../physics/literal\";\n\nexport class World extends THREE.Group {\n  static rng: RNG;\n  static simplex: SimplexNoise;\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n\n  params: IWorldParams = getDefaultWorldParams();\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    World.rng = new RNG(seed);\n    World.simplex = new SimplexNoise(World.rng);\n    this.scene = scene;\n    this.chunkQueue = [];\n\n    ToolBar.updateToolBarGUI();\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks();\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      this.updateInitialLoad(player);\n    }\n  }\n\n  updateInitialLoad(player: Player) {\n    const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n    const loadedChunks = this.children.length;\n    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n    const startX = PlayerInitPosition.x;\n    const startZ = PlayerInitPosition.z;\n    if(!PlayerParams.currentChunk) {  \n      const [chunkX, chunkZ] = worldToChunkCoordsXZ(startX, startZ);\n      PlayerParams.currentChunk = {x: chunkX, z: chunkZ};\n    }\n    \n\n    updateProgressGUI(percentLoaded);\n    // 初始化更新一次 player 信息\n    if(percentLoaded === 100) {\n      this.initialLoadComplete = true;\n      player.updateByPosition();\n      \n      const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n     \n      const currentChunkHeight = ChunkParams.height;\n      for (let y = currentChunkHeight; y > 0; y--) {\n        // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整\n        if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {\n          startingPlayerPosition.y = y;\n          break;\n        }\n      }\n      // 角色从离地面 10 个单位的位置开始\n      player.position.set(startX,startingPlayerPosition.y + 10,startZ);\n      // 角色 PointerLockControls 控制器解锁\n      player.controls.lock();\n      player.updateByPosition();\n      PhysicsParams.enabled = true;\n      swapMenuScreenGUI();\n    }\n  }\n\n  /**\n   * @desc 获取角色当前位置下方的方块\n   * @param position 世界坐标的位置\n   * @param playerHeight \n   * @returns \n   */\n  getBlockUnderneath(position: THREE.Vector3) {\n    const {x, y, z} = position;\n    const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);\n    return this.getBlock(floorX, floorY, floorZ);\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);\n    if (!PlayerParams.currentChunk) return [];\n    // console.log('chunkX, chunkZ', chunkX, chunkZ);\n    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2\n      );\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n    return chunksToRemove;\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const { width } = ChunkParams;\n    const chunk = new WorldChunk(this.params, this.dataStore);\n    chunk.position.set(x * width, 0, z * width);\n    chunk.userData = { x, z };\n\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  // TODO 破坏 & 移除方块\n  removeBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n    // console.log('chunk', chunk);\n    // console.log('blockToRemove', blockToRemove);\n    // 不能破坏基岩 bedrock\n    if (blockToRemove?.block === BlockID.Bedrock) return;\n    \n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      // 如果是光源方块 则需要移除对应的点光源\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID } from \"../Block\";\nimport { BlockFactory } from \"../Block/base/BlockFactory\";\nimport { LightSourceBlock } from \"../Block/blocks/LightSourceBlock\";\nimport { DataStore } from \"./DataStore\";\nimport { Player } from \"../player/Player\";\nimport { WorldChunk } from \"./WorldChunk\";\nimport { IWorldParams } from \"./interface\";\nimport { getDefaultWorldParams } from \"./literal\";\nimport { PlayerInitPosition, PlayerParams } from \"../player/literal\";\nimport { ToolBar, updateProgressGUI } from \"../gui\";\nimport { RNG } from \"../seed/RNG\";\nimport { SimplexNoise } from \"three/examples/jsm/math/SimplexNoise.js\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { worldToChunkCoords, worldToChunkCoordsXZ } from \"./chunk/utils\";\nimport { getFloorXYZ } from \"../engine/utils\";\n\nexport class World extends THREE.Group {\n  static rng: RNG;\n  static simplex: SimplexNoise;\n  scene: THREE.Scene;\n  seed: number;\n  renderDistance = 8;\n  asyncLoading = true;\n  chunkQueue: { x: number; z: number }[];\n  // minChunkLoadTimeout = 200;\n  // lastChunkLoadTime = 0;\n  onLoad?: () => void;\n  params: IWorldParams = getDefaultWorldParams();\n\n  // Used for persisting changes to the world\n  dataStore = new DataStore();\n  pointLights = new Map<string, THREE.PointLight>();\n  private initialLoadComplete = false;\n\n  constructor(seed = 0, scene: THREE.Scene) {\n    super();\n    this.seed = seed;\n    World.rng = new RNG(seed);\n    World.simplex = new SimplexNoise(World.rng);\n    this.scene = scene;\n    this.chunkQueue = [];\n\n    ToolBar.updateToolBarGUI();\n  }\n\n  /**\n   * Clears existing world data and re-generates everything\n   */\n  regenerate(player: Player) {\n    this.children.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n    });\n    this.clear();\n    this.update(player);\n  }\n\n  getBlockKey(x: number, y: number, z: number) {\n    return `${x},${y},${z}`;\n  }\n\n  getChunkKey(x: number, z: number) {\n    return `${x},${z}`;\n  }\n\n  /**\n   * Updates the visible portions of the world based on the current player position\n   */\n  update(player: Player) {\n    const visibleChunks = this.getVisibleChunks();\n    const chunksToAdd = this.getChunksToAdd(visibleChunks);\n    this.removeUnusedChunks(visibleChunks);\n\n    // 有需要添加的 chunk 时，加入 chunk queue\n    if (chunksToAdd.length > 0) {\n      // console.log(\"Chunks to add\", chunksToAdd);\n      this.chunkQueue = [...chunksToAdd, ...this.chunkQueue];\n\n      // trim duplicates from chunkQueue\n      const chunkQueueSet = new Set();\n      this.chunkQueue = this.chunkQueue.filter((chunk) => {\n        const key = this.getChunkKey(chunk.x, chunk.z);\n        if (chunkQueueSet.has(key)) {\n          return false;\n        } else {\n          chunkQueueSet.add(key);\n          return true;\n        }\n      });\n    }\n\n    // process top from chunk queue\n    if (this.chunkQueue.length) {\n      const chunk = this.chunkQueue.shift();\n      if (chunk) {\n        // console.log(\"Generating chunk\", chunk.x, chunk.z);\n        this.generateChunk(chunk.x, chunk.z);\n        // this.lastChunkLoadTime = performance.now();\n      }\n    }\n\n    // 在初始加载未完成前更新加载进度条\n    if (!this.initialLoadComplete) {\n      this.updateInitialLoad();\n    }\n  }\n\n  private updateInitialLoad() {\n    const totalChunks = (this.renderDistance * 2 + 1) ** 2;\n    const loadedChunks = this.children.length;\n    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);\n   \n    if(!PlayerParams.currentChunk) {  \n      const [chunkX, chunkZ] = worldToChunkCoordsXZ(PlayerInitPosition.x, PlayerInitPosition.z);\n      PlayerParams.currentChunk = {x: chunkX, z: chunkZ};\n    }\n\n    updateProgressGUI(percentLoaded);\n    // 初始化更新一次 player 信息\n    if(percentLoaded === 100) {\n      this.initialLoadComplete = true;\n      // world chunk 初始化完成后 调用 onLoad 回调\n      this.onLoad && this.onLoad();\n    }\n  }\n\n  /**\n   * @desc 获取角色当前位置下方的方块\n   * @param position 世界坐标的位置\n   * @param playerHeight \n   * @returns \n   */\n  getBlockUnderneath(position: THREE.Vector3) {\n    const {x, y, z} = position;\n    const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);\n    return this.getBlock(floorX, floorY, floorZ);\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks\n   * that are currently visible to the player, starting from the center\n   */\n  getVisibleChunks(): { x: number; z: number }[] {\n    // get coordinates of the chunk the player is currently on\n    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);\n    if (!PlayerParams.currentChunk) return [];\n    // console.log('chunkX, chunkZ', chunkX, chunkZ);\n    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;\n\n    const visibleChunks: { x: number; z: number }[] = [];\n    const range = Array.from(\n      { length: this.renderDistance * 2 + 1 },\n      (_, i) => i - this.renderDistance\n    );\n    range.sort((a, b) => Math.abs(a) - Math.abs(b));\n\n    for (const dx of range) {\n      for (const dz of range) {\n        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });\n      }\n    }\n\n    // sort chunks by distance from player\n    visibleChunks.sort((a, b) => {\n      const distA = Math.sqrt(\n        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2\n      );\n      const distB = Math.sqrt(\n        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2\n      );\n      return distA - distB;\n    });\n\n    return visibleChunks;\n  }\n\n  /**\n   * Returns an array containing the coordinates of the chunks that\n   * are not yet loaded and need to be added to the scene\n   */\n  getChunksToAdd(\n    visibleChunks: { x: number; z: number }[]\n  ): { x: number; z: number }[] {\n    return visibleChunks.filter((chunk) => {\n      const chunkExists = this.children\n        .map((obj) => obj.userData)\n        .find(({ x, z }) => {\n          return chunk.x === x && chunk.z == z;\n        });\n\n      return !chunkExists;\n    });\n  }\n\n  /**\n   * Removes current loaded chunks that are no longer visible\n   */\n  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {\n    const chunksToRemove = this.children.filter((obj) => {\n      const { x, z } = obj.userData;\n      const chunkExists = visibleChunks.find((visibleChunk) => {\n        return visibleChunk.x === x && visibleChunk.z === z;\n      });\n\n      return !chunkExists;\n    });\n\n    chunksToRemove.forEach((chunk) => {\n      if (chunk instanceof WorldChunk) {\n        chunk.disposeChildren();\n      }\n\n      this.remove(chunk);\n      // console.log(\n      //   `Removed chunk at X: ${chunk.userData.x} Z: ${chunk.userData.z}`\n      // );\n    });\n    return chunksToRemove;\n  }\n\n  /**\n   * Generates the chunk at (x, z) coordinates\n   */\n  async generateChunk(x: number, z: number) {\n    const { width } = ChunkParams;\n    const chunk = new WorldChunk(this.params, this.dataStore);\n    chunk.position.set(x * width, 0, z * width);\n    chunk.userData = { x, z };\n    chunk.generate();\n\n    this.add(chunk);\n  }\n\n  /**\n   * Adds a new block at (x, y, z)\n   */\n  addBlock(x: number, y: number, z: number, block: BlockID) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);\n\n      // if adding a light, convert to point light\n      // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理\n      if (block === BlockID.RedstoneLamp) {\n        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;\n        const light = new THREE.PointLight(\n          blockClass.color,\n          blockClass.intensity,\n          blockClass.distance,\n          blockClass.decay\n        );\n        light.position.set(x + 0.5, y + 0.5, z + 0.5);\n        light.castShadow = true;\n        this.pointLights.set(this.getBlockKey(x, y, z), light);\n        this.scene.add(light);\n      }\n\n      // Hide any blocks that may be totally obscured\n      this.hideBlockIfNeeded(x - 1, y, z);\n      this.hideBlockIfNeeded(x + 1, y, z);\n      this.hideBlockIfNeeded(x, y - 1, z);\n      this.hideBlockIfNeeded(x, y + 1, z);\n      this.hideBlockIfNeeded(x, y, z - 1);\n      this.hideBlockIfNeeded(x, y, z + 1);\n    }\n  }\n\n  // TODO 破坏 & 移除方块\n  removeBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n    const blockToRemove = this.getBlock(x, y, z);\n    // console.log('chunk', chunk);\n    // console.log('blockToRemove', blockToRemove);\n    // 不能破坏基岩 bedrock\n    if (blockToRemove?.block === BlockID.Bedrock) return;\n    \n    if (chunk && chunk.loaded) {\n      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);\n      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);\n      // 如果是光源方块 则需要移除对应的点光源\n      if (this.pointLights.has(this.getBlockKey(x, y, z))) {\n        const light = this.pointLights.get(this.getBlockKey(x, y, z));\n        if (light) {\n          this.scene.remove(light);\n          this.pointLights.delete(this.getBlockKey(x, y, z));\n        }\n      }\n\n      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed\n      this.revealBlock(x - 1, y, z);\n      this.revealBlock(x + 1, y, z);\n      this.revealBlock(x, y - 1, z);\n      this.revealBlock(x, y + 1, z);\n      this.revealBlock(x, y, z - 1);\n      this.revealBlock(x, y, z + 1);\n\n      // if above block is passthrough, remove it as well\n      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true\n      const aboveBlock = this.getBlock(x, y + 1, z);\n      if (\n        aboveBlock &&\n        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断\n        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&\n        aboveBlock.block !== BlockID.Air\n      ) {\n        this.removeBlock(x, y + 1, z);\n      }\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z)\n   */\n  getBlock(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      return chunk.getBlock(coords.block.x, y, coords.block.z);\n    }\n  }\n\n  /**\n   * Returns the WorldChunk object that contains the specified coordinates\n   */\n  getChunk(x: number, z: number): WorldChunk | undefined {\n    return this.children.find((obj) => {\n      return obj.userData.x === x && obj.userData.z === z;\n    }) as WorldChunk | undefined;\n  }\n\n  /**\n   * Reveals block at (x, y, z) by adding new mesh instance\n   */\n  revealBlock(x: number, y: number, z: number) {\n    // console.log(`Revealing block at ${x}, ${y}, ${z}`);\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (chunk && chunk.loaded) {\n      chunk.addBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n\n  /**\n   * Hides block at (x, y, z) by removing mesh instance\n   */\n  hideBlockIfNeeded(x: number, y: number, z: number) {\n    const coords = worldToChunkCoords(x, y, z);\n    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);\n\n    if (\n      chunk &&\n      chunk.loaded &&\n      chunk.isBlockObscured(coords.block.x, coords.block.y, coords.block.z)\n    ) {\n      // console.log(`Hiding block at ${x}, ${y}, ${z}`);\n      chunk.deleteBlockInstance(coords.block.x, coords.block.y, coords.block.z);\n    }\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/World.ts"
     },
@@ -6141,7 +6837,7 @@
       "id": "game/Game",
       "file": "game/Game.ts",
       "absPath": "/game/Game",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu } from \"./gui\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\nimport { Physics } from \"./physics\";\nimport { Engine } from \"./engine\";\nimport { sunSettings } from \"./sky/literal\";\n\nexport default class Game {\n  static v = -1;\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    Engine.init();\n    this.renderer = Engine.renderer;\n    this.scene = Engine.scene;\n        \n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene, this.player, this.world);\n\n    this.skyManager.updateSunPosition(0, this.player);\n    // TODO 暂时关掉 具体的调试打开待优化\n    if(Math.random() < 0) {\n      createUI(\n        this.world,\n        this.player,\n        this.physics,\n        this.scene,\n        this.renderer,\n        sunSettings,\n        this.skyManager.sunHelper,\n        this.skyManager.shadowHelper\n      );\n    }\n\n    this.draw();\n  }\n\n  private onWindowResize() {\n    const { width, height } = Engine.screenWrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    if(this.orbitCamera) {\n      this.orbitCamera.aspect = aspect;\n      this.orbitCamera.updateProjectionMatrix();\n    }\n    if (this.player) {\n      this.player.camera.aspect = aspect;\n      this.player.camera.updateProjectionMatrix();\n    }\n    if (this.renderer) {\n      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    }\n  }\n\n  /**@desc 游戏主循环 */\n  private draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();    \n    const renderCamera = this.getRenderCamera();\n    this.renderer.render(this.scene, renderCamera);\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n\n  private getRenderCamera() {\n    // TODO 第三人称视角 增加支持角色的控制移动\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    if(Game.v !== -1) {\n      if(Game.v === 1) {\n        return this.player.camera;\n      } else {\n        return this.orbitCamera;\n      }\n    }\n    const renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';\n    switch(renderMode) {\n      case 'firstPerson':\n        return this.player.camera;\n      case 'thirdPerson':\n        return this.orbitCamera;\n    }\n  }\n}\n",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { createUI, initMainMenu, swapMenuScreenGUI } from \"./gui\";\nimport { Player } from \"./player/Player\";\nimport { World } from \"./world/World\";\nimport { SkyManager } from \"./sky\";\nimport { updateRenderInfoGUI, updateStats } from \"./dev\";\nimport audioManager from \"./audio/AudioManager\";\nimport { initOrbitCamera, updateOrbitControls } from \"./dev/orbitCamera\";\nimport { ScreenViewer } from \"./gui/viewer\";\nimport { Physics } from \"./physics\";\nimport { Engine } from \"./engine\";\nimport { sunSettings } from \"./sky/literal\";\nimport { PhysicsParams } from \"./physics/literal\";\nimport { ChunkParams } from \"./world/chunk/literal\";\nimport { PlayerInitPosition } from \"./player/literal\";\nimport { BlockID } from \"./Block\";\n\nexport default class Game {\n  static v = -1;\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n  private orbitCamera!: THREE.PerspectiveCamera;\n\n  private controls!: OrbitControls;\n  private clock!: THREE.Clock;\n\n  private skyManager!: SkyManager;\n  private world!: World;\n  private player!: Player;\n  private physics!: Physics;\n\n  private previousTime = 0;\n  \n\n  constructor() {\n    this.previousTime = performance.now();\n    this.clock = new THREE.Clock();\n    initMainMenu(() => {\n      this.initScene();\n      // this.initListeners();\n      window.addEventListener(\"resize\", this.onWindowResize.bind(this), false);\n      audioManager.playBtm();\n    });\n  }\n\n  initScene() {\n    Engine.init();\n    this.renderer = Engine.renderer;\n    this.scene = Engine.scene;\n        \n    const { orbitCamera, controls } = initOrbitCamera(this.renderer);\n    this.orbitCamera = orbitCamera;\n    this.controls = controls;\n\n    // Skybox\n    this.skyManager = new SkyManager(this.scene);\n    \n    this.world = new World(0, this.scene);\n    this.scene.add(this.world);\n\n    this.player = new Player(this.scene, this.world);\n    this.physics = new Physics(this.scene, this.player, this.world);\n\n    this.skyManager.updateSunPosition(0, this.player);\n    // TODO 暂时关掉 具体的调试打开待优化\n    if(Math.random() < 0) {\n      createUI(\n        this.world,\n        this.player,\n        this.physics,\n        this.scene,\n        this.renderer,\n        sunSettings,\n        this.skyManager.sunHelper,\n        this.skyManager.shadowHelper\n      );\n    }\n    this.world.onLoad = () => {\n      this.onStart();\n    }\n    this.draw();\n  }\n\n  private onWindowResize() {\n    const { width, height } = Engine.screenWrap.getBoundingClientRect();\n    ScreenViewer.width = width;\n    ScreenViewer.height = height;\n\n    const aspect = ScreenViewer.width / ScreenViewer.height;\n    if(this.orbitCamera) {\n      this.orbitCamera.aspect = aspect;\n      this.orbitCamera.updateProjectionMatrix();\n    }\n    if (this.player) {\n      this.player.camera.aspect = aspect;\n      this.player.camera.updateProjectionMatrix();\n    }\n    if (this.renderer) {\n      this.renderer.setSize(ScreenViewer.width, ScreenViewer.height);\n    }\n  }\n\n  /**@desc 游戏主循环 */\n  private draw() {\n    const currentTime = performance.now();\n    const deltaTime = (currentTime - this.previousTime) / 1000;\n\n    requestAnimationFrame(() => {\n      this.draw();\n    });\n\n    // TODO 更新天空应该放置在更新世界中\n    this.skyManager.updateSkyColor(this.clock, this.player);\n\n    // 更新物理模拟\n    this.physics.update(deltaTime);\n\n    // 更新世界 chunk\n    this.world.update(this.player);\n\n    // update triangle count\n    updateRenderInfoGUI(this.renderer);\n    updateStats();\n\n    TWEEN.update();    \n    const renderCamera = this.getRenderCamera();\n    this.renderer.render(this.scene, renderCamera);\n    // 更新观察相机位置和目标位置\n    updateOrbitControls(this.orbitCamera, this.controls, this.player);\n\n    this.previousTime = currentTime;\n  }\n\n  private getRenderCamera() {\n    // TODO 第三人称视角 增加支持角色的控制移动\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    if(Game.v !== -1) {\n      if(Game.v === 1) {\n        return this.player.camera;\n      } else {\n        return this.orbitCamera;\n      }\n    }\n    const renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';\n    switch(renderMode) {\n      case 'firstPerson':\n        return this.player.camera;\n      case 'thirdPerson':\n        return this.orbitCamera;\n    }\n  }\n\n  /**@desc world chunk 初始化完成后 开始游戏*/\n  private onStart() {\n    const startX = PlayerInitPosition.x;\n    const startZ = PlayerInitPosition.z;\n      \n    this.player.updateByPosition();\n          \n    const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);\n    for (let y = ChunkParams.height; y > 0; y--) {\n      // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整\n      if (this.world.getBlock( startX, y,startZ)?.block === BlockID.Grass) {\n        startingPlayerPosition.y = y;\n        break;\n      }\n    }\n    // 角色从离地面 10 个单位的位置开始\n    this.player.position.set(startX,startingPlayerPosition.y + 10,startZ);\n    // 角色 PointerLockControls 控制器解锁\n    this.player.controls.lock();\n    this.player.updateByPosition();\n    PhysicsParams.enabled = true;\n    swapMenuScreenGUI();\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Game.ts"
     },
@@ -7328,7 +8024,7 @@
             "format": "esm"
           },
           "src/pages/game/Block/constant.ts": {
-            "bytes": 950,
+            "bytes": 1011,
             "imports": [],
             "format": "esm"
           },
@@ -8100,13 +8796,8 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/physics/literal.ts": {
-            "bytes": 399,
-            "imports": [],
-            "format": "esm"
-          },
           "src/pages/game/world/World.ts": {
-            "bytes": 12591,
+            "bytes": 11792,
             "imports": [
               {
                 "path": "three",
@@ -8187,11 +8878,6 @@
                 "path": "src/pages/game/engine/utils.ts",
                 "kind": "import-statement",
                 "original": "../engine/utils"
-              },
-              {
-                "path": "src/pages/game/physics/literal.ts",
-                "kind": "import-statement",
-                "original": "../physics/literal"
               }
             ],
             "format": "esm"
@@ -8745,7 +9431,7 @@
             "format": "esm"
           },
           "src/pages/game/engine/mesh/constant.ts": {
-            "bytes": 148,
+            "bytes": 196,
             "imports": [],
             "format": "esm"
           },
@@ -8814,7 +9500,7 @@
             "format": "esm"
           },
           "src/pages/game/engine/mesh/index.ts": {
-            "bytes": 524,
+            "bytes": 972,
             "imports": [
               {
                 "path": "three",
@@ -8906,6 +9592,11 @@
                 "original": "../gui/viewer"
               }
             ],
+            "format": "esm"
+          },
+          "src/pages/game/physics/literal.ts": {
+            "bytes": 399,
+            "imports": [],
             "format": "esm"
           },
           "src/pages/game/player/action.ts": {
@@ -9146,7 +9837,7 @@
             "format": "esm"
           },
           "src/pages/game/player/group.ts": {
-            "bytes": 2949,
+            "bytes": 3160,
             "imports": [
               {
                 "path": "three",
@@ -9182,6 +9873,21 @@
                 "path": "src/pages/game/engine/math.ts",
                 "kind": "import-statement",
                 "original": "../engine/math"
+              },
+              {
+                "path": "src/pages/game/engine/mesh/index.ts",
+                "kind": "import-statement",
+                "original": "../engine/mesh"
+              },
+              {
+                "path": "src/pages/game/engine/mesh/constant.ts",
+                "kind": "import-statement",
+                "original": "../engine/mesh/constant"
+              },
+              {
+                "path": "../Block",
+                "kind": "import-statement",
+                "external": true
               }
             ],
             "format": "esm"
@@ -9438,7 +10144,7 @@
             "format": "esm"
           },
           "src/pages/game/Game.ts": {
-            "bytes": 4272,
+            "bytes": 5440,
             "imports": [
               {
                 "path": "three",
@@ -9509,6 +10215,26 @@
                 "path": "src/pages/game/sky/literal.ts",
                 "kind": "import-statement",
                 "original": "./sky/literal"
+              },
+              {
+                "path": "src/pages/game/physics/literal.ts",
+                "kind": "import-statement",
+                "original": "./physics/literal"
+              },
+              {
+                "path": "src/pages/game/world/chunk/literal.ts",
+                "kind": "import-statement",
+                "original": "./world/chunk/literal"
+              },
+              {
+                "path": "src/pages/game/player/literal.ts",
+                "kind": "import-statement",
+                "original": "./player/literal"
+              },
+              {
+                "path": "src/pages/game/Block/index.ts",
+                "kind": "import-statement",
+                "original": "./Block"
               }
             ],
             "format": "esm"
@@ -10450,6 +11176,11 @@
               },
               {
                 "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -11814,11 +12545,8 @@
               "src/pages/game/engine/utils.ts": {
                 "bytesInOutput": 494
               },
-              "src/pages/game/physics/literal.ts": {
-                "bytesInOutput": 650
-              },
               "src/pages/game/world/World.ts": {
-                "bytesInOutput": 10796
+                "bytesInOutput": 10127
               },
               "src/pages/game/world/generate/resource.ts": {
                 "bytesInOutput": 1259
@@ -11881,7 +12609,7 @@
                 "bytesInOutput": 1404
               },
               "src/pages/game/engine/mesh/constant.ts": {
-                "bytesInOutput": 404
+                "bytesInOutput": 438
               },
               "src/pages/game/world/drop/interface.ts": {
                 "bytesInOutput": 132
@@ -11896,7 +12624,7 @@
                 "bytesInOutput": 1027
               },
               "src/pages/game/engine/mesh/index.ts": {
-                "bytesInOutput": 614
+                "bytesInOutput": 1088
               },
               "src/pages/game/physics/interface.ts": {
                 "bytesInOutput": 129
@@ -11909,6 +12637,9 @@
               },
               "src/pages/game/dev/orbitCamera.ts": {
                 "bytesInOutput": 1372
+              },
+              "src/pages/game/physics/literal.ts": {
+                "bytesInOutput": 650
               },
               "src/pages/game/player/action.ts": {
                 "bytesInOutput": 2433
@@ -11935,7 +12666,7 @@
                 "bytesInOutput": 277
               },
               "src/pages/game/player/group.ts": {
-                "bytesInOutput": 2585
+                "bytesInOutput": 2644
               },
               "src/pages/game/player/Player.ts": {
                 "bytesInOutput": 4190
@@ -11959,7 +12690,7 @@
                 "bytesInOutput": 1308
               },
               "src/pages/game/Game.ts": {
-                "bytesInOutput": 3734
+                "bytesInOutput": 4636
               },
               "src/pages/game/player/keyboard.ts": {
                 "bytesInOutput": 2070
@@ -12004,7 +12735,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 208164
+            "bytes": 208964
           }
         }
       }
@@ -15695,7 +16426,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 197,
+          "end": 216,
           "importKind": "value",
           "source": "./gui",
           "specifiers": [
@@ -15708,13 +16439,18 @@
               "imported": "initMainMenu",
               "local": "initMainMenu",
               "type": "ImportSpecifier"
+            },
+            {
+              "imported": "swapMenuScreenGUI",
+              "local": "swapMenuScreenGUI",
+              "type": "ImportSpecifier"
             }
           ],
           "start": 150,
           "type": "ImportDeclaration"
         },
         {
-          "end": 239,
+          "end": 258,
           "importKind": "value",
           "source": "./player/Player",
           "specifiers": [
@@ -15724,11 +16460,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 198,
+          "start": 217,
           "type": "ImportDeclaration"
         },
         {
-          "end": 278,
+          "end": 297,
           "importKind": "value",
           "source": "./world/World",
           "specifiers": [
@@ -15738,11 +16474,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 240,
+          "start": 259,
           "type": "ImportDeclaration"
         },
         {
-          "end": 314,
+          "end": 333,
           "importKind": "value",
           "source": "./sky",
           "specifiers": [
@@ -15752,11 +16488,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 279,
+          "start": 298,
           "type": "ImportDeclaration"
         },
         {
-          "end": 372,
+          "end": 391,
           "importKind": "value",
           "source": "./dev",
           "specifiers": [
@@ -15771,11 +16507,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 315,
+          "start": 334,
           "type": "ImportDeclaration"
         },
         {
-          "end": 421,
+          "end": 440,
           "importKind": "value",
           "source": "./audio/AudioManager",
           "specifiers": [
@@ -15784,11 +16520,11 @@
               "type": "ImportDefaultSpecifier"
             }
           ],
-          "start": 373,
+          "start": 392,
           "type": "ImportDeclaration"
         },
         {
-          "end": 495,
+          "end": 514,
           "importKind": "value",
           "source": "./dev/orbitCamera",
           "specifiers": [
@@ -15803,11 +16539,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 422,
+          "start": 441,
           "type": "ImportDeclaration"
         },
         {
-          "end": 540,
+          "end": 559,
           "importKind": "value",
           "source": "./gui/viewer",
           "specifiers": [
@@ -15817,11 +16553,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 496,
+          "start": 515,
           "type": "ImportDeclaration"
         },
         {
-          "end": 577,
+          "end": 596,
           "importKind": "value",
           "source": "./physics",
           "specifiers": [
@@ -15831,11 +16567,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 541,
+          "start": 560,
           "type": "ImportDeclaration"
         },
         {
-          "end": 612,
+          "end": 631,
           "importKind": "value",
           "source": "./engine",
           "specifiers": [
@@ -15845,11 +16581,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 578,
+          "start": 597,
           "type": "ImportDeclaration"
         },
         {
-          "end": 657,
+          "end": 676,
           "importKind": "value",
           "source": "./sky/literal",
           "specifiers": [
@@ -15859,7 +16595,63 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 613,
+          "start": 632,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 727,
+          "importKind": "value",
+          "source": "./physics/literal",
+          "specifiers": [
+            {
+              "imported": "PhysicsParams",
+              "local": "PhysicsParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 677,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 780,
+          "importKind": "value",
+          "source": "./world/chunk/literal",
+          "specifiers": [
+            {
+              "imported": "ChunkParams",
+              "local": "ChunkParams",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 728,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 835,
+          "importKind": "value",
+          "source": "./player/literal",
+          "specifiers": [
+            {
+              "imported": "PlayerInitPosition",
+              "local": "PlayerInitPosition",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 781,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 870,
+          "importKind": "value",
+          "source": "./Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 836,
           "type": "ImportDeclaration"
         }
       ],
@@ -17669,6 +18461,48 @@
           ],
           "start": 274,
           "type": "ImportDeclaration"
+        },
+        {
+          "end": 368,
+          "importKind": "value",
+          "source": "../engine/mesh",
+          "specifiers": [
+            {
+              "imported": "MeshPool",
+              "local": "MeshPool",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 326,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 420,
+          "importKind": "value",
+          "source": "../engine/mesh/constant",
+          "specifiers": [
+            {
+              "imported": "MeshType",
+              "local": "MeshType",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 369,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 456,
+          "importKind": "value",
+          "source": "../Block",
+          "specifiers": [
+            {
+              "imported": "BlockID",
+              "local": "BlockID",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 421,
+          "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/player/interface.ts": [
@@ -18366,15 +19200,10 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 560,
+          "end": 541,
           "importKind": "value",
           "source": "../gui",
           "specifiers": [
-            {
-              "imported": "swapMenuScreenGUI",
-              "local": "swapMenuScreenGUI",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "ToolBar",
               "local": "ToolBar",
@@ -18390,7 +19219,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 595,
+          "end": 576,
           "importKind": "value",
           "source": "../seed/RNG",
           "specifiers": [
@@ -18400,11 +19229,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 561,
+          "start": 542,
           "type": "ImportDeclaration"
         },
         {
-          "end": 667,
+          "end": 648,
           "importKind": "value",
           "source": "three/examples/jsm/math/SimplexNoise.js",
           "specifiers": [
@@ -18414,11 +19243,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 596,
+          "start": 577,
           "type": "ImportDeclaration"
         },
         {
-          "end": 714,
+          "end": 695,
           "importKind": "value",
           "source": "./chunk/literal",
           "specifiers": [
@@ -18428,11 +19257,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 668,
+          "start": 649,
           "type": "ImportDeclaration"
         },
         {
-          "end": 788,
+          "end": 769,
           "importKind": "value",
           "source": "./chunk/utils",
           "specifiers": [
@@ -18447,11 +19276,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 715,
+          "start": 696,
           "type": "ImportDeclaration"
         },
         {
-          "end": 835,
+          "end": 816,
           "importKind": "value",
           "source": "../engine/utils",
           "specifiers": [
@@ -18461,21 +19290,7 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 789,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 887,
-          "importKind": "value",
-          "source": "../physics/literal",
-          "specifiers": [
-            {
-              "imported": "PhysicsParams",
-              "local": "PhysicsParams",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 836,
+          "start": 770,
           "type": "ImportDeclaration"
         }
       ],

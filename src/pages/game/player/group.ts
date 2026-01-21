@@ -5,6 +5,9 @@ import { initPlayerCamera } from "./camera";
 import { Layers } from "../engine";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
 import { quadraticFunction } from "../engine/math";
+import { MeshPool } from "../engine/mesh";
+import { MeshType } from "../engine/mesh/constant";
+import { BlockID } from "../Block";
 
 /**
  * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合
@@ -15,11 +18,10 @@ const handleOriginRotationY = Math.PI * 0.08;
 const handleOriginRotationZ = Math.PI * 0.05;
 const WaveStepX = -Math.PI / 8;
 
-const handLength = 0.5;
 export class PlayerGroup {
     controls!: PointerLockControls;
     cameraHelper!: THREE.CameraHelper;
-    hand!: THREE.Group;
+    private handPoint!: THREE.Group;
     private scene: Scene;
     private basePoint!: THREE.PerspectiveCamera;
     get position() {
@@ -62,23 +64,29 @@ export class PlayerGroup {
         const handPoint = new THREE.Group();
         point.add(handPoint);
 
-        const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);
-        const material = new THREE.MeshLambertMaterial();
-        const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.set(0, -handLength / 2, 0);
-        handPoint.add(mesh);
+        this.handPoint = handPoint;
+        this.updateHand(null);
+    }
 
-        this.hand = handPoint;
+    /**
+     * @desc 根据 blockID 更新手的模型
+     */
+    updateHand(blockID: BlockID | null) {
+        if(!blockID) {
+            this.handPoint.clear();
+            const hand = MeshPool.getMesh(MeshType.Hand) as THREE.Mesh;
+            this.handPoint.add(hand);
+        }
     }
 
     protected waveHand() {
-        if (!this.hand) return;
+        if (!this.handPoint) return;
         const update = (o: { t: number }) => {
-            this.hand.rotation.x =  quadraticFunction(o.t) * WaveStepX;
-            this.hand.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;
-            // this.hand.position.z = quadraticFunction(o.t) * 0.1;
-            // this.hand.position.x = -quadraticFunction(o.t) * 0.1;
-            // this.hand.position.y = -quadraticFunction(o.t) * 0.1;
+            this.handPoint.rotation.x =  quadraticFunction(o.t) * WaveStepX;
+            this.handPoint.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;
+            // this.handPoint.position.z = quadraticFunction(o.t) * 0.1;
+            // this.handPoint.position.x = -quadraticFunction(o.t) * 0.1;
+            // this.handPoint.position.y = -quadraticFunction(o.t) * 0.1;
         };
         new TWEEN.Tween({t: 0})
             .to({ t: 1 }, 200)

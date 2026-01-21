@@ -8,13 +8,12 @@ import { WorldChunk } from "./WorldChunk";
 import { IWorldParams } from "./interface";
 import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
-import { swapMenuScreenGUI, ToolBar, updateProgressGUI } from "../gui";
+import { ToolBar, updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
-import { PhysicsParams } from "../physics/literal";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -26,7 +25,7 @@ export class World extends THREE.Group {
   chunkQueue: { x: number; z: number }[];
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
-
+  onLoad?: () => void;
   params: IWorldParams = getDefaultWorldParams();
 
   // Used for persisting changes to the world
@@ -104,45 +103,26 @@ export class World extends THREE.Group {
 
     // 在初始加载未完成前更新加载进度条
     if (!this.initialLoadComplete) {
-      this.updateInitialLoad(player);
+      this.updateInitialLoad();
     }
   }
 
-  updateInitialLoad(player: Player) {
+  private updateInitialLoad() {
     const totalChunks = (this.renderDistance * 2 + 1) ** 2;
     const loadedChunks = this.children.length;
     const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
-    const startX = PlayerInitPosition.x;
-    const startZ = PlayerInitPosition.z;
+   
     if(!PlayerParams.currentChunk) {  
-      const [chunkX, chunkZ] = worldToChunkCoordsXZ(startX, startZ);
+      const [chunkX, chunkZ] = worldToChunkCoordsXZ(PlayerInitPosition.x, PlayerInitPosition.z);
       PlayerParams.currentChunk = {x: chunkX, z: chunkZ};
     }
-    
 
     updateProgressGUI(percentLoaded);
     // 初始化更新一次 player 信息
     if(percentLoaded === 100) {
       this.initialLoadComplete = true;
-      player.updateByPosition();
-      
-      const startingPlayerPosition = new THREE.Vector3().copy(PlayerInitPosition);
-     
-      const currentChunkHeight = ChunkParams.height;
-      for (let y = currentChunkHeight; y > 0; y--) {
-        // TODO: 角色初始位置 y 轴坐标需要根据当前 chunk 高度进行调整
-        if (this.getBlock( startX, y,startZ)?.block === BlockID.Grass) {
-          startingPlayerPosition.y = y;
-          break;
-        }
-      }
-      // 角色从离地面 10 个单位的位置开始
-      player.position.set(startX,startingPlayerPosition.y + 10,startZ);
-      // 角色 PointerLockControls 控制器解锁
-      player.controls.lock();
-      player.updateByPosition();
-      PhysicsParams.enabled = true;
-      swapMenuScreenGUI();
+      // world chunk 初始化完成后 调用 onLoad 回调
+      this.onLoad && this.onLoad();
     }
   }
 
