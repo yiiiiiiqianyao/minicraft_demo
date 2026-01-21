@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { Block, RenderGeometry } from "../../Block/Block";
+import { Block, RenderGeometry } from "../../Block/base/Block";
 import { jitterNumber } from "../../utils";
 
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {

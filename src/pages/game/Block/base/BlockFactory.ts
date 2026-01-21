@@ -1,20 +1,20 @@
-import { AirBlock } from "./AirBlock";
-import { BedrockBlock } from "./BedrockBlock";
+import { AirBlock } from "../blocks/AirBlock";
+import { BedrockBlock } from "../blocks/BedrockBlock";
 import { Block } from "./Block";
-import { CoalOreBlock } from "./CoalOreBlock";
-import { DirtBlock } from "./DirtBlock";
-import { FlowerDandelionBlock } from "./FlowerDandelionBlock";
-import { FlowerRoseBlock } from "./FlowerRoseBlock";
-import { GrassBlock } from "./GrassBlock";
-import { IronOreBlock } from "./IronOreBlock";
-import { LeavesBlock } from "./LeavesBlock";
-import { OakLogBlock } from "./OakLogBlock";
-import { RedstoneLampBlock } from "./RedstoneLampBlock";
-import { StoneBlock } from "./StoneBlock";
-import { StoneBrickBlock } from "./StoneBrickBlock";
-import { TallGrassBlock } from "./TallGrassBlock";
+import { CoalOreBlock } from "../blocks/CoalOreBlock";
+import { DirtBlock } from "../blocks/DirtBlock";
+import { FlowerDandelionBlock } from "../blocks/FlowerDandelionBlock";
+import { FlowerRoseBlock } from "../blocks/FlowerRoseBlock";
+import { GrassBlock } from "../blocks/GrassBlock";
+import { IronOreBlock } from "../blocks/IronOreBlock";
+import { LeavesBlock } from "../blocks/LeavesBlock";
+import { OakLogBlock } from "../blocks/OakLogBlock";
+import { RedstoneLampBlock } from "../blocks/RedstoneLampBlock";
+import { StoneBlock } from "../blocks/StoneBlock";
+import { StoneBrickBlock } from "../blocks/StoneBrickBlock";
+import { TallGrassBlock } from "../blocks/TallGrassBlock";
 
-import { BlockID } from ".";
+import { BlockID } from "..";
 
 // Flyweight pattern to avoid creating new block instances
 export class BlockFactory {

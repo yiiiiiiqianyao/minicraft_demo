@@ -1,5 +1,5 @@
 import { BlockID } from "../../Block";
-import { BlockFactory } from "../../Block/BlockFactory";
+import { BlockFactory } from "../../Block/base/BlockFactory";
 import { setActive } from "./dom";
 import { ToolBarMaxCount } from "./literal";
 

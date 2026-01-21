@@ -7,7 +7,7 @@ import { PlayerParams } from "../player/literal";
 import { PhysicsHelper } from "../helper";
 import { getBlockUnderneath } from "../player/utils";
 import { Candidate, Collision } from "./interface";
-import { BlockFactory } from "../Block/BlockFactory";
+import { BlockFactory } from "../Block/base/BlockFactory";
 
 /**@desc 玩家的物理模拟 */
 export class PlayerPhysics {

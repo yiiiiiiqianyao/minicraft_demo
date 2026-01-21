@@ -1,10 +1,10 @@
 import * as THREE from "three";
 
-import { RenderGeometry } from "./Block";
+import { RenderGeometry } from "../base/Block";
 import { LightSourceBlock } from "./LightSourceBlock";
-import { textures, uiTextures } from "./textures";
+import { textures, uiTextures } from "../textures";
 
-import { BlockID } from ".";
+import { BlockID } from "..";
 
 const redstoneLampMaterial = new THREE.MeshBasicMaterial({
   map: textures.redstoneLamp,

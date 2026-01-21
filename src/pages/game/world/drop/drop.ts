@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { BlockID, blockIDValues } from "../../Block";
-import { BlockFactory } from "../../Block/BlockFactory";
+import { BlockFactory } from "../../Block/base/BlockFactory";
 import { getDropInstancedGeometry } from "../geometry";
 import { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";

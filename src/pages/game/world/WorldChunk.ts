@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
-import { RenderGeometry } from "../Block/Block";
-import { BlockFactory } from "../Block/BlockFactory";
+import { RenderGeometry } from "../Block/base/Block";
+import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
 import { IWorldParams, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";

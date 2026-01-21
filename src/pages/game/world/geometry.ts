@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { RenderGeometry } from "../Block/Block";
+import { RenderGeometry } from "../Block/base/Block";
 
 // 方块的大小为 1x1x1
 const geometry = new THREE.BoxGeometry()

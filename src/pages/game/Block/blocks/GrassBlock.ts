@@ -1,8 +1,8 @@
 import * as THREE from "three";
-import { Block, RenderGeometry } from "./Block";
-import { textures, uiTextures } from "./textures";
+import { Block, RenderGeometry } from "../base/Block";
+import { textures, uiTextures } from "../textures";
 
-import { BlockID } from ".";
+import { BlockID } from "..";
 
 /**@desc 草地方块 */
 export class GrassBlock extends Block {

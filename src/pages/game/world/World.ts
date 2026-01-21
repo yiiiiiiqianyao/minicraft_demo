@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { BlockID } from "../Block";
-import { BlockFactory } from "../Block/BlockFactory";
-import { LightSourceBlock } from "../Block/LightSourceBlock";
+import { BlockFactory } from "../Block/base/BlockFactory";
+import { LightSourceBlock } from "../Block/blocks/LightSourceBlock";
 import { DataStore } from "./DataStore";
 import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";

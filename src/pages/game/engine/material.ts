@@ -9,6 +9,6 @@ const collisionHelperMaterial = new THREE.MeshBasicMaterial({
 });
 
 export {
-    wireframeMaterial,
-    collisionHelperMaterial,
+  wireframeMaterial,
+  collisionHelperMaterial,
 }

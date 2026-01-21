@@ -1,7 +1,7 @@
 import * as THREE from "three";
-import { Block, RenderGeometry } from "./Block";
-import { textures, uiTextures } from "./textures";
-import { BlockID } from ".";
+import { Block, RenderGeometry } from "../base/Block";
+import { textures, uiTextures } from "../textures";
+import { BlockID } from "..";
 
 const flowerRoseMaterial = new THREE.MeshBasicMaterial({
   map: textures.flowerRose,

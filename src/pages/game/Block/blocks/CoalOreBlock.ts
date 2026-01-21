@@ -1,10 +1,10 @@
 import * as THREE from "three";
 
-import { RenderGeometry } from "./Block";
+import { RenderGeometry } from "../base/Block";
 import { OreBlock } from "./OreBlock";
-import { textures, uiTextures } from "./textures";
-import { BlockID } from ".";
-import { oreConfig } from "../world/generate/resource";
+import { textures, uiTextures } from "../textures";
+import { BlockID } from "../constant";
+import { oreConfig } from "../../world/generate/resource";
 
 const coalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
 

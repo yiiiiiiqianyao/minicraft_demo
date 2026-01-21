@@ -1,6 +1,6 @@
-import { Block, RenderGeometry } from "./Block";
+import { Block, RenderGeometry } from "../base/Block";
 
-import { BlockID } from ".";
+import { BlockID } from "../constant";
 
 export class AirBlock extends Block {
   id = BlockID.Air;

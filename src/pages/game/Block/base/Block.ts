@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { BlockID } from ".";
+import { BlockID } from "..";
 
 // 渲染的几何形状类型
 export enum RenderGeometry {
@@ -9,7 +9,7 @@ export enum RenderGeometry {
   Flower,
 }
 
-type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;
+export type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;
 
 export abstract class Block {
   abstract id: BlockID;

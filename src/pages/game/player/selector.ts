@@ -4,7 +4,7 @@ import { PlayerParams, RayCenterScreen } from "./literal";
 import { getNearChunks } from "./utils";
 import { Layers } from "../engine";
 import { Action } from "./action";
-import { RenderGeometry } from "../Block/Block";
+import { RenderGeometry } from "../Block/base/Block";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
 

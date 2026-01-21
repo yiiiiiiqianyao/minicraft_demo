@@ -1,4 +1,4 @@
-import { Block } from "./Block";
+import { Block } from "../base/Block";
 
 export abstract class LightSourceBlock extends Block {
   abstract color: number;
