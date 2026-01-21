@@ -145,6 +145,68 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -204,7 +266,76 @@
             3,
             3,
             4,
-            21
+            21,
+            4,
+            2,
+            5,
+            3,
+            3,
+            2,
+            4,
+            2,
+            3,
+            3,
+            5,
+            3,
+            3,
+            4,
+            4,
+            6,
+            1,
+            2,
+            2,
+            5,
+            4,
+            2,
+            2,
+            5,
+            4,
+            6,
+            2,
+            4,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            6,
+            2,
+            3,
+            3,
+            7,
+            3,
+            2,
+            2,
+            9,
+            3,
+            2,
+            3,
+            3,
+            2,
+            4,
+            2,
+            6,
+            2,
+            4,
+            3,
+            4,
+            7,
+            4,
+            2,
+            3,
+            3,
+            2,
+            2,
+            2,
+            3,
+            4,
+            3,
+            1,
+            3,
+            5
           ]
         },
         "register": 1
@@ -264,7 +395,69 @@
             6,
             6,
             6,
-            6
+            6,
+            9,
+            7,
+            4,
+            6,
+            7,
+            6,
+            5,
+            6,
+            6,
+            7,
+            14,
+            5,
+            10,
+            5,
+            8,
+            7,
+            7,
+            7,
+            6,
+            5,
+            8,
+            7,
+            7,
+            10,
+            4,
+            5,
+            6,
+            4,
+            6,
+            4,
+            5,
+            7,
+            12,
+            8,
+            6,
+            5,
+            6,
+            5,
+            5,
+            7,
+            7,
+            7,
+            7,
+            5,
+            6,
+            8,
+            6,
+            6,
+            8,
+            7,
+            6,
+            7,
+            6,
+            6,
+            6,
+            5,
+            7,
+            6,
+            8,
+            4,
+            5,
+            7
           ]
         },
         "register": 14
@@ -281,6 +474,68 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -385,6 +640,64 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
             0
           ],
           "onCheckCode": [
@@ -429,6 +742,73 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1625,6 +2005,103 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1682,6 +2159,68 @@
             0,
             1,
             1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
             0
           ],
           "addRuntimePlugin": [
@@ -1695,6 +2234,68 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1839,6 +2440,68 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
@@ -1866,6 +2529,130 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1996,9 +2783,195 @@
             8,
             18,
             13,
-            10
+            10,
+            14,
+            8,
+            9,
+            9,
+            7,
+            10,
+            9,
+            7,
+            10,
+            11,
+            29,
+            9,
+            7,
+            7,
+            12,
+            8,
+            9,
+            6,
+            8,
+            11,
+            10,
+            12,
+            8,
+            14,
+            8,
+            9,
+            11,
+            8,
+            12,
+            12,
+            8,
+            10,
+            32,
+            13,
+            9,
+            8,
+            6,
+            10,
+            9,
+            11,
+            8,
+            8,
+            8,
+            6,
+            10,
+            13,
+            11,
+            9,
+            13,
+            9,
+            9,
+            7,
+            7,
+            9,
+            8,
+            13,
+            10,
+            11,
+            7,
+            7,
+            7,
+            9
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2177,6 +3150,130 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -2195,6 +3292,68 @@
         "hooks": {
           "onGenerateFiles": [
             119,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2317,7 +3476,69 @@
             0,
             1,
             1,
-            1
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "addBeforeMiddlewares": [
             0
@@ -2418,6 +3639,130 @@
             50,
             1,
             48,
+            1,
+            62,
+            2,
+            54,
+            2,
+            55,
+            1,
+            58,
+            1,
+            53,
+            1,
+            60,
+            2,
+            49,
+            1,
+            53,
+            1,
+            50,
+            1,
+            70,
+            2,
+            114,
+            3,
+            47,
+            2,
+            55,
+            1,
+            64,
+            2,
+            86,
+            2,
+            57,
+            1,
+            131,
+            4,
+            57,
+            1,
+            55,
+            1,
+            58,
+            1,
+            60,
+            2,
+            51,
+            2,
+            65,
+            1,
+            69,
+            2,
+            52,
+            1,
+            55,
+            2,
+            55,
+            2,
+            53,
+            1,
+            61,
+            1,
+            54,
+            1,
+            52,
+            2,
+            74,
+            2,
+            107,
+            2,
+            58,
+            1,
+            64,
+            2,
+            55,
+            1,
+            48,
+            1,
+            60,
+            1,
+            52,
+            0,
+            53,
+            1,
+            45,
+            2,
+            51,
+            2,
+            57,
+            1,
+            49,
+            2,
+            49,
+            1,
+            49,
+            1,
+            57,
+            1,
+            58,
+            2,
+            48,
+            2,
+            59,
+            1,
+            55,
+            2,
+            57,
+            1,
+            77,
+            1,
+            49,
+            2,
+            52,
+            0,
+            51,
+            2,
+            55,
+            2,
+            62,
+            1,
+            57,
+            1,
+            53,
+            1,
+            49,
+            1,
+            53,
             1
           ]
         },
@@ -2488,6 +3833,68 @@
             1,
             1,
             1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onBeforeCompiler": [
@@ -2560,6 +3967,68 @@
             5,
             4,
             6,
+            4,
+            5,
+            3,
+            4,
+            5,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            11,
+            6,
+            4,
+            6,
+            5,
+            6,
+            7,
+            5,
+            4,
+            6,
+            5,
+            5,
+            5,
+            7,
+            3,
+            4,
+            5,
+            3,
+            5,
+            3,
+            6,
+            5,
+            7,
+            6,
+            5,
+            4,
+            5,
+            4,
+            5,
+            3,
+            6,
+            5,
+            5,
+            5,
+            4,
+            7,
+            4,
+            8,
+            4,
+            4,
+            4,
+            4,
+            5,
+            4,
+            5,
+            6,
+            7,
+            6,
+            4,
+            5,
+            3,
             4
           ]
         },
@@ -2685,7 +4154,69 @@
             1,
             0,
             0,
-            1
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
           ]
         },
         "register": 1
@@ -3224,7 +4755,7 @@
       "id": "game/Block/blocks/FlowerDandelionBlock",
       "file": "game/Block/blocks/FlowerDandelionBlock.ts",
       "absPath": "/game/Block/blocks/FlowerDandelionBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\nconst flowerDandelionMaterial = new THREE.MeshBasicMaterial({\n  map: textures.flowerDandelion,\n});\n// 修改花纹理的scale和offset，使花的贴图和实际大小保持一致\ntextures.flowerDandelion.repeat.set(0.45, 0.6 );\ntextures.flowerDandelion.offset.set(0.275, 0);\n\nflowerDandelionMaterial.transparent = true;\nflowerDandelionMaterial.side = THREE.DoubleSide;\nflowerDandelionMaterial.depthWrite = false;\n\nexport class FlowerDandelionBlock extends Block {\n  id = BlockID.FlowerDandelion;\n  material = flowerDandelionMaterial;\n  uiTexture = uiTextures.flowerDandelion;\n  geometry = RenderGeometry.Flower;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { FlowerDandelionMaterial } from \"../../engine/material\";\n\n/**@desc 蒲公英花 */\nexport class FlowerDandelionBlock extends Block {\n  id = BlockID.FlowerDandelion;\n  material = FlowerDandelionMaterial;\n  uiTexture = uiTextures.flowerDandelion;\n  geometry = RenderGeometry.Flower;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/FlowerDandelionBlock.ts"
     },
@@ -3251,7 +4782,7 @@
       "id": "game/Block/blocks/FlowerRoseBlock",
       "file": "game/Block/blocks/FlowerRoseBlock.ts",
       "absPath": "/game/Block/blocks/FlowerRoseBlock",
-      "__content": "import * as THREE from \"three\";\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\n\nconst flowerRoseMaterial = new THREE.MeshBasicMaterial({\n  map: textures.flowerRose,\n});\ntextures.flowerRose.repeat.set(0.45, 0.6 );\ntextures.flowerRose.offset.set(0.275, 0);\n\nflowerRoseMaterial.transparent = true;\nflowerRoseMaterial.side = THREE.DoubleSide;\nflowerRoseMaterial.depthWrite = false;\n\nexport class FlowerRoseBlock extends Block {\n  id = BlockID.FlowerRose;\n  material = flowerRoseMaterial;\n  uiTexture = uiTextures.flowerRose;\n  geometry = RenderGeometry.Flower;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { FlowerRoseMaterial } from \"../../engine/material\";\n\n\n/**@desc 玫瑰花 */\nexport class FlowerRoseBlock extends Block {\n  id = BlockID.FlowerRose;\n  material = FlowerRoseMaterial;\n  uiTexture = uiTextures.flowerRose;\n  geometry = RenderGeometry.Flower;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/FlowerRoseBlock.ts"
     },
@@ -3269,7 +4800,7 @@
       "id": "game/Block/blocks/TallGrassBlock",
       "file": "game/Block/blocks/TallGrassBlock.ts",
       "absPath": "/game/Block/blocks/TallGrassBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\nconst tallGrassMaterial = new THREE.MeshBasicMaterial({\n  map: textures.tallGrass,\n});\n// TODO: 修改草的贴图，使草的贴图和实际大小保持一致\n\ntallGrassMaterial.transparent = true;\ntallGrassMaterial.side = THREE.DoubleSide;\ntallGrassMaterial.depthWrite = false;\n\n/**@desc 长草方块 */\nexport class TallGrassBlock extends Block {\n  id = BlockID.TallGrass;\n  material = tallGrassMaterial;\n  uiTexture = uiTextures.tallGrass;\n  geometry = RenderGeometry.Cross;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = false;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { TallGrassMaterial } from \"../../engine/material\";\n\n\n/**@desc 长草方块 */\nexport class TallGrassBlock extends Block {\n  id = BlockID.TallGrass;\n  material = TallGrassMaterial;\n  uiTexture = uiTextures.tallGrass;\n  geometry = RenderGeometry.Cross;\n  transparent = true;\n  canPassThrough = true;\n  canDrop = false;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/TallGrassBlock.ts"
     },
@@ -3296,7 +4827,7 @@
       "id": "game/Block/blocks/IronOreBlock",
       "file": "game/Block/blocks/IronOreBlock.ts",
       "absPath": "/game/Block/blocks/IronOreBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { RenderGeometry } from \"../base/Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { textures, uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { oreConfig } from \"../../world/generate/resource\";\n\nconst ironMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });\n\n/**@desc 铁矿方块 */\nexport const IronOreBlock = class extends OreBlock {\n  id = BlockID.IronOre;\n  scale = oreConfig[\"iron\"].scale;\n  scarcity = oreConfig[\"iron\"].scarcity;\n  material = ironMaterial;\n  uiTexture = uiTextures.iron;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n};\n",
+      "__content": "import { RenderGeometry } from \"../base/Block\";\nimport { OreBlock } from \"./OreBlock\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { oreConfig } from \"../../world/generate/resource\";\nimport { IronBlockMaterial } from \"../../engine/material\";\n\n/**@desc 铁矿方块 */\nexport const IronOreBlock = class extends OreBlock {\n  id = BlockID.IronOre;\n  scale = oreConfig[\"iron\"].scale;\n  scarcity = oreConfig[\"iron\"].scarcity;\n  material = IronBlockMaterial;\n  uiTexture = uiTextures.iron;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/IronOreBlock.ts"
     },
@@ -3305,7 +4836,7 @@
       "id": "game/Block/blocks/LeavesBlock",
       "file": "game/Block/blocks/LeavesBlock.ts",
       "absPath": "/game/Block/blocks/LeavesBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\nconst leavesMaterial = new THREE.MeshLambertMaterial({\n  map: textures.leaves,\n});\nleavesMaterial.transparent = true;\nleavesMaterial.side = THREE.DoubleSide;\n\n/**@desc 树叶方块 */\nexport class LeavesBlock extends Block {\n  id = BlockID.Leaves;\n  material = leavesMaterial;\n  uiTexture = uiTextures.leaves;\n  geometry = RenderGeometry.Cube;\n  transparent = true;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { LeavesMaterial } from \"../../engine/material\";\n\n/**@desc 树叶方块 */\nexport class LeavesBlock extends Block {\n  id = BlockID.Leaves;\n  material = LeavesMaterial;\n  uiTexture = uiTextures.leaves;\n  geometry = RenderGeometry.Cube;\n  transparent = true;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/LeavesBlock.ts"
     },
@@ -3350,7 +4881,7 @@
       "id": "game/Block/blocks/GrassBlock",
       "file": "game/Block/blocks/GrassBlock.ts",
       "absPath": "/game/Block/blocks/GrassBlock",
-      "__content": "import * as THREE from \"three\";\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\n/**@desc 草地方块 */\nexport class GrassBlock extends Block {\n  id = BlockID.Grass;\n  material = [\n    new THREE.MeshLambertMaterial({ map: textures.grassSide }), // right\n    new THREE.MeshLambertMaterial({ map: textures.grassSide }), // left\n    new THREE.MeshLambertMaterial({ map: textures.grassTop }), // top\n    new THREE.MeshLambertMaterial({ map: textures.dirt }), // bottom\n    new THREE.MeshLambertMaterial({ map: textures.grassSide }), // front\n    new THREE.MeshLambertMaterial({ map: textures.grassSide }), // back\n  ];\n  uiTexture = uiTextures.grass;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { TallGrossBlockMaterial } from \"../../engine/material\";\n\n/**@desc 草地方块 */\nexport class GrassBlock extends Block {\n  id = BlockID.Grass;\n  material = TallGrossBlockMaterial;\n  uiTexture = uiTextures.grass;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/GrassBlock.ts"
     },
@@ -3377,9 +4908,27 @@
       "id": "game/Block/blocks/DirtBlock",
       "file": "game/Block/blocks/DirtBlock.ts",
       "absPath": "/game/Block/blocks/DirtBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\nconst dirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });\n\nexport class DirtBlock extends Block {\n  id = BlockID.Dirt;\n  material = dirtMaterial;\n  uiTexture = uiTextures.dirt;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\nimport { DirtBlockMaterial } from \"../../engine/material\";\n\n/**@desc Dirt block */\nexport class DirtBlock extends Block {\n  id = BlockID.Dirt;\n  material = DirtBlockMaterial;\n  uiTexture = uiTextures.dirt;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/DirtBlock.ts"
+    },
+    "game/engine/geometry/flower": {
+      "path": "game/engine/geometry/flower",
+      "id": "game/engine/geometry/flower",
+      "file": "game/engine/geometry/flower.ts",
+      "absPath": "/game/engine/geometry/flower",
+      "__content": "",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/geometry/flower.ts"
+    },
+    "game/engine/material/flower": {
+      "path": "game/engine/material/flower",
+      "id": "game/engine/material/flower",
+      "file": "game/engine/material/flower.ts",
+      "absPath": "/game/engine/material/flower",
+      "__content": "import * as THREE from 'three';\nimport { textures } from '../../Block/textures';\n\n// 蒲公英花\n// TODO 暂时使用 MeshBasicMaterial ，后续再考虑是否使用 MeshLambertMaterial\n// 颜色看起来不对\nconst FlowerDandelionMaterial = new THREE.MeshBasicMaterial({\n  map: textures.flowerDandelion,\n});\n// 修改花纹理的scale和offset，使花的贴图和实际大小保持一致\ntextures.flowerDandelion.repeat.set(0.45, 0.6 );\ntextures.flowerDandelion.offset.set(0.275, 0);\n\nFlowerDandelionMaterial.transparent = true;\nFlowerDandelionMaterial.side = THREE.DoubleSide;\nFlowerDandelionMaterial.depthWrite = false;\n\n// 玫瑰花\nconst FlowerRoseMaterial = new THREE.MeshBasicMaterial({\n  map: textures.flowerRose,\n});\ntextures.flowerRose.repeat.set(0.45, 0.6 );\ntextures.flowerRose.offset.set(0.275, 0);\n\nFlowerRoseMaterial.transparent = true;\nFlowerRoseMaterial.side = THREE.DoubleSide;\nFlowerRoseMaterial.depthWrite = false;\n\nexport {\n    FlowerDandelionMaterial,\n    FlowerRoseMaterial,\n}",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/material/flower.ts"
     },
     "game/world/generate/terrain": {
       "path": "game/world/generate/terrain",
@@ -3407,6 +4956,24 @@
       "__content": "import { Block } from \"../base/Block\";\n\n/**@desc 矿物块基类 */\nexport abstract class OreBlock extends Block {\n  abstract scale: { x: number; y: number; z: number };\n  abstract scarcity: number;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/OreBlock.ts"
+    },
+    "game/engine/geometry/index": {
+      "path": "game/engine/geometry",
+      "id": "game/engine/geometry/index",
+      "file": "game/engine/geometry/index.ts",
+      "absPath": "/game/engine/geometry",
+      "__content": "import * as THREE from \"three\";\nimport { RenderGeometry } from \"../../Block/base/Block\";\n\n// 方块的大小为 1x1x1\nconst geometry = new THREE.BoxGeometry()\nconst dropBoxSize = 0.25;\nconst geometry_drop = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);\n// TODO 修改草的实际大小\nconst crossGeometry = new THREE.PlaneGeometry();\nconst crossGeometry_drop = new THREE.PlaneGeometry(0.5, 0.5);\n\nconst flowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);\nconst flowerGeometry_drop = new THREE.PlaneGeometry(0.15, 0.5);\n\nexport const getInstancedGeometry = (blockGeometry: RenderGeometry) => {\n    if (blockGeometry === RenderGeometry.Cube) {\n        return geometry;\n    } else if (blockGeometry === RenderGeometry.Cross) {\n        return crossGeometry;\n    } else if (blockGeometry === RenderGeometry.Flower) {\n        return flowerGeometry;\n    }\n};\n\nexport const getDropInstancedGeometry = (blockGeometry: RenderGeometry) => {\n    if (blockGeometry === RenderGeometry.Cube) {\n        return geometry_drop;\n    } else if (blockGeometry === RenderGeometry.Cross) {\n        return crossGeometry_drop;\n    } else if (blockGeometry === RenderGeometry.Flower) {\n        return flowerGeometry_drop;\n    }\n};",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/geometry/index.ts"
+    },
+    "game/engine/material/index": {
+      "path": "game/engine/material",
+      "id": "game/engine/material/index",
+      "file": "game/engine/material/index.ts",
+      "absPath": "/game/engine/material",
+      "__content": "import * as THREE from 'three';\nimport { textures } from '../../Block/textures';\n\nconst wireframeMaterial = new THREE.MeshBasicMaterial({ wireframe: true });\n\nconst collisionHelperMaterial = new THREE.MeshBasicMaterial({\n  color: 0xff0000,\n  transparent: true,\n  opacity: 0.2,\n});\n\n// textures for material\nconst GrassSideMaterial = new THREE.MeshLambertMaterial({ map: textures.grassSide });\nconst GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop });\nconst DirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });\nconst IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });\n\n// 树叶\nconst LeavesMaterial = new THREE.MeshLambertMaterial({\n  map: textures.leaves,\n});\nLeavesMaterial.transparent = true;\nLeavesMaterial.side = THREE.DoubleSide;\n\n// 长草\nconst TallGrassMaterial = new THREE.MeshBasicMaterial({\n  map: textures.tallGrass,\n});\n// TODO: 修改草的贴图，使草的贴图和实际大小保持一致\n\nTallGrassMaterial.transparent = true;\nTallGrassMaterial.side = THREE.DoubleSide;\nTallGrassMaterial.depthWrite = false;\n\n// block material\nconst TallGrossBlockMaterial = [\n  GrassSideMaterial, // right\n  GrassSideMaterial, // left\n  GrassTopMaterial, // top\n  DirtMaterial, // bottom\n  GrassSideMaterial, // front\n  GrassSideMaterial, // back\n];\nconst DirtBlockMaterial = DirtMaterial;\nconst IronBlockMaterial = IronMaterial;\n\nexport {\n  wireframeMaterial,\n  collisionHelperMaterial,\n  // block material\n  IronBlockMaterial,\n  DirtBlockMaterial,\n  TallGrossBlockMaterial,\n  // leave material\n  LeavesMaterial,\n  // tall grass material\n  TallGrassMaterial,\n}\n\nexport * from './flower';",
+      "__isJSFile": true,
+      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/material/index.ts"
     },
     "game/gui/toolbar/interface": {
       "path": "game/gui/toolbar/interface",
@@ -3593,7 +5160,7 @@
       "id": "game/world/WorldChunk",
       "file": "game/world/WorldChunk.ts",
       "absPath": "/game/world/WorldChunk",
-      "__content": "import * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { RenderGeometry } from \"../Block/base/Block\";\nimport { BlockFactory } from \"../Block/base/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport { IWorldParams, IInstanceData } from \"./interface\";\nimport { generateChunk } from \"./generate\";\nimport { getInstancedGeometry } from \"./geometry\";\nimport { DropGroup } from \"./drop/drop\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { initChunkHelper } from \"../helper/chunkHelper\";\nimport { DevControl } from \"../dev\";\nimport { wireframeMaterial } from \"../engine/material\";\nimport { InstanceMeshAdd } from \"./chunk/instance\";\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  loaded: boolean;\n  dataStore: DataStore;\n  dropGroup: DropGroup;\n  // for dev test\n  helper: THREE.Mesh | null = null;\n  helperColor: THREE.Color | null = null;\n\n  constructor(params: IWorldParams, dataStore: DataStore) {\n    super();\n    this.params = params;\n    this.dataStore = dataStore;\n    this.dropGroup = new DropGroup(this.position, this);\n    this.loaded = false;\n    if(DevControl.chunkHelperVisible) {\n      this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())\n      this.helper = initChunkHelper()\n      this.helper.visible = true;\n    }\n  }\n\n  async generate() {\n    // const start = performance.now();\n    // 初始化 chunk 数据\n    const { x, z } = this.position;\n    const data: BlockID[][][] = await generateChunk(this.params, x, z);\n\n    // 空闲时间的 callback\n    requestIdleCallback(() => {\n        // 设置初始化的 chunk 数据\n        this.initializeTerrain(data);\n        // \n        this.loadPlayerChanges();\n\n        // 生成 chunk 的 mesh\n        this.generateMeshes(data);\n        this.loaded = true;\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    this.data = [];\n    for (let x = 0; x < width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    const { width, height } = ChunkParams;\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  // 生成 chunk 中的 block 对应的 mesh\n  generateMeshes(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    const { chunkHelperVisible, chunkWireframeMode } = DevControl;\n    this.clear();\n\n    const maxCount = width * width * height;\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n\n    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh\n    for (const blockId of blockIDValues) {\n      const blockEntity = BlockFactory.getBlock(blockId);\n      const blockGeometry = blockEntity.geometry;\n      const initChunkMesh = () => {\n        if(chunkHelperVisible) { // make dev chunk\n          const helperColor = this.helperColor as THREE.Color;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),\n            maxCount\n          )\n        } else {\n          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n            material,\n            maxCount\n          );\n        }\n      }\n      const mesh = initChunkMesh();\n      mesh.name = blockEntity.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !blockEntity.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[blockEntity.id] = mesh;\n    }\n    // 根据类型为每个 block 类型创建 Mesh\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n          // 空气块不生成 mesh\n          if (block === BlockID.Air) continue;\n          // 当前 block 对应的 InstanceMesh\n          const mesh = meshes[block];\n          if (!mesh) continue;\n          // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）\n          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {\n            const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n            ids && this.setBlockInstanceIds(x, y, z, ids);\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      // mesh 在 add 的时候会自动更新矩阵\n      mesh && this.add(mesh);\n    }\n    // 添加掉落物品组\n    this.add(this.dropGroup);\n    // add chunk helper for dev test\n    this.helper && this.add(this.helper);\n  }\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {\n        return this.data[x][y][z];\n      } else {\n        return null;\n      }\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * @desc Removes the block at (x, y, z => chunk coords)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));\n    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;\n    const blockId = block.block;\n    this.playBlockSound(blockId);\n    this.deleteBlockInstance(x, y, z, block);\n    \n    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率\n    const blockEntity = BlockFactory.getBlock(blockId);\n    if(blockEntity.canDrop) {\n      // 触发掉落物品\n      this.dropGroup.drop(block.block, x, y, z);\n    }    \n\n    this.setBlockId(x, y, z, BlockID.Air);\n    // 更新数据存储 设置方块为Air\n    this.dataStore.set(\n      this.position.x,\n      this.position.z,\n      x,\n      y,\n      z,\n      BlockID.Air\n    );\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * @desc Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n    // TODO 在增加 block instance 的同时 需要更新 block data 的数据\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n      if (mesh) {\n        // 放置方块的时候播放对应的音效\n        this.playBlockSound(block.block);\n        const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n        if(ids) {\n          this.setBlockInstanceIds(x, y, z, ids);\n          mesh.instanceMatrix.needsUpdate = true;\n          // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n          mesh.computeBoundingSphere();\n        } else {\n          console.warn(`Failed to add instance for block ${block.block}`);\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {\n    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例\n     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg\n     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id\n     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后\n     * 通过 mesh.count-- 来删除 instance id 列表后序的实例\n     */\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    const lastBlockInstanceIds: number[] = [];\n    const lastBlockCoords = new THREE.Vector3();\n    block.instanceIds.forEach((instanceId) => {\n      // 获取 instanceMesh 中最后一个 instance id 的矩阵\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      // const lastBlockCoords = new THREE.Vector3();\n      // 获取instanceMesh 中最后一个 instance 的 block 位置\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      // this.setBlockInstanceIds(\n      //   Math.floor(lastBlockCoords.x),\n      //   Math.floor(lastBlockCoords.y),\n      //   Math.floor(lastBlockCoords.z),\n      //   [instanceId]\n      // );\n      // 最后一个 instance 实例\n      lastBlockInstanceIds.push(instanceId);\n\n      // Swap transformation matrices\n      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，\n      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n    /**\n     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block 的 instanceIds\n     */\n     this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        lastBlockInstanceIds,\n      );\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {\n        // console.log('setBlockInstanceIds:', x, y, z,instanceIds);\n      }\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    return (\n      x >= 0 &&\n      x < width &&\n      y >= 0 &&\n      y < height &&\n      z >= 0 &&\n      z < width\n    );\n  }\n\n  /**\n   * 判断一个方块是否被其他方块遮挡\n   * @param x \n   * @param y \n   * @param z \n   * @returns 是否被其他方块遮挡\n   */\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  /**\n   * 判断一个方块是否在 chunk 的边界上\n   * 边界的表面，其上方的方块可以通过 其也不算边界\n   * @param x \n   * @param y \n   * @param z \n   * @returns \n   */\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    // TODO 看上去是一个优化判断 暂时待理解\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    // \n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === width - 1 ||\n      y === 0 ||\n      y === height - 1 ||\n      z === 0 ||\n      z === width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
+      "__content": "import * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID, blockIDValues } from \"../Block\";\nimport { RenderGeometry } from \"../Block/base/Block\";\nimport { BlockFactory } from \"../Block/base/BlockFactory\";\nimport { DataStore } from \"./DataStore\";\nimport { IWorldParams, IInstanceData } from \"./interface\";\nimport { generateChunk } from \"./generate\";\nimport { DropGroup } from \"./drop/drop\";\nimport { ChunkParams } from \"./chunk/literal\";\nimport { initChunkHelper } from \"../helper/chunkHelper\";\nimport { DevControl } from \"../dev\";\nimport { wireframeMaterial } from \"../engine/material\";\nimport { InstanceMeshAdd } from \"./chunk/instance\";\nimport { getInstancedGeometry } from \"../engine/geometry\";\n\nexport class WorldChunk extends THREE.Group {\n  data: IInstanceData[][][] = [];\n  params: IWorldParams;\n  loaded: boolean;\n  dataStore: DataStore;\n  dropGroup: DropGroup;\n  // for dev test\n  helper: THREE.Mesh | null = null;\n  helperColor: THREE.Color | null = null;\n\n  constructor(params: IWorldParams, dataStore: DataStore) {\n    super();\n    this.params = params;\n    this.dataStore = dataStore;\n    this.dropGroup = new DropGroup(this.position, this);\n    this.loaded = false;\n    if(DevControl.chunkHelperVisible) {\n      this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())\n      this.helper = initChunkHelper()\n      this.helper.visible = true;\n    }\n  }\n\n  async generate() {\n    // const start = performance.now();\n    // 初始化 chunk 数据\n    const { x, z } = this.position;\n    const data: BlockID[][][] = await generateChunk(this.params, x, z);\n\n    // 空闲时间的 callback\n    requestIdleCallback(() => {\n        // 设置初始化的 chunk 数据\n        this.initializeTerrain(data);\n        // \n        this.loadPlayerChanges();\n\n        // 生成 chunk 的 mesh\n        this.generateMeshes(data);\n        this.loaded = true;\n        // console.log(`Loaded chunk in ${performance.now() - start}ms`);\n      },\n      { timeout: 1000 }\n    );\n  }\n\n  /**\n   * Initializes the terrain data\n   */\n  initializeTerrain(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    this.data = [];\n    for (let x = 0; x < width; x++) {\n      const slice: IInstanceData[][] = [];\n      for (let y = 0; y < height; y++) {\n        const row: IInstanceData[] = [];\n        for (let z = 0; z < width; z++) {\n          row.push({\n            block: data[x][y][z],\n            instanceIds: [],\n          });\n        }\n        slice.push(row);\n      }\n      this.data.push(slice);\n    }\n  }\n\n  /**\n   * Loads player changes from the data store\n   */\n  loadPlayerChanges() {\n    const { width, height } = ChunkParams;\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          // Overwrite with value in data store if it exists\n          if (\n            this.dataStore.contains(this.position.x, this.position.z, x, y, z)\n          ) {\n            const blockId = this.dataStore.get(\n              this.position.x,\n              this.position.z,\n              x,\n              y,\n              z\n            );\n            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);\n            this.setBlockId(x, y, z, blockId);\n          }\n        }\n      }\n    }\n  }\n\n  // 生成 chunk 中的 block 对应的 mesh\n  generateMeshes(data: BlockID[][][]) {\n    const { width, height } = ChunkParams;\n    const { chunkHelperVisible, chunkWireframeMode } = DevControl;\n    this.clear();\n\n    const maxCount = width * width * height;\n    // Create lookup table where key is block id\n    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n\n    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh\n    for (const blockId of blockIDValues) {\n      const blockEntity = BlockFactory.getBlock(blockId);\n      const blockGeometry = blockEntity.geometry;\n      const initChunkMesh = () => {\n        if(chunkHelperVisible) { // make dev chunk\n          const helperColor = this.helperColor as THREE.Color;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),\n            maxCount\n          )\n        } else {\n          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;\n          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),\n            material,\n            maxCount\n          );\n        }\n      }\n      const mesh = initChunkMesh();\n      mesh.name = blockEntity.constructor.name;\n      mesh.count = 0;\n      mesh.castShadow = !blockEntity.canPassThrough;\n      mesh.receiveShadow = true;\n      mesh.matrixAutoUpdate = false;\n      meshes[blockEntity.id] = mesh;\n    }\n    // 根据类型为每个 block 类型创建 Mesh\n    for (let x = 0; x < width; x++) {\n      for (let y = 0; y < height; y++) {\n        for (let z = 0; z < width; z++) {\n          const block = data[x][y][z];\n          const blockClass = BlockFactory.getBlock(block);\n          // 空气块不生成 mesh\n          if (block === BlockID.Air) continue;\n          // 当前 block 对应的 InstanceMesh\n          const mesh = meshes[block];\n          if (!mesh) continue;\n          // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）\n          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {\n            const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n            ids && this.setBlockInstanceIds(x, y, z, ids);\n          }\n        }\n      }\n    }\n\n    // Add meshes to group\n    for (const mesh of Object.values(meshes)) {\n      // mesh 在 add 的时候会自动更新矩阵\n      mesh && this.add(mesh);\n    }\n    // 添加掉落物品组\n    this.add(this.dropGroup);\n    // add chunk helper for dev test\n    this.helper && this.add(this.helper);\n  }\n  setBlockId(x: number, y: number, z: number, blockId: BlockID) {\n    if (this.inBounds(x, y, z)) {\n      this.data[x][y][z].block = blockId;\n    }\n  }\n\n  /**\n   * Gets the block data at (x, y, z) for this chunk\n   */\n  getBlock(x: number, y: number, z: number): IInstanceData | null {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {\n        return this.data[x][y][z];\n      } else {\n        return null;\n      }\n    } else {\n      return null;\n    }\n  }\n\n  /**\n   * Adds a new block at (x, y, z) for this chunk\n   */\n  addBlock(x: number, y: number, z: number, blockId: BlockID) {\n    // Safety check that we aren't adding a block for one that already exists\n    if (this.getBlock(x, y, z)?.block === BlockID.Air) {\n      this.setBlockId(x, y, z, blockId);\n      this.addBlockInstance(x, y, z);\n      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);\n    }\n  }\n\n  /**\n   * @desc Removes the block at (x, y, z => chunk coords)\n   */\n  removeBlock(x: number, y: number, z: number) {\n    // console.log(`Removing block at ${x}, ${y}, ${z}`);\n    const block = this.getBlock(x, y, z);\n    // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));\n    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;\n    const blockId = block.block;\n    this.playBlockSound(blockId);\n    this.deleteBlockInstance(x, y, z, block);\n    \n    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率\n    const blockEntity = BlockFactory.getBlock(blockId);\n    if(blockEntity.canDrop) {\n      // 触发掉落物品\n      this.dropGroup.drop(block.block, x, y, z);\n    }    \n\n    this.setBlockId(x, y, z, BlockID.Air);\n    // 更新数据存储 设置方块为Air\n    this.dataStore.set(\n      this.position.x,\n      this.position.z,\n      x,\n      y,\n      z,\n      BlockID.Air\n    );\n  }\n\n  async playBlockSound(blockId: BlockID) {\n    switch (blockId) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n      case BlockID.TallGrass:\n      case BlockID.FlowerDandelion:\n      case BlockID.FlowerRose:\n        audioManager.play(\"dig.grass\");\n        break;\n      case BlockID.OakLog:\n        audioManager.play(\"dig.wood\");\n        break;\n      default:\n        audioManager.play(\"dig.stone\");\n        break;\n    }\n  }\n\n  /**\n   * @desc Creates a new instance for the block at (x, y, z)\n   */\n  addBlockInstance(x: number, y: number, z: number) {\n    const block = this.getBlock(x, y, z);\n    // TODO 在增加 block instance 的同时 需要更新 block data 的数据\n    // If the block is not air and doesn't have an instance id, create a new instance\n    if (\n      block &&\n      block.block !== BlockID.Air &&\n      block.instanceIds.length === 0\n    ) {\n      const blockClass = BlockFactory.getBlock(block.block);\n      const mesh = this.children.find(\n        (instanceMesh) => instanceMesh.name === blockClass.constructor.name\n      ) as THREE.InstancedMesh;\n      if (mesh) {\n        // 放置方块的时候播放对应的音效\n        this.playBlockSound(block.block);\n        const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);\n        if(ids) {\n          this.setBlockInstanceIds(x, y, z, ids);\n          mesh.instanceMatrix.needsUpdate = true;\n          // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n          mesh.computeBoundingSphere();\n        } else {\n          console.warn(`Failed to add instance for block ${block.block}`);\n        }\n      }\n    }\n  }\n\n  /**\n   * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count\n   */\n  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {\n    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);\n    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;\n\n    // Get the mesh of the block\n    const mesh = this.children.find(\n      (instanceMesh) =>\n        instanceMesh.name ===\n        BlockFactory.getBlock(block.block).constructor.name\n    ) as THREE.InstancedMesh;\n\n    /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例\n     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg\n     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id\n     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后\n     * 通过 mesh.count-- 来删除 instance id 列表后序的实例\n     */\n    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1\n    const lastBlockInstanceIds: number[] = [];\n    const lastBlockCoords = new THREE.Vector3();\n    block.instanceIds.forEach((instanceId) => {\n      // 获取 instanceMesh 中最后一个 instance id 的矩阵\n      const lastMatrix = new THREE.Matrix4();\n      mesh.getMatrixAt(mesh.count - 1, lastMatrix);\n\n      // Also need to get block coords of instance to update instance id of the block\n      // const lastBlockCoords = new THREE.Vector3();\n      // 获取instanceMesh 中最后一个 instance 的 block 位置\n      lastBlockCoords.setFromMatrixPosition(lastMatrix);\n      // this.setBlockInstanceIds(\n      //   Math.floor(lastBlockCoords.x),\n      //   Math.floor(lastBlockCoords.y),\n      //   Math.floor(lastBlockCoords.z),\n      //   [instanceId]\n      // );\n      // 最后一个 instance 实例\n      lastBlockInstanceIds.push(instanceId);\n\n      // Swap transformation matrices\n      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，\n      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block\n      mesh.setMatrixAt(instanceId, lastMatrix);\n\n      // Decrement instance count\n      mesh.count--;\n\n      // Notify the instanced mesh we updated the instance matrix\n      mesh.instanceMatrix.needsUpdate = true;\n      mesh.computeBoundingSphere();\n    });\n    /**\n     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block 的 instanceIds\n     */\n     this.setBlockInstanceIds(\n        Math.floor(lastBlockCoords.x),\n        Math.floor(lastBlockCoords.y),\n        Math.floor(lastBlockCoords.z),\n        lastBlockInstanceIds,\n      );\n\n    this.setBlockInstanceIds(x, y, z, []);\n  }\n\n  /**\n   * Sets the block instance data at (x, y, z) for this chunk\n   */\n  setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {\n    if (this.inBounds(x, y, z)) {\n      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {\n        // console.log('setBlockInstanceIds:', x, y, z,instanceIds);\n      }\n      this.data[x][y][z].instanceIds = instanceIds;\n    }\n  }\n\n  /**\n   * Checks if the given coordinates are within the world bounds\n   */\n  inBounds(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    return (\n      x >= 0 &&\n      x < width &&\n      y >= 0 &&\n      y < height &&\n      z >= 0 &&\n      z < width\n    );\n  }\n\n  /**\n   * 判断一个方块是否被其他方块遮挡\n   * @param x \n   * @param y \n   * @param z \n   * @returns 是否被其他方块遮挡\n   */\n  isBlockObscured(x: number, y: number, z: number): boolean {\n    const up = this.getBlock(x, y + 1, z);\n    const down = this.getBlock(x, y - 1, z);\n    const left = this.getBlock(x - 1, y, z);\n    const right = this.getBlock(x + 1, y, z);\n    const front = this.getBlock(x, y, z + 1);\n    const back = this.getBlock(x, y, z - 1);\n\n    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);\n\n    // If any of the block's sides are exposed, it's not obscured\n    if (\n      !up ||\n      !down ||\n      !left ||\n      !right ||\n      !front ||\n      !back ||\n      getBlockClass(up.block).transparent ||\n      getBlockClass(down.block).transparent ||\n      getBlockClass(left.block).transparent ||\n      getBlockClass(right.block).transparent ||\n      getBlockClass(front.block).transparent ||\n      getBlockClass(back.block).transparent\n    ) {\n      return false;\n    }\n\n    return true;\n  }\n\n  /**\n   * 判断一个方块是否在 chunk 的边界上\n   * 边界的表面，其上方的方块可以通过 其也不算边界\n   * @param x \n   * @param y \n   * @param z \n   * @returns \n   */\n  isBorderBlock(x: number, y: number, z: number): boolean {\n    const { width, height } = ChunkParams;\n    // TODO 看上去是一个优化判断 暂时待理解\n    const up = this.getBlock(x, y + 1, z);\n    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;\n    // \n    if (upBlockClass?.canPassThrough) {\n      return false;\n    }\n\n    return (\n      x === 0 ||\n      x === width - 1 ||\n      y === 0 ||\n      y === height - 1 ||\n      z === 0 ||\n      z === width - 1\n    );\n  }\n\n  disposeChildren() {\n    this.traverse((child) => {\n      if (child instanceof THREE.Mesh) {\n        child.geometry.dispose();\n      }\n    });\n    this.clear();\n  }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/WorldChunk.ts"
     },
@@ -3605,15 +5172,6 @@
       "__content": "import * as THREE from \"three\";\nimport { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\";\nimport { Player } from \"../player/Player\";\nimport { PlayerInitPosition } from \"../player/literal\";\nimport { ScreenViewer } from \"../gui/viewer\";\n\nexport function setOrbitCameraPosition(orbitCamera: THREE.PerspectiveCamera, x: number, y: number, z: number) {\n    // orbitCamera.position.set(x - 64, y - 20, z - 64);\n    // orbitCamera.position.set(x , y - 20, z );\n    // middle high\n    // orbitCamera.position.set(x , y - 20, z + 10 );\n    // top high\n    orbitCamera.position.set(x , y - 5, z );\n}\n\n// 第三视角观察使用\nexport function initOrbitCamera(renderer: THREE.WebGLRenderer) {\n  const orbitCamera = new THREE.PerspectiveCamera(\n    75,\n    ScreenViewer.width / ScreenViewer.height\n    );\n    // 32, 72, 32\n    const { x, y, z } = PlayerInitPosition\n    setOrbitCameraPosition(orbitCamera, x, y, z);\n\n    const controls = new OrbitControls(\n        orbitCamera,\n        renderer.domElement\n    );\n    orbitCamera.layers.enableAll();\n    controls.target.set(0, 0, 0);\n    controls.update();\n    \n    return {\n        orbitCamera,\n        controls\n    }\n}\n\n/**\n * 在玩家第一人称模式下 玩家发生位移的时候 更新观察相机位置和目标位置\n * @param camera \n * @param controls \n * @param player \n */\nexport function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: OrbitControls, player: Player) {\n    if(!camera || !controls || !player) return;\n    // player.controls.isLocked === true 第一人称模式\n    // player.controls.isLocked === false 观察者模式\n    if(!controls.target.equals(player.position) && player.controls.isLocked) {\n        const {x, y, z} = player.position;\n        // camera.position.set(x - 64, PlayerInitPosition.y - 20, z - 64);\n        // camera.position.set(x , PlayerInitPosition.y - 20, z );\n        setOrbitCameraPosition(camera, x, PlayerInitPosition.y, z);\n        controls.target.set(x, y, z);\n    };\n\n    //   this.controls.autoRotate = false;\n    //   this.controls.autoRotateSpeed = 2.0;\n    controls.update();\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/dev/orbitCamera.ts"
-    },
-    "game/engine/material": {
-      "path": "game/engine/material",
-      "id": "game/engine/material",
-      "file": "game/engine/material.ts",
-      "absPath": "/game/engine/material",
-      "__content": "import * as THREE from 'three';\n\nconst wireframeMaterial = new THREE.MeshBasicMaterial({ wireframe: true });\n\nconst collisionHelperMaterial = new THREE.MeshBasicMaterial({\n  color: 0xff0000,\n  transparent: true,\n  opacity: 0.2,\n});\n\nexport {\n  wireframeMaterial,\n  collisionHelperMaterial,\n}",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/material.ts"
     },
     "game/gui/toolbar/dom": {
       "path": "game/gui/toolbar/dom",
@@ -3665,7 +5223,7 @@
       "id": "game/world/drop/drop",
       "file": "game/world/drop/drop.ts",
       "absPath": "/game/world/drop/drop",
-      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/base/BlockFactory\";\nimport { getDropInstancedGeometry } from \"../geometry\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // Tip 在掉落 落地的时候计算\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { BlockID, blockIDValues } from \"../../Block\";\nimport { BlockFactory } from \"../../Block/base/BlockFactory\";\nimport { IDrop } from \"./interface\";\nimport { WorldChunk } from \"../WorldChunk\";\nimport { jitterNumber } from \"../../utils\";\nimport { DropDt, DropLimit, MaxCount } from \"./literal\";\nimport { Layers } from \"../../engine\";\nimport { ToolBar } from \"../../gui\";\n\n/**@desc 掉落物的 Group */\nexport class DropGroup extends THREE.Group {\n    private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};\n    private chunkPosition: THREE.Vector3;\n    private chunk: WorldChunk;\n    private dropList: IDrop[] = [];\n    private dropMatrix = new THREE.Matrix4;\n    \n    constructor(chunkPosition: THREE.Vector3, chunk: WorldChunk) {\n       super();\n       this.chunkPosition = chunkPosition;\n       this.chunk = chunk;\n       this.initInstanceMesh();\n    }\n\n    /** @desc 初始化掉落物的 InstancedMesh */\n    private initInstanceMesh() {\n        const meshes = this.meshes\n        blockIDValues.forEach((blockId) => {\n            const block = BlockFactory.getBlock(blockId);\n            const blockGeometry = block.geometry;\n            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;\n            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);\n            mesh.name = block.constructor.name;\n            mesh.count = 0;\n            mesh.layers.set(Layers.One);\n            mesh.userData.type = 'drop';\n            mesh.userData.blockId = blockId;\n            mesh.userData.instanceCache = {};\n            // 初始时将所有实例设为不可见\n            mesh.visible = false;\n            // mesh.castShadow = !block.canPassThrough;\n            // 暂时关闭阴影投射\n            mesh.castShadow = false;\n            mesh.receiveShadow = false;\n            mesh.matrixAutoUpdate = false;\n            meshes[block.id] = mesh;\n            this.add(mesh);\n        });\n    }\n\n    drop(blockType: BlockID, x: number, y: number, z: number) {\n        const mesh = this.meshes[blockType];\n        if (!mesh) return;\n        // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… \n        this.addInstance(mesh, x, y, z);\n        this.updateDropState(x, z);\n    }\n\n    /**\n     * @desc 吸引物品到指定位置\n     * @param origin 吸引物品的目标位置\n     */\n    attract(origin: THREE.Vector3) {\n        const availableMeshes = this.getAvailableMeshes();\n        if (availableMeshes.length === 0) return;\n         // 距离筛选 + 批量删除\n        const tempMatrix = new THREE.Matrix4(); // 存储单个实例的矩阵\n        const instancePos = new THREE.Vector3(); // 存储单个实例的位置\n\n        // 吸收的物品最大距离\n        const maxDistance = 1.8;\n        // TODO 待优化性能\n        availableMeshes.forEach((mesh) => {\n            // 当前 InstancedMesh 中被拾取的实例 ID\n            const toDeleteIds = [];\n            // 遍历所有有效实例，筛选距离 <2 的 ID\n            for (let instanceId = 0; instanceId < mesh.count; instanceId++) {\n                mesh.getMatrixAt(instanceId, tempMatrix);\n                instancePos.setFromMatrixPosition(tempMatrix);\n                instancePos.add(this.chunkPosition);\n                const distanceSq = instancePos.distanceTo(origin);\n                \n                if (distanceSq < maxDistance) {\n                    toDeleteIds.push(instanceId);\n                }\n            }\n            if(toDeleteIds.length > 0) {\n                // 批量删除距离小于 maxDistance 的实例\n                this.deleteInstance(mesh, toDeleteIds, tempMatrix);\n                ToolBar.pushBlockId(mesh.userData.blockId);\n            }\n        });\n    }\n\n    /**@desc 在 physics 中触发更新 检测掉落 */\n    update() {\n        this.dropList.forEach((drop) => {\n            const { state, mesh, instanceId, x, y, z } = drop;\n            if (state === 'float' || state === 'stable') return;\n            \n            // TODO 暂时先加上下落 后续需要加上动画 下落的速度需要调整 性能需要调整优化\n            mesh.getMatrixAt(instanceId, this.dropMatrix);\n            const posX = this.dropMatrix.elements[12];\n            const posY = this.dropMatrix.elements[13];\n            const posZ = this.dropMatrix.elements[14];\n\n            const isOverFloatHeight = posY % 1 >= DropLimit;\n            if (isOverFloatHeight || state === 'fall_cross') {\n                // 在当前 block 内的高度大于悬浮高度 + 下落高度 dt，直接下落\n                const nextY = posY - DropDt;\n                drop.y = nextY;\n                if(isOverFloatHeight) {\n                    drop.state = 'fall';\n                }\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n                return;\n            }\n            // 在当前 block 内的高度不足的时候 需要检测下方的 block 是否支持掉落\n            const blockX = Math.floor(x);\n            const underBlockY = Math.floor(y) - 1;\n            const blockZ = Math.floor(z);\n            const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);\n            if (!underBlockData) {\n                // ERROR 下方的 block 不存在的时候\n                console.warn('下方的 block 不存在');\n                drop.state = 'stable';\n                return;\n            }\n            // console.log('underBlockData', underBlockData);\n            const blockClass = BlockFactory.getBlock(underBlockData.block);\n            // 穿过下方的 block\n            if (blockClass.canPassThrough) {\n                const nextY = posY - DropDt;\n                this.dropMatrix.setPosition(posX, nextY, posZ);\n                drop.y = nextY;\n                drop.state = 'fall_cross';\n                mesh.setMatrixAt(instanceId, this.dropMatrix)\n                mesh.instanceMatrix.needsUpdate = true;\n            } else {\n                // 下方的 block 不支持穿过下落 则 drop 进入 float 状态\n                drop.state = 'float';\n                mesh.computeBoundingSphere();\n            }           \n        })\n    }\n\n    /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */\n    private getAvailableMeshes() {\n        const availableMeshes: THREE.InstancedMesh[] = [];\n        blockIDValues.map((key) => {\n            const mesh = this.meshes[key];\n            if(mesh && mesh.count > 0) {\n                availableMeshes.push(mesh);\n            }\n        })\n        return availableMeshes;\n    }\n\n    /**\n     * @desc 增加一个 drop 实例\n     * 一个 drop instance 对应一个实际的 THREE.Object\n     */\n    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {\n        // 给 drop 实例添加随机抖动\n        const dropX = jitterNumber(x + 0.5, 0.1);\n        const dropY = jitterNumber(y + 0.5, 0.05);\n        const dropZ = jitterNumber(z + 0.5, 0.1);\n        const instanceId = mesh.count++;\n        const matrix = new THREE.Matrix4();\n        matrix.setPosition(dropX, dropY, dropZ);\n        mesh.setMatrixAt(instanceId, matrix);\n        mesh.instanceMatrix.needsUpdate = true;\n        // 当存在一个 instance 时，将其设为可见\n        mesh.visible = true\n        // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作\n        // Tip 在掉落 落地的时候计算\n        // mesh.computeBoundingSphere();\n        const drop: IDrop = {\n            // drop instance 对应的 uuid\n            uuid: THREE.MathUtils.generateUUID(),\n            state: 'init',\n            mesh,\n            instanceId,\n            needUpdate: true,\n            // block xyz\n            x, y, z,\n        };\n        this.dropList.push(drop);\n        mesh.userData.instanceCache[drop.uuid] = drop;\n        // console.log('add drop instance', drop.uuid);\n    }\n\n    /**@desc 在指定的 InstanceMesh 中删除 drop 实例 */\n    private deleteInstance(mesh: THREE.InstancedMesh, toDeleteIds: number[], tempMatrix: THREE.Matrix4) {\n        // console.log('****** deleteInstance ******')\n        // console.log('toDeleteIds', toDeleteIds);\n        // console.log('instanceCache', this.instanceCache);\n        // console.log('dropList.length', this.dropList.length)\n        // 批量处理待删ID\n        for (const instanceId of toDeleteIds) {\n            // 跳过已因缩容失效的ID（批量删除中count会动态减少）\n            // console.log('instanceId', instanceId, mesh.count, mesh.count - 1);\n            // if (instanceId >= mesh.count) continue;\n            const lastInstanceId = mesh.count - 1;\n\n            let currentInstanceUUID = 'none';\n            let lastInstanceUUID = 'none';\n            const instanceCache = mesh.userData.instanceCache;\n            Object.keys(instanceCache).forEach((uuid) => {\n                // console.log('uuid', uuid, instanceCache[uuid].instanceId);\n                if(instanceCache[uuid].instanceId === instanceId) {\n                    currentInstanceUUID = uuid;\n                }\n                if(instanceCache[uuid].instanceId === lastInstanceId) {\n                    lastInstanceUUID = uuid;\n                }\n            })\n            instanceCache[lastInstanceUUID].instanceId = instanceId;\n            delete instanceCache[currentInstanceUUID];\n            this.deleteDrop(currentInstanceUUID);\n            // 仅当待删ID不是最后一个实例时，执行覆盖\n            if (instanceId !== lastInstanceId) {\n                // 读取最后一个实例的矩阵（覆盖待删位置）\n                mesh.getMatrixAt(lastInstanceId, tempMatrix);\n                mesh.setMatrixAt(instanceId, tempMatrix);\n                mesh.count--;\n            } else {\n                // 最后一个实例直接删除\n                mesh.count--;\n            }\n        }\n        // toDeleteIds \n        mesh.instanceMatrix.needsUpdate = true;\n        mesh.computeBoundingSphere();\n        if(mesh.count === 0) {\n            // 当所有 instance 都被删除时，将 mesh 设为不可见\n            mesh.visible = false;\n        }\n    }\n\n    /**@desc 更新在 x、z block 坐标垂直方向上的 drop 实例的状态，看是否继续下落 */\n    private updateDropState(x: number, z: number) {\n        // console.log('updateDropState', this.dropList, x, z);\n        this.dropList.forEach(drop => {\n            if(x === Math.floor(drop.x) && z === Math.floor(drop.z)) {\n                // 重新设置 drop 的状态\n                drop.state = 'init';\n            }\n        });\n    }\n\n    /**@desc 在删除 instance 的时候 更新 dropList */\n    private deleteDrop(uuid: string) {\n        this.dropList = this.dropList.filter((d => {\n            return d.uuid !== uuid\n        }));\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/drop/drop.ts"
     },
@@ -3722,15 +5280,6 @@
       "__content": "import * as THREE from \"three\";\nimport { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from \"./interface\";\n\nexport const PlayerInitPosition = new THREE.Vector3(32, 72, 32);\nexport class PlayerParams {\n    /**@desc 玩家的位置 初始值为 PlayerInitPosition */\n    static position = new THREE.Vector3().copy(PlayerInitPosition);\n    /**@desc 玩家的高度 */\n    static height = 1.75;\n    /**@desc 玩家的高度的一半 */\n    static halfHeight = 1.75 / 2;\n    /**@desc 玩家的碰撞盒半径应该调整为 0.25 较为合适 */\n    static radius = 0.25;\n    /**@desc 玩家最大移动速度 */\n    static maxSpeed = 4.317;\n    /**@desc 玩家最大奔跑速度 */\n    static maxSprintSpeed = 5.612;\n    /**@desc 玩家跳跃速度 */\n    static jumpSpeed = 10;\n    /**@desc 玩家选中的方块坐标 可能未选中 */\n    static selectedCoords: ISelectedCoords = null;\n    /**@desc 玩家是否处于 chunk 中心 */\n    static isInChunkCenter = false;\n    /**@desc 玩家所处的 chunkID */\n    static currentChunk: ICurrentChunk = null;\n    /**@desc 玩家相邻的最小 4 个 chunkID */\n    static nearFourChunks: INearFourChunks = [];\n    /**@desc 玩家当前活动的 chunkID 列表 1 or 4 */\n    static activeChunks: IChunkKey[] = [];\n}\n\n// 玩家视线中心 鼠标屏幕坐标\nexport const RayCenterScreen = new THREE.Vector2(0, 0);",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/literal.ts"
-    },
-    "game/world/geometry": {
-      "path": "game/world/geometry",
-      "id": "game/world/geometry",
-      "file": "game/world/geometry.ts",
-      "absPath": "/game/world/geometry",
-      "__content": "import * as THREE from \"three\";\nimport { RenderGeometry } from \"../Block/base/Block\";\n\n// 方块的大小为 1x1x1\nconst geometry = new THREE.BoxGeometry()\nconst dropBoxSize = 0.25;\nconst geometry_drop = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);\n// TODO 修改草的实际大小\nconst crossGeometry = new THREE.PlaneGeometry();\nconst crossGeometry_drop = new THREE.PlaneGeometry(0.5, 0.5);\n\nconst flowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);\nconst flowerGeometry_drop = new THREE.PlaneGeometry(0.15, 0.5);\n\nexport const getInstancedGeometry = (blockGeometry: RenderGeometry) => {\n    if (blockGeometry === RenderGeometry.Cube) {\n        return geometry;\n    } else if (blockGeometry === RenderGeometry.Cross) {\n        return crossGeometry;\n    } else if (blockGeometry === RenderGeometry.Flower) {\n        return flowerGeometry;\n    }\n};\n\nexport const getDropInstancedGeometry = (blockGeometry: RenderGeometry) => {\n    if (blockGeometry === RenderGeometry.Cube) {\n        return geometry_drop;\n    } else if (blockGeometry === RenderGeometry.Cross) {\n        return crossGeometry_drop;\n    } else if (blockGeometry === RenderGeometry.Flower) {\n        return flowerGeometry_drop;\n    }\n};",
-      "__isJSFile": true,
-      "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/world/geometry.ts"
     },
     "components/loading": {
       "path": "components/loading",
@@ -3836,7 +5385,7 @@
       "id": "game/player/group",
       "file": "game/player/group.ts",
       "absPath": "/game/player/group",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nconst handLength = 0.5;\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    hand!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n\n        const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n        const material = new THREE.MeshLambertMaterial();\n        const mesh = new THREE.Mesh(geometry, material);\n        mesh.position.set(0, -handLength / 2, 0);\n        handPoint.add(mesh);\n\n        this.hand = handPoint;\n    }\n\n    protected waveHand() {\n        if (!this.hand) return;\n        const update = (o: { t: number }) => {\n            this.hand.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.hand.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.hand.position.z = quadraticFunction(o.t) * 0.1;\n            this.hand.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.hand.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nconst handLength = 0.5;\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    hand!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n        const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n        const material = new THREE.MeshLambertMaterial();\n        const mesh = new THREE.Mesh(geometry, material);\n        mesh.position.set(0, -handLength / 2, 0);\n        handPoint.add(mesh);\n\n        this.hand = handPoint;\n    }\n\n    protected waveHand() {\n        if (!this.hand) return;\n        const update = (o: { t: number }) => {\n            this.hand.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.hand.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.hand.position.z = quadraticFunction(o.t) * 0.1;\n            // this.hand.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.hand.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/group.ts"
     },
@@ -5436,22 +6985,6 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/world/geometry.ts": {
-            "bytes": 1217,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "src/pages/game/Block/base/Block.ts",
-                "kind": "import-statement",
-                "original": "../Block/base/Block"
-              }
-            ],
-            "format": "esm"
-          },
           "src/pages/game/utils/index.ts": {
             "bytes": 372,
             "imports": [
@@ -5633,8 +7166,24 @@
             ],
             "format": "esm"
           },
+          "src/pages/game/engine/geometry/index.ts": {
+            "bytes": 1220,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/base/Block.ts",
+                "kind": "import-statement",
+                "original": "../../Block/base/Block"
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/game/world/drop/drop.ts": {
-            "bytes": 11103,
+            "bytes": 11113,
             "imports": [
               {
                 "path": "three",
@@ -5650,11 +7199,6 @@
                 "path": "src/pages/game/Block/base/BlockFactory.ts",
                 "kind": "import-statement",
                 "original": "../../Block/base/BlockFactory"
-              },
-              {
-                "path": "src/pages/game/world/geometry.ts",
-                "kind": "import-statement",
-                "original": "../geometry"
               },
               {
                 "path": "./interface",
@@ -5685,6 +7229,11 @@
                 "path": "src/pages/game/gui/index.ts",
                 "kind": "import-statement",
                 "original": "../../gui"
+              },
+              {
+                "path": "src/pages/game/engine/geometry/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/geometry"
               }
             ],
             "format": "esm"
@@ -5741,13 +7290,39 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/engine/material.ts": {
-            "bytes": 291,
+          "src/pages/game/engine/material/flower.ts": {
+            "bytes": 1003,
             "imports": [
               {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "../../Block/textures"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/engine/material/index.ts": {
+            "bytes": 1653,
+            "imports": [
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/pages/game/Block/textures.ts",
+                "kind": "import-statement",
+                "original": "../../Block/textures"
+              },
+              {
+                "path": "src/pages/game/engine/material/flower.ts",
+                "kind": "import-statement",
+                "original": "./flower"
               }
             ],
             "format": "esm"
@@ -5774,7 +7349,7 @@
             "format": "esm"
           },
           "src/pages/game/world/WorldChunk.ts": {
-            "bytes": 15272,
+            "bytes": 15280,
             "imports": [
               {
                 "path": "three",
@@ -5817,11 +7392,6 @@
                 "original": "./generate"
               },
               {
-                "path": "src/pages/game/world/geometry.ts",
-                "kind": "import-statement",
-                "original": "./geometry"
-              },
-              {
                 "path": "src/pages/game/world/drop/drop.ts",
                 "kind": "import-statement",
                 "original": "./drop/drop"
@@ -5842,7 +7412,7 @@
                 "original": "../dev"
               },
               {
-                "path": "src/pages/game/engine/material.ts",
+                "path": "src/pages/game/engine/material/index.ts",
                 "kind": "import-statement",
                 "original": "../engine/material"
               },
@@ -5850,6 +7420,11 @@
                 "path": "src/pages/game/world/chunk/instance.ts",
                 "kind": "import-statement",
                 "original": "./chunk/instance"
+              },
+              {
+                "path": "src/pages/game/engine/geometry/index.ts",
+                "kind": "import-statement",
+                "original": "../engine/geometry"
               }
             ],
             "format": "esm"
@@ -6051,13 +7626,8 @@
             "format": "esm"
           },
           "src/pages/game/Block/blocks/DirtBlock.ts": {
-            "bytes": 470,
+            "bytes": 437,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6072,18 +7642,18 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/Block/blocks/FlowerRoseBlock.ts": {
-            "bytes": 714,
+            "bytes": 456,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6098,18 +7668,18 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/Block/blocks/GrassBlock.ts": {
-            "bytes": 842,
+            "bytes": 451,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6124,18 +7694,18 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/Block/blocks/IronOreBlock.ts": {
-            "bytes": 679,
+            "bytes": 623,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6160,18 +7730,18 @@
                 "path": "src/pages/game/world/generate/resource.ts",
                 "kind": "import-statement",
                 "original": "../../world/generate/resource"
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
           },
           "src/pages/game/Block/blocks/LeavesBlock.ts": {
-            "bytes": 584,
+            "bytes": 437,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6186,6 +7756,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
@@ -6311,13 +7886,8 @@
             "format": "esm"
           },
           "src/pages/game/Block/blocks/TallGrassBlock.ts": {
-            "bytes": 719,
+            "bytes": 454,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6332,6 +7902,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
@@ -6439,13 +8014,8 @@
             "format": "esm"
           },
           "src/pages/game/Block/blocks/FlowerDandelionBlock.ts": {
-            "bytes": 852,
+            "bytes": 483,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6460,6 +8030,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
@@ -6478,7 +8053,7 @@
                 "original": "../player/literal"
               },
               {
-                "path": "src/pages/game/engine/material.ts",
+                "path": "src/pages/game/engine/material/index.ts",
                 "kind": "import-statement",
                 "original": "../engine/material"
               },
@@ -6489,6 +8064,10 @@
               }
             ],
             "format": "esm"
+          },
+          "src/pages/game/engine/geometry/flower.ts": {
+            "bytes": 0,
+            "imports": []
           },
           "src/pages/game/gui/toolbar/interface.ts": {
             "bytes": 114,
@@ -6735,7 +8314,7 @@
                 "external": true
               },
               {
-                "path": "src/pages/game/engine/material.ts",
+                "path": "src/pages/game/engine/material/index.ts",
                 "kind": "import-statement",
                 "original": "../engine/material"
               },
@@ -6887,7 +8466,7 @@
             "format": "esm"
           },
           "src/pages/game/player/group.ts": {
-            "bytes": 2950,
+            "bytes": 2949,
             "imports": [
               {
                 "path": "three",
@@ -7349,7 +8928,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 22151,
+            "bytes": 22783,
             "imports": [
               {
                 "path": "src/.umi/core/routeProps.ts",
@@ -7452,6 +9031,16 @@
                 "original": "../../../src/pages/game/Block/blocks/DirtBlock.ts"
               },
               {
+                "path": "src/pages/game/engine/geometry/flower.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/engine/geometry/flower.ts"
+              },
+              {
+                "path": "src/pages/game/engine/material/flower.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/engine/material/flower.ts"
+              },
+              {
                 "path": "src/pages/game/world/generate/terrain.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/world/generate/terrain.ts"
@@ -7465,6 +9054,16 @@
                 "path": "src/pages/game/Block/blocks/OreBlock.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/Block/blocks/OreBlock.ts"
+              },
+              {
+                "path": "src/pages/game/engine/geometry/index.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/engine/geometry/index.ts"
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "dynamic-import",
+                "original": "../../../src/pages/game/engine/material/index.ts"
               },
               {
                 "path": "src/pages/game/gui/toolbar/interface.ts",
@@ -7577,11 +9176,6 @@
                 "original": "../../../src/pages/game/dev/orbitCamera.ts"
               },
               {
-                "path": "src/pages/game/engine/material.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/engine/material.ts"
-              },
-              {
                 "path": "src/pages/game/gui/toolbar/dom.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/gui/toolbar/dom.ts"
@@ -7640,11 +9234,6 @@
                 "path": "src/pages/game/player/literal.ts",
                 "kind": "dynamic-import",
                 "original": "../../../src/pages/game/player/literal.ts"
-              },
-              {
-                "path": "src/pages/game/world/geometry.ts",
-                "kind": "dynamic-import",
-                "original": "../../../src/pages/game/world/geometry.ts"
               },
               {
                 "path": "src/pages/components/loading.tsx",
@@ -8015,11 +9604,6 @@
                 "external": true
               },
               {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three/examples/jsm/libs/stats.module",
                 "kind": "import-statement",
                 "external": true
@@ -8075,42 +9659,17 @@
                 "external": true
               },
               {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "three",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three/examples/jsm/math/SimplexNoise.js",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -9470,9 +11029,6 @@
               "src/pages/game/world/generate/index.ts": {
                 "bytesInOutput": 1220
               },
-              "src/pages/game/world/geometry.ts": {
-                "bytesInOutput": 1471
-              },
               "src/pages/game/utils/index.ts": {
                 "bytesInOutput": 461
               },
@@ -9509,6 +11065,9 @@
               "src/pages/game/gui/index.ts": {
                 "bytesInOutput": 5868
               },
+              "src/pages/game/engine/geometry/index.ts": {
+                "bytesInOutput": 1478
+              },
               "src/pages/game/world/drop/drop.ts": {
                 "bytesInOutput": 7783
               },
@@ -9518,8 +11077,11 @@
               "src/pages/game/helper/chunkHelper.ts": {
                 "bytesInOutput": 2253
               },
-              "src/pages/game/engine/material.ts": {
-                "bytesInOutput": 551
+              "src/pages/game/engine/material/flower.ts": {
+                "bytesInOutput": 1049
+              },
+              "src/pages/game/engine/material/index.ts": {
+                "bytesInOutput": 2171
               },
               "src/pages/game/world/chunk/instance.ts": {
                 "bytesInOutput": 2083
@@ -9552,19 +11114,19 @@
                 "bytesInOutput": 805
               },
               "src/pages/game/Block/blocks/DirtBlock.ts": {
-                "bytesInOutput": 638
+                "bytesInOutput": 540
               },
               "src/pages/game/Block/blocks/FlowerRoseBlock.ts": {
-                "bytesInOutput": 960
+                "bytesInOutput": 602
               },
               "src/pages/game/Block/blocks/GrassBlock.ts": {
-                "bytesInOutput": 1067
+                "bytesInOutput": 555
               },
               "src/pages/game/Block/blocks/IronOreBlock.ts": {
-                "bytesInOutput": 794
+                "bytesInOutput": 696
               },
               "src/pages/game/Block/blocks/LeavesBlock.ts": {
-                "bytesInOutput": 760
+                "bytesInOutput": 556
               },
               "src/pages/game/Block/blocks/OakLogBlock.ts": {
                 "bytesInOutput": 1062
@@ -9582,7 +11144,7 @@
                 "bytesInOutput": 733
               },
               "src/pages/game/Block/blocks/TallGrassBlock.ts": {
-                "bytesInOutput": 849
+                "bytesInOutput": 590
               },
               "src/pages/game/Block/base/BlockFactory.ts": {
                 "bytesInOutput": 1777
@@ -9591,10 +11153,13 @@
                 "bytesInOutput": 327
               },
               "src/pages/game/Block/blocks/FlowerDandelionBlock.ts": {
-                "bytesInOutput": 1055
+                "bytesInOutput": 657
               },
               "src/pages/game/helper/playerBoundHelper.ts": {
                 "bytesInOutput": 796
+              },
+              "src/pages/game/engine/geometry/flower.ts": {
+                "bytesInOutput": 109
               },
               "src/pages/game/gui/toolbar/interface.ts": {
                 "bytesInOutput": 131
@@ -9696,7 +11261,7 @@
                 "bytesInOutput": 29
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 18740
+                "bytesInOutput": 19234
               },
               "src/.umi/core/helmet.ts": {
                 "bytesInOutput": 415
@@ -9717,7 +11282,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 202591
+            "bytes": 205275
           }
         }
       }
@@ -12565,20 +14130,7 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/DirtBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 88,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12593,30 +14145,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 140,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 89,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 171,
+          "end": 128,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12626,26 +14173,27 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 142,
+          "start": 99,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 187,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "DirtBlockMaterial",
+              "local": "DirtBlockMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 129,
           "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/FlowerDandelionBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 88,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12660,30 +14208,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 140,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 89,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 171,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12693,26 +14236,27 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 142,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 192,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "FlowerDandelionMaterial",
+              "local": "FlowerDandelionMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/FlowerRoseBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 87,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12727,30 +14271,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 33,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 139,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 88,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 169,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12760,26 +14299,27 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 140,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 187,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "FlowerRoseMaterial",
+              "local": "FlowerRoseMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/GrassBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 87,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12794,30 +14334,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 33,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 139,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 88,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 170,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12827,26 +14362,27 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 141,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 191,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "TallGrossBlockMaterial",
+              "local": "TallGrossBlockMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/IronOreBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 81,
+          "end": 48,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12856,11 +14392,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 120,
+          "end": 87,
           "importKind": "value",
           "source": "./OreBlock",
           "specifiers": [
@@ -12870,30 +14406,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 82,
+          "start": 49,
           "type": "ImportDeclaration"
         },
         {
-          "end": 172,
+          "end": 129,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 121,
+          "start": 88,
           "type": "ImportDeclaration"
         },
         {
-          "end": 202,
+          "end": 159,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12903,11 +14434,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 173,
+          "start": 130,
           "type": "ImportDeclaration"
         },
         {
-          "end": 261,
+          "end": 218,
           "importKind": "value",
           "source": "../../world/generate/resource",
           "specifiers": [
@@ -12917,26 +14448,27 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 203,
+          "start": 160,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 277,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "IronBlockMaterial",
+              "local": "IronBlockMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 219,
           "type": "ImportDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/LeavesBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 88,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -12951,30 +14483,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 140,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 89,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 171,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -12984,7 +14511,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 142,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 183,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "LeavesMaterial",
+              "local": "LeavesMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
@@ -13299,20 +14840,7 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/TallGrassBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 88,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -13327,30 +14855,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 140,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 89,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 171,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -13360,7 +14883,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 142,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 186,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "TallGrassMaterial",
+              "local": "TallGrassMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
@@ -13801,6 +15338,36 @@
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/dev/query.ts": [],
+      "/Applications/workspace/minicraft_demo/src/pages/game/engine/geometry/flower.ts": [],
+      "/Applications/workspace/minicraft_demo/src/pages/game/engine/geometry/index.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 89,
+          "importKind": "value",
+          "source": "../../Block/base/Block",
+          "specifiers": [
+            {
+              "imported": "RenderGeometry",
+              "local": "RenderGeometry",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        }
+      ],
       "/Applications/workspace/minicraft_demo/src/pages/game/engine/index.ts": [
         {
           "end": 32,
@@ -13837,7 +15404,7 @@
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/engine/layers.ts": [],
-      "/Applications/workspace/minicraft_demo/src/pages/game/engine/material.ts": [
+      "/Applications/workspace/minicraft_demo/src/pages/game/engine/material/flower.ts": [
         {
           "end": 32,
           "importKind": "value",
@@ -13850,6 +15417,55 @@
           ],
           "start": 1,
           "type": "ImportDeclaration"
+        },
+        {
+          "end": 81,
+          "importKind": "value",
+          "source": "../../Block/textures",
+          "specifiers": [
+            {
+              "imported": "textures",
+              "local": "textures",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        }
+      ],
+      "/Applications/workspace/minicraft_demo/src/pages/game/engine/material/index.ts": [
+        {
+          "end": 32,
+          "importKind": "value",
+          "source": "three",
+          "specifiers": [
+            {
+              "local": "THREE",
+              "type": "ImportNamespaceSpecifier"
+            }
+          ],
+          "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 81,
+          "importKind": "value",
+          "source": "../../Block/textures",
+          "specifiers": [
+            {
+              "imported": "textures",
+              "local": "textures",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 33,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1654,
+          "source": "./flower",
+          "start": 1629,
+          "type": "ExportAllDeclaration"
         }
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/engine/math.ts": [],
@@ -16136,21 +17752,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 441,
-          "importKind": "value",
-          "source": "./geometry",
-          "specifiers": [
-            {
-              "imported": "getInstancedGeometry",
-              "local": "getInstancedGeometry",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 391,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 482,
+          "end": 431,
           "importKind": "value",
           "source": "./drop/drop",
           "specifiers": [
@@ -16160,11 +17762,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 442,
+          "start": 391,
           "type": "ImportDeclaration"
         },
         {
-          "end": 529,
+          "end": 478,
           "importKind": "value",
           "source": "./chunk/literal",
           "specifiers": [
@@ -16174,11 +17776,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 483,
+          "start": 432,
           "type": "ImportDeclaration"
         },
         {
-          "end": 586,
+          "end": 535,
           "importKind": "value",
           "source": "../helper/chunkHelper",
           "specifiers": [
@@ -16188,11 +17790,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 530,
+          "start": 479,
           "type": "ImportDeclaration"
         },
         {
-          "end": 623,
+          "end": 572,
           "importKind": "value",
           "source": "../dev",
           "specifiers": [
@@ -16202,11 +17804,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 587,
+          "start": 536,
           "type": "ImportDeclaration"
         },
         {
-          "end": 679,
+          "end": 628,
           "importKind": "value",
           "source": "../engine/material",
           "specifiers": [
@@ -16216,11 +17818,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 624,
+          "start": 573,
           "type": "ImportDeclaration"
         },
         {
-          "end": 731,
+          "end": 680,
           "importKind": "value",
           "source": "./chunk/instance",
           "specifiers": [
@@ -16230,7 +17832,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 680,
+          "start": 629,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 739,
+          "importKind": "value",
+          "source": "../engine/geometry",
+          "specifiers": [
+            {
+              "imported": "getInstancedGeometry",
+              "local": "getInstancedGeometry",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 681,
           "type": "ImportDeclaration"
         }
       ],
@@ -16347,21 +17963,7 @@
           "type": "ImportDeclaration"
         },
         {
-          "end": 204,
-          "importKind": "value",
-          "source": "../geometry",
-          "specifiers": [
-            {
-              "imported": "getDropInstancedGeometry",
-              "local": "getDropInstancedGeometry",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 149,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 241,
+          "end": 185,
           "importKind": "value",
           "source": "./interface",
           "specifiers": [
@@ -16371,11 +17973,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 205,
+          "start": 149,
           "type": "ImportDeclaration"
         },
         {
-          "end": 285,
+          "end": 229,
           "importKind": "value",
           "source": "../WorldChunk",
           "specifiers": [
@@ -16385,11 +17987,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 242,
+          "start": 186,
           "type": "ImportDeclaration"
         },
         {
-          "end": 329,
+          "end": 273,
           "importKind": "value",
           "source": "../../utils",
           "specifiers": [
@@ -16399,11 +18001,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 286,
+          "start": 230,
           "type": "ImportDeclaration"
         },
         {
-          "end": 386,
+          "end": 330,
           "importKind": "value",
           "source": "./literal",
           "specifiers": [
@@ -16423,11 +18025,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 330,
+          "start": 274,
           "type": "ImportDeclaration"
         },
         {
-          "end": 425,
+          "end": 369,
           "importKind": "value",
           "source": "../../engine",
           "specifiers": [
@@ -16437,11 +18039,11 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 387,
+          "start": 331,
           "type": "ImportDeclaration"
         },
         {
-          "end": 462,
+          "end": 406,
           "importKind": "value",
           "source": "../../gui",
           "specifiers": [
@@ -16451,7 +18053,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 426,
+          "start": 370,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 472,
+          "importKind": "value",
+          "source": "../../engine/geometry",
+          "specifiers": [
+            {
+              "imported": "getDropInstancedGeometry",
+              "local": "getDropInstancedGeometry",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 407,
           "type": "ImportDeclaration"
         }
       ],
@@ -16910,35 +18526,6 @@
             }
           ],
           "start": 151,
-          "type": "ImportDeclaration"
-        }
-      ],
-      "/Applications/workspace/minicraft_demo/src/pages/game/world/geometry.ts": [
-        {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 86,
-          "importKind": "value",
-          "source": "../Block/base/Block",
-          "specifiers": [
-            {
-              "imported": "RenderGeometry",
-              "local": "RenderGeometry",
-              "type": "ImportSpecifier"
-            }
-          ],
-          "start": 33,
           "type": "ImportDeclaration"
         }
       ],

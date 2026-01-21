@@ -1,15 +1,13 @@
-import * as THREE from "three";
-
 import { Block, RenderGeometry } from "../base/Block";
-import { textures, uiTextures } from "../textures";
+import { uiTextures } from "../textures";
 
 import { BlockID } from "..";
+import { DirtBlockMaterial } from "../../engine/material";
 
-const dirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });
-
+/**@desc Dirt block */
 export class DirtBlock extends Block {
   id = BlockID.Dirt;
-  material = dirtMaterial;
+  material = DirtBlockMaterial;
   uiTexture = uiTextures.dirt;
   geometry = RenderGeometry.Cube;
   transparent = false;

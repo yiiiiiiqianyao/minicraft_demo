@@ -62,7 +62,6 @@ export class PlayerGroup {
         const handPoint = new THREE.Group();
         point.add(handPoint);
 
-
         const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);
         const material = new THREE.MeshLambertMaterial();
         const mesh = new THREE.Mesh(geometry, material);

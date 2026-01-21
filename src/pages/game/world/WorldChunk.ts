@@ -6,13 +6,13 @@ import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
 import { IWorldParams, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
-import { getInstancedGeometry } from "./geometry";
 import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
 import { wireframeMaterial } from "../engine/material";
 import { InstanceMeshAdd } from "./chunk/instance";
+import { getInstancedGeometry } from "../engine/geometry";
 
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];

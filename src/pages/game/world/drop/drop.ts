@@ -1,13 +1,13 @@
 import * as THREE from "three";
 import { BlockID, blockIDValues } from "../../Block";
 import { BlockFactory } from "../../Block/base/BlockFactory";
-import { getDropInstancedGeometry } from "../geometry";
 import { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
 import { jitterNumber } from "../../utils";
 import { DropDt, DropLimit, MaxCount } from "./literal";
 import { Layers } from "../../engine";
 import { ToolBar } from "../../gui";
+import { getDropInstancedGeometry } from "../../engine/geometry";
 
 /**@desc 掉落物的 Group */
 export class DropGroup extends THREE.Group {

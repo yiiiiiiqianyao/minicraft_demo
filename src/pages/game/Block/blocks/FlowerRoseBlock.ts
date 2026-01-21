@@ -1,21 +1,13 @@
-import * as THREE from "three";
 import { Block, RenderGeometry } from "../base/Block";
-import { textures, uiTextures } from "../textures";
+import { uiTextures } from "../textures";
 import { BlockID } from "..";
+import { FlowerRoseMaterial } from "../../engine/material";
 
-const flowerRoseMaterial = new THREE.MeshBasicMaterial({
-  map: textures.flowerRose,
-});
-textures.flowerRose.repeat.set(0.45, 0.6 );
-textures.flowerRose.offset.set(0.275, 0);
 
-flowerRoseMaterial.transparent = true;
-flowerRoseMaterial.side = THREE.DoubleSide;
-flowerRoseMaterial.depthWrite = false;
-
+/**@desc 玫瑰花 */
 export class FlowerRoseBlock extends Block {
   id = BlockID.FlowerRose;
-  material = flowerRoseMaterial;
+  material = FlowerRoseMaterial;
   uiTexture = uiTextures.flowerRose;
   geometry = RenderGeometry.Flower;
   transparent = true;
