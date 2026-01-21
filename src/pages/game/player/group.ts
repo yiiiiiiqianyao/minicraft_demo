@@ -10,13 +10,12 @@ import { quadraticFunction } from "../engine/math";
  * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合
  * 核心点是 camera 相机，其余内容都挂载在相机节点上
  */
-const handleOriginRotationX = Math.PI * 0.4;
-const handleOriginRotationY = Math.PI * 0.2;
-const handleOriginRotationZ = -Math.PI * 0.05;
-const WaveStepX = Math.PI / 6;
+const handleOriginRotationX = Math.PI * 0.5;
+const handleOriginRotationY = Math.PI * 0.08;
+const handleOriginRotationZ = Math.PI * 0.05;
+const WaveStepX = -Math.PI / 8;
 
 const handLength = 0.5;
-const handSize = 0.15;
 export class PlayerGroup {
     controls!: PointerLockControls;
     cameraHelper!: THREE.CameraHelper;
@@ -52,7 +51,7 @@ export class PlayerGroup {
 
     initHand() {
         const point = new THREE.Group();
-        point.position.set(0.45, -0.15, -0.3);
+        point.position.set(0.3, -0.2, -0.2);
         point.rotation.set(
             handleOriginRotationX,
             handleOriginRotationY,
@@ -64,7 +63,7 @@ export class PlayerGroup {
         point.add(handPoint);
 
 
-        const geometry = new THREE.BoxGeometry(handSize, handLength, handSize);
+        const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);
         const material = new THREE.MeshLambertMaterial();
         const mesh = new THREE.Mesh(geometry, material);
         mesh.position.set(0, -handLength / 2, 0);
@@ -77,6 +76,10 @@ export class PlayerGroup {
         if (!this.hand) return;
         const update = (o: { t: number }) => {
             this.hand.rotation.x =  quadraticFunction(o.t) * WaveStepX;
+            this.hand.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;
+            // this.hand.position.z = quadraticFunction(o.t) * 0.1;
+            // this.hand.position.x = -quadraticFunction(o.t) * 0.1;
+            // this.hand.position.y = -quadraticFunction(o.t) * 0.1;
         };
         new TWEEN.Tween({t: 0})
             .to({ t: 1 }, 200)
