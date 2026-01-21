@@ -248,7 +248,6 @@ export class World extends THREE.Group {
     const chunk = new WorldChunk(this.params, this.dataStore);
     chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };
-
     chunk.generate();
 
     this.add(chunk);
