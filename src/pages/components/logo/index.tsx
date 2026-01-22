@@ -1,5 +1,7 @@
 import './index.scss';
+import LogoImg from '@/assets/gui/logo.png'
 
+/**@desc 首页面展示的 logo */
 export const Logo = () => {
-    return <img id="logo" className='poster_logo' src="https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/logo.png" />
+    return <img id="logo" className='poster_logo' src={LogoImg} />
 }

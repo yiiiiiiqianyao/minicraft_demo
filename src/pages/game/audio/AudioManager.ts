@@ -1,11 +1,11 @@
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 import { sample } from "lodash";
 import soundData from "./sounds.json";
 import spriteData from "./sprite.json";
 import { BlockID } from "../Block";
-
-// TODO: remove this, add volume slider
-Howler.volume(0.3);
+import SpriteWebm from "@/assets/audio/sprite.webm";
+import SpriteMp3 from "@/assets/audio/sprite.mp3";
+import AmbientBGM from "@/assets/audio/ambient.mp3";
 
 class AudioManager {
   sprite: Howl;
@@ -17,10 +17,11 @@ class AudioManager {
   loadSounds() {
     return new Howl({
       src: [
-        "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.webm", 
-        "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/sprite.mp3"
+        SpriteWebm, 
+        SpriteMp3
       ],
       sprite: spriteData.sprite as any,
+      volume: 0.6,
     });
   }
 
@@ -40,10 +41,11 @@ class AudioManager {
     this.sprite.play(soundName);
   }
 
-  playBtm() {
+  playBGM() {
      const sound = new Howl({
-      src: ["https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/audio/ambient.mp3"],
+      src: [AmbientBGM],
       loop: true,
+      volume: 2.5,
     });
     sound.play();
   }

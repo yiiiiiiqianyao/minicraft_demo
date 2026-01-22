@@ -1,7 +1,10 @@
 import './index.scss';
+import ToolBarBg from '@/assets/gui/toolbar.png'
+import ToolBarActive from '@/assets/gui/toolbar_active.png'
 
-const ToolBarBg = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar.png';
-const ToolBarActive = 'https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/gui/toolbar_active.png';
+/**
+ * @desc 工具栏 UI 组件
+ */
 export const ToolBar = () => {
     return <div id="toolbar">
         <img id="toolbar-bg" src={ToolBarBg} />

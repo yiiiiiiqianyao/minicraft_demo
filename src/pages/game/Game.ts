@@ -41,7 +41,7 @@ export default class Game {
       this.initScene();
       // this.initListeners();
       window.addEventListener("resize", this.onWindowResize.bind(this), false);
-      audioManager.playBtm();
+      audioManager.playBGM();
     });
   }
 

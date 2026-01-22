@@ -78,7 +78,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/dirt.png");
+    url("../assets/textures/dirt.png");
   background-repeat: repeat;
   background-size: 64px 64px;
   image-rendering: pixelated;
@@ -119,7 +119,7 @@ body {
   white-space: nowrap;
   user-select: none;
 
-  background: #999 url("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/bgbtn.png") center / cover;
+  background: #999 url("../assets/gui/bgbtn.png") center / cover;
   image-rendering: pixelated;
   border: 2px solid #000;
 
