@@ -1,3 +1,4 @@
+// @ts-ignore
 export enum Layers {
     /**@desc 主相机图层 */
     Zero = 0,

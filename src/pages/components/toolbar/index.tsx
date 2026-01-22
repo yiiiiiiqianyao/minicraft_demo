@@ -1,6 +1,6 @@
 import './index.scss';
-import ToolBarBg from '@/assets/gui/toolbar.png'
-import ToolBarActive from '@/assets/gui/toolbar_active.png'
+import ToolBarBg from '../../../assets/gui/toolbar.png'
+import ToolBarActive from '../../../assets/gui/toolbar_active.png'
 
 /**
  * @desc 工具栏 UI 组件

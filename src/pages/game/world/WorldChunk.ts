@@ -1,10 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
-import { RenderGeometry } from "../Block/base/Block";
 import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
-import { IWorldParams, IInstanceData } from "./interface";
 import { generateChunk } from "./generate";
 import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
@@ -13,6 +12,7 @@ import { DevControl } from "../dev";
 import { wireframeMaterial } from "../engine/material";
 import { InstanceMeshAdd } from "./chunk/instance";
 import { getInstancedGeometry } from "../engine/geometry";
+import type { IInstanceData, IWorldParams } from "./interface";
 
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];

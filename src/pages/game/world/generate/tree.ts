@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { World } from "../World";
-import { IWorldParams } from "../interface";
+import type { IWorldParams } from "../interface";
 import { ChunkParams } from "../chunk/literal";
 
 /**

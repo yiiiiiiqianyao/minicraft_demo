@@ -3,9 +3,7 @@ import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/base/BlockFactory";
 import { LightSourceBlock } from "../Block/blocks/LightSourceBlock";
 import { DataStore } from "./DataStore";
-import { Player } from "../player/Player";
 import { WorldChunk } from "./WorldChunk";
-import { IWorldParams } from "./interface";
 import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
 import { ToolBar, updateProgressGUI } from "../gui";
@@ -14,6 +12,7 @@ import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
+import type { IWorldParams } from "./interface";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -47,14 +46,14 @@ export class World extends THREE.Group {
   /**
    * Clears existing world data and re-generates everything
    */
-  regenerate(player: Player) {
+  regenerate() {
     this.children.forEach((chunk) => {
       if (chunk instanceof WorldChunk) {
         chunk.disposeChildren();
       }
     });
     this.clear();
-    this.update(player);
+    this.update();
   }
 
   getBlockKey(x: number, y: number, z: number) {
@@ -68,7 +67,7 @@ export class World extends THREE.Group {
   /**
    * Updates the visible portions of the world based on the current player position
    */
-  update(player: Player) {
+  update() {
     const visibleChunks = this.getVisibleChunks();
     const chunksToAdd = this.getChunksToAdd(visibleChunks);
     this.removeUnusedChunks(visibleChunks);

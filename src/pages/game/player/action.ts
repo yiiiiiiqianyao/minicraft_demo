@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { Player } from "./Player";
-import { PlayerEventKey } from "./interface";
+import type { PlayerEventKey } from "./interface";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { World } from "../world/World";
 import { KeyboardInput } from "./keyboard";

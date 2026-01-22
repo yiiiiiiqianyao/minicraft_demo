@@ -1,12 +1,12 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
-import { IWorldParams } from "../interface";
 import { generateTerrain } from "./terrain";
 import { generateResources } from "./resource";
 import { generateTrees } from "./tree";
 import { generateTallGrass } from "./tallGrass";
 import { generateFlowers } from "./flower";
 import { ChunkParams } from "../chunk/literal";
+import type { IWorldParams } from "../interface";
 
 const initEmptyChunk = () => {
   const { width, height } = ChunkParams;

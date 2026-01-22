@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { ChunkParams } from "../world/chunk/literal";
 import { PlayerParams } from "../player/literal";
 import { World } from "../world/World";
-import { IChunkKey } from "../player/interface";
+import type { IChunkKey } from "../player/interface";
 import { DevControl, updateChunkCoordGUI } from "../dev";
 
 function initChunkHelper() {

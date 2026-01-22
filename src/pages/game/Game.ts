@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { createUI, initMainMenu, swapMenuScreenGUI, ToolBar } from "./gui";
+import { createUI, initMainMenu, swapMenuScreenGUI } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
@@ -118,7 +118,7 @@ export default class Game {
     this.physics.update(deltaTime);
 
     // 更新世界 chunk
-    this.world.update(this.player);
+    this.world.update();
 
     // update triangle count
     updateRenderInfoGUI(this.renderer);

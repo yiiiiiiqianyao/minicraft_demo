@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { World } from "../World";
-import { IWorldParams } from "../interface";
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
+import type { IWorldParams } from "../interface";
 
 /**
  * Generates the terrain data

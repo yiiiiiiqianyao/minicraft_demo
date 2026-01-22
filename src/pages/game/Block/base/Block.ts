@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { BlockID } from "..";
 
 // 渲染的几何形状类型
+// @ts-ignore
 export enum RenderGeometry {
   Cube,
   // TODO Cross => TallGrass

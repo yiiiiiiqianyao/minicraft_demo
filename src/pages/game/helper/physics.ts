@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { collisionHelperMaterial } from "../engine/material";
-import { Candidate } from "../physics/interface";
+import type { Candidate } from "../physics/interface";
 
 export class PhysicsHelper extends THREE.Group {
   constructor() {

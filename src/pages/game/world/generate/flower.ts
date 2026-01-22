@@ -1,6 +1,6 @@
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
-import { IWorldParams } from "../interface";
+import type { IWorldParams } from "../interface";
 import { World } from "../World";
 
 /**

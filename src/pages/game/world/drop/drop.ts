@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { BlockID, blockIDValues } from "../../Block";
 import { BlockFactory } from "../../Block/base/BlockFactory";
-import { IDrop } from "./interface";
+import type { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
 import { jitterNumber } from "../../utils";
 import { DropDt, DropLimit, MaxCount } from "./literal";

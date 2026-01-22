@@ -1,3 +1,4 @@
+// @ts-ignore
 export enum MeshType {
     /**@desc 模拟的“手” 默认 */
     Hand = 'Hand',

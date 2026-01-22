@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from "./interface";
+import type { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from "./interface";
 import { Player } from "./Player";
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);

@@ -3,9 +3,9 @@ import { sample } from "lodash";
 import soundData from "./sounds.json";
 import spriteData from "./sprite.json";
 import { BlockID } from "../Block";
-import SpriteWebm from "@/assets/audio/sprite.webm";
-import SpriteMp3 from "@/assets/audio/sprite.mp3";
-import AmbientBGM from "@/assets/audio/ambient.mp3";
+import SpriteWebm from "../../../assets/audio/sprite.webm";
+import SpriteMp3 from "../../../assets/audio/sprite.mp3";
+import AmbientBGM from "../../../assets/audio/ambient.mp3";
 
 class AudioManager {
   sprite: Howl;
