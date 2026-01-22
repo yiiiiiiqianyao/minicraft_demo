@@ -44,7 +44,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -57,7 +57,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -106,29 +106,7 @@
         "hooks": {
           "modifyRoutes": [
             0,
-            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -155,43 +133,20 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            21,
-            2,
-            5,
-            8,
+            26,
             3,
-            5,
-            8,
-            3,
-            6,
-            5,
+            9,
+            4,
+            4,
+            4,
             4,
             8,
-            7,
-            6,
-            7,
-            12,
-            2,
-            6,
-            3,
-            3,
-            6,
-            2,
-            2,
-            2,
-            6,
-            3,
-            2,
-            3,
-            3,
-            3,
-            3,
-            2,
             5,
-            8,
-            2,
-            6,
-            3
+            3,
+            4,
+            3,
+            5,
+            10
           ]
         },
         "register": 1
@@ -208,46 +163,24 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            125
+            123
           ],
           "onGenerateFiles": [
-            1,
-            6,
-            7,
-            4,
-            6,
-            7,
-            4,
-            5,
-            6,
-            14,
-            14,
-            8,
-            8,
-            18,
+            2,
             8,
             6,
-            6,
-            5,
-            5,
-            6,
             7,
-            15,
-            6,
-            5,
+            7,
+            7,
             8,
-            5,
-            5,
-            6,
-            13,
             7,
             7,
-            6,
-            6,
-            6
+            9,
+            9,
+            7
           ]
         },
-        "register": 17
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -261,28 +194,6 @@
       "time": {
         "hooks": {
           "addEntryCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -330,54 +241,13 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onCheckCode": [
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -420,7 +290,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -433,7 +303,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -450,7 +320,7 @@
             0
           ]
         },
-        "register": 10
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -1303,7 +1173,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1334,7 +1204,7 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            6
+            7
           ]
         },
         "register": 1
@@ -1350,7 +1220,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 51
+        "register": 57
       },
       "enableBy": "register"
     },
@@ -1420,84 +1290,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -1515,39 +1307,17 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
-            1,
-            0,
-            1,
+            2,
             1,
             0,
-            1,
-            1,
+            0,
+            0,
             0,
             0,
             1,
             2,
             1,
             0,
-            0,
-            1,
-            1,
-            0,
-            2,
-            0,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
             1
           ],
           "addRuntimePlugin": [
@@ -1562,32 +1332,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1614,13 +1362,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 22
+        "register": 25
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1632,7 +1380,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1669,75 +1417,9 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addEntryImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1777,7 +1459,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1794,86 +1476,20 @@
             2
           ],
           "onGenerateFiles": [
-            46,
-            10,
-            9,
-            8,
-            7,
-            12,
-            7,
-            10,
-            10,
+            53,
+            33,
+            18,
+            24,
             11,
             12,
-            14,
-            24,
-            9,
             17,
-            8,
-            15,
-            8,
-            7,
-            12,
-            8,
-            34,
-            13,
-            8,
-            8,
-            8,
-            7,
-            16,
-            31,
-            8,
-            8,
             9,
-            7,
-            9
+            12,
+            10,
+            13,
+            12
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1900,7 +1516,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1913,50 +1529,6 @@
       "time": {
         "hooks": {
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1997,29 +1569,7 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            93,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
+            80,
             0,
             0,
             0,
@@ -2046,7 +1596,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2059,7 +1609,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2074,45 +1624,23 @@
         "hooks": {
           "onGenerateFiles": [
             1,
-            1,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
             1,
             0,
             0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             1,
-            1,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2126,77 +1654,33 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            15,
-            4,
-            59,
+            14,
+            3,
+            107,
+            5,
+            67,
             1,
+            92,
+            3,
             60,
             2,
-            60,
-            1,
-            78,
-            3,
-            65,
-            1,
-            58,
-            1,
-            63,
-            1,
-            59,
-            1,
-            71,
-            1,
-            76,
-            1,
             69,
             3,
-            104,
-            1,
-            50,
-            1,
-            56,
+            71,
+            2,
+            66,
+            2,
+            65,
             1,
             64,
-            1,
-            66,
             2,
-            59,
-            1,
-            54,
-            1,
-            54,
-            1,
-            54,
-            1,
-            66,
-            1,
-            59,
-            5,
-            53,
-            1,
-            55,
+            65,
             2,
-            55,
-            2,
-            53,
-            1,
-            57,
-            2,
-            115,
-            2,
-            67,
-            2,
-            56,
-            1,
-            58,
-            1,
-            61,
-            1,
-            68,
+            50,
             1
           ]
         },
-        "register": 5
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -2209,7 +1693,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2228,41 +1712,19 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
             1,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             0
           ],
           "onBeforeCompiler": [
-            1
+            2
           ]
         },
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -2288,39 +1750,17 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            220,
-            8,
-            6,
+            238,
+            31,
+            7,
             5,
-            8,
-            8,
-            5,
-            5,
-            6,
-            5,
-            5,
-            5,
-            5,
-            4,
-            6,
-            6,
-            5,
-            4,
-            6,
-            5,
-            5,
-            5,
-            5,
-            6,
-            5,
-            6,
-            4,
-            4,
             7,
             6,
+            6,
             5,
-            4,
-            4,
+            6,
+            10,
+            5,
             4
           ]
         },
@@ -2380,7 +1820,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -2392,7 +1832,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 16
       },
       "enableBy": "config"
     },
@@ -2406,43 +1846,21 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            4,
+            2,
+            2,
+            1,
+            1,
+            1,
             1,
             1,
             0,
             1,
             0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             1
           ]
         },
-        "register": 1
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -2454,7 +1872,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2467,7 +1885,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2480,7 +1898,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2534,7 +1952,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2547,7 +1965,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -2571,7 +1989,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 16
+        "register": 17
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/features/forget/forget": {
@@ -2583,7 +2001,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2597,10 +2015,10 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            539
+            565
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2626,7 +2044,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 25
+        "register": 27
       },
       "enableBy": "register"
     },
@@ -2640,10 +2058,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            9
+            8
           ]
         },
-        "register": 45
+        "register": 47
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.18_ewpwhvmx6jhfrtpdxnr73zvpqi/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2668,7 +2086,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2681,7 +2099,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2720,7 +2138,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2733,7 +2151,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2746,7 +2164,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2759,7 +2177,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2772,7 +2190,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2824,7 +2242,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2837,7 +2255,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2850,7 +2268,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2889,7 +2307,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -2928,7 +2346,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     }
@@ -3320,7 +2738,7 @@
       "id": "game/audio/AudioManager",
       "file": "game/audio/AudioManager.ts",
       "absPath": "/game/audio/AudioManager",
-      "__content": "import { Howl } from \"howler\";\nimport { sample } from \"lodash\";\nimport soundData from \"./sounds.json\";\nimport spriteData from \"./sprite.json\";\nimport { BlockID } from \"../Block\";\nimport SpriteWebm from \"@/assets/audio/sprite.webm\";\nimport SpriteMp3 from \"@/assets/audio/sprite.mp3\";\nimport AmbientBGM from \"@/assets/audio/ambient.mp3\";\n\nclass AudioManager {\n  sprite: Howl;\n\n  constructor() {\n    this.sprite = this.loadSounds();\n  }\n\n  loadSounds() {\n    return new Howl({\n      src: [\n        SpriteWebm, \n        SpriteMp3\n      ],\n      sprite: spriteData.sprite as any,\n      volume: 0.6,\n    });\n  }\n\n  play(name: string) {\n    if (!(name in soundData)) {\n      console.warn(`Unknown sound: ${name}`);\n      return;\n    }\n\n    // dig and step sounds have same names and need to be differentiated\n    const prefix = name.split(\".\")[0] === \"dig\" ? \"dig_\" : \"\";\n\n    // eslint-disable-next-line @typescript-eslint/ban-ts-comment\n    // @ts-ignore\n    const options = soundData[name][\"sounds\"];\n    const soundName = prefix + sample<string>(options).split(\"/\").pop();\n    this.sprite.play(soundName);\n  }\n\n  playBGM() {\n     const sound = new Howl({\n      src: [AmbientBGM],\n      loop: true,\n      volume: 1.5,\n    });\n    sound.play();\n  }\n\n  playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        this.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        this.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        this.play(\"step.stone\");\n        break;\n    }\n  }\n}\n\nconst audioManager = new AudioManager();\nexport default audioManager;\n",
+      "__content": "import { Howl } from \"howler\";\nimport { sample } from \"lodash\";\nimport soundData from \"./sounds.json\";\nimport spriteData from \"./sprite.json\";\nimport { BlockID } from \"../Block\";\nimport SpriteWebm from \"@/assets/audio/sprite.webm\";\nimport SpriteMp3 from \"@/assets/audio/sprite.mp3\";\nimport AmbientBGM from \"@/assets/audio/ambient.mp3\";\n\nclass AudioManager {\n  sprite: Howl;\n\n  constructor() {\n    this.sprite = this.loadSounds();\n  }\n\n  loadSounds() {\n    return new Howl({\n      src: [\n        SpriteWebm, \n        SpriteMp3\n      ],\n      sprite: spriteData.sprite as any,\n      volume: 0.6,\n    });\n  }\n\n  play(name: string) {\n    if (!(name in soundData)) {\n      console.warn(`Unknown sound: ${name}`);\n      return;\n    }\n\n    // dig and step sounds have same names and need to be differentiated\n    const prefix = name.split(\".\")[0] === \"dig\" ? \"dig_\" : \"\";\n\n    // eslint-disable-next-line @typescript-eslint/ban-ts-comment\n    // @ts-ignore\n    const options = soundData[name][\"sounds\"];\n    const soundName = prefix + sample<string>(options).split(\"/\").pop();\n    this.sprite.play(soundName);\n  }\n\n  playBGM() {\n     const sound = new Howl({\n      src: [AmbientBGM],\n      loop: true,\n      volume: 2.5,\n    });\n    sound.play();\n  }\n\n  playWalkSound(blockUnderneath: BlockID) {\n    switch (blockUnderneath) {\n      case BlockID.Grass:\n      case BlockID.Dirt:\n      case BlockID.Leaves:\n        this.play(\"step.grass\");\n        break;\n      case BlockID.OakLog:\n        this.play(\"step.wood\");\n        break;\n      case BlockID.Stone:\n      case BlockID.CoalOre:\n      case BlockID.IronOre:\n      case BlockID.Bedrock:\n        this.play(\"step.stone\");\n        break;\n    }\n  }\n}\n\nconst audioManager = new AudioManager();\nexport default audioManager;\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/audio/AudioManager.ts"
     },
@@ -3518,7 +2936,7 @@
       "id": "game/Block/textures",
       "file": "game/Block/textures.ts",
       "absPath": "/game/Block/textures",
-      "__content": "import * as THREE from \"three\";\n\nconst textureLoader = new THREE.TextureLoader();\n\nfunction loadTexture(path: string) {\n  // TODO: make async\n  const texture = textureLoader.load(path);\n  texture.colorSpace = THREE.SRGBColorSpace;\n  texture.minFilter = THREE.NearestMipmapNearestFilter;\n  texture.magFilter = THREE.NearestFilter;\n  texture.generateMipmaps = true;\n  return texture;\n}\n\n// https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png\nexport const textures = {\n  grassSide: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass_side.png\"),\n  grassTop: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass.png\"),\n  dirt: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/dirt.png\"),\n  stone: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stone.png\"),\n  coal: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_ore.png\"),\n  iron: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_ore.png\"),\n  bedrock: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock.png\"),\n  oakLogSide: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_side.png\"),\n  oakLogTop: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_top.png\"),\n  leaves: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/leaves.png\"),\n  tallGrass: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/tall_grass.png\"),\n  flowerRose: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_rose.png\"),\n  flowerDandelion: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_dandelion.png\"),\n  redstoneLamp: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp.png\"),\n  stoneBrick: loadTexture(\"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick.png\"),\n};\n\nexport const uiTextures = {\n  grass: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass_block.png\",\n  dirt: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/dirt_block.png\",\n  stone: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stone_block.png\",\n  coal: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_block.png\",\n  iron: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_block.png\",\n  bedrock: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png\",\n  oakLog: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_block.png\",\n  leaves: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/leaves_block.png\",\n  tallGrass: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/tall_grass_block.png\",\n  flowerRose: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_rose.png\",\n  flowerDandelion: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_dandelion.png\",\n  redstoneLamp: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp_block.png\",\n  stoneBrick: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick_block.png\",\n};\n",
+      "__content": "import { loadTexture } from \"../engine/utils\";\nimport GrassSide from '@/assets/textures/grass_side.png';\nimport GrassTop from '@/assets/textures/grass.png';\nimport Dirt from '@/assets/textures/dirt.png';\nimport Stone from '@/assets/textures/stone.png';\nimport CoalOre from '@/assets/textures/coal_ore.png';\nimport IronOre from '@/assets/textures/iron_ore.png';\nimport BedRock from '@/assets/textures/bedrock.png';\n\nimport OakLogSide from '@/assets/textures/oak_log_side.png';\nimport OakLogTop from '@/assets/textures/oak_log_top.png';\nimport Leaves from '@/assets/textures/leaves.png';\nimport TallGrass from '@/assets/textures/tall_grass.png';\nimport FlowerRose from '@/assets/textures/flower_rose.png';\nimport FlowerDandelion from '@/assets/textures/flower_dandelion.png';\n\nimport RedStoneLamp from '@/assets/textures/redstone_lamp.png';\nimport StoneBrick from '@/assets/textures/stonebrick.png';\n\n/**@desc for block texture */\nexport const textures = {\n  grassSide: loadTexture(GrassSide),\n  grassTop: loadTexture(GrassTop),\n  dirt: loadTexture(Dirt),\n  stone: loadTexture(Stone),\n  coal: loadTexture(CoalOre),\n  iron: loadTexture(IronOre),\n  bedrock: loadTexture(BedRock),\n  oakLogSide: loadTexture(OakLogSide),\n  oakLogTop: loadTexture(OakLogTop),\n  leaves: loadTexture(Leaves),\n  tallGrass: loadTexture(TallGrass),\n  flowerRose: loadTexture(FlowerRose),\n  flowerDandelion: loadTexture(FlowerDandelion),\n  redstoneLamp: loadTexture(RedStoneLamp),\n  stoneBrick: loadTexture(StoneBrick),\n};\n\nimport GrassBlock from '@/assets/textures/grass_block.png';\nimport DirtBlock from '@/assets/textures/dirt_block.png';\nimport StoneBlock from '@/assets/textures/stone_block.png';\nimport LeavesBlock from '@/assets/textures/leaves_block.png';\nimport TallGrassBlock from '@/assets/textures/tall_grass_block.png';\nimport FlowerRoseBlock from '@/assets/textures/flower_rose.png';\nimport FlowerDandelionBlock from '@/assets/textures/flower_dandelion.png';\n/**@desc for ui */\nexport const uiTextures = {\n  grass: GrassBlock,\n  dirt: DirtBlock,\n  stone: StoneBlock,\n  coal: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_block.png\",\n  iron: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_block.png\",\n  bedrock: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png\",\n  oakLog: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_block.png\",\n  leaves: LeavesBlock,\n  tallGrass: TallGrassBlock,\n  flowerRose: FlowerRoseBlock,\n  flowerDandelion: FlowerDandelionBlock,\n  redstoneLamp: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp_block.png\",\n  stoneBrick: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick_block.png\",\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/textures.ts"
     },
@@ -3626,7 +3044,7 @@
       "id": "game/engine/utils",
       "file": "game/engine/utils.ts",
       "absPath": "/game/engine/utils",
-      "__content": "import * as THREE from \"three\";\n\nexport function getFloorVec3(vec3: THREE.Vector3) {\n    return new THREE.Vector3(\n        Math.floor(vec3.x),\n        Math.floor(vec3.y),\n        Math.floor(vec3.z)\n    )\n}\n\nexport function getFloorXYZ(x: number, y: number, z: number) {\n    return [\n        Math.floor(x),\n        Math.floor(y),\n        Math.floor(z),\n    ]\n}",
+      "__content": "import * as THREE from \"three\";\n\nexport function getFloorVec3(vec3: THREE.Vector3) {\n    return new THREE.Vector3(\n        Math.floor(vec3.x),\n        Math.floor(vec3.y),\n        Math.floor(vec3.z)\n    )\n}\n\nexport function getFloorXYZ(x: number, y: number, z: number) {\n    return [\n        Math.floor(x),\n        Math.floor(y),\n        Math.floor(z),\n    ]\n}\n\n\n// TODO: make async\nlet textureLoader: THREE.TextureLoader | null = null;\nexport function loadTexture(path: string) {\n    if(!textureLoader) {\n        textureLoader = new THREE.TextureLoader();\n    }\n    const texture = textureLoader.load(path);\n    texture.colorSpace = THREE.SRGBColorSpace;\n    texture.minFilter = THREE.NearestMipmapNearestFilter;\n    texture.magFilter = THREE.NearestFilter;\n    texture.generateMipmaps = true;\n    return texture;\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/utils.ts"
     },
@@ -4972,11 +4390,162 @@
             ],
             "format": "esm"
           },
-          "src/pages/game/Block/textures.ts": {
-            "bytes": 4015,
+          "src/pages/game/engine/utils.ts": {
+            "bytes": 815,
             "imports": [
               {
                 "path": "three",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/game/Block/textures.ts": {
+            "bytes": 2732,
+            "imports": [
+              {
+                "path": "src/pages/game/engine/utils.ts",
+                "kind": "import-statement",
+                "original": "../engine/utils"
+              },
+              {
+                "path": "@/assets/textures/grass_side.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/grass.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/dirt.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stone.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/coal_ore.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/iron_ore.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/bedrock.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_side.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_top.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/leaves.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/tall_grass.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_rose.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_dandelion.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/redstone_lamp.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stonebrick.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/grass_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/dirt_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stone_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/coal_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/iron_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/bedrock_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/leaves_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/tall_grass_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_rose.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_dandelion.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/redstone_lamp_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stonebrick_block.png",
                 "kind": "import-statement",
                 "external": true
               }
@@ -5766,17 +5335,6 @@
                 "path": "src/pages/game/world/chunk/literal.ts",
                 "kind": "import-statement",
                 "original": "./literal"
-              }
-            ],
-            "format": "esm"
-          },
-          "src/pages/game/engine/utils.ts": {
-            "bytes": 359,
-            "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
               }
             ],
             "format": "esm"
@@ -8031,6 +7589,146 @@
                 "external": true
               },
               {
+                "path": "@/assets/textures/grass_side.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/grass.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/dirt.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stone.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/coal_ore.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/iron_ore.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/bedrock.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_side.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_top.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/leaves.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/tall_grass.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_rose.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_dandelion.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/redstone_lamp.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stonebrick.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/grass_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/dirt_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stone_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/coal_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/iron_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/bedrock_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/oak_log_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/leaves_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/tall_grass_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_rose.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/flower_dandelion.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/redstone_lamp_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@/assets/textures/stonebrick_block.png",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "three",
                 "kind": "import-statement",
                 "external": true
@@ -8097,11 +7795,6 @@
               },
               {
                 "path": "lodash",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "three",
                 "kind": "import-statement",
                 "external": true
               },
@@ -9502,8 +9195,11 @@
               "src/pages/game/Block/base/Block.ts": {
                 "bytesInOutput": 573
               },
+              "src/pages/game/engine/utils.ts": {
+                "bytesInOutput": 912
+              },
               "src/pages/game/Block/textures.ts": {
-                "bytesInOutput": 4227
+                "bytesInOutput": 2988
               },
               "src/pages/game/Block/constant.ts": {
                 "bytesInOutput": 1903
@@ -9542,7 +9238,7 @@
                 "bytesInOutput": 1220
               },
               "src/pages/game/utils/index.ts": {
-                "bytesInOutput": 461
+                "bytesInOutput": 464
               },
               "src/pages/game/world/drop/literal.ts": {
                 "bytesInOutput": 422
@@ -9587,7 +9283,7 @@
                 "bytesInOutput": 940
               },
               "src/pages/game/world/drop/drop.ts": {
-                "bytesInOutput": 7786
+                "bytesInOutput": 7787
               },
               "src/pages/game/helper/chunkHelper.ts": {
                 "bytesInOutput": 2253
@@ -9599,7 +9295,7 @@
                 "bytesInOutput": 2171
               },
               "src/pages/game/world/chunk/instance.ts": {
-                "bytesInOutput": 2083
+                "bytesInOutput": 2084
               },
               "src/pages/game/world/WorldChunk.ts": {
                 "bytesInOutput": 11797
@@ -9613,35 +9309,32 @@
               "src/pages/game/world/chunk/utils.ts": {
                 "bytesInOutput": 1896
               },
-              "src/pages/game/engine/utils.ts": {
-                "bytesInOutput": 494
-              },
               "src/pages/game/world/World.ts": {
-                "bytesInOutput": 10127
+                "bytesInOutput": 10126
               },
               "src/pages/game/world/generate/resource.ts": {
                 "bytesInOutput": 1259
               },
               "src/pages/game/Block/blocks/CoalOreBlock.ts": {
-                "bytesInOutput": 805
+                "bytesInOutput": 808
               },
               "src/pages/game/Block/blocks/DirtBlock.ts": {
-                "bytesInOutput": 540
+                "bytesInOutput": 543
               },
               "src/pages/game/Block/blocks/FlowerRoseBlock.ts": {
-                "bytesInOutput": 602
+                "bytesInOutput": 605
               },
               "src/pages/game/Block/blocks/GrassBlock.ts": {
-                "bytesInOutput": 555
+                "bytesInOutput": 558
               },
               "src/pages/game/Block/blocks/IronOreBlock.ts": {
-                "bytesInOutput": 696
+                "bytesInOutput": 699
               },
               "src/pages/game/Block/blocks/LeavesBlock.ts": {
-                "bytesInOutput": 556
+                "bytesInOutput": 559
               },
               "src/pages/game/Block/blocks/OakLogBlock.ts": {
-                "bytesInOutput": 1062
+                "bytesInOutput": 1065
               },
               "src/pages/game/Block/blocks/LightSourceBlock.ts": {
                 "bytesInOutput": 329
@@ -9650,22 +9343,22 @@
                 "bytesInOutput": 908
               },
               "src/pages/game/Block/blocks/StoneBlock.ts": {
-                "bytesInOutput": 652
+                "bytesInOutput": 655
               },
               "src/pages/game/Block/blocks/StoneBrickBlock.ts": {
-                "bytesInOutput": 733
+                "bytesInOutput": 736
               },
               "src/pages/game/Block/blocks/TallGrassBlock.ts": {
-                "bytesInOutput": 590
+                "bytesInOutput": 593
               },
               "src/pages/game/Block/base/BlockFactory.ts": {
-                "bytesInOutput": 1777
+                "bytesInOutput": 1788
               },
               "src/pages/game/Block/index.ts": {
                 "bytesInOutput": 327
               },
               "src/pages/game/Block/blocks/FlowerDandelionBlock.ts": {
-                "bytesInOutput": 657
+                "bytesInOutput": 660
               },
               "src/pages/game/helper/playerBoundHelper.ts": {
                 "bytesInOutput": 796
@@ -9731,7 +9424,7 @@
                 "bytesInOutput": 1171
               },
               "src/pages/game/player/utils.ts": {
-                "bytesInOutput": 691
+                "bytesInOutput": 690
               },
               "src/pages/game/player/selector.ts": {
                 "bytesInOutput": 3695
@@ -9809,7 +9502,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 212640
+            "bytes": 211866
           }
         }
       }
@@ -13484,16 +13177,381 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/textures.ts": [
         {
-          "end": 32,
+          "end": 47,
           "importKind": "value",
-          "source": "three",
+          "source": "../engine/utils",
           "specifiers": [
             {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
+              "imported": "loadTexture",
+              "local": "loadTexture",
+              "type": "ImportSpecifier"
             }
           ],
           "start": 1,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 105,
+          "importKind": "value",
+          "source": "@/assets/textures/grass_side.png",
+          "specifiers": [
+            {
+              "local": "GrassSide",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 48,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 157,
+          "importKind": "value",
+          "source": "@/assets/textures/grass.png",
+          "specifiers": [
+            {
+              "local": "GrassTop",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 106,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 204,
+          "importKind": "value",
+          "source": "@/assets/textures/dirt.png",
+          "specifiers": [
+            {
+              "local": "Dirt",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 158,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 253,
+          "importKind": "value",
+          "source": "@/assets/textures/stone.png",
+          "specifiers": [
+            {
+              "local": "Stone",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 205,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 307,
+          "importKind": "value",
+          "source": "@/assets/textures/coal_ore.png",
+          "specifiers": [
+            {
+              "local": "CoalOre",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 254,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 361,
+          "importKind": "value",
+          "source": "@/assets/textures/iron_ore.png",
+          "specifiers": [
+            {
+              "local": "IronOre",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 308,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 414,
+          "importKind": "value",
+          "source": "@/assets/textures/bedrock.png",
+          "specifiers": [
+            {
+              "local": "BedRock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 362,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 476,
+          "importKind": "value",
+          "source": "@/assets/textures/oak_log_side.png",
+          "specifiers": [
+            {
+              "local": "OakLogSide",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 416,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 535,
+          "importKind": "value",
+          "source": "@/assets/textures/oak_log_top.png",
+          "specifiers": [
+            {
+              "local": "OakLogTop",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 477,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 586,
+          "importKind": "value",
+          "source": "@/assets/textures/leaves.png",
+          "specifiers": [
+            {
+              "local": "Leaves",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 536,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 644,
+          "importKind": "value",
+          "source": "@/assets/textures/tall_grass.png",
+          "specifiers": [
+            {
+              "local": "TallGrass",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 587,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 704,
+          "importKind": "value",
+          "source": "@/assets/textures/flower_rose.png",
+          "specifiers": [
+            {
+              "local": "FlowerRose",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 645,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 774,
+          "importKind": "value",
+          "source": "@/assets/textures/flower_dandelion.png",
+          "specifiers": [
+            {
+              "local": "FlowerDandelion",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 705,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 839,
+          "importKind": "value",
+          "source": "@/assets/textures/redstone_lamp.png",
+          "specifiers": [
+            {
+              "local": "RedStoneLamp",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 776,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 898,
+          "importKind": "value",
+          "source": "@/assets/textures/stonebrick.png",
+          "specifiers": [
+            {
+              "local": "StoneBrick",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 840,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1554,
+          "importKind": "value",
+          "source": "@/assets/textures/grass_block.png",
+          "specifiers": [
+            {
+              "local": "GrassBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1495,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1612,
+          "importKind": "value",
+          "source": "@/assets/textures/dirt_block.png",
+          "specifiers": [
+            {
+              "local": "DirtBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1555,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1672,
+          "importKind": "value",
+          "source": "@/assets/textures/stone_block.png",
+          "specifiers": [
+            {
+              "local": "StoneBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1613,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1733,
+          "importKind": "value",
+          "source": "@/assets/textures/coal_block.png",
+          "specifiers": [
+            {
+              "local": "CoalOreBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1673,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1794,
+          "importKind": "value",
+          "source": "@/assets/textures/iron_block.png",
+          "specifiers": [
+            {
+              "local": "IronOreBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1734,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1858,
+          "importKind": "value",
+          "source": "@/assets/textures/bedrock_block.png",
+          "specifiers": [
+            {
+              "local": "BedRockBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1795,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1921,
+          "importKind": "value",
+          "source": "@/assets/textures/oak_log_block.png",
+          "specifiers": [
+            {
+              "local": "OakLogBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1859,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 1984,
+          "importKind": "value",
+          "source": "@/assets/textures/leaves_block.png",
+          "specifiers": [
+            {
+              "local": "LeavesBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1923,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 2053,
+          "importKind": "value",
+          "source": "@/assets/textures/tall_grass_block.png",
+          "specifiers": [
+            {
+              "local": "TallGrassBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 1985,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 2118,
+          "importKind": "value",
+          "source": "@/assets/textures/flower_rose.png",
+          "specifiers": [
+            {
+              "local": "FlowerRoseBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 2054,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 2193,
+          "importKind": "value",
+          "source": "@/assets/textures/flower_dandelion.png",
+          "specifiers": [
+            {
+              "local": "FlowerDandelionBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 2119,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 2269,
+          "importKind": "value",
+          "source": "@/assets/textures/redstone_lamp_block.png",
+          "specifiers": [
+            {
+              "local": "RedStoneLampBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 2195,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 2339,
+          "importKind": "value",
+          "source": "@/assets/textures/stonebrick_block.png",
+          "specifiers": [
+            {
+              "local": "StoneBrickBlock",
+              "type": "ImportDefaultSpecifier"
+            }
+          ],
+          "start": 2270,
           "type": "ImportDeclaration"
         }
       ],

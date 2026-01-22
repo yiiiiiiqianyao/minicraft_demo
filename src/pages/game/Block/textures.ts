@@ -1,48 +1,69 @@
-import * as THREE from "three";
+import { loadTexture } from "../engine/utils";
+import GrassSide from '@/assets/textures/grass_side.png';
+import GrassTop from '@/assets/textures/grass.png';
+import Dirt from '@/assets/textures/dirt.png';
+import Stone from '@/assets/textures/stone.png';
+import CoalOre from '@/assets/textures/coal_ore.png';
+import IronOre from '@/assets/textures/iron_ore.png';
+import BedRock from '@/assets/textures/bedrock.png';
 
-const textureLoader = new THREE.TextureLoader();
+import OakLogSide from '@/assets/textures/oak_log_side.png';
+import OakLogTop from '@/assets/textures/oak_log_top.png';
+import Leaves from '@/assets/textures/leaves.png';
+import TallGrass from '@/assets/textures/tall_grass.png';
+import FlowerRose from '@/assets/textures/flower_rose.png';
+import FlowerDandelion from '@/assets/textures/flower_dandelion.png';
 
-function loadTexture(path: string) {
-  // TODO: make async
-  const texture = textureLoader.load(path);
-  texture.colorSpace = THREE.SRGBColorSpace;
-  texture.minFilter = THREE.NearestMipmapNearestFilter;
-  texture.magFilter = THREE.NearestFilter;
-  texture.generateMipmaps = true;
-  return texture;
-}
+import RedStoneLamp from '@/assets/textures/redstone_lamp.png';
+import StoneBrick from '@/assets/textures/stonebrick.png';
 
-// https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png
+/**@desc for block texture */
 export const textures = {
-  grassSide: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass_side.png"),
-  grassTop: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass.png"),
-  dirt: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/dirt.png"),
-  stone: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stone.png"),
-  coal: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_ore.png"),
-  iron: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_ore.png"),
-  bedrock: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock.png"),
-  oakLogSide: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_side.png"),
-  oakLogTop: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_top.png"),
-  leaves: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/leaves.png"),
-  tallGrass: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/tall_grass.png"),
-  flowerRose: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_rose.png"),
-  flowerDandelion: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_dandelion.png"),
-  redstoneLamp: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp.png"),
-  stoneBrick: loadTexture("https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick.png"),
+  grassSide: loadTexture(GrassSide),
+  grassTop: loadTexture(GrassTop),
+  dirt: loadTexture(Dirt),
+  stone: loadTexture(Stone),
+  coal: loadTexture(CoalOre),
+  iron: loadTexture(IronOre),
+  bedrock: loadTexture(BedRock),
+  oakLogSide: loadTexture(OakLogSide),
+  oakLogTop: loadTexture(OakLogTop),
+  leaves: loadTexture(Leaves),
+  tallGrass: loadTexture(TallGrass),
+  flowerRose: loadTexture(FlowerRose),
+  flowerDandelion: loadTexture(FlowerDandelion),
+  redstoneLamp: loadTexture(RedStoneLamp),
+  stoneBrick: loadTexture(StoneBrick),
 };
 
+import GrassBlock from '@/assets/textures/grass_block.png';
+import DirtBlock from '@/assets/textures/dirt_block.png';
+import StoneBlock from '@/assets/textures/stone_block.png';
+import CoalOreBlock from '@/assets/textures/coal_block.png';
+import IronOreBlock from '@/assets/textures/iron_block.png';
+import BedRockBlock from '@/assets/textures/bedrock_block.png';
+import OakLogBlock from '@/assets/textures/oak_log_block.png';
+
+import LeavesBlock from '@/assets/textures/leaves_block.png';
+import TallGrassBlock from '@/assets/textures/tall_grass_block.png';
+import FlowerRoseBlock from '@/assets/textures/flower_rose.png';
+import FlowerDandelionBlock from '@/assets/textures/flower_dandelion.png';
+
+import RedStoneLampBlock from '@/assets/textures/redstone_lamp_block.png';
+import StoneBrickBlock from '@/assets/textures/stonebrick_block.png';
+/**@desc for ui */
 export const uiTextures = {
-  grass: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/grass_block.png",
-  dirt: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/dirt_block.png",
-  stone: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stone_block.png",
-  coal: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_block.png",
-  iron: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_block.png",
-  bedrock: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png",
-  oakLog: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_block.png",
-  leaves: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/leaves_block.png",
-  tallGrass: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/tall_grass_block.png",
-  flowerRose: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_rose.png",
-  flowerDandelion: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/flower_dandelion.png",
-  redstoneLamp: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp_block.png",
-  stoneBrick: "https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick_block.png",
+  grass: GrassBlock,
+  dirt: DirtBlock,
+  stone: StoneBlock,
+  coal: CoalOreBlock,
+  iron: IronOreBlock,
+  bedrock: BedRockBlock,
+  oakLog: OakLogBlock,
+  leaves: LeavesBlock,
+  tallGrass: TallGrassBlock,
+  flowerRose: FlowerRoseBlock,
+  flowerDandelion: FlowerDandelionBlock,
+  redstoneLamp: RedStoneLampBlock,
+  stoneBrick: StoneBrickBlock,
 };

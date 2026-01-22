@@ -15,3 +15,18 @@ export function getFloorXYZ(x: number, y: number, z: number) {
         Math.floor(z),
     ]
 }
+
+
+// TODO: make async
+let textureLoader: THREE.TextureLoader | null = null;
+export function loadTexture(path: string) {
+    if(!textureLoader) {
+        textureLoader = new THREE.TextureLoader();
+    }
+    const texture = textureLoader.load(path);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.minFilter = THREE.NearestMipmapNearestFilter;
+    texture.magFilter = THREE.NearestFilter;
+    texture.generateMipmaps = true;
+    return texture;
+}
