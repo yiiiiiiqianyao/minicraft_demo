@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionMesh, initRoseMesh } from "./flower";
-import { initDirtBlockMesh, initGrassBlockMesh } from "./block";
+import { initDirtBlockMesh, initGrassBlockMesh, initStoneBlockMesh } from "./block";
 
 /**@desc 网格池 */
 export class MeshPool {
@@ -10,28 +10,21 @@ export class MeshPool {
         if (MeshPool.pool.get(type)) {
             return MeshPool.pool.get(type)!;
         }
-       
-        if (type === MeshType.Hand) {
-            const mesh = initHandMesh();
-            MeshPool.pool.set(type, mesh);
-            return mesh;
-        } else if (type === MeshType.GrassBlock) {
-            const mesh = initGrassBlockMesh();
-            MeshPool.pool.set(type, mesh);
-            return mesh;
+        // 默认设置为 Hand Mesh
+        let mesh: THREE.Mesh = initHandMesh();
+        if (type === MeshType.GrassBlock) {
+            mesh = initGrassBlockMesh();
         } else if (type === MeshType.FlowerRose) {
-            const mesh = initRoseMesh();
-            MeshPool.pool.set(type, mesh);
-            return mesh;
+            mesh = initRoseMesh();            
         } else if (type === MeshType.FlowerDandelion) {
-            const mesh = initDandelionMesh();
-            MeshPool.pool.set(type, mesh);
-            return mesh;
+            mesh = initDandelionMesh();
         } else if (type === MeshType.DirtBlock) {
-            const mesh = initDirtBlockMesh();
-            MeshPool.pool.set(type, mesh);
-            return mesh;
+            mesh = initDirtBlockMesh();
+        } else if(type === MeshType.StoneBlock) {
+            mesh = initStoneBlockMesh();
         }
+        MeshPool.pool.set(type, mesh);
+        return mesh;
     }
 }
 

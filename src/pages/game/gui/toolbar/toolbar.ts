@@ -26,7 +26,7 @@ export class ToolBar {
 
     /**@desc 往玩家物品栏中添加物品 */
     static pushBlockId(blockId: BlockID) {
-      // if (ToolBar.toolbar.includes(blockId)) return;
+      // TODO 待优化 目前一个格子只能放一个 后续除了工具之外的物品资源方块应该能重复放置
       if (ToolBar.toolbar.length > ToolBarMaxCount) return;
       for(let i = 0; i < ToolBar.toolbar.length; i++) {
         if(ToolBar.toolbar[i] === BlockID.Air) {
@@ -64,6 +64,8 @@ export class ToolBar {
         const index = ToolBar.activeToolbarIndex + 1 > 8 ? 0 : ToolBar.activeToolbarIndex + 1;
         ToolBar.setToolBarGUI(index);
       }
+      // 同时更新玩家手持物品
+      PlayerParams.playerInstance?.updateHand();
     }
 
     /**@desc 更新玩家物品栏中 block 对应的 ui */

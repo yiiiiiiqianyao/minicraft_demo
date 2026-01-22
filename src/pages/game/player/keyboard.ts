@@ -42,7 +42,6 @@ export class KeyboardInput {
       case "KeyZ":  // 左箭头
       case "KeyC":  // 右箭头
         ToolBar.scrollToolBarGUI(event.code);
-        this.player.updateHand();
         break;
       case "KeyW":
       case "KeyA":

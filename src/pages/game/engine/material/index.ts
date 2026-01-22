@@ -14,6 +14,7 @@ const GrassSideMaterial = new THREE.MeshLambertMaterial({ map: textures.grassSid
 const GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop });
 const DirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });
 const IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
+const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
 
 // 树叶
 const LeavesMaterial = new THREE.MeshLambertMaterial({
@@ -33,7 +34,7 @@ TallGrassMaterial.side = THREE.DoubleSide;
 TallGrassMaterial.depthWrite = false;
 
 // block material
-const TallGrossBlockMaterial = [
+const GrassBlockMaterial = [
   GrassSideMaterial, // right
   GrassSideMaterial, // left
   GrassTopMaterial, // top
@@ -50,10 +51,10 @@ export {
   // block material
   IronBlockMaterial,
   DirtBlockMaterial,
-  TallGrossBlockMaterial,
-  // leave material
+  StoneMaterial,
+  GrassBlockMaterial,
+  // 
   LeavesMaterial,
-  // tall grass material
   TallGrassMaterial,
 }
 
