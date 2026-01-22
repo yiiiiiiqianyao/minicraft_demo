@@ -1,6 +1,7 @@
 import * as THREE from "three";
 
 export interface IDrop {
+    dt: number;
     uuid: string;
     /**
      * @desc 掉落物的状态
@@ -17,4 +18,5 @@ export interface IDrop {
     x: number;
     y: number;
     z: number;
+    dropLimit: number;
 }
