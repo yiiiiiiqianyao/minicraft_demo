@@ -73,15 +73,17 @@ export class MouseInput {
         if (playerPos.distanceTo(blockPos) <= 1) return;
 
         // Right click 放置方块
-        world.addBlock(
+        const isPlacementSuccess = world.addBlock(
             blockPos.x,
             blockPos.y,
             blockPos.z,
             ToolBar.activeBlockId
         );
-        // 放置方块后需要从玩家物品栏中移除当前放置的方块
-        ToolBar.removeBlockId();
-        // 触发放置的动作
-        PlayerParams.playerInstance?.placementHand();
+        if (isPlacementSuccess) {
+            // 放置方块后需要从玩家物品栏中移除当前放置的方块
+            ToolBar.removeBlockId();
+            // 触发放置的动作
+            PlayerParams.playerInstance?.placementHand();
+        }        
     }
 }

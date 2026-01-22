@@ -234,14 +234,14 @@ export class World extends THREE.Group {
   }
 
   /**
-   * Adds a new block at (x, y, z)
+   *@desc Adds a new block at (x, y, z) 返回是否添加成功
    */
   addBlock(x: number, y: number, z: number, block: BlockID) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
-      chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);
+      const isSuccess = chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);
 
       // if adding a light, convert to point light
       // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理
@@ -266,6 +266,9 @@ export class World extends THREE.Group {
       this.hideBlockIfNeeded(x, y + 1, z);
       this.hideBlockIfNeeded(x, y, z - 1);
       this.hideBlockIfNeeded(x, y, z + 1);
+      return isSuccess;
+    } else {
+      return false;
     }
   }
 

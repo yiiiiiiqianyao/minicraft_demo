@@ -197,7 +197,7 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
-   * Adds a new block at (x, y, z) for this chunk
+   *@desc Adds a new block at (x, y, z) for this chunk 返回是否添加成功
    */
   addBlock(x: number, y: number, z: number, blockId: BlockID) {
     // Safety check that we aren't adding a block for one that already exists
@@ -205,6 +205,9 @@ export class WorldChunk extends THREE.Group {
       this.setBlockId(x, y, z, blockId);
       this.addBlockInstance(x, y, z);
       this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);
+      return true;
+    } else {
+      return false;
     }
   }
 
