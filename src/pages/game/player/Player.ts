@@ -54,6 +54,7 @@ export class Player extends PlayerGroup {
       this.controls.lock();
     }, 2000);
     const mouseInput = new MouseInput(this, world);
+    // 鼠标左键的时候触发 wave hand
     mouseInput.onLeftClick = () => {
       this.waveHand();
     }

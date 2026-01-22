@@ -104,7 +104,8 @@ export class PlayerGroup {
         }
     }
 
-    protected waveHand() {
+    /**@desc 挥手/工具/挖 动作待优化 */
+    waveHand() {
         if (!this.handPoint) return;
         const update = (o: { t: number }) => {
             this.handPoint.rotation.x =  quadraticFunction(o.t) * WaveStepX;
@@ -118,5 +119,11 @@ export class PlayerGroup {
             .easing(TWEEN.Easing.Quadratic.Out)
             .onUpdate(update)
             .start();
+    }
+
+    /**@desc 放置方块时候手的动作 */
+    placementHand() {
+        // TODO 暂时使用 wave hand 的动作 后续待优化
+        this.waveHand();
     }
 }

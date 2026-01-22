@@ -116,6 +116,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -146,7 +152,14 @@
             4,
             3,
             5,
-            10
+            10,
+            3,
+            3,
+            4,
+            5,
+            3,
+            6,
+            4
           ]
         },
         "register": 1
@@ -177,7 +190,13 @@
             7,
             9,
             9,
-            7
+            7,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8
           ]
         },
         "register": 15
@@ -194,6 +213,12 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -241,6 +266,13 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0
           ],
           "onCheckCode": [
@@ -248,6 +280,13 @@
             0,
             0,
             1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1290,6 +1329,7 @@
             0,
             0,
             0,
+            0,
             0
           ]
         },
@@ -1318,9 +1358,21 @@
             2,
             1,
             0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
             1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1417,9 +1469,27 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1487,9 +1557,27 @@
             12,
             10,
             13,
-            12
+            12,
+            13,
+            12,
+            11,
+            14,
+            10,
+            8
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1552,6 +1640,18 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1570,6 +1670,12 @@
         "hooks": {
           "onGenerateFiles": [
             80,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1634,6 +1740,12 @@
             0,
             1,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
@@ -1677,7 +1789,19 @@
             65,
             2,
             50,
-            1
+            1,
+            59,
+            2,
+            60,
+            1,
+            57,
+            1,
+            65,
+            2,
+            62,
+            2,
+            59,
+            2
           ]
         },
         "register": 7
@@ -1716,6 +1840,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0
@@ -1760,6 +1890,12 @@
             5,
             6,
             10,
+            5,
+            4,
+            5,
+            4,
+            5,
+            4,
             5,
             4
           ]
@@ -1855,6 +1991,12 @@
             1,
             0,
             1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
             0,
             0,
             1
@@ -2936,7 +3078,7 @@
       "id": "game/Block/textures",
       "file": "game/Block/textures.ts",
       "absPath": "/game/Block/textures",
-      "__content": "import { loadTexture } from \"../engine/utils\";\nimport GrassSide from '@/assets/textures/grass_side.png';\nimport GrassTop from '@/assets/textures/grass.png';\nimport Dirt from '@/assets/textures/dirt.png';\nimport Stone from '@/assets/textures/stone.png';\nimport CoalOre from '@/assets/textures/coal_ore.png';\nimport IronOre from '@/assets/textures/iron_ore.png';\nimport BedRock from '@/assets/textures/bedrock.png';\n\nimport OakLogSide from '@/assets/textures/oak_log_side.png';\nimport OakLogTop from '@/assets/textures/oak_log_top.png';\nimport Leaves from '@/assets/textures/leaves.png';\nimport TallGrass from '@/assets/textures/tall_grass.png';\nimport FlowerRose from '@/assets/textures/flower_rose.png';\nimport FlowerDandelion from '@/assets/textures/flower_dandelion.png';\n\nimport RedStoneLamp from '@/assets/textures/redstone_lamp.png';\nimport StoneBrick from '@/assets/textures/stonebrick.png';\n\n/**@desc for block texture */\nexport const textures = {\n  grassSide: loadTexture(GrassSide),\n  grassTop: loadTexture(GrassTop),\n  dirt: loadTexture(Dirt),\n  stone: loadTexture(Stone),\n  coal: loadTexture(CoalOre),\n  iron: loadTexture(IronOre),\n  bedrock: loadTexture(BedRock),\n  oakLogSide: loadTexture(OakLogSide),\n  oakLogTop: loadTexture(OakLogTop),\n  leaves: loadTexture(Leaves),\n  tallGrass: loadTexture(TallGrass),\n  flowerRose: loadTexture(FlowerRose),\n  flowerDandelion: loadTexture(FlowerDandelion),\n  redstoneLamp: loadTexture(RedStoneLamp),\n  stoneBrick: loadTexture(StoneBrick),\n};\n\nimport GrassBlock from '@/assets/textures/grass_block.png';\nimport DirtBlock from '@/assets/textures/dirt_block.png';\nimport StoneBlock from '@/assets/textures/stone_block.png';\nimport LeavesBlock from '@/assets/textures/leaves_block.png';\nimport TallGrassBlock from '@/assets/textures/tall_grass_block.png';\nimport FlowerRoseBlock from '@/assets/textures/flower_rose.png';\nimport FlowerDandelionBlock from '@/assets/textures/flower_dandelion.png';\n/**@desc for ui */\nexport const uiTextures = {\n  grass: GrassBlock,\n  dirt: DirtBlock,\n  stone: StoneBlock,\n  coal: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/coal_block.png\",\n  iron: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/iron_block.png\",\n  bedrock: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/bedrock_block.png\",\n  oakLog: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/oak_log_block.png\",\n  leaves: LeavesBlock,\n  tallGrass: TallGrassBlock,\n  flowerRose: FlowerRoseBlock,\n  flowerDandelion: FlowerDandelionBlock,\n  redstoneLamp: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/redstone_lamp_block.png\",\n  stoneBrick: \"https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/imgs/textures/stonebrick_block.png\",\n};\n",
+      "__content": "import { loadTexture } from \"../engine/utils\";\nimport GrassSide from '@/assets/textures/grass_side.png';\nimport GrassTop from '@/assets/textures/grass.png';\nimport Dirt from '@/assets/textures/dirt.png';\nimport Stone from '@/assets/textures/stone.png';\nimport CoalOre from '@/assets/textures/coal_ore.png';\nimport IronOre from '@/assets/textures/iron_ore.png';\nimport BedRock from '@/assets/textures/bedrock.png';\n\nimport OakLogSide from '@/assets/textures/oak_log_side.png';\nimport OakLogTop from '@/assets/textures/oak_log_top.png';\nimport Leaves from '@/assets/textures/leaves.png';\nimport TallGrass from '@/assets/textures/tall_grass.png';\nimport FlowerRose from '@/assets/textures/flower_rose.png';\nimport FlowerDandelion from '@/assets/textures/flower_dandelion.png';\n\nimport RedStoneLamp from '@/assets/textures/redstone_lamp.png';\nimport StoneBrick from '@/assets/textures/stonebrick.png';\n\n/**@desc for block texture */\nexport const textures = {\n  grassSide: loadTexture(GrassSide),\n  grassTop: loadTexture(GrassTop),\n  dirt: loadTexture(Dirt),\n  stone: loadTexture(Stone),\n  coal: loadTexture(CoalOre),\n  iron: loadTexture(IronOre),\n  bedrock: loadTexture(BedRock),\n  oakLogSide: loadTexture(OakLogSide),\n  oakLogTop: loadTexture(OakLogTop),\n  leaves: loadTexture(Leaves),\n  tallGrass: loadTexture(TallGrass),\n  flowerRose: loadTexture(FlowerRose),\n  flowerDandelion: loadTexture(FlowerDandelion),\n  redstoneLamp: loadTexture(RedStoneLamp),\n  stoneBrick: loadTexture(StoneBrick),\n};\n\nimport GrassBlock from '@/assets/textures/grass_block.png';\nimport DirtBlock from '@/assets/textures/dirt_block.png';\nimport StoneBlock from '@/assets/textures/stone_block.png';\nimport CoalOreBlock from '@/assets/textures/coal_block.png';\nimport IronOreBlock from '@/assets/textures/iron_block.png';\nimport BedRockBlock from '@/assets/textures/bedrock_block.png';\nimport OakLogBlock from '@/assets/textures/oak_log_block.png';\n\nimport LeavesBlock from '@/assets/textures/leaves_block.png';\nimport TallGrassBlock from '@/assets/textures/tall_grass_block.png';\nimport FlowerRoseBlock from '@/assets/textures/flower_rose.png';\nimport FlowerDandelionBlock from '@/assets/textures/flower_dandelion.png';\n\nimport RedStoneLampBlock from '@/assets/textures/redstone_lamp_block.png';\nimport StoneBrickBlock from '@/assets/textures/stonebrick_block.png';\n/**@desc for ui */\nexport const uiTextures = {\n  grass: GrassBlock,\n  dirt: DirtBlock,\n  stone: StoneBlock,\n  coal: CoalOreBlock,\n  iron: IronOreBlock,\n  bedrock: BedRockBlock,\n  oakLog: OakLogBlock,\n  leaves: LeavesBlock,\n  tallGrass: TallGrassBlock,\n  flowerRose: FlowerRoseBlock,\n  flowerDandelion: FlowerDandelionBlock,\n  redstoneLamp: RedStoneLampBlock,\n  stoneBrick: StoneBrickBlock,\n};\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/textures.ts"
     },
@@ -2999,7 +3141,7 @@
       "id": "game/player/Player",
       "file": "game/player/Player.ts",
       "absPath": "/game/player/Player",
-      "__content": "\nimport * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { updateCameraFOV } from \"./camera\";\nimport { Selector } from \"./selector\";\nimport { PlayerGroup } from \"./group\";\n\nexport class Player extends PlayerGroup {\n  onGround = false;\n  input = new THREE.Vector3();\n  /**@desc 玩家是否处于冲刺状态 */ \n  isSprinting = false;\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  boundsHelper: THREE.Mesh;\n  velocity = new THREE.Vector3();\n  private _worldVelocity = new THREE.Vector3();\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this._worldVelocity.copy(this.velocity);\n    this._worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this._worldVelocity;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    super(scene);\n    this.world = world;\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    const mouseInput = new MouseInput(this, world);\n    mouseInput.onLeftClick = () => {\n      this.waveHand();\n    }\n\n    PlayerParams.playerInstance = this;\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    // 更新玩家的视角\n    updateCameraFOV(this.camera, this.isSprinting);\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n  }\n}\n",
+      "__content": "\nimport * as THREE from \"three\";\nimport audioManager from \"../audio/AudioManager\";\nimport { BlockID } from \"../Block\";\nimport { World } from \"../world/World\";\nimport { updatePositionGUI } from \"../gui\";\nimport { PlayerInitPosition, PlayerParams } from \"./literal\";\nimport { KeyboardInput } from \"./keyboard\";\nimport { MouseInput } from \"./mouse\";\nimport { initBoundsHelper, selectionHelper, updateBoundsHelper } from \"../helper\";\nimport { Action } from \"./action\";\nimport { playerToChunkCoords, worldToCeilBlockCoord } from \"../world/chunk/utils\";\nimport { updateWorldBlockCoordGUI } from \"../dev\";\nimport { updatePlayerNear } from \"../helper/chunkHelper\";\nimport { updateCameraFOV } from \"./camera\";\nimport { Selector } from \"./selector\";\nimport { PlayerGroup } from \"./group\";\n\nexport class Player extends PlayerGroup {\n  onGround = false;\n  input = new THREE.Vector3();\n  /**@desc 玩家是否处于冲刺状态 */ \n  isSprinting = false;\n  lastStepSoundPlayed = 0;\n  world: World;\n  keyboardInput = new KeyboardInput(this);\n  boundsHelper: THREE.Mesh;\n  velocity = new THREE.Vector3();\n  private _worldVelocity = new THREE.Vector3();\n\n  /*\n   * Returns the velocity of the player in world coordinates\n   */\n  get worldVelocity() {\n    this._worldVelocity.copy(this.velocity);\n    this._worldVelocity.applyEuler(\n      new THREE.Euler(0, this.camera.rotation.y, 0)\n    );\n    return this._worldVelocity;\n  }\n\n  constructor(scene: THREE.Scene, world: World) {\n    super(scene);\n    this.world = world;\n    // for dev test\n    this.boundsHelper = initBoundsHelper();\n    this.boundsHelper.visible = false;\n    scene.add(this.boundsHelper);\n\n    selectionHelper.visible = false;\n    scene.add(selectionHelper);\n\n    setTimeout(() => {\n      this.controls.lock();\n    }, 2000);\n    const mouseInput = new MouseInput(this, world);\n    // 鼠标左键的时候触发 wave hand\n    mouseInput.onLeftClick = () => {\n      this.waveHand();\n    }\n\n    PlayerParams.playerInstance = this;\n  }\n  \n  /**\n   * Apply a world delta velocity to the player\n   */\n  applyWorldDeltaVelocity(dv: THREE.Vector3) {\n    dv.applyEuler(new THREE.Euler(0, -this.camera.rotation.y, 0));\n    this.velocity.add(dv);\n  }\n\n  /**@desc 应用玩家输入 Normalize the input vector if more than one key is pressed */\n  applyInputs(dt: number, blockUnderneath: BlockID) {\n    if (this.input.length() > 1) {\n      this.input\n        .normalize()\n        .multiplyScalar(this.isSprinting ? PlayerParams.maxSprintSpeed : PlayerParams.maxSpeed);\n    }\n\n    // 玩家当前水平的速度\n    this.velocity.x = this.input.x;\n    this.velocity.z = this.input.z;\n\n    // play step sound 在地面上发生移动的时候\n    if (this.onGround && this.input.length() > 0) {\n      const minTimeout = this.isSprinting ? 300 : 400;\n      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {\n        audioManager.playWalkSound(blockUnderneath);\n        this.lastStepSoundPlayed = performance.now();\n      }\n    }\n    // TODO 在角色起跳之前需要判断角色上方是否有足够的空间\n    if (KeyboardInput.spacePressed && this.onGround) {\n      this.velocity.y = PlayerParams.jumpSpeed;\n    }\n    // 使用控制器根据速度控制玩家在水平面上移动\n    this.controls.moveRight(this.velocity.x * dt);\n    this.controls.moveForward(this.velocity.z * dt);\n    // 根据速度 * 时间 更新玩家在垂直方向上的位置\n    this.position.y += this.velocity.y * dt;\n\n    updatePositionGUI(this.position);\n  }\n\n  /**@desc 更新玩家 */\n  update(world: World) {\n    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);\n    // 更新用户的拾取选中方块\n    Selector.update(this.camera, world, selectionHelper);\n    Selector.select(this.camera, world, selectionHelper);\n    // 更新玩家的视角\n    updateCameraFOV(this.camera, this.isSprinting);\n    // prevent player from falling through\n    if (this.position.y < 0) {\n      this.position.copy(PlayerInitPosition);\n      this.velocity.set(0, 0, 0);\n    }\n  }\n\n  /**\n   * 更新角色的位置 水平 垂直\n   * @param deltaPosition \n   */\n  updatePosition() {\n    this.updateByPosition();\n  }\n\n  /**\n   * 随着角色的位置变化而刷新的一些属性 PlayerParams\n   */\n  updateByPosition() {\n    const { x, y, z } = this.position;\n    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);\n    PlayerParams.position.copy(this.position);\n    \n    // 更新角色所处的 currentChunk\n    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  \n    // 更新角色所处的 chunk blockID\n    // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);\n    // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);\n    // 更新角色所处的世界 blockID\n    const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);\n    updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);\n\n    // 角色移动后检测吸收掉落的物品\n    Action.absorbDrops(this.world);\n  }\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/Player.ts"
     },
@@ -3071,7 +3213,7 @@
       "id": "game/player/group",
       "file": "game/player/group.ts",
       "absPath": "/game/player/group",
-      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\nimport { MeshPool } from \"../engine/mesh\";\nimport { MeshType } from \"../engine/mesh/constant\";\nimport { BlockID } from \"../Block\";\nimport { ToolBar } from \"../gui\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    private handPoint!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    private currentHandBlockID: BlockID | null | undefined = null;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n        this.handPoint = handPoint;\n        // this.updateHand(null);\n    }\n\n    /**\n     * @desc 根据 blockID 更新手的模型\n     */\n    updateHand() {\n        const blockID = ToolBar.activeBlockId\n        if (this.currentHandBlockID === blockID) return;\n        this.currentHandBlockID = blockID;\n        this.handPoint.clear();\n        if (!blockID) {\n            this.handPoint.add(MeshPool.getMesh(MeshType.Hand) as THREE.Mesh);\n        } else {\n            // TODO 待补全\n            switch (blockID) {\n                case BlockID.Grass:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.GrassBlock) as THREE.Mesh);\n                case BlockID.Dirt:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.DirtBlock) as THREE.Mesh);\n                case BlockID.Stone:\n                case BlockID.CoalOre:\n                case BlockID.IronOre:\n                case BlockID.Bedrock:\n                case BlockID.OakLog:\n                case BlockID.Leaves:\n                case BlockID.TallGrass:\n                case BlockID.FlowerRose:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerRose) as THREE.Mesh);\n                case BlockID.FlowerDandelion:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerDandelion) as THREE.Mesh);\n                case BlockID.RedstoneLamp:\n                case BlockID.StoneBrick:\n            }\n        }\n    }\n\n    protected waveHand() {\n        if (!this.handPoint) return;\n        const update = (o: { t: number }) => {\n            this.handPoint.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.handPoint.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.handPoint.position.z = quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport TWEEN from \"@tweenjs/tween.js\";\nimport { Scene } from \"three\";\nimport { initPlayerCamera } from \"./camera\";\nimport { Layers } from \"../engine\";\nimport { PointerLockControls } from \"three/examples/jsm/controls/PointerLockControls.js\";\nimport { quadraticFunction } from \"../engine/math\";\nimport { MeshPool } from \"../engine/mesh\";\nimport { MeshType } from \"../engine/mesh/constant\";\nimport { BlockID } from \"../Block\";\nimport { ToolBar } from \"../gui\";\n\n/**\n * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合\n * 核心点是 camera 相机，其余内容都挂载在相机节点上\n */\nconst handleOriginRotationX = Math.PI * 0.5;\nconst handleOriginRotationY = Math.PI * 0.08;\nconst handleOriginRotationZ = Math.PI * 0.05;\nconst WaveStepX = -Math.PI / 8;\n\nexport class PlayerGroup {\n    controls!: PointerLockControls;\n    cameraHelper!: THREE.CameraHelper;\n    private handPoint!: THREE.Group;\n    private scene: Scene;\n    private basePoint!: THREE.PerspectiveCamera;\n    private currentHandBlockID: BlockID | null | undefined = null;\n    get position() {\n        return this.basePoint.position;\n    }\n    get rotation() {\n        return this.basePoint.rotation;\n    }\n    get camera() {\n        return this.basePoint;\n    }\n    constructor(scene: Scene) {\n        this.scene = scene;\n        this.initBasePoint();\n        this.initHand();\n    }\n\n    initBasePoint() {\n        const camera = initPlayerCamera();\n        const cameraHelper = new THREE.CameraHelper(camera);\n        cameraHelper.layers.set(Layers.One);\n        cameraHelper.visible = false;\n        this.controls = new PointerLockControls(camera, document.body);\n        this.basePoint = camera;\n        this.cameraHelper = cameraHelper;\n        this.scene.add(camera);\n        this.scene.add(cameraHelper);\n    }\n\n    initHand() {\n        const point = new THREE.Group();\n        point.position.set(0.3, -0.2, -0.2);\n        point.rotation.set(\n            handleOriginRotationX,\n            handleOriginRotationY,\n            handleOriginRotationZ,\n        );\n        this.basePoint.add(point);\n\n        const handPoint = new THREE.Group();\n        point.add(handPoint);\n\n        this.handPoint = handPoint;\n        // this.updateHand(null);\n    }\n\n    /**\n     * @desc 根据 blockID 更新手的模型\n     */\n    updateHand() {\n        const blockID = ToolBar.activeBlockId\n        if (this.currentHandBlockID === blockID) return;\n        this.currentHandBlockID = blockID;\n        this.handPoint.clear();\n        if (!blockID) {\n            this.handPoint.add(MeshPool.getMesh(MeshType.Hand) as THREE.Mesh);\n        } else {\n            // TODO 待补全\n            switch (blockID) {\n                case BlockID.Grass:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.GrassBlock) as THREE.Mesh);\n                case BlockID.Dirt:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.DirtBlock) as THREE.Mesh);\n                case BlockID.Stone:\n                case BlockID.CoalOre:\n                case BlockID.IronOre:\n                case BlockID.Bedrock:\n                case BlockID.OakLog:\n                case BlockID.Leaves:\n                case BlockID.TallGrass:\n                case BlockID.FlowerRose:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerRose) as THREE.Mesh);\n                case BlockID.FlowerDandelion:\n                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerDandelion) as THREE.Mesh);\n                case BlockID.RedstoneLamp:\n                case BlockID.StoneBrick:\n            }\n        }\n    }\n\n    /**@desc 挥手/工具/挖 动作待优化 */\n    waveHand() {\n        if (!this.handPoint) return;\n        const update = (o: { t: number }) => {\n            this.handPoint.rotation.x =  quadraticFunction(o.t) * WaveStepX;\n            this.handPoint.rotation.z =  quadraticFunction(o.t) * WaveStepX * 0.5;\n            // this.handPoint.position.z = quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.x = -quadraticFunction(o.t) * 0.1;\n            // this.handPoint.position.y = -quadraticFunction(o.t) * 0.1;\n        };\n        new TWEEN.Tween({t: 0})\n            .to({ t: 1 }, 200)\n            .easing(TWEEN.Easing.Quadratic.Out)\n            .onUpdate(update)\n            .start();\n    }\n\n    /**@desc 放置方块时候手的动作 */\n    placementHand() {\n        // TODO 暂时使用 wave hand 的动作 后续待优化\n        this.waveHand();\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/group.ts"
     },
@@ -3080,7 +3222,7 @@
       "id": "game/player/mouse",
       "file": "game/player/mouse.ts",
       "absPath": "/game/player/mouse",
-      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\n/**@desc 处理玩家鼠标输入事件 */\nexport class MouseInput {\n    onLeftClick?(): void;\n    onRightClick?(): void;\n    private isClickEvent = false;\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0) {\n            this.handleLeftClick();\n            this.handleBreak();\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            this.handlePlacement();\n        }\n    }\n\n    private handleLeftClick() {\n        if (this.onLeftClick && !this.isClickEvent) {\n            this.isClickEvent = true;\n            setTimeout(() => this.isClickEvent = false, 64);\n            this.onLeftClick();\n        }\n    }\n\n    private handleBreak() {\n        if(!PlayerParams.selectedCoords) return;\n        const { x, y, z } = PlayerParams.selectedCoords;\n        // Left click 移除选中的方块\n        // TODO 需要考虑是否能够破坏和移除方块\n        // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n        const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n        this.world.removeBlock(blockX, blockY, blockZ);\n    }\n\n    private handlePlacement() {\n        const { world, player } = this;\n        if (!ToolBar.activeBlockId) return;\n        const playerPos = new THREE.Vector3(\n        Math.floor(player.position.x),\n        Math.floor(player.position.y) - PlayerParams.halfHeight,\n        Math.floor(player.position.z)\n        );\n        const blockPos = new THREE.Vector3(\n        Math.floor(Action.blockPlacementCoords.x - 0.5),\n        Math.floor(Action.blockPlacementCoords.y - 0.5),\n        Math.floor(Action.blockPlacementCoords.z - 0.5)\n        );\n\n        // TODO 需要精细判断\n        // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n        if (playerPos.distanceTo(blockPos) <= 1) return;\n\n        // Right click 放置方块\n        world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            ToolBar.activeBlockId\n        );\n        // 放置方块后需要从玩家物品栏中移除物品\n        ToolBar.removeBlockId();\n    }\n}",
+      "__content": "import * as THREE from \"three\";\nimport { World } from \"../world/World\";\nimport { PlayerParams } from \"./literal\";\nimport { Player } from \"./Player\";\nimport { Action } from \"./action\";\nimport { ToolBar } from \"../gui\";\nimport { worldToCeilBlockCoord } from \"../world/chunk/utils\";\n\n/**@desc 处理玩家鼠标输入事件 */\nexport class MouseInput {\n    onLeftClick?(): void;\n    onRightClick?(): void;\n    private isClickEvent = false;\n    private player: Player;\n    private world: World;\n    constructor(player: Player, world: World) {\n        this.player = player;\n        this.world = world;\n\n        document.addEventListener(\"mousedown\", this.onMouseDown.bind(this), false);\n    }\n\n    // 处理鼠标点击事件 目前是移除选中的方块和放置方块\n    onMouseDown(event: MouseEvent) {\n        const { player, world } = this;\n        if (!player || !world) return;\n        if (!player.controls.isLocked) return;\n        if (event.button === 0) {\n            this.handleLeftClick();\n            this.handleBreak();\n        } else if (event.button === 2 && Action.blockPlacementCoords) {\n            this.handlePlacement();\n        }\n    }\n\n    private handleLeftClick() {\n        if (this.onLeftClick && !this.isClickEvent) {\n            this.isClickEvent = true;\n            setTimeout(() => this.isClickEvent = false, 64);\n            this.onLeftClick();\n        }\n    }\n\n    /**@desc 破坏一个方块 */\n    private handleBreak() {\n        if(!PlayerParams.selectedCoords) return;\n        const { x, y, z } = PlayerParams.selectedCoords;\n        // Left click 移除选中的方块\n        // TODO 需要考虑是否能够破坏和移除方块\n        // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品\n        const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);\n        this.world.removeBlock(blockX, blockY, blockZ);\n    }\n\n    /**@desc 放置一个方块 */\n    private handlePlacement() {\n        const { world, player } = this;\n        // 当前玩家手上没有方块\n        if (!ToolBar.activeBlockId) return;\n        const playerPos = new THREE.Vector3(\n        Math.floor(player.position.x),\n        Math.floor(player.position.y) - PlayerParams.halfHeight,\n        Math.floor(player.position.z)\n        );\n        const blockPos = new THREE.Vector3(\n        Math.floor(Action.blockPlacementCoords.x - 0.5),\n        Math.floor(Action.blockPlacementCoords.y - 0.5),\n        Math.floor(Action.blockPlacementCoords.z - 0.5)\n        );\n\n        // TODO 需要精细判断\n        // 检查是否超出可以放置方块的距离（玩家本身所处的方块）\n        if (playerPos.distanceTo(blockPos) <= 1) return;\n\n        // Right click 放置方块\n        world.addBlock(\n            blockPos.x,\n            blockPos.y,\n            blockPos.z,\n            ToolBar.activeBlockId\n        );\n        // 放置方块后需要从玩家物品栏中移除当前放置的方块\n        ToolBar.removeBlockId();\n    }\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/player/mouse.ts"
     },
@@ -6220,7 +6362,7 @@
             "format": "esm"
           },
           "src/pages/game/player/mouse.ts": {
-            "bytes": 2887,
+            "bytes": 3101,
             "imports": [
               {
                 "path": "three",
@@ -6421,7 +6563,7 @@
             "format": "esm"
           },
           "src/pages/game/player/group.ts": {
-            "bytes": 4355,
+            "bytes": 4561,
             "imports": [
               {
                 "path": "three",
@@ -6482,7 +6624,7 @@
             "format": "esm"
           },
           "src/pages/game/player/Player.ts": {
-            "bytes": 5054,
+            "bytes": 5099,
             "imports": [
               {
                 "path": "three",
@@ -9412,7 +9554,7 @@
                 "bytesInOutput": 2433
               },
               "src/pages/game/player/mouse.ts": {
-                "bytesInOutput": 2296
+                "bytesInOutput": 2424
               },
               "src/pages/game/helper/physics.ts": {
                 "bytesInOutput": 1562
@@ -9433,7 +9575,7 @@
                 "bytesInOutput": 277
               },
               "src/pages/game/player/group.ts": {
-                "bytesInOutput": 3674
+                "bytesInOutput": 3832
               },
               "src/pages/game/player/Player.ts": {
                 "bytesInOutput": 4234
@@ -9502,7 +9644,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 211866
+            "bytes": 212152
           }
         }
       }

@@ -41,6 +41,7 @@ export class MouseInput {
         }
     }
 
+    /**@desc 破坏一个方块 */
     private handleBreak() {
         if(!PlayerParams.selectedCoords) return;
         const { x, y, z } = PlayerParams.selectedCoords;
@@ -51,8 +52,10 @@ export class MouseInput {
         this.world.removeBlock(blockX, blockY, blockZ);
     }
 
+    /**@desc 放置一个方块 */
     private handlePlacement() {
         const { world, player } = this;
+        // 当前玩家手上没有方块
         if (!ToolBar.activeBlockId) return;
         const playerPos = new THREE.Vector3(
         Math.floor(player.position.x),
@@ -76,7 +79,9 @@ export class MouseInput {
             blockPos.z,
             ToolBar.activeBlockId
         );
-        // 放置方块后需要从玩家物品栏中移除物品
+        // 放置方块后需要从玩家物品栏中移除当前放置的方块
         ToolBar.removeBlockId();
+        // 触发放置的动作
+        PlayerParams.playerInstance?.placementHand();
     }
 }
