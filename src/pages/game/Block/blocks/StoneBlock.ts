@@ -1,16 +1,12 @@
-import * as THREE from "three";
-
 import { Block, RenderGeometry } from "../base/Block";
-import { textures, uiTextures } from "../textures";
-
+import { uiTextures } from "../textures";
 import { BlockID } from "..";
-
-const stoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
+import { StoneMaterial } from "../../engine/material";
 
 /**@desc 石头方块 */
 export class StoneBlock extends Block {
   id = BlockID.Stone;
-  material = stoneMaterial;
+  material = StoneMaterial;
   uiTexture = uiTextures.stone;
   geometry = RenderGeometry.Cube;
   transparent = false;

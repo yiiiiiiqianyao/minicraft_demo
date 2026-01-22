@@ -143,6 +143,8 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ]
         },
@@ -202,7 +204,9 @@
             4,
             4,
             5,
-            3
+            3,
+            7,
+            10
           ]
         },
         "register": 1
@@ -260,7 +264,9 @@
             6,
             7,
             8,
-            5
+            5,
+            15,
+            8
           ]
         },
         "register": 15
@@ -277,6 +283,8 @@
       "time": {
         "hooks": {
           "addEntryCode": [
+            0,
+            0,
             0,
             0,
             0,
@@ -377,6 +385,8 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ],
           "onCheckCode": [
@@ -435,7 +445,9 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            1
           ]
         },
         "register": 1
@@ -1464,6 +1476,14 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -1519,9 +1539,13 @@
             1,
             1,
             0,
-            0
+            0,
+            0,
+            1
           ],
           "addRuntimePlugin": [
+            0,
+            0,
             0,
             0,
             0,
@@ -1672,9 +1696,15 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1823,9 +1853,15 @@
             10,
             7,
             15,
-            7
+            7,
+            9,
+            12
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1996,6 +2032,10 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
@@ -2014,6 +2054,8 @@
         "hooks": {
           "onGenerateFiles": [
             80,
+            0,
+            0,
             0,
             0,
             0,
@@ -2132,6 +2174,8 @@
             0,
             0,
             0,
+            0,
+            1,
             0
           ],
           "addBeforeMiddlewares": [
@@ -2229,7 +2273,11 @@
             68,
             3,
             55,
-            1
+            1,
+            56,
+            1,
+            72,
+            3
           ]
         },
         "register": 7
@@ -2297,7 +2345,9 @@
             0,
             0,
             0,
-            0
+            0,
+            0,
+            1
           ],
           "onBeforeCompiler": [
             2
@@ -2367,7 +2417,9 @@
             4,
             5,
             7,
-            4
+            4,
+            4,
+            5
           ]
         },
         "register": 3
@@ -2488,6 +2540,8 @@
             0,
             1,
             1,
+            0,
+            0,
             0,
             0,
             0
@@ -3164,7 +3218,7 @@
       "id": "game/Block/blocks/StoneBlock",
       "file": "game/Block/blocks/StoneBlock.ts",
       "absPath": "/game/Block/blocks/StoneBlock",
-      "__content": "import * as THREE from \"three\";\n\nimport { Block, RenderGeometry } from \"../base/Block\";\nimport { textures, uiTextures } from \"../textures\";\n\nimport { BlockID } from \"..\";\n\nconst stoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });\n\n/**@desc 石头方块 */\nexport class StoneBlock extends Block {\n  id = BlockID.Stone;\n  material = stoneMaterial;\n  uiTexture = uiTextures.stone;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
+      "__content": "import { Block, RenderGeometry } from \"../base/Block\";\nimport { uiTextures } from \"../textures\";\nimport { BlockID } from \"..\";\nimport { StoneMaterial } from \"../../engine/material\";\n\n\n\n/**@desc 石头方块 */\nexport class StoneBlock extends Block {\n  id = BlockID.Stone;\n  material = StoneMaterial;\n  uiTexture = uiTextures.stone;\n  geometry = RenderGeometry.Cube;\n  transparent = false;\n  canPassThrough = false;\n  canDrop = true;\n}\n",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/StoneBlock.ts"
     },
@@ -3425,7 +3479,7 @@
       "id": "game/engine/mesh/index",
       "file": "game/engine/mesh/index.ts",
       "absPath": "/game/engine/mesh",
-      "__content": "import * as THREE from \"three\";\nimport { MeshType } from \"./constant\";\nimport { initDandelionMesh, initRoseMesh } from \"./flower\";\nimport { initDirtBlockMesh, initGrassBlockMesh } from \"./block\";\n\n/**@desc 网格池 */\nexport class MeshPool {\n    private static pool: Map<MeshType, THREE.Mesh> = new Map();\n    static getMesh(type: MeshType) {\n        if (MeshPool.pool.get(type)) {\n            return MeshPool.pool.get(type)!;\n        }\n        // 默认设置为 Hand Mesh\n        let mesh: THREE.Mesh = initHandMesh();\n        if (type === MeshType.GrassBlock) {\n            mesh = initGrassBlockMesh();\n        } else if (type === MeshType.FlowerRose) {\n            mesh = initRoseMesh();            \n        } else if (type === MeshType.FlowerDandelion) {\n            mesh = initDandelionMesh();\n        } else if (type === MeshType.DirtBlock) {\n            mesh = initDirtBlockMesh();\n        } else if(type === MeshType.StoneBlock) {\n            mesh = initStoneBlockMesh();\n        }\n        MeshPool.pool.set(type, mesh);\n        return mesh;\n    }\n}\n\n/**@desc 初始化模拟的玩家小手 mesh */\nfunction initHandMesh() {\n    const handLength = 0.5;\n    const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n    const material = new THREE.MeshLambertMaterial();\n    const hand = new THREE.Mesh(geometry, material);\n    hand.position.set(0, -handLength / 2, 0);\n    return hand;\n}",
+      "__content": "import * as THREE from \"three\";\nimport { MeshType } from \"./constant\";\nimport { initDandelionMesh, initRoseMesh } from \"./flower\";\nimport { initDirtBlockMesh, initGrassBlockMesh, initStoneBlockMesh } from \"./block\";\n\n/**@desc 网格池 */\nexport class MeshPool {\n    private static pool: Map<MeshType, THREE.Mesh> = new Map();\n    static getMesh(type: MeshType) {\n        if (MeshPool.pool.get(type)) {\n            return MeshPool.pool.get(type)!;\n        }\n        // 默认设置为 Hand Mesh\n        let mesh: THREE.Mesh = initHandMesh();\n        if (type === MeshType.GrassBlock) {\n            mesh = initGrassBlockMesh();\n        } else if (type === MeshType.FlowerRose) {\n            mesh = initRoseMesh();            \n        } else if (type === MeshType.FlowerDandelion) {\n            mesh = initDandelionMesh();\n        } else if (type === MeshType.DirtBlock) {\n            mesh = initDirtBlockMesh();\n        } else if(type === MeshType.StoneBlock) {\n            mesh = initStoneBlockMesh();\n        }\n        MeshPool.pool.set(type, mesh);\n        return mesh;\n    }\n}\n\n/**@desc 初始化模拟的玩家小手 mesh */\nfunction initHandMesh() {\n    const handLength = 0.5;\n    const geometry = new THREE.BoxGeometry(0.1, handLength, 0.15);\n    const material = new THREE.MeshLambertMaterial();\n    const hand = new THREE.Mesh(geometry, material);\n    hand.position.set(0, -handLength / 2, 0);\n    return hand;\n}",
       "__isJSFile": true,
       "__absFile": "/Applications/workspace/minicraft_demo/src/pages/game/engine/mesh/index.ts"
     },
@@ -6329,13 +6383,8 @@
             "format": "esm"
           },
           "src/pages/game/Block/blocks/StoneBlock.ts": {
-            "bytes": 501,
+            "bytes": 433,
             "imports": [
-              {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
               {
                 "path": "src/pages/game/Block/base/Block.ts",
                 "kind": "import-statement",
@@ -6350,6 +6399,11 @@
                 "path": "src/pages/game/Block/index.ts",
                 "kind": "import-statement",
                 "original": ".."
+              },
+              {
+                "path": "src/pages/game/engine/material/index.ts",
+                "kind": "import-statement",
+                "original": "../../engine/material"
               }
             ],
             "format": "esm"
@@ -8512,11 +8566,6 @@
                 "external": true
               },
               {
-                "path": "three",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "three/examples/jsm/lines/LineGeometry.js",
                 "kind": "import-statement",
                 "external": true
@@ -9976,7 +10025,7 @@
                 "bytesInOutput": 908
               },
               "src/pages/game/Block/blocks/StoneBlock.ts": {
-                "bytesInOutput": 655
+                "bytesInOutput": 549
               },
               "src/pages/game/Block/blocks/StoneBrickBlock.ts": {
                 "bytesInOutput": 736
@@ -10135,7 +10184,7 @@
                 "bytesInOutput": 575
               }
             },
-            "bytes": 212228
+            "bytes": 212122
           }
         }
       }
@@ -13598,20 +13647,7 @@
       ],
       "/Applications/workspace/minicraft_demo/src/pages/game/Block/blocks/StoneBlock.ts": [
         {
-          "end": 32,
-          "importKind": "value",
-          "source": "three",
-          "specifiers": [
-            {
-              "local": "THREE",
-              "type": "ImportNamespaceSpecifier"
-            }
-          ],
-          "start": 1,
-          "type": "ImportDeclaration"
-        },
-        {
-          "end": 88,
+          "end": 55,
           "importKind": "value",
           "source": "../base/Block",
           "specifiers": [
@@ -13626,30 +13662,25 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 34,
+          "start": 1,
           "type": "ImportDeclaration"
         },
         {
-          "end": 140,
+          "end": 97,
           "importKind": "value",
           "source": "../textures",
           "specifiers": [
-            {
-              "imported": "textures",
-              "local": "textures",
-              "type": "ImportSpecifier"
-            },
             {
               "imported": "uiTextures",
               "local": "uiTextures",
               "type": "ImportSpecifier"
             }
           ],
-          "start": 89,
+          "start": 56,
           "type": "ImportDeclaration"
         },
         {
-          "end": 171,
+          "end": 127,
           "importKind": "value",
           "source": "..",
           "specifiers": [
@@ -13659,7 +13690,21 @@
               "type": "ImportSpecifier"
             }
           ],
-          "start": 142,
+          "start": 98,
+          "type": "ImportDeclaration"
+        },
+        {
+          "end": 182,
+          "importKind": "value",
+          "source": "../../engine/material",
+          "specifiers": [
+            {
+              "imported": "StoneMaterial",
+              "local": "StoneMaterial",
+              "type": "ImportSpecifier"
+            }
+          ],
+          "start": 128,
           "type": "ImportDeclaration"
         }
       ],
