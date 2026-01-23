@@ -30,3 +30,7 @@ export function loadTexture(path: string) {
     texture.generateMipmaps = true;
     return texture;
 }
+
+export function getCloneLerpColor(color1: THREE.Color, color2: THREE.Color, lerp: number) {
+    return color1.clone().lerp(color2, lerp);
+}

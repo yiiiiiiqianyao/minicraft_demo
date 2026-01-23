@@ -184,6 +184,14 @@ export function updatePositionGUI(position: THREE.Vector3) {
     }
 }
 
+// 更新当前的时间
+export function updateDayTimeGUI(hour: number) {
+  const dayTimeElement = document.getElementById("day-time");
+  if (dayTimeElement) {
+    dayTimeElement.innerHTML = `Day Time Hour: ${hour}`;
+  }
+}
+
 export function updateProgressGUI(percentLoaded: number) {
   const progressBar = document.getElementById("loading-progress-bar");
   if (progressBar) {

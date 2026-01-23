@@ -11,7 +11,10 @@ export const uniforms = {
     exponent: { type: "f", value: 0.3 },
 };
 
-export const sunSettings = {
+export const SunSettings = {
   distance: 400,
-  cycleLength: 600,
+  /**@desc 一天的时间长度 单位：秒 */
+  // cycleLength: 600,
+  // cycleLength: 100,
+  cycleLength: 12 * 60, // 一昼夜 12 min
 }

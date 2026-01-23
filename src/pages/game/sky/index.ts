@@ -1,7 +1,9 @@
 import * as THREE from "three";
-import { Player } from "../player/Player";
 import { fragmentShader, vertexShader } from "./shader";
-import { dayColor, nightColor, sunsetColor, sunSettings, uniforms } from "./literal";
+import { SunSettings, uniforms } from "./literal";
+import { GameTimeManager, hourDuration, ShadowUpdateDuration } from "../time";
+import { getBottomColor, getTopColor } from "./utils";
+import { PlayerParams } from "../player/literal";
 
 export class SkyManager {
   scene!: THREE.Scene;
@@ -68,95 +70,54 @@ export class SkyManager {
     return { sun, sunHelper, shadowHelper };
   }
 
-  updateSunPosition(angle: number, player: Player) {
-    const sunX = sunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
-    const sunY = sunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
-    this.sun.position.set(sunX, sunY, player.camera.position.z); // Update the position of the sun
-    this.sun.position.add(player.camera.position);
+  updateSunPosition(angle: number) { 
+    if (PlayerParams.playerInstance) {
+      const sunX = SunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
+      const sunY = SunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
+      const playerPosition = PlayerParams.position;
 
-    this.sun.target.position.copy(player.camera.position);
-    this.sun.target.updateMatrixWorld();
+      this.sun.position.set(sunX, sunY, playerPosition.z); // Update the position of the sun
+      this.sun.position.add(playerPosition);
 
-    this.sunHelper.update();
-    this.shadowHelper.update();
+      this.sun.target.position.copy(playerPosition);
+      this.sun.target.updateMatrixWorld();
+
+      this.sunHelper.update();
+      this.shadowHelper.update();
+    }
   }
 
-  updateSkyColor(clock: THREE.Clock, player: Player) {
-    const elapsedTime = clock.getElapsedTime();
-    const cycleDuration = sunSettings.cycleLength; // Duration of a day in seconds
-    const cycleTime = elapsedTime % cycleDuration;
-    const { sun, sky } = this;
-    let topColor: THREE.Color;
-    let bottomColor: THREE.Color;
-
-    if (cycleTime < cycleDuration / 2) {
-      // Day time
-      topColor = dayColor
-        .clone()
-        .lerp(nightColor, cycleTime / (cycleDuration / 2));
-      sun.intensity = 1 - cycleTime / (cycleDuration / 2); // Sun intensity decreases as the day progresses
-    } else {
-      // Night time
-      topColor = nightColor
-        .clone()
-        .lerp(
-          dayColor,
-          (cycleTime - cycleDuration / 2) / (cycleDuration / 2)
-        );
-      sun.intensity =
-        (cycleTime - cycleDuration / 2) / (cycleDuration / 2); // Sun intensity increases as the night progresses
-    }
-
-    const dayStart = 0;
-    const sunsetStart = cycleDuration * 0.4; // Start sunset at 40% of the cycle
-    const nightStart = cycleDuration * 0.5; // Start night at 50% of the cycle
-    const sunriseStart = cycleDuration * 0.9; // Start sunrise at 90% of the cycle
-
-    if (cycleTime >= dayStart && cycleTime < sunsetStart) {
-      // Day time
-      bottomColor = dayColor
-        .clone()
-        .lerp(
-          sunsetColor,
-          (cycleTime - dayStart) / (sunsetStart - dayStart)
-        );
-    } else if (cycleTime >= sunsetStart && cycleTime < nightStart) {
-      // Sunset
-      bottomColor = sunsetColor
-        .clone()
-        .lerp(
-          nightColor,
-          (cycleTime - sunsetStart) / (nightStart - sunsetStart)
-        );
-    } else if (cycleTime >= nightStart && cycleTime < sunriseStart) {
-      // Night time
-      bottomColor = nightColor
-        .clone()
-        .lerp(
-          sunsetColor,
-          (cycleTime - nightStart) / (sunriseStart - nightStart)
-        );
-    } else {
-      // Sunrise
-      bottomColor = sunsetColor
-        .clone()
-        .lerp(
-          dayColor,
-          (cycleTime - sunriseStart) / (cycleDuration - sunriseStart)
-        );
-    }
-
-    (sky.material as THREE.ShaderMaterial).uniforms.topColor.value = topColor;
-    (sky.material as THREE.ShaderMaterial).uniforms.bottomColor.value = bottomColor;
+  updateSkyColor() {
+    const { topColor, sunIntensity } = getTopColor();
+    this.sun.intensity = sunIntensity; 
+    
+    const bottomColor = getBottomColor();
+    
+    const skyMaterial = this.sky.material as THREE.ShaderMaterial;
+    skyMaterial.uniforms.topColor.value = topColor;
+    skyMaterial.uniforms.bottomColor.value = bottomColor;
 
     // Desaturate the fog slightly
     this.scene.fog?.color.copy(topColor).multiplyScalar(0.2);
 
-    if (performance.now() - this.lastShadowUpdate < sunSettings.cycleLength) return;
-
-    const sunAngle =
-      ((2 * Math.PI) / cycleDuration) * (cycleTime + cycleDuration / 6); // Calculate the angle of the sun based on the cycle time with a phase shift of T/4
-    this.updateSunPosition(sunAngle, player);
+    // 凌晨 4 点到晚上 20 点, 太阳角度变化
+    // const anglePreSecond = Math.PI / (SunSettings.cycleLength * (16 / 24));
+    if (performance.now() - this.lastShadowUpdate < ShadowUpdateDuration) return;
+    /**
+     * @desc 计算太阳的角度
+     * 6 点钟 开始 日出
+     * 14 点钟 太阳垂直向上 90 度的位置
+     * 18 点钟 开始 日落
+     * 20 点钟 开始 晚上开始
+     */
+    const dayTime = GameTimeManager.currentDayTime;
+    if(dayTime < 4 * hourDuration || dayTime > 20 * hourDuration) {
+      this.updateSunPosition(-1);
+    } else {
+      const sunAngle =  (dayTime - 4 * hourDuration) / (16 * hourDuration) * Math.PI;
+      this.updateSunPosition(sunAngle);
+    }
+    GameTimeManager.updateDayHourGUI();
 
     this.lastShadowUpdate = performance.now();
   }

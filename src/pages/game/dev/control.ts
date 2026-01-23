@@ -8,4 +8,5 @@ export class DevControl {
     static chunkWireframeMode = false;
     static worldType = GlobalProps.world || 'terrain'; // 'flat'
     static physicsHelperVisible = GlobalProps.physics_helper === '1' ? true : false;
+    static hour = GlobalProps.hour ? Number(GlobalProps.hour) : undefined;
 }

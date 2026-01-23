@@ -11,11 +11,12 @@ import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
 import { Physics } from "./physics";
 import { Engine } from "./engine";
-import { sunSettings } from "./sky/literal";
+import { SunSettings } from "./sky/literal";
 import { PhysicsParams } from "./physics/literal";
 import { ChunkParams } from "./world/chunk/literal";
 import { PlayerInitPosition } from "./player/literal";
 import { BlockID } from "./Block";
+import { GameTimeManager, hourDuration } from "./time";
 
 export default class Game {
   static v = -1;
@@ -24,7 +25,6 @@ export default class Game {
   private orbitCamera!: THREE.PerspectiveCamera;
 
   private controls!: OrbitControls;
-  private clock!: THREE.Clock;
 
   private skyManager!: SkyManager;
   private world!: World;
@@ -36,7 +36,6 @@ export default class Game {
 
   constructor() {
     this.previousTime = performance.now();
-    this.clock = new THREE.Clock();
     initMainMenu(() => {
       this.initScene();
       // this.initListeners();
@@ -63,7 +62,7 @@ export default class Game {
     this.player = new Player(this.scene, this.world);
     this.physics = new Physics(this.scene, this.player, this.world);
 
-    this.skyManager.updateSunPosition(0, this.player);
+    GameTimeManager.startTime = hourDuration * 6;
     this.world.onLoad = () => {
       this.onStart();
     }
@@ -75,7 +74,7 @@ export default class Game {
         this.physics,
         this.scene,
         this.renderer,
-        sunSettings,
+        SunSettings,
         this.skyManager.sunHelper,
         this.skyManager.shadowHelper
       );
@@ -112,7 +111,7 @@ export default class Game {
     });
 
     // TODO 更新天空应该放置在更新世界中
-    this.skyManager.updateSkyColor(this.clock, this.player);
+    this.skyManager.updateSkyColor();
 
     // 更新物理模拟
     this.physics.update(deltaTime);
