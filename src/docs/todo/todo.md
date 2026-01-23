@@ -57,10 +57,3 @@
 ## 多图层设计
 - [ ✅ ] 不同图层的渲染顺序
 - [ ✅ ] 基于图层的拾取优化
-
-## dev tools
-- [ ✅ ] chunk helper
-- [ ✅ ] flat
-- [  ] 时间控制，支持主动设置当前时间 & 时间拖动
-
-- draw calls: https://discourse.threejs.org/t/where-can-i-see-the-number-of-draw-calls-per-frame/4311
