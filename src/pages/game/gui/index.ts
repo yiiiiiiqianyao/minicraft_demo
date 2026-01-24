@@ -8,6 +8,7 @@ import { oreConfig } from "../world/generate/resource";
 import { debounce } from "lodash";
 import { Physics } from "../physics/index.ts";
 import { ChunkParams } from "../world/chunk/literal.ts";
+import { isMobile } from "../../utils.ts";
 
 export * from './toolbar/toolbar.ts';
 
@@ -132,6 +133,10 @@ export function initMainMenu(onStart: () => void) {
   const loadingScreen = document.getElementById("loading");
   const startGameButton = document.getElementById("start-game");
   const handleClick = debounce(() => {
+    if (isMobile()) {
+      alert("移动端暂不支持打开游戏，请在PC端打开游戏");
+      return;
+    }
     if (mainMenu) mainMenu.style.display = "none";
     if (loadingScreen) loadingScreen.style.display = "block";
     AudioManager.play("gui.button.press");
