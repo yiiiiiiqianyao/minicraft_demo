@@ -1,4 +1,5 @@
 import { DevControl } from "../dev";
+import Game from "../Game";
 import { ToolBar } from "../gui";
 import { Action } from "./action";
 import { Player } from "./Player";
@@ -22,6 +23,8 @@ export class KeyboardInput {
   }
 
   onKeyDown(event: KeyboardEvent) {
+    if (!Game.isStarted) return;
+
     const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
     // 玩家移动 or 重置的时候 控制器解锁
     if (validKeys.includes(event.code) && !this.player.controls.isLocked) {
@@ -59,6 +62,8 @@ export class KeyboardInput {
   }
 
   onKeyUp(event: KeyboardEvent) {
+    if (!Game.isStarted) return;
+
     switch (event.code) {
       case "KeyW":
       case "KeyA":

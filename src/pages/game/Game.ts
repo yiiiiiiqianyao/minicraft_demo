@@ -17,6 +17,7 @@ import { GameTimeManager, hourDuration } from "./time";
 import { DevControl } from "./dev";
 
 export default class Game {
+  static isStarted = false;
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private orbitCamera!: THREE.PerspectiveCamera;
@@ -149,6 +150,7 @@ export default class Game {
 
   /**@desc world chunk 初始化完成后 开始游戏*/
   private onStart() {
+    Game.isStarted = true;
     // Tip: 设置游戏开始时间 12 点
     GameTimeManager.startTime = hourDuration * 12;
     // 初始化更新工具栏

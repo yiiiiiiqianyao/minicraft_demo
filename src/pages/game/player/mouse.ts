@@ -5,6 +5,8 @@ import { Player } from "./Player";
 import { Action } from "./action";
 import { ToolBar } from "../gui";
 import { worldToCeilBlockCoord } from "../world/chunk/utils";
+import { PhysicsParams } from "../physics/literal";
+import Game from "../Game";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -22,6 +24,9 @@ export class MouseInput {
 
     // 处理鼠标点击事件 目前是移除选中的方块和放置方块
     onMouseDown(event: MouseEvent) {
+        if (!Game.isStarted) return;
+        if (!PhysicsParams.enabled) return;
+
         const { player, world } = this;
         if (!player || !world) return;
         if (!player.controls.isLocked) return;
