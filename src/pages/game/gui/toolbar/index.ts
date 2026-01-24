@@ -2,18 +2,23 @@ import { BlockID } from "../../Block";
 import { BlockFactory } from "../../Block/base/BlockFactory";
 import { PlayerParams } from "../../player/literal";
 import { setActive } from "./dom";
-import { ToolBarMaxCount } from "./literal";
+import type { IToolBarItem } from "./interface";
+import { ToolBarItemMaxCount, ToolBarMaxCount } from "./literal";
+import { ToolBarFill, ToolBarFillActive, ToolBatContainsAvailable } from "./utils";
 
 /**@desc 玩家物品栏 */
 export class ToolBar {
     // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个，待升级为 IToolBarItem
-    static toolbar: BlockID[] = [
+    static toolbar: IToolBarItem[] = [
       // BlockID.Grass,
       // BlockID.Dirt,
       // BlockID.Stone,
       // BlockID.StoneBrick,
       // BlockID.RedstoneLamp,
-      BlockID.CoalOre,
+      // {
+      //   blockId: BlockID.CoalOre,
+      //   count: 1,
+      // }
       // BlockID.IronOre,
       // BlockID.OakLog,
       // BlockID.Leaves,
@@ -21,30 +26,64 @@ export class ToolBar {
     ];
     static activeToolbarIndex = 0;
     static get activeBlockId(): BlockID | undefined {
-      return ToolBar.toolbar[ToolBar.activeToolbarIndex];
+      return ToolBar.toolbar[ToolBar.activeToolbarIndex]?.blockId;
+    }
+    static get isToolStackFull() {
+      const count = ToolBar.toolbar.filter(item => item && item.blockId !== BlockID.Air).length;
+      return count === ToolBarMaxCount;
     }
 
     /**@desc 往玩家物品栏中添加物品 */
     static pushBlockId(blockId: BlockID) {
-      // TODO 待优化 目前一个格子只能放一个 后续除了工具之外的物品资源方块应该能重复放置
-      if (ToolBar.toolbar.length > ToolBarMaxCount) return;
-      for(let i = 0; i < ToolBar.toolbar.length; i++) {
-        if(ToolBar.toolbar[i] === BlockID.Air) {
-          ToolBar.toolbar[i] = blockId;
-          ToolBar.updateToolBarGUI();
-          PlayerParams.playerInstance?.updateHand();
-          return;
-        }
+      // 优先填充激活的栏目
+      if (ToolBar.activeBlockId === undefined || ToolBar.activeBlockId === BlockID.Air) {
+        ToolBarFillActive(blockId);
+        ToolBar.updateToolBarGUI();
+        PlayerParams.playerInstance?.updateHand();
+        return;
       }
-      // 如果物品栏中没有空位置 则直接添加到最后
-      ToolBar.toolbar.push(blockId);
+      if (ToolBar.activeBlockId === blockId && ToolBar.toolbar[ToolBar.activeToolbarIndex]!.count < ToolBarItemMaxCount) {
+        // 激活的栏目已存在该物品 且数量未达上限 则增加物品
+        ToolBar.toolbar[ToolBar.activeToolbarIndex]!.count++;
+        ToolBar.updateToolBarGUI();
+        return;
+      }
+      const { contains, toolBarItem } = ToolBatContainsAvailable(blockId);
+      if (contains && toolBarItem!.count === ToolBarItemMaxCount) {
+        // 物品栏中已存在该物品 且数量已达上限
+        if(ToolBar.isToolStackFull) {
+          // 物品栏已满 则不添加
+          return;
+        } else {
+          // 物品栏未满 则增加物品
+          ToolBarFill(blockId);
+        }
+      } else if (contains && toolBarItem!.count < ToolBarItemMaxCount) {
+        // 物品栏中已存在该物品 且数量未达上限
+        toolBarItem!.count++;
+      } else if(ToolBar.isToolStackFull) {
+        // 物品栏中已存在该物品 且物品栏已满 则不添加
+        return;
+      } else {
+        // 物品栏中不存在该物品 且物品栏未满 则直接添加
+        ToolBarFill(blockId);
+      }
       ToolBar.updateToolBarGUI();
       PlayerParams.playerInstance?.updateHand();
     }
 
-    /**@desc 从玩家物品栏中移除物品 */
+    /**@desc 从玩家物品栏中移除物品 - 当前激活的栏目中移除 */
     static removeBlockId() {
-      ToolBar.toolbar.splice(ToolBar.activeToolbarIndex, 1, BlockID.Air);
+      if (ToolBar.activeBlockId === undefined || ToolBar.activeBlockId === BlockID.Air) return;
+      const activeToolBarItem = ToolBar.toolbar[ToolBar.activeToolbarIndex];
+      if(activeToolBarItem.count > 1) {
+        activeToolBarItem.count--;
+      } else {
+        ToolBar.toolbar.splice(ToolBar.activeToolbarIndex, 1, {
+          blockId: BlockID.Air,
+          count: 0,
+        });
+      }
       ToolBar.updateToolBarGUI();
       PlayerParams.playerInstance?.updateHand();
     }
@@ -70,15 +109,18 @@ export class ToolBar {
 
     /**@desc 更新玩家物品栏中 block 对应的 ui */
     static updateToolBarGUI() {
-      for (let i = 1; i <= ToolBarMaxCount; i++) {
+      for (let i = 1; i <= ToolBar.toolbar.length; i++) {
         const slot = document.getElementById(`toolbar-slot-${i}`);
         if (slot) {
-          const blockId = ToolBar.toolbar[i - 1];
-          if (blockId !== undefined && blockId !== BlockID.Air) {
-            slot.style.backgroundImage = `url('${BlockFactory.getBlock(blockId).uiTexture}')`;
-          } else {
+          const toolItem = ToolBar.toolbar[i - 1];
+          if (!toolItem || toolItem.blockId === BlockID.Air) {
             slot.style.backgroundImage = '';
+            slot.innerHTML = '';
           }
+          // console.log('updateToolBarGUI toolItem', toolItem)
+          // 其他情况 则显示对应的 block 贴图
+          slot.style.backgroundImage = `url('${BlockFactory.getBlock(toolItem.blockId).uiTexture}')`;
+          slot.innerHTML = toolItem.count > 1 ? `<div class="toolbar-count">${toolItem.count}</div>` : '';
         }
       }
     }

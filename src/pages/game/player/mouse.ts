@@ -54,9 +54,9 @@ export class MouseInput {
 
     /**@desc 放置一个方块 */
     private handlePlacement() {
-        const { world, player } = this;
-        // 当前玩家手上没有方块
+        // 工具栏当前选中的栏目中为空 则不执行放置操作
         if (!ToolBar.activeBlockId) return;
+        const { world, player } = this;
         const playerPos = new THREE.Vector3(
         Math.floor(player.position.x),
         Math.floor(player.position.y) - PlayerParams.halfHeight,

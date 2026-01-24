@@ -108,7 +108,7 @@ export class Selector {
         if (!PlayerParams.selectedCoords || !intersection.normal) return;
         // TODO 待优化
         // TODO flower 类型的方块 放置坐标位置错误 后续需要修复
-        if (ToolBar.activeBlockId !== BlockID.Air) {
+        if (ToolBar.activeBlockId !== undefined && ToolBar.activeBlockId !== BlockID.Air) {
             // Update block placement coords to be 1 block over in the direction of the normal
             Action.blockPlacementCoords = PlayerParams.selectedCoords
             .clone()

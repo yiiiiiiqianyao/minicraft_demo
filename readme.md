@@ -1,7 +1,7 @@
 # MC Game Demo
 
 ## 基础设置
-- 进入游戏的时候，设置的开始时间为早上 6 点
+- 进入游戏的时候，设置的开始时间为早上 12 点
 - 游戏时间一昼夜为 12 min
 ### 版本
 - experience: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/dev/mc/index.html

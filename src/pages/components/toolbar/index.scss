@@ -30,6 +30,15 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+
+    .toolbar-count {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
   }
 
   #toolbar-slot-1 {

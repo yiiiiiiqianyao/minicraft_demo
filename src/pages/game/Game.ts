@@ -59,8 +59,6 @@ export default class Game {
     this.player = new Player(this.scene, this.world);
     this.physics = new Physics(this.scene, this.player, this.world);
 
-    // Tip: 设置游戏开始时间 6点
-    GameTimeManager.startTime = hourDuration * 6;
     this.world.onLoad = () => {
       this.onStart();
     }
@@ -151,6 +149,8 @@ export default class Game {
 
   /**@desc world chunk 初始化完成后 开始游戏*/
   private onStart() {
+    // Tip: 设置游戏开始时间 12 点
+    GameTimeManager.startTime = hourDuration * 12;
     // 初始化更新工具栏
     ToolBar.updateToolBarGUI();
     
