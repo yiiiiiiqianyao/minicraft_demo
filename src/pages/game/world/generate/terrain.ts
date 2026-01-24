@@ -3,6 +3,7 @@ import { World } from "../World";
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
 import type { IWorldParams } from "../interface";
+import { DevControl } from "../../dev";
 
 /**
  * Generates the terrain data
@@ -63,6 +64,9 @@ export const generateTerrain = (
         } else if (y === terrainHeight) {
           // TODO 暂时作为地表的方块
           input[x][y][z] = BlockID.Grass;
+          if(DevControl.showBorder && (x === 0 || z === 0)) {
+            input[x][y][z] = BlockID.Bedrock;
+          }
         } else if (y > terrainHeight) {
           input[x][y][z] = BlockID.Air;
         }

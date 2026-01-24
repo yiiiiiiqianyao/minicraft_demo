@@ -13,11 +13,11 @@ export class ToolBar {
       // BlockID.Stone,
       // BlockID.StoneBrick,
       // BlockID.RedstoneLamp,
-      // BlockID.CoalOre,
+      BlockID.CoalOre,
       // BlockID.IronOre,
       // BlockID.OakLog,
       // BlockID.Leaves,
-      BlockID.FlowerRose
+      // BlockID.FlowerRose
     ];
     static activeToolbarIndex = 0;
     static get activeBlockId(): BlockID | undefined {

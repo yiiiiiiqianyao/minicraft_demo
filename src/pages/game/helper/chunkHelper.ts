@@ -10,7 +10,7 @@ function initChunkHelper() {
     new THREE.BoxGeometry(ChunkParams.width, ChunkParams.height, ChunkParams.width), 
     new THREE.MeshBasicMaterial({
         color: new THREE.Color(1, 1, 1),
-        opacity: 0.3,
+        opacity: 0.1,
         transparent: true,
     }))
     chunkHelper.userData.isActive = false;

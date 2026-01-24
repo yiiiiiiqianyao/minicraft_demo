@@ -1,4 +1,9 @@
+import * as THREE from "three";
+import { getInstancedGeometry } from "../../engine/geometry";
 import { ChunkParams } from "./literal";
+import { DevControl } from "../../dev";
+import { wireframeMaterial } from "../../engine/material";
+import type { Block, RenderGeometry } from "../../Block/base/Block";
 
 /**
  * 世界坐标转 chunk xz 坐标
@@ -86,4 +91,22 @@ export function worldToCeilBlockCoord(x: number, y: number, z: number) {
 
 function roundToHalf(num: number) {
   return Math.round(num * 2) / 2;
+}
+
+export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
+  const { maxCount } = ChunkParams;
+  const { chunkHelperVisible, chunkWireframeMode } = DevControl;
+  const blockGeometry = blockEntity.geometry;
+  if(chunkHelperVisible) { // make dev chunk
+      return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+    new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),
+        maxCount
+      )
+    } else {
+      const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
+      return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+        material,
+        maxCount
+      );
+    }
 }

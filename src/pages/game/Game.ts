@@ -61,6 +61,7 @@ export default class Game {
     this.player = new Player(this.scene, this.world);
     this.physics = new Physics(this.scene, this.player, this.world);
 
+    // Tip: 设置游戏开始时间 6点
     GameTimeManager.startTime = hourDuration * 6;
     this.world.onLoad = () => {
       this.onStart();

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import * as THREE from "three";
 import audioManager from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
@@ -9,10 +8,9 @@ import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
-import { wireframeMaterial } from "../engine/material";
 import { InstanceMeshAdd } from "./chunk/instance";
-import { getInstancedGeometry } from "../engine/geometry";
 import type { IInstanceData, IWorldParams } from "./interface";
+import { initChunkMesh } from "./chunk/utils";
 
 export class WorldChunk extends THREE.Group {
   data: IInstanceData[][][] = [];
@@ -111,33 +109,15 @@ export class WorldChunk extends THREE.Group {
   // 生成 chunk 中的 block 对应的 mesh
   generateMeshes(data: BlockID[][][]) {
     const { width, height } = ChunkParams;
-    const { chunkHelperVisible, chunkWireframeMode } = DevControl;
     this.clear();
 
-    const maxCount = width * width * height;
     // Create lookup table where key is block id
     const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
 
     // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
     for (const blockId of blockIDValues) {
       const blockEntity = BlockFactory.getBlock(blockId);
-      const blockGeometry = blockEntity.geometry;
-      const initChunkMesh = () => {
-        if(chunkHelperVisible) { // make dev chunk
-          const helperColor = this.helperColor as THREE.Color;
-          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
-        new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),
-            maxCount
-          )
-        } else {
-          const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
-          return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
-            material,
-            maxCount
-          );
-        }
-      }
-      const mesh = initChunkMesh();
+      const mesh = initChunkMesh(blockEntity, this.helperColor as THREE.Color);
       mesh.name = blockEntity.constructor.name;
       mesh.count = 0;
       mesh.castShadow = !blockEntity.canPassThrough;
