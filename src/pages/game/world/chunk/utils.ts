@@ -3,7 +3,8 @@ import { getInstancedGeometry } from "../../engine/geometry";
 import { ChunkParams } from "./literal";
 import { DevControl } from "../../dev";
 import { wireframeMaterial } from "../../engine/material";
-import type { Block, RenderGeometry } from "../../Block/base/Block";
+import type { Block } from "../../Block/base/Block";
+import { BlockFactory, type BlockID } from "../../Block";
 
 /**
  * 世界坐标转 chunk xz 坐标
@@ -110,3 +111,31 @@ export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
       );
     }
 }
+
+export function getAroundBlocks(x: number, y: number, z: number) {
+  return [
+    [x - 1, y, z],
+    [x + 1, y, z],
+    [x, y - 1, z],
+    [x, y + 1, z],
+    [x, y, z - 1],
+    [x, y, z + 1],
+  ];
+}
+
+/**
+ * @desc Checks if the given coordinates are within the world bounds 判断点的坐标是否在 chunk 内
+*/
+export function inBounds(x: number, y: number, z: number): boolean {
+  const { width, height } = ChunkParams;
+  return (
+    x >= 0 &&
+    x < width &&
+    y >= 0 &&
+    y < height &&
+    z >= 0 &&
+    z < width
+  );
+}
+
+export const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);

@@ -10,10 +10,10 @@ import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
 import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData, IWorldParams } from "./interface";
-import { initChunkMesh } from "./chunk/utils";
-
+import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
 export class WorldChunk extends THREE.Group {
-  data: IInstanceData[][][] = [];
+  /**@desc chunk 中的 block 数据 */
+  private data: IInstanceData[][][] = [];
   params: IWorldParams;
   loaded: boolean;
   dataStore: DataStore;
@@ -45,9 +45,8 @@ export class WorldChunk extends THREE.Group {
     requestIdleCallback(() => {
         // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
-        // 
-        this.loadPlayerChanges();
-
+        // 从 data store 中加载玩家变更
+        this.loadGameChanges(data);
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
         this.loaded = true;
@@ -60,7 +59,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Initializes the terrain data
    */
-  initializeTerrain(data: BlockID[][][]) {
+  private initializeTerrain(data: BlockID[][][]) {
     const { width, height } = ChunkParams;
     this.data = [];
     for (let x = 0; x < width; x++) {
@@ -82,7 +81,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Loads player changes from the data store
    */
-  loadPlayerChanges() {
+  private loadGameChanges(data: BlockID[][][]) {
     const { width, height } = ChunkParams;
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
@@ -98,16 +97,19 @@ export class WorldChunk extends THREE.Group {
               y,
               z
             );
-            // console.log(`Overwriting block at ${x}, ${y}, ${z} to ${blockId}`);
+            // 如果数据 store 中的值与当前 chunk 中的值相同，则无需更新
+            if(blockId === this.getBlock(x, y, z)?.block) return;
+            // Tip: 更新/覆盖数据
             this.setBlockId(x, y, z, blockId);
+            data[x][y][z] = blockId;
           }
         }
       }
     }
   }
 
-  // 生成 chunk 中的 block 对应的 mesh
-  generateMeshes(data: BlockID[][][]) {
+  /**@desc 生成 chunk 中的 block 对应的 mesh */
+  private generateMeshes(data: BlockID[][][]) {
     const { width, height } = ChunkParams;
     this.clear();
 
@@ -135,7 +137,11 @@ export class WorldChunk extends THREE.Group {
           if (block === BlockID.Air) continue;
           // 当前 block 对应的 InstanceMesh
           const mesh = meshes[block];
-          if (!mesh) continue;
+          
+          if (!mesh) {
+            console.warn(`No mesh found for block ${block}`);
+            continue;
+          }
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
           if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
             const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
@@ -155,17 +161,21 @@ export class WorldChunk extends THREE.Group {
     // add chunk helper for dev test
     this.helper && this.add(this.helper);
   }
-  setBlockId(x: number, y: number, z: number, blockId: BlockID) {
-    if (this.inBounds(x, y, z)) {
+
+  /**@desc 设置 chunk 中 (x, y, z) 位置的 block id */
+  private setBlockId(x: number, y: number, z: number, blockId: BlockID) {
+    if (inBounds(x, y, z)) {
       this.data[x][y][z].block = blockId;
+      return true;
     }
+    return false;
   }
 
   /**
    * Gets the block data at (x, y, z) for this chunk
    */
   getBlock(x: number, y: number, z: number): IInstanceData | null {
-    if (this.inBounds(x, y, z)) {
+    if (inBounds(x, y, z)) {
       if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {
         return this.data[x][y][z];
       } else {
@@ -184,6 +194,7 @@ export class WorldChunk extends THREE.Group {
     if (this.getBlock(x, y, z)?.block === BlockID.Air) {
       this.setBlockId(x, y, z, blockId);
       this.addBlockInstance(x, y, z);
+      // 更新全局的数据存储
       this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);
       return true;
     } else {
@@ -200,7 +211,7 @@ export class WorldChunk extends THREE.Group {
     // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
     if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
     const blockId = block.block;
-    this.playBlockSound(blockId);
+    audioManager.playBlockSound(blockId);
     this.deleteBlockInstance(x, y, z, block);
     
     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
@@ -222,25 +233,6 @@ export class WorldChunk extends THREE.Group {
     );
   }
 
-  async playBlockSound(blockId: BlockID) {
-    switch (blockId) {
-      case BlockID.Grass:
-      case BlockID.Dirt:
-      case BlockID.Leaves:
-      case BlockID.TallGrass:
-      case BlockID.FlowerDandelion:
-      case BlockID.FlowerRose:
-        audioManager.play("dig.grass");
-        break;
-      case BlockID.OakLog:
-        audioManager.play("dig.wood");
-        break;
-      default:
-        audioManager.play("dig.stone");
-        break;
-    }
-  }
-
   /**
    * @desc Creates a new instance for the block at (x, y, z)
    */
@@ -259,7 +251,7 @@ export class WorldChunk extends THREE.Group {
       ) as THREE.InstancedMesh;
       if (mesh) {
         // 放置方块的时候播放对应的音效
-        this.playBlockSound(block.block);
+        audioManager.playBlockSound(block.block);
         const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
         if(ids) {
           this.setBlockInstanceIds(x, y, z, ids);
@@ -343,27 +335,12 @@ export class WorldChunk extends THREE.Group {
    * Sets the block instance data at (x, y, z) for this chunk
    */
   setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {
-    if (this.inBounds(x, y, z)) {
+    if (inBounds(x, y, z)) {
       if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {
         // console.log('setBlockInstanceIds:', x, y, z,instanceIds);
       }
       this.data[x][y][z].instanceIds = instanceIds;
     }
-  }
-
-  /**
-   * Checks if the given coordinates are within the world bounds
-   */
-  inBounds(x: number, y: number, z: number): boolean {
-    const { width, height } = ChunkParams;
-    return (
-      x >= 0 &&
-      x < width &&
-      y >= 0 &&
-      y < height &&
-      z >= 0 &&
-      z < width
-    );
   }
 
   /**
@@ -380,8 +357,6 @@ export class WorldChunk extends THREE.Group {
     const right = this.getBlock(x + 1, y, z);
     const front = this.getBlock(x, y, z + 1);
     const back = this.getBlock(x, y, z - 1);
-
-    const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);
 
     // If any of the block's sides are exposed, it's not obscured
     if (
@@ -412,16 +387,19 @@ export class WorldChunk extends THREE.Group {
    * @param z 
    * @returns 
    */
-  isBorderBlock(x: number, y: number, z: number): boolean {
+  private isBorderBlock(x: number, y: number, z: number): boolean {
     const { width, height } = ChunkParams;
     // TODO 看上去是一个优化判断 暂时待理解
     const up = this.getBlock(x, y + 1, z);
     const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;
-    // 
+    // Need when regenerate chunk 如果上方的方块不是空气，那么它不是边界
+    if (up?.block !== BlockID.Air) {
+      return false;
+    }
     if (upBlockClass?.canPassThrough) {
       return false;
     }
-
+    
     return (
       x === 0 ||
       x === width - 1 ||

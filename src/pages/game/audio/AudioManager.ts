@@ -68,6 +68,25 @@ class AudioManager {
         break;
     }
   }
+
+  async playBlockSound(blockId: BlockID) {
+    switch (blockId) {
+      case BlockID.Grass:
+      case BlockID.Dirt:
+      case BlockID.Leaves:
+      case BlockID.TallGrass:
+      case BlockID.FlowerDandelion:
+      case BlockID.FlowerRose:
+        audioManager.play("dig.grass");
+        break;
+      case BlockID.OakLog:
+        audioManager.play("dig.wood");
+        break;
+      default:
+        audioManager.play("dig.stone");
+        break;
+    }
+  }
 }
 
 const audioManager = new AudioManager();

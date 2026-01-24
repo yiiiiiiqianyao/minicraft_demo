@@ -19,7 +19,9 @@ export class World extends THREE.Group {
   static simplex: SimplexNoise;
   scene: THREE.Scene;
   seed: number;
+  /**@desc 世界 chunk 渲染距离 */
   renderDistance = 8;
+  // renderDistance = 1;
   asyncLoading = true;
   chunkQueue: { x: number; z: number }[];
   // minChunkLoadTimeout = 200;
