@@ -5,7 +5,7 @@ import type { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
 import { jitterNumber } from "../../utils";
 import { DropDt, DropLimit, MaxCount } from "./literal";
-import { Layers } from "../../engine";
+import { GameLayers } from "../../engine";
 import { ToolBar } from "../../gui";
 import { getDropInstancedGeometry } from "../../engine/geometry";
 
@@ -16,6 +16,8 @@ const DropRotateYQuaternion = new THREE.Quaternion().setFromAxisAngle(
     new THREE.Vector3(0, 1, 0), // Y轴方向
     0.006 // 旋转弧度
 )
+
+// TODO 在 regenerate chunk 的时候 也需要更新 chunk 中的掉落物
 /**@desc 掉落物的 Group */
 export class DropGroup extends THREE.Group {
     private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
@@ -40,7 +42,7 @@ export class DropGroup extends THREE.Group {
             const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
             mesh.name = block.constructor.name;
             mesh.count = 0;
-            mesh.layers.set(Layers.One);
+            mesh.layers.set(GameLayers.One);
             mesh.userData.type = 'drop';
             mesh.userData.blockId = blockId;
             mesh.userData.instanceCache = {};

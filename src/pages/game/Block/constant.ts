@@ -1,5 +1,4 @@
 /**@desc 方块ID 目前游戏中所有方块的类型 ID */
-// @ts-ignore
 export enum BlockID {
   Air = 0,
   Grass = 1,

@@ -1,5 +1,5 @@
-// @ts-ignore
 export enum MeshType {
+    // TODO 手持 Mesh 待补全
     /**@desc 模拟的“手” 默认 */
     Hand = 'Hand',
     /**@desc 玫瑰花 */

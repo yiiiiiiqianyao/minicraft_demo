@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { World } from "../world/World";
 import { PlayerParams, RayCenterScreen } from "./literal";
 import { getNearChunks } from "./utils";
-import { Layers } from "../engine";
+import { GameLayers } from "../engine";
 import { Action } from "./action";
 import { RenderGeometry } from "../Block/base/Block";
 import { ToolBar } from "../gui";
@@ -26,7 +26,7 @@ export class Selector {
                 0,
                 5
             );
-            this.rayCaster.layers.set(Layers.Zero);
+            this.rayCaster.layers.set(GameLayers.Zero);
         }
         return Selector._rayCaster;
     }

@@ -2,7 +2,8 @@ import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { ScreenViewer } from "../gui/viewer";
 import { PlayerInitPosition } from "./literal";
-import { Layers } from "../engine";
+import { GameLayers } from "../engine";
+
 export function initPlayerCamera() {
     const camera = new THREE.PerspectiveCamera(
     70,
@@ -13,8 +14,8 @@ export function initPlayerCamera() {
 
     camera.position.copy(PlayerInitPosition);
     camera.layers.disableAll();
-    camera.layers.enable(Layers.Zero);
-    camera.layers.enable(Layers.One);
+    camera.layers.enable(GameLayers.Zero);
+    camera.layers.enable(GameLayers.One);
     return camera;
 }
 

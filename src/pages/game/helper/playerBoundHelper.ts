@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { PlayerParams } from "../player/literal";
 import { wireframeMaterial } from "../engine/material";
-import { Layers } from "../engine";
+import { GameLayers } from "../engine";
 
 export function initBoundsHelper() {
   const { radius, height } = PlayerParams;
@@ -9,7 +9,7 @@ export function initBoundsHelper() {
   new THREE.CylinderGeometry(radius, radius, height, 16),
   wireframeMaterial,
   );
-  boundsHelper.layers.set(Layers.One);
+  boundsHelper.layers.set(GameLayers.One);
   return boundsHelper;
 }
 

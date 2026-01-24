@@ -2,7 +2,7 @@ import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { Scene } from "three";
 import { initPlayerCamera } from "./camera";
-import { Layers } from "../engine";
+import { GameLayers } from "../engine";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
 import { quadraticFunction } from "../engine/math";
 import { MeshPool } from "../engine/mesh";
@@ -44,7 +44,7 @@ export class PlayerGroup {
     initBasePoint() {
         const camera = initPlayerCamera();
         const cameraHelper = new THREE.CameraHelper(camera);
-        cameraHelper.layers.set(Layers.One);
+        cameraHelper.layers.set(GameLayers.One);
         cameraHelper.visible = false;
         this.controls = new PointerLockControls(camera, document.body);
         this.basePoint = camera;
