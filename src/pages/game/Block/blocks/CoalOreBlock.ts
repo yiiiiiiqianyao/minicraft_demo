@@ -1,18 +1,15 @@
-import * as THREE from "three";
-
 import { RenderGeometry } from "../base/Block";
 import { OreBlock } from "./OreBlock";
-import { textures, uiTextures } from "../textures";
+import { uiTextures } from "../textures";
 import { BlockID } from "../constant";
 import { oreConfig } from "../../world/generate/resource";
-
-const coalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
+import { CoalOreMaterial } from "../../engine/material";
 
 export const CoalOreBlock = class extends OreBlock {
   id = BlockID.CoalOre;
   scale = oreConfig["coal"].scale;
   scarcity = oreConfig["coal"].scarcity;
-  material = coalOreMaterial;
+  material = CoalOreMaterial;
   uiTexture = uiTextures.coal;
   geometry = RenderGeometry.Cube;
   transparent = false;

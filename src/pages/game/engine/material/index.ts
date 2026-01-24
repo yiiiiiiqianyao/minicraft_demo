@@ -15,6 +15,7 @@ const GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop 
 const DirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });
 const IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
+const CoalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
 
 // 树叶
 const LeavesMaterial = new THREE.MeshLambertMaterial({
@@ -49,10 +50,11 @@ export {
   wireframeMaterial,
   collisionHelperMaterial,
   // block material
+  GrassBlockMaterial,
   IronBlockMaterial,
   DirtBlockMaterial,
   StoneMaterial,
-  GrassBlockMaterial,
+  CoalOreMaterial,
   // 
   LeavesMaterial,
   TallGrassMaterial,

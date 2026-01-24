@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionMesh, initRoseMesh } from "./flower";
-import { initDirtBlockMesh, initGrassBlockMesh, initStoneBlockMesh } from "./block";
+import { initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initStoneBlockMesh } from "./block";
 
 /**@desc 网格池 */
 export class MeshPool {
@@ -22,6 +22,10 @@ export class MeshPool {
             mesh = initDirtBlockMesh();
         } else if(type === MeshType.StoneBlock) {
             mesh = initStoneBlockMesh();
+        } else if(type === MeshType.CoalOre) {
+            mesh = initCoalOreMesh();
+        } else if(type === MeshType.LeavesBlock) {
+            mesh = initLeavesBlockMesh();
         }
         MeshPool.pool.set(type, mesh);
         return mesh;

@@ -6,10 +6,14 @@ export enum MeshType {
     FlowerRose = "FlowerRose",
     /**@desc 蒲公英 */
     FlowerDandelion = "FlowerDandelion",
-    /**@desc 草块 */
+    /**@desc 树叶块 */
+    LeavesBlock = 'LeavesBlock',
+    /**@desc 草地块 */
     GrassBlock = 'GrassBlock',
     /**@desc 泥土块 */
     DirtBlock = 'DirtBlock',
     /**@desc 圆石块 */
     StoneBlock = 'StoneBlock',
+    /**@desc 煤炭块 */
+    CoalOre = 'CoalOre',
 }
