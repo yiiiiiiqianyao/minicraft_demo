@@ -39,6 +39,7 @@ export const generateChunk = async (
     data = generateTrees( data, params, chunkPos);
     // Tip: 高草和花朵都是一格的大小 不会跨越 chunk 因此不需要考虑 chunk position
     data = generateTallGrass( data, params);
+    // TODO 在生成 flower 的时候需要考虑唯一性 在 chunk 重新创建的时候 保持不变
     data = generateFlowers( data, params);
     return data;
 };

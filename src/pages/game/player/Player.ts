@@ -1,6 +1,6 @@
 
 import * as THREE from "three";
-import audioManager from "../audio/AudioManager";
+import { AudioManager } from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
 import { updatePositionGUI } from "../gui";
@@ -86,7 +86,7 @@ export class Player extends PlayerGroup {
     if (this.onGround && this.input.length() > 0) {
       const minTimeout = this.isSprinting ? 300 : 400;
       if (performance.now() - this.lastStepSoundPlayed > minTimeout) {
-        audioManager.playWalkSound(blockUnderneath);
+        AudioManager.playWalkSound(blockUnderneath);
         this.lastStepSoundPlayed = performance.now();
       }
     }

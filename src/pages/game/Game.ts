@@ -5,7 +5,7 @@ import { createUI, initMainMenu, swapMenuScreenGUI } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
-import audioManager from "./audio/AudioManager";
+import { AudioManager } from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
 import { Physics } from "./physics";
@@ -39,7 +39,7 @@ export default class Game {
       this.initScene();
       // this.initListeners();
       window.addEventListener("resize", this.onWindowResize.bind(this), false);
-      audioManager.playBGM();
+      AudioManager.playBGM();
     });
   }
 

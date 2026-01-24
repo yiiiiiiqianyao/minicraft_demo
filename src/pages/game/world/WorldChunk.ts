@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import audioManager from "../audio/AudioManager";
+import { AudioManager } from "../audio/AudioManager";
 import { BlockID, blockIDValues } from "../Block";
 import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
@@ -211,7 +211,7 @@ export class WorldChunk extends THREE.Group {
     // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
     if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
     const blockId = block.block;
-    audioManager.playBlockSound(blockId);
+    AudioManager.playBlockSound(blockId);
     this.deleteBlockInstance(x, y, z, block);
     
     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
@@ -251,7 +251,7 @@ export class WorldChunk extends THREE.Group {
       ) as THREE.InstancedMesh;
       if (mesh) {
         // 放置方块的时候播放对应的音效
-        audioManager.playBlockSound(block.block);
+        AudioManager.playBlockSound(block.block);
         const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
         if(ids) {
           this.setBlockInstanceIds(x, y, z, ids);

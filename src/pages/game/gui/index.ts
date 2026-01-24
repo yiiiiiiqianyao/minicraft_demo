@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { initStats } from "../dev";
-import audioManager from "../audio/AudioManager";
+import { AudioManager } from "../audio/AudioManager";
 import { oreConfig } from "../world/generate/resource";
 import { debounce } from "lodash";
 import { Physics } from "../physics/index.ts";
@@ -134,7 +134,7 @@ export function initMainMenu(onStart: () => void) {
   const handleClick = debounce(() => {
     if (mainMenu) mainMenu.style.display = "none";
     if (loadingScreen) loadingScreen.style.display = "block";
-    audioManager.play("gui.button.press");
+    AudioManager.play("gui.button.press");
     initStats();
     onStart();
   })
@@ -142,7 +142,7 @@ export function initMainMenu(onStart: () => void) {
 
   const githubButton = document.getElementById("github");
   githubButton?.addEventListener("click", () => {
-    audioManager.play("gui.button.press");
+    AudioManager.play("gui.button.press");
     window.open("https://github.com/yiiiiiiqianyao/minicraft_demo");
   });
 }

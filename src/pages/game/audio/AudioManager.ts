@@ -7,15 +7,8 @@ import SpriteWebm from "../../../assets/audio/sprite.webm";
 import SpriteMp3 from "../../../assets/audio/sprite.mp3";
 import AmbientBGM from "../../../assets/audio/ambient.mp3";
 
-class AudioManager {
-  sprite: Howl;
-
-  constructor() {
-    this.sprite = this.loadSounds();
-  }
-
-  loadSounds() {
-    return new Howl({
+export class AudioManager {
+  static sprite = new Howl({
       src: [
         SpriteWebm, 
         SpriteMp3
@@ -23,9 +16,8 @@ class AudioManager {
       sprite: spriteData.sprite as any,
       volume: 0.6,
     });
-  }
 
-  play(name: string) {
+  static play(name: string) {
     if (!(name in soundData)) {
       console.warn(`Unknown sound: ${name}`);
       return;
@@ -41,7 +33,7 @@ class AudioManager {
     this.sprite.play(soundName);
   }
 
-  playBGM() {
+  static playBGM() {
      const sound = new Howl({
       src: [AmbientBGM],
       loop: true,
@@ -50,7 +42,7 @@ class AudioManager {
     sound.play();
   }
 
-  playWalkSound(blockUnderneath: BlockID) {
+  static playWalkSound(blockUnderneath: BlockID) {
     switch (blockUnderneath) {
       case BlockID.Grass:
       case BlockID.Dirt:
@@ -69,7 +61,7 @@ class AudioManager {
     }
   }
 
-  async playBlockSound(blockId: BlockID) {
+  static async playBlockSound(blockId: BlockID) {
     switch (blockId) {
       case BlockID.Grass:
       case BlockID.Dirt:
@@ -77,17 +69,14 @@ class AudioManager {
       case BlockID.TallGrass:
       case BlockID.FlowerDandelion:
       case BlockID.FlowerRose:
-        audioManager.play("dig.grass");
+        AudioManager.play("dig.grass");
         break;
       case BlockID.OakLog:
-        audioManager.play("dig.wood");
+        AudioManager.play("dig.wood");
         break;
       default:
-        audioManager.play("dig.stone");
+        AudioManager.play("dig.stone");
         break;
     }
   }
 }
-
-const audioManager = new AudioManager();
-export default audioManager;
