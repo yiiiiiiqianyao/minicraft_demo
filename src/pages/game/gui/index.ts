@@ -10,7 +10,7 @@ import { Physics } from "../physics/index.ts";
 import { ChunkParams } from "../world/chunk/literal.ts";
 import { isMobile } from "../../utils.ts";
 
-export * from './toolbar/toolbar.ts';
+export * from './toolbar/index.ts';
 
 export function createUI(
   world: World,

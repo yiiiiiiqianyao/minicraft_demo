@@ -41,8 +41,6 @@ export class World extends THREE.Group {
     World.simplex = new SimplexNoise(World.rng);
     this.scene = scene;
     this.chunkQueue = [];
-
-    ToolBar.updateToolBarGUI();
   }
 
   /**
@@ -315,6 +313,18 @@ export class World extends THREE.Group {
         this.removeBlock(x, y + 1, z);
       }
     }
+  }
+
+  getGroundHeight(x: number, z: number) {
+    let groundHeight =  ChunkParams.height;
+    for (let y = ChunkParams.height; y > 0; y--) {
+      // TODO 后续判断是否是地面的方式需要优化
+      if (this.getBlock( x, y, z)?.block === BlockID.Grass) {
+        groundHeight = y;
+        break;
+      }
+    }
+    return groundHeight;
   }
 
   /**
