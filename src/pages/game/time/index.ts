@@ -5,7 +5,7 @@ import { hourDuration } from "./day";
 import { DevControl } from "../dev";
 
 const GameClock = new THREE.Clock();
-
+/**@desc 游戏的时间管理类 */
 export class GameTimeManager {
     static startTime = 0;
     /**@desc Get the current time of the day in seconds. 获取当前时间 在每一天中的时间 单位：秒 */

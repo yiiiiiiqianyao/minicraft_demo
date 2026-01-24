@@ -1,4 +1,4 @@
-import Game from "../Game";
+import { DevControl } from "../dev";
 import { ToolBar } from "../gui";
 import { Action } from "./action";
 import { Player } from "./Player";
@@ -52,8 +52,8 @@ export class KeyboardInput {
         Action.handlePlayerEvent(this.player, event.code);
         break;
       case "KeyV":
-        if(!Game.v) Game.v = 2;
-        Game.v = Game.v === 1 ? 2 : 1;
+        if (!DevControl.v) DevControl.v = 2;
+        DevControl.v = DevControl.v === 1 ? 2 : 1;
         break;
     }
   }

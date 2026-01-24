@@ -1,7 +1,9 @@
+import * as THREE from "three";
 import { GlobalProps } from "./query";
+import { updateRenderInfoGUI, updateStats } from ".";
 
 /**
- * 开发控制参数
+ *@desc 开发控制类
  */
 export class DevControl {
     static chunkHelperVisible = GlobalProps.chunk_helper === '1' ? true : false;
@@ -9,4 +11,11 @@ export class DevControl {
     static worldType = GlobalProps.world || 'terrain'; // 'flat'
     static physicsHelperVisible = GlobalProps.physics_helper === '1' ? true : false;
     static hour = GlobalProps.hour ? Number(GlobalProps.hour) : undefined;
+
+    static v = -1;
+
+    static update(renderer: THREE.WebGLRenderer) {
+        updateRenderInfoGUI(renderer);
+        updateStats();
+    }
 }

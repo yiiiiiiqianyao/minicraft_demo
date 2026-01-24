@@ -5,7 +5,6 @@ import { createUI, initMainMenu, swapMenuScreenGUI } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
-import { updateRenderInfoGUI, updateStats } from "./dev";
 import audioManager from "./audio/AudioManager";
 import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
@@ -17,9 +16,9 @@ import { ChunkParams } from "./world/chunk/literal";
 import { PlayerInitPosition } from "./player/literal";
 import { BlockID } from "./Block";
 import { GameTimeManager, hourDuration } from "./time";
+import { DevControl } from "./dev";
 
 export default class Game {
-  static v = -1;
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private orbitCamera!: THREE.PerspectiveCamera;
@@ -66,7 +65,7 @@ export default class Game {
     this.world.onLoad = () => {
       this.onStart();
     }
-        // TODO 暂时关掉 具体的调试打开待优化
+    // TODO 暂时关掉 具体的调试打开待优化
     if(Math.random() < 0) {
       createUI(
         this.world,
@@ -120,8 +119,7 @@ export default class Game {
     this.world.update();
 
     // update triangle count
-    updateRenderInfoGUI(this.renderer);
-    updateStats();
+    DevControl.update(this.renderer);
 
     TWEEN.update();    
     const renderCamera = this.getRenderCamera();
@@ -136,8 +134,8 @@ export default class Game {
     // TODO 第三人称视角 增加支持角色的控制移动
     // player.controls.isLocked === true 第一人称模式
     // player.controls.isLocked === false 观察者模式
-    if(Game.v !== -1) {
-      if(Game.v === 1) {
+    if(DevControl.v !== -1) {
+      if(DevControl.v === 1) {
         return this.player.camera;
       } else {
         return this.orbitCamera;
