@@ -59,11 +59,11 @@ export class DropGroup extends THREE.Group {
         });
     }
 
-    drop(blockType: BlockID, x: number, y: number, z: number) {
+    drop(blockType: BlockID, x: number, y: number, z: number, forceUpdate = false) {
         const mesh = this.meshes[blockType];
         if (!mesh) return;
         // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
-        this.addInstance(mesh, x, y, z);
+        this.addInstance(mesh, x, y, z, forceUpdate);
         this.updateDropState(x, z);
     }
 
@@ -199,7 +199,7 @@ export class DropGroup extends THREE.Group {
      * @desc 增加一个 drop 实例
      * 一个 drop instance 对应一个实际的 THREE.Object
      */
-    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
+    private addInstance(mesh: THREE.InstancedMesh, x: number, y: number, z: number, forceUpdate = false) {
         // 给 drop 实例添加随机抖动
         const dropX = jitterNumber(x + 0.5, 0.1);
         const dropY = jitterNumber(y + 0.65, 0.05);
@@ -214,7 +214,7 @@ export class DropGroup extends THREE.Group {
         mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage); // 开启动态更新
         // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
         // Tip 在掉落 落地的时候计算
-        // mesh.computeBoundingSphere();
+        forceUpdate && mesh.computeBoundingSphere();
         const drop: IDrop = {
             dt: 0,
             // drop instance 对应的 uuid

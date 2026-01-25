@@ -4,6 +4,9 @@ import type { PlayerEventKey } from "./interface";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { World } from "../world/World";
 import { KeyboardInput } from "./keyboard";
+import { worldToChunkCoords } from "../world/chunk/utils";
+import { BlockID } from "../Block";
+import { ToolBar } from "../gui";
 
 /**
  * @desc 处理玩角色的动作 & 玩家的交互操作
@@ -43,6 +46,24 @@ export class Action {
             if (!chunk) return;
             chunk.dropGroup.attract(PlayerParams.position);
         });
+    }
+
+    /** @desc 玩家丢弃手上拿着的物品 */
+    static dropHandle(player: Player) {
+        if (ToolBar.activeBlockId === undefined || ToolBar.activeBlockId === BlockID.Air) return;
+        // TODO 丢弃的位置待优化
+        const v = new THREE.Vector3();
+        player.controls.getDirection(v);
+        v.multiplyScalar(1.5);
+        // const dropPosition = player.position.clone().add(v);
+        const dropX = player.position.x + v.x;
+        const dropY = player.position.y - 1.2;
+        const dropZ = player.position.z + v.z;
+        const { chunk: { x: chunkX, z: chunkZ }, block } = worldToChunkCoords(dropX, dropY, dropZ);
+        const chunk = player.world.getChunk(chunkX, chunkZ);
+        chunk?.dropGroup.drop(ToolBar.activeBlockId, block.x, dropY, block.z, true);
+        // 丢弃物品后 从工具栏中移除
+        ToolBar.removeBlockId();
     }
 }
 

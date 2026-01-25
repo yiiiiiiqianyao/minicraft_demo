@@ -6,7 +6,7 @@ import { DataStore } from "./DataStore";
 import { WorldChunk } from "./WorldChunk";
 import { getDefaultWorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
-import { ToolBar, updateProgressGUI } from "../gui";
+import { updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
@@ -146,7 +146,7 @@ export class World extends THREE.Group {
     // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
     if (!PlayerParams.currentChunk) return [];
     // console.log('chunkX, chunkZ', chunkX, chunkZ);
-    const {x: chunkX, z: chunkZ} = PlayerParams.currentChunk;
+    const { x: chunkX, z: chunkZ } = PlayerParams.currentChunk;
 
     const visibleChunks: { x: number; z: number }[] = [];
     const range = Array.from(

@@ -61,6 +61,12 @@ export class Player extends PlayerGroup {
 
     PlayerParams.playerInstance = this;
   }
+
+  getCurrentChunk() {
+    if (!PlayerParams.currentChunk) return null;
+    const { x, z } = PlayerParams.currentChunk;
+    return this.world.getChunk(x, z)
+  }
   
   /**
    * Apply a world delta velocity to the player
