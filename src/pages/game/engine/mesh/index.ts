@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionMesh, initRoseMesh } from "./flower";
-import { initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogMesh, initStoneBlockMesh } from "./block";
+import { initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogMesh, initStoneBlockMesh } from "./handHoldBlock";
 
 /**@desc 网格池 */
 export class MeshPool {
