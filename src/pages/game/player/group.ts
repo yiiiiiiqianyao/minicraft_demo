@@ -90,10 +90,11 @@ export class PlayerGroup {
                 case BlockID.Stone:
                     return this.handPoint.add(MeshPool.getMesh(MeshType.StoneBlock) as THREE.Mesh);
                 case BlockID.CoalOre:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.CoalOre) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.CoalOreBlock) as THREE.Mesh);
                 case BlockID.IronOre:
                 case BlockID.Bedrock:
                 case BlockID.OakLog:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.OakLogBlock) as THREE.Mesh);
                 case BlockID.Leaves:
                     return this.handPoint.add(MeshPool.getMesh(MeshType.LeavesBlock) as THREE.Mesh);
                 case BlockID.TallGrass:

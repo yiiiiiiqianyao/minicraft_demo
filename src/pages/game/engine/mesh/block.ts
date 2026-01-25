@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { CubeGeometry } from "../geometry";
-import { CoalOreMaterial, DirtBlockMaterial, GrassBlockMaterial, LeavesMaterial, StoneMaterial } from "../material";
+import { CoalOreMaterial, DirtBlockMaterial, GrassBlockMaterial, LeavesMaterial, OkaLogMaterial, StoneMaterial } from "../material";
 
 const CubeScale = 0.3;
 export function initGrassBlockMesh() {
@@ -25,6 +25,11 @@ export function initCoalOreMesh() {
 
 export function initLeavesBlockMesh() {
     const mesh = new THREE.Mesh(CubeGeometry, LeavesMaterial);
+    return setUp(mesh);
+}
+
+export function initOakLogMesh() {
+    const mesh = new THREE.Mesh(CubeGeometry, OkaLogMaterial);
     return setUp(mesh);
 }
 

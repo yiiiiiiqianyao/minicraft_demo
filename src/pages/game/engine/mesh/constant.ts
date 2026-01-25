@@ -15,5 +15,7 @@ export enum MeshType {
     /**@desc 圆石块 */
     StoneBlock = 'StoneBlock',
     /**@desc 煤炭块 */
-    CoalOre = 'CoalOre',
+    CoalOreBlock = 'CoalOreBlock',
+    /**@desc 橡木原木 */
+    OakLogBlock = 'OakLogBlock',
 }

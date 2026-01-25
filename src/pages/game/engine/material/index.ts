@@ -24,6 +24,22 @@ const LeavesMaterial = new THREE.MeshLambertMaterial({
 LeavesMaterial.transparent = true;
 LeavesMaterial.side = THREE.DoubleSide;
 
+// 橡木原木
+const oakLogSideMaterial = new THREE.MeshLambertMaterial({
+  map: textures.oakLogSide,
+});
+const oakLogTopMaterial = new THREE.MeshLambertMaterial({
+  map: textures.oakLogTop,
+});
+const OkaLogMaterial = [
+  oakLogSideMaterial, // right
+  oakLogSideMaterial, // left
+  oakLogTopMaterial, // top
+  oakLogTopMaterial, // bottom
+  oakLogSideMaterial, // front
+  oakLogSideMaterial, // back
+]
+
 // 长草
 const TallGrassMaterial = new THREE.MeshBasicMaterial({
   map: textures.tallGrass,
@@ -55,7 +71,8 @@ export {
   DirtBlockMaterial,
   StoneMaterial,
   CoalOreMaterial,
-  // 
+  // plants material
+  OkaLogMaterial,
   LeavesMaterial,
   TallGrassMaterial,
 }
