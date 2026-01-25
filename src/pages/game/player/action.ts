@@ -56,9 +56,9 @@ export class Action {
         player.controls.getDirection(v);
         v.multiplyScalar(1.5);
         // const dropPosition = player.position.clone().add(v);
-        const dropX = player.position.x + v.x;
+        const dropX = player.position.x + v.x - 0.5;
         const dropY = player.position.y - 1.2;
-        const dropZ = player.position.z + v.z;
+        const dropZ = player.position.z + v.z - 0.5;
         const { chunk: { x: chunkX, z: chunkZ }, block } = worldToChunkCoords(dropX, dropY, dropZ);
         const chunk = player.world.getChunk(chunkX, chunkZ);
         chunk?.dropGroup.drop(ToolBar.activeBlockId, block.x, dropY, block.z, true);
