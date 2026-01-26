@@ -89,6 +89,8 @@ export class MouseInput {
             ToolBar.removeBlockId();
             // 触发放置的动作
             PlayerParams.playerInstance?.placementHand();
+            // TODO update under block
+            // 若放置的 block 下方的方块是 grass 草方块，则草方块应该更新为泥土方块
         }        
     }
 }

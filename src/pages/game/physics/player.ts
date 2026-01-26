@@ -27,7 +27,7 @@ export class PlayerPhysics {
         const { player, world } = this;
         const { x: o_x, y: o_y, z: o_z } = this.cachePosition;
         // 获取玩家脚下的方块
-        const blockUnderneath = getBlockUnderneath(player, world)?.block || BlockID.Air;
+        const blockUnderneath = getBlockUnderneath(player, world)?.blockId || BlockID.Air;
         // 玩家重力模拟
         player.velocity.y += PhysicsParams.GRAVITY * PhysicsParams.stepSize;
         // 玩家输入模拟: 根据玩家输入更新玩家的速度
@@ -90,10 +90,10 @@ export class PlayerPhysics {
                     const blockData = world.getBlock(x, y, z);
                     if (!blockData) continue;
                     // If the block is solid, add it to the list of candidates
-                    const blockClass = BlockFactory.getBlock(blockData.block);
+                    const blockClass = BlockFactory.getBlock(blockData.blockId);
                     if (!blockClass || blockClass.canPassThrough) continue;
                     const aroundBlock = {
-                        block: blockData.block,
+                        block: blockData.blockId,
                         x: x + 0.5,
                         y: y + 0.5,
                         z: z + 0.5,

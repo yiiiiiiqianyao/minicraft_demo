@@ -279,7 +279,7 @@ export class World extends THREE.Group {
     // console.log('chunk', chunk);
     // console.log('blockToRemove', blockToRemove);
     // 不能破坏基岩 bedrock
-    if (blockToRemove?.block === BlockID.Bedrock) return;
+    if (blockToRemove?.blockId === BlockID.Bedrock) return;
     
     if (chunk && chunk.loaded) {
       // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
@@ -307,8 +307,8 @@ export class World extends THREE.Group {
       if (
         aboveBlock &&
         // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断
-        BlockFactory.getBlock(aboveBlock.block).canPassThrough &&
-        aboveBlock.block !== BlockID.Air
+        BlockFactory.getBlock(aboveBlock.blockId).canPassThrough &&
+        aboveBlock.blockId !== BlockID.Air
       ) {
         this.removeBlock(x, y + 1, z);
       }
@@ -319,7 +319,7 @@ export class World extends THREE.Group {
     let groundHeight =  ChunkParams.height;
     for (let y = ChunkParams.height; y > 0; y--) {
       // TODO 后续判断是否是地面的方式需要优化
-      if (this.getBlock( x, y, z)?.block === BlockID.Grass) {
+      if (this.getBlock( x, y, z)?.blockId === BlockID.Grass) {
         groundHeight = y;
         break;
       }

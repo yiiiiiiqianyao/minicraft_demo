@@ -7,9 +7,12 @@ import { Menu } from "./components/menu";
 import { Cursor } from "./components/cursor";
 import { EventSystem } from "./EventSystem";
 
+// current game version
+const version = 'mc_202601271224';
 export default function HomePage() {
   const [isGameStarted, setIsGameStarted] = useState(false)
   useEffect(() => {
+    console.info('version:', version);
     EventSystem.subscribe('GameLoaded', () => {
       setIsGameStarted(true);
     });

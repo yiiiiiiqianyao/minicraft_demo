@@ -68,8 +68,9 @@ export class WorldChunk extends THREE.Group {
         const row: IInstanceData[] = [];
         for (let z = 0; z < width; z++) {
           row.push({
-            block: data[x][y][z],
+            blockId: data[x][y][z],
             instanceIds: [],
+            blockData: {},
           });
         }
         slice.push(row);
@@ -98,7 +99,7 @@ export class WorldChunk extends THREE.Group {
               z
             );
             // 如果数据 store 中的值与当前 chunk 中的值相同，则无需更新
-            if(blockId === this.getBlock(x, y, z)?.block) return;
+            if(blockId === this.getBlock(x, y, z)?.blockId) return;
             // Tip: 更新/覆盖数据
             this.setBlockId(x, y, z, blockId);
             data[x][y][z] = blockId;
@@ -165,7 +166,7 @@ export class WorldChunk extends THREE.Group {
   /**@desc 设置 chunk 中 (x, y, z) 位置的 block id */
   private setBlockId(x: number, y: number, z: number, blockId: BlockID) {
     if (inBounds(x, y, z)) {
-      this.data[x][y][z].block = blockId;
+      this.data[x][y][z].blockId = blockId;
       return true;
     }
     return false;
@@ -191,7 +192,7 @@ export class WorldChunk extends THREE.Group {
    */
   addBlock(x: number, y: number, z: number, blockId: BlockID) {
     // Safety check that we aren't adding a block for one that already exists
-    if (this.getBlock(x, y, z)?.block === BlockID.Air) {
+    if (this.getBlock(x, y, z)?.blockId === BlockID.Air) {
       this.setBlockId(x, y, z, blockId);
       this.addBlockInstance(x, y, z);
       // 更新全局的数据存储
@@ -209,8 +210,8 @@ export class WorldChunk extends THREE.Group {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
     const block = this.getBlock(x, y, z);
     // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
-    if(!block || block.block === BlockID.Air || block.block === BlockID.Bedrock) return;
-    const blockId = block.block;
+    if(!block || block.blockId === BlockID.Air || block.blockId === BlockID.Bedrock) return;
+    const blockId = block.blockId;
     AudioManager.playBlockSound(blockId);
     this.deleteBlockInstance(x, y, z, block);
     
@@ -218,7 +219,7 @@ export class WorldChunk extends THREE.Group {
     const blockEntity = BlockFactory.getBlock(blockId);
     if(blockEntity.canDrop) {
       // 触发掉落物品
-      this.dropGroup.drop(block.block, x, y, z);
+      this.dropGroup.drop(block.blockId, x, y, z);
     }    
 
     this.setBlockId(x, y, z, BlockID.Air);
@@ -242,16 +243,16 @@ export class WorldChunk extends THREE.Group {
     // If the block is not air and doesn't have an instance id, create a new instance
     if (
       block &&
-      block.block !== BlockID.Air &&
+      block.blockId !== BlockID.Air &&
       block.instanceIds.length === 0
     ) {
-      const blockClass = BlockFactory.getBlock(block.block);
+      const blockClass = BlockFactory.getBlock(block.blockId);
       const mesh = this.children.find(
         (instanceMesh) => instanceMesh.name === blockClass.constructor.name
       ) as THREE.InstancedMesh;
       if (mesh) {
         // 放置方块的时候播放对应的音效
-        AudioManager.playBlockSound(block.block);
+        AudioManager.playBlockSound(block.blockId);
         const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
         if(ids) {
           this.setBlockInstanceIds(x, y, z, ids);
@@ -259,7 +260,7 @@ export class WorldChunk extends THREE.Group {
           // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
           mesh.computeBoundingSphere();
         } else {
-          console.warn(`Failed to add instance for block ${block.block}`);
+          console.warn(`Failed to add instance for block ${block.blockId}`);
         }
       }
     }
@@ -270,13 +271,13 @@ export class WorldChunk extends THREE.Group {
    */
   deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {
     const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);
-    if (block?.block === BlockID.Air || !block?.instanceIds.length) return;
+    if (block?.blockId === BlockID.Air || !block?.instanceIds.length) return;
 
     // Get the mesh of the block
     const mesh = this.children.find(
       (instanceMesh) =>
         instanceMesh.name ===
-        BlockFactory.getBlock(block.block).constructor.name
+        BlockFactory.getBlock(block.blockId).constructor.name
     ) as THREE.InstancedMesh;
 
     /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例
@@ -336,7 +337,7 @@ export class WorldChunk extends THREE.Group {
    */
   setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {
     if (inBounds(x, y, z)) {
-      if(this.data[x][y][z].block === BlockID.TallGrass && instanceIds.length === 1) {
+      if(this.data[x][y][z].blockId === BlockID.TallGrass && instanceIds.length === 1) {
         // console.log('setBlockInstanceIds:', x, y, z,instanceIds);
       }
       this.data[x][y][z].instanceIds = instanceIds;
@@ -366,12 +367,12 @@ export class WorldChunk extends THREE.Group {
       !right ||
       !front ||
       !back ||
-      getBlockClass(up.block).transparent ||
-      getBlockClass(down.block).transparent ||
-      getBlockClass(left.block).transparent ||
-      getBlockClass(right.block).transparent ||
-      getBlockClass(front.block).transparent ||
-      getBlockClass(back.block).transparent
+      getBlockClass(up.blockId).transparent ||
+      getBlockClass(down.blockId).transparent ||
+      getBlockClass(left.blockId).transparent ||
+      getBlockClass(right.blockId).transparent ||
+      getBlockClass(front.blockId).transparent ||
+      getBlockClass(back.blockId).transparent
     ) {
       return false;
     }
@@ -391,9 +392,9 @@ export class WorldChunk extends THREE.Group {
     const { width, height } = ChunkParams;
     // TODO 看上去是一个优化判断 暂时待理解
     const up = this.getBlock(x, y + 1, z);
-    const upBlockClass = up ? BlockFactory.getBlock(up.block) : null;
+    const upBlockClass = up ? BlockFactory.getBlock(up.blockId) : null;
     // Need when regenerate chunk 如果上方的方块不是空气，那么它不是边界
-    if (up?.block !== BlockID.Air) {
+    if (up?.blockId !== BlockID.Air) {
       return false;
     }
     if (upBlockClass?.canPassThrough) {

@@ -8,6 +8,7 @@ import { generateFlowers } from "./flower";
 import { ChunkParams } from "../chunk/literal";
 import type { IWorldParams } from "../interface";
 
+// TODO BlockID[][][] => IInstanceData[][][]
 const initEmptyChunk = () => {
   const { width, height } = ChunkParams;
   const data = new Array(width);

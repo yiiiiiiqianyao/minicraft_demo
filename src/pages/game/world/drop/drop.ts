@@ -167,7 +167,7 @@ export class DropGroup extends THREE.Group {
             drop.state = 'stable';
             return;
         }
-        const blockClass = BlockFactory.getBlock(underBlockData.block);
+        const blockClass = BlockFactory.getBlock(underBlockData.blockId);
         // 穿过下方的 block
         if (blockClass.canPassThrough) {
             const nextY = posY - DropDt;
