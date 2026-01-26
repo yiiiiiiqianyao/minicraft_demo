@@ -14,29 +14,24 @@ import { SunSettings } from "./sky/literal";
 import { PhysicsParams } from "./physics/literal";
 import { PlayerInitPosition } from "./player/literal";
 import { GameTimeManager, hourDuration } from "./time";
-import { DevControl } from "./dev";
+import { DevControl, initStats } from "./dev";
 
+/**@desc 游戏主类入口 */
 export default class Game {
   static isStarted = false;
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private orbitCamera!: THREE.PerspectiveCamera;
-
   private controls!: OrbitControls;
-
   private skyManager!: SkyManager;
   private world!: World;
   private player!: Player;
   private physics!: Physics;
-
-  private previousTime = 0;
   
 
   constructor() {
-    this.previousTime = performance.now();
     initMainMenu(() => {
       this.initScene();
-      // this.initListeners();
       window.addEventListener("resize", this.onWindowResize.bind(this), false);
       AudioManager.playBGM();
     });
@@ -59,7 +54,7 @@ export default class Game {
 
     this.player = new Player(this.scene, this.world);
     this.physics = new Physics(this.scene, this.player, this.world);
-
+    GameTimeManager.start();
     this.world.onLoad = () => {
       this.onStart();
     }
@@ -100,13 +95,7 @@ export default class Game {
 
   /**@desc 游戏主循环 */
   private draw() {
-    const currentTime = performance.now();
-    const deltaTime = (currentTime - this.previousTime) / 1000;
-
-    requestAnimationFrame(() => {
-      this.draw();
-    });
-
+    const deltaTime = GameTimeManager.update();
     // TODO 更新天空应该放置在更新世界中
     this.skyManager.updateSkyColor();
 
@@ -125,7 +114,9 @@ export default class Game {
     // 更新观察相机位置和目标位置
     updateOrbitControls(this.orbitCamera, this.controls, this.player);
 
-    this.previousTime = currentTime;
+    requestAnimationFrame(() => {
+      this.draw();
+    });
   }
 
   private getRenderCamera() {
@@ -152,7 +143,7 @@ export default class Game {
   private onStart() {
     Game.isStarted = true;
     // Tip: 设置游戏开始时间 12 点
-    GameTimeManager.startTime = hourDuration * 12;
+    GameTimeManager.startDayTime = hourDuration * 12;
     // 初始化更新工具栏
     ToolBar.updateToolBarGUI();
     
@@ -173,5 +164,7 @@ export default class Game {
 
     // 切换到游戏主界面
     swapMenuScreenGUI();
+
+    initStats();
   }
 }

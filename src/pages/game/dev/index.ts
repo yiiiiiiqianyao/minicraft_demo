@@ -2,8 +2,6 @@ import * as THREE from "three";
 // @ts-expect-error import umi
 import Stats from "three/examples/jsm/libs/stats.module";
 
-export * from './control';
-
 let triangleCount: HTMLElement | null = null;
 let triangleCountInnerHtml = '';
 let renderCalls:  HTMLElement | null = null;
@@ -81,3 +79,5 @@ export function initStats() {
 export function updateStats() {
     if (stats) stats.update();
 }
+
+export * from './control';

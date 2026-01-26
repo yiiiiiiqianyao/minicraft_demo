@@ -140,7 +140,6 @@ export function initMainMenu(onStart: () => void) {
     if (mainMenu) mainMenu.style.display = "none";
     if (loadingScreen) loadingScreen.style.display = "block";
     AudioManager.play("gui.button.press");
-    initStats();
     onStart();
   })
   startGameButton?.addEventListener("click", handleClick);
