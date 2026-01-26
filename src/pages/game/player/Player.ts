@@ -106,8 +106,6 @@ export class Player extends PlayerGroup {
     this.controls.moveForward(this.velocity.z * dt);
     // 根据速度 * 时间 更新玩家在垂直方向上的位置
     this.position.y += this.velocity.y * dt;
-
-    updatePositionGUI(this.position);
   }
 
   /**@desc 更新玩家 */
@@ -153,6 +151,7 @@ export class Player extends PlayerGroup {
     const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);
     updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);
 
+    updatePositionGUI(this.position);
     // 角色移动后检测吸收掉落的物品
     Action.absorbDrops(this.world);
   }
