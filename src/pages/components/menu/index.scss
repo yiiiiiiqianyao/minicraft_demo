@@ -1,0 +1,61 @@
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../../../assets/textures/dirt.png");
+  background-repeat: repeat;
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: white;
+    text-shadow: 1.5px 1.5px 0px rgba(75, 75, 75, 0.8);
+  }
+}
+
+#main-menu {
+  --btn-size: 30px;
+  width: calc(var(--btn-size) * 10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  img {
+    width: 130%;
+    height: auto;
+  }
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: var(--btn-size) calc(var(--btn-size) * 10) var(
+      --btn-size
+    );
+  grid-template-rows: repeat(3, var(--btn-size));
+  grid-template-areas: 
+  ". 		first 		."
+  ". 		second 		."
+  ". 		third 		.";
+  grid-gap: 8px;
+
+  & .mc-button:nth-child(1) {
+    grid-area: first;
+  }
+
+  & .mc-button:nth-child(2) {
+	grid-area: second;
+  }
+
+  & .mc-button:nth-child(3) {
+	grid-area: third;
+  }
+}

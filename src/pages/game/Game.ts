@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { createUI, initMainMenu, swapMenuScreenGUI, ToolBar } from "./gui";
+import { createUI, swapMenuScreenGUI, ToolBar } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
@@ -15,6 +15,8 @@ import { PhysicsParams } from "./physics/literal";
 import { PlayerInitPosition } from "./player/literal";
 import { GameTimeManager, hourDuration } from "./time";
 import { DevControl, initStats } from "./dev";
+import { EventSystem } from "../EventSystem";
+import { isMobile } from "../utils";
 
 /**@desc 游戏主类入口 */
 export default class Game {
@@ -30,7 +32,16 @@ export default class Game {
   
 
   constructor() {
-    initMainMenu(() => {
+    this.registerEvents();
+  }
+
+  registerEvents() {
+    EventSystem.subscribe('StartGame', () => {
+      if (isMobile()) {
+        alert("移动端暂不支持打开游戏，请在PC端打开游戏");
+        return;
+      }
+      AudioManager.play("gui.button.press");
       this.initScene();
       window.addEventListener("resize", this.onWindowResize.bind(this), false);
       AudioManager.playBGM();
@@ -166,5 +177,7 @@ export default class Game {
     swapMenuScreenGUI();
 
     initStats();
+    // 广播游戏加载完成事件
+    EventSystem.broadcast('GameLoaded');
   }
 }

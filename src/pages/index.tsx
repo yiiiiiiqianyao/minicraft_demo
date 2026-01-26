@@ -1,40 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Game from "./game/Game";
 import './index.scss';
 import { ToolBar } from "./components/toolbar";
-import { Loading } from "./components/loading";
 import { Debug } from "./components/debug";
-import { Logo } from "./components/logo";
+import { Menu } from "./components/menu";
+import { Cursor } from "./components/cursor";
+import { EventSystem } from "./EventSystem";
 
 export default function HomePage() {
+  const [isGameStarted, setIsGameStarted] = useState(false)
   useEffect(() => {
-   new Game();
+    EventSystem.subscribe('GameLoaded', () => {
+      setIsGameStarted(true);
+    });
+    new Game();
   }, []);
   return (
     <div id='canvas_wrap' className="_canvas_wrap">
       <Debug />
       <div id="ui">
-        <svg id="cursor" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 12H21M12 3L12 21" stroke="white" strokeWidth="2"/>
-        </svg>
+        <Cursor />
         <ToolBar />
       </div>
-      <div id="menu">
-        <div id="main-menu">
-          <Logo />
-          <div>
-            <div id="buttons">
-              <div className="mc-button full" tabIndex={0} role="button">
-                <div id="start-game" className="title">Create new world</div>
-              </div>
-              <div className="mc-button full" tabIndex={0} role="button">
-                <div id="github" className="title">View GitHub repo</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Loading />
-      </div>
+      {!isGameStarted && <Menu />}
     </div>
   );
 }

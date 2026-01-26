@@ -1,0 +1,15 @@
+  #loading {
+    user-select: none;
+  }
+
+  #loading-progress {
+    width: 200px;
+    height: 3px;
+    background: #808080;
+
+    #loading-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: #80ff80;
+    }
+  }

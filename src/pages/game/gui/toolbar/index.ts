@@ -117,7 +117,6 @@ export class ToolBar {
             slot.style.backgroundImage = '';
             slot.innerHTML = '';
           }
-          // console.log('updateToolBarGUI toolItem', toolItem)
           // 其他情况 则显示对应的 block 贴图
           slot.style.backgroundImage = `url('${BlockFactory.getBlock(toolItem.blockId).uiTexture}')`;
           slot.innerHTML = toolItem.count > 1 ? `<div class="toolbar-count">${toolItem.count}</div>` : '';

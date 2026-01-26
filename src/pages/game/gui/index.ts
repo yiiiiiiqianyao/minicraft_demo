@@ -2,13 +2,9 @@ import GUI from "lil-gui";
 import * as THREE from "three";
 import { Player } from "../player/Player";
 import { World } from "../world/World";
-import { initStats } from "../dev";
-import { AudioManager } from "../audio/AudioManager";
 import { oreConfig } from "../world/generate/resource";
-import { debounce } from "lodash";
 import { Physics } from "../physics/index.ts";
 import { ChunkParams } from "../world/chunk/literal.ts";
-import { isMobile } from "../../utils.ts";
 
 export * from './toolbar/index.ts';
 
@@ -126,29 +122,6 @@ export function createUI(
   }
 
   gui.add(world, "regenerate").name("Generate");
-}
-
-export function initMainMenu(onStart: () => void) {
-  const mainMenu = document.getElementById("main-menu");
-  const loadingScreen = document.getElementById("loading");
-  const startGameButton = document.getElementById("start-game");
-  const handleClick = debounce(() => {
-    if (isMobile()) {
-      alert("移动端暂不支持打开游戏，请在PC端打开游戏");
-      return;
-    }
-    if (mainMenu) mainMenu.style.display = "none";
-    if (loadingScreen) loadingScreen.style.display = "block";
-    AudioManager.play("gui.button.press");
-    onStart();
-  })
-  startGameButton?.addEventListener("click", handleClick);
-
-  const githubButton = document.getElementById("github");
-  githubButton?.addEventListener("click", () => {
-    AudioManager.play("gui.button.press");
-    window.open("https://github.com/yiiiiiiqianyao/minicraft_demo");
-  });
 }
 
 export function swapMenuScreenGUI() {
