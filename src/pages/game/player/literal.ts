@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import type { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from "./interface";
 import { Player } from "./Player";
+import type { IInstanceData } from "../world/interface";
 
 export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
 export class PlayerParams {
@@ -30,6 +31,8 @@ export class PlayerParams {
     static nearFourChunks: INearFourChunks = [];
     /**@desc 玩家当前活动的 chunkID 列表 1 or 4 */
     static activeChunks: IChunkKey[] = [];
+    /**@desc 玩家头顶上的方块 */
+    static upperNeathBlock: IInstanceData | null | undefined = null;
 }
 
 // 玩家视线中心 鼠标屏幕坐标

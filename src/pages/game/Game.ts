@@ -41,10 +41,9 @@ export default class Game {
         alert("移动端暂不支持打开游戏，请在PC端打开游戏");
         return;
       }
-      AudioManager.play("gui.button.press");
       this.initScene();
-      window.addEventListener("resize", this.onWindowResize.bind(this), false);
-      AudioManager.playBGM();
+      window.addEventListener("resize", this.onWindowResize, false);
+      AudioManager.play("gui.button.press");
     });
   }
 
@@ -82,10 +81,11 @@ export default class Game {
         this.skyManager.shadowHelper
       );
     }
+    // 开始绘制游戏循环
     this.draw();
   }
 
-  private onWindowResize() {
+  private onWindowResize = () => {
     const { width, height } = Engine.screenWrap.getBoundingClientRect();
     ScreenViewer.width = width;
     ScreenViewer.height = height;
@@ -175,7 +175,9 @@ export default class Game {
 
     // 切换到游戏主界面
     swapMenuScreenGUI();
-
+    // 播放背景音乐
+    AudioManager.playBGM();
+    // 初始化统计信息
     initStats();
     // 广播游戏加载完成事件
     EventSystem.broadcast('GameLoaded');

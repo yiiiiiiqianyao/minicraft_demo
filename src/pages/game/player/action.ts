@@ -25,7 +25,10 @@ export class Action {
                 handlePlayerMove(player, eventKey, isKeyDown);
                 break;
             case "Space": // jump
-                if(isKeyDown) {
+                // 只有在玩家头顶上的方块是空气时 才可以跳跃
+                if (PlayerParams.upperNeathBlock?.block !== BlockID.Air) return;
+
+                if (isKeyDown) {
                     KeyboardInput.spacePressed = true;
                 } else {
                     KeyboardInput.spacePressed = false;

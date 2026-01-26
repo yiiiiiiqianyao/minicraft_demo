@@ -8,6 +8,7 @@ import { PhysicsHelper } from "../helper";
 import { getBlockUnderneath } from "../player/utils";
 import type { Candidate, Collision } from "./interface";
 import { BlockFactory } from "../Block/base/BlockFactory";
+import { KeyboardInput } from "../player/keyboard";
 
 /**@desc 玩家的物理模拟 */
 export class PlayerPhysics {
@@ -147,6 +148,8 @@ export class PlayerPhysics {
                 normal = new THREE.Vector3(0, -Math.sign(dy), 0);
                 overlap = overlapY;
                 player.onGround = true;
+                // TIP: 避免空格跳跃后 松开空格失效的情况（触发反复跳跃）
+                KeyboardInput.spacePressed = false;
             } else {
                 normal = new THREE.Vector3(-dx, 0, -dz).normalize();
                 overlap = overlapXZ;

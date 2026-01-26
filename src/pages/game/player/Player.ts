@@ -15,6 +15,7 @@ import { updatePlayerNear } from "../helper/chunkHelper";
 import { updateCameraFOV } from "./camera";
 import { Selector } from "./selector";
 import { PlayerGroup } from "./group";
+import { getBlockUpperNeath } from "./utils";
 
 export class Player extends PlayerGroup {
   onGround = false;
@@ -142,6 +143,9 @@ export class Player extends PlayerGroup {
     
     // 更新角色所处的 currentChunk
     updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  
+
+    PlayerParams.upperNeathBlock = getBlockUpperNeath(this, this.world);
+
     // 更新角色所处的 chunk blockID
     // const ceilBlockCoords = worldToCeilBlockCoord(block.x, block.y, block.z);
     // updateBlockCoordGUI(ceilBlockCoords[0], ceilBlockCoords[1], ceilBlockCoords[2]);
