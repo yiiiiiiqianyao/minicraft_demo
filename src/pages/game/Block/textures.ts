@@ -1,21 +1,21 @@
 import { loadTexture } from "../engine/utils";
-import GrassSide from '../../../assets/textures/grass_side.png';
-import GrassTop from '../../../assets/textures/grass.png';
-import Dirt from '../../../assets/textures/dirt.png';
-import Stone from '../../../assets/textures/stone.png';
-import CoalOre from '../../../assets/textures/coal_ore.png';
-import IronOre from '../../../assets/textures/iron_ore.png';
-import BedRock from '../../../assets/textures/bedrock.png';
+import GrassSide from '../../../assets/textures/blocks/grass_side.png';
+import GrassTop from '../../../assets/textures/blocks/grass.png';
+import Dirt from '../../../assets/textures/blocks/dirt.png';
+import Stone from '../../../assets/textures/blocks/stone.png';
+import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
+import IronOre from '../../../assets/textures/blocks/iron_ore.png';
+import BedRock from '../../../assets/textures/blocks/bedrock.png';
 
-import OakLogSide from '../../../assets/textures/oak_log_side.png';
-import OakLogTop from '../../../assets/textures/oak_log_top.png';
-import Leaves from '../../../assets/textures/leaves.png';
-import TallGrass from '../../../assets/textures/tall_grass.png';
-import FlowerRose from '../../../assets/textures/flower_rose.png';
-import FlowerDandelion from '../../../assets/textures/flower_dandelion.png';
+import OakLogSide from '../../../assets/textures/blocks/oak_log_side.png';
+import OakLogTop from '../../../assets/textures/blocks/oak_log_top.png';
+import Leaves from '../../../assets/textures/blocks/leaves.png';
+import TallGrass from '../../../assets/textures/plants/tall_grass.png';
+import FlowerRose from '../../../assets/textures/flowers/flower_rose.png';
+import FlowerDandelion from '../../../assets/textures/flowers/flower_dandelion.png';
 
-import RedStoneLamp from '../../../assets/textures/redstone_lamp.png';
-import StoneBrick from '../../../assets/textures/stonebrick.png';
+import RedStoneLamp from '../../../assets/textures/blocks/redstone_lamp.png';
+import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
 
 /**@desc for block texture */
 export const textures = {
@@ -36,22 +36,25 @@ export const textures = {
   stoneBrick: loadTexture(StoneBrick),
 };
 
-import GrassBlock from '../../../assets/textures/grass_block.png';
-import DirtBlock from '../../../assets/textures/dirt_block.png';
-import StoneBlock from '../../../assets/textures/stone_block.png';
-import CoalOreBlock from '../../../assets/textures/coal_block.png';
-import IronOreBlock from '../../../assets/textures/iron_block.png';
-import BedRockBlock from '../../../assets/textures/bedrock_block.png';
-import OakLogBlock from '../../../assets/textures/oak_log_block.png';
+import GrassBlock from '../../../assets/textures/items/grass_block.png';
+import DirtBlock from '../../../assets/textures/items/dirt_block.png';
+import StoneBlock from '../../../assets/textures/items/stone_block.png';
+import CoalOreBlock from '../../../assets/textures/items/coal_block.png';
+import IronOreBlock from '../../../assets/textures/items/iron_block.png';
+import BedRockBlock from '../../../assets/textures/items/bedrock_block.png';
+import OakLogBlock from '../../../assets/textures/items/oak_log_block.png';
 
-import LeavesBlock from '../../../assets/textures/leaves_block.png';
-import TallGrassBlock from '../../../assets/textures/tall_grass_block.png';
-import FlowerRoseBlock from '../../../assets/textures/flower_rose.png';
-import FlowerDandelionBlock from '../../../assets/textures/flower_dandelion.png';
+import LeavesBlock from '../../../assets/textures/items/leaves_block.png';
+import TallGrassBlock from '../../../assets/textures/items/tall_grass_block.png';
+import FlowerRoseBlock from '../../../assets/textures/flowers/flower_rose.png';
+import FlowerDandelionBlock from '../../../assets/textures/flowers/flower_dandelion.png';
 
-import RedStoneLampBlock from '../../../assets/textures/redstone_lamp_block.png';
-import StoneBrickBlock from '../../../assets/textures/stonebrick_block.png';
-/**@desc for ui */
+import RedStoneLampBlock from '../../../assets/textures/items/redstone_lamp_block.png';
+import StoneBrickBlock from '../../../assets/textures/items/stonebrick_block.png';
+
+// import CraftBlock from '../../assets/textures/'
+
+/**@desc for gui */
 export const uiTextures = {
   grass: GrassBlock,
   dirt: DirtBlock,

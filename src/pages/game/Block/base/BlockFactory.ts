@@ -43,7 +43,9 @@ export class BlockFactory {
       if (BlockType) {
         this.blockInstances[id] = new BlockType();
       } else {
-        throw new Error(`No block type registered for ID ${id}`);
+        // throw new Error(`No block type registered for ID ${id}`);
+        this.blockInstances[id] = new AirBlock();
+        console.warn(`No block type registered for ID ${id}, using AirBlock instead`);
       }
     }
     return this.blockInstances[id];

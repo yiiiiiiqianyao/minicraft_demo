@@ -13,26 +13,11 @@ export enum BlockID {
   FlowerRose = 10,
   FlowerDandelion = 11,
   RedstoneLamp = 12,
-  StoneBrick = 13,
+  StoneBrick = 13, // 石砖方块
+  CraftingTable = 14, // 工作台方块
 }
 
+/**@desc 所有方块ID 数组 */
 export const blockIDValues = Object.values(BlockID).filter(
       (value) => typeof value === "number"
     ) as BlockID[];
-
-export const blockIdToKey = {
-  [BlockID.Air]: "air",
-  [BlockID.Grass]: "grass", // 草方块（目前作为地面）
-  [BlockID.TallGrass]: "tall_grass", // 高草方块（草丛）
-  [BlockID.Dirt]: "dirt",
-  [BlockID.Stone]: "stone",
-  [BlockID.CoalOre]: "coal",
-  [BlockID.IronOre]: "iron",
-  [BlockID.Bedrock]: "bedrock", // 基岩 方块
-  [BlockID.OakLog]: "oak_log",
-  [BlockID.Leaves]: "leaves",
-  [BlockID.FlowerRose]: "flower_rose",
-  [BlockID.FlowerDandelion]: "flower_dandelion",
-  [BlockID.RedstoneLamp]: "redstone_lamp",
-  [BlockID.StoneBrick]: "stone_brick",
-};
