@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionMesh, initRoseMesh } from "./flower";
+import { initCreatingTableMesh } from "./objects";
 import { initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogMesh, initStoneBlockMesh } from "./handHoldBlock";
 
 /**@desc 网格池 */
@@ -28,6 +29,8 @@ export class MeshPool {
             mesh = initLeavesBlockMesh();
         } else if(type === MeshType.OakLogBlock) {
             mesh = initOakLogMesh();
+        } else if (type === MeshType.CraftingTable) {
+            mesh = initCreatingTableMesh();
         }
         MeshPool.pool.set(type, mesh);
         return mesh;

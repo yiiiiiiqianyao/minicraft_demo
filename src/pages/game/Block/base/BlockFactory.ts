@@ -15,8 +15,9 @@ import { StoneBrickBlock } from "../blocks/StoneBrickBlock";
 import { TallGrassBlock } from "../blocks/TallGrassBlock";
 
 import { BlockID } from "..";
+import { CraftBlock } from "../objects/CraftingBlock";
 
-// Flyweight pattern to avoid creating new block instances
+/** @desc 方块工厂类，用于创建方块实例 Flyweight pattern to avoid creating new block instances */
 export class BlockFactory {
   private static blockTypes: { [id: number]: any } = {
     [BlockID.Air]: AirBlock,
@@ -33,6 +34,7 @@ export class BlockFactory {
     [BlockID.FlowerDandelion]: FlowerDandelionBlock,
     [BlockID.RedstoneLamp]: RedstoneLampBlock,
     [BlockID.StoneBrick]: StoneBrickBlock,
+    [BlockID.CraftingTable]: CraftBlock,
   };
 
   private static blockInstances: { [id: number]: Block } = {};

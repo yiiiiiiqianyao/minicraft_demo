@@ -46,7 +46,6 @@ const TallGrassMaterial = new THREE.MeshBasicMaterial({
   map: textures.tallGrass,
 });
 // TODO: 修改草的贴图，使草的贴图和实际大小保持一致
-
 TallGrassMaterial.transparent = true;
 TallGrassMaterial.side = THREE.DoubleSide;
 TallGrassMaterial.depthWrite = false;
@@ -63,6 +62,15 @@ const GrassBlockMaterial = [
 const DirtBlockMaterial = DirtMaterial;
 const IronBlockMaterial = IronMaterial;
 
+const CraftingTableMaterial = [
+  new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // right
+  new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // left
+  new THREE.MeshLambertMaterial({ map: textures.craftingTableTop }), // top
+  new THREE.MeshLambertMaterial({ map: textures.craftingTableTop }), // bottom
+  new THREE.MeshLambertMaterial({ map: textures.craftingTableFront }), // front
+  new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // back
+];
+
 export {
   wireframeMaterial,
   collisionHelperMaterial,
@@ -77,6 +85,8 @@ export {
   OkaLogMaterial,
   LeavesMaterial,
   TallGrassMaterial,
+  // objects material
+  CraftingTableMaterial,
 }
 
 export * from './flower';

@@ -17,6 +17,11 @@ import FlowerDandelion from '../../../assets/textures/flowers/flower_dandelion.p
 import RedStoneLamp from '../../../assets/textures/blocks/redstone_lamp.png';
 import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
 
+/**@desc 工作台方块 正面纹理 */
+import CraftingTableFront from '../../../assets/textures/crafting_table/crafting_table_front.png';
+import CraftingTableSide from '../../../assets/textures/crafting_table/crafting_table_side.png';
+import CraftingTableTop from '../../../assets/textures/crafting_table/crafting_table_top.png';
+
 /**@desc for block texture */
 export const textures = {
   grassSide: loadTexture(GrassSide),
@@ -34,6 +39,9 @@ export const textures = {
   flowerDandelion: loadTexture(FlowerDandelion),
   redstoneLamp: loadTexture(RedStoneLamp),
   stoneBrick: loadTexture(StoneBrick),
+  craftingTableFront: loadTexture(CraftingTableFront),
+  CraftingTableSide: loadTexture(CraftingTableSide),
+  craftingTableTop: loadTexture(CraftingTableTop),
 };
 
 import GrassBlock from '../../../assets/textures/items/grass_block.png';
@@ -52,7 +60,7 @@ import FlowerDandelionBlock from '../../../assets/textures/flowers/flower_dandel
 import RedStoneLampBlock from '../../../assets/textures/items/redstone_lamp_block.png';
 import StoneBrickBlock from '../../../assets/textures/items/stonebrick_block.png';
 
-// import CraftBlock from '../../assets/textures/'
+import CraftTableBlock from '../../../assets/textures/items/crafting_table_block.png';
 
 /**@desc for gui */
 export const uiTextures = {
@@ -69,4 +77,5 @@ export const uiTextures = {
   flowerDandelion: FlowerDandelionBlock,
   redstoneLamp: RedStoneLampBlock,
   stoneBrick: StoneBrickBlock,
+  craftingTable: CraftTableBlock,
 };

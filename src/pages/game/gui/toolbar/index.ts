@@ -15,14 +15,18 @@ export class ToolBar {
       // BlockID.Stone,
       // BlockID.StoneBrick,
       // BlockID.RedstoneLamp,
-      // {
-      //   blockId: BlockID.CoalOre,
-      //   count: 1,
-      // }
       // BlockID.IronOre,
       // BlockID.OakLog,
       // BlockID.Leaves,
       // BlockID.FlowerRose
+      // {
+      //   blockId: BlockID.CoalOre,
+      //   count: 1,
+      // }
+      {
+        blockId: BlockID.CraftingTable,
+        count: 1,
+      }
     ];
     static activeToolbarIndex = 0;
     static get activeBlockId(): BlockID | undefined {
