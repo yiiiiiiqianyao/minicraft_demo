@@ -8,7 +8,7 @@ import { Cursor } from "./components/cursor";
 import { EventSystem } from "./EventSystem";
 
 // current game version
-const version = 'mc_202601271224';
+const version = 'mc_202601290137';
 export default function HomePage() {
   const [isGameStarted, setIsGameStarted] = useState(false)
   useEffect(() => {

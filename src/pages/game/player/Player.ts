@@ -113,7 +113,6 @@ export class Player extends PlayerGroup {
     this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);
     // 更新用户的拾取选中方块
     Selector.update(this.camera, world, selectionHelper);
-    Selector.select(this.camera, world, selectionHelper);
     // 更新玩家的视角
     updateCameraFOV(this.camera, this.isSprinting);
     // prevent player from falling through

@@ -46,7 +46,7 @@ export class Action {
         // 玩家吸收掉落的物品 只需要在玩家当前活动的 chunk 检测即可
         PlayerParams.activeChunks.forEach(chunkKey => {
             const chunk = world.getChunk(chunkKey.x, chunkKey.z);
-            if (!chunk) return;
+            if (!chunk?.dropGroup) return;
             chunk.dropGroup.attract(PlayerParams.position);
         });
     }
@@ -64,7 +64,9 @@ export class Action {
         const dropZ = player.position.z + v.z - 0.5;
         const { chunk: { x: chunkX, z: chunkZ }, block } = worldToChunkCoords(dropX, dropY, dropZ);
         const chunk = player.world.getChunk(chunkX, chunkZ);
-        chunk?.dropGroup.drop(ToolBar.activeBlockId, block.x, dropY, block.z, true);
+        if (!chunk) return;
+        if (!chunk.dropGroup) chunk.initDropGroup();
+        chunk.dropGroup!.drop(ToolBar.activeBlockId, block.x, dropY, block.z, true);
         // 丢弃物品后 从工具栏中移除
         ToolBar.removeBlockId();
     }

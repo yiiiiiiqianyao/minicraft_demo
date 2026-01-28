@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { AudioManager } from "../audio/AudioManager";
-import { BlockID, blockIDValues } from "../Block";
+import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
 import { generateChunk } from "./generate";
@@ -11,22 +11,24 @@ import { DevControl } from "../dev";
 import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData, IWorldParams } from "./interface";
 import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
+
 export class WorldChunk extends THREE.Group {
   /**@desc chunk 中的 block 数据 */
   private data: IInstanceData[][][] = [];
+  private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
   params: IWorldParams;
   loaded: boolean;
   dataStore: DataStore;
-  dropGroup: DropGroup;
+  dropGroup: DropGroup | null = null;
   // for dev test
   helper: THREE.Mesh | null = null;
   helperColor: THREE.Color | null = null;
-
+  
   constructor(params: IWorldParams, dataStore: DataStore) {
     super();
     this.params = params;
     this.dataStore = dataStore;
-    this.dropGroup = new DropGroup(this.position, this);
+    // this.dropGroup = new DropGroup(this.position, this);
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
       this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())
@@ -54,6 +56,13 @@ export class WorldChunk extends THREE.Group {
       },
       { timeout: 1000 }
     );
+  }
+
+  initDropGroup() {
+    if (this.dropGroup === null) {
+      this.dropGroup = new DropGroup(this.position, this);
+      this.add(this.dropGroup);
+    }
   }
 
   /**
@@ -114,20 +123,6 @@ export class WorldChunk extends THREE.Group {
     const { width, height } = ChunkParams;
     this.clear();
 
-    // Create lookup table where key is block id
-    const meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
-
-    // 生产 InstanceMesh：每个 chunk 中, 每种 block 类型都会生成一个 instanced mesh
-    for (const blockId of blockIDValues) {
-      const blockEntity = BlockFactory.getBlock(blockId);
-      const mesh = initChunkMesh(blockEntity, this.helperColor as THREE.Color);
-      mesh.name = blockEntity.constructor.name;
-      mesh.count = 0;
-      mesh.castShadow = !blockEntity.canPassThrough;
-      mesh.receiveShadow = true;
-      mesh.matrixAutoUpdate = false;
-      meshes[blockEntity.id] = mesh;
-    }
     // 根据类型为每个 block 类型创建 Mesh
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
@@ -137,12 +132,8 @@ export class WorldChunk extends THREE.Group {
           // 空气块不生成 mesh
           if (block === BlockID.Air) continue;
           // 当前 block 对应的 InstanceMesh
-          const mesh = meshes[block];
+          const mesh = this.initInstanceMesh(block);
           
-          if (!mesh) {
-            console.warn(`No mesh found for block ${block}`);
-            continue;
-          }
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
           if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
             const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
@@ -151,16 +142,24 @@ export class WorldChunk extends THREE.Group {
         }
       }
     }
-
-    // Add meshes to group
-    for (const mesh of Object.values(meshes)) {
-      // mesh 在 add 的时候会自动更新矩阵
-      mesh && this.add(mesh);
-    }
     // 添加掉落物品组
-    this.add(this.dropGroup);
+    // this.add(this.dropGroup);
     // add chunk helper for dev test
     this.helper && this.add(this.helper);
+  }
+
+  private initInstanceMesh(blockId: BlockID) {
+    if (this.meshes[blockId]) return this.meshes[blockId];
+    const blockEntity = BlockFactory.getBlock(blockId);
+    const mesh = initChunkMesh(blockEntity, this.helperColor as THREE.Color);
+    mesh.name = blockEntity.constructor.name;
+    mesh.count = 0;
+    mesh.castShadow = !blockEntity.canPassThrough;
+    mesh.receiveShadow = true;
+    mesh.matrixAutoUpdate = false;
+    this.add(mesh);
+    this.meshes[blockId] = mesh;
+    return mesh;
   }
 
   /**@desc 设置 chunk 中 (x, y, z) 位置的 block id */
@@ -218,8 +217,9 @@ export class WorldChunk extends THREE.Group {
     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
     const blockEntity = BlockFactory.getBlock(blockId);
     if(blockEntity.canDrop) {
+      if (!this.dropGroup) this.initDropGroup();
       // 触发掉落物品
-      this.dropGroup.drop(block.blockId, x, y, z);
+      this.dropGroup!.drop(block.blockId, x, y, z);
     }    
 
     this.setBlockId(x, y, z, BlockID.Air);

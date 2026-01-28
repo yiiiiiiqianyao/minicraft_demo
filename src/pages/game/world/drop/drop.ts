@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { BlockID, blockIDValues } from "../../Block";
+import { BlockID } from "../../Block";
 import { BlockFactory } from "../../Block/base/BlockFactory";
 import type { IDrop } from "./interface";
 import { WorldChunk } from "../WorldChunk";
@@ -29,39 +29,38 @@ export class DropGroup extends THREE.Group {
        super();
        this.chunkPosition = chunkPosition;
        this.chunk = chunk;
-       this.initInstanceMesh();
     }
 
-    /** @desc 初始化掉落物的 InstancedMesh */
-    private initInstanceMesh() {
+    private initInstanceMesh(blockId: BlockID) {
         const meshes = this.meshes
-        blockIDValues.forEach((blockId) => {
-            const block = BlockFactory.getBlock(blockId);
-            const blockGeometry = block.geometry;
-            const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
-            const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
-            mesh.name = block.constructor.name;
-            mesh.count = 0;
-            mesh.layers.set(GameLayers.One);
-            mesh.userData.type = 'drop';
-            mesh.userData.blockId = blockId;
-            mesh.userData.instanceCache = {};
-            // 初始时将所有实例设为不可见
-            mesh.visible = false;
-            // mesh.castShadow = !block.canPassThrough;
-            // 暂时关闭阴影投射
-            mesh.castShadow = false;
-            mesh.receiveShadow = false;
-            mesh.matrixAutoUpdate = false;
-            meshes[block.id] = mesh;
-            mesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
-            this.add(mesh);
-        });
+        const block = BlockFactory.getBlock(blockId);
+        const blockGeometry = block.geometry;
+        const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
+        const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
+        mesh.name = block.constructor.name;
+        mesh.count = 0;
+        mesh.layers.set(GameLayers.One);
+        mesh.userData.type = 'drop';
+        mesh.userData.blockId = blockId;
+        mesh.userData.instanceCache = {};
+        // 初始时将所有实例设为不可见
+        mesh.visible = false;
+        // mesh.castShadow = !block.canPassThrough;
+        // 暂时关闭阴影投射
+        mesh.castShadow = false;
+        mesh.receiveShadow = false;
+        mesh.matrixAutoUpdate = false;
+        meshes[block.id] = mesh;
+        mesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
+        this.add(mesh);
+        return mesh;
     }
 
     drop(blockType: BlockID, x: number, y: number, z: number, forceUpdate = false) {
-        const mesh = this.meshes[blockType];
-        if (!mesh) return;
+        let mesh = this.meshes[blockType];
+        if (!mesh) {
+            mesh = this.initInstanceMesh(blockType);
+        }
         // TODO 增加掉过动画 & 掉落物品的旋转角度 & 掉落物品的缩放比例 & 粒子效果 …… 
         this.addInstance(mesh, x, y, z, forceUpdate);
         this.updateDropState(x, z);
@@ -185,14 +184,22 @@ export class DropGroup extends THREE.Group {
 
     /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */
     private getAvailableMeshes() {
+       
         const availableMeshes: THREE.InstancedMesh[] = [];
-        blockIDValues.map((key) => {
-            const mesh = this.meshes[key];
+         Object.keys(this.meshes).map((key) => {
+            const mesh = this.meshes[key as unknown as BlockID];
             if(mesh && mesh.count > 0) {
                 availableMeshes.push(mesh);
             }
         })
         return availableMeshes;
+        // blockIDValues.map((key) => {
+        //     const mesh = this.meshes[key];
+        //     if(mesh && mesh.count > 0) {
+        //         availableMeshes.push(mesh);
+        //     }
+        // })
+        // return availableMeshes;
     }
 
     /**

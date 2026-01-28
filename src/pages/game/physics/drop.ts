@@ -20,7 +20,7 @@ export class DropPhysics {
         const drops: DropGroup[] = [];
         PlayerParams.activeChunks.forEach(chunkKey => {
             const chunk = this.world.getChunk(chunkKey.x, chunkKey.z);
-            if (!chunk) return;
+            if (!chunk?.dropGroup) return;
             drops.push(chunk.dropGroup);
         });
         return drops;

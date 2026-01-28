@@ -54,7 +54,7 @@ export class Selector {
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
             const chunk = intersection.object.parent;
             if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
-
+            
             // Update the selected coordinates
             Selector.updateSelectCoord(intersection, chunk);
             // Update the block placement coordinates
@@ -78,7 +78,8 @@ export class Selector {
     static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
         if (intersection.instanceId == null) return;
 
-        // TODO 目前只能选中 InstancedMesh 类型的方块
+        // TODO 目前只能选中 InstancedMesh 类型的方块 后续待扩展支持其他类型 object / mesh 如不同的生物
+
         // Get the transformation matrix for the selected block
         (intersection.object as THREE.InstancedMesh).getMatrixAt(
             intersection.instanceId,
