@@ -64,14 +64,22 @@ export class KeyboardInput {
         Action.dropHandle(this.player);
         break;
       case "KeyE":
+        // 退出弹窗 & 切换游戏状态
         if (GameState.state === 'paused') {
           this.player.controls.lock();
           setTimeout(() => {
             GameState.state = 'running';
-          }, 100);
+          }, 100)
+          // 关闭弹窗
+          EventSystem.broadcast('ClosePopup', '');
+        } else {
+          // 玩家控制器退出控制 Exits the pointer lock.
+          GameState.state = 'paused';
+          this.player.controls.unlock();
+          // 打开弹窗
+          EventSystem.broadcast('OpenPopup', 'Backpacker');
         }
-        // 关闭弹窗
-        EventSystem.broadcast('ClosePopup');
+        
         break;
     }
   }

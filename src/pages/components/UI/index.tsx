@@ -3,8 +3,10 @@ import { Cursor } from "../cursor"
 import { ToolBar } from "../toolbar"
 import { CraftPopup } from "../popup/craftPopup"
 import { EventSystem } from "../../EventSystem"
+import { BackpackerPopup } from "../popup/backpackerPopup"
 
 export const UI = () => {
+    const [popupType, setPopupType] = useState('');
     const [showPopup, setShowPopup] = useState(false);
     const handlePopupClose = () => {
         console.log('close popup');
@@ -13,6 +15,8 @@ export const UI = () => {
     useEffect(() => {
         EventSystem.subscribe('OpenPopup', (type: string) => {
             console.log('OpenPopup:', type);
+            // Backpacker 背包弹窗
+            setPopupType(type);
             setShowPopup(true);
         });
         EventSystem.subscribe('ClosePopup', (type: string) => {
@@ -27,7 +31,8 @@ export const UI = () => {
          <div className="ui">
           <Cursor />
           <ToolBar />
-          <CraftPopup show={showPopup} onClose={handlePopupClose} />
+          { popupType === 'Craft' && <CraftPopup show={showPopup} onClose={handlePopupClose} /> }
+          { popupType === 'Backpacker' && <BackpackerPopup show={showPopup} onClose={handlePopupClose} /> }
         </div>
     )
 }

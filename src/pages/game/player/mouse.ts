@@ -47,7 +47,7 @@ export class MouseInput {
                 GameState.state = 'paused';
                 player.controls.unlock();
                 // 打开工作台弹窗
-                EventSystem.broadcast('OpenPopup', 'CraftPopup');
+                EventSystem.broadcast('OpenPopup', 'Craft');
             } else {
                 this.handlePlacement();
             }
