@@ -1,14 +1,14 @@
 import { Block, RenderGeometry } from "../base/Block";
-import { uiTextures } from "../textures";
 import { BlockID } from "..";
 import { TallGrassMaterial } from "../../engine/material";
+import { ItemImage } from "../../gui/items";
 
 
 /**@desc 长草方块 */
 export class TallGrassBlock extends Block {
   id = BlockID.TallGrass;
   material = TallGrassMaterial;
-  uiTexture = uiTextures.tallGrass;
+  uiTexture = ItemImage.tallGrass;
   geometry = RenderGeometry.Cross;
   transparent = true;
   canPassThrough = true;

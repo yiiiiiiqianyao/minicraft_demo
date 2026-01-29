@@ -19,11 +19,13 @@ export default function HomePage() {
     new Game();
   }, []);
   return (
-    <div id='canvas_wrap' className="_canvas_wrap">
-      <Debug />
-      <div id="ui">
-        <Cursor />
-        <ToolBar />
+    <div>
+      <div id='canvas_wrap' className="_canvas_wrap">
+        <Debug />
+        <div id="ui">
+          <Cursor />
+          <ToolBar />
+        </div>
       </div>
       {!isGameStarted && <Menu />}
     </div>

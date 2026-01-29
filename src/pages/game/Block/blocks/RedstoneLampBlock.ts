@@ -2,9 +2,10 @@ import * as THREE from "three";
 
 import { RenderGeometry } from "../base/Block";
 import { LightSourceBlock } from "./LightSourceBlock";
-import { textures, uiTextures } from "../textures";
+import { textures } from "../textures";
 
 import { BlockID } from "..";
+import { ItemImage } from "../../gui/items";
 
 const redstoneLampMaterial = new THREE.MeshBasicMaterial({
   map: textures.redstoneLamp,
@@ -14,7 +15,7 @@ const redstoneLampMaterial = new THREE.MeshBasicMaterial({
 export class RedstoneLampBlock extends LightSourceBlock {
   id = BlockID.RedstoneLamp;
   material = redstoneLampMaterial;
-  uiTexture = uiTextures.redstoneLamp;
+  uiTexture = ItemImage.redstoneLamp;
   geometry = RenderGeometry.Cube;
   transparent = true;
   canPassThrough = false;

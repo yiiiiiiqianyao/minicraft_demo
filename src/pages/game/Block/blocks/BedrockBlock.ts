@@ -1,17 +1,13 @@
-import * as THREE from "three";
-
 import { Block, RenderGeometry } from "../base/Block";
-import { textures, uiTextures } from "../textures";
-
 import { BlockID } from "..";
+import { ItemImage } from "../../gui/items";
+import { BedrockMaterial } from "../../engine/material";
 
-const bedrockMaterial = new THREE.MeshLambertMaterial({
-  map: textures.bedrock,
-});
+/**@desc 基岩石块 */
 export class BedrockBlock extends Block {
   id = BlockID.Bedrock;
-  material = bedrockMaterial;
-  uiTexture = uiTextures.bedrock;
+  material = BedrockMaterial;
+  uiTexture = ItemImage.bedrock;
   geometry = RenderGeometry.Cube;
   transparent = false;
   canPassThrough = false;

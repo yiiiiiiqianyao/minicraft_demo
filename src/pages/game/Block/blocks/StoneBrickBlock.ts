@@ -1,9 +1,10 @@
 import * as THREE from "three";
 
 import { Block, RenderGeometry } from "../base/Block";
-import { textures, uiTextures } from "../textures";
+import { textures } from "../textures";
 
 import { BlockID } from "..";
+import { ItemImage } from "../../gui/items";
 
 const stoneBrickMaterial = new THREE.MeshLambertMaterial({
   map: textures.stoneBrick,
@@ -13,7 +14,7 @@ const stoneBrickMaterial = new THREE.MeshLambertMaterial({
 export class StoneBrickBlock extends Block {
   id = BlockID.StoneBrick;
   material = stoneBrickMaterial;
-  uiTexture = uiTextures.stoneBrick;
+  uiTexture = ItemImage.stoneBrick;
   geometry = RenderGeometry.Cube;
   transparent = false;
   canPassThrough = false;
