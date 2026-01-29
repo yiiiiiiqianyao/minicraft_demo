@@ -157,6 +157,7 @@ export class WorldChunk extends THREE.Group {
     mesh.castShadow = !blockEntity.canPassThrough;
     mesh.receiveShadow = true;
     mesh.matrixAutoUpdate = false;
+    mesh.userData.blockId = blockId;
     this.add(mesh);
     this.meshes[blockId] = mesh;
     return mesh;
@@ -246,10 +247,9 @@ export class WorldChunk extends THREE.Group {
       block.blockId !== BlockID.Air &&
       block.instanceIds.length === 0
     ) {
+      if (!this.meshes[block.blockId]) this.initInstanceMesh(block.blockId);
+      const mesh = this.meshes[block.blockId];
       const blockClass = BlockFactory.getBlock(block.blockId);
-      const mesh = this.children.find(
-        (instanceMesh) => instanceMesh.name === blockClass.constructor.name
-      ) as THREE.InstancedMesh;
       if (mesh) {
         // 放置方块的时候播放对应的音效
         AudioManager.playBlockSound(block.blockId);
@@ -337,9 +337,6 @@ export class WorldChunk extends THREE.Group {
    */
   setBlockInstanceIds(x: number, y: number, z: number, instanceIds: number[]) {
     if (inBounds(x, y, z)) {
-      if(this.data[x][y][z].blockId === BlockID.TallGrass && instanceIds.length === 1) {
-        // console.log('setBlockInstanceIds:', x, y, z,instanceIds);
-      }
       this.data[x][y][z].instanceIds = instanceIds;
     }
   }

@@ -7,6 +7,7 @@ import { Action } from "./action";
 import { RenderGeometry } from "../Block/base/Block";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
+import { worldToCeilBlockCoord } from "../world/chunk/utils";
 
 /**@desc 玩家的拾取/选择器 */
 export class Selector {
@@ -17,7 +18,8 @@ export class Selector {
     /**
      * Updates the raycaster used for block selection
      */
-    static selectedBlockUuid: string | null = null;
+    // static selectedBlockUuid: string | null = null;
+    static selectedMesh: THREE.Object3D | null = null;
     static get rayCaster() {
         if(!Selector._rayCaster) {
             Selector._rayCaster = new THREE.Raycaster(
@@ -48,13 +50,13 @@ export class Selector {
         // TODO 实际的拾取对象 可以使用 layer 进行过滤优化
         const intersection = rayCaster.intersectObjects(chunks, true)[0];
         if (intersection) {
-            Selector.selectedBlockUuid = intersection.object.uuid;
-            
+            // Selector.selectedBlockUuid = intersection.object.uuid;
+            Selector.selectedMesh = intersection.object;
             // Get the chunk associated with the seclected block
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
             const chunk = intersection.object.parent;
             if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
-            
+
             // Update the selected coordinates
             Selector.updateSelectCoord(intersection, chunk);
             // Update the block placement coordinates
@@ -62,6 +64,7 @@ export class Selector {
             // Update the selection helper
             Selector.updateSelectionHelper(intersection, selectionHelper);
         } else {
+            Selector.selectedMesh = null;
             Selector.unSelect(selectionHelper);
         }
     }
@@ -72,6 +75,13 @@ export class Selector {
         // 没有选中的方块时，将选中方块大小设为 null
         // PlayerParams.selectedBlockSize = null;
         selectionHelper.visible = false;
+    }
+
+    /**@desc 根据射线的相交位置 获取玩家选中的方块在世界坐标中的位置 */
+    static getBlockPositionInWorld() {
+        if(!PlayerParams.selectedCoords) return null;
+        const { x, y, z } = PlayerParams.selectedCoords;
+        return worldToCeilBlockCoord(x, y, z);
     }
 
     static _tempBlockMatrix = new THREE.Matrix4();

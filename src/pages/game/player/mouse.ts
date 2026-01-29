@@ -4,9 +4,10 @@ import { PlayerParams } from "./literal";
 import { Player } from "./Player";
 import { Action } from "./action";
 import { ToolBar } from "../gui";
-import { worldToCeilBlockCoord } from "../world/chunk/utils";
 import { PhysicsParams } from "../physics/literal";
 import Game from "../Game";
+import { Selector } from "./selector";
+import { BlockID } from "../Block";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -34,7 +35,14 @@ export class MouseInput {
             this.handleLeftClick();
             this.handleBreak();
         } else if (event.button === 2 && Action.blockPlacementCoords) {
-            this.handlePlacement();
+            if (!Selector.selectedMesh) return;
+            const selectedBlockId = Selector.selectedMesh.userData.blockId;
+            if (selectedBlockId === BlockID.CraftingTable) {
+                console.log('Right Click CraftingTable');
+            } else {
+                this.handlePlacement();
+            }
+            
         }
     }
 
@@ -48,13 +56,10 @@ export class MouseInput {
 
     /**@desc 破坏一个方块 */
     private handleBreak() {
-        if(!PlayerParams.selectedCoords) return;
-        const { x, y, z } = PlayerParams.selectedCoords;
-        // Left click 移除选中的方块
-        // TODO 需要考虑是否能够破坏和移除方块
-        // TODO 破坏 & 移除方块的时候 需要出现破坏效果 & 播放破坏音效 & 出现掉落物品
-        const [blockX, blockY, blockZ] = worldToCeilBlockCoord(x, y, z);
-        this.world.removeBlock(blockX, blockY, blockZ);
+        const pos = Selector.getBlockPositionInWorld();
+        if (!pos) return;
+        const [x, y, z] = pos;
+        this.world.removeBlock(x, y, z);
     }
 
     /**@desc 放置一个方块 */
