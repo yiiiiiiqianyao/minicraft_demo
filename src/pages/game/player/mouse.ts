@@ -5,9 +5,10 @@ import { Player } from "./Player";
 import { Action } from "./action";
 import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
-import Game from "../Game";
+import { GameState } from "../Game";
 import { Selector } from "./selector";
 import { BlockFactory, BlockID } from "../Block";
+import { EventSystem } from "../../EventSystem";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -25,11 +26,12 @@ export class MouseInput {
 
     // 处理鼠标点击事件 目前是移除选中的方块和放置方块
     onMouseDown(event: MouseEvent) {
-        if (!Game.isStarted) return;
+        if (!GameState.isStarted) return;
         if (!PhysicsParams.enabled) return;
 
         const { player, world } = this;
         if (!player || !world) return;
+        if (GameState.state === 'paused') return;
         if (!player.controls.isLocked) return;
         if (event.button === 0) {
             this.handleLeftClick();
@@ -41,6 +43,11 @@ export class MouseInput {
             const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
             if (selectedBlockId === BlockID.CraftingTable) {
                 console.log('Right Click CraftingTable');
+                // 玩家控制器退出控制 Exits the pointer lock.
+                GameState.state = 'paused';
+                player.controls.unlock();
+                // 打开工作台弹窗
+                EventSystem.broadcast('OpenPopup', 'CraftPopup');
             } else {
                 this.handlePlacement();
             }

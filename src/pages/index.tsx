@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import Game from "./game/Game";
 import './index.scss';
-import { ToolBar } from "./components/toolbar";
 import { Debug } from "./components/debug";
 import { Menu } from "./components/menu";
-import { Cursor } from "./components/cursor";
 import { EventSystem } from "./EventSystem";
+import { UI } from "./components/UI";
 
 // current game version
 const version = 'mc_202601290137';
@@ -19,13 +18,10 @@ export default function HomePage() {
     new Game();
   }, []);
   return (
-    <div>
+    <div className="container">
       <div id='canvas_wrap' className="_canvas_wrap">
         <Debug />
-        <div id="ui">
-          <Cursor />
-          <ToolBar />
-        </div>
+        <UI />
       </div>
       {!isGameStarted && <Menu />}
     </div>

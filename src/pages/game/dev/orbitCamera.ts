@@ -54,8 +54,5 @@ export function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: O
         setOrbitCameraPosition(camera, x, PlayerInitPosition.y, z);
         controls.target.set(x, y, z);
     };
-
-    //   this.controls.autoRotate = false;
-    //   this.controls.autoRotateSpeed = 2.0;
     controls.update();
 }

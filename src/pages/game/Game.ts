@@ -18,9 +18,13 @@ import { DevControl, initStats } from "./dev";
 import { EventSystem } from "../EventSystem";
 import { isMobile } from "../utils";
 
+export class GameState {
+  static isStarted = false;
+  static state = 'running'; // running paused
+}
+
 /**@desc 游戏主类入口 */
 export default class Game {
-  static isStarted = false;
   private renderer!: THREE.WebGLRenderer;
   private scene!: THREE.Scene;
   private orbitCamera!: THREE.PerspectiveCamera;
@@ -29,7 +33,6 @@ export default class Game {
   private world!: World;
   private player!: Player;
   private physics!: Physics;
-  
 
   constructor() {
     this.registerEvents();
@@ -141,18 +144,24 @@ export default class Game {
         return this.orbitCamera;
       }
     }
-    const renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';
+    
+    let renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';
+    if (GameState.state === 'paused') {
+      renderMode = 'firstPerson';
+    }
     switch(renderMode) {
       case 'firstPerson':
         return this.player.camera;
       case 'thirdPerson':
         return this.orbitCamera;
+      default:
+        return this.player.camera;
     }
   }
 
   /**@desc world chunk 初始化完成后 开始游戏*/
   private onStart() {
-    Game.isStarted = true;
+    GameState.isStarted = true;
     // Tip: 设置游戏开始时间 12 点
     GameTimeManager.startDayTime = hourDuration * 12;
     // 初始化更新工具栏

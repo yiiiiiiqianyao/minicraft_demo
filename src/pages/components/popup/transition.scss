@@ -1,0 +1,128 @@
+.popup-slide {
+  &-top-enter-active,
+  &-bottom-enter-active,
+  &-left-enter-active,
+  &-right-enter-active,
+  &-top-appear-active,
+  &-bottom-appear-active,
+  &-left-appear-active,
+  &-right-appear-active {
+    transition: 0.3s ease-out;
+  }
+
+  &-top-exit-active,
+  &-bottom-exit-active,
+  &-left-exit-active,
+  &-right-exit-active {
+    transition: 0.3s ease-in;
+  }
+
+  &-top-enter,
+  &-top-appear {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &-top-enter-active,
+  &-top-appear-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-top-exit-active {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &-top-exit-done {
+    display: none;
+  }
+
+  &-bottom-enter,
+  &-bottom-appear {
+    display: block;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &-bottom-enter-active,
+  &-bottom-appear-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-bottom-exit-active {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &-bottom-exit-done {
+    display: none;
+  }
+
+  &-left-enter,
+  &-left-appear {
+    transform: translate3d(-100%, -50%, 0);
+  }
+
+  &-left-enter-active,
+  &-left-appear-active {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  &-left-exit-active {
+    transform: translate3d(-100%, -50%, 0);
+  }
+
+  &-left-exit-done {
+    display: none;
+  }
+
+  &-right-enter,
+  &-right-appear {
+    transform: translate3d(100%, -50%, 0);
+  }
+
+  &-right-enter-active,
+  &-right-appear-active {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  &-right-exit-active {
+    transform: translate3d(100%, -50%, 0);
+  }
+
+  &-right-exit-done {
+    display: none;
+  }
+}
+
+.popup-fade {
+  &-center-exit-active {
+    transition: 0.3s ease-in;
+  }
+
+  &-center-enter,
+  &-center-appear,
+  &-center-exit-active {
+    &.popup {
+      opacity: 0;
+      transform: translate3d(-50%, -50%, 0) scale(0);
+    }
+  }
+
+  &-center-enter-active,
+  &-center-appear-active {
+    transition: 0.3s ease-out;
+
+    &.popup {
+      opacity: 1;
+      transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+  }
+}
+
+.overlay-fade {
+  &-enter,
+  &-exit-active {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    opacity: 1;
+  }
+}

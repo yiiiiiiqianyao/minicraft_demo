@@ -1,5 +1,6 @@
+import { EventSystem } from "../../EventSystem";
 import { DevControl } from "../dev";
-import Game from "../Game";
+import { GameState } from "../Game";
 import { ToolBar } from "../gui";
 import { Action } from "./action";
 import { Player } from "./Player";
@@ -23,11 +24,12 @@ export class KeyboardInput {
   }
 
   onKeyDown(event: KeyboardEvent) {
-    if (!Game.isStarted) return;
+    if (!GameState.isStarted) return;
 
     const validKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "KeyR"];
     // 玩家移动 or 重置的时候 控制器解锁
     if (validKeys.includes(event.code) && !this.player.controls.isLocked) {
+      if (GameState.state === 'paused') return;
       this.player.controls.lock();
     }
     switch (event.code) {
@@ -61,11 +63,21 @@ export class KeyboardInput {
       case "KeyQ":
         Action.dropHandle(this.player);
         break;
+      case "KeyE":
+        if (GameState.state === 'paused') {
+          this.player.controls.lock();
+          setTimeout(() => {
+            GameState.state = 'running';
+          }, 100);
+        }
+        // 关闭弹窗
+        EventSystem.broadcast('ClosePopup');
+        break;
     }
   }
 
   onKeyUp(event: KeyboardEvent) {
-    if (!Game.isStarted) return;
+    if (!GameState.isStarted) return;
 
     switch (event.code) {
       case "KeyW":

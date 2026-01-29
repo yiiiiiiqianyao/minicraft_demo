@@ -1,0 +1,51 @@
+.popup {
+  position: fixed;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 100;
+
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  &--right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  touch-action: none;
+  transition: 0.3s;
+}
+
+.popup {
+  z-index: 999;
+}
