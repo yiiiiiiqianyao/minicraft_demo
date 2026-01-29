@@ -12,4 +12,5 @@ export class GrassBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 1;
 }

@@ -13,4 +13,5 @@ export class FlowerRoseBlock extends Block {
   transparent = true;
   canPassThrough = true;
   canDrop = true;
+  breakCount = 1;
 }

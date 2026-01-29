@@ -12,4 +12,5 @@ export class CraftBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 10;
 }

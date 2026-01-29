@@ -12,4 +12,5 @@ export class LeavesBlock extends Block {
   transparent = true;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 1;
 }

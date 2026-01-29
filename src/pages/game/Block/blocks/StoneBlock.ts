@@ -12,4 +12,5 @@ export class StoneBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 1;
 }

@@ -12,4 +12,5 @@ export class BedrockBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = false;
+  breakCount = -1;
 }

@@ -12,4 +12,5 @@ export class FlowerDandelionBlock extends Block {
   transparent = true;
   canPassThrough = true;
   canDrop = true;
+  breakCount = 1;
 }

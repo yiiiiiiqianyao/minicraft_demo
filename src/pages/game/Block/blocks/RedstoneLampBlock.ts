@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 import { RenderGeometry } from "../base/Block";
-import { LightSourceBlock } from "./LightSourceBlock";
+import { LightSourceBlock } from "../base/LightSourceBlock";
 import { textures } from "../textures";
 
 import { BlockID } from "..";
@@ -26,4 +26,5 @@ export class RedstoneLampBlock extends LightSourceBlock {
   intensity = 15;
   distance = 10;
   decay = 1;
+  breakCount = 1;
 }

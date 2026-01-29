@@ -17,7 +17,7 @@ const IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
 const CoalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
 const BedrockMaterial = new THREE.MeshLambertMaterial({ map: textures.bedrock });
-
+const StoneBrickMaterial = new THREE.MeshLambertMaterial({ map: textures.stoneBrick });
 // 树叶
 const LeavesMaterial = new THREE.MeshLambertMaterial({
   map: textures.leaves,
@@ -81,6 +81,7 @@ export {
   StoneMaterial,
   CoalOreMaterial,
   BedrockMaterial,
+  StoneBrickMaterial,
   // plants material
   OkaLogMaterial,
   LeavesMaterial,

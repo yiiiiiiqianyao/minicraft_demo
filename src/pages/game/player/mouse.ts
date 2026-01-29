@@ -7,7 +7,7 @@ import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
 import Game from "../Game";
 import { Selector } from "./selector";
-import { BlockID } from "../Block";
+import { BlockFactory, BlockID } from "../Block";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -33,10 +33,12 @@ export class MouseInput {
         if (!player.controls.isLocked) return;
         if (event.button === 0) {
             this.handleLeftClick();
-            this.handleBreak();
+            if (!Selector.selectedMesh) return;
+            const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
+            this.handleBreak(selectedBlockId);
         } else if (event.button === 2 && Action.blockPlacementCoords) {
             if (!Selector.selectedMesh) return;
-            const selectedBlockId = Selector.selectedMesh.userData.blockId;
+            const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
             if (selectedBlockId === BlockID.CraftingTable) {
                 console.log('Right Click CraftingTable');
             } else {
@@ -55,7 +57,10 @@ export class MouseInput {
     }
 
     /**@desc 破坏一个方块 */
-    private handleBreak() {
+    private handleBreak(blockId: BlockID) {
+        const block = BlockFactory.getBlock(blockId);
+        // TODO 支持不同 block 方块的破坏进度
+        console.log('break block =>', block);
         const pos = Selector.getBlockPositionInWorld();
         if (!pos) return;
         const [x, y, z] = pos;

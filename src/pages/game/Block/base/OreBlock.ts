@@ -1,4 +1,4 @@
-import { Block } from "../base/Block";
+import { Block } from "./Block";
 
 /**@desc 矿物块基类 */
 export abstract class OreBlock extends Block {

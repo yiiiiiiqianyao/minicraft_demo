@@ -19,4 +19,6 @@ export abstract class Block {
   abstract transparent: boolean;
   abstract canPassThrough: boolean;
   abstract canDrop: boolean;
+  /**@desc 当前方块被破坏需要的次数 */
+  abstract breakCount: number;
 }

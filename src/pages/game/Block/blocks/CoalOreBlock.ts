@@ -1,5 +1,5 @@
 import { RenderGeometry } from "../base/Block";
-import { OreBlock } from "./OreBlock";
+import { OreBlock } from "../base/OreBlock";
 import { BlockID } from "../constant";
 import { oreConfig } from "../../world/generate/resource";
 import { CoalOreMaterial } from "../../engine/material";
@@ -15,4 +15,5 @@ export const CoalOreBlock = class extends OreBlock {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 1;
 };

@@ -10,4 +10,5 @@ export class AirBlock extends Block {
   transparent = true;
   canPassThrough = true;
   canDrop = false;
+  breakCount = -1;
 }

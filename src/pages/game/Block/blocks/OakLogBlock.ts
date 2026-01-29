@@ -12,4 +12,5 @@ export class OakLogBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
+  breakCount = 1;
 }
