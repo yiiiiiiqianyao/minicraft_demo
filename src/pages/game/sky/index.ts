@@ -4,6 +4,7 @@ import { SunSettings, uniforms } from "./literal";
 import { GameTimeManager, hourDuration, ShadowUpdateDuration } from "../time";
 import { getBottomColor, getTopColor } from "./utils";
 import { PlayerParams } from "../player/literal";
+// import { Engine } from "../engine";
 
 export class SkyManager {
   scene!: THREE.Scene;
@@ -47,7 +48,9 @@ export class SkyManager {
     sun.shadow.camera.near = 0.1;
     sun.shadow.camera.far = 600;
     sun.shadow.bias = -0.005;
+    // 阴影贴图不建议过小：512×512 分辨率在手动更新时，像素差异较明显，易出现轻微闪烁，1024×1024 是最低无闪烁分辨率，2048×2048 为最优。
     sun.shadow.mapSize = new THREE.Vector2(512, 512);
+    // sun.shadow.mapSize = new THREE.Vector2(1024, 1024);
 
     scene.add(sun);
     scene.add(sun.target);
@@ -118,6 +121,8 @@ export class SkyManager {
       this.updateSunPosition(sunAngle);
     }
     GameTimeManager.updateDayHourGUI();
+
+    // Engine.renderer.shadowMap.needsUpdate = true;
 
     this.lastShadowUpdate = performance.now();
   }

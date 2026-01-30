@@ -22,6 +22,10 @@ export class Engine {
 
         Engine.renderer.shadowMap.enabled = true;
         Engine.renderer.shadowMap.type = THREE.PCFShadowMap;
+        // 手动更新阴影贴图，避免实时更新导致性能问题
+        // Engine.renderer.shadowMap.autoUpdate = false;
+        // Engine.renderer.shadowMap.needsUpdate = true; 
+
         Engine.screenWrap = document.getElementById('canvas_wrap') as HTMLDivElement
         const { width, height } = Engine.screenWrap.getBoundingClientRect();
         ScreenViewer.width = width;

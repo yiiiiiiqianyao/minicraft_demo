@@ -157,6 +157,7 @@ export class WorldChunk extends THREE.Group {
     mesh.receiveShadow = true;
     mesh.matrixAutoUpdate = false;
     mesh.userData.blockId = blockId;
+    mesh.userData.castShadow = !blockEntity.canPassThrough;
     this.add(mesh);
     this.meshes[blockId] = mesh;
     return mesh;

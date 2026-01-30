@@ -184,7 +184,6 @@ export class DropGroup extends THREE.Group {
 
     /**@desc 获取当前 chunk 中所有可见的 drop 实例的 InstancedMesh */
     private getAvailableMeshes() {
-       
         const availableMeshes: THREE.InstancedMesh[] = [];
          Object.keys(this.meshes).map((key) => {
             const mesh = this.meshes[key as unknown as BlockID];
