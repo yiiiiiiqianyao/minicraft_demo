@@ -3,6 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Player } from "../player/Player";
 import { PlayerInitPosition } from "../player/literal";
 import { ScreenViewer } from "../gui/viewer";
+import { RenderView } from "../consatnt";
 
 export function setOrbitCameraPosition(orbitCamera: THREE.PerspectiveCamera, x: number, y: number, z: number) {
     // orbitCamera.position.set(x - 64, y - 20, z - 64);
@@ -19,6 +20,7 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
     75,
     ScreenViewer.width / ScreenViewer.height
     );
+    orbitCamera.userData.type = RenderView.ThirdPerson;
     // 32, 72, 32
     const { x, y, z } = PlayerInitPosition
     setOrbitCameraPosition(orbitCamera, x, y, z);

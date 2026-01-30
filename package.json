@@ -11,32 +11,32 @@
   },
   "dependencies": {
     "howler": "^2.2.4",
-    "lil-gui": "^0.19.1",
-    "lodash": "^4.17.21",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "lil-gui": "^0.19.2",
+    "lodash": "^4.17.23",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-transition-group": "^4.4.5",
-    "three": "^0.158.0"
+    "three": "^0.182.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@tweenjs/tween.js": "^21.0.0",
+    "@eslint/js": "^9.39.2",
+    "@tweenjs/tween.js": "^21.1.1",
     "@types/howler": "^2.2.12",
-    "@types/lodash": "^4.17.21",
-    "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
+    "@types/lodash": "^4.17.23",
+    "@types/node": "^24.10.9",
+    "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "@types/react-transition-group": "^4.4.12",
     "@types/three": "^0.182.0",
-    "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-react-refresh": "^0.4.26",
     "globals": "^16.5.0",
-    "sass-embedded": "^1.97.2",
+    "sass-embedded": "^1.97.3",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "typescript-eslint": "^8.54.0",
+    "vite": "^7.3.1"
   },
   "packageManager": "pnpm@7.33.7+sha512.7afe2410642b39c698df46da4ce5c7231a5cce360698d69f8cf8f42257d40b3e43f231053b07b8de849fd4ffbf4a71ff57b835137777a352388f3d3da747200e"
 }

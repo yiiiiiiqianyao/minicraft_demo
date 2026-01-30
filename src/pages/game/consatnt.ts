@@ -17,3 +17,8 @@ export enum PopupType {
     Craft = 'Craft',
     Backpacker = 'Backpacker',
 }
+
+export enum RenderView {
+    FirstPerson = 'firstPerson',
+    ThirdPerson = 'thirdPerson',
+}

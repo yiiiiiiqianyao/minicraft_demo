@@ -10,7 +10,16 @@ export class Engine {
     static init() {
         Engine.scene = new THREE.Scene();
     
-        Engine.renderer = new THREE.WebGLRenderer();
+        Engine.renderer = new THREE.WebGLRenderer({
+            // antialias: true,
+            powerPreference: 'high-performance', // 优先高性能模式，开启更多GPU优化
+            preserveDrawingBuffer: false, // 关闭不必要的缓冲区，减少开销
+            alpha: false // 无需透明画布时关闭，提升合批效率
+        });
+        // 开启渲染器的合批优化（默认开启，确保不手动关闭）
+        Engine.renderer.sortObjects = true; // 按材质/渲染状态排序，减少合批中断
+        Engine.renderer.autoClear = true;
+
         Engine.renderer.shadowMap.enabled = true;
         Engine.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         Engine.screenWrap = document.getElementById('canvas_wrap') as HTMLDivElement

@@ -17,9 +17,8 @@ import { GameTimeManager, hourDuration } from "./time";
 import { DevControl, initStats } from "./dev";
 import { EventSystem } from "../EventSystem";
 import { isMobile } from "../utils";
-import { GameState } from "./consatnt";
-
-
+import { GameState, RenderView } from "./consatnt";
+import { getRenderCamera } from "./engine/draw";
 
 /**@desc 游戏主类入口 */
 export default class Game {
@@ -117,46 +116,24 @@ export default class Game {
 
     // 更新世界 chunk
     this.world.update();
+    TWEEN.update();
 
     // update triangle count
     DevControl.update(this.renderer);
-
-    TWEEN.update();    
-    const renderCamera = this.getRenderCamera();
+  
+    const renderCamera = getRenderCamera(this.player, this.orbitCamera);
     this.renderer.render(this.scene, renderCamera);
-    // 更新观察相机位置和目标位置
-    updateOrbitControls(this.orbitCamera, this.controls, this.player);
+
+    if (renderCamera.userData.type === RenderView.ThirdPerson) {
+      // 更新观察相机位置和目标位置
+      updateOrbitControls(this.orbitCamera, this.controls, this.player);
+    }
 
     requestAnimationFrame(() => {
       this.draw();
     });
   }
 
-  private getRenderCamera() {
-    // TODO 第三人称视角 增加支持角色的控制移动
-    // player.controls.isLocked === true 第一人称模式
-    // player.controls.isLocked === false 观察者模式
-    if(DevControl.v !== -1) {
-      if(DevControl.v === 1) {
-        return this.player.camera;
-      } else {
-        return this.orbitCamera;
-      }
-    }
-    
-    let renderMode = this.player.controls.isLocked ? 'firstPerson' : 'thirdPerson';
-    if (GameState.state === 'paused') {
-      renderMode = 'firstPerson';
-    }
-    switch(renderMode) {
-      case 'firstPerson':
-        return this.player.camera;
-      case 'thirdPerson':
-        return this.orbitCamera;
-      default:
-        return this.player.camera;
-    }
-  }
 
   /**@desc world chunk 初始化完成后 开始游戏*/
   private onStart() {
