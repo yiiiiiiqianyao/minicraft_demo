@@ -17,11 +17,9 @@ import { GameTimeManager, hourDuration } from "./time";
 import { DevControl, initStats } from "./dev";
 import { EventSystem } from "../EventSystem";
 import { isMobile } from "../utils";
+import { GameState } from "./consatnt";
 
-export class GameState {
-  static isStarted = false;
-  static state = 'running'; // running paused
-}
+
 
 /**@desc 游戏主类入口 */
 export default class Game {
@@ -43,10 +41,11 @@ export default class Game {
       if (isMobile()) {
         alert("移动端暂不支持打开游戏，请在PC端打开游戏");
         return;
+      } else {
+        this.initScene();
+        window.addEventListener("resize", this.onWindowResize, false);
+        AudioManager.play("gui.button.press");
       }
-      this.initScene();
-      window.addEventListener("resize", this.onWindowResize, false);
-      AudioManager.play("gui.button.press");
     });
   }
 

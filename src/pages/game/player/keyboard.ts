@@ -1,6 +1,6 @@
 import { EventSystem } from "../../EventSystem";
+import { GameEvent, GameState, PopupType, State } from "../consatnt";
 import { DevControl } from "../dev";
-import { GameState } from "../Game";
 import { ToolBar } from "../gui";
 import { Action } from "./action";
 import { Player } from "./Player";
@@ -65,19 +65,19 @@ export class KeyboardInput {
         break;
       case "KeyE":
         // 退出弹窗 & 切换游戏状态
-        if (GameState.state === 'paused') {
+        if (GameState.state === State.Paused) {
           this.player.controls.lock();
           setTimeout(() => {
-            GameState.state = 'running';
+            GameState.state = State.Running;
           }, 100)
           // 关闭弹窗
-          EventSystem.broadcast('ClosePopup', '');
+          EventSystem.broadcast(GameEvent.ClosePopup, '');
         } else {
           // 玩家控制器退出控制 Exits the pointer lock.
-          GameState.state = 'paused';
+          GameState.state = State.Paused;
           this.player.controls.unlock();
           // 打开弹窗
-          EventSystem.broadcast('OpenPopup', 'Backpacker');
+          EventSystem.broadcast(GameEvent.OpenPopup, PopupType.Backpacker);
         }
         
         break;

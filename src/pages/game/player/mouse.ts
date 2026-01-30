@@ -5,10 +5,10 @@ import { Player } from "./Player";
 import { Action } from "./action";
 import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
-import { GameState } from "../Game";
 import { Selector } from "./selector";
 import { BlockFactory, BlockID } from "../Block";
 import { EventSystem } from "../../EventSystem";
+import { GameEvent, GameState, PopupType, State } from "../consatnt";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -44,10 +44,10 @@ export class MouseInput {
             if (selectedBlockId === BlockID.CraftingTable) {
                 console.log('Right Click CraftingTable');
                 // 玩家控制器退出控制 Exits the pointer lock.
-                GameState.state = 'paused';
+                GameState.state = State.Paused;
                 player.controls.unlock();
                 // 打开工作台弹窗
-                EventSystem.broadcast('OpenPopup', 'Craft');
+                EventSystem.broadcast(GameEvent.OpenPopup, PopupType.Craft);
             } else {
                 this.handlePlacement();
             }
