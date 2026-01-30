@@ -13,6 +13,8 @@ import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
 import type { IWorldParams } from "./interface";
+import { RenderGeometry } from "../Block/base/Block";
+import { Selector } from "../player/selector";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -312,6 +314,33 @@ export class World extends THREE.Group {
       ) {
         this.removeBlock(x, y + 1, z);
       }
+    }
+  }
+
+
+  updateBlockType(x: number, y: number, z: number, block: BlockID) {
+    // const coords = worldToChunkCoords(x, y, z);
+    // const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
+    // if (chunk && chunk.loaded) {
+    //   chunk.updateBlockType(coords.block.x, coords.block.y, coords.block.z, block);
+    // }
+    // TODO 暂时直接执行 先移除旧方块 再添加新方块 后续优化
+    this.removeBlock(x, y , z);
+    this.addBlock(x, y, z, block);
+  }
+
+  /**
+   * @desc 根据玩家放置方块的位置 更新世界中相关的方块 
+   * @param x 玩家放置方块的 x 坐标
+   * @param y 玩家放置方块的 y 坐标
+   * @param z 玩家放置方块的 z 坐标
+   * @param selectedBlockId 玩家当前选中的方块 id
+   * @param placementBlockId 玩家当前放置的方块 id
+  */
+  updateByPlacementBlock(px: number, py: number, pz: number, selectedBlockId: BlockID, placementBlockId: BlockID) {
+    const placementBlockClass = BlockFactory.getBlock(placementBlockId);
+    if (selectedBlockId === BlockID.Grass && placementBlockClass.geometry === RenderGeometry.Cube && Selector.blockPlacementNormal.y === 1) {
+      this.updateBlockType(px, py - 1, pz, BlockID.Dirt);
     }
   }
 

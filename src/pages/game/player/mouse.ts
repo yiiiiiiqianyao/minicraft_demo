@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { World } from "../world/World";
 import { PlayerParams } from "./literal";
 import { Player } from "./Player";
-import { Action } from "./action";
 import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
 import { Selector } from "./selector";
@@ -38,8 +37,7 @@ export class MouseInput {
             if (!Selector.selectedMesh) return;
             const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
             this.handleBreak(selectedBlockId);
-        } else if (event.button === 2 && Action.blockPlacementCoords) {
-            if (!Selector.selectedMesh) return;
+        } else if (event.button === 2 && Selector.selectedMesh) {
             const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
             if (selectedBlockId === BlockID.CraftingTable) {
                 console.log('Right Click CraftingTable');
@@ -49,7 +47,7 @@ export class MouseInput {
                 // 打开工作台弹窗
                 EventSystem.broadcast(GameEvent.OpenPopup, PopupType.Craft);
             } else {
-                this.handlePlacement();
+                this.handlePlacement(selectedBlockId);
             }
             
         }
@@ -75,7 +73,7 @@ export class MouseInput {
     }
 
     /**@desc 放置一个方块 */
-    private handlePlacement() {
+    private handlePlacement(selectedBlockId: BlockID) {
         // 工具栏当前选中的栏目中为空 则不执行放置操作
         if (!ToolBar.activeBlockId) return;
         const { world, player } = this;
@@ -85,9 +83,9 @@ export class MouseInput {
         Math.floor(player.position.z)
         );
         const blockPos = new THREE.Vector3(
-        Math.floor(Action.blockPlacementCoords.x - 0.5),
-        Math.floor(Action.blockPlacementCoords.y - 0.5),
-        Math.floor(Action.blockPlacementCoords.z - 0.5)
+        Math.floor(Selector.blockPlacementCoords.x - 0.5),
+        Math.floor(Selector.blockPlacementCoords.y - 0.5),
+        Math.floor(Selector.blockPlacementCoords.z - 0.5)
         );
 
         // TODO 需要精细判断
@@ -108,6 +106,15 @@ export class MouseInput {
             PlayerParams.playerInstance?.placementHand();
             // TODO update under block
             // 若放置的 block 下方的方块是 grass 草方块，则草方块应该更新为泥土方块
+            // console.log(selectedBlockId, 'placed');
+            // console.log(Selector.blockPlacementNormal);
+            world.updateByPlacementBlock(
+                blockPos.x,
+                blockPos.y,
+                blockPos.z,
+                selectedBlockId,
+                ToolBar.activeBlockId,
+            );
         }        
     }
 }

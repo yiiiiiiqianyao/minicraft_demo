@@ -3,7 +3,6 @@ import { World } from "../world/World";
 import { PlayerParams, RayCenterScreen } from "./literal";
 import { getNearChunks } from "./utils";
 import { GameLayers } from "../engine";
-import { Action } from "./action";
 import { RenderGeometry } from "../Block/base/Block";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
@@ -15,6 +14,8 @@ export class Selector {
     /**@desc 垂直同步次数 性能优化使用 */
     private static _vSyncCount = 2;
     private static _updateCount = 0;
+    static blockPlacementCoords: THREE.Vector3 = new THREE.Vector3();
+    static blockPlacementNormal: THREE.Vector3 = new THREE.Vector3();
     /**
      * Updates the raycaster used for block selection
      */
@@ -120,13 +121,14 @@ export class Selector {
         // TODO 待优化
         // TODO flower 类型的方块 放置坐标位置错误 后续需要修复
         if (ToolBar.activeBlockId !== undefined && ToolBar.activeBlockId !== BlockID.Air) {
-            // Update block placement coords to be 1 block over in the direction of the normal
-            Action.blockPlacementCoords = PlayerParams.selectedCoords
-            .clone()
-            .add(intersection.normal);
+            // Update block placement coords to be 1 block over in the direction of the normal       
+            Selector.blockPlacementCoords.copy(PlayerParams.selectedCoords);
+            Selector.blockPlacementCoords.add(intersection.normal);
+            Selector.blockPlacementNormal.copy(intersection.normal);
         }
     }
 
+    /**@desc 更新选择框的位置和大小 显示玩家选中方块的位置和大小 */
     static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
         if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {

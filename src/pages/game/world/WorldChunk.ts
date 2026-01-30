@@ -220,7 +220,7 @@ export class WorldChunk extends THREE.Group {
     if(blockEntity.canDrop) {
       if (!this.dropGroup) this.initDropGroup();
       // 触发掉落物品
-      this.dropGroup!.drop(block.blockId, x, y, z);
+      this.dropGroup!.drop(block.blockId, x, y, z, true);
     }    
 
     this.setBlockId(x, y, z, BlockID.Air);
