@@ -1,5 +1,15 @@
 import { DevControl } from "../dev";
 
+export class WorldParams {
+  /**@desc 世界 chunk 渲染距离 */
+  static renderDistance = 8;
+  static range = Array.from(
+      { length: WorldParams.renderDistance * 2 + 1 },
+      (_, i) => i - WorldParams.renderDistance
+    ).sort((a, b) => Math.abs(a) - Math.abs(b));
+  static totalChunks = (WorldParams.renderDistance * 2 + 1) ** 2;
+}
+
 /***
  * 普通世界的参数
  * TODO 地形的多样性需要添加

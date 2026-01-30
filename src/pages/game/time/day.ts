@@ -1,7 +1,7 @@
 import { SunSettings } from "../sky/literal";
 
 /**@desc 阴影更新的时间间隔 单位：毫秒 */
-export const ShadowUpdateDuration = SunSettings.cycleLength / 24 / 60;
+export const ShadowUpdateDuration = SunSettings.cycleLength / 24 / 60 * 5;
 
 // 0 - 24 小时制
 export const hourDuration = SunSettings.cycleLength / 24;

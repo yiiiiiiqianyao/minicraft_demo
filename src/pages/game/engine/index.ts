@@ -21,7 +21,7 @@ export class Engine {
         Engine.renderer.autoClear = true;
 
         Engine.renderer.shadowMap.enabled = true;
-        Engine.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        Engine.renderer.shadowMap.type = THREE.PCFShadowMap;
         Engine.screenWrap = document.getElementById('canvas_wrap') as HTMLDivElement
         const { width, height } = Engine.screenWrap.getBoundingClientRect();
         ScreenViewer.width = width;

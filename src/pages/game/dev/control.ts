@@ -5,6 +5,8 @@ import { updateRenderInfoGUI, updateStats } from ".";
 /**
  *@desc 开发控制类
  */
+
+let DevUpdateCount = 0;
 export class DevControl {
     static chunkHelperVisible = GlobalProps.chunk_helper === '1' ? true : false;
     static chunkWireframeMode = false;
@@ -16,7 +18,12 @@ export class DevControl {
     static v = -1;
 
     static update(renderer: THREE.WebGLRenderer) {
-        updateRenderInfoGUI(renderer);
+        if (DevUpdateCount < 3) {
+            DevUpdateCount++;
+        } else {
+            DevUpdateCount = 0;
+            updateRenderInfoGUI(renderer);
+        }
         updateStats();
     }
 }

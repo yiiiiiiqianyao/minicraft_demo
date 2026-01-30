@@ -4,7 +4,7 @@ import { BlockFactory } from "../Block/base/BlockFactory";
 import { LightSourceBlock } from "../Block/base/LightSourceBlock";
 import { DataStore } from "./DataStore";
 import { WorldChunk } from "./WorldChunk";
-import { getDefaultWorldParams } from "./literal";
+import { getDefaultWorldParams, WorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
 import { updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
@@ -109,9 +109,8 @@ export class World extends THREE.Group {
   }
 
   private updateInitialLoad() {
-    const totalChunks = (this.renderDistance * 2 + 1) ** 2;
     const loadedChunks = this.children.length;
-    const percentLoaded = Math.round((loadedChunks / totalChunks) * 100);
+    const percentLoaded = Math.round((loadedChunks / WorldParams.totalChunks) * 100);
    
     if(!PlayerParams.currentChunk) {  
       const [chunkX, chunkZ] = worldToChunkCoordsXZ(PlayerInitPosition.x, PlayerInitPosition.z);
@@ -149,16 +148,9 @@ export class World extends THREE.Group {
     if (!PlayerParams.currentChunk) return [];
     // console.log('chunkX, chunkZ', chunkX, chunkZ);
     const { x: chunkX, z: chunkZ } = PlayerParams.currentChunk;
-
     const visibleChunks: { x: number; z: number }[] = [];
-    const range = Array.from(
-      { length: this.renderDistance * 2 + 1 },
-      (_, i) => i - this.renderDistance
-    );
-    range.sort((a, b) => Math.abs(a) - Math.abs(b));
-
-    for (const dx of range) {
-      for (const dz of range) {
+    for (const dx of WorldParams.range) {
+      for (const dz of WorldParams.range) {
         visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });
       }
     }
