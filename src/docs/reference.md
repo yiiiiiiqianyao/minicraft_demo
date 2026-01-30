@@ -1,6 +1,7 @@
 ## 参考
 ### Three.js
 https://minecraft.kelvinzhang.ca/
+https://third-person-mc.vercel.app/
 
 ### Babylon.js
 https://classic.minecraft.net/

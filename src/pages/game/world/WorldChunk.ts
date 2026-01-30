@@ -131,11 +131,10 @@ export class WorldChunk extends THREE.Group {
           const blockClass = BlockFactory.getBlock(block);
           // 空气块不生成 mesh
           if (block === BlockID.Air) continue;
-          // 当前 block 对应的 InstanceMesh
-          const mesh = this.initInstanceMesh(block);
-          
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
           if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
+            // 当前 block 对应的 InstanceMesh
+            const mesh = this.initInstanceMesh(block);
             const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
             ids && this.setBlockInstanceIds(x, y, z, ids);
           }
