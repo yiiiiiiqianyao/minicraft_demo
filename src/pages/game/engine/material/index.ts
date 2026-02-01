@@ -18,37 +18,6 @@ const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
 const CoalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
 const BedrockMaterial = new THREE.MeshLambertMaterial({ map: textures.bedrock });
 const StoneBrickMaterial = new THREE.MeshLambertMaterial({ map: textures.stoneBrick });
-// 树叶
-const LeavesMaterial = new THREE.MeshLambertMaterial({
-  map: textures.leaves,
-});
-LeavesMaterial.transparent = true;
-LeavesMaterial.side = THREE.DoubleSide;
-
-// 橡木原木
-const oakLogSideMaterial = new THREE.MeshLambertMaterial({
-  map: textures.oakLogSide,
-});
-const oakLogTopMaterial = new THREE.MeshLambertMaterial({
-  map: textures.oakLogTop,
-});
-const OkaLogMaterial = [
-  oakLogSideMaterial, // right
-  oakLogSideMaterial, // left
-  oakLogTopMaterial, // top
-  oakLogTopMaterial, // bottom
-  oakLogSideMaterial, // front
-  oakLogSideMaterial, // back
-]
-
-// 长草
-const TallGrassMaterial = new THREE.MeshBasicMaterial({
-  map: textures.tallGrass,
-});
-// TODO: 修改草的贴图，使草的贴图和实际大小保持一致
-TallGrassMaterial.transparent = true;
-TallGrassMaterial.side = THREE.DoubleSide;
-TallGrassMaterial.depthWrite = false;
 
 // block material
 const GrassBlockMaterial = [
@@ -82,12 +51,10 @@ export {
   CoalOreMaterial,
   BedrockMaterial,
   StoneBrickMaterial,
-  // plants material
-  OkaLogMaterial,
-  LeavesMaterial,
-  TallGrassMaterial,
+
   // objects material
   CraftingTableMaterial,
 }
-
+export * from './tree';
 export * from './flower';
+export * from './grass';

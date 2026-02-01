@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 import { loadTexture } from "../engine/utils";
 import GrassSide from '../../../assets/textures/blocks/grass_side.png';
 import GrassTop from '../../../assets/textures/blocks/grass.png';
@@ -22,6 +24,9 @@ import CraftingTableFront from '../../../assets/textures/crafting_table/crafting
 import CraftingTableSide from '../../../assets/textures/crafting_table/crafting_table_side.png';
 import CraftingTableTop from '../../../assets/textures/crafting_table/crafting_table_top.png';
 
+// /**@desc atlas 合图 */
+import Combine from '../../../assets/textures/combine.png';
+
 /**@desc for block texture */
 export const textures = {
   grassSide: loadTexture(GrassSide),
@@ -42,4 +47,8 @@ export const textures = {
   craftingTableFront: loadTexture(CraftingTableFront),
   CraftingTableSide: loadTexture(CraftingTableSide),
   craftingTableTop: loadTexture(CraftingTableTop),
+  combine: loadTexture(Combine),
 };
+
+textures.combine.wrapS = THREE.ClampToEdgeWrapping;
+textures.combine.wrapT = THREE.ClampToEdgeWrapping;

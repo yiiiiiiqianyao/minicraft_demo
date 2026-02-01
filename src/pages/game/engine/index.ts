@@ -2,7 +2,8 @@ import * as THREE from "three";
 import { ScreenViewer } from "../gui/viewer";
 
 // TODO 统一管理 scene renderer camera 等等
-// TODO 支持 webGPU 的切换
+// TODO webGPU 的切换存在渲染 bug
+// import * as THREE from "three/webgpu"; // THREE.WebGPURenderer
 export class Engine {
     static screenWrap: HTMLDivElement;
     static scene: THREE.Scene;

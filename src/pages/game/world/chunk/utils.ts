@@ -4,7 +4,9 @@ import { ChunkParams } from "./literal";
 import { DevControl } from "../../dev";
 import { wireframeMaterial } from "../../engine/material";
 import type { Block } from "../../Block/base/Block";
-import { BlockFactory, type BlockID } from "../../Block";
+import { BlockFactory, BlockID } from "../../Block";
+import { initCombineInstanceMesh } from "./combine";
+import { isBlockSupportsCombine } from "./combine/utils";
 
 /**
  * 世界坐标转 chunk xz 坐标
@@ -99,17 +101,23 @@ export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
   const { chunkHelperVisible, chunkWireframeMode } = DevControl;
   const blockGeometry = blockEntity.geometry;
   if(chunkHelperVisible) { // make dev chunk
-      return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
-    new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),
-        maxCount
-      )
+    return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
+  new THREE.MeshBasicMaterial({ wireframe: false, color: helperColor }),
+      maxCount
+    )
+  } else {
+    // TODO 待优化 合并 Leaves 和 OakLog 方块的 InstancedMesh
+    if (DevControl.instanceMerge && isBlockSupportsCombine(blockEntity.id)) {
+      const instanceMesh = initCombineInstanceMesh(blockEntity);
+      return instanceMesh;
     } else {
-      const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
+       const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
       return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),
         material,
         maxCount
       );
     }
+  }
 }
 
 export function getAroundBlocks(x: number, y: number, z: number) {

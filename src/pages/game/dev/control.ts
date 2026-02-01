@@ -14,7 +14,8 @@ export class DevControl {
     static worldType = GlobalProps.world || 'terrain'; // 'flat'
     static physicsHelperVisible = GlobalProps.physics_helper === '1' ? true : false;
     static hour = GlobalProps.hour ? Number(GlobalProps.hour) : undefined;
-
+    // TODO 待完善合并 instance 的渲染
+    static instanceMerge = GlobalProps.instance_merge === '1' ? true : false;
     static v = -1;
 
     static update(renderer: THREE.WebGLRenderer) {
