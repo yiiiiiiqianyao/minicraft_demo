@@ -4,6 +4,7 @@ import { jitterNumber } from "../../utils";
 
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {
     switch (blockClass.geometry) {
+        case RenderGeometry.Tree:
         case RenderGeometry.Cube:
             return InstanceMeshAddCube(mesh, x, y, z);
         case RenderGeometry.Cross:
@@ -21,7 +22,6 @@ function InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z:
     const matrix = new THREE.Matrix4();
     matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
     mesh.setMatrixAt(instanceId, matrix);
-
     return [instanceId];
 }
 

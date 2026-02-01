@@ -7,6 +7,7 @@ export enum RenderGeometry {
   // TODO Cross => TallGrass
   Cross,
   Flower,
+  Tree,
 }
 
 export type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;

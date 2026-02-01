@@ -1,15 +1,15 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { oakLogSideMaterial, combineOkaMaterial } from "../../engine/material";
+import { OkaLogMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
-import { DevControl } from "../../dev";
 
 /**@desc 橡木原木块 */
 export class OakLogBlock extends Block {
   id = BlockID.OakLog;
-  material = DevControl.instanceMerge ? combineOkaMaterial : oakLogSideMaterial;
+  material = OkaLogMaterial;
   uiTexture = ItemImage.oakLog;
-  geometry = RenderGeometry.Cube;
+  // geometry = RenderGeometry.Cube;
+  geometry = RenderGeometry.Tree;
   transparent = false;
   canPassThrough = false;
   canDrop = true;

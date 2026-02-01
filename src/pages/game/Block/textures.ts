@@ -8,9 +8,9 @@ import Stone from '../../../assets/textures/blocks/stone.png';
 import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
 import IronOre from '../../../assets/textures/blocks/iron_ore.png';
 import BedRock from '../../../assets/textures/blocks/bedrock.png';
-
-import OakLogSide from '../../../assets/textures/blocks/oak_log_side.png';
-import OakLogTop from '../../../assets/textures/blocks/oak_log_top.png';
+// import OakLogSide from '../../../assets/textures/blocks/oak_log_side.png';
+// import OakLogTop from '../../../assets/textures/blocks/oak_log_top.png';
+import Oka from '../../../assets/textures/blocks/oka.png';
 import Leaves from '../../../assets/textures/blocks/leaves.png';
 import TallGrass from '../../../assets/textures/plants/tall_grass.png';
 import FlowerRose from '../../../assets/textures/flowers/flower_rose.png';
@@ -36,8 +36,9 @@ export const textures = {
   coal: loadTexture(CoalOre),
   iron: loadTexture(IronOre),
   bedrock: loadTexture(BedRock),
-  oakLogSide: loadTexture(OakLogSide),
-  oakLogTop: loadTexture(OakLogTop),
+  // oakLogSide: loadTexture(OakLogSide),
+  // oakLogTop: loadTexture(OakLogTop),
+  oka: loadTexture(Oka),
   leaves: loadTexture(Leaves),
   tallGrass: loadTexture(TallGrass),
   flowerRose: loadTexture(FlowerRose),
