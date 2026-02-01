@@ -19,17 +19,19 @@ export const generateTrees = (
   const canopySize = trees.canopy.size.max;
   for (let baseX = canopySize; baseX < width - canopySize; baseX++) {
     for (let baseZ = canopySize; baseZ < width - canopySize; baseZ++) {
-      const n =
-        World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;
+      const n = World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;
       if (n < 1 - trees.frequency) {
         continue;
       }
 
-      // Find the grass tile
+      /**@desc 找到地表高度 Find the grass tile*/
       for (let y = height - 1; y >= 0; y--) {
+        // TODO 判断条件后续需要优化
         if (input[baseX][y][baseZ] !== BlockID.Grass) {
           continue;
         }
+        // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
+        input[baseX][y][baseZ] = BlockID.Dirt;
 
         // Found grass, move one time up
         const baseY = y + 1;

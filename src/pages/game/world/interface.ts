@@ -16,7 +16,7 @@ interface ITrees {
     min: number;
     max: number;
   };
-  // 树冠覆盖大小
+  // 树的覆盖大小
   canopy: {
     size: {
       min: number;

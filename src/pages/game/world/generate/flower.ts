@@ -18,6 +18,7 @@ export const generateFlowers = (
           break;
         }
 
+        // 在草方块上长花
         if (input[x][y][z] === BlockID.Grass) {
           // found grass, move one time up
           const baseY = y + 1;
