@@ -92,12 +92,13 @@ export class MouseInput {
         // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
         if (playerPos.distanceTo(blockPos) <= 1) return;
 
+        const placementBlockId = ToolBar.activeBlockId;
         // Right click 放置方块
         const isPlacementSuccess = world.addBlock(
             blockPos.x,
             blockPos.y,
             blockPos.z,
-            ToolBar.activeBlockId
+            placementBlockId,
         );
         if (isPlacementSuccess) {
             // 放置方块后需要从玩家物品栏中移除当前放置的方块
@@ -113,7 +114,7 @@ export class MouseInput {
                 blockPos.y,
                 blockPos.z,
                 selectedBlockId,
-                ToolBar.activeBlockId,
+                placementBlockId,
             );
         }        
     }
