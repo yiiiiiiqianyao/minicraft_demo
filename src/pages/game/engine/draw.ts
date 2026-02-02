@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { GameState, RenderView } from "../consatnt";
+import { GameState, RenderView } from "../constant";
 import { DevControl } from "../dev";
 import type { Player } from "../player/Player";
 

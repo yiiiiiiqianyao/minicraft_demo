@@ -1,5 +1,5 @@
 import { EventSystem } from "../../EventSystem";
-import { GameEvent, GameState, PopupType, State } from "../consatnt";
+import { GameEvent, GameState, PopupType, State } from "../constant";
 import { DevControl } from "../dev";
 import { ToolBar } from "../gui";
 import { Action } from "./action";

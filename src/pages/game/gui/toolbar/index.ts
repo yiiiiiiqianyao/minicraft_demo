@@ -19,10 +19,10 @@ export class ToolBar {
       // BlockID.OakLog,
       // BlockID.Leaves,
       // BlockID.FlowerRose
-      // {
-      //   blockId: BlockID.CoalOre,
-      //   count: 1,
-      // }
+      {
+        blockId: BlockID.Air,
+        count: 1,
+      },
       {
         blockId: BlockID.CraftingTable,
         count: 1,

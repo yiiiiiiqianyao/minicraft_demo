@@ -4,7 +4,7 @@ import { ToolBar } from "../toolbar"
 import { CraftPopup } from "../popup/craftPopup"
 import { EventSystem } from "../../EventSystem"
 import { BackpackerPopup } from "../popup/backpackerPopup"
-import { GameEvent, PopupType } from "../../game/consatnt"
+import { GameEvent, PopupType } from "../../game/constant"
 
 export const UI = () => {
     const [popupType, setPopupType] = useState('');

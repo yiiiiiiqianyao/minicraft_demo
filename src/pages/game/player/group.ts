@@ -104,6 +104,8 @@ export class PlayerGroup {
                     return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerDandelion) as THREE.Mesh);
                 case BlockID.RedstoneLamp:
                 case BlockID.StoneBrick:
+                case BlockID.CraftingTable:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.CraftingTable) as THREE.Mesh);
             }
         }
     }

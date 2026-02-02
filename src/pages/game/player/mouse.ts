@@ -7,7 +7,7 @@ import { PhysicsParams } from "../physics/literal";
 import { Selector } from "./selector";
 import { BlockFactory, BlockID } from "../Block";
 import { EventSystem } from "../../EventSystem";
-import { GameEvent, GameState, PopupType, State } from "../consatnt";
+import { GameEvent, GameState, PopupType, State } from "../constant";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {

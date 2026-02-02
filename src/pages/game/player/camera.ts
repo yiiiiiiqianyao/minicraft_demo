@@ -3,7 +3,7 @@ import TWEEN from "@tweenjs/tween.js";
 import { ScreenViewer } from "../gui/viewer";
 import { PlayerInitPosition } from "./literal";
 import { GameLayers } from "../engine";
-import { RenderView } from "../consatnt";
+import { RenderView } from "../constant";
 
 export function initPlayerCamera() {
     const camera = new THREE.PerspectiveCamera(

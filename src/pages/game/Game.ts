@@ -17,7 +17,7 @@ import { GameTimeManager, hourDuration } from "./time";
 import { DevControl, initStats } from "./dev";
 import { EventSystem } from "../EventSystem";
 import { isMobile } from "../utils";
-import { GameState, RenderView } from "./consatnt";
+import { GameState, RenderView } from "./constant";
 import { getRenderCamera } from "./engine/draw";
 
 /**@desc 游戏主类入口 */

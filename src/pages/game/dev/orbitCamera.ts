@@ -3,16 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Player } from "../player/Player";
 import { PlayerInitPosition } from "../player/literal";
 import { ScreenViewer } from "../gui/viewer";
-import { RenderView } from "../consatnt";
-
-export function setOrbitCameraPosition(orbitCamera: THREE.PerspectiveCamera, x: number, y: number, z: number) {
-    // orbitCamera.position.set(x - 64, y - 20, z - 64);
-    // orbitCamera.position.set(x , y - 20, z );
-    // middle high
-    // orbitCamera.position.set(x , y - 20, z + 10 );
-    // top high
-    orbitCamera.position.set(x , y - 5, z );
-}
+import { RenderView } from "../constant";
 
 // 第三视角观察使用
 export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
@@ -23,13 +14,9 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
     orbitCamera.userData.type = RenderView.ThirdPerson;
     // 32, 72, 32
     const { x, y, z } = PlayerInitPosition
-    // TODO 调整相机位置
-    setOrbitCameraPosition(orbitCamera, x, y, z);
-
-    const controls = new OrbitControls(
-        orbitCamera,
-        renderer.domElement
-    );
+    orbitCamera.position.set(x, y, z);
+    // 轨道控制器 
+    const controls = new OrbitControls(orbitCamera, renderer.domElement);
     orbitCamera.layers.enableAll();
     controls.target.set(0, 0, 0);
     controls.update();
@@ -48,13 +35,9 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
  */
 export function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: OrbitControls, player: Player) {
     if(!camera || !controls || !player) return;
-    // player.controls.isLocked === true 第一人称模式
-    // player.controls.isLocked === false 观察者模式
-    if(!controls.target.equals(player.position) && player.controls.isLocked) {
+    if(!(controls.target.distanceTo(player.position) < 0.01)) {
         const {x, y, z} = player.position;
-        // camera.position.set(x - 64, PlayerInitPosition.y - 20, z - 64);
-        // camera.position.set(x , PlayerInitPosition.y - 20, z );
-        setOrbitCameraPosition(camera, x, PlayerInitPosition.y, z);
+        camera.position.set(x - 5, y + 10, z + 5);
         controls.target.set(x, y, z);
     };
     controls.update();
