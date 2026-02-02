@@ -12,6 +12,7 @@ import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData, IWorldParams } from "./interface";
 import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
 
+/** @desc chunk 区块对象 */
 export class WorldChunk extends THREE.Group {
   /**@desc chunk 中的 block 数据 */
   private data: IInstanceData[][][] = [];
@@ -28,7 +29,6 @@ export class WorldChunk extends THREE.Group {
     super();
     this.params = params;
     this.dataStore = dataStore;
-    // this.dropGroup = new DropGroup(this.position, this);
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
       this.helperColor = new THREE.Color(Math.random(), Math.random(), Math.random())

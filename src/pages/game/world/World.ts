@@ -135,7 +135,7 @@ export class World extends THREE.Group {
   getBlockUnderneath(position: THREE.Vector3) {
     const {x, y, z} = position;
     const [floorX, floorY, floorZ] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z);
-    return this.getBlock(floorX, floorY, floorZ);
+    return this.getBlockData(floorX, floorY, floorZ);
   }
 
   /**
@@ -265,50 +265,71 @@ export class World extends THREE.Group {
     }
   }
 
-  // TODO 破坏 & 移除方块
+  /** @desc 移除方块 */
   removeBlock(x: number, y: number, z: number) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
-    const blockToRemove = this.getBlock(x, y, z);
+    if (!chunk || !chunk.loaded) return;
+    const blockToRemove = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
     // console.log('chunk', chunk);
     // console.log('blockToRemove', blockToRemove);
     // 不能破坏基岩 bedrock
     if (blockToRemove?.blockId === BlockID.Bedrock) return;
     
-    if (chunk && chunk.loaded) {
-      // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
-      chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);
-      // 如果是光源方块 则需要移除对应的点光源
-      if (this.pointLights.has(this.getBlockKey(x, y, z))) {
-        const light = this.pointLights.get(this.getBlockKey(x, y, z));
-        if (light) {
-          this.scene.remove(light);
-          this.pointLights.delete(this.getBlockKey(x, y, z));
-        }
+    // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
+    chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);
+    // 如果是光源方块 则需要移除对应的点光源
+    if (this.pointLights.has(this.getBlockKey(x, y, z))) {
+      const light = this.pointLights.get(this.getBlockKey(x, y, z));
+      if (light) {
+        this.scene.remove(light);
+        this.pointLights.delete(this.getBlockKey(x, y, z));
       }
+    }
 
-      // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed
-      this.revealBlock(x - 1, y, z);
-      this.revealBlock(x + 1, y, z);
-      this.revealBlock(x, y - 1, z);
-      this.revealBlock(x, y + 1, z);
-      this.revealBlock(x, y, z - 1);
-      this.revealBlock(x, y, z + 1);
+    // Reveal any adjacent blocks that may have been exposed after the block at (x,y,z) was removed
+    this.revealBlock(x - 1, y, z);
+    this.revealBlock(x + 1, y, z);
+    this.revealBlock(x, y - 1, z);
+    this.revealBlock(x, y + 1, z);
+    this.revealBlock(x, y, z - 1);
+    this.revealBlock(x, y, z + 1);
 
-      // if above block is passthrough, remove it as well
-      // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true
-      const aboveBlock = this.getBlock(x, y + 1, z);
-      if (
-        aboveBlock &&
-        // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断
-        BlockFactory.getBlock(aboveBlock.blockId).canPassThrough &&
-        aboveBlock.blockId !== BlockID.Air
-      ) {
-        this.removeBlock(x, y + 1, z);
-      }
+    // if above block is passthrough, remove it as well
+    // 检查被破坏的方块上方的方块是否需要同时移除 目前只有 草和花方块需要移除 canPassThrough 为 true
+    const aboveBlock = this.getBlockData(x, y + 1, z);
+    if (
+      aboveBlock &&
+      // TODO 需要调整策略，而不是简单通过 canPassThrough 是否为可通过方块来判断
+      BlockFactory.getBlock(aboveBlock.blockId).canPassThrough &&
+      aboveBlock.blockId !== BlockID.Air
+    ) {
+      this.removeBlock(x, y + 1, z);
     }
   }
 
+  /**@desc */
+  digBlock(x: number, y: number, z: number) {
+    const coords = worldToChunkCoords(x, y, z);
+    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
+    if (!chunk || !chunk.loaded) return;
+    const digBlockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
+    if (!digBlockData) return;
+    const digBlockId = digBlockData.blockId;
+    // 不能破坏基岩 bedrock
+    if (digBlockId === BlockID.Bedrock) return;
+    console.log('digBlockData.blockData.breakCount', digBlockData.blockData.breakCount);
+    // const digBlockClass = BlockFactory.getBlock(digBlockId)
+    if (!digBlockData?.blockData?.breakCount || digBlockData.blockData.breakCount === 1) {
+      this.removeBlock(x, y, z);
+    } else {
+      // const count = digBlockData.blockData.breakCount as number;
+      // console.log('digBlock', count);
+      // TODO 暂时任务一次 dig 值为 1
+      (digBlockData.blockData.breakCount as number) -= 1;
+    }
+    
+  }
 
   updateBlockType(x: number, y: number, z: number, block: BlockID) {
     // const coords = worldToChunkCoords(x, y, z);
@@ -340,7 +361,7 @@ export class World extends THREE.Group {
     let groundHeight =  ChunkParams.height;
     for (let y = ChunkParams.height; y > 0; y--) {
       // TODO 后续判断是否是地面的方式需要优化
-      if (this.getBlock( x, y, z)?.blockId === BlockID.Grass) {
+      if (this.getBlockData( x, y, z)?.blockId === BlockID.Grass) {
         groundHeight = y;
         break;
       }
@@ -351,7 +372,7 @@ export class World extends THREE.Group {
   /**
    * Gets the block data at (x, y, z)
    */
-  getBlock(x: number, y: number, z: number) {
+  getBlockData(x: number, y: number, z: number) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 

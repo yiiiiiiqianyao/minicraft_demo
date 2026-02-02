@@ -35,8 +35,8 @@ export class MouseInput {
         if (event.button === 0) {
             this.handleLeftClick();
             if (!Selector.selectedMesh) return;
-            const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
-            this.handleBreak(selectedBlockId);
+            // const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
+            this.handleBreak();
         } else if (event.button === 2 && Selector.selectedMesh) {
             const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
             if (selectedBlockId === BlockID.CraftingTable) {
@@ -62,14 +62,16 @@ export class MouseInput {
     }
 
     /**@desc 破坏一个方块 */
-    private handleBreak(blockId: BlockID) {
-        const block = BlockFactory.getBlock(blockId);
+    private handleBreak() {
+        // blockId: BlockID
+        // const block = BlockFactory.getBlock(blockId);
         // TODO 支持不同 block 方块的破坏进度
-        console.log('break block =>', block);
+        // console.log('break block =>', block);
         const pos = Selector.getBlockPositionInWorld();
         if (!pos) return;
         const [x, y, z] = pos;
-        this.world.removeBlock(x, y, z);
+        this.world.digBlock(x, y, z);
+        // this.world.removeBlock(x, y, z);
     }
 
     /**@desc 放置一个方块 */

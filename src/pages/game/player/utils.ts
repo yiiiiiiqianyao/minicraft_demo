@@ -13,14 +13,14 @@ import { WorldChunk } from "../world/WorldChunk";
 export function getBlockUnderneath(player: Player, world: World) {
   const { x, y, z} = player.position;
   const [fx, fy, fz] = getFloorXYZ(x, y - PlayerParams.height / 2 - 1, z)
-  return world.getBlock(fx, fy, fz);
+  return world.getBlockData(fx, fy, fz);
 }
 
 /**@desc 获取玩家头顶上的方块 */
 export function getBlockUpperNeath(player: Player, world: World) {
   const { x, y, z} = player.position;
   const [fx, fy, fz] = getFloorXYZ(x, y + 1, z)
-  return world.getBlock(fx, fy, fz);
+  return world.getBlockData(fx, fy, fz);
 }
 
 /**@desc 获取玩家相邻的最小 1 or 4 个 chunk */ 

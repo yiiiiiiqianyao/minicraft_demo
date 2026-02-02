@@ -19,5 +19,5 @@ export enum BlockID {
 
 /**@desc 所有方块ID 数组 */
 export const blockIDValues = Object.values(BlockID).filter(
-      (value) => typeof value === "number"
-    ) as BlockID[];
+  (value) => typeof value === "number"
+) as BlockID[];

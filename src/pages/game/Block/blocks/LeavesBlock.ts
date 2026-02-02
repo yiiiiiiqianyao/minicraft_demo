@@ -7,7 +7,6 @@ import { DevControl } from "../../dev";
 /**@desc 树叶方块 */
 export class LeavesBlock extends Block {
   id = BlockID.Leaves;
-  // material = LeavesMaterial;
   material = DevControl.instanceMerge ? combineLeaveMaterial : LeavesMaterial;
   uiTexture = ItemImage.leaves;
   geometry = RenderGeometry.Cube;
@@ -15,4 +14,12 @@ export class LeavesBlock extends Block {
   canPassThrough = false;
   canDrop = true;
   breakCount = 1;
+}
+
+export const EmptyLeaveBlockData = {
+  blockId: BlockID.Leaves,
+  instanceIds: [],
+  blockData: {
+    breakCount: 1,
+  },
 }

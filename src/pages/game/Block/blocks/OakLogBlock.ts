@@ -8,10 +8,19 @@ export class OakLogBlock extends Block {
   id = BlockID.OakLog;
   material = OkaLogMaterial;
   uiTexture = ItemImage.oakLog;
-  // geometry = RenderGeometry.Cube;
   geometry = RenderGeometry.Tree;
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
+}
+
+export const getEmptyOkaBlockData = () => {
+    return {
+    blockId: BlockID.OakLog,
+    instanceIds: [],
+    blockData: {
+      breakCount: 10,
+    },
+  }
 }

@@ -12,5 +12,15 @@ export class StoneBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
 }
+
+export const getEmptyStoneBlockData = () => {
+  return {
+    blockId: BlockID.Stone,
+    instanceIds: [],
+    blockData: {
+      breakCount: 10,
+    },
+  }
+} 

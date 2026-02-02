@@ -3,7 +3,7 @@ import { BlockID } from "../../Block";
 import { World } from "../World";
 import type { IInstanceData, IWorldParams } from "../interface";
 import { ChunkParams } from "../chunk/literal";
-import { EmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
+import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 
 /**
  * Generates trees
@@ -32,7 +32,7 @@ export const generateTrees = (
           continue;
         }
         // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
-        input[baseX][y][baseZ] = EmptyDirtBlockData;
+        input[baseX][y][baseZ] = getEmptyDirtBlockData();
 
         // Found grass, move one time up
         const baseY = y + 1;

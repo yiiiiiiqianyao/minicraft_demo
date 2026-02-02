@@ -87,7 +87,7 @@ export class PlayerPhysics {
         for (let x = minX; x <= maxX; x++) {
             for (let y = minY; y <= maxY; y++) {
                 for (let z = minZ; z <= maxZ; z++) {
-                    const blockData = world.getBlock(x, y, z);
+                    const blockData = world.getBlockData(x, y, z);
                     if (!blockData) continue;
                     // If the block is solid, add it to the list of candidates
                     const blockClass = BlockFactory.getBlock(blockData.blockId);

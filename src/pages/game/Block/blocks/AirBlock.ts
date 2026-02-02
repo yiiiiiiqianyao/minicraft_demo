@@ -1,5 +1,4 @@
 import { Block, RenderGeometry } from "../base/Block";
-
 import { BlockID } from "../constant";
 
 export class AirBlock extends Block {
@@ -11,4 +10,10 @@ export class AirBlock extends Block {
   canPassThrough = true;
   canDrop = false;
   breakCount = -1;
+}
+
+export const EmptyAirBlockData = {
+  blockId: BlockID.Air,
+  instanceIds: [],
+  blockData: {},
 }

@@ -12,5 +12,15 @@ export class GrassBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 5;
+}
+
+export const getEmptyGrassBlockData = () => {
+  return {
+    blockId: BlockID.Grass,
+    instanceIds: [],
+    blockData: {
+      breakCount: 5,
+    },
+  }
 }

@@ -4,7 +4,9 @@ import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData, IWorldParams } from "../interface";
 import { DevControl } from "../../dev";
-import { EmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
+import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
+import { getEmptyStoneBlockData } from "../../Block/blocks/StoneBlock";
+import { getEmptyGrassBlockData } from "../../Block/blocks/GrassBlock";
 
 /**
  * Generates the terrain data
@@ -38,15 +40,11 @@ export const generateTerrain = (input: IInstanceData[][][], params: IWorldParams
         if (y < terrainHeight) {
           if(y >= terrainHeight - surfaceHeight) {
             // 地表层到地面是泥土
-            input[x][y][z] = EmptyDirtBlockData;
+            input[x][y][z] = getEmptyDirtBlockData();
           } else if(y >= bedrockHeight) {
             // 从基岩层到地表层
             if (input[x][y][z].blockId === BlockID.Air) {
-              input[x][y][z] = {
-                blockId: BlockID.Stone,
-                instanceIds: [],
-                blockData: {},
-              }
+              input[x][y][z] = getEmptyStoneBlockData();
             } else {
               // 其他情况 保持原有方块（生产的各种资源方块）
             }
@@ -69,7 +67,7 @@ export const generateTerrain = (input: IInstanceData[][][], params: IWorldParams
           // }
         } else if (y === terrainHeight) {
           // TODO 暂时作为地表的方块
-          input[x][y][z].blockId = BlockID.Grass;
+          input[x][y][z] = getEmptyGrassBlockData();
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = {
               blockId: BlockID.Bedrock,

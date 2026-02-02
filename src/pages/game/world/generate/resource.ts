@@ -1,9 +1,10 @@
 import * as THREE from "three";
 import { World } from "../World";
-import { BlockID } from "../../Block";
+import { BlockFactory, BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
 
+/** @desc 资源方块的配置 */
 export const oreConfig = {
   coal: {
     id: BlockID.CoalOre,
@@ -39,7 +40,9 @@ export const generateResources = (
             input[x][y][z] = {
               blockId: config.id,
               instanceIds: [],
-              blockData: {},
+              blockData: {
+                breakCount: BlockFactory.getBlock(config.id).breakCount
+              },
             }
           }
         }
