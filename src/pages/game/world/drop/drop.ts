@@ -159,7 +159,7 @@ export class DropGroup extends THREE.Group {
         const blockX = Math.floor(x);
         const underBlockY = Math.floor(y) - 1;
         const blockZ = Math.floor(z);
-        const underBlockData = this.chunk.getBlock(blockX, underBlockY, blockZ);
+        const underBlockData = this.chunk.getBlockData(blockX, underBlockY, blockZ);
         if (!underBlockData) {
             // ERROR 下方的 block 不存在的时候
             console.warn('drop 下方的 block 不存在！！');

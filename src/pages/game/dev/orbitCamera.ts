@@ -23,6 +23,7 @@ export function initOrbitCamera(renderer: THREE.WebGLRenderer) {
     orbitCamera.userData.type = RenderView.ThirdPerson;
     // 32, 72, 32
     const { x, y, z } = PlayerInitPosition
+    // TODO 调整相机位置
     setOrbitCameraPosition(orbitCamera, x, y, z);
 
     const controls = new OrbitControls(

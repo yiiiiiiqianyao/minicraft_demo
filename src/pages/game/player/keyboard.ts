@@ -57,8 +57,8 @@ export class KeyboardInput {
         Action.handlePlayerEvent(this.player, event.code);
         break;
       case "KeyV":
-        if (!DevControl.v) DevControl.v = 2;
-        DevControl.v = DevControl.v === 1 ? 2 : 1;
+        if (DevControl.view < 0) DevControl.view = 2;
+        DevControl.view = DevControl.view === 1 ? 2 : 1;
         break;
       case "KeyQ":
         Action.dropHandle(this.player);

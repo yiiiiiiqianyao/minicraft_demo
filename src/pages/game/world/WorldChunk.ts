@@ -41,7 +41,7 @@ export class WorldChunk extends THREE.Group {
     // const start = performance.now();
     // 初始化 chunk 数据
     const { x, z } = this.position;
-    const data: BlockID[][][] = await generateChunk(this.params, x, z);
+    const data: IInstanceData[][][] = await generateChunk(this.params, x, z);
 
     // 空闲时间的 callback
     requestIdleCallback(() => {
@@ -68,7 +68,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Initializes the terrain data
    */
-  private initializeTerrain(data: BlockID[][][]) {
+  private initializeTerrain(data: IInstanceData[][][]) {
     const { width, height } = ChunkParams;
     this.data = [];
     for (let x = 0; x < width; x++) {
@@ -77,9 +77,9 @@ export class WorldChunk extends THREE.Group {
         const row: IInstanceData[] = [];
         for (let z = 0; z < width; z++) {
           row.push({
-            blockId: data[x][y][z],
+            blockId: data[x][y][z].blockId,
             instanceIds: [],
-            blockData: {},
+            blockData: data[x][y][z].blockData,
           });
         }
         slice.push(row);
@@ -91,7 +91,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Loads player changes from the data store
    */
-  private loadGameChanges(data: BlockID[][][]) {
+  private loadGameChanges(data: IInstanceData[][][]) {
     const { width, height } = ChunkParams;
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
@@ -100,7 +100,7 @@ export class WorldChunk extends THREE.Group {
           if (
             this.dataStore.contains(this.position.x, this.position.z, x, y, z)
           ) {
-            const blockId = this.dataStore.get(
+            const storageData = this.dataStore.get(
               this.position.x,
               this.position.z,
               x,
@@ -108,10 +108,10 @@ export class WorldChunk extends THREE.Group {
               z
             );
             // 如果数据 store 中的值与当前 chunk 中的值相同，则无需更新
-            if(blockId === this.getBlock(x, y, z)?.blockId) return;
+            if(storageData.blockId === this.getBlockData(x, y, z)?.blockId) return;
             // Tip: 更新/覆盖数据
-            this.setBlockId(x, y, z, blockId);
-            data[x][y][z] = blockId;
+            this.setBlockData(x, y, z, storageData);
+            data[x][y][z] = storageData;
           }
         }
       }
@@ -119,7 +119,7 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**@desc 生成 chunk 中的 block 对应的 mesh */
-  private generateMeshes(data: BlockID[][][]) {
+  private generateMeshes(data: IInstanceData[][][]) {
     const { width, height } = ChunkParams;
     this.clear();
 
@@ -127,14 +127,14 @@ export class WorldChunk extends THREE.Group {
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
         for (let z = 0; z < width; z++) {
-          const block = data[x][y][z];
-          const blockClass = BlockFactory.getBlock(block);
+          const blockData = data[x][y][z];
+          const blockClass = BlockFactory.getBlock(blockData.blockId);
           // 空气块不生成 mesh
-          if (block === BlockID.Air) continue;
+          if (blockData.blockId === BlockID.Air) continue;
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
-          if (block && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
+          if (blockData && !this.isBlockObscured(x, y, z) && !this.isBorderBlock(x, y, z)) {
             // 当前 block 对应的 InstanceMesh
-            const mesh = this.initInstanceMesh(block);
+            const mesh = this.initInstanceMesh(blockData.blockId);
             const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
             ids && this.setBlockInstanceIds(x, y, z, ids);
           }
@@ -164,9 +164,9 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**@desc 设置 chunk 中 (x, y, z) 位置的 block id */
-  private setBlockId(x: number, y: number, z: number, blockId: BlockID) {
+  private setBlockData(x: number, y: number, z: number, blockData: IInstanceData) {
     if (inBounds(x, y, z)) {
-      this.data[x][y][z].blockId = blockId;
+      this.data[x][y][z] = blockData;
       return true;
     }
     return false;
@@ -175,7 +175,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * Gets the block data at (x, y, z) for this chunk
    */
-  getBlock(x: number, y: number, z: number): IInstanceData | null {
+  getBlockData(x: number, y: number, z: number): IInstanceData | null {
     if (inBounds(x, y, z)) {
       if(this.data[x] !== undefined && this.data[x][y] !== undefined && this.data[x][y][z] !== undefined) {
         return this.data[x][y][z];
@@ -192,11 +192,21 @@ export class WorldChunk extends THREE.Group {
    */
   addBlock(x: number, y: number, z: number, blockId: BlockID) {
     // Safety check that we aren't adding a block for one that already exists
-    if (this.getBlock(x, y, z)?.blockId === BlockID.Air) {
-      this.setBlockId(x, y, z, blockId);
-      this.addBlockInstance(x, y, z);
-      // 更新全局的数据存储
-      this.dataStore.set(this.position.x, this.position.z, x, y, z, blockId);
+    if (this.getBlockData(x, y, z)?.blockId === BlockID.Air) {
+      this.setBlockData(x, y, z, {
+        blockId,
+        instanceIds: [],
+        blockData: {},
+      });
+      const addBlockData = this.addBlockInstance(x, y, z);
+      if (addBlockData) {
+        // 添加 block 成功 更新全局的数据存储
+        this.dataStore.set(
+          this.position.x, 
+          this.position.z, 
+          x, y, z, 
+          addBlockData);
+      }
       return true;
     } else {
       return false;
@@ -208,7 +218,7 @@ export class WorldChunk extends THREE.Group {
    */
   removeBlock(x: number, y: number, z: number) {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
-    const block = this.getBlock(x, y, z);
+    const block = this.getBlockData(x, y, z);
     // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
     if(!block || block.blockId === BlockID.Air || block.blockId === BlockID.Bedrock) return;
     const blockId = block.blockId;
@@ -223,7 +233,11 @@ export class WorldChunk extends THREE.Group {
       this.dropGroup!.drop(block.blockId, x, y, z, true);
     }    
 
-    this.setBlockId(x, y, z, BlockID.Air);
+    this.setBlockData(x, y, z, {
+      blockId: BlockID.Air,
+      instanceIds: [],
+      blockData: {},
+    });
     // 更新数据存储 设置方块为Air
     this.dataStore.set(
       this.position.x,
@@ -231,7 +245,11 @@ export class WorldChunk extends THREE.Group {
       x,
       y,
       z,
-      BlockID.Air
+      {
+      blockId: BlockID.Air,
+      instanceIds: [],
+      blockData: {},
+    }
     );
   }
 
@@ -239,28 +257,30 @@ export class WorldChunk extends THREE.Group {
    * @desc Creates a new instance for the block at (x, y, z)
    */
   addBlockInstance(x: number, y: number, z: number) {
-    const block = this.getBlock(x, y, z);
+    const blockData = this.getBlockData(x, y, z);
     // TODO 在增加 block instance 的同时 需要更新 block data 的数据
     // If the block is not air and doesn't have an instance id, create a new instance
     if (
-      block &&
-      block.blockId !== BlockID.Air &&
-      block.instanceIds.length === 0
+      blockData &&
+      blockData.blockId !== BlockID.Air &&
+      blockData.instanceIds.length === 0
     ) {
-      if (!this.meshes[block.blockId]) this.initInstanceMesh(block.blockId);
-      const mesh = this.meshes[block.blockId];
-      const blockClass = BlockFactory.getBlock(block.blockId);
+      const blockId = blockData.blockId;
+      if (!this.meshes[blockId]) this.initInstanceMesh(blockId);
+      const mesh = this.meshes[blockId];
+      const blockClass = BlockFactory.getBlock(blockId);
       if (mesh) {
         // 放置方块的时候播放对应的音效
-        AudioManager.playBlockSound(block.blockId);
+        AudioManager.playBlockSound(blockId);
         const ids = InstanceMeshAdd(mesh, blockClass, x, y, z);
         if(ids) {
           this.setBlockInstanceIds(x, y, z, ids);
           mesh.instanceMatrix.needsUpdate = true;
           // 重新计算实例化网格的边界，确保相机正常渲染 or 射线碰撞检测正常工作
           mesh.computeBoundingSphere();
+          return blockData;
         } else {
-          console.warn(`Failed to add instance for block ${block.blockId}`);
+          console.warn(`Failed to add instance for block ${blockId}`);
         }
       }
     }
@@ -269,15 +289,15 @@ export class WorldChunk extends THREE.Group {
   /**
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
-  deleteBlockInstance(x: number, y: number, z: number, deleteBlock?: IInstanceData) {
-    const block = deleteBlock ? deleteBlock : this.getBlock(x, y, z);
-    if (block?.blockId === BlockID.Air || !block?.instanceIds.length) return;
+  deleteBlockInstance(x: number, y: number, z: number, deleteBlockData?: IInstanceData) {
+    const blockData = deleteBlockData ? deleteBlockData : this.getBlockData(x, y, z);
+    if (blockData?.blockId === BlockID.Air || !blockData?.instanceIds.length) return;
 
     // Get the mesh of the block
     const mesh = this.children.find(
       (instanceMesh) =>
         instanceMesh.name ===
-        BlockFactory.getBlock(block.blockId).constructor.name
+        BlockFactory.getBlock(blockData.blockId).constructor.name
     ) as THREE.InstancedMesh;
 
     /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例
@@ -289,7 +309,7 @@ export class WorldChunk extends THREE.Group {
     // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1
     const lastBlockInstanceIds: number[] = [];
     const lastBlockCoords = new THREE.Vector3();
-    block.instanceIds.forEach((instanceId) => {
+    blockData.instanceIds.forEach((instanceId) => {
       // 获取 instanceMesh 中最后一个 instance id 的矩阵
       const lastMatrix = new THREE.Matrix4();
       mesh.getMatrixAt(mesh.count - 1, lastMatrix);
@@ -349,12 +369,12 @@ export class WorldChunk extends THREE.Group {
    * @returns 是否被其他方块遮挡
    */
   isBlockObscured(x: number, y: number, z: number): boolean {
-    const up = this.getBlock(x, y + 1, z);
-    const down = this.getBlock(x, y - 1, z);
-    const left = this.getBlock(x - 1, y, z);
-    const right = this.getBlock(x + 1, y, z);
-    const front = this.getBlock(x, y, z + 1);
-    const back = this.getBlock(x, y, z - 1);
+    const up = this.getBlockData(x, y + 1, z);
+    const down = this.getBlockData(x, y - 1, z);
+    const left = this.getBlockData(x - 1, y, z);
+    const right = this.getBlockData(x + 1, y, z);
+    const front = this.getBlockData(x, y, z + 1);
+    const back = this.getBlockData(x, y, z - 1);
 
     // If any of the block's sides are exposed, it's not obscured
     if (
@@ -388,7 +408,7 @@ export class WorldChunk extends THREE.Group {
   private isBorderBlock(x: number, y: number, z: number): boolean {
     const { width, height } = ChunkParams;
     // TODO 看上去是一个优化判断 暂时待理解
-    const up = this.getBlock(x, y + 1, z);
+    const up = this.getBlockData(x, y + 1, z);
     const upBlockClass = up ? BlockFactory.getBlock(up.blockId) : null;
     // Need when regenerate chunk 如果上方的方块不是空气，那么它不是边界
     if (up?.blockId !== BlockID.Air) {

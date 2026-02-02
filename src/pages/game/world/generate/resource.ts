@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { World } from "../World";
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
+import type { IInstanceData } from "../interface";
 
 export const oreConfig = {
   coal: {
@@ -20,9 +21,9 @@ export const oreConfig = {
  * Generates the resources (coal, stone, etc.) for the world
  */
 export const generateResources = (
-  input: BlockID[][][],
+  input: IInstanceData[][][],
   chunkPos: THREE.Vector3
-): BlockID[][][] => {
+): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
   for (const [_, config] of Object.entries(oreConfig)) {
     for (let x = 0; x < width; x++) {
@@ -35,7 +36,11 @@ export const generateResources = (
           );
 
           if (value > config.scarcity) {
-            input[x][y][z] = config.id;
+            input[x][y][z] = {
+              blockId: config.id,
+              instanceIds: [],
+              blockData: {},
+            }
           }
         }
       }

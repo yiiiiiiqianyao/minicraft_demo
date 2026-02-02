@@ -6,7 +6,7 @@ import { generateTrees } from "./tree";
 import { generateTallGrass } from "./tallGrass";
 import { generateFlowers } from "./flower";
 import { ChunkParams } from "../chunk/literal";
-import type { IWorldParams } from "../interface";
+import type { IInstanceData, IWorldParams } from "../interface";
 
 // TODO BlockID[][][] => IInstanceData[][][]
 const initEmptyChunk = () => {
@@ -17,11 +17,16 @@ const initEmptyChunk = () => {
     for (let y = 0; y < height; y++) {
       data[x][y] = new Array(width);
       for (let z = 0; z < width; z++) {
-        data[x][y][z] = BlockID.Air;
+        // data[x][y][z] = BlockID.Air;
+        data[x][y][z] = {
+          blockId: BlockID.Air,
+          instanceIds: [],
+          blockData: {},
+        }
       }
     }
   }
-  return data as BlockID[][][];
+  return data as IInstanceData[][][];
 };
 
 export const generateChunk = async (

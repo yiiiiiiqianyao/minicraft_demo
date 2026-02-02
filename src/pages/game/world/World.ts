@@ -356,7 +356,7 @@ export class World extends THREE.Group {
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
-      return chunk.getBlock(coords.block.x, y, coords.block.z);
+      return chunk.getBlockData(coords.block.x, y, coords.block.z);
     }
   }
 

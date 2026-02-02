@@ -2,16 +2,14 @@ import * as THREE from "three";
 import { World } from "../World";
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
-import type { IWorldParams } from "../interface";
+import type { IInstanceData, IWorldParams } from "../interface";
 import { DevControl } from "../../dev";
+import { EmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 
 /**
  * Generates the terrain data
  */
-export const generateTerrain = (
-  input: BlockID[][][],
-  params: IWorldParams,
-  chunkPos: THREE.Vector3): BlockID[][][] => {
+export const generateTerrain = (input: IInstanceData[][][], params: IWorldParams, chunkPos: THREE.Vector3): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
   const { terrain, surface, bedrock } = params;
   for (let x = 0; x < width; x++) {
@@ -40,17 +38,25 @@ export const generateTerrain = (
         if (y < terrainHeight) {
           if(y >= terrainHeight - surfaceHeight) {
             // 地表层到地面是泥土
-            input[x][y][z] = BlockID.Dirt;
+            input[x][y][z] = EmptyDirtBlockData;
           } else if(y >= bedrockHeight) {
             // 从基岩层到地表层
-            if (input[x][y][z] === BlockID.Air) {
-              input[x][y][z] = BlockID.Stone;
+            if (input[x][y][z].blockId === BlockID.Air) {
+              input[x][y][z] = {
+                blockId: BlockID.Stone,
+                instanceIds: [],
+                blockData: {},
+              }
             } else {
               // 其他情况 保持原有方块（生产的各种资源方块）
             }
           } else {
             // 低于基岩层 都是基岩
-            input[x][y][z] = BlockID.Bedrock;
+            input[x][y][z] = {
+              blockId: BlockID.Bedrock,
+              instanceIds: [],
+              blockData: {},
+            }
           }
           // if (y < bedrockHeight) {
           //   input[x][y][z] = BlockID.Bedrock;
@@ -63,12 +69,20 @@ export const generateTerrain = (
           // }
         } else if (y === terrainHeight) {
           // TODO 暂时作为地表的方块
-          input[x][y][z] = BlockID.Grass;
+          input[x][y][z].blockId = BlockID.Grass;
           if(DevControl.showBorder && (x === 0 || z === 0)) {
-            input[x][y][z] = BlockID.Bedrock;
+            input[x][y][z] = {
+              blockId: BlockID.Bedrock,
+              instanceIds: [],
+              blockData: {},
+            }
           }
         } else if (y > terrainHeight) {
-          input[x][y][z] = BlockID.Air;
+          input[x][y][z] = {
+            blockId: BlockID.Air,
+            instanceIds: [],
+            blockData: {},
+          }
         }
       }
     }

@@ -7,8 +7,8 @@ export function getRenderCamera(player: Player, orbitCamera: THREE.PerspectiveCa
     // TODO 第三人称视角 增加支持角色的控制移动
     // player.controls.isLocked === true 第一人称模式
     // player.controls.isLocked === false 观察者模式
-    if(DevControl.v !== -1) {
-      if(DevControl.v === 1) {
+    if(DevControl.view !== -1) {
+      if(DevControl.view === 1) {
         return player.camera;
       } else {
         return orbitCamera;

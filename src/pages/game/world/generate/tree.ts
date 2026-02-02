@@ -1,17 +1,18 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { World } from "../World";
-import type { IWorldParams } from "../interface";
+import type { IInstanceData, IWorldParams } from "../interface";
 import { ChunkParams } from "../chunk/literal";
+import { EmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 
 /**
  * Generates trees
  */
 export const generateTrees = (
-  input: BlockID[][][],
+  input: IInstanceData[][][],
   params: IWorldParams,
   chunkPos: THREE.Vector3
-): BlockID[][][] => {
+): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
   const { trees } = params;
   if (!trees) return input;
@@ -27,11 +28,11 @@ export const generateTrees = (
       /**@desc 找到地表高度 Find the grass tile*/
       for (let y = height - 1; y >= 0; y--) {
         // TODO 判断条件后续需要优化
-        if (input[baseX][y][baseZ] !== BlockID.Grass) {
+        if (input[baseX][y][baseZ].blockId !== BlockID.Grass) {
           continue;
         }
         // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
-        input[baseX][y][baseZ] = BlockID.Dirt;
+        input[baseX][y][baseZ] = EmptyDirtBlockData;
 
         // Found grass, move one time up
         const baseY = y + 1;
@@ -43,26 +44,35 @@ export const generateTrees = (
 
         // Fill in blocks for the trunk
         for (let i = baseY; i < topY; i++) {
-          input[baseX][i][baseZ] = BlockID.OakLog;
+          input[baseX][i][baseZ] = {
+            blockId: BlockID.OakLog,
+            instanceIds: [],
+            blockData: {},
+          };
         }
 
         // Generate the canopy 生产树冠
+        const blockLeave = {
+          blockId: BlockID.Leaves,
+          instanceIds: [],
+          blockData: {},
+        };
         // generate layer by layer, 4 layers in total
         for (let i = 0; i < 4; i++) {
           if (i === 0) {
             // first layer above the height of tree and has 5 leaves in a + shape
-            input[baseX][topY][baseZ] = BlockID.Leaves;
-            input[baseX + 1][topY][baseZ] = BlockID.Leaves;
-            input[baseX - 1][topY][baseZ] = BlockID.Leaves;
-            input[baseX][topY][baseZ + 1] = BlockID.Leaves;
-            input[baseX][topY][baseZ - 1] = BlockID.Leaves;
+            input[baseX][topY][baseZ] = blockLeave;
+            input[baseX + 1][topY][baseZ] = blockLeave;
+            input[baseX - 1][topY][baseZ] = blockLeave;
+            input[baseX][topY][baseZ + 1] = blockLeave;
+            input[baseX][topY][baseZ - 1] = blockLeave;
           } else if (i === 1) {
             // base layer
-            input[baseX][topY - i][baseZ] = BlockID.Leaves;
-            input[baseX + 1][topY - i][baseZ] = BlockID.Leaves;
-            input[baseX - 1][topY - i][baseZ] = BlockID.Leaves;
-            input[baseX][topY - i][baseZ + 1] = BlockID.Leaves;
-            input[baseX][topY - i][baseZ - 1] = BlockID.Leaves;
+            input[baseX][topY - i][baseZ] = blockLeave;
+            input[baseX + 1][topY - i][baseZ] = blockLeave;
+            input[baseX - 1][topY - i][baseZ] = blockLeave;
+            input[baseX][topY - i][baseZ + 1] = blockLeave;
+            input[baseX][topY - i][baseZ - 1] = blockLeave;
 
             // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk
             const minR = trees.canopy.size.min;
@@ -76,23 +86,27 @@ export const generateTrees = (
                   continue;
                 }
 
-                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {
+                if (input[baseX + x][topY - i][baseZ + z].blockId !== BlockID.Air) {
                   continue;
                 }
 
                 if (World.rng.random() > 0.5) {
-                  input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;
+                  input[baseX + x][topY - i][baseZ + z] = blockLeave;
                 }
               }
             }
           } else if (i === 2 || i == 3) {
             for (let x = -2; x <= 2; x++) {
               for (let z = -2; z <= 2; z++) {
-                if (input[baseX + x][topY - i][baseZ + z] !== BlockID.Air) {
+                if (input[baseX + x][topY - i][baseZ + z].blockId !== BlockID.Air) {
                   continue;
                 }
 
-                input[baseX + x][topY - i][baseZ + z] = BlockID.Leaves;
+                input[baseX + x][topY - i][baseZ + z] = {
+                  blockId: BlockID.Leaves,
+                  instanceIds: [],
+                  blockData: {},
+                };
               }
             }
 
@@ -100,7 +114,11 @@ export const generateTrees = (
             for (const x of [-2, 2]) {
               for (const z of [-2, 2]) {
                 if (World.rng.random() > 0.5) {
-                  input[baseX + x][topY - i][baseZ + z] = BlockID.Air;
+                  input[baseX + x][topY - i][baseZ + z] = {
+                    blockId: BlockID.Air,
+                    instanceIds: [],
+                    blockData: {},
+                  };
                 }
               }
             }

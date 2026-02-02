@@ -1,7 +1,8 @@
-import { BlockID } from "../Block";
+import type { IInstanceData } from "./interface";
 
+/**@desc 全局的方块数据存储 */
 export class DataStore {
-  data: Record<string, BlockID>;
+  data: Record<string, IInstanceData>;
 
   constructor() {
     this.data = {};
@@ -18,7 +19,7 @@ export class DataStore {
     blockY: number,
     blockZ: number
   ) {
-    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);
+    const key = this._getKey(chunkX, chunkZ, blockX, blockY, blockZ);
     return this.data[key] !== undefined;
   }
 
@@ -29,10 +30,10 @@ export class DataStore {
     blockY: number,
     blockZ: number
   ) {
-    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);
-    const blockId = this.data[key];
+    const key = this._getKey(chunkX, chunkZ, blockX, blockY, blockZ);
+    const blockData = this.data[key];
     // console.log(`getting value ${blockId} at key ${key}`);
-    return blockId;
+    return blockData;
   }
 
   set(
@@ -41,14 +42,14 @@ export class DataStore {
     blockX: number,
     blockY: number,
     blockZ: number,
-    value: BlockID
+    value: IInstanceData
   ) {
-    const key = this.#getKey(chunkX, chunkZ, blockX, blockY, blockZ);
+    const key = this._getKey(chunkX, chunkZ, blockX, blockY, blockZ);
     // console.log(`setting value ${value} at key ${key}`);
     this.data[key] = value;
   }
 
-  #getKey(
+  private _getKey(
     chunkX: number,
     chunkZ: number,
     blockX: number,

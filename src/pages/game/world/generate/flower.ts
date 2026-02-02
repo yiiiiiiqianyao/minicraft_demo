@@ -1,29 +1,29 @@
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
-import type { IWorldParams } from "../interface";
+import type { IInstanceData, IWorldParams } from "../interface";
 import { World } from "../World";
 
 /**
  * Generate random patches of flowers across the top surface
  */
 export const generateFlowers = (
-  input: BlockID[][][], params: IWorldParams): BlockID[][][] => {
+  input: IInstanceData[][][], params: IWorldParams): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // starting from the top of the chunk, find the first grass block
       // if come in contact with leaves, stop since flowers doesn't grow under trees
       for (let y = height - 1; y >= 0; y--) {
-        if (input[x][y][z] === BlockID.Leaves) {
+        if (input[x][y][z].blockId === BlockID.Leaves) {
           break;
         }
 
         // 在草方块上长花
-        if (input[x][y][z] === BlockID.Grass) {
+        if (input[x][y][z].blockId === BlockID.Grass) {
           // found grass, move one time up
           const baseY = y + 1;
 
-          if (input[x][baseY][z] !== BlockID.Air) {
+          if (input[x][baseY][z].blockId !== BlockID.Air) {
             continue;
           }
 
@@ -38,7 +38,7 @@ export const generateFlowers = (
                 nx < width &&
                 nz >= 0 &&
                 nz < width &&
-                input[nx][baseY][nz] === BlockID.TallGrass
+                input[nx][baseY][nz].blockId === BlockID.TallGrass
               ) {
                 isTallGrassNearby = true;
                 break;
@@ -57,7 +57,11 @@ export const generateFlowers = (
             World.rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;
 
           if (World.rng.random() < params.flowers.frequency) {
-            input[x][baseY][z] = flowerId;
+            input[x][baseY][z] = {
+              blockId: flowerId,
+              instanceIds: [],
+              blockData: {},
+            };
           }
         }
       }

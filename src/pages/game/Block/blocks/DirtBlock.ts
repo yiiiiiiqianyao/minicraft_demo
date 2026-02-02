@@ -14,3 +14,9 @@ export class DirtBlock extends Block {
   canDrop = true;
   breakCount = 1;
 }
+
+export const EmptyDirtBlockData = {
+  blockId: BlockID.Dirt,
+  instanceIds: [],
+  blockData: {},
+}

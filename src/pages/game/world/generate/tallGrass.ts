@@ -4,13 +4,13 @@
 
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
-import type { IWorldParams } from "../interface";
+import type { IInstanceData, IWorldParams } from "../interface";
 import { World } from "../World";
 
 export const generateTallGrass = (
-  input: BlockID[][][],
+  input: IInstanceData[][][],
   params: IWorldParams
-): BlockID[][][] => {
+): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
   const { tallGrass } = params;
   if (!tallGrass) return input;
@@ -20,20 +20,24 @@ export const generateTallGrass = (
       // starting from the top of the chunk, find the first grass block
       // if come in contact with leaves, stop since grass doesn't grow under trees
       for (let y = height - 1; y >= 0; y--) {
-        if (input[x][y][z] === BlockID.Leaves) {
+        if (input[x][y][z].blockId === BlockID.Leaves) {
           break;
         }
 
-        if (input[x][y][z] === BlockID.Grass) {
+        if (input[x][y][z].blockId === BlockID.Grass) {
           // found grass, move one time up
           const baseY = y + 1;
 
-          if (input[x][baseY][z] !== BlockID.Air) {
+          if (input[x][baseY][z].blockId !== BlockID.Air) {
             continue;
           }
 
           if (World.rng.random() < tallGrass.frequency) {
-            input[x][baseY][z] = BlockID.TallGrass;
+            input[x][baseY][z] = {
+              blockId: BlockID.TallGrass,
+              instanceIds: [],
+              blockData: {},
+            };
 
             // Define the maximum distance from the center
             const maxDistance = tallGrass.patchSize;
@@ -52,10 +56,14 @@ export const generateTallGrass = (
                 currentX < width &&
                 currentZ >= 0 &&
                 currentZ < width &&
-                input[currentX][baseY][currentZ] === BlockID.Air &&
-                input[currentX][y][currentZ] === BlockID.Grass
+                input[currentX][baseY][currentZ].blockId === BlockID.Air &&
+                input[currentX][y][currentZ].blockId === BlockID.Grass
               ) {
-                input[currentX][baseY][currentZ] = BlockID.TallGrass;
+                input[currentX][baseY][currentZ] = {
+                  blockId: BlockID.TallGrass,
+                  instanceIds: [],
+                  blockData: {},
+                };
               }
             }
           }
