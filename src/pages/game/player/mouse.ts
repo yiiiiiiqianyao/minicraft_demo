@@ -63,15 +63,10 @@ export class MouseInput {
 
     /**@desc 破坏一个方块 */
     private handleBreak() {
-        // blockId: BlockID
-        // const block = BlockFactory.getBlock(blockId);
-        // TODO 支持不同 block 方块的破坏进度
-        // console.log('break block =>', block);
         const pos = Selector.getBlockPositionInWorld();
         if (!pos) return;
         const [x, y, z] = pos;
-        this.world.digBlock(x, y, z);
-        // this.world.removeBlock(x, y, z);
+        this.world.hitBlock(x, y, z);
     }
 
     /**@desc 放置一个方块 */

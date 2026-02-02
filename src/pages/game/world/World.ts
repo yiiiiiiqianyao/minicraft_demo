@@ -309,24 +309,21 @@ export class World extends THREE.Group {
   }
 
   /**@desc */
-  digBlock(x: number, y: number, z: number) {
+  hitBlock(x: number, y: number, z: number) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return;
-    const digBlockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
-    if (!digBlockData) return;
-    const digBlockId = digBlockData.blockId;
+    const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
+    if (!blockData) return;
+    const blockId = blockData.blockId;
     // 不能破坏基岩 bedrock
-    if (digBlockId === BlockID.Bedrock) return;
-    console.log('digBlockData.blockData.breakCount', digBlockData.blockData.breakCount);
-    // const digBlockClass = BlockFactory.getBlock(digBlockId)
-    if (!digBlockData?.blockData?.breakCount || digBlockData.blockData.breakCount === 1) {
+    if (blockId === BlockID.Bedrock) return;
+    console.log('breakCount:', blockData.blockData.breakCount);
+    if (!blockData?.blockData?.breakCount || blockData.blockData.breakCount === 1) {
       this.removeBlock(x, y, z);
     } else {
-      // const count = digBlockData.blockData.breakCount as number;
-      // console.log('digBlock', count);
-      // TODO 暂时任务一次 dig 值为 1
-      (digBlockData.blockData.breakCount as number) -= 1;
+      // TODO 暂时认为一次 dig 值为 1，后续增加工具 如稿子 则修改挖掘进度
+      (blockData.blockData.breakCount as number) -= 1;
     }
     
   }
