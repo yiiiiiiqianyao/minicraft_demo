@@ -15,3 +15,14 @@ export class FlowerRoseBlock extends Block {
   canDrop = true;
   breakCount = 1;
 }
+
+export const getEmptyFlowerRoseBlockData = () => {
+  return {
+    blockId: BlockID.FlowerRose,
+    instanceIds: [],
+    blockData: {
+      breakCount: 1,
+    },
+  }
+}
+

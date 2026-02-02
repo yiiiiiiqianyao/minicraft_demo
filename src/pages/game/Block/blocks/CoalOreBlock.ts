@@ -15,5 +15,15 @@ export const CoalOreBlock = class extends OreBlock {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
 };
+
+export const getEmptyCoalOreBlockData = () => {
+  return {
+    blockId: BlockID.CoalOre,
+    instanceIds: [],
+    blockData: {
+      breakCount: 10,
+    },
+  }
+}

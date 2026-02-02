@@ -12,8 +12,10 @@ export class AirBlock extends Block {
   breakCount = -1;
 }
 
-export const EmptyAirBlockData = {
-  blockId: BlockID.Air,
-  instanceIds: [],
-  blockData: {},
+export const getEmptyAirBlockData = () => {
+  return {
+    blockId: BlockID.Air,
+    instanceIds: [],
+    blockData: {},
+  }
 }

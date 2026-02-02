@@ -15,3 +15,13 @@ export class TallGrassBlock extends Block {
   canDrop = false;
   breakCount = 1;
 }
+
+export const getEmptyTallGrassBlockData = () => {
+  return {
+    blockId: BlockID.TallGrass,
+    instanceIds: [],
+    blockData: {
+      breakCount: 1,
+    },
+  }
+}

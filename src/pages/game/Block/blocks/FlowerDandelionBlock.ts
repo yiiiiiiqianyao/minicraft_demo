@@ -14,3 +14,13 @@ export class FlowerDandelionBlock extends Block {
   canDrop = true;
   breakCount = 1;
 }
+
+export const getEmptyFlowerDandelionBlockData = () => {
+  return {
+    blockId: BlockID.FlowerDandelion,
+    instanceIds: [],
+    blockData: {
+      breakCount: 1,
+    },
+  }
+}

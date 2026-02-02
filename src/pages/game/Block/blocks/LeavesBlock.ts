@@ -16,10 +16,12 @@ export class LeavesBlock extends Block {
   breakCount = 1;
 }
 
-export const EmptyLeaveBlockData = {
-  blockId: BlockID.Leaves,
-  instanceIds: [],
-  blockData: {
-    breakCount: 1,
-  },
+export const getEmptyLeaveBlockData = () => {
+  return {
+    blockId: BlockID.Leaves,
+    instanceIds: [],
+    blockData: {
+      breakCount: 1,
+    },
+  }
 }

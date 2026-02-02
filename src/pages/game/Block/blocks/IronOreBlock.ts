@@ -18,3 +18,14 @@ export const IronOreBlock = class extends OreBlock {
   canDrop = true;
   breakCount = 1;
 };
+
+export const getEmptyIronOreBlockData = () => {
+  return {
+    blockId: BlockID.IronOre,
+    instanceIds: [],
+    blockData: {
+      breakCount: 10,
+    },
+  }
+}
+

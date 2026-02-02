@@ -26,5 +26,15 @@ export class RedstoneLampBlock extends LightSourceBlock {
   intensity = 15;
   distance = 10;
   decay = 1;
-  breakCount = 1;
+  breakCount = 5;
+}
+
+export const getEmptyRedstoneLampBlockData = () => {
+  return {
+    blockId: BlockID.RedstoneLamp,
+    instanceIds: [],
+    blockData: {
+      breakCount: 5,
+    },
+  }
 }

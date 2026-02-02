@@ -14,3 +14,13 @@ export class BedrockBlock extends Block {
   canDrop = false;
   breakCount = -1;
 }
+
+export const getEmptyBedrockBlockData = () => {
+  return {
+    blockId: BlockID.Bedrock,
+    instanceIds: [],
+    blockData: {
+      breakCount: Infinity,
+    },
+  }
+}
