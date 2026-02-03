@@ -2,11 +2,17 @@ import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
 
-// 方块的大小为 1x1x1
+/**@desc 方块的大小为 1x1x1 */
 const CubeGeometry = new THREE.BoxGeometry()
+/**@desc 花朵的大小为 0.3x0.6 */
 const FlowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);
+/**@desc 十字的大小为 0.5x0.5 */
 const CrossGeometry = new THREE.PlaneGeometry();
+/**@desc 树类型的 geometry 定制化设置 uv */
 const TreeGeometry = initTreeGeometry();
+
+export * from './drop';
+
 export const getInstancedGeometry = (blockGeometry: RenderGeometry) => {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;
@@ -18,10 +24,3 @@ export const getInstancedGeometry = (blockGeometry: RenderGeometry) => {
         return TreeGeometry;
     }
 };
-
-export * from './drop';
-
-export {
-    CubeGeometry,
-    FlowerGeometry,
-}
