@@ -16,6 +16,7 @@ import type { IWorldParams } from "./interface";
 import { RenderGeometry } from "../Block/base/Block";
 import { Selector } from "../player/selector";
 import { BreakBlockHelper } from "../helper/breakBlockHelper";
+import { AudioManager } from "../audio/AudioManager";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -318,9 +319,11 @@ export class World extends THREE.Group {
     const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
     if (!blockData) return;
     const blockId = blockData.blockId;
+
+    AudioManager.playBlockSound(blockId);
+
     // 不能破坏基岩 bedrock
     if (blockId === BlockID.Bedrock) return;
-    // console.log('breakCount:', blockData.blockData.breakCount);
     if (!blockData?.blockData?.breakCount || blockData.blockData.breakCount === 1) {
       this.removeBlock(x, y, z);
       BreakBlockHelper.setOpacity(0);

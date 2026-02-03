@@ -19,8 +19,31 @@ export class MouseInput {
     constructor(player: Player, world: World) {
         this.player = player;
         this.world = world;
+        this.initListener();
+    }
 
-        document.addEventListener("mousedown", this.onMouseDown.bind(this), false);
+    /**@desc 鼠标事件/用户输入事件的监听 */
+    initListener() {
+        let hitTimeout: number | null = null;
+        const continueHit = () => {
+            hitTimeout = setTimeout(() => {
+                this.onMouseDown(new MouseEvent("mousedown", { button: 0 }));
+                PlayerParams.selectedCoords && continueHit();
+            }, 240);
+        }
+        const cancelHit = () => {
+            if (hitTimeout) {
+                clearTimeout(hitTimeout);
+                hitTimeout = null;
+            }
+        }
+        document.addEventListener("mousedown", (e) => {
+            this.onMouseDown(e);
+            continueHit();
+        })
+        document.addEventListener("mouseup", cancelHit);
+        document.addEventListener("mouseout", cancelHit);
+        document.addEventListener("blur", cancelHit);
     }
 
     // 处理鼠标点击事件 目前是移除选中的方块和放置方块

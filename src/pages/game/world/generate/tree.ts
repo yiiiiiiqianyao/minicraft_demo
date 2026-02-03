@@ -4,6 +4,8 @@ import { World } from "../World";
 import type { IInstanceData, IWorldParams } from "../interface";
 import { ChunkParams } from "../chunk/literal";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
+import { getEmptyOkaBlockData } from "../../Block/blocks/OakLogBlock";
+import { getEmptyLeaveBlockData } from "../../Block/blocks/LeavesBlock";
 
 /**
  * Generates trees
@@ -44,35 +46,26 @@ export const generateTrees = (
 
         // Fill in blocks for the trunk
         for (let i = baseY; i < topY; i++) {
-          input[baseX][i][baseZ] = {
-            blockId: BlockID.OakLog,
-            instanceIds: [],
-            blockData: {},
-          };
+          input[baseX][i][baseZ] = getEmptyOkaBlockData();
         }
 
         // Generate the canopy 生产树冠
-        const blockLeave = {
-          blockId: BlockID.Leaves,
-          instanceIds: [],
-          blockData: {},
-        };
         // generate layer by layer, 4 layers in total
         for (let i = 0; i < 4; i++) {
           if (i === 0) {
             // first layer above the height of tree and has 5 leaves in a + shape
-            input[baseX][topY][baseZ] = blockLeave;
-            input[baseX + 1][topY][baseZ] = blockLeave;
-            input[baseX - 1][topY][baseZ] = blockLeave;
-            input[baseX][topY][baseZ + 1] = blockLeave;
-            input[baseX][topY][baseZ - 1] = blockLeave;
+            input[baseX][topY][baseZ] = getEmptyLeaveBlockData();
+            input[baseX + 1][topY][baseZ] = getEmptyLeaveBlockData();
+            input[baseX - 1][topY][baseZ] = getEmptyLeaveBlockData();
+            input[baseX][topY][baseZ + 1] = getEmptyLeaveBlockData();
+            input[baseX][topY][baseZ - 1] = getEmptyLeaveBlockData();
           } else if (i === 1) {
             // base layer
-            input[baseX][topY - i][baseZ] = blockLeave;
-            input[baseX + 1][topY - i][baseZ] = blockLeave;
-            input[baseX - 1][topY - i][baseZ] = blockLeave;
-            input[baseX][topY - i][baseZ + 1] = blockLeave;
-            input[baseX][topY - i][baseZ - 1] = blockLeave;
+            input[baseX][topY - i][baseZ] = getEmptyLeaveBlockData();
+            input[baseX + 1][topY - i][baseZ] = getEmptyLeaveBlockData();
+            input[baseX - 1][topY - i][baseZ] = getEmptyLeaveBlockData();
+            input[baseX][topY - i][baseZ + 1] = getEmptyLeaveBlockData();
+            input[baseX][topY - i][baseZ - 1] = getEmptyLeaveBlockData();
 
             // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk
             const minR = trees.canopy.size.min;
@@ -91,7 +84,7 @@ export const generateTrees = (
                 }
 
                 if (World.rng.random() > 0.5) {
-                  input[baseX + x][topY - i][baseZ + z] = blockLeave;
+                  input[baseX + x][topY - i][baseZ + z] = getEmptyLeaveBlockData();
                 }
               }
             }
