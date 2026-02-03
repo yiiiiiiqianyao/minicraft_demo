@@ -5,7 +5,7 @@ import { Player } from "./Player";
 import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
 import { Selector } from "./selector";
-import { BlockFactory, BlockID } from "../Block";
+import { BlockID } from "../Block";
 import { EventSystem } from "../../EventSystem";
 import { GameEvent, GameState, PopupType, State } from "../constant";
 
