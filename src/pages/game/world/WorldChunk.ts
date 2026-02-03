@@ -192,11 +192,15 @@ export class WorldChunk extends THREE.Group {
    */
   addBlock(x: number, y: number, z: number, blockId: BlockID) {
     // Safety check that we aren't adding a block for one that already exists
-    if (this.getBlockData(x, y, z)?.blockId === BlockID.Air) {
+    const cacheBlockData = this.getBlockData(x, y, z);
+    if (cacheBlockData?.blockId === BlockID.Air) {
+      const addBlockClass = BlockFactory.getBlock(blockId);
       this.setBlockData(x, y, z, {
         blockId,
         instanceIds: [],
-        blockData: {},
+        blockData: {
+          breakCount: addBlockClass.breakCount,
+        },
       });
       const addBlockData = this.addBlockInstance(x, y, z);
       if (addBlockData) {
@@ -216,7 +220,7 @@ export class WorldChunk extends THREE.Group {
   /**
    * @desc Removes the block at (x, y, z => chunk coords)
    */
-  removeBlock(x: number, y: number, z: number) {
+  removeBlock(x: number, y: number, z: number, emitDrop = true) {
     // console.log(`Removing block at ${x}, ${y}, ${z}`);
     const block = this.getBlockData(x, y, z);
     // console.log('chunk', x, y, z, this.getBlock(x, y - 1, z));
@@ -226,8 +230,8 @@ export class WorldChunk extends THREE.Group {
     this.deleteBlockInstance(x, y, z, block);
     
     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
-    const blockEntity = BlockFactory.getBlock(blockId);
-    if(blockEntity.canDrop) {
+    const removeBlockClass = BlockFactory.getBlock(blockId);
+    if(emitDrop && removeBlockClass.canDrop) {
       if (!this.dropGroup) this.initDropGroup();
       // 触发掉落物品
       this.dropGroup!.drop(block.blockId, x, y, z, true);

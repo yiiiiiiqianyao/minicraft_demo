@@ -267,7 +267,7 @@ export class World extends THREE.Group {
   }
 
   /** @desc 移除方块 */
-  removeBlock(x: number, y: number, z: number) {
+  removeBlock(x: number, y: number, z: number, emitDrop = true) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return;
@@ -278,7 +278,7 @@ export class World extends THREE.Group {
     if (blockToRemove?.blockId === BlockID.Bedrock) return;
     
     // console.log(`Removing block at ${x}, ${y}, ${z} for chunk ${chunk.uuid}`);
-    chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z);
+    chunk.removeBlock(coords.block.x, coords.block.y, coords.block.z, emitDrop);
     // 如果是光源方块 则需要移除对应的点光源
     if (this.pointLights.has(this.getBlockKey(x, y, z))) {
       const light = this.pointLights.get(this.getBlockKey(x, y, z));
@@ -344,7 +344,8 @@ export class World extends THREE.Group {
     //   chunk.updateBlockType(coords.block.x, coords.block.y, coords.block.z, block);
     // }
     // TODO 暂时直接执行 先移除旧方块 再添加新方块 后续优化
-    this.removeBlock(x, y , z);
+    const emitDrop = false;
+    this.removeBlock(x, y , z, emitDrop);
     this.addBlock(x, y, z, block);
   }
 

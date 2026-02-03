@@ -12,7 +12,7 @@ export class DirtBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 5;
+  breakCount = 2;
 }
 
 export const getEmptyDirtBlockData = () => {
@@ -20,7 +20,7 @@ export const getEmptyDirtBlockData = () => {
     blockId: BlockID.Dirt,
     instanceIds: [],
     blockData: {
-      breakCount: 5,
+      breakCount: 2,
     },
   }
 }
