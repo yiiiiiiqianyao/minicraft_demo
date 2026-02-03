@@ -15,6 +15,7 @@ import { getFloorXYZ } from "../engine/utils";
 import type { IWorldParams } from "./interface";
 import { RenderGeometry } from "../Block/base/Block";
 import { Selector } from "../player/selector";
+import { BreakBlockHelper } from "../helper/breakBlockHelper";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -308,8 +309,9 @@ export class World extends THREE.Group {
     }
   }
 
-  /**@desc */
+  /** @desc 挖掘方块 */
   hitBlock(x: number, y: number, z: number) {
+    // TODO 挖掘打断的时候 需要恢复 block 的 break count 进度
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return;
@@ -318,12 +320,19 @@ export class World extends THREE.Group {
     const blockId = blockData.blockId;
     // 不能破坏基岩 bedrock
     if (blockId === BlockID.Bedrock) return;
-    console.log('breakCount:', blockData.blockData.breakCount);
+    // console.log('breakCount:', blockData.blockData.breakCount);
     if (!blockData?.blockData?.breakCount || blockData.blockData.breakCount === 1) {
       this.removeBlock(x, y, z);
+      BreakBlockHelper.setOpacity(0);
     } else {
       // TODO 暂时认为一次 dig 值为 1，后续增加工具 如稿子 则修改挖掘进度
-      (blockData.blockData.breakCount as number) -= 1;
+      const hitNum = 1;
+      let blockBreakCount = blockData.blockData.breakCount as number;
+      blockBreakCount -= hitNum;
+      blockData.blockData.breakCount = blockBreakCount;
+      // update break progress effect
+      const breakProgress = blockBreakCount / BlockFactory.getBlock(blockId).breakCount;
+      BreakBlockHelper.setOpacity(1 - breakProgress);
     }
     
   }

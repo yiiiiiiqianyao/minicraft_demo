@@ -8,6 +8,8 @@ export enum RenderGeometry {
   Cross,
   Flower,
   Tree,
+  // 裂开的方块
+  Break,
 }
 
 export type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;

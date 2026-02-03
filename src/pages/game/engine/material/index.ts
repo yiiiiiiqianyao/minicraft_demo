@@ -40,6 +40,7 @@ const CraftingTableMaterial = [
   new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // back
 ];
 
+const BreakMaterial = new THREE.MeshLambertMaterial({ map: textures.breakBlock, transparent: true, opacity: 0 });
 export {
   wireframeMaterial,
   collisionHelperMaterial,
@@ -54,6 +55,8 @@ export {
 
   // objects material
   CraftingTableMaterial,
+  // break block material
+  BreakMaterial,
 }
 export * from './tree';
 export * from './flower';

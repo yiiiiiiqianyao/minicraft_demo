@@ -24,8 +24,10 @@ import CraftingTableFront from '../../../assets/textures/crafting_table/crafting
 import CraftingTableSide from '../../../assets/textures/crafting_table/crafting_table_side.png';
 import CraftingTableTop from '../../../assets/textures/crafting_table/crafting_table_top.png';
 
-// /**@desc atlas 合图 */
+/**@desc atlas 合图 */
 import Combine from '../../../assets/textures/combine.png';
+/**@desc 挖掘进度效果  Crack  Crack  Crack */
+import Break from '../../../assets/textures/blocks/block_crack.png';
 
 /**@desc for block texture */
 export const textures = {
@@ -48,6 +50,8 @@ export const textures = {
   craftingTableFront: loadTexture(CraftingTableFront),
   CraftingTableSide: loadTexture(CraftingTableSide),
   craftingTableTop: loadTexture(CraftingTableTop),
+  // 裂开的方块
+  breakBlock: loadTexture(Break),
   combine: loadTexture(Combine),
 };
 

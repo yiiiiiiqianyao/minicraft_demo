@@ -16,6 +16,7 @@ import { updateCameraFOV } from "./camera";
 import { Selector } from "./selector";
 import { PlayerGroup } from "./group";
 import { getBlockUpperNeath } from "./utils";
+import { BreakBlockHelper } from "../helper/breakBlockHelper";
 
 export class Player extends PlayerGroup {
   onGround = false;
@@ -47,6 +48,8 @@ export class Player extends PlayerGroup {
     this.boundsHelper = initBoundsHelper();
     this.boundsHelper.visible = false;
     scene.add(this.boundsHelper);
+
+    BreakBlockHelper.init(scene);
 
     selectionHelper.visible = false;
     scene.add(selectionHelper);
