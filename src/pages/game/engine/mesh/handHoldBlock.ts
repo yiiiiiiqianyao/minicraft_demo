@@ -8,42 +8,43 @@ const CubeScale = 0.3;
 
 /**@desc 草地块 */
 export function initGrassBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    // const geometry = getInstancedGeometry(RenderGeometry.Cube);
+    const geometry = getInstancedGeometry(RenderGeometry.GrassBlock);
     const mesh = new THREE.Mesh(geometry, GrassBlockMaterial);
     return setUp(mesh);
 }
 
 /**@desc 泥土块 */
 export function initDirtBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, DirtBlockMaterial);
     return setUp(mesh);
 }
 
 /**@desc 圆石块 */
 export function initStoneBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, StoneMaterial);
     return setUp(mesh);
 }
 
 /**@desc 煤炭块 */
 export function initCoalOreMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, CoalOreMaterial);
     return setUp(mesh);
 }
 
 /**@desc 树叶块 */
 export function initLeavesBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, LeavesMaterial);
     return setUp(mesh);
 }
 
 /**@desc 橡木原木 */
 export function initOakLogMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube)
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, OkaLogMaterial);
     return setUp(mesh);
 }

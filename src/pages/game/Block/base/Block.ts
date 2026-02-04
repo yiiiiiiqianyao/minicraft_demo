@@ -8,6 +8,7 @@ export enum RenderGeometry {
   Cross,
   Flower,
   Tree,
+  GrassBlock,
   // 裂开的方块
   Break,
 }

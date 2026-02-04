@@ -1,8 +1,9 @@
 import * as THREE from 'three';
 
 import { loadTexture } from "../engine/utils";
-import GrassSide from '../../../assets/textures/blocks/grass_side.png';
-import GrassTop from '../../../assets/textures/blocks/grass.png';
+// import GrassSide from '../../../assets/textures/blocks/grass_side.png';
+// import GrassTop from '../../../assets/textures/blocks/grass.png';
+import GrassBlock from '../../../assets/textures/blocks/grass_block.png';
 import Dirt from '../../../assets/textures/blocks/dirt.png';
 import Stone from '../../../assets/textures/blocks/stone.png';
 import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
@@ -31,8 +32,9 @@ import Break from '../../../assets/textures/blocks/block_crack.png';
 
 /**@desc for block texture */
 export const textures = {
-  grassSide: loadTexture(GrassSide),
-  grassTop: loadTexture(GrassTop),
+  // grassSide: loadTexture(GrassSide),
+  // grassTop: loadTexture(GrassTop),
+  grassBlock: loadTexture(GrassBlock),
   dirt: loadTexture(Dirt),
   stone: loadTexture(Stone),
   coal: loadTexture(CoalOre),

@@ -1,22 +1,26 @@
 import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
+import { initGrassBlockGeometry } from "./grassBlock";
 
 const dropBoxSize = 0.25;
-const geometry_drop = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);
+const CubeGeometry = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);
 const TreeDropGeometry = initTreeGeometry(dropBoxSize);
+const GrassBlockDropGeometry = initGrassBlockGeometry(dropBoxSize);
 
 // TODO 修改草的实际大小
-const crossGeometry_drop = new THREE.PlaneGeometry(0.5, 0.5);
-const flowerGeometry_drop = new THREE.PlaneGeometry(0.15, 0.5);
+const CrossGeometry = new THREE.PlaneGeometry(0.5, 0.5);
+const FlowerGeometry = new THREE.PlaneGeometry(0.15, 0.5);
 export const getDropInstancedGeometry = (blockGeometry: RenderGeometry) => {
     if (blockGeometry === RenderGeometry.Cube) {
-        return geometry_drop;
+        return CubeGeometry;
     } else if (blockGeometry === RenderGeometry.Tree) {
         return TreeDropGeometry;
     } else if (blockGeometry === RenderGeometry.Cross) {
-        return crossGeometry_drop;
+        return CrossGeometry;
     } else if (blockGeometry === RenderGeometry.Flower) {
-        return flowerGeometry_drop;
+        return FlowerGeometry;
+    } else if(blockGeometry === RenderGeometry.GrassBlock) {
+        return GrassBlockDropGeometry;
     }
 };

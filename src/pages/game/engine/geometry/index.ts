@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
+import { initGrassBlockGeometry } from "./grassBlock";
 
 /**@desc 方块的大小为 1x1x1 */
 const CubeGeometry = new THREE.BoxGeometry()
@@ -12,12 +13,14 @@ const BreakGeometry = new THREE.BoxGeometry(1.02, 1.02, 1.02);
 const FlowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);
 /**@desc 十字的大小为 0.5x0.5 */
 const CrossGeometry = new THREE.PlaneGeometry();
-/**@desc 树类型的 geometry 定制化设置 uv */
+/**@desc 树类型的定制 geometry */
 const TreeGeometry = initTreeGeometry();
+/**@desc 草方块的定制 geometry */
+const GrassBlockGeometry = initGrassBlockGeometry();
 
 export * from './drop';
 
-export const getInstancedGeometry = (blockGeometry: RenderGeometry) => {
+export function getInstancedGeometry (blockGeometry: RenderGeometry): THREE.BufferGeometry {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;
     } else if (blockGeometry === RenderGeometry.Cross) {
@@ -28,5 +31,9 @@ export const getInstancedGeometry = (blockGeometry: RenderGeometry) => {
         return TreeGeometry;
     } else if (blockGeometry === RenderGeometry.Break) {
         return BreakGeometry;
+    } else if (blockGeometry === RenderGeometry.GrassBlock) {
+        return GrassBlockGeometry;
+    } else {
+        return CubeGeometry;
     }
-};
+}

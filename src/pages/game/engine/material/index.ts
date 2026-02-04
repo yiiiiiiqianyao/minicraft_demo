@@ -10,24 +10,25 @@ const collisionHelperMaterial = new THREE.MeshBasicMaterial({
 });
 
 // textures for material
-const GrassSideMaterial = new THREE.MeshLambertMaterial({ map: textures.grassSide });
-const GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop });
+// const GrassSideMaterial = new THREE.MeshLambertMaterial({ map: textures.grassSide });
+// const GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop });
 const DirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });
 const IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
 const CoalOreMaterial = new THREE.MeshLambertMaterial({ map: textures.coal });
 const BedrockMaterial = new THREE.MeshLambertMaterial({ map: textures.bedrock });
 const StoneBrickMaterial = new THREE.MeshLambertMaterial({ map: textures.stoneBrick });
-
+const GrassBlockMaterial = new THREE.MeshLambertMaterial({ map: textures.grassBlock });
 // block material
-const GrassBlockMaterial = [
-  GrassSideMaterial, // right
-  GrassSideMaterial, // left
-  GrassTopMaterial, // top
-  DirtMaterial, // bottom
-  GrassSideMaterial, // front
-  GrassSideMaterial, // back
-];
+// const GrassBlockMaterial = [
+//   GrassSideMaterial, // right
+//   GrassSideMaterial, // left
+//   GrassTopMaterial, // top
+//   DirtMaterial, // bottom
+//   GrassSideMaterial, // front
+//   GrassSideMaterial, // back
+// ];
+
 const DirtBlockMaterial = DirtMaterial;
 const IronBlockMaterial = IronMaterial;
 

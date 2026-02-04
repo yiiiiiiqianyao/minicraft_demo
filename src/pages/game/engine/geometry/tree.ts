@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-/**@desc init tree geometry with custom uv mapping */
+/**@desc 创建树木方块 顶面、侧面 uv 不同 init tree geometry with custom uv mapping */
 export function initTreeGeometry(size = 1) {
     const geometry = new THREE.BoxGeometry(size, size, size);
     // This is important to ensure we can map UVs per face

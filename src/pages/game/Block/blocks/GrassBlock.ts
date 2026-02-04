@@ -8,7 +8,8 @@ export class GrassBlock extends Block {
   id = BlockID.Grass;
   material = GrassBlockMaterial;
   uiTexture = ItemImage.grass;
-  geometry = RenderGeometry.Cube;
+  // geometry = RenderGeometry.Cube;
+  geometry = RenderGeometry.GrassBlock;
   transparent = false;
   canPassThrough = false;
   canDrop = true;

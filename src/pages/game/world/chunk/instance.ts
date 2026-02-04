@@ -6,6 +6,7 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
     switch (blockClass.geometry) {
         case RenderGeometry.Tree:
         case RenderGeometry.Cube:
+        case RenderGeometry.GrassBlock:
             return InstanceMeshAddCube(mesh, x, y, z);
         case RenderGeometry.Cross:
             return InstanceMeshAddCross(mesh, x, y, z);
