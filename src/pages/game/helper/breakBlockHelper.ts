@@ -31,4 +31,9 @@ export class BreakBlockHelper {
         this._material.opacity = opacity;
         this._material.needsUpdate = true;
     }
+
+    static getOpacity() {
+        if (!this._breakBlock || !this._material) return 0;
+        return this._material.opacity;
+    }
 }

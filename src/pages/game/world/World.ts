@@ -310,23 +310,39 @@ export class World extends THREE.Group {
     }
   }
 
-  /** @desc 挖掘方块 */
-  hitBlock(x: number, y: number, z: number) {
-    // TODO 挖掘打断的时候 需要恢复 block 的 break count 进度
+  /** @desc 中断挖掘方块 */
+  interruptHit(x: number, y: number, z: number) {
+    if (!BreakBlockHelper.getOpacity()) return;
+
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return;
     const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
     if (!blockData) return;
     const blockId = blockData.blockId;
+    if (blockId === BlockID.Air || blockId === BlockID.Bedrock) return;
+    blockData.blockData.breakCount = BlockFactory.getBlock(blockId).breakCount;
+    BreakBlockHelper.setOpacity(0);
+  }
+
+  /** @desc 挖掘方块 */
+  hitBlock(x: number, y: number, z: number) {
+    // TODO 挖掘打断的时候 需要恢复 block 的 break count 进度
+    const coords = worldToChunkCoords(x, y, z);
+    const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
+    if (!chunk || !chunk.loaded) return false;
+    const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
+    if (!blockData) return false;
+    const blockId = blockData.blockId;
 
     AudioManager.playBlockSound(blockId);
 
     // 不能破坏基岩 bedrock
-    if (blockId === BlockID.Bedrock) return;
+    if (blockId === BlockID.Air || blockId === BlockID.Bedrock) return false;
     if (!blockData?.blockData?.breakCount || blockData.blockData.breakCount === 1) {
       this.removeBlock(x, y, z);
       BreakBlockHelper.setOpacity(0);
+      return true;
     } else {
       // TODO 暂时认为一次 dig 值为 1，后续增加工具 如稿子 则修改挖掘进度
       const hitNum = 1;
@@ -336,8 +352,8 @@ export class World extends THREE.Group {
       // update break progress effect
       const breakProgress = blockBreakCount / BlockFactory.getBlock(blockId).breakCount;
       BreakBlockHelper.setOpacity(1 - breakProgress);
+      return false;
     }
-    
   }
 
   updateBlockType(x: number, y: number, z: number, block: BlockID) {

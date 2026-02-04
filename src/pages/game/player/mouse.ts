@@ -84,12 +84,21 @@ export class MouseInput {
         }
     }
 
+    /**@desc 挖掘方块时的中断定时器 */
+    private breakInterruptedTimer: number | null = null;
     /**@desc 破坏一个方块 */
     private handleBreak() {
         const pos = Selector.getBlockPositionInWorld();
         if (!pos) return;
         const [x, y, z] = pos;
-        this.world.hitBlock(x, y, z);
+        this.breakInterruptedTimer && clearTimeout(this.breakInterruptedTimer);
+        const isBreak = this.world.hitBlock(x, y, z);
+        if (!isBreak) {
+            // TODO 暂时设置挖掘的中断时间为 500ms
+            this.breakInterruptedTimer = setTimeout(() => {
+                this.world.interruptHit(x, y, z);
+            }, 500);
+        }
     }
 
     /**@desc 放置一个方块 */
