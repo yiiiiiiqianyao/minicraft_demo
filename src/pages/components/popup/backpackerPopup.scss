@@ -5,4 +5,18 @@
     background-size: cover;
     width: 528px;
     height: 294px;
+    .backpacker-popup-content {
+        margin: 42px auto 0 auto;
+        width: 486px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        cursor: pointer;
+    }
+    .backpacker-popup-bottom {
+        margin: 16px auto 0 auto;
+        width: 486px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        cursor: pointer;
+    }
 }

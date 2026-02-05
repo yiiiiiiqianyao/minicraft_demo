@@ -1,0 +1,11 @@
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #aeecf900;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cell:hover {
+    border: 2px solid #44a0fd;
+    box-shadow: 0px 0px 10px #5aaafa;
+}

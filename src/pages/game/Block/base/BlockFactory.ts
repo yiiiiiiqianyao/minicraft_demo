@@ -53,6 +53,12 @@ export class BlockFactory {
     return this.blockInstances[id];
   }
 
+  /**@desc 获取方块的 UI 贴图 */
+  static getBlockUIImg(id: BlockID) {
+    const blockClass = BlockFactory.getBlock(id);
+    return blockClass.uiTexture;
+  }
+
   static getAllBlocks(): Block[] {
     return Object.keys(this.blockTypes).map((id) => this.getBlock(+id));
   }

@@ -114,6 +114,7 @@ export class ToolBar {
     /**@desc 更新玩家物品栏中 block 对应的 ui */
     static updateToolBarGUI() {
       for (let i = 1; i <= ToolBar.toolbar.length; i++) {
+        // TODO 组件能力待优化 使用 EventSystem 优化更新设置
         const slot = document.getElementById(`toolbar-slot-${i}`);
         if (slot) {
           const toolItem = ToolBar.toolbar[i - 1];
@@ -122,7 +123,7 @@ export class ToolBar {
             slot.innerHTML = '';
           }
           // 其他情况 则显示对应的 block 贴图
-          slot.style.backgroundImage = `url('${BlockFactory.getBlock(toolItem.blockId).uiTexture}')`;
+          slot.style.backgroundImage = `url('${BlockFactory.getBlockUIImg(toolItem.blockId)}')`;
           slot.innerHTML = toolItem.count > 1 ? `<div class="toolbar-count">${toolItem.count}</div>` : '';
         }
       }

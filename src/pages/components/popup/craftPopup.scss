@@ -5,4 +5,40 @@
     background-size: cover;
     width: 528px;
     height: 501px;
+    .craft-popup-table {
+        margin-top: 46px;
+        margin-left: 73px;
+
+        width: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        cursor: pointer;
+    }
+    .craft-popup-output {
+        position: absolute;
+        top: 91px;
+        right: 64px;
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+    }
+    .craft-popup-output:hover {
+        border: 2px solid #5aaafa;
+        box-shadow: 0px 0px 10px #5aaafa;
+    }
+    .craft-popup-content {
+        margin: 39px auto 0 auto;
+        width: 480px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        cursor: pointer;
+    }
+    .craft-popup-bottom {
+        margin: 14px auto 0 auto;
+        width: 480px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        cursor: pointer;
+    }
 }
