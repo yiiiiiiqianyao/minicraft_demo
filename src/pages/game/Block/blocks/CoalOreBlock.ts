@@ -5,6 +5,7 @@ import { oreConfig } from "../../world/generate/resource";
 import { CoalOreMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 
+/**@desc 煤炭矿石块 */
 export const CoalOreBlock = class extends OreBlock {
   id = BlockID.CoalOre;
   scale = oreConfig["coal"].scale;
