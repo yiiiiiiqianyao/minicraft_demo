@@ -7,7 +7,8 @@ import { initGrassBlockGeometry } from "./grassBlock";
 const CubeGeometry = new THREE.BoxGeometry()
 
 /**@desc 裂开的方块 */ 
-const BreakGeometry = new THREE.BoxGeometry(1.02, 1.02, 1.02);
+const break_size = 1.01;
+const BreakGeometry = new THREE.BoxGeometry(break_size, break_size, break_size);
 
 /**@desc 花朵的大小为 0.3x0.6 */
 const FlowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);

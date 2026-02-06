@@ -312,7 +312,6 @@ export class World extends THREE.Group {
 
   /** @desc 中断挖掘方块 */
   interruptHit(x: number, y: number, z: number) {
-    if (!BreakBlockHelper.getOpacity()) return;
 
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
@@ -322,7 +321,7 @@ export class World extends THREE.Group {
     const blockId = blockData.blockId;
     if (blockId === BlockID.Air || blockId === BlockID.Bedrock) return;
     blockData.blockData.breakCount = BlockFactory.getBlock(blockId).breakCount;
-    BreakBlockHelper.setOpacity(0);
+    BreakBlockHelper.setProgress(0);
   }
 
   /** @desc 挖掘方块 */
@@ -341,7 +340,7 @@ export class World extends THREE.Group {
     if (blockId === BlockID.Air || blockId === BlockID.Bedrock) return false;
     if (!blockData?.blockData?.breakCount || blockData.blockData.breakCount === 1) {
       this.removeBlock(x, y, z);
-      BreakBlockHelper.setOpacity(0);
+      BreakBlockHelper.setProgress(0);
       return true;
     } else {
       // TODO 暂时认为一次 dig 值为 1，后续增加工具 如稿子 则修改挖掘进度
@@ -351,7 +350,7 @@ export class World extends THREE.Group {
       blockData.blockData.breakCount = blockBreakCount;
       // update break progress effect
       const breakProgress = blockBreakCount / BlockFactory.getBlock(blockId).breakCount;
-      BreakBlockHelper.setOpacity(1 - breakProgress);
+      BreakBlockHelper.setProgress(1 - breakProgress);
       return false;
     }
   }

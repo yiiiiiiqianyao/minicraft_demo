@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { textures } from '../../Block/textures';
+import { initBreakMaterial } from './break';
 
 const wireframeMaterial = new THREE.MeshBasicMaterial({ wireframe: true });
 
@@ -41,7 +42,8 @@ const CraftingTableMaterial = [
   new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // back
 ];
 
-const BreakMaterial = new THREE.MeshLambertMaterial({ map: textures.breakBlock, transparent: true, opacity: 0 });
+// const BreakMaterial = new THREE.MeshLambertMaterial({ map: textures.breakBlock, transparent: true, opacity: 0 });
+const BreakMaterial = initBreakMaterial(textures.breakBlock);
 export {
   wireframeMaterial,
   collisionHelperMaterial,
