@@ -9,7 +9,6 @@ import { MeshPool } from "../engine/mesh";
 import { MeshType } from "../engine/mesh/constant";
 import { BlockID } from "../Block";
 import { ToolBar } from "../gui";
-import { Block } from "../Block/base/Block";
 
 /**
  * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合
