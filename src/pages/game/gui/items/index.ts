@@ -6,6 +6,7 @@ import CoalOreBlock from '../../../../assets/textures/items/coal_block.png';
 import IronOreBlock from '../../../../assets/textures/items/iron_block.png';
 import BedRockBlock from '../../../../assets/textures/items/bedrock_block.png';
 import OakLogBlock from '../../../../assets/textures/items/oak_log_block.png';
+import BirchLogBlock from '../../../../assets/textures/items/birch_log_block.png';
 
 import LeavesBlock from '../../../../assets/textures/items/leaves_block.png';
 import TallGrassBlock from '../../../../assets/textures/items/tall_grass_block.png';
@@ -25,6 +26,7 @@ export const ItemImage = {
   iron: IronOreBlock,
   bedrock: BedRockBlock,
   oakLog: OakLogBlock,
+  birchLog: BirchLogBlock,
   leaves: LeavesBlock,
   tallGrass: TallGrassBlock,
   flowerRose: FlowerRoseBlock,

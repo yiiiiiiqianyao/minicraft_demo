@@ -129,6 +129,7 @@ export class WorldChunk extends THREE.Group {
         for (let z = 0; z < width; z++) {
           const blockData = data[x][y][z];
           const blockClass = BlockFactory.getBlock(blockData.blockId);
+          
           // 空气块不生成 mesh
           if (blockData.blockId === BlockID.Air) continue;
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
@@ -291,69 +292,68 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
+   * @desc 覆盖式删除
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
   deleteBlockInstance(x: number, y: number, z: number, deleteBlockData?: IInstanceData) {
     const blockData = deleteBlockData ? deleteBlockData : this.getBlockData(x, y, z);
     if (blockData?.blockId === BlockID.Air || !blockData?.instanceIds.length) return;
 
-    // Get the mesh of the block
-    const mesh = this.children.find(
-      (instanceMesh) =>
-        instanceMesh.name ===
-        BlockFactory.getBlock(blockData.blockId).constructor.name
-    ) as THREE.InstancedMesh;
+    const blockId = blockData.blockId;
+    const mesh = this.meshes[blockId] as THREE.InstancedMesh;
 
     /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例
-     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg
-     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id
-     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后
-     * 通过 mesh.count-- 来删除 instance id 列表后序的实例
-     */
-    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1
-    const lastBlockInstanceIds: number[] = [];
-    const lastBlockCoords = new THREE.Vector3();
-    blockData.instanceIds.forEach((instanceId) => {
-      // 获取 instanceMesh 中最后一个 instance id 的矩阵
-      const lastMatrix = new THREE.Matrix4();
-      mesh.getMatrixAt(mesh.count - 1, lastMatrix);
+       *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg
+       * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id
+       * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后
+       * 通过 mesh.count-- 来删除 instance id 列表后序的实例
+       */
+      // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1
+      const lastBlockInstanceIds: number[] = [];
+      const lastBlockCoords = new THREE.Vector3();
+      // 一个 block 可能由多个 instance 组成 如 flower 就是由两个 instance plane 组成的
+      blockData.instanceIds.forEach((instanceId) => {
+        // 获取 instanceMesh 中最后一个 instance id 的矩阵
+        const lastMatrix = new THREE.Matrix4();
+        mesh.getMatrixAt(mesh.count - 1, lastMatrix);
 
-      // Also need to get block coords of instance to update instance id of the block
-      // const lastBlockCoords = new THREE.Vector3();
-      // 获取instanceMesh 中最后一个 instance 的 block 位置
-      lastBlockCoords.setFromMatrixPosition(lastMatrix);
-      // this.setBlockInstanceIds(
-      //   Math.floor(lastBlockCoords.x),
-      //   Math.floor(lastBlockCoords.y),
-      //   Math.floor(lastBlockCoords.z),
-      //   [instanceId]
-      // );
-      // 最后一个 instance 实例
-      lastBlockInstanceIds.push(instanceId);
+        // Also need to get block coords of instance to update instance id of the block
+        // const lastBlockCoords = new THREE.Vector3();
+        // 获取 instanceMesh 中最后一个 instance 的 block 位置
+        lastBlockCoords.setFromMatrixPosition(lastMatrix);
+        // this.setBlockInstanceIds(
+        //   Math.floor(lastBlockCoords.x),
+        //   Math.floor(lastBlockCoords.y),
+        //   Math.floor(lastBlockCoords.z),
+        //   [instanceId]
+        // );
+        // 最后一个 instance 实例
+        lastBlockInstanceIds.push(instanceId);
 
-      // Swap transformation matrices
-      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，
-      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block
-      mesh.setMatrixAt(instanceId, lastMatrix);
+        // Swap transformation matrices
+        // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，
+        // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block
+        mesh.setMatrixAt(instanceId, lastMatrix);
 
-      // Decrement instance count
-      mesh.count--;
+        // Decrement instance count
+        mesh.count--;
 
-      // Notify the instanced mesh we updated the instance matrix
-      mesh.instanceMatrix.needsUpdate = true;
-      mesh.computeBoundingSphere();
-    });
-    /**
-     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block 的 instanceIds
-     */
-     this.setBlockInstanceIds(
-        Math.floor(lastBlockCoords.x),
-        Math.floor(lastBlockCoords.y),
-        Math.floor(lastBlockCoords.z),
-        lastBlockInstanceIds,
-      );
+        // Notify the instanced mesh we updated the instance matrix
+        mesh.instanceMatrix.needsUpdate = true;
+        mesh.computeBoundingSphere();
+      });
+      /**
+       * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block data 中的 instanceIds 数据（删除）
+       */
+      this.setBlockInstanceIds(
+          Math.floor(lastBlockCoords.x),
+          Math.floor(lastBlockCoords.y),
+          Math.floor(lastBlockCoords.z),
+          lastBlockInstanceIds,
+        );
 
-    this.setBlockInstanceIds(x, y, z, []);
+      this.setBlockInstanceIds(x, y, z, []);
+   
   }
 
   /**

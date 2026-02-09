@@ -1,14 +1,15 @@
 import * as THREE from "three";
 import { getInstancedGeometry } from "../geometry";
-import { CoalOreMaterial, DirtBlockMaterial, GrassBlockMaterial, LeavesMaterial, OkaLogMaterial, StoneMaterial } from "../material";
+import { CoalOreMaterial, DirtBlockMaterial, GrassBlockMaterial, LeavesMaterial, TreeMaterial, StoneMaterial } from "../material";
 import { RenderGeometry } from "../../Block/base/Block";
+import { BlockID } from "../../Block";
+import { initTreeGeometry } from "../geometry/tree";
 
 /**@desc 玩家手上拿的方块 */
 const CubeScale = 0.3;
 
 /**@desc 草地块 */
 export function initGrassBlockMesh() {
-    // const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const geometry = getInstancedGeometry(RenderGeometry.GrassBlock);
     const mesh = new THREE.Mesh(geometry, GrassBlockMaterial);
     return setUp(mesh);
@@ -43,9 +44,17 @@ export function initLeavesBlockMesh() {
 }
 
 /**@desc 橡木原木 */
-export function initOakLogMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube);
-    const mesh = new THREE.Mesh(geometry, OkaLogMaterial);
+export function initOakLogHandMesh() {
+    // const geometry = getInstancedGeometry(RenderGeometry.Tree);
+    const geometry = initTreeGeometry(1, BlockID.OakLog);
+    const mesh = new THREE.Mesh(geometry, TreeMaterial);
+    return setUp(mesh);
+}
+
+/**@desc 白桦木原木 */
+export function initBirchLogHandMesh() {
+    const geometry = initTreeGeometry(1, BlockID.BirchLog);
+    const mesh = new THREE.Mesh(geometry, TreeMaterial);
     return setUp(mesh);
 }
 

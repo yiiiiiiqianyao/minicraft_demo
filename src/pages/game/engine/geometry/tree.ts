@@ -1,7 +1,9 @@
 import * as THREE from "three";
+import { ChunkParams } from "../../world/chunk/literal";
+import { BlockID } from "../../Block";
 
 /**@desc 创建树木方块 顶面、侧面 uv 不同 init tree geometry with custom uv mapping */
-export function initTreeGeometry(size = 1) {
+export function initTreeGeometry(size = 1, blockId = BlockID.OakLog) {
     const geometry = new THREE.BoxGeometry(size, size, size);
     // This is important to ensure we can map UVs per face
     // Although BoxGeometry is non-indexed by default since r125, explicitly calling can prevent issues
@@ -10,6 +12,15 @@ export function initTreeGeometry(size = 1) {
     
     // A single group for a single draw call
     nonIndexedGeom.clearGroups();
+
+    const aTreeOffsetArray = new Float32Array(ChunkParams.maxCount);
+    if (blockId === BlockID.OakLog) {
+        aTreeOffsetArray.fill(0);
+    } else {
+        aTreeOffsetArray.fill(0.5);    
+    }
+    
+    nonIndexedGeom.attributes.aTreeOffset = new THREE.InstancedBufferAttribute(aTreeOffsetArray, 1, true);
 
     const uvAttribute = nonIndexedGeom.attributes.uv;
     const uvs = uvAttribute.array;

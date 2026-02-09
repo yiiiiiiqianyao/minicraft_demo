@@ -6,6 +6,7 @@ import { ChunkParams } from "../chunk/literal";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 import { getEmptyOkaBlockData } from "../../Block/blocks/OakLogBlock";
 import { getEmptyLeaveBlockData } from "../../Block/blocks/LeavesBlock";
+import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 
 /**
  * Generates trees
@@ -20,12 +21,19 @@ export const generateTrees = (
   if (!trees) return input;
   // 树冠大小
   const canopySize = trees.canopy.size.max;
+  // canopySize 暂时不在 chunk 的边界生成树
   for (let baseX = canopySize; baseX < width - canopySize; baseX++) {
     for (let baseZ = canopySize; baseZ < width - canopySize; baseZ++) {
-      const n = World.simplex.noise(chunkPos.x + baseX, chunkPos.z + baseZ) * 0.5 + 0.5;
-      if (n < 1 - trees.frequency) {
+      const worldX = chunkPos.x + baseX;
+      const worldZ = chunkPos.z + baseZ;
+      
+      const baseNoise = World.simplex.noise(worldX, worldZ);
+      const treeNoise = baseNoise * 0.5 + 0.5; // [0, 1]
+      if (treeNoise < 1 - trees.frequency) {
         continue;
       }
+      // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
+      const treeType = treeNoise < 0.99 ? BlockID.OakLog : BlockID.BirchLog;
 
       /**@desc 找到地表高度 Find the grass tile*/
       for (let y = height - 1; y >= 0; y--) {
@@ -46,7 +54,7 @@ export const generateTrees = (
 
         // Fill in blocks for the trunk
         for (let i = baseY; i < topY; i++) {
-          input[baseX][i][baseZ] = getEmptyOkaBlockData();
+          input[baseX][i][baseZ] = treeType === BlockID.OakLog ? getEmptyOkaBlockData() : getEmptyBirchBlockData();
         }
 
         // Generate the canopy 生产树冠

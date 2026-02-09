@@ -3,11 +3,11 @@ import { BlockID } from "..";
 import { TreeMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 
-/**@desc 橡木原木块 */
-export class OakLogBlock extends Block {
-  id = BlockID.OakLog;
+/**@desc 白桦木原木块 */
+export class BirchBlock extends Block {
+  id = BlockID.BirchLog;
   material = TreeMaterial;
-  uiTexture = ItemImage.oakLog;
+  uiTexture = ItemImage.birchLog;
   geometry = RenderGeometry.Tree;
   transparent = false;
   canPassThrough = false;
@@ -15,9 +15,9 @@ export class OakLogBlock extends Block {
   breakCount = 1;
 }
 
-export const getEmptyOkaBlockData = () => {
+export const getEmptyBirchBlockData = () => {
     return {
-    blockId: BlockID.OakLog,
+    blockId: BlockID.BirchLog,
     instanceIds: [],
     blockData: {
       breakCount: 1,

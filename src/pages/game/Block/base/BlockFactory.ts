@@ -9,6 +9,7 @@ import { GrassBlock } from "../blocks/GrassBlock";
 import { IronOreBlock } from "../blocks/IronOreBlock";
 import { LeavesBlock } from "../blocks/LeavesBlock";
 import { OakLogBlock } from "../blocks/OakLogBlock";
+import { BirchBlock } from "../blocks/BirchBlock";
 import { RedstoneLampBlock } from "../blocks/RedstoneLampBlock";
 import { StoneBlock } from "../blocks/StoneBlock";
 import { StoneBrickBlock } from "../blocks/StoneBrickBlock";
@@ -28,6 +29,7 @@ export class BlockFactory {
     [BlockID.CoalOre]: CoalOreBlock,
     [BlockID.IronOre]: IronOreBlock,
     [BlockID.OakLog]: OakLogBlock,
+    [BlockID.BirchLog]: BirchBlock,
     [BlockID.Leaves]: LeavesBlock,
     [BlockID.TallGrass]: TallGrassBlock,
     [BlockID.FlowerRose]: FlowerRoseBlock,

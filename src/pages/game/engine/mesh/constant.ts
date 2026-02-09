@@ -18,6 +18,8 @@ export enum MeshType {
     CoalOreBlock = 'CoalOreBlock',
     /**@desc 橡木原木 */
     OakLogBlock = 'OakLogBlock',
+    /**@desc 白桦木原木 */
+    BirchLogBlock = 'BirchLogBlock',
     /**@desc 工作台 */
     CraftingTable = 'CraftingTable',
 }

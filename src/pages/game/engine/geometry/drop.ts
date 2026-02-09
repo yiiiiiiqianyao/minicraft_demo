@@ -15,7 +15,8 @@ export const getDropInstancedGeometry = (blockGeometry: RenderGeometry) => {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;
     } else if (blockGeometry === RenderGeometry.Tree) {
-        return TreeDropGeometry;
+        // TODO 暂时每种树都单独使用一个几何体
+        return TreeDropGeometry.clone();
     } else if (blockGeometry === RenderGeometry.Cross) {
         return CrossGeometry;
     } else if (blockGeometry === RenderGeometry.Flower) {

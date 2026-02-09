@@ -106,8 +106,8 @@ export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
       maxCount
     )
   } else {
-    // TODO 待优化 合并 Leaves 和 OakLog 方块的 InstancedMesh
-    if (DevControl.instanceMerge && isBlockSupportsCombine(blockEntity.id)) {
+    // TODO 待优化 合并其他的 block
+    if (isBlockSupportsCombine(blockEntity.id)) {
       const instanceMesh = initCombineInstanceMesh(blockEntity);
       return instanceMesh;
     } else {

@@ -377,7 +377,11 @@ export class World extends THREE.Group {
   */
   updateByPlacementBlock(px: number, py: number, pz: number, selectedBlockId: BlockID, placementBlockId: BlockID) {
     const placementBlockClass = BlockFactory.getBlock(placementBlockId);
-    if (selectedBlockId === BlockID.Grass && placementBlockClass.geometry === RenderGeometry.Cube && Selector.blockPlacementNormal.y === 1) {
+    const placementGeometry = placementBlockClass.geometry;
+
+    /** @desc 检查方块是否是实体方块 如 树方块、草泥土方块、石头方块等 */ 
+    const isEntityGeometry = placementGeometry === RenderGeometry.Cube || placementGeometry === RenderGeometry.Tree || placementGeometry === RenderGeometry.GrassBlock;
+    if (selectedBlockId === BlockID.Grass && isEntityGeometry && Selector.blockPlacementNormal.y === 1) {
       this.updateBlockType(px, py - 1, pz, BlockID.Dirt);
     }
   }

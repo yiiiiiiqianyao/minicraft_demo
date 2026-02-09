@@ -1,10 +1,12 @@
 import * as THREE from "three";
 import { Block, RenderGeometry } from "../../Block/base/Block";
 import { jitterNumber } from "../../utils";
+import { BlockID } from "../../Block";
 
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {
     switch (blockClass.geometry) {
         case RenderGeometry.Tree:
+            return InstanceMeshAddTree(mesh, blockClass.id, x, y, z);
         case RenderGeometry.Cube:
         case RenderGeometry.GrassBlock:
             return InstanceMeshAddCube(mesh, x, y, z);
@@ -16,6 +18,17 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
             console.warn(`Unknown geometry ${blockClass.geometry}`);
             return null;
     }
+}
+
+function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
+    const instanceId = mesh.count++;
+    const matrix = new THREE.Matrix4();
+    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
+
+    mesh.geometry.attributes.aTreeOffset.array[instanceId] = blockId === BlockID.OakLog ? 0 : 0.5;
+    mesh.geometry.attributes.aTreeOffset.needsUpdate = true;
+    mesh.setMatrixAt(instanceId, matrix);
+    return [instanceId];
 }
 
 function InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {

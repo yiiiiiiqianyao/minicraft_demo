@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionMesh, initRoseMesh } from "./flower";
 import { initCreatingTableMesh } from "./objects";
-import { initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogMesh, initStoneBlockMesh } from "./handHoldBlock";
+import { initBirchLogHandMesh, initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogHandMesh, initStoneBlockMesh } from "./handHoldBlock";
 
 /**@desc 网格池 */
 export class MeshPool {
@@ -28,7 +28,9 @@ export class MeshPool {
         } else if(type === MeshType.LeavesBlock) {
             mesh = initLeavesBlockMesh();
         } else if(type === MeshType.OakLogBlock) {
-            mesh = initOakLogMesh();
+            mesh = initOakLogHandMesh();
+        } else if (type === MeshType.BirchLogBlock) {
+            mesh = initBirchLogHandMesh();
         } else if (type === MeshType.CraftingTable) {
             mesh = initCreatingTableMesh();
         }

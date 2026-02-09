@@ -9,6 +9,7 @@ import { MeshPool } from "../engine/mesh";
 import { MeshType } from "../engine/mesh/constant";
 import { BlockID } from "../Block";
 import { ToolBar } from "../gui";
+import { Block } from "../Block/base/Block";
 
 /**
  * @desc player group 描述 player 模型、相机、附件（手、武器）等物品的集合
@@ -93,8 +94,12 @@ export class PlayerGroup {
                     return this.handPoint.add(MeshPool.getMesh(MeshType.CoalOreBlock) as THREE.Mesh);
                 case BlockID.IronOre:
                 case BlockID.Bedrock:
+                    // TODO 待补全 其他矿物
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.StoneBlock) as THREE.Mesh);
                 case BlockID.OakLog:
                     return this.handPoint.add(MeshPool.getMesh(MeshType.OakLogBlock) as THREE.Mesh);
+                case BlockID.BirchLog:
+                    return this.handPoint.add(MeshPool.getMesh(MeshType.BirchLogBlock) as THREE.Mesh);
                 case BlockID.Leaves:
                     return this.handPoint.add(MeshPool.getMesh(MeshType.LeavesBlock) as THREE.Mesh);
                 case BlockID.TallGrass:

@@ -21,15 +21,6 @@ const BedrockMaterial = new THREE.MeshLambertMaterial({ map: textures.bedrock })
 const StoneBrickMaterial = new THREE.MeshLambertMaterial({ map: textures.stoneBrick });
 const GrassBlockMaterial = new THREE.MeshLambertMaterial({ map: textures.grassBlock });
 // block material
-// const GrassBlockMaterial = [
-//   GrassSideMaterial, // right
-//   GrassSideMaterial, // left
-//   GrassTopMaterial, // top
-//   DirtMaterial, // bottom
-//   GrassSideMaterial, // front
-//   GrassSideMaterial, // back
-// ];
-
 const DirtBlockMaterial = DirtMaterial;
 const IronBlockMaterial = IronMaterial;
 
@@ -42,8 +33,9 @@ const CraftingTableMaterial = [
   new THREE.MeshLambertMaterial({ map: textures.CraftingTableSide }), // back
 ];
 
-// const BreakMaterial = new THREE.MeshLambertMaterial({ map: textures.breakBlock, transparent: true, opacity: 0 });
+/**@desc 破坏方块时候 展示挖掘进度的材质 */ 
 const BreakMaterial = initBreakMaterial(textures.breakBlock);
+
 export {
   wireframeMaterial,
   collisionHelperMaterial,

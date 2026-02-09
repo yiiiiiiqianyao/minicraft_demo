@@ -36,6 +36,14 @@ export class DropGroup extends THREE.Group {
         const block = BlockFactory.getBlock(blockId);
         const blockGeometry = block.geometry;
         const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
+
+        if (blockId === BlockID.OakLog) {
+            //
+        } else if (blockId === BlockID.BirchLog) {
+            // 白桦木方块的掉落物 attribute 设置 uv 纹理偏移 0.5
+            dropGeometry.attributes.aTreeOffset.array.fill(0.5);
+        }
+
         const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
         mesh.name = block.constructor.name;
         mesh.count = 0;
