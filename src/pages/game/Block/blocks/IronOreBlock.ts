@@ -17,6 +17,7 @@ export const IronOreBlock = class extends OreBlock {
   canPassThrough = false;
   canDrop = true;
   breakCount = 1;
+  dropBlockId = BlockID.IronOre;
 };
 
 export const getEmptyIronOreBlockData = () => {

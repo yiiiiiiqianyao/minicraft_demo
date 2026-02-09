@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { textures } from '../../Block/textures';
 
-// 橡木原木
+/**@desc 树木材质 */
 const TreeMaterial = new THREE.MeshLambertMaterial({
   map: textures.tree,
 });
@@ -55,12 +55,11 @@ TreeMaterial.onBeforeCompile = (shader) => {
   return shader;
 };
 
-// 树叶
+/**@desc 树叶材质 使用 alpha 剔除取代 transparent 模式  避免渲染时出现闪烁 */
 const LeavesMaterial = new THREE.MeshLambertMaterial({
   map: textures.leaves,
+  alphaTest: 0.1,
 });
-LeavesMaterial.transparent = true;
-LeavesMaterial.side = THREE.DoubleSide;
 
 export {
   TreeMaterial,
