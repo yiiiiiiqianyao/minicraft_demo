@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { StoneMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 石头方块 */
 export class StoneBlock extends Block {
@@ -16,6 +17,7 @@ export class StoneBlock extends Block {
   // TODO 需要增加原石方块
   /**@desc 石头方块被破坏后掉落的石头方块 */
   dropBlockId = BlockID.Stone;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyStoneBlockData = () => {

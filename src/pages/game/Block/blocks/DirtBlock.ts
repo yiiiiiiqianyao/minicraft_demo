@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { DirtBlockMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc Dirt block */
 export class DirtBlock extends Block {
@@ -14,6 +15,7 @@ export class DirtBlock extends Block {
   canDrop = true;
   breakCount = 5;
   dropBlockId = BlockID.Dirt;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyDirtBlockData = () => {

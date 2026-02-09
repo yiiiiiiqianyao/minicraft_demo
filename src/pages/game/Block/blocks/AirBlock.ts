@@ -11,6 +11,7 @@ export class AirBlock extends Block {
   canDrop = false;
   breakCount = -1;
   dropBlockId = undefined;
+  dropLimit = undefined;
 }
 
 export const getEmptyAirBlockData = () => {

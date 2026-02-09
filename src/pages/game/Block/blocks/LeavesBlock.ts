@@ -3,6 +3,7 @@ import { BlockID } from "..";
 import { LeavesMaterial, combineLeaveMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DevControl } from "../../dev";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 树叶方块 */
 export class LeavesBlock extends Block {
@@ -15,6 +16,7 @@ export class LeavesBlock extends Block {
   canDrop = true;
   breakCount = 1;
   dropBlockId = undefined;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyLeaveBlockData = () => {

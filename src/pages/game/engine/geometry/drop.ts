@@ -8,9 +8,8 @@ const CubeGeometry = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize
 const TreeDropGeometry = initTreeGeometry(dropBoxSize);
 const GrassBlockDropGeometry = initGrassBlockGeometry(dropBoxSize);
 
-// TODO 修改草的实际大小
 const CrossGeometry = new THREE.PlaneGeometry(0.5, 0.5);
-const FlowerGeometry = new THREE.PlaneGeometry(0.15, 0.5);
+const FlowerGeometry = new THREE.PlaneGeometry(0.4, 0.8);
 export const getDropInstancedGeometry = (blockGeometry: RenderGeometry) => {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;

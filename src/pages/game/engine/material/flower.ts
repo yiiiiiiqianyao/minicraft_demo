@@ -10,8 +10,8 @@ const FlowerDandelionMaterial = new THREE.MeshBasicMaterial({
   alphaTest: 0.1,
 });
 // 修改花纹理的scale和offset，使花的贴图和实际大小保持一致
-textures.flowerDandelion.repeat.set(0.45, 0.6 );
-textures.flowerDandelion.offset.set(0.275, 0);
+// textures.flowerDandelion.repeat.set(0.45, 0.6 );
+// textures.flowerDandelion.offset.set(0.275, 0);
 
 FlowerDandelionMaterial.side = THREE.DoubleSide;
 
@@ -20,12 +20,11 @@ const FlowerRoseMaterial = new THREE.MeshBasicMaterial({
   map: textures.flowerRose,
   alphaTest: 0.1,
 });
-textures.flowerRose.repeat.set(0.45, 0.6 );
-textures.flowerRose.offset.set(0.275, 0);
-
+// textures.flowerRose.repeat.set(0.45, 0.6 );
+// textures.flowerRose.offset.set(0.275, 0);
 FlowerRoseMaterial.side = THREE.DoubleSide;
 
 export {
-    FlowerDandelionMaterial,
-    FlowerRoseMaterial,
+  FlowerDandelionMaterial,
+  FlowerRoseMaterial,
 }

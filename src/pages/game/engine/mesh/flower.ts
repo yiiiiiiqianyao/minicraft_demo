@@ -3,7 +3,7 @@ import { getInstancedGeometry } from "../geometry";
 import { FlowerDandelionMaterial, FlowerRoseMaterial } from "../material";
 import { RenderGeometry } from "../../Block/base/Block";
 
-export function initRoseMesh() {
+export function initRoseHandMesh() {
     const geometry = getInstancedGeometry(RenderGeometry.Flower)
     const mesh = new THREE.Mesh(geometry, FlowerRoseMaterial);
     mesh.scale.set(0.4, 0.4, 0.4);
@@ -12,7 +12,7 @@ export function initRoseMesh() {
     return mesh;
 }
 
-export function initDandelionMesh() {
+export function initDandelionHandMesh() {
     const geometry = getInstancedGeometry(RenderGeometry.Flower)
     const mesh = new THREE.Mesh(geometry, FlowerDandelionMaterial);
     mesh.scale.set(0.4, 0.4, 0.4);

@@ -6,6 +6,7 @@ import { textures } from "../textures";
 
 import { BlockID } from "..";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 const redstoneLampMaterial = new THREE.MeshBasicMaterial({
   map: textures.redstoneLamp,
@@ -29,6 +30,7 @@ export class RedstoneLampBlock extends LightSourceBlock {
   breakCount = 5;
   /**@desc 红石灯方块被破坏后掉落的红石灯方块 */
   dropBlockId = BlockID.RedstoneLamp;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyRedstoneLampBlockData = () => {

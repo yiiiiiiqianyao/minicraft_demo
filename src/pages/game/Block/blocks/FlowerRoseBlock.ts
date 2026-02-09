@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { FlowerRoseMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 
 /**@desc 玫瑰花 */
@@ -15,6 +16,7 @@ export class FlowerRoseBlock extends Block {
   canDrop = true;
   breakCount = 1;
   dropBlockId = BlockID.FlowerRose;
+  dropLimit = DropLimit + 0.25;
 }
 
 export const getEmptyFlowerRoseBlockData = () => {

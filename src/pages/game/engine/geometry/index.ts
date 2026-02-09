@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
 import { initGrassBlockGeometry } from "./grassBlock";
+import { FlowerGeometry } from "./flower";
 
 /**@desc 方块的大小为 1x1x1 */
 const CubeGeometry = new THREE.BoxGeometry()
@@ -10,8 +11,6 @@ const CubeGeometry = new THREE.BoxGeometry()
 const break_size = 1.01;
 const BreakGeometry = new THREE.BoxGeometry(break_size, break_size, break_size);
 
-/**@desc 花朵的大小为 0.3x0.6 */
-const FlowerGeometry = new THREE.PlaneGeometry(0.3, 0.6);
 /**@desc 十字的大小为 0.5x0.5 */
 const CrossGeometry = new THREE.PlaneGeometry();
 /**@desc 树类型的定制 geometry */

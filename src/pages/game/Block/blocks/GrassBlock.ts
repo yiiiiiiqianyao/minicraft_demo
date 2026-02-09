@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { GrassBlockMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 草地方块 */
 export class GrassBlock extends Block {
@@ -16,6 +17,7 @@ export class GrassBlock extends Block {
   breakCount = 5;
   /**@desc 草方块被破坏后掉落的泥土方块 */
   dropBlockId = BlockID.Dirt;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyGrassBlockData = () => {

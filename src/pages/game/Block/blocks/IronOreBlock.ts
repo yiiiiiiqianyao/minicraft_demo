@@ -4,6 +4,7 @@ import { BlockID } from "..";
 import { oreConfig } from "../../world/generate/resource";
 import { IronBlockMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 铁矿方块 */
 export const IronOreBlock = class extends OreBlock {
@@ -18,6 +19,7 @@ export const IronOreBlock = class extends OreBlock {
   canDrop = true;
   breakCount = 1;
   dropBlockId = BlockID.IronOre;
+  dropLimit = DropLimit;
 };
 
 export const getEmptyIronOreBlockData = () => {

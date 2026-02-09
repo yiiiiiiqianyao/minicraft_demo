@@ -33,8 +33,8 @@ export class DropGroup extends THREE.Group {
 
     private initInstanceMesh(blockId: BlockID) {
         const meshes = this.meshes
-        const block = BlockFactory.getBlock(blockId);
-        const blockGeometry = block.geometry;
+        const blockClass = BlockFactory.getBlock(blockId);
+        const blockGeometry = blockClass.geometry;
         const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
 
         if (blockId === BlockID.OakLog) {
@@ -44,12 +44,13 @@ export class DropGroup extends THREE.Group {
             dropGeometry.attributes.aTreeOffset.array.fill(0.5);
         }
 
-        const mesh = new THREE.InstancedMesh(dropGeometry, block.material, MaxCount);
-        mesh.name = block.constructor.name;
+        const mesh = new THREE.InstancedMesh(dropGeometry, blockClass.material, MaxCount);
+        mesh.name = blockClass.constructor.name;
         mesh.count = 0;
         mesh.layers.set(GameLayers.One);
         mesh.userData.type = 'drop';
         mesh.userData.blockId = blockId;
+        mesh.userData.dropLimit = blockClass.dropLimit || DropLimit;
         mesh.userData.instanceCache = {};
         // 初始时将所有实例设为不可见
         mesh.visible = false;
@@ -58,7 +59,7 @@ export class DropGroup extends THREE.Group {
         mesh.castShadow = false;
         mesh.receiveShadow = false;
         mesh.matrixAutoUpdate = false;
-        meshes[block.id] = mesh;
+        meshes[blockClass.id] = mesh;
         mesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
         this.add(mesh);
         return mesh;
@@ -239,7 +240,7 @@ export class DropGroup extends THREE.Group {
             needUpdate: true,
             // block xyz
             x, y, z,
-            dropLimit: jitterNumber(DropLimit, 0.01),
+            dropLimit: jitterNumber(mesh.userData.dropLimit, 0.01),
         };
         this.dropList.push(drop);
         mesh.userData.instanceCache[drop.uuid] = drop;

@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { TreeMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 橡木原木块 */
 export class OakLogBlock extends Block {
@@ -15,6 +16,7 @@ export class OakLogBlock extends Block {
   breakCount = 10;
   /**@desc 橡木原木块被破坏后掉落的原木方块 */
   dropBlockId = BlockID.OakLog;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyOkaBlockData = () => {

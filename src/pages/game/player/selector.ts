@@ -42,6 +42,7 @@ export class Selector {
         }
     }
 
+    // TODO 当相机控制器没有变化的时候 可以优化拾取过滤
     static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {
         const rayCaster = Selector.rayCaster;
         rayCaster.setFromCamera(RayCenterScreen, camera);
@@ -57,7 +58,16 @@ export class Selector {
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
             const chunk = intersection.object.parent;
             if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
-
+            
+            // 根据 uv 优化拾取
+            if (intersection.object.userData.uvRange && intersection.uv) {
+                const { x: uvXRange, y: uvYRange } = intersection.object.userData.uvRange;
+                const { x: uvX, y: uvY } = intersection.uv;
+                if (uvX < uvXRange[0] || uvX > uvXRange[1] && uvY < uvYRange[0] && uvY > uvYRange[1]) {
+                    // 点击的 uv 坐标不在方块的有效 uv 范围内
+                    return Selector.unSelect(selectionHelper);
+                }
+            }
             // Update the selected coordinates
             Selector.updateSelectCoord(intersection, chunk);
             // Update the block placement coordinates
@@ -131,13 +141,14 @@ export class Selector {
     /**@desc 更新选择框的位置和大小 显示玩家选中方块的位置和大小 */
     static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
+        selectionHelper.position.copy(PlayerParams.selectedCoords);
         if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {
             selectionHelper.scale.set(0.3, 0.6, 0.3);
+            selectionHelper.position.y -= 0.2;
         } else {
             selectionHelper.scale.set(1, 1, 1);
         } 
         // TODO TallGrass 草方块的选择框需要调整大小
-        selectionHelper.position.copy(PlayerParams.selectedCoords);
         selectionHelper.visible = true;
     }
 }

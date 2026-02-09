@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { CraftingTableMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 工作台方块 */
 export class CraftBlock extends Block {
@@ -12,7 +13,18 @@ export class CraftBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 10;
+  breakCount = 5;
   /**@desc 工作台方块被破坏后掉落的工作台方块 */
   dropBlockId = BlockID.CraftingTable;
+  dropLimit = DropLimit;
+}
+
+export const getEmptyCraftBlockData = () => {
+  return {
+    blockId: BlockID.CraftingTable,
+    instanceIds: [],
+    blockData: {
+      breakCount: 5,
+    },
+  }
 }

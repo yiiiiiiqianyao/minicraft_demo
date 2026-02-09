@@ -4,6 +4,7 @@ import { BlockID } from "../constant";
 import { oreConfig } from "../../world/generate/resource";
 import { CoalOreMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 煤炭矿石块 */
 export const CoalOreBlock = class extends OreBlock {
@@ -18,6 +19,7 @@ export const CoalOreBlock = class extends OreBlock {
   canDrop = true;
   breakCount = 10;
   dropBlockId = BlockID.CoalOre;
+  dropLimit = DropLimit;
 };
 
 export const getEmptyCoalOreBlockData = () => {

@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { FlowerDandelionMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 蒲公英花 */
 export class FlowerDandelionBlock extends Block {
@@ -14,6 +15,7 @@ export class FlowerDandelionBlock extends Block {
   canDrop = true;
   breakCount = 1;
   dropBlockId = BlockID.FlowerDandelion;
+  dropLimit = DropLimit + 0.25;
 }
 
 export const getEmptyFlowerDandelionBlockData = () => {

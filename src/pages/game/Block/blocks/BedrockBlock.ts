@@ -2,6 +2,7 @@ import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
 import { ItemImage } from "../../gui/items";
 import { BedrockMaterial } from "../../engine/material";
+import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 基岩石块 */
 export class BedrockBlock extends Block {
@@ -14,6 +15,7 @@ export class BedrockBlock extends Block {
   canDrop = false;
   breakCount = -1;
   dropBlockId = undefined;
+  dropLimit = DropLimit;
 }
 
 export const getEmptyBedrockBlockData = () => {

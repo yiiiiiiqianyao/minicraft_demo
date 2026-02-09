@@ -28,6 +28,14 @@ function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: num
     mesh.geometry.attributes.aTreeOffset.array[instanceId] = blockId === BlockID.OakLog ? 0 : 0.5;
     mesh.geometry.attributes.aTreeOffset.needsUpdate = true;
     mesh.setMatrixAt(instanceId, matrix);
+
+    mesh.userData.renderGeometry = RenderGeometry.Tree;
+    // 树的 uv 范围
+    mesh.userData.uvRange = {
+        x: [0, 0.5],
+        y: [0, 1],
+    }
+
     return [instanceId];
 }
 
@@ -36,6 +44,9 @@ function InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z:
     const matrix = new THREE.Matrix4();
     matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
     mesh.setMatrixAt(instanceId, matrix);
+
+    mesh.userData.renderGeometry = RenderGeometry.Cube;
+
     return [instanceId];
 }
 
@@ -53,6 +64,8 @@ function InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z
     matrix2.setPosition(x + 0.5, y + 0.5, z + 0.5);
     mesh.setMatrixAt(instanceId2, matrix2);
 
+    mesh.userData.renderGeometry = RenderGeometry.Cross;
+
     return [instanceId1, instanceId2];
 }
 
@@ -66,14 +79,20 @@ function InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, 
     // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高
     const matrix1 = new THREE.Matrix4();
     matrix1.makeRotationY(Math.PI / 4);
-    matrix1.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);
+    matrix1.setPosition(x + xOffset, y + 0.5, z + zOffset);
     mesh.setMatrixAt(instanceId1, matrix1);
 
     const matrix2 = new THREE.Matrix4();
     matrix2.makeRotationY(-Math.PI / 4);
-    matrix2.setPosition(x + xOffset, y + 0.5 - 0.2, z + zOffset);
+    matrix2.setPosition(x + xOffset, y + 0.5, z + zOffset);
     mesh.setMatrixAt(instanceId2, matrix2);
 
     mesh.userData.renderGeometry = RenderGeometry.Flower;
+
+    mesh.userData.uvRange = {
+        x: [0.3, 0.6],
+        y: [0, 0.5],
+    }
+
     return [instanceId1, instanceId2];
 }

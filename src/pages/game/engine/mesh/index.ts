@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
-import { initDandelionMesh, initRoseMesh } from "./flower";
+import { initDandelionHandMesh, initRoseHandMesh } from "./flower";
 import { initCreatingTableMesh } from "./objects";
 import { initBirchLogHandMesh, initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogHandMesh, initStoneBlockMesh } from "./handHoldBlock";
 
@@ -16,9 +16,9 @@ export class MeshPool {
         if (type === MeshType.GrassBlock) {
             mesh = initGrassBlockMesh();
         } else if (type === MeshType.FlowerRose) {
-            mesh = initRoseMesh();            
+            mesh = initRoseHandMesh();            
         } else if (type === MeshType.FlowerDandelion) {
-            mesh = initDandelionMesh();
+            mesh = initDandelionHandMesh();
         } else if (type === MeshType.DirtBlock) {
             mesh = initDirtBlockMesh();
         } else if(type === MeshType.StoneBlock) {
