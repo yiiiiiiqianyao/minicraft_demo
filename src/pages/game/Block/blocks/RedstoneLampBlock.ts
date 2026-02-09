@@ -27,6 +27,8 @@ export class RedstoneLampBlock extends LightSourceBlock {
   distance = 10;
   decay = 1;
   breakCount = 5;
+  /**@desc 红石灯方块被破坏后掉落的红石灯方块 */
+  dropBlockId = BlockID.RedstoneLamp;
 }
 
 export const getEmptyRedstoneLampBlockData = () => {

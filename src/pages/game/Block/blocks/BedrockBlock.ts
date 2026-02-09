@@ -13,6 +13,7 @@ export class BedrockBlock extends Block {
   canPassThrough = false;
   canDrop = false;
   breakCount = -1;
+  dropBlockId = undefined;
 }
 
 export const getEmptyBedrockBlockData = () => {

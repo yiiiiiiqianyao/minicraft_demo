@@ -12,7 +12,8 @@ export class BirchBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
+  dropBlockId = BlockID.BirchLog;
 }
 
 export const getEmptyBirchBlockData = () => {
@@ -20,7 +21,7 @@ export const getEmptyBirchBlockData = () => {
     blockId: BlockID.BirchLog,
     instanceIds: [],
     blockData: {
-      breakCount: 1,
+      breakCount: 10,
     },
   }
 }

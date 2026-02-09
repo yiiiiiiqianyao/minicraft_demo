@@ -14,6 +14,7 @@ export class FlowerRoseBlock extends Block {
   canPassThrough = true;
   canDrop = true;
   breakCount = 1;
+  dropBlockId = BlockID.FlowerRose;
 }
 
 export const getEmptyFlowerRoseBlockData = () => {

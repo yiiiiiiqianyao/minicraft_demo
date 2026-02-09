@@ -61,6 +61,7 @@ export class KeyboardInput {
         DevControl.view = DevControl.view === 1 ? 2 : 1;
         break;
       case "KeyQ":
+        // TODO 丢弃的动画需要优化
         Action.dropHandle(this.player);
         break;
       case "KeyE":

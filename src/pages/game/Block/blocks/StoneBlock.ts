@@ -13,6 +13,9 @@ export class StoneBlock extends Block {
   canPassThrough = false;
   canDrop = true;
   breakCount = 10;
+  // TODO 需要增加原石方块
+  /**@desc 石头方块被破坏后掉落的石头方块 */
+  dropBlockId = BlockID.Stone;
 }
 
 export const getEmptyStoneBlockData = () => {

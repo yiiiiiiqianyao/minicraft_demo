@@ -14,6 +14,7 @@ export class TallGrassBlock extends Block {
   canPassThrough = true;
   canDrop = false;
   breakCount = 1;
+  dropBlockId = undefined;
 }
 
 export const getEmptyTallGrassBlockData = () => {

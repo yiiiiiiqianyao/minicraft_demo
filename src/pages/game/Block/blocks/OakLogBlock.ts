@@ -12,7 +12,9 @@ export class OakLogBlock extends Block {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
+  /**@desc 橡木原木块被破坏后掉落的原木方块 */
+  dropBlockId = BlockID.OakLog;
 }
 
 export const getEmptyOkaBlockData = () => {
@@ -20,7 +22,7 @@ export const getEmptyOkaBlockData = () => {
     blockId: BlockID.OakLog,
     instanceIds: [],
     blockData: {
-      breakCount: 1,
+      breakCount: 10,
     },
   }
 }

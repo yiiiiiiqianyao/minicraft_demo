@@ -52,13 +52,13 @@ export class Action {
     /** @desc 玩家丢弃手上拿着的物品 */
     static dropHandle(player: Player) {
         if (ToolBar.activeBlockId === undefined || ToolBar.activeBlockId === BlockID.Air) return;
-        // TODO 丢弃的位置待优化
+        // TODO 丢弃的位置待优化 判断条件待优化
         const v = new THREE.Vector3();
         player.controls.getDirection(v);
         v.multiplyScalar(1.5);
         // const dropPosition = player.position.clone().add(v);
         const dropX = player.position.x + v.x - 0.5;
-        const dropY = player.position.y - 1.2;
+        const dropY = player.position.y - 0.8;
         const dropZ = player.position.z + v.z - 0.5;
         const { chunk: { x: chunkX, z: chunkZ }, block } = worldToChunkCoords(dropX, dropY, dropZ);
         const chunk = player.world.getChunk(chunkX, chunkZ);

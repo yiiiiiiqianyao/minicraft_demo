@@ -13,6 +13,7 @@ export class FlowerDandelionBlock extends Block {
   canPassThrough = true;
   canDrop = true;
   breakCount = 1;
+  dropBlockId = BlockID.FlowerDandelion;
 }
 
 export const getEmptyFlowerDandelionBlockData = () => {

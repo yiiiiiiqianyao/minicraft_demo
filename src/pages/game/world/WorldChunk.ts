@@ -232,10 +232,10 @@ export class WorldChunk extends THREE.Group {
     
     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
     const removeBlockClass = BlockFactory.getBlock(blockId);
-    if(emitDrop && removeBlockClass.canDrop) {
+    if(emitDrop && removeBlockClass.canDrop && removeBlockClass.dropBlockId) {
       if (!this.dropGroup) this.initDropGroup();
       // 触发掉落物品
-      this.dropGroup!.drop(block.blockId, x, y, z, true);
+      this.dropGroup!.drop(removeBlockClass.dropBlockId, x, y, z, true);
     }    
 
     this.setBlockData(x, y, z, {

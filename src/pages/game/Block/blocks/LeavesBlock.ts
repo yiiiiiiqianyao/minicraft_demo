@@ -14,6 +14,7 @@ export class LeavesBlock extends Block {
   canPassThrough = false;
   canDrop = true;
   breakCount = 1;
+  dropBlockId = undefined;
 }
 
 export const getEmptyLeaveBlockData = () => {

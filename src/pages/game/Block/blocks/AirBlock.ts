@@ -10,6 +10,7 @@ export class AirBlock extends Block {
   canPassThrough = true;
   canDrop = false;
   breakCount = -1;
+  dropBlockId = undefined;
 }
 
 export const getEmptyAirBlockData = () => {

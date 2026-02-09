@@ -13,4 +13,6 @@ export class CraftBlock extends Block {
   canPassThrough = false;
   canDrop = true;
   breakCount = 10;
+  /**@desc 工作台方块被破坏后掉落的工作台方块 */
+  dropBlockId = BlockID.CraftingTable;
 }
