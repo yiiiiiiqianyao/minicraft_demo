@@ -37,8 +37,11 @@ export function updateOrbitControls(camera: THREE.PerspectiveCamera, controls: O
     if(!camera || !controls || !player) return;
     if(!(controls.target.distanceTo(player.position) < 0.01)) {
         const {x, y, z} = player.position;
-        camera.position.set(x - 5, y + 10, z + 5);
+        camera.position.set(x , y + 5, z + 6);
         controls.target.set(x, y, z);
     };
     controls.update();
+    if (!player.boundsHelper.visible) {
+        player.boundsHelper.visible = true;
+    }
 }

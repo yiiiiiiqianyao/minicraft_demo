@@ -4,7 +4,6 @@ import { Player } from "../player/Player";
 import { World } from "../world/World";
 import { oreConfig } from "../world/generate/resource";
 import { Physics } from "../physics/index.ts";
-import { ChunkParams } from "../world/chunk/literal.ts";
 
 export * from './toolbar/index.ts';
 
@@ -61,45 +60,45 @@ export function createUI(
   }
   worldFolder.close();
 
-  const terrainFolder = gui.addFolder("Terrain");
-  terrainFolder.add(ChunkParams, "width", 8, 128, 1).name("Width");
-  terrainFolder.add(ChunkParams, "height", 8, 64, 1).name("Height");
-  terrainFolder.add(world.params, "seed", 1, 10000, 1).name("Seed");
-  terrainFolder.add(world.params.terrain, "scale", 10, 100, 1).name("Scale");
-  terrainFolder.add(world.params.terrain, "magnitude", 0, 1).name("Magnitude");
-  terrainFolder.add(world.params.terrain, "offset", 0, 1).name("Offset");
-  terrainFolder.close();
+  // const terrainFolder = gui.addFolder("Terrain");
+  // terrainFolder.add(ChunkParams, "width", 8, 128, 1).name("Width");
+  // terrainFolder.add(ChunkParams, "height", 8, 64, 1).name("Height");
+  // terrainFolder.add(world.params, "seed", 1, 10000, 1).name("Seed");
+  // terrainFolder.add(world.params.terrain, "scale", 10, 100, 1).name("Scale");
+  // terrainFolder.add(world.params.terrain, "magnitude", 0, 1).name("Magnitude");
+  // terrainFolder.add(world.params.terrain, "offset", 0, 1).name("Offset");
+  // terrainFolder.close();
 
-  if(world.params.trees) {
-    const treesFolder = terrainFolder.addFolder("Trees");
-    treesFolder.add(world.params.trees, "frequency", 0, 1, 0.1).name("Frequency");
-    treesFolder
-      .add(world.params.trees.trunkHeight, "min", 0, 10, 1)
-      .name("Min Trunk Height");
-    treesFolder
-      .add(world.params.trees.trunkHeight, "max", 0, 10, 1)
-      .name("Max Trunk Height");
-    treesFolder
-      .add(world.params.trees.canopy.size, "min", 0, 10, 1)
-      .name("Min Canopy Size");
-    treesFolder
-      .add(world.params.trees.canopy.size, "max", 0, 10, 1)
-      .name("Max Canopy Size");
+  // if(world.params.trees) {
+  //   const treesFolder = terrainFolder.addFolder("Trees");
+  //   treesFolder.add(world.params.trees, "frequency", 0, 1, 0.1).name("Frequency");
+  //   treesFolder
+  //     .add(world.params.trees.trunkHeight, "min", 0, 10, 1)
+  //     .name("Min Trunk Height");
+  //   treesFolder
+  //     .add(world.params.trees.trunkHeight, "max", 0, 10, 1)
+  //     .name("Max Trunk Height");
+  //   treesFolder
+  //     .add(world.params.trees.canopy.size, "min", 0, 10, 1)
+  //     .name("Min Canopy Size");
+  //   treesFolder
+  //     .add(world.params.trees.canopy.size, "max", 0, 10, 1)
+  //     .name("Max Canopy Size");
 
-    treesFolder.close();
-  }
-  if(world.params.tallGrass) {
-    const grassFolder = terrainFolder.addFolder("Grass");
-    grassFolder.add(world.params.tallGrass, "frequency", 0, 1, 0.1).name("Frequency");
-    grassFolder
-      .add(world.params.tallGrass, "patchSize", 1, 10, 1)
-      .name("Grass Patch Size");
-    grassFolder.close();
-  }
+  //   treesFolder.close();
+  // }
+  // if(world.params.tallGrass) {
+  //   const grassFolder = terrainFolder.addFolder("Grass");
+  //   grassFolder.add(world.params.tallGrass, "frequency", 0, 1, 0.1).name("Frequency");
+  //   grassFolder
+  //     .add(world.params.tallGrass, "patchSize", 1, 10, 1)
+  //     .name("Grass Patch Size");
+  //   grassFolder.close();
+  // }
 
-  terrainFolder
-    .add(world.params.flowers, "frequency", 0, 1, 0.1)
-    .name("Frequency");
+  // terrainFolder
+  //   .add(world.params.flowers, "frequency", 0, 1, 0.1)
+  //   .name("Frequency");
 
   const resourcesFolder = gui.addFolder("Resources");
 

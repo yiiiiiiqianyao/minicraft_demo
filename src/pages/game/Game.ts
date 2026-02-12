@@ -127,6 +127,9 @@ export default class Game {
     if (renderCamera.userData.type === RenderView.ThirdPerson) {
       // 更新观察相机位置和目标位置
       updateOrbitControls(this.orbitCamera, this.controls, this.player);
+    } else if (this.player.boundsHelper.visible) {
+      // 隐藏玩家 boundsHelper
+      this.player.boundsHelper.visible = false;
     }
 
     requestAnimationFrame(() => {
