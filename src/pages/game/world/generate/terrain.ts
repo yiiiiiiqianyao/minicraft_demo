@@ -2,26 +2,49 @@ import * as THREE from "three";
 import { World } from "../World";
 import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
-import type { IInstanceData, IWorldParams } from "../interface";
+import type { IInstanceData } from "../interface";
 import { DevControl } from "../../dev";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 import { getEmptyStoneBlockData } from "../../Block/blocks/StoneBlock";
 import { getEmptyGrassBlockData } from "../../Block/blocks/GrassBlock";
 
+const normalTerrain = {
+  scale: 50,
+  magnitude: 0.1,
+  offset: 0.5,
+}
+
+// 平坦世界的参数
+const flatTerrain = {
+  scale: 50,
+  magnitude: 0.0,
+  offset: 0.5,
+}
+const surface = {
+  offset: 4,
+  magnitude: 4,
+}
+const bedrock = {
+  offset: 1,
+  magnitude: 2,
+}
+
 /**
  * Generates the terrain data
  */
-export const generateTerrain = (input: IInstanceData[][][], params: IWorldParams, chunkPos: THREE.Vector3): IInstanceData[][][] => {
+export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vector3): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
-  const { terrain, surface, bedrock } = params;
+  const { worldType } = DevControl;
+  const terrainConfig = worldType === 'flat' ? flatTerrain : normalTerrain;
+  
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // block position of world
       const value = World.simplex.noise(
-        (chunkPos.x + x) / terrain.scale,
-        (chunkPos.z + z) / terrain.scale
+        (chunkPos.x + x) / terrainConfig.scale,
+        (chunkPos.z + z) / terrainConfig.scale
       );
-      const scaledNoise = terrain.offset + terrain.magnitude * value;
+      const scaledNoise = terrainConfig.offset + terrainConfig.magnitude * value;
 
       let terrainHeight = Math.floor(height * scaledNoise);
       terrainHeight = Math.max(0, Math.min(terrainHeight, height - 1));

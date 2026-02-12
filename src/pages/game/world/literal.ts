@@ -57,15 +57,19 @@ const tallGrass = {
 // 世界参数的默认值
 export const getDefaultWorldParams = () => {
   const { worldType } = DevControl;
+  const terrainConfig = worldType === 'flat' ? flatTerrain : terrain;
+  const treeConfig = (worldType === 'flat' || worldType === 'terrain') ? null : trees;
+  const tallGrassConfig = (worldType === 'flat' || worldType === 'terrain') ? null : tallGrass;
+  const flowerConfig = (worldType === 'flat' || worldType === 'terrain') ? null : {
+    frequency: 0.0075,
+  };
   return {
     seed: 0,
-    terrain: worldType === 'flat' ? flatTerrain : terrain,
+    terrain: terrainConfig,
     surface: surface,
     bedrock: bedrock,
-    trees: worldType === 'flat' ? null : trees,
-    tallGrass: worldType === 'flat' ? null : tallGrass,
-    flowers: {
-      frequency: 0.0075,
-    },
+    trees: treeConfig,
+    tallGrass: tallGrassConfig,
+    flowers: flowerConfig,
   }
 };

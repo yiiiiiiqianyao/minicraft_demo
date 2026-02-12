@@ -3,17 +3,22 @@
  */
 
 import { BlockID } from "../../Block";
+import { DevControl } from "../../dev";
 import { ChunkParams } from "../chunk/literal";
-import type { IInstanceData, IWorldParams } from "../interface";
+import type { IInstanceData } from "../interface";
 import { World } from "../World";
+
+const tallGrass = {
+  frequency: 0.02,
+  patchSize: 5,
+}
 
 export const generateTallGrass = (
   input: IInstanceData[][][],
-  params: IWorldParams
 ): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
-  const { tallGrass } = params;
-  if (!tallGrass) return input;
+  const { worldType } = DevControl;
+  if (worldType === 'flat' || worldType === 'terrain') return input;
 
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {

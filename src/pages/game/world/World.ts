@@ -4,7 +4,7 @@ import { BlockFactory } from "../Block/base/BlockFactory";
 import { LightSourceBlock } from "../Block/base/LightSourceBlock";
 import { DataStore } from "./DataStore";
 import { WorldChunk } from "./WorldChunk";
-import { getDefaultWorldParams, WorldParams } from "./literal";
+import { WorldParams } from "./literal";
 import { PlayerInitPosition, PlayerParams } from "../player/literal";
 import { updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
@@ -12,7 +12,6 @@ import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
 import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
-import type { IWorldParams } from "./interface";
 import { RenderGeometry } from "../Block/base/Block";
 import { Selector } from "../player/selector";
 import { BreakBlockHelper } from "../helper/breakBlockHelper";
@@ -30,8 +29,7 @@ export class World extends THREE.Group {
   chunkQueue: { x: number; z: number }[];
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
-  onLoad?: () => void;
-  params: IWorldParams = getDefaultWorldParams();
+  onLoad?: () => void
 
   // Used for persisting changes to the world
   dataStore = new DataStore();
@@ -220,7 +218,7 @@ export class World extends THREE.Group {
    */
   async generateChunk(x: number, z: number) {
     const { width } = ChunkParams;
-    const chunk = new WorldChunk(this.params, this.dataStore);
+    const chunk = new WorldChunk(this.dataStore);
     chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };
     chunk.generate();

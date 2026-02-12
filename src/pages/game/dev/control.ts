@@ -11,7 +11,7 @@ export class DevControl {
     static chunkHelperVisible = GlobalProps.chunk_helper === '1' ? true : false;
     static chunkWireframeMode = false;
     static showBorder = GlobalProps.show_border === '1' ? true : false;
-    static worldType = GlobalProps.world || 'terrain'; // 'flat'
+    static worldType = GlobalProps.world || 'normal'; // flat terrain normal
     static physicsHelperVisible = GlobalProps.physics_helper === '1' ? true : false;
     static hour = GlobalProps.hour ? Number(GlobalProps.hour) : undefined;
     /** @desc 世界 chunk 渲染距离 */

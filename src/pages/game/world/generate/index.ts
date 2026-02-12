@@ -6,7 +6,7 @@ import { generateTrees } from "./tree";
 import { generateTallGrass } from "./tallGrass";
 import { generateFlowers } from "./flower";
 import { ChunkParams } from "../chunk/literal";
-import type { IInstanceData, IWorldParams } from "../interface";
+import type { IInstanceData } from "../interface";
 
 // TODO BlockID[][][] => IInstanceData[][][]
 const initEmptyChunk = () => {
@@ -30,7 +30,6 @@ const initEmptyChunk = () => {
 };
 
 export const generateChunk = async (
-  params: IWorldParams,
   x: number,
   z: number
 ) => {
@@ -40,12 +39,12 @@ export const generateChunk = async (
     // 生产各种资源方块
     data = generateResources(data, chunkPos);
     // 从上到下进行分层（在特定的层保留资源方块）
-    data = generateTerrain( data, params, chunkPos);
+    data = generateTerrain( data, chunkPos);
     // TODO 下面的 生产树 高草 花朵等可以进行优化
-    data = generateTrees( data, params, chunkPos);
+    data = generateTrees( data, chunkPos);
     // Tip: 高草和花朵都是一格的大小 不会跨越 chunk 因此不需要考虑 chunk position
-    data = generateTallGrass( data, params);
+    data = generateTallGrass( data);
     // TODO 在生成 flower 的时候需要考虑唯一性 在 chunk 重新创建的时候 保持不变
-    data = generateFlowers( data, params);
+    data = generateFlowers( data);
     return data;
 };

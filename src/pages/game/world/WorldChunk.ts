@@ -9,7 +9,7 @@ import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
 import { InstanceMeshAdd } from "./chunk/instance";
-import type { IInstanceData, IWorldParams } from "./interface";
+import type { IInstanceData } from "./interface";
 import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
 
 /** @desc chunk 区块对象 */
@@ -17,7 +17,7 @@ export class WorldChunk extends THREE.Group {
   /**@desc chunk 中的 block 数据 */
   private data: IInstanceData[][][] = [];
   private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
-  params: IWorldParams;
+
   loaded: boolean;
   dataStore: DataStore;
   dropGroup: DropGroup | null = null;
@@ -25,9 +25,8 @@ export class WorldChunk extends THREE.Group {
   helper: THREE.Mesh | null = null;
   helperColor: THREE.Color | null = null;
   
-  constructor(params: IWorldParams, dataStore: DataStore) {
+  constructor(dataStore: DataStore) {
     super();
-    this.params = params;
     this.dataStore = dataStore;
     this.loaded = false;
     if(DevControl.chunkHelperVisible) {
@@ -41,7 +40,7 @@ export class WorldChunk extends THREE.Group {
     // const start = performance.now();
     // 初始化 chunk 数据
     const { x, z } = this.position;
-    const data: IInstanceData[][][] = await generateChunk(this.params, x, z);
+    const data: IInstanceData[][][] = await generateChunk(x, z);
 
     // 空闲时间的 callback
     requestIdleCallback(() => {

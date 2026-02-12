@@ -1,24 +1,41 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { World } from "../World";
-import type { IInstanceData, IWorldParams } from "../interface";
+import type { IInstanceData } from "../interface";
 import { ChunkParams } from "../chunk/literal";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 import { getEmptyOkaBlockData } from "../../Block/blocks/OakLogBlock";
 import { getEmptyLeaveBlockData } from "../../Block/blocks/LeavesBlock";
 import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
+import { DevControl } from "../../dev";
+
+const trees = {
+  frequency: 0.04,
+  trunkHeight: {
+    min: 5,
+    max: 7,
+  },
+  canopy: {
+    size: {
+      min: 1,
+      max: 3,
+    },
+  },
+}
 
 /**
  * Generates trees
  */
 export const generateTrees = (
   input: IInstanceData[][][],
-  params: IWorldParams,
   chunkPos: THREE.Vector3
 ): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
-  const { trees } = params;
-  if (!trees) return input;
+
+  const { worldType } = DevControl;
+  if (worldType === 'flat' || worldType === 'terrain') return input;
+  
+
   // 树冠大小
   const canopySize = trees.canopy.size.max;
   // canopySize 暂时不在 chunk 的边界生成树

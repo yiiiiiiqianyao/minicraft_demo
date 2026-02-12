@@ -1,14 +1,21 @@
 import { BlockID } from "../../Block";
+import { DevControl } from "../../dev";
 import { ChunkParams } from "../chunk/literal";
-import type { IInstanceData, IWorldParams } from "../interface";
+import type { IInstanceData } from "../interface";
 import { World } from "../World";
 
 /**
  * Generate random patches of flowers across the top surface
  */
 export const generateFlowers = (
-  input: IInstanceData[][][], params: IWorldParams): IInstanceData[][][] => {
+  input: IInstanceData[][][]): IInstanceData[][][] => {
   const { width, height } = ChunkParams;
+  const { worldType } = DevControl;
+  if (worldType === 'flat' || worldType === 'terrain') return input;
+  const flowers =  {
+    frequency: 0.0075,
+  };
+
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // starting from the top of the chunk, find the first grass block
@@ -56,7 +63,7 @@ export const generateFlowers = (
           const flowerId =
             World.rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;
 
-          if (World.rng.random() < params.flowers.frequency) {
+          if (World.rng.random() < flowers.frequency) {
             input[x][baseY][z] = {
               blockId: flowerId,
               instanceIds: [],
