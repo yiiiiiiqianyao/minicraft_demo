@@ -16,6 +16,10 @@ export class Selector {
     private static _updateCount = 0;
     static blockPlacementCoords: THREE.Vector3 = new THREE.Vector3();
     static blockPlacementNormal: THREE.Vector3 = new THREE.Vector3();
+    /**@desc 是否是放置在方块的上方 */
+    static get isPlacementUpper() {
+        return Selector.blockPlacementNormal.y === 1;
+    }
     /**
      * Updates the raycaster used for block selection
      */

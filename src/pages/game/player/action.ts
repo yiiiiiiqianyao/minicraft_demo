@@ -7,6 +7,7 @@ import { KeyboardInput } from "./keyboard";
 import { worldToChunkCoords } from "../world/chunk/utils";
 import { BlockID } from "../Block";
 import { ToolBar } from "../gui";
+import { Selector } from "./selector";
 
 /**
  * @desc 处理玩角色的动作 & 玩家的交互操作
@@ -68,6 +69,54 @@ export class Action {
         // 丢弃物品后 从工具栏中移除
         ToolBar.removeBlockId();
     }
+
+    /** @desc 玩家放置方块 */
+    static placementBlock(world: World, player: Player, selectedBlockId: BlockID) {
+        // 工具栏当前选中的栏目中为空 则不执行放置操作
+        if (!ToolBar.activeBlockId) return;
+        const playerPos = new THREE.Vector3(
+        Math.floor(player.position.x),
+        Math.floor(player.position.y) - PlayerParams.halfHeight,
+        Math.floor(player.position.z)
+        );
+        const blockPos = new THREE.Vector3(
+        Math.floor(Selector.blockPlacementCoords.x - 0.5),
+        Math.floor(Selector.blockPlacementCoords.y - 0.5),
+        Math.floor(Selector.blockPlacementCoords.z - 0.5)
+        );
+
+        // TODO 需要精细判断
+        // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
+        if (playerPos.distanceTo(blockPos) <= 1) return;
+        // Selector.blockPlacementNormal
+        const placementBlockId = ToolBar.activeBlockId;
+        // 检查是否可以放置方块
+        if (!canIPlacementBlock(placementBlockId, selectedBlockId)) return;
+        // Right click 放置方块
+        const isPlacementSuccess = world.addBlock(
+            blockPos.x,
+            blockPos.y,
+            blockPos.z,
+            placementBlockId,
+        );
+        if (isPlacementSuccess) {
+            // 放置方块后需要从玩家物品栏中移除当前放置的方块
+            ToolBar.removeBlockId();
+            // 触发放置的动作
+            PlayerParams.playerInstance?.placementHand();
+            // TODO update under block
+            // 若放置的 block 下方的方块是 grass 草方块，则草方块应该更新为泥土方块
+            // console.log(selectedBlockId, 'placed');
+            // console.log(Selector.blockPlacementNormal);
+            world.updateByPlacementBlock(
+                blockPos.x,
+                blockPos.y,
+                blockPos.z,
+                selectedBlockId,
+                placementBlockId,
+            );
+        }  
+    }
 }
 
 function handlePlayerMove(player: Player, eventKey: PlayerEventKey, isKeyDown = true) {
@@ -112,4 +161,17 @@ function handlePlayerMove(player: Player, eventKey: PlayerEventKey, isKeyDown = 
             }
             break;
     }
+}
+
+function canIPlacementBlock(placementBlockId: BlockID, targetBlockId: BlockID) {
+    if (placementBlockId === BlockID.FlowerRose ||
+        placementBlockId === BlockID.FlowerDandelion
+    ) {
+        // TIP: 目前只能在草方块上放置玫瑰和蒲公英
+        if (targetBlockId !== BlockID.Grass) return false;
+        // TIP: 目前只能在草方块的顶部放置玫瑰和蒲公英
+        if (!Selector.isPlacementUpper) return false;
+    }
+    // 目前没有其他限制条件 都允许放置方块
+    return true;
 }

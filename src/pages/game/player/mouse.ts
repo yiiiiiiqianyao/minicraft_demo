@@ -1,13 +1,12 @@
-import * as THREE from "three";
 import { World } from "../world/World";
 import { PlayerParams } from "./literal";
 import { Player } from "./Player";
-import { ToolBar } from "../gui";
 import { PhysicsParams } from "../physics/literal";
 import { Selector } from "./selector";
 import { BlockID } from "../Block";
 import { EventSystem } from "../../EventSystem";
 import { GameEvent, GameState, PopupType, State } from "../constant";
+import { Action } from "./action";
 
 /**@desc 处理玩家鼠标输入事件 */
 export class MouseInput {
@@ -57,8 +56,7 @@ export class MouseInput {
         if (!player.controls.isLocked) return;
         if (event.button === 0) {
             this.handleLeftClick();
-            if (!Selector.selectedMesh) return;
-            // const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
+            if (!Selector.selectedMesh) return
             this.handleBreak();
         } else if (event.button === 2 && Selector.selectedMesh) {
             const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
@@ -70,7 +68,7 @@ export class MouseInput {
                 // 打开工作台弹窗
                 EventSystem.broadcast(GameEvent.OpenPopup, PopupType.Craft);
             } else {
-                this.handlePlacement(selectedBlockId);
+                Action.placementBlock(world, player, selectedBlockId);
             }
             
         }
@@ -99,52 +97,5 @@ export class MouseInput {
                 this.world.interruptHit(x, y, z);
             }, 500);
         }
-    }
-
-    /**@desc 放置一个方块 */
-    private handlePlacement(selectedBlockId: BlockID) {
-        // 工具栏当前选中的栏目中为空 则不执行放置操作
-        if (!ToolBar.activeBlockId) return;
-        const { world, player } = this;
-        const playerPos = new THREE.Vector3(
-        Math.floor(player.position.x),
-        Math.floor(player.position.y) - PlayerParams.halfHeight,
-        Math.floor(player.position.z)
-        );
-        const blockPos = new THREE.Vector3(
-        Math.floor(Selector.blockPlacementCoords.x - 0.5),
-        Math.floor(Selector.blockPlacementCoords.y - 0.5),
-        Math.floor(Selector.blockPlacementCoords.z - 0.5)
-        );
-
-        // TODO 需要精细判断
-        // 检查是否超出可以放置方块的距离（玩家本身所处的方块）
-        if (playerPos.distanceTo(blockPos) <= 1) return;
-
-        const placementBlockId = ToolBar.activeBlockId;
-        // Right click 放置方块
-        const isPlacementSuccess = world.addBlock(
-            blockPos.x,
-            blockPos.y,
-            blockPos.z,
-            placementBlockId,
-        );
-        if (isPlacementSuccess) {
-            // 放置方块后需要从玩家物品栏中移除当前放置的方块
-            ToolBar.removeBlockId();
-            // 触发放置的动作
-            PlayerParams.playerInstance?.placementHand();
-            // TODO update under block
-            // 若放置的 block 下方的方块是 grass 草方块，则草方块应该更新为泥土方块
-            // console.log(selectedBlockId, 'placed');
-            // console.log(Selector.blockPlacementNormal);
-            world.updateByPlacementBlock(
-                blockPos.x,
-                blockPos.y,
-                blockPos.z,
-                selectedBlockId,
-                placementBlockId,
-            );
-        }        
     }
 }
