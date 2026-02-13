@@ -12,7 +12,7 @@ import { worldToCeilBlockCoord } from "../world/chunk/utils";
 export class Selector {
     private static _rayCaster: THREE.Raycaster | null = null;
     /**@desc 垂直同步次数 性能优化使用 */
-    private static _vSyncCount = 2;
+    private static _vSyncCount = 4;
     private static _updateCount = 0;
     static blockPlacementCoords: THREE.Vector3 = new THREE.Vector3();
     static blockPlacementNormal: THREE.Vector3 = new THREE.Vector3();
@@ -35,6 +35,7 @@ export class Selector {
     }
 
     static update(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {
+        // if (Math.random() > 0) return;
         Selector._updateCount++;
         if(Selector._updateCount === Selector._vSyncCount) {
             Selector.select(camera, world, selectionHelper);

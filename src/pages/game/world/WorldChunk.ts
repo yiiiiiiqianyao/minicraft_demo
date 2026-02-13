@@ -17,9 +17,9 @@ export class WorldChunk extends THREE.Group {
   /**@desc chunk 中的 block 数据 */
   private data: IInstanceData[][][] = [];
   private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
-
+  private dataStore: DataStore;
   loaded: boolean;
-  dataStore: DataStore;
+  
   dropGroup: DropGroup | null = null;
   // for dev test
   helper: THREE.Mesh | null = null;
@@ -40,18 +40,19 @@ export class WorldChunk extends THREE.Group {
     // const start = performance.now();
     // 初始化 chunk 数据
     const { x, z } = this.position;
-    const data: IInstanceData[][][] = await generateChunk(x, z);
-
+    const data: IInstanceData[][][] = await generateChunk(x, z, this.dataStore);
+    // this.data = data;
+    // console.log(`Loaded chunk in ${performance.now() - start}ms`);
     // 空闲时间的 callback
     requestIdleCallback(() => {
         // 设置初始化的 chunk 数据
         this.initializeTerrain(data);
         // 从 data store 中加载玩家变更
-        this.loadGameChanges(data);
+        // this.loadGameChanges(data);
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
         this.loaded = true;
-        // console.log(`Loaded chunk in ${performance.now() - start}ms`);
+        this.dataStore.setChunkLoaded(x, z, true);
       },
       { timeout: 1000 }
     );
@@ -65,7 +66,7 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
-   * Initializes the terrain data
+   * @desc Initializes the terrain data 为每个 chunk 存储一个单独的数据集
    */
   private initializeTerrain(data: IInstanceData[][][]) {
     const { width, height } = ChunkParams;
@@ -84,36 +85,6 @@ export class WorldChunk extends THREE.Group {
         slice.push(row);
       }
       this.data.push(slice);
-    }
-  }
-
-  /**
-   * Loads player changes from the data store
-   */
-  private loadGameChanges(data: IInstanceData[][][]) {
-    const { width, height } = ChunkParams;
-    for (let x = 0; x < width; x++) {
-      for (let y = 0; y < height; y++) {
-        for (let z = 0; z < width; z++) {
-          // Overwrite with value in data store if it exists
-          if (
-            this.dataStore.contains(this.position.x, this.position.z, x, y, z)
-          ) {
-            const storageData = this.dataStore.get(
-              this.position.x,
-              this.position.z,
-              x,
-              y,
-              z
-            );
-            // 如果数据 store 中的值与当前 chunk 中的值相同，则无需更新
-            if(storageData.blockId === this.getBlockData(x, y, z)?.blockId) return;
-            // Tip: 更新/覆盖数据
-            this.setBlockData(x, y, z, storageData);
-            data[x][y][z] = storageData;
-          }
-        }
-      }
     }
   }
 

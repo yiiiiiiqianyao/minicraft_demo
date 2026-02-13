@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import TWEEN from "@tweenjs/tween.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { createUI, swapMenuScreenGUI, ToolBar } from "./gui";
+import { swapMenuScreenGUI, ToolBar } from "./gui";
 import { Player } from "./player/Player";
 import { World } from "./world/World";
 import { SkyManager } from "./sky";
@@ -10,7 +10,6 @@ import { initOrbitCamera, updateOrbitControls } from "./dev/orbitCamera";
 import { ScreenViewer } from "./gui/viewer";
 import { Physics } from "./physics";
 import { Engine } from "./engine";
-import { SunSettings } from "./sky/literal";
 import { PhysicsParams } from "./physics/literal";
 import { PlayerInitPosition } from "./player/literal";
 import { GameTimeManager, hourDuration } from "./time";
@@ -69,19 +68,7 @@ export default class Game {
     this.world.onLoad = () => {
       this.onStart();
     }
-    // TODO 暂时关掉 具体的调试打开待优化
-    if(Math.random() < 0) {
-      createUI(
-        this.world,
-        this.player,
-        this.physics,
-        this.scene,
-        this.renderer,
-        SunSettings,
-        this.skyManager.sunHelper,
-        this.skyManager.shadowHelper
-      );
-    }
+
     // 开始绘制游戏循环
     this.draw();
   }
