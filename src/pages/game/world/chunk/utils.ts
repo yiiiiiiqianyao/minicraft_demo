@@ -7,6 +7,9 @@ import type { Block } from "../../Block/base/Block";
 import { BlockFactory, BlockID } from "../../Block";
 import { initCombineInstanceMesh } from "./combine";
 import { isBlockSupportsCombine } from "./combine/utils";
+import { PlayerParams } from "../../player/literal";
+import { WorldParams } from "../literal";
+import type { IChunkKey } from "../../player/interface";
 
 /**
  * 世界坐标转 chunk xz 坐标
@@ -21,7 +24,7 @@ export function worldToChunkCoords(
     y: number,
     z: number
   ): {
-    chunk: { x: number; z: number };
+    chunk: IChunkKey;
     block: { x: number; y: number; z: number };
   } {
     const { width } = ChunkParams;
@@ -41,8 +44,8 @@ export function playerToChunkCoords(
     z: number
   ): {
     isInChunkCenter: boolean;
-    chunk: { x: number; z: number };
-    nearFourChunks: { x: number; z: number }[];
+    chunkKey: IChunkKey;
+    nearFourChunks: IChunkKey[];
     block: { x: number; y: number; z: number };
   } {
     const { width, halfSize, centerRadius } = ChunkParams;
@@ -59,7 +62,7 @@ export function playerToChunkCoords(
 
     return {
       isInChunkCenter,
-      chunk: { x: cx, z: cz },
+      chunkKey: { x: cx, z: cz },
       nearFourChunks: [
         { x: cx,                    z: cz },
         { x: toX ? cx - 1 : cx + 1, z: cz },
@@ -70,6 +73,12 @@ export function playerToChunkCoords(
     };
 }
 
+/**
+ * @desc 世界坐标转 chunk xz 坐标
+ * @param x 
+ * @param z 
+ * @returns 
+*/
 export function worldToChunkCoordsXZ(x: number, z: number) {
   const { width } = ChunkParams;
   const chunkX = Math.floor(x / width);
@@ -147,3 +156,43 @@ export function inBounds(x: number, y: number, z: number): boolean {
 }
 
 export const getBlockClass = (blockId: BlockID) => BlockFactory.getBlock(blockId);
+
+/** 865
+ * @desc 获取当前玩家可见的 chunk 列表
+ * Returns an array containing the coordinates of the chunks
+ * that are currently visible to the player, starting from the center
+ */
+export function getVisibleChunks() {
+  if (!PlayerParams.currentChunk) return [];
+  if (!WorldParams.updateVisibleChunks) return WorldParams.visibleChunks;
+  
+  const { x: chunkX, z: chunkZ } = PlayerParams.currentChunk;
+  const visibleChunks: IChunkKey[] = [];  
+  for (const dx of WorldParams.range) {
+    for (const dz of WorldParams.range) {
+      // Tip: 去除 chunk 的边角 让接近圆形渲染
+      const dist = Math.sqrt(dx ** 2 + dz ** 2);
+      if (dist <= WorldParams.renderDistance) {
+        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });
+      }
+    }
+  }
+
+  // 更新当前可见的 chunk 总数
+  WorldParams.totalChunks = visibleChunks.length;
+
+  // sort chunks by distance from player
+  visibleChunks.sort((a, b) => {
+    const distA = Math.sqrt(
+      (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2
+    );
+    const distB = Math.sqrt(
+      (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2
+    );
+    return distA - distB;
+  });
+
+  // 更新当前可见的 chunk 列表
+  WorldParams.visibleChunks = visibleChunks;
+  return visibleChunks;
+}

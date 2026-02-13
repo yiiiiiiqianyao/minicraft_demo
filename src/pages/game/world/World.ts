@@ -10,12 +10,13 @@ import { updateProgressGUI } from "../gui";
 import { RNG } from "../seed/RNG";
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise.js";
 import { ChunkParams } from "./chunk/literal";
-import { worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
+import { getVisibleChunks, worldToChunkCoords, worldToChunkCoordsXZ } from "./chunk/utils";
 import { getFloorXYZ } from "../engine/utils";
 import { RenderGeometry } from "../Block/base/Block";
 import { Selector } from "../player/selector";
 import { BreakBlockHelper } from "../helper/breakBlockHelper";
 import { AudioManager } from "../audio/AudioManager";
+import type { IChunkKey } from "../player/interface";
 
 export class World extends THREE.Group {
   static rng: RNG;
@@ -26,7 +27,7 @@ export class World extends THREE.Group {
   renderDistance = 8;
   // renderDistance = 1;
   asyncLoading = true;
-  chunkQueue: { x: number; z: number }[];
+  chunkQueue: IChunkKey[];
   // minChunkLoadTimeout = 200;
   // lastChunkLoadTime = 0;
   onLoad?: () => void
@@ -70,9 +71,17 @@ export class World extends THREE.Group {
    * Updates the visible portions of the world based on the current player position
    */
   update() {
-    const visibleChunks = this.getVisibleChunks();
-    const chunksToAdd = this.getChunksToAdd(visibleChunks);
-    this.removeUnusedChunks(visibleChunks);
+    // 在初始加载未完成前更新加载进度条
+    if (!this.initialLoadComplete) {
+      this.updateInitialLoad();
+    }
+    
+    const visibleChunks = getVisibleChunks();
+    // TODO 后续优化 需要一个存储 chunk 的列表
+    const currentChunkObjects = this.children;
+    const chunksToAdd = this.getChunksToAdd(visibleChunks, currentChunkObjects);
+    this.removeUnusedChunks(visibleChunks, currentChunkObjects);
+    WorldParams.updateVisibleChunks = false;
 
     // 有需要添加的 chunk 时，加入 chunk queue
     if (chunksToAdd.length > 0) {
@@ -99,12 +108,8 @@ export class World extends THREE.Group {
         // console.log("Generating chunk", chunk.x, chunk.z);
         this.generateChunk(chunk.x, chunk.z);
         // this.lastChunkLoadTime = performance.now();
+        // 
       }
-    }
-
-    // 在初始加载未完成前更新加载进度条
-    if (!this.initialLoadComplete) {
-      this.updateInitialLoad();
     }
   }
 
@@ -139,45 +144,15 @@ export class World extends THREE.Group {
   }
 
   /**
-   * Returns an array containing the coordinates of the chunks
-   * that are currently visible to the player, starting from the center
-   */
-  getVisibleChunks(): { x: number; z: number }[] {
-    // get coordinates of the chunk the player is currently on
-    // const [chunkX, chunkZ] = worldToChunkCoordsXZ(player.position.x, player.position.z);
-    if (!PlayerParams.currentChunk) return [];
-    // console.log('chunkX, chunkZ', chunkX, chunkZ);
-    const { x: chunkX, z: chunkZ } = PlayerParams.currentChunk;
-    const visibleChunks: { x: number; z: number }[] = [];
-    for (const dx of WorldParams.range) {
-      for (const dz of WorldParams.range) {
-        visibleChunks.push({ x: chunkX + dx, z: chunkZ + dz });
-      }
-    }
-
-    // sort chunks by distance from player
-    visibleChunks.sort((a, b) => {
-      const distA = Math.sqrt(
-        (a.x - chunkX) ** 2 + (a.z - chunkZ) ** 2
-      );
-      const distB = Math.sqrt(
-        (b.x - chunkX) ** 2 + (b.z - chunkZ) ** 2
-      );
-      return distA - distB;
-    });
-
-    return visibleChunks;
-  }
-
-  /**
    * Returns an array containing the coordinates of the chunks that
    * are not yet loaded and need to be added to the scene
    */
   getChunksToAdd(
-    visibleChunks: { x: number; z: number }[]
-  ): { x: number; z: number }[] {
+    visibleChunks: IChunkKey[],
+    currentChunkObjects: THREE.Object3D[],
+  ): IChunkKey[] {
     return visibleChunks.filter((chunk) => {
-      const chunkExists = this.children
+      const chunkExists = currentChunkObjects
         .map((obj) => obj.userData)
         .find(({ x, z }) => {
           return chunk.x === x && chunk.z == z;
@@ -190,8 +165,9 @@ export class World extends THREE.Group {
   /**
    * Removes current loaded chunks that are no longer visible
    */
-  removeUnusedChunks(visibleChunks: { x: number; z: number }[]) {
-    const chunksToRemove = this.children.filter((obj) => {
+  removeUnusedChunks(visibleChunks: IChunkKey[], currentChunkObjects: THREE.Object3D[]) {
+    if (!WorldParams.updateVisibleChunks) return;
+    const chunksToRemove = currentChunkObjects.filter((obj) => {
       const { x, z } = obj.userData;
       const chunkExists = visibleChunks.find((visibleChunk) => {
         return visibleChunk.x === x && visibleChunk.z === z;

@@ -103,6 +103,8 @@ export default class Game {
 
     // 更新世界 chunk
     this.world.update();
+
+    // 更新 TWEEN 动画
     TWEEN.update();
 
     // update triangle count

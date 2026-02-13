@@ -138,11 +138,11 @@ export class Player extends PlayerGroup {
    */
   updateByPosition() {
     const { x, y, z } = this.position;
-    const { isInChunkCenter, chunk, nearFourChunks } = playerToChunkCoords(x, y, z);
+    const { isInChunkCenter, chunkKey, nearFourChunks } = playerToChunkCoords(x, y, z);
     PlayerParams.position.copy(this.position);
     
     // 更新角色所处的 currentChunk
-    updatePlayerNear(chunk, nearFourChunks, this.world, isInChunkCenter);  
+    updatePlayerNear(chunkKey, nearFourChunks, this.world, isInChunkCenter);  
 
     PlayerParams.upperNeathBlock = getBlockUpperNeath(this, this.world);
 

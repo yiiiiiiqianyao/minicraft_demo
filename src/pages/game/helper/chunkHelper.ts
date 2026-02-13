@@ -4,6 +4,7 @@ import { PlayerParams } from "../player/literal";
 import { World } from "../world/World";
 import type { IChunkKey } from "../player/interface";
 import { DevControl, updateChunkCoordGUI } from "../dev";
+import { WorldParams } from "../world/literal";
 
 function initChunkHelper() {
     const chunkHelper = new THREE.Mesh(
@@ -38,10 +39,13 @@ function inActiveChunkHelper(helper: THREE.Mesh) {
 let lastNearFourChunks: IChunkKey[] = [];
 function updatePlayerNear(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: World, isInChunkCenter: boolean) {
     updateChunkCoordGUI(chunk.x, chunk.z);
+    // 玩家所处的 chunk 未发生变化 则不更新后续计算
+    if (PlayerParams.currentChunk && (PlayerParams.currentChunk.x === chunk.x && PlayerParams.currentChunk.z === chunk.z)) return;
     PlayerParams.currentChunk = chunk;
     PlayerParams.nearFourChunks = nearFourChunks;
     PlayerParams.isInChunkCenter = isInChunkCenter;
     PlayerParams.activeChunks = isInChunkCenter ? [chunk] : nearFourChunks;
+    WorldParams.updateVisibleChunks = true;
 
     const { chunkHelperVisible } = DevControl;
     chunkHelperVisible && PlayerParams.activeChunks.forEach((nearChunk) => {
