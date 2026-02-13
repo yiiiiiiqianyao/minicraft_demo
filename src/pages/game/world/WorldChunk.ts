@@ -41,14 +41,11 @@ export class WorldChunk extends THREE.Group {
     // 初始化 chunk 数据
     const { x, z } = this.position;
     const data: IInstanceData[][][] = await generateChunk(x, z, this.dataStore);
-    // this.data = data;
     // console.log(`Loaded chunk in ${performance.now() - start}ms`);
     // 空闲时间的 callback
     requestIdleCallback(() => {
-        // 设置初始化的 chunk 数据
+        // 设置初始化的 chunk 数据（不包含 mesh 内容）
         this.initializeTerrain(data);
-        // 从 data store 中加载玩家变更
-        // this.loadGameChanges(data);
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
         this.loaded = true;
@@ -78,6 +75,7 @@ export class WorldChunk extends THREE.Group {
         for (let z = 0; z < width; z++) {
           row.push({
             blockId: data[x][y][z].blockId,
+            // Tip: mesh 会重新生成 所以 instanceIds 会为空
             instanceIds: [],
             blockData: data[x][y][z].blockData,
           });
@@ -91,8 +89,7 @@ export class WorldChunk extends THREE.Group {
   /**@desc 生成 chunk 中的 block 对应的 mesh */
   private generateMeshes(data: IInstanceData[][][]) {
     const { width, height } = ChunkParams;
-    this.clear();
-
+    // this.clear();
     // 根据类型为每个 block 类型创建 Mesh
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {

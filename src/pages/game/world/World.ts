@@ -68,6 +68,7 @@ export class World extends THREE.Group {
   }
 
   /**
+   * @desc 世界场景 更新计算
    * Updates the visible portions of the world based on the current player position
    */
   update() {
