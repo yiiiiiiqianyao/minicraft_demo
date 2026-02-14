@@ -23,7 +23,7 @@ export * from './drop';
 export function getInstancedGeometry (blockGeometry: RenderGeometry): THREE.BufferGeometry {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;
-    } else if (blockGeometry === RenderGeometry.Cross || blockGeometry === RenderGeometry.Flower) {
+    } else if (blockGeometry === RenderGeometry.Cross) {
         return CrossPlantGeometry;
     } else if (blockGeometry === RenderGeometry.Tree) {
         return TreeGeometry;

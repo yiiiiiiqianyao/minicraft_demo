@@ -147,7 +147,8 @@ export class Selector {
     static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
         selectionHelper.position.copy(PlayerParams.selectedCoords);
-        if(intersection.object.userData.renderGeometry === RenderGeometry.Flower) {
+        const selectedBlockId = intersection.object.userData.blockId;
+        if(selectedBlockId === BlockID.FlowerDandelion || selectedBlockId === BlockID.FlowerRose) {
             selectionHelper.scale.set(0.3, 0.6, 0.3);
             selectionHelper.position.y -= 0.2;
         } else {

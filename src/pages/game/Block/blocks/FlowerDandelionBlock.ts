@@ -9,7 +9,7 @@ export class FlowerDandelionBlock extends Block {
   id = BlockID.FlowerDandelion;
   material = CrossPlantMaterial;
   uiTexture = ItemImage.flowerDandelion;
-  geometry = RenderGeometry.Flower;
+  geometry = RenderGeometry.Cross;
   transparent = true;
   canPassThrough = true;
   canDrop = true;

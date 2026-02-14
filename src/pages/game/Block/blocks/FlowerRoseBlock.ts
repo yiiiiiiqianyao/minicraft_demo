@@ -10,7 +10,7 @@ export class FlowerRoseBlock extends Block {
   id = BlockID.FlowerRose;
   material = CrossPlantMaterial;
   uiTexture = ItemImage.flowerRose;
-  geometry = RenderGeometry.Flower;
+  geometry = RenderGeometry.Cross;
   transparent = true;
   canPassThrough = true;
   canDrop = true;
