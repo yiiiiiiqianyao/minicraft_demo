@@ -8,6 +8,8 @@ import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
 import IronOre from '../../../assets/textures/blocks/iron_ore.png';
 import BedRock from '../../../assets/textures/blocks/bedrock.png';
 
+/**@desc 十字植物贴图 */
+import CrossPlants from '../../../assets/textures/plants/cross_plants.png';
 import TallGrass from '../../../assets/textures/plants/tall_grass.png';
 import FlowerRose from '../../../assets/textures/flowers/flower_rose.png';
 import FlowerDandelion from '../../../assets/textures/flowers/flower_dandelion.png';
@@ -17,7 +19,6 @@ import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
 
 /**@desc trees block*/
 import Tree from '../../../assets/textures/blocks/tree.png';
-import Oka from '../../../assets/textures/blocks/oka.png';
 import Leaves from '../../../assets/textures/blocks/leaves.png';
 
 /**@desc 工作台方块 正面纹理 */
@@ -42,13 +43,15 @@ export const textures = {
   tallGrass: loadTexture(TallGrass),
   flowerRose: loadTexture(FlowerRose),
   flowerDandelion: loadTexture(FlowerDandelion),
+  /**@desc 十字植物贴图 */
+  crossPlants: loadTexture(CrossPlants),
+
   redstoneLamp: loadTexture(RedStoneLamp),
   stoneBrick: loadTexture(StoneBrick),
   craftingTableFront: loadTexture(CraftingTableFront),
   CraftingTableSide: loadTexture(CraftingTableSide),
   craftingTableTop: loadTexture(CraftingTableTop),
   // trees
-  oka: loadTexture(Oka),
   tree: loadTexture(Tree),
   leaves: loadTexture(Leaves),
   // 裂开的方块

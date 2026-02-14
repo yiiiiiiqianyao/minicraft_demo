@@ -65,5 +65,3 @@ export {
   TreeMaterial,
   LeavesMaterial,
 }
-
-export * from './combine';

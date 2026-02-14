@@ -1,14 +1,13 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { LeavesMaterial, combineLeaveMaterial } from "../../engine/material";
+import { LeavesMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
-import { DevControl } from "../../dev";
 import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 树叶方块 */
 export class LeavesBlock extends Block {
   id = BlockID.Leaves;
-  material = DevControl.instanceMerge ? combineLeaveMaterial : LeavesMaterial;
+  material = LeavesMaterial;
   uiTexture = ItemImage.leaves;
   geometry = RenderGeometry.Cube;
   transparent = true;

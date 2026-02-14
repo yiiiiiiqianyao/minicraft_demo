@@ -46,7 +46,8 @@ export const generateTrees = (
       
       const baseNoise = World.simplex.noise(worldX, worldZ);
       const treeNoise = baseNoise * 0.5 + 0.5; // [0, 1]
-      if (treeNoise < 1 - trees.frequency) {
+      const hasTree = treeNoise >= 1 - trees.frequency;
+      if (!hasTree) {
         continue;
       }
       // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
@@ -58,11 +59,22 @@ export const generateTrees = (
         if (input[baseX][y][baseZ].blockId !== BlockID.Grass) {
           continue;
         }
+        
+        // Found grass, move one time up
+        const baseY = y + 1;
+        // 普通的树木生长需要一定的空间，所以需要判断周围是否被其他方块占据
+        if (input[baseX + 1][baseY][baseZ].blockId !== BlockID.Air || 
+          input[baseX - 1][baseY][baseZ].blockId !== BlockID.Air || 
+          input[baseX][baseY][baseZ + 1].blockId !== BlockID.Air || 
+          input[baseX][baseY][baseZ - 1].blockId !== BlockID.Air
+        ) {
+          continue;
+        }
+        
         // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
         input[baseX][y][baseZ] = getEmptyDirtBlockData();
 
-        // Found grass, move one time up
-        const baseY = y + 1;
+        
 
         const minH = trees.trunkHeight.min;
         const maxH = trees.trunkHeight.max;
