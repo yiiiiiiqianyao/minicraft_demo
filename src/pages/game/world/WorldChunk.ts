@@ -62,6 +62,19 @@ export class WorldChunk extends THREE.Group {
     }
   }
 
+  // /**@desc 设置 chunk 中的 block 是否渲染阴影 */
+  // setShadowRender(enable: boolean) {
+  //   Object.values(this.meshes).forEach(mesh => {
+  //     if (!enable) {
+  //       mesh.castShadow = false;
+  //       mesh.receiveShadow = false;
+  //     } else {
+  //       mesh.castShadow = mesh.userData.castShadow;
+  //       mesh.receiveShadow = true;
+  //     }
+  //   })
+  // }
+
   /**
    * @desc Initializes the terrain data 为每个 chunk 存储一个单独的数据集
    */
