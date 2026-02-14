@@ -16,6 +16,8 @@ export class FlowerDandelionBlock extends Block {
   breakCount = 1;
   dropBlockId = BlockID.FlowerDandelion;
   dropLimit = DropLimit + 0.25;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyFlowerDandelionBlockData = () => {

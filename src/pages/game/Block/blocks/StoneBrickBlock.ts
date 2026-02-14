@@ -17,6 +17,8 @@ export class StoneBrickBlock extends Block {
   /**@desc 石头砖方块被破坏后掉落的石头砖方块 */
   dropBlockId = BlockID.StoneBrick;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyStoneBrickBlockData = () => {

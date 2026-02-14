@@ -62,6 +62,10 @@ export class WorldChunk extends THREE.Group {
     }
   }
 
+  getInteractiveMeshes() {
+    return Object.values(this.meshes).filter(mesh => Boolean(mesh.userData.interactive));
+  }
+
   // /**@desc 设置 chunk 中的 block 是否渲染阴影 */
   // setShadowRender(enable: boolean) {
   //   Object.values(this.meshes).forEach(mesh => {
@@ -130,15 +134,16 @@ export class WorldChunk extends THREE.Group {
 
   private initInstanceMesh(blockId: BlockID) {
     if (this.meshes[blockId]) return this.meshes[blockId];
-    const blockEntity = BlockFactory.getBlock(blockId);
-    const mesh = initChunkMesh(blockEntity, this.helperColor as THREE.Color);
-    mesh.name = blockEntity.constructor.name;
+    const blockClass = BlockFactory.getBlock(blockId);
+    const mesh = initChunkMesh(blockClass, this.helperColor as THREE.Color);
+    mesh.name = blockClass.constructor.name;
     mesh.count = 0;
-    mesh.castShadow = !blockEntity.canPassThrough;
+    mesh.castShadow = !blockClass.canPassThrough;
     mesh.receiveShadow = true;
     mesh.matrixAutoUpdate = false;
     mesh.userData.blockId = blockId;
-    mesh.userData.castShadow = !blockEntity.canPassThrough;
+    mesh.userData.castShadow = !blockClass.canPassThrough;
+    mesh.userData.interactive = blockClass.interactive;
     this.add(mesh);
     this.meshes[blockId] = mesh;
     return mesh;

@@ -17,6 +17,8 @@ export class FlowerRoseBlock extends Block {
   breakCount = 1;
   dropBlockId = BlockID.FlowerRose;
   dropLimit = DropLimit + 0.25;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyFlowerRoseBlockData = () => {

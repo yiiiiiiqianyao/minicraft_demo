@@ -20,6 +20,8 @@ export const CoalOreBlock = class extends OreBlock {
   breakCount = 10;
   dropBlockId = BlockID.CoalOre;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 };
 
 export const getEmptyCoalOreBlockData = () => {

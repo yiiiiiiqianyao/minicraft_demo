@@ -16,6 +16,8 @@ export class DirtBlock extends Block {
   breakCount = 5;
   dropBlockId = BlockID.Dirt;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyDirtBlockData = () => {

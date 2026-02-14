@@ -40,7 +40,8 @@ export class PlayerPhysics {
         // player 发生位移的时候触发更新
         const { x, y, z } = this.player.position;
         const positionUpdate = x !== o_x || y !== o_y || z !== o_z;
-        if (positionUpdate) {
+        // Tip: 玩家位置更新 或者 玩家所处的 chunk 未设置初始值的时候 需要刷新
+        if (positionUpdate || PlayerParams.activeChunks.length === 0) {
             this.cachePosition.copy(player.position);
             this.player.updatePosition();
         }

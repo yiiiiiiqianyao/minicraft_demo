@@ -17,6 +17,8 @@ export class OakLogBlock extends Block {
   /**@desc 橡木原木块被破坏后掉落的原木方块 */
   dropBlockId = BlockID.OakLog;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyOkaBlockData = () => {

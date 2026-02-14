@@ -17,6 +17,8 @@ export class CraftBlock extends Block {
   /**@desc 工作台方块被破坏后掉落的工作台方块 */
   dropBlockId = BlockID.CraftingTable;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyCraftBlockData = () => {

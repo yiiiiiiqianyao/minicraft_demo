@@ -17,6 +17,8 @@ export class TallGrassBlock extends Block {
   breakCount = 1;
   dropBlockId = undefined;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyTallGrassBlockData = () => {

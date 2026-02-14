@@ -31,6 +31,8 @@ export class RedstoneLampBlock extends LightSourceBlock {
   /**@desc 红石灯方块被破坏后掉落的红石灯方块 */
   dropBlockId = BlockID.RedstoneLamp;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyRedstoneLampBlockData = () => {

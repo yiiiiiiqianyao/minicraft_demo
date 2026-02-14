@@ -54,8 +54,13 @@ export class Selector {
         
         // 过滤 player 所在的 chunk or 相邻 4 个 chunk
         const chunks = getNearChunks(world);
+        const interactiveObjects: THREE.Object3D[] = [];
+        chunks.map(chunk => {
+            const meshes = chunk.getInteractiveMeshes();
+            interactiveObjects.push(...meshes);
+        });
         // TODO 实际的拾取对象 可以使用 layer 进行过滤优化
-        const intersection = rayCaster.intersectObjects(chunks, true)[0];
+        const intersection = rayCaster.intersectObjects(interactiveObjects, false)[0];
         if (intersection) {
             // Selector.selectedBlockUuid = intersection.object.uuid;
             Selector.selectedMesh = intersection.object;

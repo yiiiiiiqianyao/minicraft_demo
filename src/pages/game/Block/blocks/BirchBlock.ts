@@ -16,6 +16,8 @@ export class BirchBlock extends Block {
   breakCount = 10;
   dropBlockId = BlockID.BirchLog;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyBirchBlockData = () => {

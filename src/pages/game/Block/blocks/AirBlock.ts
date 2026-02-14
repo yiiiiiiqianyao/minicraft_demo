@@ -12,6 +12,8 @@ export class AirBlock extends Block {
   breakCount = -1;
   dropBlockId = undefined;
   dropLimit = undefined;
+  /**@desc 当前方块是否可交互 */
+  interactive = false;
 }
 
 export const getEmptyAirBlockData = () => {

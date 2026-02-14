@@ -18,6 +18,8 @@ export class StoneBlock extends Block {
   /**@desc 石头方块被破坏后掉落的石头方块 */
   dropBlockId = BlockID.Stone;
   dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
 }
 
 export const getEmptyStoneBlockData = () => {
