@@ -62,5 +62,6 @@ export function initTreeGeometry(size = 1, blockId = BlockID.OakLog) {
     setFaceUVs(faces.ny, topU_min, topU_max);
     
     uvAttribute.needsUpdate = true;
+    nonIndexedGeom.name = 'tree';
     return nonIndexedGeom;
 }

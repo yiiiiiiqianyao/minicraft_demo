@@ -8,8 +8,7 @@ import { DropLimit } from "../../world/drop/literal";
 export class GrassBlock extends Block {
   id = BlockID.Grass;
   material = GrassBlockMaterial;
-  uiTexture = ItemImage.grass;
-  // geometry = RenderGeometry.Cube;
+  uiTexture = ItemImage.grassBlock;
   geometry = RenderGeometry.GrassBlock;
   transparent = false;
   canPassThrough = false;

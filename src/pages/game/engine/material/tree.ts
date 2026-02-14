@@ -51,7 +51,7 @@ TreeMaterial.onBeforeCompile = (shader) => {
       #include <shadowmap_vertex>
       #include <fog_vertex>
     }
-  `
+  `;
   return shader;
 };
 

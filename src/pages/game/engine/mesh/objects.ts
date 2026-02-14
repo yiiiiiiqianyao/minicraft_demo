@@ -4,7 +4,7 @@ import { CraftingTableMaterial } from "../material";
 import { RenderGeometry } from "../../Block/base/Block";
 
 /** @desc 创建工作台的手持 Mesh */
-export function initCreatingTableMesh() {
+export function initCreatingTableHandMesh() {
     const geometry = getInstancedGeometry(RenderGeometry.Cube)
     const mesh = new THREE.Mesh(geometry, CraftingTableMaterial);
     mesh.scale.set(0.4, 0.4, 0.4);

@@ -45,7 +45,6 @@ export function initLeavesBlockMesh() {
 
 /**@desc 橡木原木 */
 export function initOakLogHandMesh() {
-    // const geometry = getInstancedGeometry(RenderGeometry.Tree);
     const geometry = initTreeGeometry(1, BlockID.OakLog);
     const mesh = new THREE.Mesh(geometry, TreeMaterial);
     return setUp(mesh);

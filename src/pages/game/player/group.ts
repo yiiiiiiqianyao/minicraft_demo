@@ -79,37 +79,37 @@ export class PlayerGroup {
         this.currentHandBlockID = blockID;
         this.handPoint.clear();
         if (!blockID) {
-            this.handPoint.add(MeshPool.getMesh(MeshType.Hand) as THREE.Mesh);
+            this.handPoint.add(MeshPool.getHandMesh(MeshType.Hand) as THREE.Mesh);
         } else {
             // TODO 待补全
             switch (blockID) {
                 case BlockID.Grass:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.GrassBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.GrassBlock) as THREE.Mesh);
                 case BlockID.Dirt:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.DirtBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.DirtBlock) as THREE.Mesh);
                 case BlockID.Stone:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.StoneBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.StoneBlock) as THREE.Mesh);
                 case BlockID.CoalOre:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.CoalOreBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.CoalOreBlock) as THREE.Mesh);
                 case BlockID.IronOre:
                 case BlockID.Bedrock:
                     // TODO 待补全 其他矿物
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.StoneBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.StoneBlock) as THREE.Mesh);
                 case BlockID.OakLog:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.OakLogBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.OakLogBlock) as THREE.Mesh);
                 case BlockID.BirchLog:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.BirchLogBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.BirchLogBlock) as THREE.Mesh);
                 case BlockID.Leaves:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.LeavesBlock) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.LeavesBlock) as THREE.Mesh);
                 case BlockID.TallGrass:
                 case BlockID.FlowerRose:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerRose) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.FlowerRose) as THREE.Mesh);
                 case BlockID.FlowerDandelion:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.FlowerDandelion) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.FlowerDandelion) as THREE.Mesh);
                 case BlockID.RedstoneLamp:
                 case BlockID.StoneBrick:
                 case BlockID.CraftingTable:
-                    return this.handPoint.add(MeshPool.getMesh(MeshType.CraftingTable) as THREE.Mesh);
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.CraftingTable) as THREE.Mesh);
             }
         }
     }

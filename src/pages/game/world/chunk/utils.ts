@@ -5,11 +5,19 @@ import { DevControl } from "../../dev";
 import { wireframeMaterial } from "../../engine/material";
 import type { Block } from "../../Block/base/Block";
 import { BlockFactory, BlockID } from "../../Block";
-import { initCombineInstanceMesh } from "./combine";
-import { isBlockSupportsCombine } from "./combine/utils";
 import { PlayerParams } from "../../player/literal";
 import { WorldParams } from "../literal";
 import type { IChunkKey } from "../../player/interface";
+
+export function isBlockSupportsCombine(blockId: BlockID) {
+    // TODO 待优化 除了 Leaves 和 OakLog 之外方块也支持合并
+    // 暂时只支持了BirchLog 和 OakLog
+    return blockId === BlockID.BirchLog || 
+    blockId === BlockID.OakLog ||
+    blockId === BlockID.FlowerDandelion ||
+    blockId === BlockID.FlowerRose ||
+    blockId === BlockID.TallGrass;
+}
 
 /**
  * 世界坐标转 chunk xz 坐标
@@ -105,6 +113,7 @@ function roundToHalf(num: number) {
   return Math.round(num * 2) / 2;
 }
 
+/**@desc 初始化 chunk 中的 instance mesh */
 export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
   const { maxCount } = ChunkParams;
   const { chunkHelperVisible, chunkWireframeMode } = DevControl;
@@ -117,8 +126,9 @@ export function initChunkMesh(blockEntity: Block, helperColor: THREE.Color) {
   } else {
     // TODO 待优化 合并其他的 block
     if (isBlockSupportsCombine(blockEntity.id)) {
-      const instanceMesh = initCombineInstanceMesh(blockEntity);
-      return instanceMesh;
+      const material = blockEntity.material;
+      const geometry = getInstancedGeometry(blockEntity.geometry)?.clone() as THREE.BoxGeometry;
+      return new THREE.InstancedMesh(geometry, material,maxCount);
     } else {
        const material = chunkWireframeMode ? wireframeMaterial : blockEntity.material;
       return new THREE.InstancedMesh(getInstancedGeometry(blockGeometry),

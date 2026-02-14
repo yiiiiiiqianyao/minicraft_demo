@@ -42,6 +42,24 @@ export class DropGroup extends THREE.Group {
         } else if (blockId === BlockID.BirchLog) {
             // 白桦木方块的掉落物 attribute 设置 uv 纹理偏移 0.5
             dropGeometry.attributes.aTreeOffset.array.fill(0.5);
+        } else if (blockId === BlockID.FlowerDandelion) {
+            // 蒲公英方块的掉落物 attribute 设置 uv 纹理偏移
+            for(let i = 0; i < dropGeometry.attributes.aCrossOffset.array.length; i+= 2) {
+                dropGeometry.attributes.aCrossOffset.array.fill(0.2, i, i + 1);
+                dropGeometry.attributes.aCrossOffset.array.fill(0.8, i + 1, i + 2);
+            }
+        } else if (blockId === BlockID.FlowerRose) {
+            // 玫瑰方块的掉落物 attribute 设置 uv 纹理偏移
+            for(let i = 0; i < dropGeometry.attributes.aCrossOffset.array.length; i+= 2) {
+                dropGeometry.attributes.aCrossOffset.array.fill(0.0, i, i + 1);
+                dropGeometry.attributes.aCrossOffset.array.fill(0.8, i + 1, i + 2);
+            }
+        } else if (blockId === BlockID.TallGrass) {
+            // 草方块的掉落物 attribute 设置 uv 纹理偏移
+             for(let i = 0; i < dropGeometry.attributes.aCrossOffset.array.length; i+= 2) {
+                dropGeometry.attributes.aCrossOffset.array.fill(0.0, i, i + 1);
+                dropGeometry.attributes.aCrossOffset.array.fill(0.6, i + 1, i + 2);
+            }
         }
 
         const mesh = new THREE.InstancedMesh(dropGeometry, blockClass.material, MaxCount);

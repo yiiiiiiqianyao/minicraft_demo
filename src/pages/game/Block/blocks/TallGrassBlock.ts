@@ -1,6 +1,6 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { TallGrassMaterial } from "../../engine/material";
+import { CrossPlantMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
@@ -8,7 +8,7 @@ import { DropLimit } from "../../world/drop/literal";
 /**@desc 长草方块 */
 export class TallGrassBlock extends Block {
   id = BlockID.TallGrass;
-  material = TallGrassMaterial;
+  material = CrossPlantMaterial;
   uiTexture = ItemImage.tallGrass;
   geometry = RenderGeometry.Cross;
   transparent = true;

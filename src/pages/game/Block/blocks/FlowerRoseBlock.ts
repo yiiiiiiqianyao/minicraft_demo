@@ -1,6 +1,6 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { FlowerRoseMaterial } from "../../engine/material";
+import { CrossPlantMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
@@ -8,7 +8,7 @@ import { DropLimit } from "../../world/drop/literal";
 /**@desc 玫瑰花 */
 export class FlowerRoseBlock extends Block {
   id = BlockID.FlowerRose;
-  material = FlowerRoseMaterial;
+  material = CrossPlantMaterial;
   uiTexture = ItemImage.flowerRose;
   geometry = RenderGeometry.Flower;
   transparent = true;

@@ -19,7 +19,7 @@ import StoneBrickBlock from '../../../../assets/textures/items/stonebrick_block.
 import CraftTableBlock from '../../../../assets/textures/items/crafting_table_block.png';
 
 export const ItemImage = {
-  grass: GrassBlock,
+  grassBlock: GrassBlock,
   dirt: DirtBlock,
   stone: StoneBlock,
   coal: CoalOreBlock,

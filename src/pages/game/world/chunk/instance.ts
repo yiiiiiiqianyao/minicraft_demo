@@ -13,7 +13,7 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
         case RenderGeometry.Cross:
             return InstanceMeshAddCross(mesh, x, y, z);
         case RenderGeometry.Flower:
-            return InstanceMeshAddFlower(mesh, x, y, z);
+            return InstanceMeshAddFlower(mesh, blockClass.id, x, y, z);
         default:
             console.warn(`Unknown geometry ${blockClass.geometry}`);
             return null;
@@ -50,9 +50,17 @@ function InstanceMeshAddCube(mesh: THREE.InstancedMesh, x: number, y: number, z:
     return [instanceId];
 }
 
+
 function InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
     const instanceId1 = mesh.count++;
     const instanceId2 = mesh.count++;
+
+    mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;
+    mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.6;
+
+    mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0;
+    mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.6;
+    mesh.geometry.attributes.aCrossOffset.needsUpdate = true;
 
     const matrix1 = new THREE.Matrix4();
     matrix1.makeRotationY(Math.PI / 4);
@@ -69,9 +77,24 @@ function InstanceMeshAddCross(mesh: THREE.InstancedMesh, x: number, y: number, z
     return [instanceId1, instanceId2];
 }
 
-function InstanceMeshAddFlower(mesh: THREE.InstancedMesh, x: number, y: number, z: number) {
+function InstanceMeshAddFlower(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
     const instanceId1 = mesh.count++;
     const instanceId2 = mesh.count++;
+    if (blockId === BlockID.FlowerDandelion) {
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0.2;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.8;
+
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.2;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
+    } else if (blockId === BlockID.FlowerRose) {
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.8;
+
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
+    }
+    
+    mesh.geometry.attributes.aCrossOffset.needsUpdate = true;
 
     // 在添加花实例的时候需要有一点偏移
     const xOffset = jitterNumber(0.5, 0.15);

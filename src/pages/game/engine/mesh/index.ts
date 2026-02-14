@@ -1,13 +1,13 @@
 import * as THREE from "three";
 import { MeshType } from "./constant";
-import { initDandelionHandMesh, initRoseHandMesh } from "./flower";
-import { initCreatingTableMesh } from "./objects";
+import { initDandelionHandMesh, initRoseHandMesh } from "./flowerHand";
+import { initCreatingTableHandMesh } from "./objects";
 import { initBirchLogHandMesh, initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogHandMesh, initStoneBlockMesh } from "./handHoldBlock";
 
 /**@desc 网格池 */
 export class MeshPool {
     private static pool: Map<MeshType, THREE.Mesh> = new Map();
-    static getMesh(type: MeshType) {
+    static getHandMesh(type: MeshType) {
         if (MeshPool.pool.get(type)) {
             return MeshPool.pool.get(type)!;
         }
@@ -32,7 +32,7 @@ export class MeshPool {
         } else if (type === MeshType.BirchLogBlock) {
             mesh = initBirchLogHandMesh();
         } else if (type === MeshType.CraftingTable) {
-            mesh = initCreatingTableMesh();
+            mesh = initCreatingTableHandMesh();
         }
         MeshPool.pool.set(type, mesh);
         return mesh;

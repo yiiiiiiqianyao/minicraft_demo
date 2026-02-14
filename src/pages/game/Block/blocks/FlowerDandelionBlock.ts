@@ -1,13 +1,13 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { FlowerDandelionMaterial } from "../../engine/material";
+import { CrossPlantMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 蒲公英花 */
 export class FlowerDandelionBlock extends Block {
   id = BlockID.FlowerDandelion;
-  material = FlowerDandelionMaterial;
+  material = CrossPlantMaterial;
   uiTexture = ItemImage.flowerDandelion;
   geometry = RenderGeometry.Flower;
   transparent = true;
