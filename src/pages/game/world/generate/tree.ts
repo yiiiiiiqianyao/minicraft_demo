@@ -12,8 +12,8 @@ import { DevControl } from "../../dev";
 const trees = {
   frequency: 0.08,
   trunkHeight: {
-    min: 5,
-    max: 7,
+    min: 4,
+    max: 6,
   },
   canopy: {
     size: {
@@ -61,7 +61,10 @@ export const generateTrees = (
       // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
       const treeType = treeNoise < 0.99 ? BlockID.OakLog : BlockID.BirchLog;
 
-      /**@desc 找到地表高度 Find the grass tile*/
+      /**
+       * @desc 找到地表高度 Find the grass tile
+       * 从上到下开始查找
+      */
       for (let y = height - 1; y >= 0; y--) {
         // TODO 判断条件后续需要优化
         if (input[baseX][y][baseZ].blockId !== BlockID.GrassBlock) {
@@ -82,8 +85,6 @@ export const generateTrees = (
         // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
         input[baseX][y][baseZ] = getEmptyDirtBlockData();
 
-        
-
         const minH = trees.trunkHeight.min;
         const maxH = trees.trunkHeight.max;
         const trunkHeight = Math.round(World.rng.random() * (maxH - minH)) + minH;
@@ -92,6 +93,7 @@ export const generateTrees = (
         // Fill in blocks for the trunk
         for (let i = baseY; i < topY; i++) {
           input[baseX][i][baseZ] = treeType === BlockID.OakLog ? getEmptyOkaBlockData() : getEmptyBirchBlockData();
+          // input[baseX][i][baseZ] = getEmptyOkaBlockData();
         }
 
         // Generate the canopy 生产树冠
@@ -151,7 +153,8 @@ export const generateTrees = (
             // remove 4 corners randomly
             for (const x of [-2, 2]) {
               for (const z of [-2, 2]) {
-                if (World.rng.random() > 0.5) {
+                // 避免影响到别的 block
+                if (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.Leaves && World.rng.random() > 0.5) {
                   input[baseX + x][topY - i][baseZ + z] = {
                     blockId: BlockID.Air,
                     instanceIds: [],

@@ -72,7 +72,7 @@ export class Selector {
             if (intersection0.object.userData.uvRange && intersection0.uv) {
                 const { x: uvXRange, y: uvYRange } = intersection0.object.userData.uvRange;
                 const { x: uvX, y: uvY } = intersection0.uv;
-                // if (intersection0.object.userData.blockId === BlockID.FlowerDandelion) {
+                // if (intersection0.object.userData.blockId === BlockID.OakLog) {
                 //     console.log(intersection0.uv);
                 // };
                 if (uvX < uvXRange[0] || uvX > uvXRange[1] || uvY < uvYRange[0] || uvY > uvYRange[1]) {

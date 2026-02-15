@@ -30,7 +30,9 @@ function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: num
     mesh.userData.blockId = blockId;
     // 树的 uv 范围
     mesh.userData.uvRange = {
-        x: [0, 0.5],
+        // x: [0, 0.5],
+        // y: [0, 1],
+         x: [0, 1],
         y: [0, 1],
     }
 
