@@ -10,7 +10,7 @@ import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 import { DevControl } from "../../dev";
 
 const trees = {
-  frequency: 0.04,
+  frequency: 0.08,
   trunkHeight: {
     min: 5,
     max: 7,
@@ -23,6 +23,9 @@ const trees = {
   },
 }
 
+const { width, height } = ChunkParams;
+const { worldType } = DevControl;
+
 /**
  * Generates trees
  */
@@ -30,22 +33,27 @@ export const generateTrees = (
   input: IInstanceData[][][],
   chunkPos: THREE.Vector3
 ): IInstanceData[][][] => {
-  const { width, height } = ChunkParams;
-
-  const { worldType } = DevControl;
   if (worldType === 'flat' || worldType === 'terrain') return input;
   
-
   // 树冠大小
   const canopySize = trees.canopy.size.max;
-  // canopySize 暂时不在 chunk 的边界生成树
+  // canopySize => 暂时不在 chunk 的边界生成树
   for (let baseX = canopySize; baseX < width - canopySize; baseX++) {
     for (let baseZ = canopySize; baseZ < width - canopySize; baseZ++) {
       const worldX = chunkPos.x + baseX;
       const worldZ = chunkPos.z + baseZ;
       
+      // Tip: 森林噪声 简单控制森林的分布
+      const f1 = World.simplex.noise(worldX / 20, worldZ / 20);
+      const f2 = World.simplex.noise(worldX / 80, worldZ / 80);
+      const forestNoise = f1 * 0.2 + f2 * 0.8;
+      if (forestNoise < 0.4) {
+        continue;
+      }
+
       const baseNoise = World.simplex.noise(worldX, worldZ);
       const treeNoise = baseNoise * 0.5 + 0.5; // [0, 1]
+     
       const hasTree = treeNoise >= 1 - trees.frequency;
       if (!hasTree) {
         continue;
@@ -56,7 +64,7 @@ export const generateTrees = (
       /**@desc 找到地表高度 Find the grass tile*/
       for (let y = height - 1; y >= 0; y--) {
         // TODO 判断条件后续需要优化
-        if (input[baseX][y][baseZ].blockId !== BlockID.Grass) {
+        if (input[baseX][y][baseZ].blockId !== BlockID.GrassBlock) {
           continue;
         }
         

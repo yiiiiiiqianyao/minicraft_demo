@@ -3,30 +3,38 @@ import { DevControl } from "../../dev";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
 import { World } from "../World";
+import { SeaSurfaceHeight } from "./terrain";
+
+const flowers =  {
+  frequency: 0.0185,
+};
+const { width, height } = ChunkParams;
+const { worldType } = DevControl;
 
 /**
  * Generate random patches of flowers across the top surface
  */
 export const generateFlowers = (
   input: IInstanceData[][][]): IInstanceData[][][] => {
-  const { width, height } = ChunkParams;
-  const { worldType } = DevControl;
   if (worldType === 'flat' || worldType === 'terrain') return input;
-  const flowers =  {
-    frequency: 0.0075,
-  };
 
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // starting from the top of the chunk, find the first grass block
       // if come in contact with leaves, stop since flowers doesn't grow under trees
       for (let y = height - 1; y >= 0; y--) {
+        // 只在海平面以上和以下 10 个高度内长花
+        if (y < SeaSurfaceHeight || y > SeaSurfaceHeight + 10) {
+          continue;
+        }
+
+        // 如果接触到树叶，停止生长，因为花朵不能在树底下生长
         if (input[x][y][z].blockId === BlockID.Leaves) {
           break;
         }
 
         // 在草方块上长花
-        if (input[x][y][z].blockId === BlockID.Grass) {
+        if (input[x][y][z].blockId === BlockID.GrassBlock) {
           // found grass, move one time up
           const baseY = y + 1;
 

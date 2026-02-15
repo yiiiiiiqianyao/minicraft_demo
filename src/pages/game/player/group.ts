@@ -83,7 +83,7 @@ export class PlayerGroup {
         } else {
             // TODO 待补全
             switch (blockID) {
-                case BlockID.Grass:
+                case BlockID.GrassBlock:
                     return this.handPoint.add(MeshPool.getHandMesh(MeshType.GrassBlock) as THREE.Mesh);
                 case BlockID.Dirt:
                     return this.handPoint.add(MeshPool.getHandMesh(MeshType.DirtBlock) as THREE.Mesh);

@@ -6,7 +6,7 @@ import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 草地方块 */
 export class GrassBlock extends Block {
-  id = BlockID.Grass;
+  id = BlockID.GrassBlock;
   material = GrassBlockMaterial;
   uiTexture = ItemImage.grassBlock;
   geometry = RenderGeometry.GrassBlock;
@@ -23,7 +23,7 @@ export class GrassBlock extends Block {
 
 export const getEmptyGrassBlockData = () => {
   return {
-    blockId: BlockID.Grass,
+    blockId: BlockID.GrassBlock,
     instanceIds: [],
     blockData: {
       breakCount: 5,

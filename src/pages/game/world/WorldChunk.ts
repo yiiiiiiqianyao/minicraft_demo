@@ -36,6 +36,7 @@ export class WorldChunk extends THREE.Group {
     }
   }
 
+  /**@desc 生成 chunk: 数据 + mesh */
   async generate() {
     // const start = performance.now();
     // 初始化 chunk 数据
@@ -55,6 +56,7 @@ export class WorldChunk extends THREE.Group {
     );
   }
 
+  /**@desc 初始化 chunk 中的掉落物品组 */
   initDropGroup() {
     if (this.dropGroup === null) {
       this.dropGroup = new DropGroup(this.position, this);

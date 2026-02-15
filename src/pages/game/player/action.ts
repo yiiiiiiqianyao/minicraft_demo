@@ -168,7 +168,7 @@ function canIPlacementBlock(placementBlockId: BlockID, targetBlockId: BlockID) {
         placementBlockId === BlockID.FlowerDandelion
     ) {
         // TIP: 目前只能在草方块上放置玫瑰和蒲公英
-        if (targetBlockId !== BlockID.Grass) return false;
+        if (targetBlockId !== BlockID.GrassBlock) return false;
         // TIP: 目前只能在草方块的顶部放置玫瑰和蒲公英
         if (!Selector.isPlacementUpper) return false;
     }

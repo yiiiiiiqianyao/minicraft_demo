@@ -3,7 +3,6 @@ import { World } from "../world/World";
 import { PlayerParams, RayCenterScreen } from "./literal";
 import { getNearChunks } from "./utils";
 import { GameLayers } from "../engine";
-import { RenderGeometry } from "../Block/base/Block";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
 import { worldToCeilBlockCoord } from "../world/chunk/utils";
@@ -60,30 +59,42 @@ export class Selector {
             interactiveObjects.push(...meshes);
         });
         // TODO 实际的拾取对象 可以使用 layer 进行过滤优化
-        const intersection = rayCaster.intersectObjects(interactiveObjects, false)[0];
-        if (intersection) {
-            // Selector.selectedBlockUuid = intersection.object.uuid;
-            Selector.selectedMesh = intersection.object;
-            // Get the chunk associated with the seclected block
+        const intersectionObjects = rayCaster.intersectObjects(interactiveObjects, false);
+        const intersection0 = intersectionObjects[0];
+        const intersection1 = intersectionObjects[1];
+        if (intersection0) {
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
-            const chunk = intersection.object.parent;
-            if (intersection.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
-            
+            const chunk = intersection0.object.parent;
+            if (intersection0.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
+
+            let selectedIntersection = intersection0;
             // 根据 uv 优化拾取
-            if (intersection.object.userData.uvRange && intersection.uv) {
-                const { x: uvXRange, y: uvYRange } = intersection.object.userData.uvRange;
-                const { x: uvX, y: uvY } = intersection.uv;
-                if (uvX < uvXRange[0] || uvX > uvXRange[1] && uvY < uvYRange[0] && uvY > uvYRange[1]) {
+            if (intersection0.object.userData.uvRange && intersection0.uv) {
+                const { x: uvXRange, y: uvYRange } = intersection0.object.userData.uvRange;
+                const { x: uvX, y: uvY } = intersection0.uv;
+                // if (intersection0.object.userData.blockId === BlockID.FlowerDandelion) {
+                //     console.log(intersection0.uv);
+                // };
+                if (uvX < uvXRange[0] || uvX > uvXRange[1] || uvY < uvYRange[0] || uvY > uvYRange[1]) {
                     // 点击的 uv 坐标不在方块的有效 uv 范围内
-                    return Selector.unSelect(selectionHelper);
+                    if (intersection1) {
+                        Selector.unSelect(selectionHelper);
+                        selectedIntersection = intersection1;
+                    } else {
+                        return Selector.unSelect(selectionHelper);
+                    }
                 }
             }
+
+            // Selector.selectedBlockUuid = intersection.object.uuid;
+            Selector.selectedMesh = selectedIntersection.object;
+            // Get the chunk associated with the seclected block
             // Update the selected coordinates
-            Selector.updateSelectCoord(intersection, chunk);
+            Selector.updateSelectCoord(selectedIntersection, chunk);
             // Update the block placement coordinates
-            Selector.updateBlockPlacementCoords(intersection);
+            Selector.updateBlockPlacementCoords(selectedIntersection);
             // Update the selection helper
-            Selector.updateSelectionHelper(intersection, selectionHelper);
+            Selector.updateSelectionHelper(selectedIntersection, selectionHelper);
         } else {
             Selector.selectedMesh = null;
             Selector.unSelect(selectionHelper);

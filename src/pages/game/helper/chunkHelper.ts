@@ -40,11 +40,11 @@ let lastNearFourChunks: IChunkKey[] = [];
 function updatePlayerNear(chunk: IChunkKey, nearFourChunks: IChunkKey[], world: World, isInChunkCenter: boolean) {
     updateChunkCoordGUI(chunk.x, chunk.z);
     // 玩家所处的 chunk 未发生变化 则不更新后续计算
-    if (
-        PlayerParams.currentChunk && 
-        (PlayerParams.currentChunk.x === chunk.x && PlayerParams.currentChunk.z === chunk.z) &&
-        PlayerParams.activeChunks.length !== 0
-    ) return;
+    // if (
+    //     PlayerParams.currentChunk && 
+    //     (PlayerParams.currentChunk.x === chunk.x && PlayerParams.currentChunk.z === chunk.z) &&
+    //     PlayerParams.activeChunks.length !== 0
+    // ) return;
     PlayerParams.currentChunk = chunk;
     PlayerParams.nearFourChunks = nearFourChunks;
     PlayerParams.isInChunkCenter = isInChunkCenter;

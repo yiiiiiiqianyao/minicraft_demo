@@ -44,7 +44,7 @@ export class AudioManager {
 
   static playWalkSound(blockUnderneath: BlockID) {
     switch (blockUnderneath) {
-      case BlockID.Grass:
+      case BlockID.GrassBlock:
       case BlockID.Dirt:
       case BlockID.Leaves:
         this.play("step.grass");
@@ -63,7 +63,7 @@ export class AudioManager {
 
   static async playBlockSound(blockId: BlockID) {
     switch (blockId) {
-      case BlockID.Grass:
+      case BlockID.GrassBlock:
       case BlockID.Dirt:
       case BlockID.Leaves:
       case BlockID.TallGrass:

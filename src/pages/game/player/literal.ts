@@ -3,7 +3,7 @@ import type { IChunkKey, ICurrentChunk, INearFourChunks, ISelectedCoords } from 
 import { Player } from "./Player";
 import type { IInstanceData } from "../world/interface";
 
-export const PlayerInitPosition = new THREE.Vector3(32, 72, 32);
+export const PlayerInitPosition = new THREE.Vector3(10, 72, 10);
 export class PlayerParams {
     /**@desc 玩家实例 */
     static playerInstance: Player | null = null;

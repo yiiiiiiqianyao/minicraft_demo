@@ -5,6 +5,7 @@
   left: 50%;
   bottom: 48px;
   transform: translateX(-50%);
+  user-select: none;
 
   #toolbar-bg {
     position: relative;

@@ -22,7 +22,7 @@ import { CraftBlock } from "../objects/CraftingBlock";
 export class BlockFactory {
   private static blockTypes: { [id: number]: any } = {
     [BlockID.Air]: AirBlock,
-    [BlockID.Grass]: GrassBlock,
+    [BlockID.GrassBlock]: GrassBlock,
     [BlockID.Stone]: StoneBlock,
     [BlockID.Dirt]: DirtBlock,
     [BlockID.Bedrock]: BedrockBlock,

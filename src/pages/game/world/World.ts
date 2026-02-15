@@ -356,7 +356,7 @@ export class World extends THREE.Group {
 
     /** @desc 检查方块是否是实体方块 如 树方块、草泥土方块、石头方块等 */ 
     const isEntityGeometry = placementGeometry === RenderGeometry.Cube || placementGeometry === RenderGeometry.Tree || placementGeometry === RenderGeometry.GrassBlock;
-    if (selectedBlockId === BlockID.Grass && isEntityGeometry && Selector.blockPlacementNormal.y === 1) {
+    if (selectedBlockId === BlockID.GrassBlock && isEntityGeometry && Selector.blockPlacementNormal.y === 1) {
       this.updateBlockType(px, py - 1, pz, BlockID.Dirt);
     }
   }
@@ -365,7 +365,7 @@ export class World extends THREE.Group {
     let groundHeight =  ChunkParams.height;
     for (let y = ChunkParams.height; y > 0; y--) {
       // TODO 后续判断是否是地面的方式需要优化
-      if (this.getBlockData( x, y, z)?.blockId === BlockID.Grass) {
+      if (this.getBlockData( x, y, z)?.blockId === BlockID.GrassBlock) {
         groundHeight = y;
         break;
       }

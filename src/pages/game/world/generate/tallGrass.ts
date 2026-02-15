@@ -29,7 +29,7 @@ export const generateTallGrass = (
           break;
         }
 
-        if (input[x][y][z].blockId === BlockID.Grass) {
+        if (input[x][y][z].blockId === BlockID.GrassBlock) {
           // found grass, move one time up
           const baseY = y + 1;
 
@@ -62,7 +62,7 @@ export const generateTallGrass = (
                 currentZ >= 0 &&
                 currentZ < width &&
                 input[currentX][baseY][currentZ].blockId === BlockID.Air &&
-                input[currentX][y][currentZ].blockId === BlockID.Grass
+                input[currentX][y][currentZ].blockId === BlockID.GrassBlock
               ) {
                 input[currentX][baseY][currentZ] = {
                   blockId: BlockID.TallGrass,

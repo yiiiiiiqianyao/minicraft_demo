@@ -59,8 +59,8 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.2;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
         mesh.userData.uvRange = {
-            x: [0.3, 0.6],
-            y: [0, 0.5],
+            x: [0.3, 0.7],
+            y: [0, 0.6],
         }
     } else if (blockId === BlockID.FlowerRose) {
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;
@@ -69,8 +69,8 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
         mesh.userData.uvRange = {
-            x: [0.3, 0.6],
-            y: [0, 0.5],
+            x: [0.3, 0.7],
+            y: [0, 0.6],
         }
     } else if (blockId === BlockID.TallGrass) {
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;

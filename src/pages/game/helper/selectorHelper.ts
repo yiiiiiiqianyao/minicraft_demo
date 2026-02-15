@@ -36,8 +36,10 @@ function cuboid(width: number, height: number, depth: number) {
 }
 
 const selectionMaterial = new LineMaterial({
-  color: 0x000000,
-  opacity: 0.9,
+  // color: 0x000000,
+  transparent: true,
+  color: 0xffffff,
+  opacity: 0.5,
   linewidth: 1,
   resolution: new THREE.Vector2(ScreenViewer.width, ScreenViewer.height),
 });

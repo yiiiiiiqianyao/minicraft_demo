@@ -10,7 +10,6 @@ import { ToolBarFill, ToolBarFillActive, ToolBatContainsAvailable } from "./util
 export class ToolBar {
     // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个，待升级为 IToolBarItem
     static toolbar: IToolBarItem[] = [
-      // BlockID.Grass,
       // BlockID.Dirt,
       // BlockID.Stone,
       // BlockID.StoneBrick,
