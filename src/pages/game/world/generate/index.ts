@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { generateTerrain } from "./terrain";
-import { generateResources } from "./resource";
 import { generateTrees } from "./tree";
 import { generateTallGrass } from "./tallGrass";
 import { generateFlowers } from "./flower";
@@ -68,8 +67,6 @@ export const generateChunk = async (
     const chunkPos = new THREE.Vector3(x, 0, z);
     // full chunk block data fill with air
     let data = initEmptyChunk();
-    // 生产各种资源方块
-    data = generateResources(data, chunkPos);
     // 从上到下进行分层（在特定的层保留资源方块）
     data = generateTerrain( data, chunkPos);
     // TODO 下面的 生产树 高草 花朵等可以进行优化

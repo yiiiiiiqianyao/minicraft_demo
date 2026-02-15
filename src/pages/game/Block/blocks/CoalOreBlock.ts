@@ -1,7 +1,7 @@
 import { RenderGeometry } from "../base/Block";
 import { OreBlock } from "../base/OreBlock";
 import { BlockID } from "../constant";
-import { oreConfig } from "../../world/generate/resource";
+import { oreConfig } from "../../world/generate/constant";
 import { CoalOreMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";

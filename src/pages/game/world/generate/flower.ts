@@ -3,7 +3,7 @@ import { DevControl } from "../../dev";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
 import { World } from "../World";
-import { SeaSurfaceHeight } from "./terrain";
+import { SeaSurfaceHeight } from "./constant";
 
 const flowers =  {
   frequency: 0.0185,
