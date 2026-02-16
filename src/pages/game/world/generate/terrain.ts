@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { World } from "../World";
-import { BlockFactory, BlockID } from "../../Block";
+import { BlockID } from "../../Block";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
 import { DevControl } from "../../dev";
@@ -10,7 +10,8 @@ import { getEmptyGrassBlockData } from "../../Block/blocks/GrassBlock";
 import { getEmptyBedrockBlockData } from "../../Block/blocks/BedrockBlock";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
 import { smoothstep } from "./utils";
-import { BedrockSurface, FlatTerrain, NormalTerrain, oreConfig, DirtSurface, terrainSafeOffset } from "./constant";
+import { BedrockSurface, FlatTerrain, NormalTerrain, DirtSurface, terrainSafeOffset } from "./constant";
+import { generateResource } from "./generate_resource";
 
 const macroScale = 400; // 宏观分区尺度，控制草原和山地块状分布的大小
 const threshold = 0.38; // 分区阈值（整体偏向山地）
@@ -42,55 +43,9 @@ function getMountainHeight(worldX: number, worldZ: number) {
   return m * yMountain;
 }
 
-const generateResource = (
-  input: IInstanceData[][][], 
-  chunkPos: THREE.Vector3, 
-  x: number, 
-  y: number, 
-  z: number) => {
-  const worldX = chunkPos.x + x;
-  const worldY = chunkPos.y + y;
-  const worldZ = chunkPos.z + z;
-  
-  /**@desc 生成洞穴空洞 */
-  const CafeNoise = World.simplex.noise3d(
-      worldX / 12,
-      worldY / 12,
-      worldZ / 8
-    ) - World.simplex.noise3d(
-      (worldX + 16) / 8,
-      (worldY + 8) / 12,
-      (worldZ + 4) / 12
-    );
-  if (CafeNoise > 0.55) {
-      input[x][y][z] = getEmptyAirBlockData();
-      return;
-  }
-
-  for (const [_, config] of Object.entries(oreConfig)) {
-      const value = World.simplex.noise3d(
-      (worldX) / config.scale.x,
-      (worldY) / config.scale.y,
-      (worldZ) / config.scale.z
-    );
-
-    if (value > config.scarcity) {
-      input[x][y][z] = {
-        blockId: config.id,
-        instanceIds: [],
-        blockData: {
-          breakCount: BlockFactory.getBlock(config.id).breakCount
-        },
-      }
-      return;
-    } else if (input[x][y][z].blockId === BlockID.Air) {
-      input[x][y][z] = getEmptyStoneBlockData();
-    }
-  }
-}
-
-const { width, height: ChunkHeight } = ChunkParams;
+const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 const { worldType } = DevControl;
+
 /**
  * Generates the terrain data
  */
@@ -100,8 +55,8 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
   }
   const terrainConfig = NormalTerrain;
   const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
-  for (let x = 0; x < width; x++) {
-    for (let z = 0; z < width; z++) {
+  for (let x = 0; x < ChunkWidth; x++) {
+    for (let z = 0; z < ChunkWidth; z++) {
       // block position of world
       const worldX = chunkPos.x + x;
       const worldZ = chunkPos.z + z;
@@ -168,8 +123,8 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
 // TODO 需要简化
 function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3) {
   const terrainConfig = FlatTerrain;
-  for (let x = 0; x < width; x++) {
-    for (let z = 0; z < width; z++) {
+  for (let x = 0; x < ChunkWidth; x++) {
+    for (let z = 0; z < ChunkWidth; z++) {
       // block position of world
       const worldX = chunkPos.x + x;
       const worldZ = chunkPos.z + z;
