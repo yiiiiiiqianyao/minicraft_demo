@@ -10,7 +10,7 @@ import { getEmptyGrassBlockData } from "../../Block/blocks/GrassBlock";
 import { getEmptyBedrockBlockData } from "../../Block/blocks/BedrockBlock";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
 import { smoothstep } from "./utils";
-import { BedrockSurface, FlatTerrain, NormalTerrain, oreConfig, DirtSurface } from "./constant";
+import { BedrockSurface, FlatTerrain, NormalTerrain, oreConfig, DirtSurface, terrainSafeOffset } from "./constant";
 
 const macroScale = 400; // 宏观分区尺度，控制草原和山地块状分布的大小
 const threshold = 0.38; // 分区阈值（整体偏向山地）
@@ -52,6 +52,7 @@ const generateResource = (
   const worldY = chunkPos.y + y;
   const worldZ = chunkPos.z + z;
   
+  /**@desc 生成洞穴空洞 */
   const CafeNoise = World.simplex.noise3d(
       worldX / 12,
       worldY / 12,
@@ -73,12 +74,6 @@ const generateResource = (
       (worldZ) / config.scale.z
     );
 
-    // // 洞穴
-    // if (value > 0.9) {
-    //   input[x][y][z] = getEmptyAirBlockData();
-    //   return;
-    // }
-
     if (value > config.scarcity) {
       input[x][y][z] = {
         blockId: config.id,
@@ -94,10 +89,8 @@ const generateResource = (
   }
 }
 
-const { width, height } = ChunkParams;
+const { width, height: ChunkHeight } = ChunkParams;
 const { worldType } = DevControl;
-// 高度范围限制：防止生成超出世界高度范围的方块 有树的生成 所以要预留一些空间
-const terrainSafeOffset = 10;
 /**
  * Generates the terrain data
  */
@@ -106,6 +99,7 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
     return generateFlatTerrain(input, chunkPos);
   }
   const terrainConfig = NormalTerrain;
+  const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
   for (let x = 0; x < width; x++) {
     for (let z = 0; z < width; z++) {
       // block position of world
@@ -122,10 +116,10 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       const yMountain = getMountainHeight(worldX, worldZ);
 
       // 地表高度：加入山地偏移
-      let terrainGroundHeight = Math.floor(height * scaledNoise + yMountain);
-      terrainGroundHeight = Math.max(0, Math.min(terrainGroundHeight, height - terrainSafeOffset));
+      let terrainGroundHeight = Math.floor(ChunkHeight * scaledNoise + yMountain);
+      terrainGroundHeight = Math.max(0, Math.min(terrainGroundHeight, MaxTerrainHeight));
 
-      // 地表表层方块
+      // 地表表层方块高度：加入泥土层偏移
       const surfaceToGround = DirtSurface.offset +
         Math.abs(World.simplex.noise(worldX, worldZ) * DirtSurface.magnitude);
 
@@ -136,7 +130,7 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       const BedrockHeight = BedrockSurface.offset +
         Math.abs(World.simplex.noise(worldX, worldZ) * BedrockSurface.magnitude);
 
-      for (let y = 0; y < height; y++) {
+      for (let y = 0; y < ChunkHeight; y++) {
         // TODO 生成地形的时候 后续生成洞穴 连续
         // World.simplex.noise3d(x, y, z)
         if (y < terrainGroundHeight) {
@@ -159,6 +153,8 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();
           }
+          // 地表层 标记为地面
+          input[x][y][z].blockData.isGround = true;
         } else if (y > terrainGroundHeight) {
           // 高于地表层 都是空气
           input[x][y][z] = getEmptyAirBlockData();
@@ -166,7 +162,6 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       }
     }
   }
-
   return input;
 };
 
@@ -178,18 +173,14 @@ function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3
       // block position of world
       const worldX = chunkPos.x + x;
       const worldZ = chunkPos.z + z;
-      // TODO 计算性能待优化
-
       const terrainValue0 = World.simplex.noise(
         worldX / terrainConfig.scale,
         worldZ / terrainConfig.scale
       );
       // 草原 地形高度：低幅值、高频噪声
       const scaledNoise = terrainConfig.offset + terrainConfig.magnitude * terrainValue0;
-      let terrainHeight = Math.floor(height * scaledNoise);
-      // 高度范围限制：防止生成超出世界高度范围的方块 有树的生成 所以要预留一些空间
-      const safeOffset = 10;
-      terrainHeight = Math.max(0, Math.min(terrainHeight, height - safeOffset));
+      let terrainHeight = Math.floor(ChunkHeight * scaledNoise);
+      terrainHeight = Math.max(0, Math.min(terrainHeight, ChunkHeight));
 
       // 地表表层方块
       const surfaceHeight = DirtSurface.offset +
@@ -198,9 +189,7 @@ function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3
       // 基岩
       const bedrockHeight = 2;
 
-      for (let y = 0; y < height; y++) {
-        // TODO 生成地形的时候 后续生成洞穴 连续
-        // World.simplex.noise3d(x, y, z)
+      for (let y = 0; y < ChunkHeight; y++) {
         if (y < terrainHeight) {
           if(y >= terrainHeight - surfaceHeight) {
             // 地表层到地面是泥土
@@ -209,15 +198,12 @@ function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3
             // 从基岩层到地表层
             if (input[x][y][z].blockId === BlockID.Air) {
               input[x][y][z] = getEmptyStoneBlockData();
-            } else {
-              // 其他情况 保持原有方块（生产的各种资源方块）
             }
           } else {
             // 低于基岩层 都是基岩
             input[x][y][z] = getEmptyBedrockBlockData();
           }
         } else if (y === terrainHeight) {
-          // TODO 暂时作为地表的方块
           input[x][y][z] = getEmptyGrassBlockData();
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();

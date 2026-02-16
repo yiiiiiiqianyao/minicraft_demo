@@ -15,6 +15,8 @@ export const oreConfig = {
   },
 };
 
+// 高度范围限制：防止生成超出世界高度范围的方块 有树的生成 所以要预留一些空间
+export const terrainSafeOffset = 10;
 export const SeaSurfaceOffset = 0.5;
 export const SeaSurfaceHeight = ChunkParams.height * SeaSurfaceOffset;
 
@@ -32,6 +34,7 @@ export const FlatTerrain = {
 }
 export const DirtSurface = {
   offset: 0,
+  // 泥土层偏移：加入一些偏移量 使泥土层不是完全平坦的
   magnitude: 4,
 }
 export const BedrockSurface = {
