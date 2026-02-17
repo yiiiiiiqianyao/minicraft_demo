@@ -83,11 +83,9 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
         Math.abs(World.simplex.noise(worldX, worldZ) * BedrockSurface.magnitude);
 
       for (let y = 0; y < ChunkHeight; y++) {
-        // TODO 生成地形的时候 后续生成洞穴 连续
-        // World.simplex.noise3d(x, y, z)
-        if (y < terrainGroundHeight) {
+        if (y <= terrainGroundHeight) {
           // 低于地表层
-          if(y >= DirtHeight && input[x][y][z].blockId === BlockID.Air) {
+          if(y > DirtHeight) {
             // 表层到地面是泥土
             input[x][y][z] = getEmptyDirtBlockData();
           } else if(y >= BedrockHeight) {
@@ -97,17 +95,18 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
             // 低于基岩层 都是基岩
             input[x][y][z] = getEmptyBedrockBlockData();
           }
-        } else if (y === terrainGroundHeight && input[x][y][z].blockId === BlockID.Air) {
-          // 地表层 暂时都是草方块
-          input[x][y][z] = getEmptyGrassBlockData();
-            if(DevControl.showBorder && (x === 0 || z === 0)) {
-              input[x][y][z] = getEmptyBedrockBlockData();
-            }
-            // 地表层 标记为地面
-            input[x][y][z].blockData.isGround = true;
         } else if (y > terrainGroundHeight) {
           // 高于地表层 都是空气
           input[x][y][z] = getEmptyAirBlockData();
+        }
+        // 地表层 暂时都是草方块
+        if (y === terrainGroundHeight && !input[x][y][z].blockData?.isCave) {
+          input[x][y][z] = getEmptyGrassBlockData();
+          if(DevControl.showBorder && (x === 0 || z === 0)) {
+            input[x][y][z] = getEmptyBedrockBlockData();
+          }
+          // 地表层 标记为地面
+          input[x][y][z].blockData.isGround = true;
         }
       }
     }

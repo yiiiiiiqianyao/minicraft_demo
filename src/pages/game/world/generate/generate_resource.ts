@@ -5,7 +5,6 @@ import type { IInstanceData } from "../interface";
 import { oreConfig } from "./constant";
 import { BlockFactory, BlockID } from "../../Block";
 import { getEmptyStoneBlockData } from "../../Block/blocks/StoneBlock";
-// import { getEmptyBedrockBlockData } from "../../Block/blocks/BedrockBlock";
 
 /**@desc 生成资源方块（洞穴空洞、矿物） */
 export const generateResource = (
@@ -28,9 +27,8 @@ export const generateResource = (
       (worldY + 8) / 12,
       (worldZ + 6) / 12
     );
-  if (CafeNoise > 0.9) {
+  if (CafeNoise > 0.8) {
       input[x][y][z] = getEmptyAirBlockData();
-      // input[x][y][z] = getEmptyBedrockBlockData();
       input[x][y][z].blockData.isCave = true;
       return;
   }
