@@ -8,7 +8,7 @@ import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
 import type { DataStore } from "../DataStore";
 
-// TODO BlockID[][][] => IInstanceData[][][]
+/**@desc 初始化空 chunk 数据 */
 const initEmptyChunk = () => {
   const { width, height } = ChunkParams;
   const data = new Array(width);
@@ -17,7 +17,7 @@ const initEmptyChunk = () => {
     for (let y = 0; y < height; y++) {
       data[x][y] = new Array(width);
       for (let z = 0; z < width; z++) {
-        // data[x][y][z] = BlockID.Air;
+        // TODO 后续直接使用 null 表示空气
         data[x][y][z] = {
           blockId: BlockID.Air,
           instanceIds: [],
@@ -61,9 +61,11 @@ export const generateChunk = async (
   z: number,
   dataStore: DataStore,
 ) => {
+    // 如果 chunk 已经生成过了 则直接从 data store 中获取
     if (dataStore.getChunkLoaded(x, z)) {
       return getChunkFromDataStore(x, z, dataStore);
     }
+    // 否则 则需要生成 chunk 数据
     const chunkPos = new THREE.Vector3(x, 0, z);
     // full chunk block data fill with air
     let data = initEmptyChunk();
@@ -75,7 +77,7 @@ export const generateChunk = async (
     data = generateTallGrass( data);
     // TODO 在生成 flower 的时候需要考虑唯一性 在 chunk 重新创建的时候 保持不变
     data = generateFlowers( data);
-    // safe set chunk data to data store
+    /**@desc 生成数据后 将 chunk 数据设置到 data store 中 */
     setChunkToDataStore(x, z, data, dataStore);
     return data;
 };

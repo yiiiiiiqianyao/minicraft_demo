@@ -41,6 +41,7 @@ export class WorldChunk extends THREE.Group {
     // const start = performance.now();
     // 初始化 chunk 数据
     const { x, z } = this.position;
+    // TODO 把生成 chunk 数据的任务放到 web worker 中
     const data: IInstanceData[][][] = await generateChunk(x, z, this.dataStore);
     // console.log(`Loaded chunk in ${performance.now() - start}ms`);
     // 空闲时间的 callback

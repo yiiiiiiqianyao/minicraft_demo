@@ -45,7 +45,7 @@ function getMountainHeight(worldX: number, worldZ: number) {
 
 const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 const { worldType } = DevControl;
-
+const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
 /**
  * Generates the terrain data
  */
@@ -53,25 +53,22 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
   // 平坦地形
   if (worldType === 'flat') return generateFlatTerrain(input);
   // 正常地形
-  const terrainConfig = NormalTerrain;
-  const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
   for (let x = 0; x < ChunkWidth; x++) {
     for (let z = 0; z < ChunkWidth; z++) {
       // block position of world
       const worldX = chunkPos.x + x;
       const worldZ = chunkPos.z + z;
-      // TODO 计算性能待优化
       const terrainValue0 = World.simplex.noise(
-        worldX / terrainConfig.scale,
-        worldZ / terrainConfig.scale
+        worldX / NormalTerrain.scale,
+        worldZ / NormalTerrain.scale
       );
       // 草原 地形高度：低幅值、高频噪声
-      const scaledNoise = terrainConfig.offset + terrainConfig.magnitude * terrainValue0;
-  
-      const yMountain = getMountainHeight(worldX, worldZ);
+      const scaledNoise = NormalTerrain.offset + NormalTerrain.magnitude * terrainValue0;
+      // 山地 地形高度：高幅值、低频噪声
+      const mountainTerrain = getMountainHeight(worldX, worldZ);
 
       // 地表高度：加入山地偏移
-      let terrainGroundHeight = Math.floor(ChunkHeight * scaledNoise + yMountain);
+      let terrainGroundHeight = Math.floor(ChunkHeight * scaledNoise + mountainTerrain);
       terrainGroundHeight = Math.max(0, Math.min(terrainGroundHeight, MaxTerrainHeight));
 
       // 地表表层方块高度：加入泥土层偏移
@@ -90,26 +87,24 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
         // World.simplex.noise3d(x, y, z)
         if (y < terrainGroundHeight) {
           // 低于地表层
-          if(y >= DirtHeight) {
+          if(y >= DirtHeight && input[x][y][z].blockId === BlockID.Air) {
             // 表层到地面是泥土
             input[x][y][z] = getEmptyDirtBlockData();
-          } //else 
-          if(y >= BedrockHeight) {
+          } else if(y >= BedrockHeight) {
             // 从基岩层到地表层  生产各种资源方块
             generateResource(input, chunkPos, x, y, z);
           } else {
             // 低于基岩层 都是基岩
             input[x][y][z] = getEmptyBedrockBlockData();
           }
-        } else if (y === terrainGroundHeight) {
+        } else if (y === terrainGroundHeight && input[x][y][z].blockId === BlockID.Air) {
           // 地表层 暂时都是草方块
-          // TODO 暂时作为地表的方块
           input[x][y][z] = getEmptyGrassBlockData();
-          if(DevControl.showBorder && (x === 0 || z === 0)) {
-            input[x][y][z] = getEmptyBedrockBlockData();
-          }
-          // 地表层 标记为地面
-          input[x][y][z].blockData.isGround = true;
+            if(DevControl.showBorder && (x === 0 || z === 0)) {
+              input[x][y][z] = getEmptyBedrockBlockData();
+            }
+            // 地表层 标记为地面
+            input[x][y][z].blockData.isGround = true;
         } else if (y > terrainGroundHeight) {
           // 高于地表层 都是空气
           input[x][y][z] = getEmptyAirBlockData();
