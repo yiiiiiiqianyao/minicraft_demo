@@ -11,11 +11,12 @@ export enum BlockID {
   BirchLog = 8, // 白桦木方块
   Leaves = 9,
   TallGrass = 10,
-  FlowerRose = 11,
-  FlowerDandelion = 12,
-  RedstoneLamp = 13,
-  StoneBrick = 14, // 石砖方块
-  CraftingTable = 15, // 工作台方块
+  ShortGrass = 11,
+  FlowerRose = 12,
+  FlowerDandelion = 13,
+  RedstoneLamp = 14,
+  StoneBrick = 15, // 石砖方块
+  CraftingTable = 16, // 工作台方块
 }
 
 /**@desc 所有方块ID 数组 */

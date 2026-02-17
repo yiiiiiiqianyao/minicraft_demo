@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { ChunkParams } from "../../world/chunk/literal";
 
+/**@desc 初始化十字植物几何体 */
 export function initCrossPlantGeometry() {
     const FlowerGeometry = new THREE.PlaneGeometry(1, 1);
     const nonIndexedGeom = FlowerGeometry.toNonIndexed(); 

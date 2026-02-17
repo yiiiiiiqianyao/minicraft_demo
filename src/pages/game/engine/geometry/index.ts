@@ -20,6 +20,7 @@ const GrassBlockGeometry = initGrassBlockGeometry();
 
 export * from './drop';
 
+/**@desc 根据方块的 geometry 类型返回对应的 geometry */
 export function getInstancedGeometry (blockGeometry: RenderGeometry): THREE.BufferGeometry {
     if (blockGeometry === RenderGeometry.Cube) {
         return CubeGeometry;

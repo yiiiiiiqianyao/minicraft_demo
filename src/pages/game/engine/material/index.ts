@@ -11,8 +11,6 @@ const collisionHelperMaterial = new THREE.MeshBasicMaterial({
 });
 
 // textures for material
-// const GrassSideMaterial = new THREE.MeshLambertMaterial({ map: textures.grassSide });
-// const GrassTopMaterial = new THREE.MeshLambertMaterial({ map: textures.grassTop });
 const DirtMaterial = new THREE.MeshLambertMaterial({ map: textures.dirt });
 const IronMaterial = new THREE.MeshLambertMaterial({ map: textures.iron });
 const StoneMaterial = new THREE.MeshLambertMaterial({ map: textures.stone });
@@ -54,5 +52,4 @@ export {
   BreakMaterial,
 }
 export * from './tree';
-export * from './flower';
-export * from './grass';
+export * from './cross_plant';

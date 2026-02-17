@@ -59,7 +59,7 @@ export const generateTrees = (
         continue;
       }
       // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
-      const treeType = treeNoise < 0.99 ? BlockID.OakLog : BlockID.BirchLog;
+      const treeType = treeNoise < 0.965 ? BlockID.OakLog : BlockID.BirchLog;
 
       /**
        * @desc 找到地表高度 Find the grass tile

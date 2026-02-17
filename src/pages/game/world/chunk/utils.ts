@@ -9,14 +9,14 @@ import { PlayerParams } from "../../player/literal";
 import { WorldParams } from "../literal";
 import type { IChunkKey } from "../../player/interface";
 
+/**@desc 检查方块是否支持合并 */
 export function isBlockSupportsCombine(blockId: BlockID) {
-    // TODO 待优化 除了 Leaves 和 OakLog 之外方块也支持合并
-    // 暂时只支持了BirchLog 和 OakLog
     return blockId === BlockID.BirchLog || 
     blockId === BlockID.OakLog ||
     blockId === BlockID.FlowerDandelion ||
     blockId === BlockID.FlowerRose ||
-    blockId === BlockID.TallGrass;
+    blockId === BlockID.TallGrass || 
+    blockId === BlockID.ShortGrass;
 }
 
 /**

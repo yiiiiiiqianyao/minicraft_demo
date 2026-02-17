@@ -12,6 +12,8 @@ import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData } from "./interface";
 import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
 
+const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
+
 /** @desc chunk 区块对象 */
 export class WorldChunk extends THREE.Group {
   /**@desc chunk 中的 block 数据 */
@@ -19,7 +21,6 @@ export class WorldChunk extends THREE.Group {
   private meshes: Partial<Record<BlockID, THREE.InstancedMesh>> = {};
   private dataStore: DataStore;
   loaded: boolean;
-  
   dropGroup: DropGroup | null = null;
   // for dev test
   helper: THREE.Mesh | null = null;
@@ -65,34 +66,22 @@ export class WorldChunk extends THREE.Group {
     }
   }
 
+  /**@desc 获取 chunk 中的所有可交互方块的 mesh */
   getInteractiveMeshes() {
     return Object.values(this.meshes).filter(mesh => Boolean(mesh.userData.interactive));
   }
-
-  // /**@desc 设置 chunk 中的 block 是否渲染阴影 */
-  // setShadowRender(enable: boolean) {
-  //   Object.values(this.meshes).forEach(mesh => {
-  //     if (!enable) {
-  //       mesh.castShadow = false;
-  //       mesh.receiveShadow = false;
-  //     } else {
-  //       mesh.castShadow = mesh.userData.castShadow;
-  //       mesh.receiveShadow = true;
-  //     }
-  //   })
-  // }
 
   /**
    * @desc Initializes the terrain data 为每个 chunk 存储一个单独的数据集
    */
   private initializeTerrain(data: IInstanceData[][][]) {
-    const { width, height } = ChunkParams;
+    // 初始化 chunk 数据
     this.data = [];
-    for (let x = 0; x < width; x++) {
+    for (let x = 0; x < ChunkWidth; x++) {
       const slice: IInstanceData[][] = [];
-      for (let y = 0; y < height; y++) {
+      for (let y = 0; y < ChunkHeight; y++) {
         const row: IInstanceData[] = [];
-        for (let z = 0; z < width; z++) {
+        for (let z = 0; z < ChunkWidth; z++) {
           row.push({
             blockId: data[x][y][z].blockId,
             // Tip: mesh 会重新生成 所以 instanceIds 会为空
@@ -108,15 +97,12 @@ export class WorldChunk extends THREE.Group {
 
   /**@desc 生成 chunk 中的 block 对应的 mesh */
   private generateMeshes(data: IInstanceData[][][]) {
-    const { width, height } = ChunkParams;
-    // this.clear();
     // 根据类型为每个 block 类型创建 Mesh
-    for (let x = 0; x < width; x++) {
-      for (let y = 0; y < height; y++) {
-        for (let z = 0; z < width; z++) {
+    for (let x = 0; x < ChunkWidth; x++) {
+      for (let y = 0; y < ChunkHeight; y++) {
+        for (let z = 0; z < ChunkWidth; z++) {
           const blockData = data[x][y][z];
           const blockClass = BlockFactory.getBlock(blockData.blockId);
-          
           // 空气块不生成 mesh
           if (blockData.blockId === BlockID.Air) continue;
           // 过滤掉被遮挡的方块 过滤 chunk 的边界方块（边界的上表面，其上方的方块可以通过 其也不算边界）
@@ -129,12 +115,12 @@ export class WorldChunk extends THREE.Group {
         }
       }
     }
-    // 添加掉落物品组
-    // this.add(this.dropGroup);
+    // console.log(this.meshes)
     // add chunk helper for dev test
     this.helper && this.add(this.helper);
   }
 
+  /**@desc 初始化 chunk 中的 block 对应的 InstanceMesh */
   private initInstanceMesh(blockId: BlockID) {
     if (this.meshes[blockId]) return this.meshes[blockId];
     const blockClass = BlockFactory.getBlock(blockId);
@@ -398,25 +384,20 @@ export class WorldChunk extends THREE.Group {
    * @returns 
    */
   private isBorderBlock(x: number, y: number, z: number): boolean {
-    const { width, height } = ChunkParams;
     // TODO 看上去是一个优化判断 暂时待理解
     const up = this.getBlockData(x, y + 1, z);
     const upBlockClass = up ? BlockFactory.getBlock(up.blockId) : null;
     // Need when regenerate chunk 如果上方的方块不是空气，那么它不是边界
-    if (up?.blockId !== BlockID.Air) {
-      return false;
-    }
-    if (upBlockClass?.canPassThrough) {
-      return false;
-    }
+    if (up?.blockId !== BlockID.Air) return false;
+    if (upBlockClass?.canPassThrough) return false;
     
     return (
       x === 0 ||
-      x === width - 1 ||
+      x === ChunkWidth - 1 ||
       y === 0 ||
-      y === height - 1 ||
+      y === ChunkHeight - 1 ||
       z === 0 ||
-      z === width - 1
+      z === ChunkWidth - 1
     );
   }
 

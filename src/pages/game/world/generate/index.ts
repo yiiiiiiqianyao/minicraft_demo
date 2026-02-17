@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { BlockID } from "../../Block";
 import { generateTerrain } from "./terrain";
 import { generateTrees } from "./tree";
-import { generateTallGrass } from "./tallGrass";
+import { generateCrossPlants } from "./cross_plants";
 import { generateFlowers } from "./flower";
 import { ChunkParams } from "../chunk/literal";
 import type { IInstanceData } from "../interface";
@@ -74,7 +74,7 @@ export const generateChunk = async (
     // TODO 下面的 生产树 高草 花朵等可以进行优化
     data = generateTrees( data, chunkPos);
     // Tip: 高草和花朵都是一格的大小 不会跨越 chunk 因此不需要考虑 chunk position
-    data = generateTallGrass( data);
+    data = generateCrossPlants( data);
     // TODO 在生成 flower 的时候需要考虑唯一性 在 chunk 重新创建的时候 保持不变
     data = generateFlowers( data);
     /**@desc 生成数据后 将 chunk 数据设置到 data store 中 */

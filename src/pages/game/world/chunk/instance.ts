@@ -3,6 +3,7 @@ import { Block, RenderGeometry } from "../../Block/base/Block";
 import { jitterNumber } from "../../utils";
 import { BlockID } from "../../Block";
 
+/**@desc 向 InstancedMesh 中添加一个方块 */
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {
     switch (blockClass.geometry) {
         case RenderGeometry.Tree:
@@ -18,6 +19,7 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
     }
 }
 
+/**@desc 向 InstancedMesh 中添加一个树方块 */
 function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
     const instanceId = mesh.count++;
     const matrix = new THREE.Matrix4();
@@ -32,13 +34,14 @@ function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: num
     mesh.userData.uvRange = {
         // x: [0, 0.5],
         // y: [0, 1],
-         x: [0, 1],
+        x: [0, 1],
         y: [0, 1],
     }
 
     return [instanceId];
 }
 
+/**@desc 向 InstancedMesh 中添加一个立方体方块 */
 function InstanceMeshAddCube(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
     const instanceId = mesh.count++;
     const matrix = new THREE.Matrix4();
@@ -50,6 +53,7 @@ function InstanceMeshAddCube(mesh: THREE.InstancedMesh, blockId: BlockID, x: num
     return [instanceId];
 }
 
+/**@desc 向 InstancedMesh 中添加一个十字植物方块 */
 function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
     const instanceId1 = mesh.count++;
     const instanceId2 = mesh.count++;
@@ -79,6 +83,12 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.6;
 
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.6;
+    } else if (blockId === BlockID.ShortGrass) {
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0.6;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.6;
+
+        mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.6;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.6;
     }
     

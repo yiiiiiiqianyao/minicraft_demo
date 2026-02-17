@@ -14,9 +14,9 @@ import { RedstoneLampBlock } from "../blocks/RedstoneLampBlock";
 import { StoneBlock } from "../blocks/StoneBlock";
 import { StoneBrickBlock } from "../blocks/StoneBrickBlock";
 import { TallGrassBlock } from "../blocks/TallGrassBlock";
-
 import { BlockID } from "..";
 import { CraftBlock } from "../objects/CraftingBlock";
+import { ShortGrassBlock } from "../blocks/ShortGrassBlock";
 
 /** @desc 方块工厂类，用于创建方块实例 Flyweight pattern to avoid creating new block instances */
 export class BlockFactory {
@@ -32,6 +32,7 @@ export class BlockFactory {
     [BlockID.BirchLog]: BirchBlock,
     [BlockID.Leaves]: LeavesBlock,
     [BlockID.TallGrass]: TallGrassBlock,
+    [BlockID.ShortGrass]: ShortGrassBlock,
     [BlockID.FlowerRose]: FlowerRoseBlock,
     [BlockID.FlowerDandelion]: FlowerDandelionBlock,
     [BlockID.RedstoneLamp]: RedstoneLampBlock,
