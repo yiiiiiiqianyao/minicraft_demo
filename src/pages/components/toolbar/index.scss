@@ -11,6 +11,7 @@
     position: relative;
     width: 100%;
     image-rendering: pixelated;
+    user-select: none;
   }
 
   #toolbar-active-border {
@@ -19,6 +20,7 @@
     width: 13.5%;
     transform: translateX(-4.5%) translateY(-4.5%);
     image-rendering: pixelated;
+    user-select: none;
   }
 
   .toolbar-slot {

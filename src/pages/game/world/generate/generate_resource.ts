@@ -5,6 +5,7 @@ import type { IInstanceData } from "../interface";
 import { oreConfig } from "./constant";
 import { BlockFactory, BlockID } from "../../Block";
 import { getEmptyStoneBlockData } from "../../Block/blocks/StoneBlock";
+import { ChunkParams } from "../chunk/literal";
 
 /**@desc 生成资源方块（洞穴空洞、矿物） */
 export const generateResource = (
@@ -18,16 +19,18 @@ export const generateResource = (
   const worldZ = chunkPos.z + z;
   
   /**@desc 生成洞穴空洞 */
-  const CafeNoise = World.simplex.noise3d(
+  const CaveScale = (ChunkParams.height - worldY) / ChunkParams.height;
+  const CaveNoise = (World.simplex.noise3d(
       worldX / 12,
       worldY / 12,
       worldZ / 8
     ) - World.simplex.noise3d(
       (worldX + 10) / 12,
-      (worldY + 8) / 12,
-      (worldZ + 6) / 12
-    );
-  if (CafeNoise > 0.8) {
+      (worldY + 8) / 10,
+      (worldZ + 6) / 8
+    ) + 1) / 2 * CaveScale;
+  const CaveDistribution = World.simplex.noise(worldX / 100, worldZ / 100);
+  if (CaveNoise > 0.5 && CaveDistribution > 0.1) {
       input[x][y][z] = getEmptyAirBlockData();
       input[x][y][z].blockData.isCave = true;
       return;

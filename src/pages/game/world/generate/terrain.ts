@@ -24,20 +24,20 @@ function getMountainHeight(worldX: number, worldZ: number) {
   
   // 领域扭曲：在 (x, z) 基础上用低频噪声进行坐标偏移，增加山脉走向变化
   const warpNoiseX = World.simplex.noise(worldX / 90, worldZ / 90);
-  const warpNoiseZ = World.simplex.noise(worldX / 190, worldZ / 190);
+  const warpNoiseZ = World.simplex.noise(worldX / 200, worldZ / 200);
   const warpX = worldX + warpStrength * warpNoiseX;
   const warpZ = worldZ + warpStrength * warpNoiseZ;
 
   // 山地区域高度：在扭曲后的坐标上合成两频脊线噪声（更低频、更粗犷）
-  const e1_step = 130;
+  const e1_step = 120;
   const e2_step = 45;
-  const e3_step = 15;
+  const e3_step = 25;
   const e1 = World.simplex.noise(warpX / e1_step, warpZ / e1_step);
-  const e2 = World.simplex.noise(warpX / e2_step, warpZ / e2_step);
-  const e3 = World.simplex.noise(warpX / e3_step, warpZ / e3_step);
-  const ridge = Math.abs(e1) * 0.7 + Math.abs(e2) * 0.2 + Math.abs(e3) * 0.1;
+  const e2 = World.simplex.noise(warpX / e2_step + 15, warpZ / e2_step);
+  const e3 = World.simplex.noise(warpX / e3_step + 10, warpZ / e3_step);
+  const ridge = Math.abs(e1) * 0.65 + Math.abs(e2) * 0.2 + Math.abs(e3) * 0.15;
   const ridgePow = Math.pow(ridge, 1.02);
-  const yMountain = ridgePow * 22;
+  const yMountain = ridgePow * 25;
 
  // 最终高度：草原与山地按分区权重混合
   return m * yMountain;
@@ -83,7 +83,7 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
         Math.abs(World.simplex.noise(worldX, worldZ) * BedrockSurface.magnitude);
 
       for (let y = 0; y < ChunkHeight; y++) {
-        if (y <= terrainGroundHeight) {
+        if (y < terrainGroundHeight) {
           // 低于地表层
           if(y > DirtHeight) {
             // 表层到地面是泥土
@@ -100,7 +100,17 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
           input[x][y][z] = getEmptyAirBlockData();
         }
         // 地表层 暂时都是草方块
-        if (y === terrainGroundHeight && !input[x][y][z].blockData?.isCave) {
+        function isAroundCave() {
+          return (
+            (input[x-1] && input[x-1][y][z]?.blockData?.isCave) ||
+            (input[x+1] && input[x+1][y][z]?.blockData?.isCave) ||
+            (input[x][y-1] && input[x][y-1][z]?.blockData?.isCave) ||
+            (input[x][y+1] && input[x][y+1][z]?.blockData?.isCave) ||
+            (input[x][y][z+1] && input[x][y][z+1]?.blockData?.isCave) ||
+            (input[x][y][z-1] && input[x][y][z-1]?.blockData?.isCave)
+          );
+        }
+        if (y === terrainGroundHeight && !isAroundCave()) {
           input[x][y][z] = getEmptyGrassBlockData();
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();
