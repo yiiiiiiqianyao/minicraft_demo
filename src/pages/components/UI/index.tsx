@@ -28,6 +28,7 @@ export const UI = () => {
             EventSystem.unsubscribe(GameEvent.OpenPopup);
         }
     }, [])
+    // TODO drag 图片拖拽 https://www.runoob.com/html/html5-draganddrop.html
     return (
          <div className="ui">
           <Cursor />

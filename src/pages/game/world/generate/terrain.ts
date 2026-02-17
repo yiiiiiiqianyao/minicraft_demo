@@ -50,9 +50,9 @@ const { worldType } = DevControl;
  * Generates the terrain data
  */
 export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vector3): IInstanceData[][][] => {
-  if (worldType === 'flat') {
-    return generateFlatTerrain(input, chunkPos);
-  }
+  // 平坦地形
+  if (worldType === 'flat') return generateFlatTerrain(input);
+  // 正常地形
   const terrainConfig = NormalTerrain;
   const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
   for (let x = 0; x < ChunkWidth; x++) {
@@ -120,30 +120,16 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
   return input;
 };
 
-// TODO 需要简化
-function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3) {
+/**@desc 生成平坦地形 */
+function generateFlatTerrain(input: IInstanceData[][][]) {
   const terrainConfig = FlatTerrain;
   for (let x = 0; x < ChunkWidth; x++) {
     for (let z = 0; z < ChunkWidth; z++) {
-      // block position of world
-      const worldX = chunkPos.x + x;
-      const worldZ = chunkPos.z + z;
-      const terrainValue0 = World.simplex.noise(
-        worldX / terrainConfig.scale,
-        worldZ / terrainConfig.scale
-      );
-      // 草原 地形高度：低幅值、高频噪声
-      const scaledNoise = terrainConfig.offset + terrainConfig.magnitude * terrainValue0;
-      let terrainHeight = Math.floor(ChunkHeight * scaledNoise);
-      terrainHeight = Math.max(0, Math.min(terrainHeight, ChunkHeight));
-
+      const terrainHeight = Math.floor(ChunkHeight * terrainConfig.offset);
       // 地表表层方块
-      const surfaceHeight = DirtSurface.offset +
-        Math.abs(World.simplex.noise(worldX, worldZ) * DirtSurface.magnitude);
-
+      const surfaceHeight = DirtSurface.offset;
       // 基岩
       const bedrockHeight = 2;
-
       for (let y = 0; y < ChunkHeight; y++) {
         if (y < terrainHeight) {
           if(y >= terrainHeight - surfaceHeight) {
@@ -169,6 +155,5 @@ function generateFlatTerrain(input: IInstanceData[][][], chunkPos: THREE.Vector3
       }
     }
   }
-
   return input;
 }

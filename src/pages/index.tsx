@@ -23,6 +23,7 @@ export default function HomePage() {
         <Debug />
         <UI />
       </div>
+      {/* 游戏未开始时显示的菜单 */}
       {!isGameStarted && <Menu />}
     </div>
   );
