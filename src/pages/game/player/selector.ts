@@ -6,6 +6,7 @@ import { GameLayers } from "../engine";
 import { ToolBar } from "../gui";
 import { BlockID } from "../Block";
 import { worldToCeilBlockCoord } from "../world/chunk/utils";
+import type { IUVRange } from "./interface";
 
 /**@desc 玩家的拾取/选择器 */
 export class Selector {
@@ -47,6 +48,7 @@ export class Selector {
     }
 
     // TODO 当相机控制器没有变化的时候 可以优化拾取过滤
+    /**@desc 玩家拾取/选择方块 */
     static select(camera: THREE.PerspectiveCamera, world: World, selectionHelper: THREE.Mesh) {
         const rayCaster = Selector.rayCaster;
         rayCaster.setFromCamera(RayCenterScreen, camera);
@@ -64,16 +66,42 @@ export class Selector {
         const intersection1 = intersectionObjects[1];
         if (intersection0) {
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
-            const chunk = intersection0.object.parent;
-            if (intersection0.instanceId == null || !chunk) return Selector.unSelect(selectionHelper);
+            const chunkObject = intersection0.object.parent;
+            if (intersection0.instanceId == null || !chunkObject) return Selector.unSelect(selectionHelper);
+
+            // Update the selected coordinates
+            Selector._updateSelectCoord(intersection0, chunkObject);
+            const pos = Selector.getBlockPositionInWorld();
+            if (!pos) return Selector.unSelect(selectionHelper);    
+
+            const selectedBlockData = world.getBlockData(pos[0], pos[1], pos[2]);
+            if (!selectedBlockData) return Selector.unSelect(selectionHelper);
+            const blockId = selectedBlockData.blockId;
+            let uvRange: IUVRange | null = null;
+            if (blockId === BlockID.ShortGrass) {
+                uvRange = {
+                    x: [0.1, 0.9],
+                    y: [0, 0.4],
+                };
+            } else if (blockId === BlockID.FlowerDandelion || blockId === BlockID.FlowerRose) {
+                uvRange = {
+                    x: [0.3, 0.7],
+                    y: [0, 0.6],
+                };
+            } else if (blockId === BlockID.OakLog || blockId === BlockID.BirchLog) {
+                uvRange = {
+                    x: [0, 1],
+                    y: [0, 1],
+                };
+            }
 
             let selectedIntersection = intersection0;
             // 根据 uv 优化拾取
-            if (intersection0.object.userData.uvRange && intersection0.uv) {
-                const { x: uvXRange, y: uvYRange } = intersection0.object.userData.uvRange;
+            if (uvRange && intersection0.uv) {
+                const { x: uvXRange, y: uvYRange } = uvRange;
                 const { x: uvX, y: uvY } = intersection0.uv;
-                // if (intersection0.object.userData.blockId === BlockID.OakLog) {
-                //     console.log(intersection0.uv);
+                // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
+                //        console.log(uvYRange[1], intersection0.uv);
                 // };
                 if (uvX < uvXRange[0] || uvX > uvXRange[1] || uvY < uvYRange[0] || uvY > uvYRange[1]) {
                     // 点击的 uv 坐标不在方块的有效 uv 范围内
@@ -89,12 +117,10 @@ export class Selector {
             // Selector.selectedBlockUuid = intersection.object.uuid;
             Selector.selectedMesh = selectedIntersection.object;
             // Get the chunk associated with the seclected block
-            // Update the selected coordinates
-            Selector.updateSelectCoord(selectedIntersection, chunk);
             // Update the block placement coordinates
             Selector.updateBlockPlacementCoords(selectedIntersection);
             // Update the selection helper
-            Selector.updateSelectionHelper(selectedIntersection, selectionHelper);
+            Selector._updateSelectionHelper(blockId, selectionHelper);
         } else {
             Selector.selectedMesh = null;
             Selector.unSelect(selectionHelper);
@@ -117,7 +143,7 @@ export class Selector {
     }
 
     static _tempBlockMatrix = new THREE.Matrix4();
-    static updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
+    static _updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
         if (intersection.instanceId == null) return;
 
         // TODO 目前只能选中 InstancedMesh 类型的方块 后续待扩展支持其他类型 object / mesh 如不同的生物
@@ -160,14 +186,16 @@ export class Selector {
     }
 
     /**@desc 更新选择框的位置和大小 显示玩家选中方块的位置和大小 */
-    static updateSelectionHelper(intersection: THREE.Intersection, selectionHelper: THREE.Mesh) {
+    static _updateSelectionHelper(selectedBlockId: BlockID, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
         selectionHelper.position.copy(PlayerParams.selectedCoords);
-        const selectedBlockId = intersection.object.userData.blockId;
         if(selectedBlockId === BlockID.FlowerDandelion || selectedBlockId === BlockID.FlowerRose) {
             selectionHelper.scale.set(0.3, 0.6, 0.3);
             selectionHelper.position.y -= 0.2;
-        } else {
+        } else if (selectedBlockId === BlockID.ShortGrass) {
+            selectionHelper.scale.set(0.8, 0.4, 0.8);
+            selectionHelper.position.y -= 0.3;
+        }  else {
             selectionHelper.scale.set(1, 1, 1);
         } 
         // TODO TallGrass 草方块的选择框需要调整大小

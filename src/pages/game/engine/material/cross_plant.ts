@@ -4,9 +4,10 @@ import { textures } from '../../Block/textures';
 // TODO 暂时使用 MeshBasicMaterial ，后续再考虑是否使用 MeshLambertMaterial
 const CrossPlantMaterial = new THREE.MeshBasicMaterial({
   map: textures.crossPlants,
-  transparent: true,
-  depthWrite: false,
-  // alphaTest: 0.1,
+  // transparent: true,
+  // depthWrite: false,
+  // blendSrc: THREE.OneMinusSrcAlphaFactor,
+  alphaTest: 0.9,
 })
 CrossPlantMaterial.side = THREE.DoubleSide;
 CrossPlantMaterial.onBeforeCompile = (shader) => {

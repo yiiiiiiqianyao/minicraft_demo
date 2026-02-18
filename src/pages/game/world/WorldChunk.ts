@@ -10,7 +10,8 @@ import { initChunkHelper } from "../helper/chunkHelper";
 import { DevControl } from "../dev";
 import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData } from "./interface";
-import { getBlockClass, inBounds, initChunkMesh } from "./chunk/utils";
+import { getBlockClass, inBounds, initChunkMesh, isCrossBlockSupportsCombine, isTopSideBlockSupportCombine } from "./chunk/utils";
+import { getEmptyAirBlockData } from "../Block/blocks/AirBlock";
 
 const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 
@@ -135,6 +136,21 @@ export class WorldChunk extends THREE.Group {
     mesh.userData.interactive = blockClass.interactive;
     this.add(mesh);
     this.meshes[blockId] = mesh;
+    // 为草方块和花朵方块共用一个 instance mesh
+    if (blockId === BlockID.TallGrass || 
+        blockId === BlockID.ShortGrass ||
+        blockId === BlockID.FlowerDandelion ||
+        blockId === BlockID.FlowerRose
+      ) {
+      this.meshes[BlockID.TallGrass] = mesh;
+      this.meshes[BlockID.ShortGrass] = mesh;
+    }
+    // TODO 后续加上其他的 block 类型
+    // BlockID.GrassBlock
+    // if (blockId === BlockID.OakLog || blockId === BlockID.BirchLog) {
+    //   this.meshes[BlockID.OakLog] = mesh;
+    //   this.meshes[BlockID.BirchLog] = mesh;
+    // }
     return mesh;
   }
 
@@ -275,59 +291,83 @@ export class WorldChunk extends THREE.Group {
 
     const blockId = blockData.blockId;
     const mesh = this.meshes[blockId] as THREE.InstancedMesh;
-
     /** 使用覆盖式删除 不保留 instance 的顺序：用最后一个实例覆盖要删除的实例
-       *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg
-       * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id
-       * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后
-       * 通过 mesh.count-- 来删除 instance id 列表后序的实例
-       */
-      // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1
-      const lastBlockInstanceIds: number[] = [];
-      const lastBlockCoords = new THREE.Vector3();
-      // 一个 block 可能由多个 instance 组成 如 flower 就是由两个 instance plane 组成的
-      blockData.instanceIds.forEach((instanceId) => {
-        // 获取 instanceMesh 中最后一个 instance id 的矩阵
-        const lastMatrix = new THREE.Matrix4();
-        mesh.getMatrixAt(mesh.count - 1, lastMatrix);
+     *  desc img: https://lf3-static.bytednsdoc.com/obj/eden-cn/vhfuhpxpf/three/minicraft/desc/delete_block.jpeg
+     * instanceMesh 保留了所有 instance id 的列表，一个普通的 block 可能包含一个 or 多个 instance id
+     * 覆盖式删除就是交换对应要删除的 instance id 和 instanceMesh instance id 列表的最后一个的位置，然后
+     * 通过 mesh.count-- 来删除 instance id 列表后序的实例
+     */
+    // We can't remove instances directly, so we need to swap each with the last instance and decrement count by 1
+    const lastBlockInstanceIds: number[] = [];
+    const lastBlockCoords = new THREE.Vector3();
+    // 一个 block 可能由多个 instance 组成 如 flower 就是由两个 instance plane 组成的
+    blockData.instanceIds.forEach((instanceId) => {
+      // 获取 instanceMesh 中最后一个 instance id 的矩阵
+      const lastMatrix = new THREE.Matrix4();
+      mesh.getMatrixAt(mesh.count - 1, lastMatrix);
 
-        // Also need to get block coords of instance to update instance id of the block
-        // const lastBlockCoords = new THREE.Vector3();
-        // 获取 instanceMesh 中最后一个 instance 的 block 位置
-        lastBlockCoords.setFromMatrixPosition(lastMatrix);
-        // this.setBlockInstanceIds(
-        //   Math.floor(lastBlockCoords.x),
-        //   Math.floor(lastBlockCoords.y),
-        //   Math.floor(lastBlockCoords.z),
-        //   [instanceId]
-        // );
-        // 最后一个 instance 实例
-        lastBlockInstanceIds.push(instanceId);
+      // Also need to get block coords of instance to update instance id of the block
+      // const lastBlockCoords = new THREE.Vector3();
+      // 获取 instanceMesh 中最后一个 instance 的 block 位置
+      lastBlockCoords.setFromMatrixPosition(lastMatrix);
+      // 最后一个 instance 实例
+      lastBlockInstanceIds.push(instanceId);
 
-        // Swap transformation matrices
-        // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，
-        // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block
-        mesh.setMatrixAt(instanceId, lastMatrix);
+      // Swap transformation matrices
+      // 用 mesh 中最后一个 instance 的矩阵替换当前 instance 的矩阵，
+      // 用当前 instance 渲染原本 mesh 列表中最后一个的 instance 对应的 block
+      mesh.setMatrixAt(instanceId, lastMatrix);
 
-        // Decrement instance count
-        mesh.count--;
+      if (isCrossBlockSupportsCombine(blockId)) {
+        // 替换 aCrossOffset 属性值
+        const lastInstanceId = mesh.count - 1;
+        mesh.geometry.attributes.aCrossOffset.array[instanceId * 2] = mesh.geometry.attributes.aCrossOffset.array[lastInstanceId * 2];
+        mesh.geometry.attributes.aCrossOffset.array[instanceId * 2 + 1] = mesh.geometry.attributes.aCrossOffset.array[lastInstanceId * 2 + 1];      
+        mesh.geometry.attributes.aCrossOffset.needsUpdate = true; 
+      } else if (isTopSideBlockSupportCombine(blockId)) {
+        // TODO 后续替换 xxx 属性值
+        // const lastInstanceId = mesh.count - 1;
+        // mesh.geometry.attributes.aTopOffset.array[instanceId * 2] = mesh.geometry.attributes.aTopOffset.array[lastInstanceId * 2];
+        // mesh.geometry.attributes.aTopOffset.array[instanceId * 2 + 1] = mesh.geometry.attributes.aTopOffset.array[lastInstanceId * 2 + 1];      
+        // mesh.geometry.attributes.aTopOffset.needsUpdate = true; 
+      }
 
-        // Notify the instanced mesh we updated the instance matrix
-        mesh.instanceMatrix.needsUpdate = true;
-        mesh.computeBoundingSphere();
-      });
-      /**
-       * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block data 中的 instanceIds 数据（删除）
-       */
-      this.setBlockInstanceIds(
-          Math.floor(lastBlockCoords.x),
-          Math.floor(lastBlockCoords.y),
-          Math.floor(lastBlockCoords.z),
-          lastBlockInstanceIds,
-        );
+      // Decrement instance count
+      mesh.count--;
 
-      this.setBlockInstanceIds(x, y, z, []);
-   
+      // Notify the instanced mesh we updated the instance matrix
+      mesh.instanceMatrix.needsUpdate = true;
+      mesh.computeBoundingSphere();
+    });
+    /**
+     * 在使用覆盖删除之后，更新原本 mesh 最后一个 instance 对应 block data 中的 instanceIds 数据（删除）
+     */
+    const lastBlockCoordsX = Math.floor(lastBlockCoords.x);
+    const lastBlockCoordsY = Math.floor(lastBlockCoords.y);
+    const lastBlockCoordsZ = Math.floor(lastBlockCoords.z);
+    // dataStore 不需要存储 mesh 的 instanceIds 数据
+    this.setBlockInstanceIds(
+        lastBlockCoordsX,
+        lastBlockCoordsY,
+        lastBlockCoordsZ,
+        lastBlockInstanceIds,
+    );
+    // 更新最后一个 instance 对应 block data 中的 blockId
+    this.data[lastBlockCoordsX][lastBlockCoordsY][lastBlockCoordsZ].blockId = blockId;
+    // 更新最后一个 instance 对应 block data 中的 blockData 数据
+    this.data[lastBlockCoordsX][lastBlockCoordsY][lastBlockCoordsZ].blockData = {
+      ...blockData.blockData,
+      // 更新最后一个 instance 对应 block data 中的 breakCount 数据
+      breakCount: BlockFactory.getBlock(blockId).breakCount,
+    };
+    // this.setBlockInstanceIds(x, y, z, []);
+    this.deleteBlockData(x, y, z);
+  }
+
+  deleteBlockData(x: number, y: number, z: number) {
+    const emptyAirBlock = getEmptyAirBlockData();
+    this.data[x][y][z] = emptyAirBlock;
+    this.dataStore.set(this.position.x, this.position.z, x, y, z, emptyAirBlock);
   }
 
   /**

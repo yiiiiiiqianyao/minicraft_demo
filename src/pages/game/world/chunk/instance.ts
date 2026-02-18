@@ -90,6 +90,11 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
 
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.6;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.6;
+
+        mesh.userData.uvRange = {
+            x: [0.3, 0.7],
+            y: [0, 0.3],
+        }
     }
     
     mesh.geometry.attributes.aCrossOffset.needsUpdate = true;

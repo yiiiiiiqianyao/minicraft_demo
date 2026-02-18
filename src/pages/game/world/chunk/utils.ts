@@ -11,12 +11,24 @@ import type { IChunkKey } from "../../player/interface";
 
 /**@desc 检查方块是否支持合并 */
 export function isBlockSupportsCombine(blockId: BlockID) {
-    return blockId === BlockID.BirchLog || 
-    blockId === BlockID.OakLog ||
-    blockId === BlockID.FlowerDandelion ||
-    blockId === BlockID.FlowerRose ||
-    blockId === BlockID.TallGrass || 
-    blockId === BlockID.ShortGrass;
+  if (isCrossBlockSupportsCombine(blockId) || 
+      isTopSideBlockSupportCombine(blockId)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export const isCrossBlockSupportsCombine = (blockId: BlockID) => {
+  return blockId === BlockID.FlowerDandelion || 
+  blockId === BlockID.FlowerRose || 
+  blockId === BlockID.TallGrass || 
+  blockId === BlockID.ShortGrass;
+}
+
+export const isTopSideBlockSupportCombine = (blockId: BlockID) => {
+  return blockId === BlockID.BirchLog || 
+  blockId === BlockID.OakLog;
 }
 
 /**
