@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
 import { initGrassBlockGeometry } from "./grassBlock";
-import { initCrossPlantGeometry } from "./flower";
+import { initCrossPlantGeometry } from "./cross_plants";
 
 /**@desc 方块的大小为 1x1x1 */
 const CubeGeometry = new THREE.BoxGeometry()

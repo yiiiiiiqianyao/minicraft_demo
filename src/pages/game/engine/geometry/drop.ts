@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
 import { initGrassBlockGeometry } from "./grassBlock";
-import { initDropCrossGeometry } from "./flower";
+import { initDropCrossGeometry } from "./cross_plants";
 
 const dropBoxSize = 0.25;
 const CubeGeometry = new THREE.BoxGeometry(dropBoxSize, dropBoxSize, dropBoxSize);

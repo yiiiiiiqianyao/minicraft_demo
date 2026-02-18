@@ -69,8 +69,10 @@ export class AudioManager {
       case BlockID.TallGrass:
       case BlockID.FlowerDandelion:
       case BlockID.FlowerRose:
+      case BlockID.ShortGrass:
         AudioManager.play("dig.grass");
         break;
+      case BlockID.BirchLog:
       case BlockID.OakLog:
         AudioManager.play("dig.wood");
         break;

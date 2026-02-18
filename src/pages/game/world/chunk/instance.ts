@@ -30,13 +30,6 @@ function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: num
     mesh.setMatrixAt(instanceId, matrix);
 
     mesh.userData.blockId = blockId;
-    // 树的 uv 范围
-    mesh.userData.uvRange = {
-        // x: [0, 0.5],
-        // y: [0, 1],
-        x: [0, 1],
-        y: [0, 1],
-    }
 
     return [instanceId];
 }
@@ -64,20 +57,12 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
 
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.2;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
-        mesh.userData.uvRange = {
-            x: [0.3, 0.7],
-            y: [0, 0.6],
-        }
     } else if (blockId === BlockID.FlowerRose) {
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.8;
 
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.8;
-        mesh.userData.uvRange = {
-            x: [0.3, 0.7],
-            y: [0, 0.6],
-        }
     } else if (blockId === BlockID.TallGrass) {
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0;
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.6;
@@ -90,11 +75,6 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
 
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2] = 0.6;
         mesh.geometry.attributes.aCrossOffset.array[instanceId2 * 2 + 1] = 0.6;
-
-        mesh.userData.uvRange = {
-            x: [0.3, 0.7],
-            y: [0, 0.3],
-        }
     }
     
     mesh.geometry.attributes.aCrossOffset.needsUpdate = true;

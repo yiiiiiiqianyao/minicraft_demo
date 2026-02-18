@@ -144,6 +144,8 @@ export class WorldChunk extends THREE.Group {
       ) {
       this.meshes[BlockID.TallGrass] = mesh;
       this.meshes[BlockID.ShortGrass] = mesh;
+      this.meshes[BlockID.FlowerDandelion] = mesh;
+      this.meshes[BlockID.FlowerRose] = mesh;
     }
     // TODO 后续加上其他的 block 类型
     // BlockID.GrassBlock

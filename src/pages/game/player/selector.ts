@@ -72,37 +72,43 @@ export class Selector {
             // Update the selected coordinates
             Selector._updateSelectCoord(intersection0, chunkObject);
             const pos = Selector.getBlockPositionInWorld();
-            if (!pos) return Selector.unSelect(selectionHelper);    
+            if (!pos) {
+                // console.warn("Selector.getBlockPositionInWorld() return null");
+                return Selector.unSelect(selectionHelper); 
+            }   
 
             const selectedBlockData = world.getBlockData(pos[0], pos[1], pos[2]);
-            if (!selectedBlockData) return Selector.unSelect(selectionHelper);
+            if (!selectedBlockData) {
+                // console.warn("world.getBlockData() return null");
+                return Selector.unSelect(selectionHelper);
+            }
+
             const blockId = selectedBlockData.blockId;
             let uvRange: IUVRange | null = null;
             if (blockId === BlockID.ShortGrass) {
                 uvRange = {
                     x: [0.1, 0.9],
-                    y: [0, 0.4],
+                    y: [0, 0.45],
+                    // x: [0, 1],
+                    // y: [0, 1],
                 };
             } else if (blockId === BlockID.FlowerDandelion || blockId === BlockID.FlowerRose) {
                 uvRange = {
                     x: [0.3, 0.7],
                     y: [0, 0.6],
                 };
-            } else if (blockId === BlockID.OakLog || blockId === BlockID.BirchLog) {
-                uvRange = {
-                    x: [0, 1],
-                    y: [0, 1],
-                };
             }
 
             let selectedIntersection = intersection0;
+            
+            // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
+            //     console.log(intersection0.uv);
+            // };
             // 根据 uv 优化拾取
             if (uvRange && intersection0.uv) {
                 const { x: uvXRange, y: uvYRange } = uvRange;
                 const { x: uvX, y: uvY } = intersection0.uv;
-                // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
-                //        console.log(uvYRange[1], intersection0.uv);
-                // };
+                
                 if (uvX < uvXRange[0] || uvX > uvXRange[1] || uvY < uvYRange[0] || uvY > uvYRange[1]) {
                     // 点击的 uv 坐标不在方块的有效 uv 范围内
                     if (intersection1) {

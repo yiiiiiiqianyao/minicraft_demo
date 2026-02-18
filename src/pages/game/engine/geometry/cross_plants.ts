@@ -3,8 +3,8 @@ import { ChunkParams } from "../../world/chunk/literal";
 
 /**@desc 初始化十字植物几何体 */
 export function initCrossPlantGeometry() {
-    const FlowerGeometry = new THREE.PlaneGeometry(1, 1);
-    const nonIndexedGeom = FlowerGeometry.toNonIndexed(); 
+    const geometry = new THREE.PlaneGeometry(1, 1);
+    const nonIndexedGeom = geometry.toNonIndexed(); 
     const aCrossPlantArray = new Float32Array(ChunkParams.maxCount * 2);
     nonIndexedGeom.name = 'cross_plant';
     nonIndexedGeom.attributes.aCrossOffset = new THREE.InstancedBufferAttribute(aCrossPlantArray, 2, true);
@@ -12,8 +12,8 @@ export function initCrossPlantGeometry() {
 }
 
 export function initDropCrossGeometry(width = 0.5, height = 0.5) {
-    const FlowerGeometry = new THREE.PlaneGeometry(width, height);
-    const nonIndexedGeom = FlowerGeometry.toNonIndexed(); 
+    const geometry = new THREE.PlaneGeometry(width, height);
+    const nonIndexedGeom = geometry.toNonIndexed(); 
     const aCrossPlantArray = new Float32Array(ChunkParams.maxCount * 2);
     nonIndexedGeom.name = 'drop_cross_plant';
     nonIndexedGeom.attributes.aCrossOffset = new THREE.InstancedBufferAttribute(aCrossPlantArray, 2, true);
