@@ -23,16 +23,12 @@ export class Selector {
     /**
      * Updates the raycaster used for block selection
      */
-    // static selectedBlockUuid: string | null = null;
     static selectedMesh: THREE.Object3D | null = null;
     static get rayCaster() {
         if(!Selector._rayCaster) {
-            Selector._rayCaster = new THREE.Raycaster(
-                new THREE.Vector3(),
-                new THREE.Vector3(),
-                0,
-                5
-            );
+            const origin = new THREE.Vector3();
+            const direction = new THREE.Vector3();
+            Selector._rayCaster = new THREE.Raycaster(origin, direction, 0,5);
             this.rayCaster.layers.set(GameLayers.Zero);
         }
         return Selector._rayCaster;
@@ -67,20 +63,20 @@ export class Selector {
         if (intersection0) {
             // TODO 目前只能选中 chunk 中的 InstancedMesh 方块 后续待扩展支持其他类型方块
             const chunkObject = intersection0.object.parent;
-            if (intersection0.instanceId == null || !chunkObject) return Selector.unSelect(selectionHelper);
+            if (intersection0.instanceId == null || !chunkObject) return Selector._unSelect(selectionHelper);
 
             // Update the selected coordinates
             Selector._updateSelectCoord(intersection0, chunkObject);
             const pos = Selector.getBlockPositionInWorld();
             if (!pos) {
                 // console.warn("Selector.getBlockPositionInWorld() return null");
-                return Selector.unSelect(selectionHelper); 
+                return Selector._unSelect(selectionHelper); 
             }   
 
             const selectedBlockData = world.getBlockData(pos[0], pos[1], pos[2]);
             if (!selectedBlockData) {
                 // console.warn("world.getBlockData() return null");
-                return Selector.unSelect(selectionHelper);
+                return Selector._unSelect(selectionHelper);
             }
 
             const blockId = selectedBlockData.blockId;
@@ -112,33 +108,24 @@ export class Selector {
                 if (uvX < uvXRange[0] || uvX > uvXRange[1] || uvY < uvYRange[0] || uvY > uvYRange[1]) {
                     // 点击的 uv 坐标不在方块的有效 uv 范围内
                     if (intersection1) {
-                        Selector.unSelect(selectionHelper);
+                        Selector._unSelect(selectionHelper);
                         selectedIntersection = intersection1;
                     } else {
-                        return Selector.unSelect(selectionHelper);
+                        return Selector._unSelect(selectionHelper);
                     }
                 }
             }
 
-            // Selector.selectedBlockUuid = intersection.object.uuid;
             Selector.selectedMesh = selectedIntersection.object;
             // Get the chunk associated with the seclected block
             // Update the block placement coordinates
-            Selector.updateBlockPlacementCoords(selectedIntersection);
+            Selector._updateBlockPlacementCoords(selectedIntersection);
             // Update the selection helper
             Selector._updateSelectionHelper(blockId, selectionHelper);
         } else {
             Selector.selectedMesh = null;
-            Selector.unSelect(selectionHelper);
+            Selector._unSelect(selectionHelper);
         }
-    }
-
-    static unSelect(selectionHelper: THREE.Mesh) {
-        // 没有选中的方块时，将选中坐标设为 null
-        PlayerParams.selectedCoords = null;
-        // 没有选中的方块时，将选中方块大小设为 null
-        // PlayerParams.selectedBlockSize = null;
-        selectionHelper.visible = false;
     }
 
     /**@desc 根据射线的相交位置 获取玩家选中的方块在世界坐标中的位置 */
@@ -148,8 +135,16 @@ export class Selector {
         return worldToCeilBlockCoord(x, y, z);
     }
 
+    private static _unSelect(selectionHelper: THREE.Mesh) {
+        // 没有选中的方块时，将选中坐标设为 null
+        PlayerParams.selectedCoords = null;
+        // 没有选中的方块时，将选中方块大小设为 null
+        // PlayerParams.selectedBlockSize = null;
+        selectionHelper.visible = false;
+    }
+
     static _tempBlockMatrix = new THREE.Matrix4();
-    static _updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
+    private static _updateSelectCoord(intersection: THREE.Intersection, chunk: THREE.Object3D) {
         if (intersection.instanceId == null) return;
 
         // TODO 目前只能选中 InstancedMesh 类型的方块 后续待扩展支持其他类型 object / mesh 如不同的生物
@@ -178,7 +173,7 @@ export class Selector {
     /**
      * @desc 更新玩家方块放置坐标
      */
-    static updateBlockPlacementCoords(intersection: THREE.Intersection) {
+    private static _updateBlockPlacementCoords(intersection: THREE.Intersection) {
         // 未选中方块 或 缺少法线 时 不更新方块放置坐标
         if (!PlayerParams.selectedCoords || !intersection.normal) return;
         // TODO 待优化
@@ -192,7 +187,7 @@ export class Selector {
     }
 
     /**@desc 更新选择框的位置和大小 显示玩家选中方块的位置和大小 */
-    static _updateSelectionHelper(selectedBlockId: BlockID, selectionHelper: THREE.Mesh) {
+    private static _updateSelectionHelper(selectedBlockId: BlockID, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
         selectionHelper.position.copy(PlayerParams.selectedCoords);
         if(selectedBlockId === BlockID.FlowerDandelion || selectedBlockId === BlockID.FlowerRose) {
