@@ -5,6 +5,8 @@ three/addons/renderers/common/BatchRenderer.js
 ## InstanceMesh
 InstanceMesh.count = 0时，仍会产生 1 个空的 Draw Call，需从场景中移除
 
+- 需要将 geometry 转化为非索引格式 .toNonIndexed() 否则每个顶点相互关联
+
 ## web worker & wasm
 
 最优解是「WASM + Web Worker」：后台线程运行高性能的 WASM 代码

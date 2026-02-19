@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { RenderGeometry } from "../../Block/base/Block";
 import { initTreeGeometry } from "./tree";
-import { initGrassBlockGeometry } from "./grassBlock";
+import { initTopSideGeometry } from "./top_side";
 import { initCrossPlantGeometry } from "./cross_plants";
 
 /**@desc 方块的大小为 1x1x1 */
@@ -15,8 +15,8 @@ const BreakGeometry = new THREE.BoxGeometry(break_size, break_size, break_size);
 const CrossPlantGeometry = initCrossPlantGeometry();
 /**@desc 树类型的定制 geometry */
 const TreeGeometry = initTreeGeometry();
-/**@desc 草方块的定制 geometry */
-const GrassBlockGeometry = initGrassBlockGeometry();
+/**@desc 顶部和侧面的定制 geometry */
+const TopSideBlockGeometry = initTopSideGeometry();
 
 export * from './drop';
 
@@ -31,7 +31,7 @@ export function getInstancedGeometry (blockGeometry: RenderGeometry): THREE.Buff
     } else if (blockGeometry === RenderGeometry.Break) {
         return BreakGeometry;
     } else if (blockGeometry === RenderGeometry.GrassBlock) {
-        return GrassBlockGeometry;
+        return TopSideBlockGeometry;
     } else {
         return CubeGeometry;
     }
