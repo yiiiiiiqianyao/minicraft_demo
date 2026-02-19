@@ -4,9 +4,8 @@ import { PlayerParams, RayCenterScreen } from "./literal";
 import { getNearChunks } from "./utils";
 import { GameLayers } from "../engine";
 import { ToolBar } from "../gui";
-import { BlockID } from "../Block";
+import { BlockFactory, BlockID } from "../Block";
 import { worldToCeilBlockCoord } from "../world/chunk/utils";
-import type { IUVRange } from "./interface";
 
 /**@desc 玩家的拾取/选择器 */
 export class Selector {
@@ -69,32 +68,17 @@ export class Selector {
             Selector._updateSelectCoord(intersection0, chunkObject);
             const pos = Selector.getBlockPositionInWorld();
             if (!pos) {
-                // console.warn("Selector.getBlockPositionInWorld() return null");
+                console.warn("Selector.getBlockPositionInWorld() return null");
                 return Selector._unSelect(selectionHelper); 
             }   
 
             const selectedBlockData = world.getBlockData(pos[0], pos[1], pos[2]);
             if (!selectedBlockData) {
-                // console.warn("world.getBlockData() return null");
+                console.warn("world.getBlockData() return null");
                 return Selector._unSelect(selectionHelper);
             }
-
             const blockId = selectedBlockData.blockId;
-            let uvRange: IUVRange | null = null;
-            if (blockId === BlockID.ShortGrass) {
-                uvRange = {
-                    x: [0.1, 0.9],
-                    y: [0, 0.45],
-                    // x: [0, 1],
-                    // y: [0, 1],
-                };
-            } else if (blockId === BlockID.FlowerDandelion || blockId === BlockID.FlowerRose) {
-                uvRange = {
-                    x: [0.3, 0.7],
-                    y: [0, 0.6],
-                };
-            }
-
+            const uvRange = BlockFactory.getBlock(blockId)?.uvRange;
             let selectedIntersection = intersection0;
             
             // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
@@ -117,7 +101,6 @@ export class Selector {
             }
 
             Selector.selectedMesh = selectedIntersection.object;
-            // Get the chunk associated with the seclected block
             // Update the block placement coordinates
             Selector._updateBlockPlacementCoords(selectedIntersection);
             // Update the selection helper
@@ -138,8 +121,6 @@ export class Selector {
     private static _unSelect(selectionHelper: THREE.Mesh) {
         // 没有选中的方块时，将选中坐标设为 null
         PlayerParams.selectedCoords = null;
-        // 没有选中的方块时，将选中方块大小设为 null
-        // PlayerParams.selectedBlockSize = null;
         selectionHelper.visible = false;
     }
 
@@ -164,10 +145,6 @@ export class Selector {
         // Then apply transformation matrix of block to get block coords
         PlayerParams.selectedCoords = chunk.position.clone();
         PlayerParams.selectedCoords.applyMatrix4(Selector._tempBlockMatrix);
-
-        // Get the bounding box of the selected block
-        // const boundingBox = new THREE.Box3().setFromObject(intersection.object);
-        // PlayerParams.selectedBlockSize = boundingBox.getSize(new THREE.Vector3());
     }
 
     /**
@@ -196,10 +173,11 @@ export class Selector {
         } else if (selectedBlockId === BlockID.ShortGrass) {
             selectionHelper.scale.set(0.8, 0.4, 0.8);
             selectionHelper.position.y -= 0.3;
-        }  else {
+        } else if (selectedBlockId === BlockID.TallGrass) {
+            selectionHelper.scale.set(0.75, 1, 0.75);
+        } else {
             selectionHelper.scale.set(1, 1, 1);
-        } 
-        // TODO TallGrass 草方块的选择框需要调整大小
+        }
         selectionHelper.visible = true;
     }
 }

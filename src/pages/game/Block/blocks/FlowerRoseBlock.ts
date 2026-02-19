@@ -19,6 +19,10 @@ export class FlowerRoseBlock extends Block {
   dropLimit = DropLimit + 0.25;
   /**@desc 当前方块是否可交互 */
   interactive = true;
+  uvRange = {
+    x: [0.3, 0.7],
+    y: [0, 0.6],
+  }
 }
 
 export const getEmptyFlowerRoseBlockData = () => {

@@ -19,6 +19,7 @@ export class GrassBlock extends Block {
   dropLimit = DropLimit;
   /**@desc 当前方块是否可交互 */
   interactive = true;
+  uvRange = undefined;
 }
 
 export const getEmptyGrassBlockData = () => {

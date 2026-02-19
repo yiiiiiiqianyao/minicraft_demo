@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { BlockID } from "..";
+import type { IUVRange } from "../../player/interface";
 
 // 渲染的几何形状类型
 export enum RenderGeometry {
@@ -27,4 +28,6 @@ export abstract class Block {
   abstract interactive: boolean;
   /**@desc 当前方块被破坏需要的次数 */
   abstract breakCount: number;
+  /**@desc 当前方块的uv范围 */
+  abstract uvRange?: IUVRange;
 }

@@ -19,6 +19,10 @@ export class ShortGrassBlock extends Block {
   dropLimit = DropLimit;
   /**@desc 当前方块是否可交互 */
   interactive = true;
+  uvRange = {
+    x: [0.1, 0.9],
+    y: [0, 0.45],
+  };
 }
 
 export const getEmptyShortGrassBlockData = () => {

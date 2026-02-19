@@ -22,6 +22,7 @@ export const CoalOreBlock = class extends OreBlock {
   dropLimit = DropLimit;
   /**@desc 当前方块是否可交互 */
   interactive = true;
+  uvRange = undefined;
 };
 
 export const getEmptyCoalOreBlockData = () => {

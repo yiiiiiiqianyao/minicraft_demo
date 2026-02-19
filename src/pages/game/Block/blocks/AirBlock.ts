@@ -14,6 +14,7 @@ export class AirBlock extends Block {
   dropLimit = undefined;
   /**@desc 当前方块是否可交互 */
   interactive = false;
+  uvRange = undefined;
 }
 
 export const getEmptyAirBlockData = () => {
