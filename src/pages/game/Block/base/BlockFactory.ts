@@ -7,7 +7,7 @@ import { FlowerDandelionBlock } from "../blocks/FlowerDandelionBlock";
 import { FlowerRoseBlock } from "../blocks/FlowerRoseBlock";
 import { GrassBlock } from "../blocks/GrassBlock";
 import { IronOreBlock } from "../blocks/IronOreBlock";
-import { LeavesBlock } from "../blocks/LeavesBlock";
+import { OakLeavesBlock } from "../blocks/LeavesBlock";
 import { OakLogBlock } from "../blocks/OakLogBlock";
 import { BirchBlock } from "../blocks/BirchBlock";
 import { RedstoneLampBlock } from "../blocks/RedstoneLampBlock";
@@ -20,7 +20,7 @@ import { ShortGrassBlock } from "../blocks/ShortGrassBlock";
 
 /** @desc 方块工厂类，用于创建方块实例 Flyweight pattern to avoid creating new block instances */
 export class BlockFactory {
-  private static blockTypes: { [id: number]: any } = {
+  private static blockTypes: { [id: string]: any } = {
     [BlockID.Air]: AirBlock,
     [BlockID.GrassBlock]: GrassBlock,
     [BlockID.Stone]: StoneBlock,
@@ -30,7 +30,7 @@ export class BlockFactory {
     [BlockID.IronOre]: IronOreBlock,
     [BlockID.OakLog]: OakLogBlock,
     [BlockID.BirchLog]: BirchBlock,
-    [BlockID.Leaves]: LeavesBlock,
+    [BlockID.OakLeaves]: OakLeavesBlock,
     [BlockID.TallGrass]: TallGrassBlock,
     [BlockID.ShortGrass]: ShortGrassBlock,
     [BlockID.FlowerRose]: FlowerRoseBlock,
@@ -40,7 +40,7 @@ export class BlockFactory {
     [BlockID.CraftingTable]: CraftBlock,
   };
 
-  private static blockInstances: { [id: number]: Block } = {};
+  private static blockInstances: { [id: string]: Block } = {};
 
   static getBlock(id: BlockID): Block {
     if (!this.blockInstances[id]) {
@@ -60,9 +60,5 @@ export class BlockFactory {
   static getBlockUIImg(id: BlockID) {
     const blockClass = BlockFactory.getBlock(id);
     return blockClass.uiTexture;
-  }
-
-  static getAllBlocks(): Block[] {
-    return Object.keys(this.blockTypes).map((id) => this.getBlock(+id));
   }
 }

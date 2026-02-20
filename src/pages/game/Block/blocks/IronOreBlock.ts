@@ -17,7 +17,7 @@ export const IronOreBlock = class extends OreBlock {
   transparent = false;
   canPassThrough = false;
   canDrop = true;
-  breakCount = 1;
+  breakCount = 10;
   dropBlockId = BlockID.IronOre;
   dropLimit = DropLimit;
   /**@desc 当前方块是否可交互 */

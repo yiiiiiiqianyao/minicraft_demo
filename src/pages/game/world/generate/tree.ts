@@ -5,7 +5,7 @@ import type { IInstanceData } from "../interface";
 import { ChunkParams } from "../chunk/literal";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 import { getEmptyOkaBlockData } from "../../Block/blocks/OakLogBlock";
-import { getEmptyLeaveBlockData } from "../../Block/blocks/LeavesBlock";
+import { getEmptyOakLeaveBlockData } from "../../Block/blocks/LeavesBlock";
 import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 import { DevControl } from "../../dev";
 
@@ -101,18 +101,18 @@ export const generateTrees = (
         for (let i = 0; i < 4; i++) {
           if (i === 0) {
             // first layer above the height of tree and has 5 leaves in a + shape
-            input[baseX][topY][baseZ] = getEmptyLeaveBlockData();
-            input[baseX + 1][topY][baseZ] = getEmptyLeaveBlockData();
-            input[baseX - 1][topY][baseZ] = getEmptyLeaveBlockData();
-            input[baseX][topY][baseZ + 1] = getEmptyLeaveBlockData();
-            input[baseX][topY][baseZ - 1] = getEmptyLeaveBlockData();
+            input[baseX][topY][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX + 1][topY][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX - 1][topY][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX][topY][baseZ + 1] = getEmptyOakLeaveBlockData();
+            input[baseX][topY][baseZ - 1] = getEmptyOakLeaveBlockData();
           } else if (i === 1) {
             // base layer
-            input[baseX][topY - i][baseZ] = getEmptyLeaveBlockData();
-            input[baseX + 1][topY - i][baseZ] = getEmptyLeaveBlockData();
-            input[baseX - 1][topY - i][baseZ] = getEmptyLeaveBlockData();
-            input[baseX][topY - i][baseZ + 1] = getEmptyLeaveBlockData();
-            input[baseX][topY - i][baseZ - 1] = getEmptyLeaveBlockData();
+            input[baseX][topY - i][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX + 1][topY - i][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX - 1][topY - i][baseZ] = getEmptyOakLeaveBlockData();
+            input[baseX][topY - i][baseZ + 1] = getEmptyOakLeaveBlockData();
+            input[baseX][topY - i][baseZ - 1] = getEmptyOakLeaveBlockData();
 
             // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk
             const minR = trees.canopy.size.min;
@@ -131,7 +131,7 @@ export const generateTrees = (
                 }
 
                 if (World.rng.random() > 0.5) {
-                  input[baseX + x][topY - i][baseZ + z] = getEmptyLeaveBlockData();
+                  input[baseX + x][topY - i][baseZ + z] = getEmptyOakLeaveBlockData();
                 }
               }
             }
@@ -142,11 +142,7 @@ export const generateTrees = (
                   continue;
                 }
 
-                input[baseX + x][topY - i][baseZ + z] = {
-                  blockId: BlockID.Leaves,
-                  instanceIds: [],
-                  blockData: {},
-                };
+                input[baseX + x][topY - i][baseZ + z] = getEmptyOakLeaveBlockData();
               }
             }
 
@@ -154,7 +150,7 @@ export const generateTrees = (
             for (const x of [-2, 2]) {
               for (const z of [-2, 2]) {
                 // 避免影响到别的 block
-                if (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.Leaves && World.rng.random() > 0.5) {
+                if (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.OakLeaves && World.rng.random() > 0.5) {
                   input[baseX + x][topY - i][baseZ + z] = {
                     blockId: BlockID.Air,
                     instanceIds: [],

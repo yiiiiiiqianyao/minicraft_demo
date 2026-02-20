@@ -2,38 +2,31 @@ import * as THREE from "three";
 
 /**@desc 初始化顶面、侧面、底面 uv 取不同值的几何体，用于实例化渲染  */
 export function initTopSideGeometry(size = 1) {
-    const geometry = new THREE.BoxGeometry(size, size, size);
-    // TODO. 设置 .toNonIndexed()
+    let geometry: THREE.BufferGeometry = new THREE.BoxGeometry(size, size, size);
     geometry.name = 'top_side_block';
-    // geometry.setAttribute('uv', new THREE.BufferAttribute(uvAttribute.array, 2));
-    const uvAttribute = geometry.getAttribute('uv') as THREE.BufferAttribute;
+    geometry = geometry.toNonIndexed()
+    // TODO 加上 attribute 偏移参数
+    const uv = geometry.getAttribute('uv') as THREE.BufferAttribute
+    const normal = geometry.getAttribute('normal') as THREE.BufferAttribute
 
-    const setFaceSlice = (faceIndex: number, sliceStart: number) => {
-        const sliceWidth = 1 / 3
+    const sliceW = 1 / 3
 
-        for (let i = 0; i < 4; i += 1) {
-            const vertexIndex = faceIndex * 4 + i
-            const u = uvAttribute.getX(vertexIndex)
-            const v = uvAttribute.getY(vertexIndex)
+    for (let i = 0; i < uv.count; i += 1) {
+        const ny = normal.getY(i)
 
-            const mappedU = sliceStart + u * sliceWidth
-            const mappedV = v // 保持 V 不变，确保草带等垂直细节不会上下颠倒
-
-            uvAttribute.setXY(vertexIndex, mappedU, mappedV)
+        // 默认侧面：中间 1/3
+        let start = 1 / 3
+        if (ny > 0.5) {
+        start = 0 // 顶面：左 1/3
+        } else if (ny < -0.5) {
+        start = 2 / 3 // 底面：右 1/3
         }
+
+        const u = uv.getX(i)
+        const v = uv.getY(i)
+
+        uv.setXY(i, start + u * sliceW, v) // 仅重新映射 U，保持 V 不变
     }
-
-    // 顶面 (+Y, faceIndex: 2) 使用左侧 1/3
-    setFaceSlice(2, 0.0)
-
-    // 四个侧面 (+X/-X/+Z/-Z) 使用中间 1/3
-    ;[0, 1, 4, 5].forEach((faceIndex) => {
-        setFaceSlice(faceIndex, 1 / 3)
-    })
-
-    // 底面 (-Y, faceIndex: 3) 使用右侧 1/3
-    setFaceSlice(3, 2 / 3)
-
-    uvAttribute.needsUpdate = true;
+    uv.needsUpdate = true
     return geometry;
 }

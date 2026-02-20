@@ -33,7 +33,7 @@ export const generateCrossPlants = (
          * 2. 树叶的下方可能张蘑菇
         */ 
       //  TODO 后续加上蘑菇
-        if (input[x][y][z].blockId === BlockID.Leaves) break;
+        if (input[x][y][z].blockId === BlockID.OakLeaves) break;
 
         // 草会长在草方块上
         if (input[x][y][z].blockId === BlockID.GrassBlock) {

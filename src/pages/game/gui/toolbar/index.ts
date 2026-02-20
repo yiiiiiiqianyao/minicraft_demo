@@ -8,16 +8,7 @@ import { ToolBarFill, ToolBarFillActive, ToolBatContainsAvailable } from "./util
 
 /**@desc 玩家物品栏 */
 export class ToolBar {
-    // TODO 需要增加计数能力 一个物品栏中相同物品最多能放置 64 个，待升级为 IToolBarItem
     static toolbar: IToolBarItem[] = [
-      // BlockID.Dirt,
-      // BlockID.Stone,
-      // BlockID.StoneBrick,
-      // BlockID.RedstoneLamp,
-      // BlockID.IronOre,
-      // BlockID.OakLog,
-      // BlockID.Leaves,
-      // BlockID.FlowerRose
       {
         blockId: BlockID.Air,
         count: 1,

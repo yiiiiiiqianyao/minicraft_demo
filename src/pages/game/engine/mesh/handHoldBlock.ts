@@ -36,7 +36,7 @@ export function initCoalOreMesh() {
     return setUp(mesh);
 }
 
-/**@desc 树叶块 */
+/**@desc 树叶块: 橡木树叶、白桦木树叶... */
 export function initLeavesBlockMesh() {
     const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, LeavesMaterial);

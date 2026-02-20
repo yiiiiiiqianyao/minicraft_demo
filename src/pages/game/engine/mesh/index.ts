@@ -25,7 +25,7 @@ export class MeshPool {
             mesh = initStoneBlockMesh();
         } else if(type === MeshType.CoalOreBlock) {
             mesh = initCoalOreMesh();
-        } else if(type === MeshType.LeavesBlock) {
+        } else if(type === MeshType.OakLeavesBlock) {
             mesh = initLeavesBlockMesh();
         } else if(type === MeshType.OakLogBlock) {
             mesh = initOakLogHandMesh();

@@ -29,7 +29,7 @@ export const generateFlowers = (
         }
 
         // 如果接触到树叶，停止生长，因为花朵不能在树底下生长
-        if (input[x][y][z].blockId === BlockID.Leaves) {
+        if (input[x][y][z].blockId === BlockID.OakLeaves) {
           break;
         }
 
