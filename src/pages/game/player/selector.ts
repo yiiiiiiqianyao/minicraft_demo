@@ -84,6 +84,7 @@ export class Selector {
             // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
             //     console.log(intersection0.uv);
             // };
+            // TODO short grass 的拾取待优化
             // 根据 uv 优化拾取
             if (uvRange && intersection0.uv) {
                 const { x: uvXRange, y: uvYRange } = uvRange;
@@ -129,7 +130,6 @@ export class Selector {
         if (intersection.instanceId == null) return;
 
         // TODO 目前只能选中 InstancedMesh 类型的方块 后续待扩展支持其他类型 object / mesh 如不同的生物
-
         // Get the transformation matrix for the selected block
         (intersection.object as THREE.InstancedMesh).getMatrixAt(
             intersection.instanceId,
@@ -153,7 +153,6 @@ export class Selector {
     private static _updateBlockPlacementCoords(intersection: THREE.Intersection) {
         // 未选中方块 或 缺少法线 时 不更新方块放置坐标
         if (!PlayerParams.selectedCoords || !intersection.normal) return;
-        // TODO 待优化
         // TODO flower 类型的方块 放置坐标位置错误 后续需要修复
         if (ToolBar.activeBlockId !== undefined && ToolBar.activeBlockId !== BlockID.Air) {
             // Update block placement coords to be 1 block over in the direction of the normal       
@@ -171,8 +170,8 @@ export class Selector {
             selectionHelper.scale.set(0.3, 0.6, 0.3);
             selectionHelper.position.y -= 0.2;
         } else if (selectedBlockId === BlockID.ShortGrass) {
-            selectionHelper.scale.set(0.8, 0.4, 0.8);
-            selectionHelper.position.y -= 0.3;
+            selectionHelper.scale.set(0.7, 0.3, 0.7);
+            selectionHelper.position.y -= 0.4;
         } else if (selectedBlockId === BlockID.TallGrass) {
             selectionHelper.scale.set(0.75, 1, 0.75);
         } else {

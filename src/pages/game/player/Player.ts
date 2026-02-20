@@ -23,16 +23,14 @@ export class Player extends PlayerGroup {
   input = new THREE.Vector3();
   /**@desc 玩家是否处于冲刺状态 */ 
   isSprinting = false;
-  lastStepSoundPlayed = 0;
   world: World;
   keyboardInput = new KeyboardInput(this);
   boundsHelper: THREE.Mesh;
   velocity = new THREE.Vector3();
   private _worldVelocity = new THREE.Vector3();
-
-  /*
-   * Returns the velocity of the player in world coordinates
-   */
+  /** @desc 上一次播放行走音效的时刻 */
+  private _lastStepSoundPlayed = 0;
+  /**@desc Returns the velocity of the player in world coordinates */
   get worldVelocity() {
     this._worldVelocity.copy(this.velocity);
     this._worldVelocity.applyEuler(
@@ -95,9 +93,9 @@ export class Player extends PlayerGroup {
     // play step sound 在地面上发生移动的时候
     if (this.onGround && this.input.length() > 0) {
       const minTimeout = this.isSprinting ? 300 : 400;
-      if (performance.now() - this.lastStepSoundPlayed > minTimeout) {
+      if (performance.now() - this._lastStepSoundPlayed > minTimeout) {
         AudioManager.playWalkSound(blockUnderneath);
-        this.lastStepSoundPlayed = performance.now();
+        this._lastStepSoundPlayed = performance.now();
       }
     }
     // TODO 在角色起跳之前需要判断角色上方是否有足够的空间

@@ -1,5 +1,3 @@
-import * as THREE from 'three';
-
 import { loadTexture } from "../engine/utils";
 import GrassBlock from '../../../assets/textures/blocks/grass_block.png';
 import Dirt from '../../../assets/textures/blocks/dirt.png';
@@ -27,7 +25,7 @@ import CraftingTableSide from '../../../assets/textures/crafting_table/crafting_
 import CraftingTableTop from '../../../assets/textures/crafting_table/crafting_table_top.png';
 
 /**@desc atlas 合图 */
-import Combine from '../../../assets/textures/combine.png';
+// TODO 图集
 /**@desc 挖掘进度效果  Crack  Crack  Crack */
 import Break from '../../../assets/textures/blocks/block_crack.png';
 
@@ -56,8 +54,4 @@ export const textures = {
   leaves: loadTexture(Leaves),
   // 裂开的方块
   breakBlock: loadTexture(Break),
-  combine: loadTexture(Combine),
 };
-
-textures.combine.wrapS = THREE.ClampToEdgeWrapping;
-textures.combine.wrapT = THREE.ClampToEdgeWrapping;
