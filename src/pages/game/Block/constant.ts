@@ -7,10 +7,11 @@ export enum BlockID {
   CoalOre = 'CoalOre',
   IronOre = 'IronOre',
   Bedrock = 'Bedrock',
-  OakLog = 'OakLog',
-  OakLogSapling = 'OakLogSapling', // 橡木树苗
   BirchLog = 'BirchLog', // 白桦木方块
   BirchLogSapling = 'BirchLogSapling', // 白桦木树苗
+  BirchLeaves = 'BirchLeaves', // 白桦木树叶
+  OakLog = 'OakLog', // 橡木方块
+  OakLogSapling = 'OakLogSapling', // 橡木树苗
   OakLeaves = 'OakLeaves', // 橡木树叶方块
   Apple = 'Apple', // 苹果 树叶方块可能掉落
   TallGrass = 'TallGrass',

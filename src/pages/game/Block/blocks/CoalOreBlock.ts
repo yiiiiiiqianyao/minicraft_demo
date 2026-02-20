@@ -1,7 +1,7 @@
 import { RenderGeometry } from "../base/Block";
 import { OreBlock } from "../base/OreBlock";
 import { BlockID } from "../constant";
-import { oreConfig } from "../../world/generate/constant";
+import { OreConfig } from "../../world/generate/constant";
 import { CoalOreMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
@@ -9,8 +9,8 @@ import { DropLimit } from "../../world/drop/literal";
 /**@desc 煤炭矿石块 */
 export const CoalOreBlock = class extends OreBlock {
   id = BlockID.CoalOre;
-  scale = oreConfig["coal"].scale;
-  scarcity = oreConfig["coal"].scarcity;
+  scale = OreConfig["coal"].scale;
+  scarcity = OreConfig["coal"].scarcity;
   material = CoalOreMaterial;
   uiTexture = ItemImage.coal;
   geometry = RenderGeometry.Cube;
@@ -18,6 +18,7 @@ export const CoalOreBlock = class extends OreBlock {
   canPassThrough = false;
   canDrop = true;
   breakCount = 10;
+  // TODO 掉落煤碳
   dropBlockId = BlockID.CoalOre;
   dropLimit = DropLimit;
   /**@desc 当前方块是否可交互 */

@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { World } from "../World";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
 import type { IInstanceData } from "../interface";
-import { oreConfig } from "./constant";
+import { OreConfig } from "./constant";
 import { BlockFactory, BlockID } from "../../Block";
 import { getEmptyStoneBlockData } from "../../Block/blocks/StoneBlock";
 import { ChunkParams } from "../chunk/literal";
@@ -36,7 +36,7 @@ export const generateResource = (
       return;
   }
 
-  for (const [_, config] of Object.entries(oreConfig)) {
+  for (const [_, config] of Object.entries(OreConfig)) {
       const value = World.simplex.noise3d(
       (worldX) / config.scale.x,
       (worldY) / config.scale.y,
