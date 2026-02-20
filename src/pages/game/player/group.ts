@@ -38,10 +38,11 @@ export class PlayerGroup {
     constructor(scene: Scene) {
         this.scene = scene;
         this.initBasePoint();
-        this.initHand();
+        this.initHandGroup();
     }
 
-    initBasePoint() {
+    /**@desc 初始化相机*/
+    private initBasePoint() {
         const camera = initPlayerCamera();
         const cameraHelper = new THREE.CameraHelper(camera);
         cameraHelper.layers.set(GameLayers.One);
@@ -53,7 +54,8 @@ export class PlayerGroup {
         this.scene.add(cameraHelper);
     }
 
-    initHand() {
+    /**@desc 初始化小手*/
+    private initHandGroup() {
         const point = new THREE.Group();
         point.position.set(0.3, -0.2, -0.2);
         point.rotation.set(
@@ -62,23 +64,20 @@ export class PlayerGroup {
             handleOriginRotationZ,
         );
         this.basePoint.add(point);
-
         const handPoint = new THREE.Group();
         point.add(handPoint);
-
         this.handPoint = handPoint;
-        // this.updateHand(null);
     }
 
     /**
      * @desc 根据 blockID 更新手的模型
      */
     updateHand() {
-        const blockID = ToolBar.activeBlockId
+        const blockID = ToolBar.activeBlockId;
         if (this.currentHandBlockID === blockID) return;
         this.currentHandBlockID = blockID;
         this.handPoint.clear();
-        if (!blockID) {
+        if (!blockID || blockID === BlockID.Air) {
             this.handPoint.add(MeshPool.getHandMesh(MeshType.Hand) as THREE.Mesh);
         } else {
             // TODO 待补全
