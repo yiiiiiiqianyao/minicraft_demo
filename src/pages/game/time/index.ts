@@ -1,12 +1,13 @@
 import * as THREE from "three";
 import { SunSettings } from "../sky/literal";
-import { updateDayTimeGUI } from "../gui";
 import { hourDuration } from "./day";
 import { DevControl } from "../dev";
+import { EventSystem } from "../../EventSystem";
 
 const GameClock = new THREE.Clock();
 /**@desc 游戏的时间管理类 */
 export class GameTimeManager {
+    private static _hour: number = 0;
     /**@desc 上一帧的时间 */
     private static previousTime = 0;
     /**@desc 游戏开始的时间 24 小时制 */
@@ -46,7 +47,9 @@ export class GameTimeManager {
 
     static updateDayHourGUI() {
         const hour = Math.floor(GameTimeManager.currentDayTime / hourDuration);
-        updateDayTimeGUI(hour);
+        if (GameTimeManager._hour === hour) return;
+        GameTimeManager._hour = hour;
+        EventSystem.broadcast('UpdateHour', hour);
     }
 }
 

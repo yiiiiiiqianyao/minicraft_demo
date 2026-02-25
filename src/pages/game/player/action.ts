@@ -13,7 +13,6 @@ import { Selector } from "./selector";
  * @desc 处理玩角色的动作 & 玩家的交互操作
  */
 export class Action {
-
     /** @desc 处理角色的动作 */
     static handlePlayerEvent(player: Player, eventKey: PlayerEventKey, isKeyDown = true) {
         switch (eventKey) {
