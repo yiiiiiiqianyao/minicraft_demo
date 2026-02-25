@@ -18,12 +18,10 @@ export class DevControl {
     static renderDistance = GlobalProps.render_distance ? Number(GlobalProps.render_distance) : undefined;
     /** @desc 渲染的相机类型 */
     static view = -1;
-    // TODO 待完善合并 instance 的渲染
-    static instanceMerge = GlobalProps.instance_merge === '1' ? true : false;
 
     /** @desc 更新露出展示的开发信息 */
     static update(renderer: THREE.WebGLRenderer) {
-        if (DevUpdateCount < 3) {
+        if (DevUpdateCount < 5) {
             DevUpdateCount++;
         } else {
             DevUpdateCount = 0;

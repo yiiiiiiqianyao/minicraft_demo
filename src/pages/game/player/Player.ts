@@ -3,7 +3,6 @@ import * as THREE from "three";
 import { AudioManager } from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { World } from "../world/World";
-import { updatePositionGUI } from "../gui";
 import { PlayerInitPosition, PlayerParams } from "./literal";
 import { KeyboardInput } from "./keyboard";
 import { MouseInput } from "./mouse";
@@ -17,6 +16,7 @@ import { Selector } from "./selector";
 import { PlayerGroup } from "./group";
 import { getBlockUpperNeath } from "./utils";
 import { BreakBlockHelper } from "../helper/breakBlockHelper";
+import { emitEvent } from "../../EventSystem";
 
 export class Player extends PlayerGroup {
   onGround = false;
@@ -151,7 +151,8 @@ export class Player extends PlayerGroup {
     const ceilWorldBlockCoord = worldToCeilBlockCoord(x, y, z);
     updateWorldBlockCoordGUI(ceilWorldBlockCoord[0], ceilWorldBlockCoord[1], ceilWorldBlockCoord[2]);
 
-    updatePositionGUI(this.position);
+    // 更新玩家位置
+    emitEvent('UpdatePlayerPosition', [x, y, z]);
     // 角色移动后检测吸收掉落的物品
     Action.absorbDrops(this.world);
   }

@@ -1,3 +1,8 @@
+import { debounce } from "lodash";
+
+export const emitEvent = debounce((event: string, params: any) => {
+  EventSystem.broadcast(event, params);
+}, 6);
 /**
  * 事件总线
  */

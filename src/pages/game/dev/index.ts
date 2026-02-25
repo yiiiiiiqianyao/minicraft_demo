@@ -1,42 +1,13 @@
 import * as THREE from "three";
 // @ts-expect-error import umi
 import Stats from "three/examples/jsm/libs/stats.module";
-
-let triangleCount: HTMLElement | null = null;
-let triangleCountInnerHtml = '';
-let renderCalls:  HTMLElement | null = null;
-let renderCallsInnerHtml = '';
-function numberWithCommas(x: number): string {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+import { emitEvent } from "../../EventSystem";
 
 export function updateRenderInfoGUI(renderer: THREE.WebGLRenderer) {
-    // get element
-    if(!triangleCount) {
-        triangleCount = document.getElementById("triangle-count");
-    }
-    if(!renderCalls) {
-        renderCalls = document.getElementById("render-calls");
-    }
-    // update text
-    if (triangleCount) {
-      const inner = `triangles: ${numberWithCommas(
-        renderer.info.render.triangles
-      )}`;
-      if(inner !== triangleCountInnerHtml) {
-        triangleCountInnerHtml = inner;
-        triangleCount.innerHTML = inner;
-      }
-    }
-    if (renderCalls) {
-      const inner = `draw calls: ${numberWithCommas(
-        renderer.info.render.calls
-      )}`;
-      if(inner !== renderCallsInnerHtml) {
-        renderCallsInnerHtml = inner;
-        renderCalls.innerHTML = inner;
-      }
-    }
+    emitEvent('UpdateRender', {
+      triangles: renderer.info.render.triangles,
+      calls: renderer.info.render.calls,
+    });
 }
 
 export function updateChunkCoordGUI(chunkX: number, chunkZ: number) {
