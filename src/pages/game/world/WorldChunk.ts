@@ -126,12 +126,11 @@ export class WorldChunk extends THREE.Group {
     if (this.meshes[blockId]) return this.meshes[blockId];
     const blockClass = BlockFactory.getBlock(blockId);
     const mesh = initChunkMesh(blockClass, this.helperColor as THREE.Color);
-    mesh.name = blockClass.constructor.name;
+    mesh.name = blockClass.id;
     mesh.count = 0;
     mesh.castShadow = !blockClass.canPassThrough;
     mesh.receiveShadow = true;
     mesh.matrixAutoUpdate = false;
-    mesh.userData.blockId = blockId;
     mesh.userData.castShadow = !blockClass.canPassThrough;
     mesh.userData.interactive = blockClass.interactive;
     this.add(mesh);
@@ -149,10 +148,14 @@ export class WorldChunk extends THREE.Group {
     }
     // TODO 后续加上其他的 block 类型
     // BlockID.GrassBlock
-    // if (blockId === BlockID.OakLog || blockId === BlockID.BirchLog) {
-    //   this.meshes[BlockID.OakLog] = mesh;
-    //   this.meshes[BlockID.BirchLog] = mesh;
-    // }
+    if (blockId === BlockID.OakLog || 
+      blockId === BlockID.BirchLog ||
+      blockId === BlockID.GrassBlock
+    ) {
+      this.meshes[BlockID.OakLog] = mesh;
+      this.meshes[BlockID.BirchLog] = mesh;
+      this.meshes[BlockID.GrassBlock] = mesh;
+    }
     return mesh;
   }
 
@@ -187,6 +190,7 @@ export class WorldChunk extends THREE.Group {
     // Safety check that we aren't adding a block for one that already exists
     const cacheBlockData = this.getBlockData(x, y, z);
     if (cacheBlockData?.blockId === BlockID.Air) {
+      // console.log('cacheBlockData', cacheBlockData);
       const addBlockClass = BlockFactory.getBlock(blockId);
       this.setBlockData(x, y, z, {
         blockId,
@@ -221,15 +225,7 @@ export class WorldChunk extends THREE.Group {
     const blockId = block.blockId;
     AudioManager.playBlockSound(blockId);
     this.deleteBlockInstance(x, y, z, block);
-    
-    // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
-    const removeBlockClass = BlockFactory.getBlock(blockId);
-    if(emitDrop && removeBlockClass.canDrop && removeBlockClass.dropBlockId) {
-      if (!this.dropGroup) this.initDropGroup();
-      // 触发掉落物品
-      this.dropGroup!.drop(removeBlockClass.dropBlockId, x, y, z, true);
-    }    
-
+       
     this.setBlockData(x, y, z, {
       blockId: BlockID.Air,
       instanceIds: [],
@@ -248,6 +244,14 @@ export class WorldChunk extends THREE.Group {
       blockData: {},
     }
     );
+
+     // TODO 暂时简单 canDrop 判断是否可以掉落物品，后续需要精细化处理如 掉落物品的数量和概率
+    const removeBlockClass = BlockFactory.getBlock(blockId);
+    if(emitDrop && removeBlockClass.canDrop && removeBlockClass.dropBlockId) {
+      if (!this.dropGroup) this.initDropGroup();
+      // 触发掉落物品
+      this.dropGroup!.drop(removeBlockClass.dropBlockId, x, y, z, true);
+    }    
   }
 
   /**
@@ -255,6 +259,7 @@ export class WorldChunk extends THREE.Group {
    */
   addBlockInstance(x: number, y: number, z: number) {
     const blockData = this.getBlockData(x, y, z);
+    // console.log('add block instance', blockData);
     // TODO 在增加 block instance 的同时 需要更新 block data 的数据
     // If the block is not air and doesn't have an instance id, create a new instance
     if (
@@ -284,7 +289,7 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**
-   * @desc 覆盖式删除
+   * @desc 覆盖式删除 只删除 mesh
    * Removes the mesh instance associated with `block` by swapping it with the last instance and decrementing instance count
    */
   deleteBlockInstance(x: number, y: number, z: number, deleteBlockData?: IInstanceData) {
@@ -327,11 +332,11 @@ export class WorldChunk extends THREE.Group {
         mesh.geometry.attributes.aCrossOffset.array[instanceId * 2 + 1] = mesh.geometry.attributes.aCrossOffset.array[lastInstanceId * 2 + 1];      
         mesh.geometry.attributes.aCrossOffset.needsUpdate = true; 
       } else if (isTopSideBlockSupportCombine(blockId)) {
-        // TODO 后续替换 xxx 属性值
-        // const lastInstanceId = mesh.count - 1;
-        // mesh.geometry.attributes.aTopOffset.array[instanceId * 2] = mesh.geometry.attributes.aTopOffset.array[lastInstanceId * 2];
-        // mesh.geometry.attributes.aTopOffset.array[instanceId * 2 + 1] = mesh.geometry.attributes.aTopOffset.array[lastInstanceId * 2 + 1];      
-        // mesh.geometry.attributes.aTopOffset.needsUpdate = true; 
+        // 替换 aTopSideOffset 属性值
+        const lastInstanceId = mesh.count - 1;
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2] = mesh.geometry.attributes.aTopSideOffset.array[lastInstanceId * 2];
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = mesh.geometry.attributes.aTopSideOffset.array[lastInstanceId * 2 + 1];      
+        mesh.geometry.attributes.aTopSideOffset.needsUpdate = true; 
       }
 
       // Decrement instance count
@@ -362,14 +367,7 @@ export class WorldChunk extends THREE.Group {
       // 更新最后一个 instance 对应 block data 中的 breakCount 数据
       breakCount: BlockFactory.getBlock(blockId).breakCount,
     };
-    // this.setBlockInstanceIds(x, y, z, []);
-    this.deleteBlockData(x, y, z);
-  }
-
-  deleteBlockData(x: number, y: number, z: number) {
-    const emptyAirBlock = getEmptyAirBlockData();
-    this.data[x][y][z] = emptyAirBlock;
-    this.dataStore.set(this.position.x, this.position.z, x, y, z, emptyAirBlock);
+    this.setBlockInstanceIds(x, y, z, []);
   }
 
   /**

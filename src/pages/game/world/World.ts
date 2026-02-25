@@ -308,7 +308,7 @@ export class World extends THREE.Group {
     const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
     if (!blockData) return false;
     const blockId = blockData.blockId;
-
+    // console.log('blockId', blockId);
     AudioManager.playBlockSound(blockId);
 
     // 不能破坏基岩 bedrock
@@ -319,6 +319,7 @@ export class World extends THREE.Group {
       return true;
     } else {
       // TODO 暂时认为一次 dig 值为 1，后续增加工具 如稿子 则修改挖掘进度
+      // TODO 增加挖掘的粒子效果
       const hitNum = 1;
       let blockBreakCount = blockData.blockData.breakCount as number;
       blockBreakCount -= hitNum;
@@ -331,11 +332,6 @@ export class World extends THREE.Group {
   }
 
   updateBlockType(x: number, y: number, z: number, block: BlockID) {
-    // const coords = worldToChunkCoords(x, y, z);
-    // const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
-    // if (chunk && chunk.loaded) {
-    //   chunk.updateBlockType(coords.block.x, coords.block.y, coords.block.z, block);
-    // }
     // TODO 暂时直接执行 先移除旧方块 再添加新方块 后续优化
     const emitDrop = false;
     this.removeBlock(x, y , z, emitDrop);
@@ -355,9 +351,12 @@ export class World extends THREE.Group {
     const placementGeometry = placementBlockClass.geometry;
 
     /** @desc 检查方块是否是实体方块 如 树方块、草泥土方块、石头方块等 */ 
-    const isEntityGeometry = placementGeometry === RenderGeometry.Cube || placementGeometry === RenderGeometry.Tree || placementGeometry === RenderGeometry.GrassBlock;
+    const isEntityGeometry = 
+    placementGeometry === RenderGeometry.Cube ||
+    placementGeometry === RenderGeometry.TopSide;
     if (selectedBlockId === BlockID.GrassBlock && isEntityGeometry && Selector.blockPlacementNormal.y === 1) {
       this.updateBlockType(px, py - 1, pz, BlockID.Dirt);
+      // this.updateBlockType(px, py - 1, pz, BlockID.GrassBlock);
     }
   }
 

@@ -53,3 +53,4 @@ export {
 }
 export * from './tree';
 export * from './cross_plant';
+export * from './top_side';

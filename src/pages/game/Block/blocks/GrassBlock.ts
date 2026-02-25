@@ -1,15 +1,15 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { GrassBlockMaterial } from "../../engine/material";
+import { TopSideMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 草地方块 */
 export class GrassBlock extends Block {
   id = BlockID.GrassBlock;
-  material = GrassBlockMaterial;
+  material = TopSideMaterial;
   uiTexture = ItemImage.grassBlock;
-  geometry = RenderGeometry.GrassBlock;
+  geometry = RenderGeometry.TopSide;
   transparent = false;
   canPassThrough = false;
   canDrop = true;

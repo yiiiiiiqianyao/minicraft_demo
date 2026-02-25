@@ -6,10 +6,9 @@ import { BlockID } from "../../Block";
 /**@desc 向 InstancedMesh 中添加一个方块 */
 export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x: number, y: number, z: number) {
     switch (blockClass.geometry) {
-        case RenderGeometry.Tree:
-            return InstanceMeshAddTree(mesh, blockClass.id, x, y, z);
+        case RenderGeometry.TopSide:
+            return InstanceMeshAddTopSide(mesh, blockClass.id, x, y, z);
         case RenderGeometry.Cube:
-        case RenderGeometry.GrassBlock:
             return InstanceMeshAddCube(mesh, blockClass.id, x, y, z);
         case RenderGeometry.Cross:
             return InstanceMeshAddCrossPlants(mesh, blockClass.id, x, y, z);
@@ -19,30 +18,13 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
     }
 }
 
-/**@desc 向 InstancedMesh 中添加一个树方块 */
-function InstanceMeshAddTree(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
-    const instanceId = mesh.count++;
-    const matrix = new THREE.Matrix4();
-    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
-
-    mesh.geometry.attributes.aTreeOffset.array[instanceId] = blockId === BlockID.OakLog ? 0 : 0.5;
-    mesh.geometry.attributes.aTreeOffset.needsUpdate = true;
-    mesh.setMatrixAt(instanceId, matrix);
-
-    mesh.userData.blockId = blockId;
-
-    return [instanceId];
-}
-
 /**@desc 向 InstancedMesh 中添加一个立方体方块 */
 function InstanceMeshAddCube(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
+    blockId
     const instanceId = mesh.count++;
     const matrix = new THREE.Matrix4();
     matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
     mesh.setMatrixAt(instanceId, matrix);
-
-    mesh.userData.blockId = blockId;
-
     return [instanceId];
 }
 
@@ -92,7 +74,29 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
     matrix2.makeRotationY(-Math.PI / 4);
     matrix2.setPosition(x + xOffset, y + 0.5, z + zOffset);
     mesh.setMatrixAt(instanceId2, matrix2);
-
-    mesh.userData.blockId = blockId;
     return [instanceId1, instanceId2];
+}
+
+// TODO 向 InstancedMesh 中添加一个顶部、侧面方块
+function InstanceMeshAddTopSide(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
+    const instanceId = mesh.count++;
+    const matrix = new THREE.Matrix4();
+    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
+
+    if (blockId === BlockID.OakLog) {
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = 0.4;
+    } else if (blockId === BlockID.BirchLog) {
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = 0.2;
+    } else if (blockId === BlockID.GrassBlock) {
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = 0.6;
+    } else {
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = 0;
+    }
+    mesh.geometry.attributes.aTopSideOffset.needsUpdate = true;
+    mesh.setMatrixAt(instanceId, matrix);
+    return [instanceId];
 }

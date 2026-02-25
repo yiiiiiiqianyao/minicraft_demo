@@ -58,8 +58,8 @@ export class MouseInput {
             this.handleLeftClick();
             if (!Selector.selectedMesh) return
             this.handleBreak();
-        } else if (event.button === 2 && Selector.selectedMesh) {
-            const selectedBlockId = Selector.selectedMesh.userData.blockId as BlockID;
+        } else if (event.button === 2 && Selector.selectedBlock) {
+            const selectedBlockId = Selector.selectedBlock;
             if (selectedBlockId === BlockID.CraftingTable) {
                 console.log('Right Click CraftingTable');
                 // 玩家控制器退出控制 Exits the pointer lock.

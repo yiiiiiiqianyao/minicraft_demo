@@ -19,10 +19,10 @@ export class Selector {
     static get isPlacementUpper() {
         return Selector.blockPlacementNormal.y === 1;
     }
-    /**
-     * Updates the raycaster used for block selection
-     */
+    /**@desc 选中的 mesh Updates the raycaster used for block selection*/
     static selectedMesh: THREE.Object3D | null = null;
+    /**@desc 选中的 block*/
+    static selectedBlock: BlockID | null = null;
     static get rayCaster() {
         if(!Selector._rayCaster) {
             const origin = new THREE.Vector3();
@@ -81,9 +81,7 @@ export class Selector {
             const uvRange = BlockFactory.getBlock(blockId)?.uvRange;
             let selectedIntersection = intersection0;
             
-            // if (intersection0.object.userData.blockId === BlockID.ShortGrass) {
-            //     console.log(intersection0.uv);
-            // };
+        
             // TODO short grass 的拾取待优化
             // 根据 uv 优化拾取
             if (uvRange && intersection0.uv) {
@@ -122,6 +120,7 @@ export class Selector {
     private static _unSelect(selectionHelper: THREE.Mesh) {
         // 没有选中的方块时，将选中坐标设为 null
         PlayerParams.selectedCoords = null;
+        Selector.selectedBlock = null;
         selectionHelper.visible = false;
     }
 
@@ -165,6 +164,7 @@ export class Selector {
     /**@desc 更新选择框的位置和大小 显示玩家选中方块的位置和大小 */
     private static _updateSelectionHelper(selectedBlockId: BlockID, selectionHelper: THREE.Mesh) {
         if (!PlayerParams.selectedCoords) return;
+        Selector.selectedBlock = selectedBlockId;
         selectionHelper.position.copy(PlayerParams.selectedCoords);
         if(selectedBlockId === BlockID.FlowerDandelion || selectedBlockId === BlockID.FlowerRose) {
             selectionHelper.scale.set(0.3, 0.6, 0.3);

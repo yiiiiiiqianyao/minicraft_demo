@@ -28,7 +28,8 @@ export const isCrossBlockSupportsCombine = (blockId: BlockID) => {
 
 export const isTopSideBlockSupportCombine = (blockId: BlockID) => {
   return blockId === BlockID.BirchLog || 
-  blockId === BlockID.OakLog;
+  blockId === BlockID.OakLog || 
+  blockId === BlockID.GrassBlock;
 }
 
 /**

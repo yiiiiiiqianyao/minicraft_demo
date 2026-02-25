@@ -6,11 +6,11 @@ import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
 import IronOre from '../../../assets/textures/blocks/iron_ore.png';
 import BedRock from '../../../assets/textures/blocks/bedrock.png';
 
+/**@desc 顶部、侧面方块贴图 */
+import TopSide from '../../../assets/textures/blocks/top_side.png';
+
 /**@desc 十字植物贴图 */
 import CrossPlants from '../../../assets/textures/plants/cross_plants.png';
-import TallGrass from '../../../assets/textures/plants/tall_grass.png';
-import FlowerRose from '../../../assets/textures/flowers/flower_rose.png';
-import FlowerDandelion from '../../../assets/textures/flowers/flower_dandelion.png';
 
 import RedStoneLamp from '../../../assets/textures/blocks/redstone_lamp.png';
 import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
@@ -38,11 +38,10 @@ export const textures = {
   iron: loadTexture(IronOre),
   bedrock: loadTexture(BedRock),
 
-  tallGrass: loadTexture(TallGrass),
-  flowerRose: loadTexture(FlowerRose),
-  flowerDandelion: loadTexture(FlowerDandelion),
   /**@desc 十字植物贴图 */
   crossPlants: loadTexture(CrossPlants),
+  /**@desc 顶部、侧面方块贴图 */
+  topSide: loadTexture(TopSide),
 
   redstoneLamp: loadTexture(RedStoneLamp),
   stoneBrick: loadTexture(StoneBrick),

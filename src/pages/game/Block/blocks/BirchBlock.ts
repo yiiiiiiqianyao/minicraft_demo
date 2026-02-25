@@ -1,15 +1,15 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { TreeMaterial } from "../../engine/material";
+import { TopSideMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
 /**@desc 白桦木原木块 */
 export class BirchBlock extends Block {
   id = BlockID.BirchLog;
-  material = TreeMaterial;
+  material = TopSideMaterial;
   uiTexture = ItemImage.birchLog;
-  geometry = RenderGeometry.Tree;
+  geometry = RenderGeometry.TopSide;
   transparent = false;
   canPassThrough = false;
   canDrop = true;

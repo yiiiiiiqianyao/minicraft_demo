@@ -6,8 +6,7 @@ import type { IUVRange } from "../../player/interface";
 export enum RenderGeometry {
   Cube,
   Cross,
-  Tree,
-  GrassBlock,
+  TopSide,
   // 裂开的方块
   Break,
 }

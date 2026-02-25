@@ -38,10 +38,15 @@ export class DropGroup extends THREE.Group {
         const dropGeometry = getDropInstancedGeometry(blockGeometry) as THREE.BoxGeometry | THREE.PlaneGeometry;
 
         if (blockId === BlockID.OakLog) {
-            //
+            for(let i = 0; i < dropGeometry.attributes.aTopSideOffset.array.length; i+= 2) {
+                dropGeometry.attributes.aTopSideOffset.array.fill(0.0, i, i + 1);
+                dropGeometry.attributes.aTopSideOffset.array.fill(0.4, i + 1, i + 2);
+            }
         } else if (blockId === BlockID.BirchLog) {
-            // 白桦木方块的掉落物 attribute 设置 uv 纹理偏移 0.5
-            dropGeometry.attributes.aTreeOffset.array.fill(0.5);
+            for(let i = 0; i < dropGeometry.attributes.aTopSideOffset.array.length; i+= 2) {
+                dropGeometry.attributes.aTopSideOffset.array.fill(0.0, i, i + 1);
+                dropGeometry.attributes.aTopSideOffset.array.fill(0.2, i + 1, i + 2);
+            }
         } else if (blockId === BlockID.FlowerDandelion) {
             // 蒲公英方块的掉落物 attribute 设置 uv 纹理偏移
             for(let i = 0; i < dropGeometry.attributes.aCrossOffset.array.length; i+= 2) {
@@ -63,11 +68,10 @@ export class DropGroup extends THREE.Group {
         }
 
         const mesh = new THREE.InstancedMesh(dropGeometry, blockClass.material, MaxCount);
-        mesh.name = blockClass.constructor.name;
+        mesh.name = blockClass.id;
         mesh.count = 0;
         mesh.layers.set(GameLayers.One);
         mesh.userData.type = 'drop';
-        mesh.userData.blockId = blockId;
         mesh.userData.dropLimit = blockClass.dropLimit || DropLimit;
         mesh.userData.instanceCache = {};
         // 初始时将所有实例设为不可见
@@ -124,7 +128,8 @@ export class DropGroup extends THREE.Group {
             if(toDeleteIds.length > 0) {
                 // 批量删除距离小于 maxDistance 的实例
                 this.deleteInstance(mesh, toDeleteIds, tempMatrix);
-                ToolBar.pushBlockId(mesh.userData.blockId);
+                // console.log(mesh.name)
+                ToolBar.pushBlockId(mesh.name as BlockID);
             }
         });
     }

@@ -1,17 +1,18 @@
 import * as THREE from "three";
 import { getInstancedGeometry } from "../geometry";
-import { CoalOreMaterial, DirtBlockMaterial, GrassBlockMaterial, LeavesMaterial, TreeMaterial, StoneMaterial } from "../material";
+import { CoalOreMaterial, DirtBlockMaterial, LeavesMaterial, StoneMaterial, TopSideMaterial } from "../material";
 import { RenderGeometry } from "../../Block/base/Block";
-import { BlockID } from "../../Block";
-import { initTreeGeometry } from "../geometry/tree";
+// import { BlockID } from "../../Block";
+// import { initTreeGeometry } from "../geometry/tree";
+import { initTopSideGeometry } from "../geometry/top_side";
 
 /**@desc 玩家手上拿的方块 */
 const CubeScale = 0.3;
 
 /**@desc 草地块 */
 export function initGrassBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.GrassBlock);
-    const mesh = new THREE.Mesh(geometry, GrassBlockMaterial);
+    const geometry = getInstancedGeometry(RenderGeometry.TopSide);
+    const mesh = new THREE.Mesh(geometry, TopSideMaterial);
     return setUp(mesh);
 }
 
@@ -45,15 +46,25 @@ export function initLeavesBlockMesh() {
 
 /**@desc 橡木原木 */
 export function initOakLogHandMesh() {
-    const geometry = initTreeGeometry(1, BlockID.OakLog);
-    const mesh = new THREE.Mesh(geometry, TreeMaterial);
+    const geometry = initTopSideGeometry(1);
+    for(let i = 0; i < geometry.attributes.aTopSideOffset.array.length; i += 2) {
+        geometry.attributes.aTopSideOffset.array[i] = 0;
+        geometry.attributes.aTopSideOffset.array[i + 1] = 0.4;
+    }
+    geometry.attributes.aTopSideOffset.needsUpdate = true;
+    const mesh = new THREE.Mesh(geometry, TopSideMaterial);
     return setUp(mesh);
 }
 
 /**@desc 白桦木原木 */
 export function initBirchLogHandMesh() {
-    const geometry = initTreeGeometry(1, BlockID.BirchLog);
-    const mesh = new THREE.Mesh(geometry, TreeMaterial);
+    const geometry = initTopSideGeometry(1);
+    for(let i = 0; i < geometry.attributes.aTopSideOffset.array.length; i += 2) {
+        geometry.attributes.aTopSideOffset.array[i] = 0;
+        geometry.attributes.aTopSideOffset.array[i + 1] = 0.2;
+    }
+    geometry.attributes.aTopSideOffset.needsUpdate = true;
+    const mesh = new THREE.Mesh(geometry, TopSideMaterial);
     return setUp(mesh);
 }
 
