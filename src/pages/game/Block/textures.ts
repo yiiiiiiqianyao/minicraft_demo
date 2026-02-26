@@ -1,5 +1,4 @@
 import { loadTexture } from "../engine/utils";
-import GrassBlock from '../../../assets/textures/blocks/grass_block.png';
 import Dirt from '../../../assets/textures/blocks/dirt.png';
 import Stone from '../../../assets/textures/blocks/stone.png';
 import CoalOre from '../../../assets/textures/blocks/coal_ore.png';
@@ -10,13 +9,10 @@ import BedRock from '../../../assets/textures/blocks/bedrock.png';
 import TopSide from '../../../assets/textures/blocks/top_side.png';
 
 /**@desc 十字植物贴图 */
-import CrossPlants from '../../../assets/textures/plants/cross_plants.png';
-
+import CrossPlants from '../../../assets/textures/blocks/cross_plants.png';
 import RedStoneLamp from '../../../assets/textures/blocks/redstone_lamp.png';
 import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
 
-/**@desc trees block*/
-import Tree from '../../../assets/textures/blocks/tree.png';
 import Leaves from '../../../assets/textures/blocks/leaves.png';
 
 /**@desc 工作台方块 正面纹理 */
@@ -31,7 +27,6 @@ import Break from '../../../assets/textures/blocks/block_crack.png';
 
 /**@desc for block texture */
 export const textures = {
-  grassBlock: loadTexture(GrassBlock),
   dirt: loadTexture(Dirt),
   stone: loadTexture(Stone),
   coal: loadTexture(CoalOre),
@@ -48,8 +43,6 @@ export const textures = {
   craftingTableFront: loadTexture(CraftingTableFront),
   CraftingTableSide: loadTexture(CraftingTableSide),
   craftingTableTop: loadTexture(CraftingTableTop),
-  // trees
-  tree: loadTexture(Tree),
   leaves: loadTexture(Leaves),
   // 裂开的方块
   breakBlock: loadTexture(Break),
