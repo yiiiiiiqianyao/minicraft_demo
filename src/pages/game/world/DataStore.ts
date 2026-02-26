@@ -72,14 +72,4 @@ export class DataStore {
     }
     this._chunkData[chunkKey][`${blockX},${blockY},${blockZ}`] = value;
   }
-
-  private _getKey(
-    chunkX: number,
-    chunkZ: number,
-    blockX: number,
-    blockY: number,
-    blockZ: number
-  ) {
-    return `${chunkX},${chunkZ},${blockX},${blockY},${blockZ}`;
-  }
 }

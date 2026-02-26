@@ -11,7 +11,6 @@ import { DevControl } from "../dev";
 import { InstanceMeshAdd } from "./chunk/instance";
 import type { IInstanceData } from "./interface";
 import { getBlockClass, inBounds, initChunkMesh, isCrossBlockSupportsCombine, isTopSideBlockSupportCombine } from "./chunk/utils";
-import { getEmptyAirBlockData } from "../Block/blocks/AirBlock";
 
 const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 
