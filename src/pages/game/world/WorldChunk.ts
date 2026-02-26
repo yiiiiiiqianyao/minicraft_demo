@@ -39,12 +39,14 @@ export class WorldChunk extends THREE.Group {
   }
 
   /**@desc 生成 chunk: 数据 + mesh */
-  async generate() {
+  async generate(onLoad: () => void) {
     // const start = performance.now();
     // 初始化 chunk 数据
     const { x, z } = this.position;
     // TODO 把生成 chunk 数据的任务放到 web worker 中
     const data: IInstanceData[][][] = await generateChunk(x, z, this.dataStore);
+    
+    // TODO 加一次判断 现在的 chunk 是否还在场景中需要创建对应的 mesh
     // console.log(`Loaded chunk in ${performance.now() - start}ms`);
     // 空闲时间的 callback
     requestIdleCallback(() => {
@@ -52,8 +54,9 @@ export class WorldChunk extends THREE.Group {
         this.initializeTerrain(data);
         // 生成 chunk 的 mesh
         this.generateMeshes(data);
-        this.loaded = true;
         this.dataStore.setChunkLoaded(x, z, true);
+        this.loaded = true;
+        onLoad()
       },
       { timeout: 1000 }
     );

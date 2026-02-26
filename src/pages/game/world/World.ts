@@ -36,6 +36,7 @@ export class World extends THREE.Group {
   dataStore = new DataStore();
   pointLights = new Map<string, THREE.PointLight>();
   private initialLoadComplete = false;
+  private chunkLoadWait = false;
 
   constructor(seed = 0, scene: THREE.Scene) {
     super();
@@ -76,6 +77,8 @@ export class World extends THREE.Group {
     if (!this.initialLoadComplete) {
       this.updateInitialLoad();
     }
+    // 如果有 chunk 正在加载中 则直接返回
+    if (this.chunkLoadWait) return;
     
     const visibleChunks = getVisibleChunks();
     // TODO 后续优化 需要一个存储 chunk 的列表
@@ -103,11 +106,16 @@ export class World extends THREE.Group {
     }
 
     // process top from chunk queue
+    // TODO 不仅仅是分成一帧处理一个 chunk 的生成 而是等一个 chunk 生成后再生成下一个 chunk
     if (this.chunkQueue.length) {
       const chunk = this.chunkQueue.shift();
       if (chunk) {
         // console.log("Generating chunk", chunk.x, chunk.z);
-        this.generateChunk(chunk.x, chunk.z);
+        this.chunkLoadWait = true;
+        this.generateChunk(chunk.x, chunk.z, () => {
+          // console.log("Chunk loaded", chunk.x, chunk.z);
+          this.chunkLoadWait = false;
+        });
         // this.lastChunkLoadTime = performance.now();
         // 
       }
@@ -193,13 +201,12 @@ export class World extends THREE.Group {
   /**
    * Generates the chunk at (x, z) coordinates
    */
-  async generateChunk(x: number, z: number) {
+  async generateChunk(x: number, z: number, onLoad: () => void) {
     const { width } = ChunkParams;
     const chunk = new WorldChunk(this.dataStore);
     chunk.position.set(x * width, 0, z * width);
     chunk.userData = { x, z };
-    chunk.generate();
-
+    chunk.generate(onLoad);
     this.add(chunk);
   }
 
