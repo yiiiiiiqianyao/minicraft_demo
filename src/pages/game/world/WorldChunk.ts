@@ -193,8 +193,10 @@ export class WorldChunk extends THREE.Group {
     // Safety check that we aren't adding a block for one that already exists
     const cacheBlockData = this.getBlockData(x, y, z);
     if (cacheBlockData?.blockId === BlockID.Air) {
-      // console.log('cacheBlockData', cacheBlockData);
+      
       const addBlockClass = BlockFactory.getBlock(blockId);
+      // console.log('cacheBlockData', cacheBlockData);
+      // console.log('addBlockClass', addBlockClass)
       this.setBlockData(x, y, z, {
         blockId,
         instanceIds: [],
@@ -362,14 +364,6 @@ export class WorldChunk extends THREE.Group {
         lastBlockCoordsZ,
         lastBlockInstanceIds,
     );
-    // 更新最后一个 instance 对应 block data 中的 blockId
-    this.data[lastBlockCoordsX][lastBlockCoordsY][lastBlockCoordsZ].blockId = blockId;
-    // 更新最后一个 instance 对应 block data 中的 blockData 数据
-    this.data[lastBlockCoordsX][lastBlockCoordsY][lastBlockCoordsZ].blockData = {
-      ...blockData.blockData,
-      // 更新最后一个 instance 对应 block data 中的 breakCount 数据
-      breakCount: BlockFactory.getBlock(blockId).breakCount,
-    };
     this.setBlockInstanceIds(x, y, z, []);
   }
 

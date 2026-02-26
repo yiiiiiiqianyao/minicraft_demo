@@ -213,17 +213,18 @@ export class World extends THREE.Group {
   /**
    *@desc Adds a new block at (x, y, z) 返回是否添加成功
    */
-  addBlock(x: number, y: number, z: number, block: BlockID) {
+  addBlock(x: number, y: number, z: number, blockID: BlockID) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
 
     if (chunk && chunk.loaded) {
-      const isSuccess = chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, block);
+      // console.log('blockID', blockID)
+      const isSuccess = chunk.addBlock(coords.block.x, coords.block.y, coords.block.z, blockID);
 
       // if adding a light, convert to point light
       // TODO 目前在生成在红石灯方块的时候会单独生成一个点光源 后续需要优化处理
-      if (block === BlockID.RedstoneLamp) {
-        const blockClass = BlockFactory.getBlock(block) as LightSourceBlock;
+      if (blockID === BlockID.RedstoneLamp) {
+        const blockClass = BlockFactory.getBlock(blockID) as LightSourceBlock;
         const light = new THREE.PointLight(
           blockClass.color,
           blockClass.intensity,
@@ -237,12 +238,12 @@ export class World extends THREE.Group {
       }
 
       // Hide any blocks that may be totally obscured
-      this.hideBlockIfNeeded(x - 1, y, z);
-      this.hideBlockIfNeeded(x + 1, y, z);
-      this.hideBlockIfNeeded(x, y - 1, z);
-      this.hideBlockIfNeeded(x, y + 1, z);
-      this.hideBlockIfNeeded(x, y, z - 1);
-      this.hideBlockIfNeeded(x, y, z + 1);
+      this.hideBlockInstanceIfNeeded(x - 1, y, z);
+      this.hideBlockInstanceIfNeeded(x + 1, y, z);
+      this.hideBlockInstanceIfNeeded(x, y - 1, z);
+      this.hideBlockInstanceIfNeeded(x, y + 1, z);
+      this.hideBlockInstanceIfNeeded(x, y, z - 1);
+      this.hideBlockInstanceIfNeeded(x, y, z + 1);
       return isSuccess;
     } else {
       return false;
@@ -294,7 +295,6 @@ export class World extends THREE.Group {
 
   /** @desc 中断挖掘方块 */
   interruptHit(x: number, y: number, z: number) {
-
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return;
@@ -313,6 +313,7 @@ export class World extends THREE.Group {
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
     if (!chunk || !chunk.loaded) return false;
     const blockData = chunk.getBlockData(coords.block.x, coords.block.y, coords.block.z);
+    // console.log('blockData', blockData);
     if (!blockData) return false;
     const blockId = blockData.blockId;
     // console.log('blockId', blockId);
@@ -416,10 +417,9 @@ export class World extends THREE.Group {
   /**
    * Hides block at (x, y, z) by removing mesh instance
    */
-  hideBlockIfNeeded(x: number, y: number, z: number) {
+  private hideBlockInstanceIfNeeded(x: number, y: number, z: number) {
     const coords = worldToChunkCoords(x, y, z);
     const chunk = this.getChunk(coords.chunk.x, coords.chunk.z);
-
     if (
       chunk &&
       chunk.loaded &&
