@@ -12,3 +12,9 @@
 - 增加白桦木
 - 通过合并材质的方式优化 draw call 数量
 - 优化 raycast select 和 drop 的逻辑
+
+## mc_2026_02_27_12_18
+- 增加短草类型
+- 优化 instance mesh 的实例渲染、所有的草、花为 cross 类型、树、草方块为 top_side 类型
+- 优化渲染的性能 减少 draw call 的数量 450 ～ 550
+- 优化创建 chunk 的性能

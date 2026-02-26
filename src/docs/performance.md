@@ -1,6 +1,8 @@
 ## BatchRenderer 合批渲染器
-TODO
-three/addons/renderers/common/BatchRenderer.js
+
+## TODO
+- three/addons/renderers/common/BatchRenderer.js
+- 持续快速移动角色 持续创建 chunk 的时候会发生 js 卡顿（worker 同样存在）
 
 ## InstanceMesh
 InstanceMesh.count = 0时，仍会产生 1 个空的 Draw Call，需从场景中移除
