@@ -98,6 +98,7 @@ export class Action {
             blockPos.z,
             placementBlockId,
         );
+        // TODO 1. 放置方块的时候 需要把当前方块上放的 drop 挤到边上去 2. 放置实体方块的事时候 若当前方块上存在植物 则需要把植物破坏
         if (isPlacementSuccess) {
             // 放置方块后需要从玩家物品栏中移除当前放置的方块
             ToolBar.removeBlockId();
