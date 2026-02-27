@@ -66,7 +66,7 @@ export class SkyManager {
     scene.add(shadowHelper);
 
     const ambient = new THREE.AmbientLight();
-    ambient.intensity = 0.2;
+    ambient.intensity = 0.4;
     scene.add(ambient);
 
     this.sun = sun;
