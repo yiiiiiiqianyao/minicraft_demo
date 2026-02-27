@@ -3,7 +3,7 @@ import { AudioManager } from "../audio/AudioManager";
 import { BlockID } from "../Block";
 import { BlockFactory } from "../Block/base/BlockFactory";
 import { DataStore } from "./DataStore";
-import { generateChunk } from "./generate";
+import { generateChunkData } from "./generate";
 import { DropGroup } from "./drop/drop";
 import { ChunkParams } from "./chunk/literal";
 import { initChunkHelper } from "../helper/chunkHelper";
@@ -43,7 +43,7 @@ export class WorldChunk extends THREE.Group {
     // 初始化 chunk 数据
     const { x, z } = this.position;
     // TODO 把生成 chunk 数据的任务放到 web worker 中
-    const data: IInstanceData[][][] = await generateChunk(x, z, this.dataStore);
+    const data: IInstanceData[][][] = await generateChunkData(x, z, this.dataStore);
     
     // TODO 加一次判断 现在的 chunk 是否还在场景中需要创建对应的 mesh
     // console.log(`Loaded chunk in ${performance.now() - start}ms`);
