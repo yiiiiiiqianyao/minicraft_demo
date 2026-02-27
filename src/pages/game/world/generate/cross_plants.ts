@@ -11,7 +11,7 @@ import type { IInstanceData } from "../interface";
 import { World } from "../World";
 
 const tallGrass = {
-  frequency: 0.02,
+  frequency: 0.04,
   patchSize: 5,
 }
 

@@ -43,6 +43,17 @@ function getMountainHeight(worldX: number, worldZ: number) {
   return m * yMountain;
 }
 
+function isAroundCave(input: IInstanceData[][][], x: number, y: number, z: number) {
+  return (
+    (input[x-1] && input[x-1][y][z]?.blockData?.isCave) ||
+    (input[x+1] && input[x+1][y][z]?.blockData?.isCave) ||
+    (input[x][y-1] && input[x][y-1][z]?.blockData?.isCave) ||
+    (input[x][y+1] && input[x][y+1][z]?.blockData?.isCave) ||
+    (input[x][y][z+1] && input[x][y][z+1]?.blockData?.isCave) ||
+    (input[x][y][z-1] && input[x][y][z-1]?.blockData?.isCave)
+  );
+}
+
 const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 const { worldType } = DevControl;
 const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
@@ -58,10 +69,12 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       // block position of world
       const worldX = chunkPos.x + x;
       const worldZ = chunkPos.z + z;
+      const baseNoise = World.simplex.noise(worldX, worldZ);
       const terrainValue0 = World.simplex.noise(
         worldX / NormalTerrain.scale,
         worldZ / NormalTerrain.scale
       );
+
       // 草原 地形高度：低幅值、高频噪声
       const scaledNoise = NormalTerrain.offset + NormalTerrain.magnitude * terrainValue0;
       // 山地 地形高度：高幅值、低频噪声
@@ -72,17 +85,16 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       terrainGroundHeight = Math.max(0, Math.min(terrainGroundHeight, MaxTerrainHeight));
 
       // 地表表层方块高度：加入泥土层偏移
-      const surfaceToGround = DirtSurface.offset +
-        Math.abs(World.simplex.noise(worldX, worldZ) * DirtSurface.magnitude);
+      const surfaceToGround = DirtSurface.offset + Math.abs(baseNoise * DirtSurface.magnitude);
 
       // 靠近地表的泥土层高度
       const DirtHeight = terrainGroundHeight - surfaceToGround;
 
       // 最底下的基岩层高度
-      const BedrockHeight = BedrockSurface.offset +
-        Math.abs(World.simplex.noise(worldX, worldZ) * BedrockSurface.magnitude);
+      const BedrockHeight = BedrockSurface.offset + Math.abs(baseNoise * BedrockSurface.magnitude);
 
-      for (let y = 0; y < ChunkHeight; y++) {
+      for (let y = 0; y < ChunkHeight - terrainSafeOffset; y++) {
+        const worldY = y;
         if (y < terrainGroundHeight) {
           // 低于地表层
           if(y > DirtHeight) {
@@ -90,7 +102,7 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
             input[x][y][z] = getEmptyDirtBlockData();
           } else if(y >= BedrockHeight) {
             // 从基岩层到地表层  生产各种资源方块
-            generateResource(input, chunkPos, x, y, z);
+            generateResource(input, worldX, worldY, worldZ, x, y, z);
           } else {
             // 低于基岩层 都是基岩
             input[x][y][z] = getEmptyBedrockBlockData();
@@ -99,18 +111,9 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
           // 高于地表层 都是空气
           input[x][y][z] = getEmptyAirBlockData();
         }
+
         // 地表层 暂时都是草方块
-        function isAroundCave() {
-          return (
-            (input[x-1] && input[x-1][y][z]?.blockData?.isCave) ||
-            (input[x+1] && input[x+1][y][z]?.blockData?.isCave) ||
-            (input[x][y-1] && input[x][y-1][z]?.blockData?.isCave) ||
-            (input[x][y+1] && input[x][y+1][z]?.blockData?.isCave) ||
-            (input[x][y][z+1] && input[x][y][z+1]?.blockData?.isCave) ||
-            (input[x][y][z-1] && input[x][y][z-1]?.blockData?.isCave)
-          );
-        }
-        if (y === terrainGroundHeight && !isAroundCave()) {
+        if (y === terrainGroundHeight && !isAroundCave(input, x, y, z)) {
           input[x][y][z] = getEmptyGrassBlockData();
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();

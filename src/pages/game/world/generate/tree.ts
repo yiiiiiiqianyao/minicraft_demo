@@ -9,6 +9,7 @@ import { getEmptyOakLeaveBlockData } from "../../Block/blocks/LeavesBlock";
 import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 import { DevControl } from "../../dev";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
+import { terrainSafeOffset } from "./constant";
 
 const trees = {
   frequency: 0.08,
@@ -26,6 +27,17 @@ const trees = {
 
 const { width, height } = ChunkParams;
 const { worldType } = DevControl;
+
+function isAroundEmpty(input: IInstanceData[][][], baseX: number, baseY: number, baseZ: number) {
+  if (input[baseX + 1][baseY][baseZ].blockId !== BlockID.Air || 
+    input[baseX - 1][baseY][baseZ].blockId !== BlockID.Air || 
+    input[baseX][baseY][baseZ + 1].blockId !== BlockID.Air || 
+    input[baseX][baseY][baseZ - 1].blockId !== BlockID.Air
+  ) {
+    return false;
+  }
+  return true;
+}
 
 /**
  * Generates trees
@@ -48,17 +60,14 @@ export const generateTrees = (
       const f1 = World.simplex.noise(worldX / 20, worldZ / 20);
       const f2 = World.simplex.noise(worldX / 80, worldZ / 80);
       const forestNoise = f1 * 0.2 + f2 * 0.8;
-      if (forestNoise < 0.4) {
-        continue;
-      }
+      if (forestNoise < 0.4) continue;
 
       const baseNoise = World.simplex.noise(worldX, worldZ);
       const treeNoise = baseNoise * 0.5 + 0.5; // [0, 1]
      
       const hasTree = treeNoise >= 1 - trees.frequency;
-      if (!hasTree) {
-        continue;
-      }
+      if (!hasTree) continue;
+
       // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
       const treeType = treeNoise < 0.965 ? BlockID.OakLog : BlockID.BirchLog;
       const getTreeBlockFunc = treeType === BlockID.OakLog ? getEmptyOkaBlockData: getEmptyBirchBlockData;
@@ -68,22 +77,14 @@ export const generateTrees = (
        * @desc 找到地表高度 Find the grass tile
        * 从上到下开始查找
       */
-      for (let y = height - 1; y >= 0; y--) {
+      for (let y = height - terrainSafeOffset; y >= 0; y--) {
         // TODO 判断条件后续需要优化
-        if (input[baseX][y][baseZ].blockId !== BlockID.GrassBlock) {
-          continue;
-        }
+        if (input[baseX][y][baseZ].blockId !== BlockID.GrassBlock) continue;
         
         // Found grass, move one time up
         const baseY = y + 1;
         // 普通的树木生长需要一定的空间，所以需要判断周围是否被其他方块占据
-        if (input[baseX + 1][baseY][baseZ].blockId !== BlockID.Air || 
-          input[baseX - 1][baseY][baseZ].blockId !== BlockID.Air || 
-          input[baseX][baseY][baseZ + 1].blockId !== BlockID.Air || 
-          input[baseX][baseY][baseZ - 1].blockId !== BlockID.Air
-        ) {
-          continue;
-        }
+        if (!isAroundEmpty(input, baseX, baseY, baseZ)) continue;
         
         // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
         input[baseX][y][baseZ] = getEmptyDirtBlockData();

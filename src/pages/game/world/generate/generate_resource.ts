@@ -1,4 +1,3 @@
-import * as THREE from "three";
 import { World } from "../World";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
 import type { IInstanceData } from "../interface";
@@ -10,13 +9,12 @@ import { ChunkParams } from "../chunk/literal";
 /**@desc 生成资源方块（洞穴空洞、矿物） */
 export const generateResource = (
   input: IInstanceData[][][], 
-  chunkPos: THREE.Vector3, 
+  worldX: number,
+  worldY: number,
+  worldZ: number, 
   x: number, 
   y: number, 
   z: number) => {
-  const worldX = chunkPos.x + x;
-  const worldY = chunkPos.y + y;
-  const worldZ = chunkPos.z + z;
   
   /**@desc 生成洞穴空洞 */
   const CaveScale = (ChunkParams.height - worldY) / ChunkParams.height;
