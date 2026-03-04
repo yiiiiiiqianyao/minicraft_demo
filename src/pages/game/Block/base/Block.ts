@@ -12,7 +12,7 @@ export enum RenderGeometry {
   Break,
 }
 
-export type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial;
+export type MaterialType = THREE.MeshLambertMaterial | THREE.MeshBasicMaterial | THREE.MeshPhongMaterial;
 
 export abstract class Block {
   abstract id: BlockID;
