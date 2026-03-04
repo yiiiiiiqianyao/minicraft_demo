@@ -18,13 +18,14 @@ export default function HomePage() {
     new Game();
   }, []);
   return (
-    <div className="container">
+    <div className="mc_container">
       <div id='canvas_wrap' className="_canvas_wrap">
         <Debug />
         <UI />
       </div>
       {/* 游戏未开始时显示的菜单 */}
       {!isGameStarted && <Menu />}
+      <div className="game_version">version: {version}</div>
     </div>
   );
 }

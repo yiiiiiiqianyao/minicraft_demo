@@ -4,11 +4,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("../../../assets/textures/blocks/dirt.png");
-  background-repeat: repeat;
-  background-size: 64px 64px;
-  image-rendering: pixelated;
+
+  .menu_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-image: url("../../../assets/init_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(6px);
+  }
 
   display: flex;
   flex-direction: column;
@@ -19,6 +27,11 @@
     color: white;
     text-shadow: 1.5px 1.5px 0px rgba(75, 75, 75, 0.8);
   }
+}
+
+.menu-content {
+  position: relative;
+  z-index: 1;
 }
 
 #main-menu {

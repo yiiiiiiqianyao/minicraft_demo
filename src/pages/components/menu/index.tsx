@@ -16,20 +16,22 @@ export const Menu = () => {
     }, [])
     return (
         <div id="menu">
-            {
-                !isGameStarted && <div id="main-menu">
-                    <Logo />
-                    <div id="buttons">
-                    <MCButton title="Create new world" onClick={() => EventSystem.broadcast('StartGame')} />
-                    <MCButton title="View GitHub repo" onClick={() => {
-                        AudioManager.play("gui.button.press");
-                        window.open("https://github.com/yiiiiiiqianyao/minicraft_demo");
-                    }} />
-                </div>
-                </div>
-            }
-            {isGameStarted && <Loading />}
-            
+            <div className="menu_bg" />
+            <div className="menu-content">
+                {
+                        !isGameStarted && <div id="main-menu">
+                            <Logo />
+                            <div id="buttons">
+                            <MCButton title="Create new world" onClick={() => EventSystem.broadcast('StartGame')} />
+                            <MCButton title="View GitHub repo" onClick={() => {
+                                AudioManager.play("gui.button.press");
+                                window.open("https://github.com/yiiiiiiqianyao/minicraft_demo");
+                            }} />
+                        </div>
+                        </div>
+                    }
+                {isGameStarted && <Loading />}
+            </div>
         </div>
         )
 }

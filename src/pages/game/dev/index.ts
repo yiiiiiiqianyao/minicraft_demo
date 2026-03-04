@@ -44,11 +44,11 @@ let stats: Stats;
 export function initStats() {
   stats = new Stats();
   document.body.appendChild(stats.dom);
-  stats.dom.style = 'position: fixed; bottom: 20px; left: 20px; cursor: pointer; opacity: 0.9; z-index: 10000;'
+  stats.dom.style = 'position: fixed; bottom: 10px; left: 10px; cursor: pointer; opacity: 0.9; z-index: 10000;'
 }
 
 export function updateStats() {
-    if (stats) stats.update();
+  if (stats) stats.update();
 }
 
 export * from './control';
