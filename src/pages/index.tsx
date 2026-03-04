@@ -7,7 +7,7 @@ import { EventSystem } from "./EventSystem";
 import { UI } from "./components/UI";
 
 // current game version by date
-const version = 'mc_2026_02_27_12_18';
+const version = 'mc_2026_03_04_11_17';
 export default function HomePage() {
   const [isGameStarted, setIsGameStarted] = useState(false)
   useEffect(() => {

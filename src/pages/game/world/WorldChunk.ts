@@ -133,11 +133,19 @@ export class WorldChunk extends THREE.Group {
     mesh.castShadow = !blockClass.canPassThrough;
     mesh.receiveShadow = true;
     mesh.matrixAutoUpdate = false;
+    // TODO leaves & cross plants 是否也需要 shadow
     mesh.userData.castShadow = !blockClass.canPassThrough;
     mesh.userData.interactive = blockClass.interactive;
     this.add(mesh);
     this.meshes[blockId] = mesh;
-    // 为草方块和花朵方块共用一个 instance mesh
+
+    /** 
+     * @desc 合并的 block 类型 
+     * 1. 共享一个 instance mesh
+     * 2. 需要注意不同 block mesh 相关的属性都相同
+     */
+
+    // 草、花朵等 cross 类型共用一个 instance mesh
     if (blockId === BlockID.TallGrass || 
         blockId === BlockID.ShortGrass ||
         blockId === BlockID.FlowerDandelion ||
@@ -148,8 +156,7 @@ export class WorldChunk extends THREE.Group {
       this.meshes[BlockID.FlowerDandelion] = mesh;
       this.meshes[BlockID.FlowerRose] = mesh;
     }
-    // TODO 后续加上其他的 block 类型
-    // BlockID.GrassBlock
+    // 橡木、白桦木、草方块 共用一个 instance mesh
     if (blockId === BlockID.OakLog || 
       blockId === BlockID.BirchLog ||
       blockId === BlockID.GrassBlock
@@ -157,6 +164,11 @@ export class WorldChunk extends THREE.Group {
       this.meshes[BlockID.OakLog] = mesh;
       this.meshes[BlockID.BirchLog] = mesh;
       this.meshes[BlockID.GrassBlock] = mesh;
+    }
+    // TODO 橡木树叶方块 白桦树叶方块
+    if (blockId === BlockID.OakLeaves || blockId === BlockID.BirchLeaves) {
+      this.meshes[BlockID.OakLeaves] = mesh;
+      this.meshes[BlockID.BirchLeaves] = mesh;
     }
     return mesh;
   }

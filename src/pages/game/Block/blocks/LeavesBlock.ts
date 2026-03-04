@@ -1,16 +1,15 @@
 import { Block, RenderGeometry } from "../base/Block";
 import { BlockID } from "..";
-import { LeavesMaterial } from "../../engine/material";
+import { SingleBlockMaterial } from "../../engine/material";
 import { ItemImage } from "../../gui/items";
 import { DropLimit } from "../../world/drop/literal";
 
-// TODO 需要增加白桦树的树叶
 /**@desc 橡木树叶方块 */
 export class OakLeavesBlock extends Block {
   id = BlockID.OakLeaves;
-  material = LeavesMaterial;
+  material = SingleBlockMaterial;
   uiTexture = ItemImage.leaves;
-  geometry = RenderGeometry.Cube;
+  geometry = RenderGeometry.SingleCube;
   transparent = true;
   canPassThrough = false;
   canDrop = true;
@@ -26,6 +25,33 @@ export class OakLeavesBlock extends Block {
 export const getEmptyOakLeaveBlockData = () => {
   return {
     blockId: BlockID.OakLeaves,
+    instanceIds: [],
+    blockData: {
+      breakCount: 1,
+    },
+  }
+}
+
+/**@desc 橡木树叶方块 */
+export class BirchLogLeavesBlock extends Block {
+  id = BlockID.BirchLeaves;
+  material = SingleBlockMaterial;
+  uiTexture = ItemImage.leaves;
+  geometry = RenderGeometry.SingleCube;
+  transparent = true;
+  canPassThrough = false;
+  canDrop = true;
+  breakCount = 1;
+  dropBlockId = undefined;
+  dropLimit = DropLimit;
+  /**@desc 当前方块是否可交互 */
+  interactive = true;
+  uvRange = undefined;
+}
+
+export const getEmptyBirchLogLeaveBlockData = () => {
+  return {
+    blockId: BlockID.BirchLeaves,
     instanceIds: [],
     blockData: {
       breakCount: 1,

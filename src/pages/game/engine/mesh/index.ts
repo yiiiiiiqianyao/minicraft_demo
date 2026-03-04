@@ -2,7 +2,15 @@ import * as THREE from "three";
 import { MeshType } from "./constant";
 import { initDandelionHandMesh, initRoseHandMesh } from "./flowerHand";
 import { initCreatingTableHandMesh } from "./objects";
-import { initBirchLogHandMesh, initCoalOreMesh, initDirtBlockMesh, initGrassBlockMesh, initLeavesBlockMesh, initOakLogHandMesh, initStoneBlockMesh } from "./handHoldBlock";
+import { 
+    initBirchLogHandMesh, 
+    initCoalOreMesh, 
+    initDirtBlockMesh, 
+    initGrassBlockMesh, 
+    initOakLogHandMesh, 
+    initStoneBlockMesh,
+    initIronOreBlockMesh
+} from "./handHoldBlock";
 
 /**@desc 网格池 */
 export class MeshPool {
@@ -23,10 +31,10 @@ export class MeshPool {
             mesh = initDirtBlockMesh();
         } else if(type === MeshType.StoneBlock) {
             mesh = initStoneBlockMesh();
+        } else if(type === MeshType.IronOreBlock) {
+            mesh = initIronOreBlockMesh();
         } else if(type === MeshType.CoalOreBlock) {
             mesh = initCoalOreMesh();
-        } else if(type === MeshType.OakLeavesBlock) {
-            mesh = initLeavesBlockMesh();
         } else if(type === MeshType.OakLogBlock) {
             mesh = initOakLogHandMesh();
         } else if (type === MeshType.BirchLogBlock) {

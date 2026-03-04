@@ -12,6 +12,8 @@ export function InstanceMeshAdd(mesh: THREE.InstancedMesh, blockClass: Block, x:
             return InstanceMeshAddCube(mesh, blockClass.id, x, y, z);
         case RenderGeometry.Cross:
             return InstanceMeshAddCrossPlants(mesh, blockClass.id, x, y, z);
+        case RenderGeometry.SingleCube:
+            return InstanceMeshAddSingleBlock(mesh, blockClass.id, x, y, z);
         default:
             console.warn(`Unknown geometry ${blockClass.geometry}`);
             return null;
@@ -77,7 +79,7 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
     return [instanceId1, instanceId2];
 }
 
-// TODO 向 InstancedMesh 中添加一个顶部、侧面方块
+/** @desc 向 InstancedMesh 中添加一个顶部、侧面方块 */
 function InstanceMeshAddTopSide(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
     const instanceId = mesh.count++;
     const matrix = new THREE.Matrix4();
@@ -97,6 +99,26 @@ function InstanceMeshAddTopSide(mesh: THREE.InstancedMesh, blockId: BlockID, x: 
         mesh.geometry.attributes.aTopSideOffset.array[instanceId * 2 + 1] = 0;
     }
     mesh.geometry.attributes.aTopSideOffset.needsUpdate = true;
+    mesh.setMatrixAt(instanceId, matrix);
+    return [instanceId];
+}
+/** @desc 向 InstancedMesh 中添加一个单独纹理的方块 */
+function InstanceMeshAddSingleBlock(mesh: THREE.InstancedMesh, blockId: BlockID, x: number, y: number, z: number) {
+    const instanceId = mesh.count++;
+    const matrix = new THREE.Matrix4();
+    matrix.setPosition(x + 0.5, y + 0.5, z + 0.5);
+
+    if (blockId === BlockID.OakLeaves ) {
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2 + 1] = 0.9;
+    } else if(blockId === BlockID.BirchLeaves) {
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2] = 0.1;
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2 + 1] = 0.9;
+    } else {
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2] = 0;
+        mesh.geometry.attributes.aSingleBlockOffset.array[instanceId * 2 + 1] = 0;
+    }
+    mesh.geometry.attributes.aSingleBlockOffset.needsUpdate = true;
     mesh.setMatrixAt(instanceId, matrix);
     return [instanceId];
 }

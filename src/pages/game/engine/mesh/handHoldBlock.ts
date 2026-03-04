@@ -1,9 +1,7 @@
 import * as THREE from "three";
 import { getInstancedGeometry } from "../geometry";
-import { CoalOreMaterial, DirtBlockMaterial, LeavesMaterial, StoneMaterial, TopSideMaterial } from "../material";
+import { CoalOreMaterial, DirtBlockMaterial, IronBlockMaterial, StoneMaterial, TopSideMaterial } from "../material";
 import { RenderGeometry } from "../../Block/base/Block";
-// import { BlockID } from "../../Block";
-// import { initTreeGeometry } from "../geometry/tree";
 import { initTopSideGeometry } from "../geometry/top_side";
 
 /**@desc 玩家手上拿的方块 */
@@ -30,17 +28,17 @@ export function initStoneBlockMesh() {
     return setUp(mesh);
 }
 
+/** @desc 铁矿石 */ 
+export function initIronOreBlockMesh() {
+    const geometry = getInstancedGeometry(RenderGeometry.Cube);
+    const mesh = new THREE.Mesh(geometry, IronBlockMaterial);
+    return setUp(mesh);
+}
+
 /**@desc 煤炭块 */
 export function initCoalOreMesh() {
     const geometry = getInstancedGeometry(RenderGeometry.Cube);
     const mesh = new THREE.Mesh(geometry, CoalOreMaterial);
-    return setUp(mesh);
-}
-
-/**@desc 树叶块: 橡木树叶、白桦木树叶... */
-export function initLeavesBlockMesh() {
-    const geometry = getInstancedGeometry(RenderGeometry.Cube);
-    const mesh = new THREE.Mesh(geometry, LeavesMaterial);
     return setUp(mesh);
 }
 

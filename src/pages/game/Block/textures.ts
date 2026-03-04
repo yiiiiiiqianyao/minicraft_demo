@@ -7,13 +7,13 @@ import BedRock from '../../../assets/textures/blocks/bedrock.png';
 
 /**@desc 顶部、侧面方块贴图 */
 import TopSide from '../../../assets/textures/blocks/top_side.png';
-
 /**@desc 十字植物贴图 */
 import CrossPlants from '../../../assets/textures/blocks/cross_plants.png';
+/**@desc 单独方块贴图 */
+import SingleBlock from '../../../assets/textures/blocks/single_blocks.png';
+
 import RedStoneLamp from '../../../assets/textures/blocks/redstone_lamp.png';
 import StoneBrick from '../../../assets/textures/blocks/stonebrick.png';
-
-import Leaves from '../../../assets/textures/blocks/leaves.png';
 
 /**@desc 工作台方块 正面纹理 */
 import CraftingTableFront from '../../../assets/textures/crafting_table/crafting_table_front.png';
@@ -37,13 +37,14 @@ export const textures = {
   crossPlants: loadTexture(CrossPlants),
   /**@desc 顶部、侧面方块贴图 */
   topSide: loadTexture(TopSide),
+  /**@desc 单独方块贴图 */
+  singleBlock: loadTexture(SingleBlock),
 
   redstoneLamp: loadTexture(RedStoneLamp),
   stoneBrick: loadTexture(StoneBrick),
   craftingTableFront: loadTexture(CraftingTableFront),
   CraftingTableSide: loadTexture(CraftingTableSide),
   craftingTableTop: loadTexture(CraftingTableTop),
-  leaves: loadTexture(Leaves),
   // 裂开的方块
   breakBlock: loadTexture(Break),
 };

@@ -91,6 +91,7 @@ export class PlayerGroup {
                 case BlockID.CoalOre:
                     return this.handPoint.add(MeshPool.getHandMesh(MeshType.CoalOreBlock) as THREE.Mesh);
                 case BlockID.IronOre:
+                    return this.handPoint.add(MeshPool.getHandMesh(MeshType.IronOreBlock))
                 case BlockID.Bedrock:
                     // TODO 待补全 其他矿物
                     return this.handPoint.add(MeshPool.getHandMesh(MeshType.StoneBlock) as THREE.Mesh);

@@ -7,7 +7,7 @@ import { FlowerDandelionBlock } from "../blocks/FlowerDandelionBlock";
 import { FlowerRoseBlock } from "../blocks/FlowerRoseBlock";
 import { GrassBlock } from "../blocks/GrassBlock";
 import { IronOreBlock } from "../blocks/IronOreBlock";
-import { OakLeavesBlock } from "../blocks/LeavesBlock";
+import { BirchLogLeavesBlock, OakLeavesBlock } from "../blocks/LeavesBlock";
 import { OakLogBlock } from "../blocks/OakLogBlock";
 import { BirchBlock } from "../blocks/BirchBlock";
 import { RedstoneLampBlock } from "../blocks/RedstoneLampBlock";
@@ -31,6 +31,7 @@ export class BlockFactory {
     [BlockID.OakLog]: OakLogBlock,
     [BlockID.BirchLog]: BirchBlock,
     [BlockID.OakLeaves]: OakLeavesBlock,
+    [BlockID.BirchLeaves]: BirchLogLeavesBlock,
     [BlockID.TallGrass]: TallGrassBlock,
     [BlockID.ShortGrass]: ShortGrassBlock,
     [BlockID.FlowerRose]: FlowerRoseBlock,

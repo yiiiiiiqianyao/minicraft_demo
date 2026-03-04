@@ -27,6 +27,7 @@ export const ItemImage = {
   bedrock: BedRockBlock,
   oakLog: OakLogBlock,
   birchLog: BirchLogBlock,
+  // 暂时支持 橡木树叶 和 白桦树叶
   leaves: LeavesBlock,
   tallGrass: TallGrassBlock,
   flowerRose: FlowerRoseBlock,

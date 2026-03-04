@@ -5,6 +5,7 @@ import type { IUVRange } from "../../player/interface";
 // 渲染的几何形状类型
 export enum RenderGeometry {
   Cube,
+  SingleCube,
   Cross,
   TopSide,
   // 裂开的方块

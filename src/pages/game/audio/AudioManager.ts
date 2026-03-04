@@ -46,6 +46,7 @@ export class AudioManager {
     switch (blockUnderneath) {
       case BlockID.GrassBlock:
       case BlockID.Dirt:
+      case BlockID.BirchLeaves:
       case BlockID.OakLeaves:
         this.play("step.grass");
         break;
@@ -66,6 +67,7 @@ export class AudioManager {
       case BlockID.GrassBlock:
       case BlockID.Dirt:
       case BlockID.OakLeaves:
+      case BlockID.BirchLeaves:
       case BlockID.TallGrass:
       case BlockID.FlowerDandelion:
       case BlockID.FlowerRose:

@@ -18,15 +18,18 @@ export const generateResource = (
   
   /**@desc 生成洞穴空洞 */
   const CaveScale = (ChunkParams.height - worldY) / ChunkParams.height;
-  const CaveNoise = (World.simplex.noise3d(
+  const noise1 = World.simplex.noise3d(
       worldX / 12,
       worldY / 12,
       worldZ / 8
-    ) - World.simplex.noise3d(
+    );
+  const noise2 = World.simplex.noise3d(
       (worldX + 10) / 12,
       (worldY + 8) / 10,
       (worldZ + 6) / 8
-    ) + 1) / 2 * CaveScale;
+    );
+  
+  const CaveNoise = (noise1 - noise2 + 1) / 2 * CaveScale;
   const CaveDistribution = World.simplex.noise(worldX / 100, worldZ / 100);
   if (CaveNoise > 0.5 && CaveDistribution > 0.1) {
       input[x][y][z] = getEmptyAirBlockData();

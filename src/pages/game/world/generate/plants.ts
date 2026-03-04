@@ -5,7 +5,7 @@ import type { IInstanceData } from "../interface";
 import { ChunkParams } from "../chunk/literal";
 import { getEmptyDirtBlockData } from "../../Block/blocks/DirtBlock";
 import { getEmptyOkaBlockData } from "../../Block/blocks/OakLogBlock";
-import { getEmptyOakLeaveBlockData } from "../../Block/blocks/LeavesBlock";
+import { getEmptyBirchLogLeaveBlockData, getEmptyOakLeaveBlockData } from "../../Block/blocks/LeavesBlock";
 import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 import { DevControl } from "../../dev";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
@@ -72,7 +72,11 @@ export const generatePlants = (
         const worldX = chunkPos.x + baseX;
         const worldZ = chunkPos.z + baseZ;
         
-        // Tip: 森林噪声 简单控制森林的分布
+        /**
+         * @desc 森林噪声 简单控制森林的分布
+         * f1 大片树林的分布
+         * f2 单个树林的分布
+        */
         const f1 = World.simplex.noise(worldX / 20, worldZ / 20);
         const f2 = World.simplex.noise(worldX / 80, worldZ / 80);
         const forestNoise = f1 * 0.2 + f2 * 0.8;
@@ -85,10 +89,11 @@ export const generatePlants = (
         if (!hasTree) continue;
 
         // TODO 后续优化类型判断 目前只生成 OakLog 和 Birch 两种树
-        const treeType = treeNoise < 0.965 ? BlockID.OakLog : BlockID.BirchLog;
+        let treeType = treeNoise < 0.965 ? BlockID.OakLog : BlockID.BirchLog;
+        // treeType = BlockID.OakLog;
         const getTreeBlockFunc = treeType === BlockID.OakLog ? getEmptyOkaBlockData: getEmptyBirchBlockData;
         // TODO 后续支持白桦树叶后 需要替换白桦树叶
-        const getTreeLeavesFunc = getEmptyOakLeaveBlockData;
+        const getTreeLeavesFunc = treeType === BlockID.OakLog ? getEmptyOakLeaveBlockData : getEmptyBirchLogLeaveBlockData;
         /**
          * @desc 找到地表高度 Find the grass tile
          * 从上到下开始查找
@@ -168,7 +173,10 @@ export const generatePlants = (
               for (const x of [-2, 2]) {
                 for (const z of [-2, 2]) {
                   // 避免影响到别的 block
-                  if (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.OakLeaves && World.rng.random() > 0.5) {
+                  if (
+                    (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.OakLeaves ||
+                      input[baseX + x][topY - i][baseZ + z].blockId === BlockID.BirchLeaves) 
+                      && World.rng.random() > 0.5) {
                     input[baseX + x][topY - i][baseZ + z] = getEmptyAirBlockData();
                   }
                 }
@@ -181,7 +189,8 @@ export const generatePlants = (
       for (let y = height - terrainSafeOffset; y >= 0; y--) {
         const baseY = y + 1;
         // 如果接触到树叶，停止生长，因为花朵和草不能在树底下生长
-        if (input[x][y][z].blockId === BlockID.OakLeaves) break;
+        if (input[x][y][z].blockId === BlockID.OakLeaves || 
+          input[x][y][z].blockId === BlockID.BirchLeaves) break;
         // 草和花在草方块上生长
         if (input[x][y][z].blockId === BlockID.GrassBlock) {
           // found grass, move one time up
