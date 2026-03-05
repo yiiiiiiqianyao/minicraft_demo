@@ -3,6 +3,7 @@ import { textures } from '../../Block/textures';
 
 const SingleBlockMaterial = new THREE.MeshLambertMaterial({
   map: textures.singleBlock,
+  shadowSide: THREE.DoubleSide,
   alphaTest: 0.1,
 });
 SingleBlockMaterial.onBeforeCompile = (shader) => {
