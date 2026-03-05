@@ -3,8 +3,10 @@ import { textures } from '../../Block/textures';
 
 const SingleBlockMaterial = new THREE.MeshLambertMaterial({
   map: textures.singleBlock,
-  shadowSide: THREE.DoubleSide,
-  alphaTest: 0.1,
+  // shadowSide: THREE.DoubleSide,
+  // tree leave 使用 alphaTest 会漏光
+  // alphaTest: 0.1,
+  transparent: true,
 });
 SingleBlockMaterial.onBeforeCompile = (shader) => {
   shader.vertexShader = `
