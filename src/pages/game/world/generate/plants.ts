@@ -230,10 +230,9 @@ export const generatePlants = (
           // 只在海平面以上和以下 10 个高度内长花
           if (y < SeaSurfaceHeight || y > SeaSurfaceHeight + 10) continue;
 
-          const flowerId =
-            World.rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;
-
           if (World.rng.random() < flowers.frequency) {
+            const flowerId =
+              World.rng.random() < 0.5 ? BlockID.FlowerDandelion : BlockID.FlowerRose;
             input[x][baseY][z] = {
               blockId: flowerId,
               instanceIds: [],
