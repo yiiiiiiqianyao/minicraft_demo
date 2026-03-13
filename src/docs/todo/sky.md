@@ -1,0 +1,4 @@
+- [ ] sun
+- [ ] moon
+- [ ] star
+- [ ] cloud

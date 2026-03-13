@@ -56,9 +56,7 @@ export default class Game {
     this.orbitCamera = orbitCamera;
     this.controls = controls;
 
-    // Skybox
     this.skyManager = new SkyManager(this.scene);
-    
     this.world = new World(0, this.scene);
     this.scene.add(this.world);
 
@@ -96,7 +94,7 @@ export default class Game {
   private draw() {
     const deltaTime = GameTimeManager.update();
     // TODO 更新天空应该放置在更新世界中
-    this.skyManager.updateSkyColor();
+    this.skyManager.update();
 
     // 更新物理模拟
     this.physics.update(deltaTime);

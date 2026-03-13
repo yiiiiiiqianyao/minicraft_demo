@@ -5,6 +5,9 @@ import { GameTimeManager, hourDuration, ShadowUpdateDuration } from "../time";
 import { getBottomColor, getTopColor } from "./utils";
 import { PlayerParams } from "../player/literal";
 
+const AmbientIntensity = 0.4;
+
+/** @desc sun、ambient、fog */
 export class SkyManager {
   scene!: THREE.Scene;
   sky!: THREE.Mesh;
@@ -12,10 +15,12 @@ export class SkyManager {
   sunHelper!: THREE.DirectionalLightHelper;
   shadowHelper!: THREE.CameraHelper;
   private lastShadowUpdate = 0;
+  private ambient!: THREE.AmbientLight;
   constructor(scene: THREE.Scene) {
     this.scene = scene;
     this.initSky(scene);
     this.initLight(scene);
+    this.updateSun();
   }
 
   initSky(scene: THREE.Scene) {
@@ -65,7 +70,8 @@ export class SkyManager {
     scene.add(shadowHelper);
 
     const ambient = new THREE.AmbientLight();
-    ambient.intensity = 0.4;
+    ambient.intensity = 0;
+    this.ambient = ambient;
     scene.add(ambient);
 
     this.sun = sun;
@@ -74,24 +80,7 @@ export class SkyManager {
     return { sun, sunHelper, shadowHelper };
   }
 
-  updateSunPosition(angle: number) { 
-    if (PlayerParams.playerInstance) {
-      const sunX = SunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
-      const sunY = SunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
-      const playerPosition = PlayerParams.position;
-
-      this.sun.position.set(sunX, sunY, playerPosition.z); // Update the position of the sun
-      this.sun.position.add(playerPosition);
-
-      this.sun.target.position.copy(playerPosition);
-      this.sun.target.updateMatrixWorld();
-
-      this.sunHelper.update();
-      this.shadowHelper.update();
-    }
-  }
-
-  updateSkyColor() {
+  update() {
     const { topColor, sunIntensity } = getTopColor();
     this.sun.intensity = sunIntensity; 
     
@@ -107,21 +96,49 @@ export class SkyManager {
     // 凌晨 4 点到晚上 20 点, 太阳角度变化
     // const anglePreSecond = Math.PI / (SunSettings.cycleLength * (16 / 24));
     if (performance.now() - this.lastShadowUpdate < ShadowUpdateDuration) return;
-    /**
-     * @desc 计算太阳的角度
-     * 6 点钟 开始 日出
-     * 14 点钟 太阳垂直向上 90 度的位置
-     * 18 点钟 开始 日落
-     * 20 点钟 开始 晚上开始
-     */
-    const dayTime = GameTimeManager.currentDayTime;
-    if(dayTime < 4 * hourDuration || dayTime > 20 * hourDuration) {
-      this.updateSunPosition(-1);
-    } else {
-      const sunAngle =  (dayTime - 4 * hourDuration) / (16 * hourDuration) * Math.PI;
-      this.updateSunPosition(sunAngle);
-    }
+    this.updateSun();
     GameTimeManager.updateDayHourGUI();
     this.lastShadowUpdate = performance.now();
+  }
+
+  /**
+   * @desc 更新太阳的角度和环境光亮度
+   * 6 点钟 开始 日出
+   * 14 点钟 太阳垂直向上 90 度的位置
+   * 18 点钟 开始 日落
+   * 20 点钟 开始 晚上开始
+   */
+  private updateSun() { 
+    const dayTime = GameTimeManager.currentDayTime;
+    if (!PlayerParams.playerInstance) return;
+    let angle = -1;
+    if(dayTime < 4 * hourDuration || dayTime > 20 * hourDuration) {
+      angle = -1;
+    } else {
+      const sunAngle =  (dayTime - 4 * hourDuration) / (16 * hourDuration) * Math.PI;
+      angle = sunAngle;
+    }
+
+    // 更新亮度
+    if (this.ambient) {
+      this.ambient.intensity = AmbientIntensity * Math.sin(Math.max(angle, 0)) + 0.2;
+    }
+    
+    const sunX = SunSettings.distance * Math.cos(angle); // Calculate the X position of the sun
+    const sunY = SunSettings.distance * Math.sin(angle); // Calculate the Y position of the sun
+    const playerPosition = PlayerParams.position;
+
+    this.sun.position.set(sunX, sunY, playerPosition.z); // Update the position of the sun
+    this.sun.position.add(playerPosition);
+
+    this.sun.target.position.copy(playerPosition);
+    this.sun.target.updateMatrixWorld();
+
+    if (this.sunHelper.visible) {
+      this.sunHelper.update();
+    }
+    if (this.shadowHelper.visible) {
+      this.shadowHelper.update();
+    }
   }
 }

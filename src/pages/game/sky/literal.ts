@@ -17,4 +17,5 @@ export const SunSettings = {
   // cycleLength: 600,
   // cycleLength: 100,
   cycleLength: 12 * 60, // 一昼夜 12 min
+  // cycleLength: 12 * 10, // 一昼夜 12 min
 }
