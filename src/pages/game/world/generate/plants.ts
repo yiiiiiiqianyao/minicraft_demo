@@ -9,7 +9,7 @@ import { getEmptyBirchLogLeaveBlockData, getEmptyOakLeaveBlockData } from "../..
 import { getEmptyBirchBlockData } from "../../Block/blocks/BirchBlock";
 import { DevControl } from "../../dev";
 import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
-import { SeaSurfaceHeight, terrainSafeOffset } from "./constant";
+import { SeaSurfaceHeight } from "./constant";
 import { getEmptyShortGrassBlockData } from "../../Block/blocks/ShortGrassBlock";
 import { getEmptyTallGrassBlockData } from "../../Block/blocks/TallGrassBlock";
 import type { ISurfaceData } from "./interface";
