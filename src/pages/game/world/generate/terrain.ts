@@ -12,6 +12,7 @@ import { getEmptyAirBlockData } from "../../Block/blocks/AirBlock";
 import { smoothstep } from "./utils";
 import { BedrockSurface, FlatTerrain, NormalTerrain, DirtSurface, terrainSafeOffset } from "./constant";
 import { generateResource } from "./generate_resource";
+import type { ISurfaceData } from "./interface";
 
 const macroScale = 400; // 宏观分区尺度，控制草原和山地块状分布的大小
 const threshold = 0.38; // 分区阈值（整体偏向山地）
@@ -57,13 +58,18 @@ function isAroundCave(input: IInstanceData[][][], x: number, y: number, z: numbe
 const { width: ChunkWidth, height: ChunkHeight } = ChunkParams;
 const { worldType } = DevControl;
 const MaxTerrainHeight = ChunkHeight - terrainSafeOffset;
+
 /**
- * Generates the terrain data
+ * @desc Generates the terrain data
  */
-export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vector3): IInstanceData[][][] => {
+export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vector3): {
+  data: IInstanceData[][][];
+  surfaceData: ISurfaceData;
+} => {
   // 平坦地形
   if (worldType === 'flat') return generateFlatTerrain(input);
   // 正常地形
+  const surfaceData: ISurfaceData = {};
   for (let x = 0; x < ChunkWidth; x++) {
     for (let z = 0; z < ChunkWidth; z++) {
       // block position of world
@@ -114,7 +120,9 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
 
         // 地表层 暂时都是草方块
         if (y === terrainGroundHeight && !isAroundCave(input, x, y, z)) {
+          // TODO 记录表层方块高度 简化后续生成地表植物的计算
           input[x][y][z] = getEmptyGrassBlockData();
+          surfaceData[`${x},${z}`] = y;
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();
           }
@@ -124,11 +132,18 @@ export const generateTerrain = (input: IInstanceData[][][], chunkPos: THREE.Vect
       }
     }
   }
-  return input;
+  return {
+    data: input,
+    surfaceData,
+  };
 };
 
 /**@desc 生成平坦地形 */
-function generateFlatTerrain(input: IInstanceData[][][]) {
+function generateFlatTerrain(input: IInstanceData[][][]): {
+  data: IInstanceData[][][];
+  surfaceData: ISurfaceData;
+} {
+  const surfaceData: ISurfaceData = {};
   const terrainConfig = FlatTerrain;
   for (let x = 0; x < ChunkWidth; x++) {
     for (let z = 0; z < ChunkWidth; z++) {
@@ -153,6 +168,7 @@ function generateFlatTerrain(input: IInstanceData[][][]) {
           }
         } else if (y === terrainHeight) {
           input[x][y][z] = getEmptyGrassBlockData();
+          surfaceData[`${x},${z}`] = y;
           if(DevControl.showBorder && (x === 0 || z === 0)) {
             input[x][y][z] = getEmptyBedrockBlockData();
           }
@@ -162,5 +178,8 @@ function generateFlatTerrain(input: IInstanceData[][][]) {
       }
     }
   }
-  return input;
+  return {
+    data: input,
+    surfaceData,
+  };
 }

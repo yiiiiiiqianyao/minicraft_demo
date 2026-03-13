@@ -17,12 +17,12 @@ export const generateChunkData = async (
     // 否则 则需要生成 chunk 数据
     const chunkPos = new THREE.Vector3(x, 0, z);
     // full chunk block data fill with air
-    let data = initEmptyChunk();
+    let emptyData = initEmptyChunk();
     // 从上到下进行分层（在特定的层保留资源方块）
-    data = generateTerrain( data, chunkPos);
+    const { data: dataWithTerrain, surfaceData } = generateTerrain( emptyData, chunkPos);
     // 下面的 生产树 高草 花朵等可以进行优化
-    data = generatePlants( data, chunkPos);
+    const dataWithPlants = generatePlants( dataWithTerrain, chunkPos, surfaceData);
     /**@desc 生成数据后 将 chunk 数据设置到 data store 中 */
-    setChunkToDataStore(x, z, data, dataStore);
-    return data;
+    setChunkToDataStore(x, z, dataWithPlants, dataStore);
+    return dataWithPlants;
 };
