@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 
+/** @desc 方块破坏时候的材质 */
 export const initBreakMaterial = (texture: THREE.Texture) => {
     const uniforms = {
         uProgress: { value: 0.0 },
@@ -14,7 +15,8 @@ export const initBreakMaterial = (texture: THREE.Texture) => {
     `;
 
    const fragmentShader = /* glsl */`
-        precision highp float;
+        // precision highp float;
+        precision mediump float;
         uniform sampler2D uAtlas;
         uniform float uProgress; // 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
         varying vec2 vUv;

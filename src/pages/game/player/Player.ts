@@ -156,4 +156,22 @@ export class Player extends PlayerGroup {
     // 角色移动后检测吸收掉落的物品
     Action.absorbDrops(this.world);
   }
+
+  /** @desc 检测角色所在空间 是否被方块遮挡  如果被遮挡 环境光变暗 */
+  detectCovered() {
+    // const { x, y, z } = this.position;
+    // const chunk = this.getCurrentChunk();
+    // if (!chunk) return;
+    // const block = chunk.getBlock(x, y, z);
+    // if (!block) return;
+    // if (block.type === BlockID.Air) return;
+    // // 角色所在的方块被遮挡
+    // if (chunk.isBlockCovered(x, y, z)) {
+    //   // 角色所在的方块被遮挡 环境光变暗
+    //   SkyManager.setEnvLightIntensity(0.5);
+    // } else {
+    //   // 角色所在的方块未被遮挡 环境光恢复正常
+    //   SkyManager.setEnvLightIntensity(1);
+    // }
+  }
 }
