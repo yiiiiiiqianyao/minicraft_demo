@@ -111,7 +111,9 @@ export class Player extends PlayerGroup {
 
   /**@desc 更新玩家 */
   update(world: World) {
-    this.boundsHelper.visible && updateBoundsHelper(this.camera.position, this.boundsHelper);
+    if (this.boundsHelper.visible) {
+      updateBoundsHelper(this.camera.position, this.boundsHelper);
+    }
     // 更新用户的拾取选中方块
     Selector.update(this.camera, world, selectionHelper);
     // 更新玩家的视角

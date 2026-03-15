@@ -12,7 +12,9 @@ export class DropPhysics {
     /**@desc 掉落物品的物理模拟更新 */
     update() {
         const drops = this.getCandidatesDrops();
-        drops.forEach(drop => drop.update());
+        if (drops.length > 0) {
+            drops.forEach(drop => drop.update());
+        }
     }
 
     /**@desc 获取掉落物品的候选列表 */

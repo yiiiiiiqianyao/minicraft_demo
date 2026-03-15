@@ -1,11 +1,9 @@
 import * as THREE from "three";
 import { fragmentShader, vertexShader } from "./shader";
-import { SunSettings, uniforms } from "./literal";
+import { AmbientIntensity, SunSettings, uniforms } from "./literal";
 import { GameTimeManager, hourDuration, ShadowUpdateDuration } from "../time";
 import { getBottomColor, getTopColor } from "./utils";
 import { PlayerParams } from "../player/literal";
-
-const AmbientIntensity = 0.4;
 
 /** @desc sun、ambient、fog */
 export class SkyManager {
@@ -24,6 +22,7 @@ export class SkyManager {
   }
 
   initSky(scene: THREE.Scene) {
+    // TODO. 后续需要优化天空盒 跟随用户移动
     const skyGeo = new THREE.SphereGeometry(4000, 32, 15);
     const skyMat = new THREE.ShaderMaterial({
       vertexShader: vertexShader,
@@ -84,9 +83,8 @@ export class SkyManager {
     const { topColor, sunIntensity } = getTopColor();
     this.sun.intensity = sunIntensity; 
     
-    const bottomColor = getBottomColor();
-    
     const skyMaterial = this.sky.material as THREE.ShaderMaterial;
+    const bottomColor = getBottomColor();
     skyMaterial.uniforms.topColor.value = topColor;
     skyMaterial.uniforms.bottomColor.value = bottomColor;
 

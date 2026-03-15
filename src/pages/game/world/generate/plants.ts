@@ -32,7 +32,7 @@ const canopySize = trees.canopy.size.max;
 // canopySize => 暂时不在 chunk 的边界生成树
 
 const tallGrass = {
-  frequency: 0.08,
+  frequency: 0.2,
   patchSize: 5,
 }
 
@@ -40,7 +40,7 @@ const flowers =  {
   frequency: 0.019,
 };
 
-const { width, height } = ChunkParams;
+const { width } = ChunkParams;
 const { worldType } = DevControl;
 
 function isAroundEmpty(input: IInstanceData[][][], baseX: number, baseY: number, baseZ: number) {
@@ -106,15 +106,19 @@ export const generatePlants = (
           // Found grass, move one time up
           const baseY = surfaceHeight + 1;
           // 普通的树木生长需要一定的空间，所以需要判断周围是否被其他方块占据
-          if (!isAroundEmpty(input, baseX, baseY, baseZ)) continue;
+          if (!isAroundEmpty(input, baseX, baseY, baseZ)) {
+            hasTree = false;
+            continue;
+          }
           
           // 当前位置需要长树，所以把当前位置的方块设置为泥土块 Set the current block to dirt block
           input[baseX][surfaceHeight][baseZ] = getEmptyDirtBlockData();
 
           const minH = trees.trunkHeight.min;
           const maxH = trees.trunkHeight.max;
-          const trunkHeight = Math.round(World.rng.random() * (maxH - minH)) + minH;
-          const topY = baseY + trunkHeight;
+          const tree_height_rng = World.rng.random();
+          const tree_height = Math.round(tree_height_rng * (maxH - minH)) + minH;
+          const topY = baseY + tree_height;
 
           /**@desc 生成树干 Fill in blocks for the trunk*/
           for (let i = baseY; i < topY; i++) {
@@ -124,48 +128,48 @@ export const generatePlants = (
           /**@desc 生产树冠 树叶 Generate the canopy */
           // generate layer by layer, 4 layers in total
           for (let i = 0; i < 4; i++) {
+            const leaveY = topY - i;
             if (i === 0) {
+              // 最顶层
               // first layer above the height of tree and has 5 leaves in a + shape
-              input[baseX][topY][baseZ] = getTreeLeavesFunc();
-              input[baseX + 1][topY][baseZ] = getTreeLeavesFunc();
-              input[baseX - 1][topY][baseZ] = getTreeLeavesFunc();
-              input[baseX][topY][baseZ + 1] = getTreeLeavesFunc();
-              input[baseX][topY][baseZ - 1] = getTreeLeavesFunc();
+              input[baseX][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX + 1][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX - 1][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX][leaveY][baseZ + 1] = getTreeLeavesFunc();
+              input[baseX][leaveY][baseZ - 1] = getTreeLeavesFunc();
             } else if (i === 1) {
-              // base layer
-              input[baseX][topY - i][baseZ] = getTreeLeavesFunc();
-              input[baseX + 1][topY - i][baseZ] = getTreeLeavesFunc();
-              input[baseX - 1][topY - i][baseZ] = getTreeLeavesFunc();
-              input[baseX][topY - i][baseZ + 1] = getTreeLeavesFunc();
-              input[baseX][topY - i][baseZ - 1] = getTreeLeavesFunc();
+              // 次顶层
+              input[baseX][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX + 1][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX - 1][leaveY][baseZ] = getTreeLeavesFunc();
+              input[baseX][leaveY][baseZ + 1] = getTreeLeavesFunc();
+              input[baseX][leaveY][baseZ - 1] = getTreeLeavesFunc();
 
               // diagonal leaf blocks grow min of 1 and max of 3 blocks away from the trunk
-              const minR = trees.canopy.size.min;
-              const maxR = trees.canopy.size.max;
-              const R = Math.round(World.rng.random() * (maxR - minR)) + minR;
+              // const minR = trees.canopy.size.min;
+              // const maxR = trees.canopy.size.max;
+              // const R = Math.round(World.rng.random() * (maxR - minR)) + minR;;
 
               // grow leaves in a diagonal shape
-              for (let x = -R; x <= R; x++) {
-                for (let z = -R; z <= R; z++) {
-                  if (x * x + z * z > R * R) {
-                    continue;
-                  }
-
-                  if (input[baseX + x][topY - i][baseZ + z].blockId !== BlockID.Air) {
-                    continue;
-                  }
-
-                  if (World.rng.random() > 0.5) {
-                    input[baseX + x][topY - i][baseZ + z] = getTreeLeavesFunc();
+              for (let x = -2; x <= 2; x++) {
+                for (let z = -2; z <= 2; z++) {
+                  // if (x * x + z * z > 2 * 2) {
+                  //   continue;
+                  // }
+                  // if (input[baseX + x][leaveY][baseZ + z].blockId !== BlockID.Air) {
+                  //   continue;
+                  // }
+                  if (World.rng.random() > 0.4) {
+                    input[baseX + x][leaveY][baseZ + z] = getTreeLeavesFunc();
                   }
                 }
               }
-            } else if (i === 2 || i == 3) {
+            } else if (i === 2) {
               for (let x = -2; x <= 2; x++) {
                 for (let z = -2; z <= 2; z++) {
                   /**@desc 如果当前 block 不是 Air 则跳过 */
-                  if (input[baseX + x][topY - i][baseZ + z].blockId !== BlockID.Air) continue;
-                  input[baseX + x][topY - i][baseZ + z] = getTreeLeavesFunc();
+                  if (input[baseX + x][leaveY][baseZ + z].blockId !== BlockID.Air) continue;
+                  input[baseX + x][leaveY][baseZ + z] = getTreeLeavesFunc();
                 }
               }
 
@@ -174,10 +178,33 @@ export const generatePlants = (
                 for (const z of [-2, 2]) {
                   // 避免影响到别的 block
                   if (
-                    (input[baseX + x][topY - i][baseZ + z].blockId === BlockID.OakLeaves ||
-                      input[baseX + x][topY - i][baseZ + z].blockId === BlockID.BirchLeaves) 
-                      && World.rng.random() > 0.5) {
-                    input[baseX + x][topY - i][baseZ + z] = getEmptyAirBlockData();
+                    (input[baseX + x][leaveY][baseZ + z].blockId === BlockID.OakLeaves ||
+                      input[baseX + x][leaveY][baseZ + z].blockId === BlockID.BirchLeaves) 
+                      && World.rng.random() > 0.4) {
+                    input[baseX + x][leaveY][baseZ + z] = getEmptyAirBlockData();
+                    input[baseX + x][leaveY+1][baseZ + z] = getEmptyAirBlockData();
+                  }
+                }
+              }
+            } else if (tree_height > 4 && i === 3){
+              for (let x = -2; x <= 2; x++) {
+                for (let z = -2; z <= 2; z++) {
+                  /**@desc 如果当前 block 不是 Air 则跳过 */
+                  if (input[baseX + x][leaveY][baseZ + z].blockId !== BlockID.Air) continue;
+                  input[baseX + x][leaveY][baseZ + z] = getTreeLeavesFunc();
+                }
+              }
+
+              /**@desc 随机去除一些叶子 remove 4 corners randomly*/
+              for (const x of [-2, 2]) {
+                for (const z of [-2, 2]) {
+                  // 避免影响到别的 block
+                  if (
+                    (input[baseX + x][leaveY][baseZ + z].blockId === BlockID.OakLeaves ||
+                      input[baseX + x][leaveY][baseZ + z].blockId === BlockID.BirchLeaves) 
+                      && World.rng.random() > 0.3) {
+                    input[baseX + x][leaveY][baseZ + z] = getEmptyAirBlockData();
+                    input[baseX + x][leaveY][baseZ + z] = getEmptyAirBlockData();
                   }
                 }
               }
@@ -191,9 +218,11 @@ export const generatePlants = (
       // generate grass & flower 草和花在草方块上生长
       const upperY = surfaceHeight + 1;
       if (input[x][upperY][z].blockId !== BlockID.Air) continue;
-      if (World.rng.random() < tallGrass.frequency) {
+      const grass_rng = World.rng.random();
+      if (grass_rng < tallGrass.frequency) {
         hasGrass = true;
-        input[x][upperY][z] = getEmptyTallGrassBlockData();
+        input[x][upperY][z] = grass_rng < 0.06 ? getEmptyShortGrassBlockData() : getEmptyTallGrassBlockData();
+
         // Define the maximum distance from the center
         const maxDistance = tallGrass.patchSize;
 
@@ -201,7 +230,8 @@ export const generatePlants = (
         let currentX = x;
         let currentZ = z;
         for (let i = 0; i < maxDistance; i++) {
-          const direction = World.rng.random() * 2 * Math.PI; // Random direction
+          // const grass_rng2 = World.rng.random();
+          const direction = grass_rng * 2 * Math.PI; // Random direction
           currentX += Math.round(Math.cos(direction));
           currentZ += Math.round(Math.sin(direction));
 
@@ -214,7 +244,8 @@ export const generatePlants = (
             input[currentX][upperY][currentZ].blockId === BlockID.Air &&
             input[currentX][surfaceHeight][currentZ].blockId === BlockID.GrassBlock
           ) {
-            input[currentX][upperY][currentZ] = getEmptyShortGrassBlockData();
+            // input[currentX][upperY][currentZ] = getEmptyShortGrassBlockData();
+            input[currentX][upperY][currentZ] = grass_rng < 0.06 ? getEmptyShortGrassBlockData() : getEmptyTallGrassBlockData();
             continue;
           }
         }

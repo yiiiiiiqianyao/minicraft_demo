@@ -35,6 +35,7 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
     const instanceId1 = mesh.count++;
     const instanceId2 = mesh.count++;
     const isFlower = blockId === BlockID.FlowerDandelion || blockId === BlockID.FlowerRose;
+    const isGrass = blockId == BlockID.TallGrass;
     if (blockId === BlockID.FlowerDandelion) {
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2] = 0.2;
         mesh.geometry.attributes.aCrossOffset.array[instanceId1 * 2 + 1] = 0.8;
@@ -66,15 +67,16 @@ function InstanceMeshAddCrossPlants(mesh: THREE.InstancedMesh, blockId: BlockID,
     // 在添加花实例的时候需要有一点偏移
     const xOffset = isFlower ? jitterNumber(0.5, 0.15) : 0.5;
     const zOffset = isFlower ? jitterNumber(0.5, 0.15) : 0.5;
+    const yOffset = isGrass ? jitterNumber(0.25, 0.25): 0.5;
     // 花的实例矩阵需要偏移0.2个单位，因为花的模型是0.6高
     const matrix1 = new THREE.Matrix4();
     matrix1.makeRotationY(Math.PI / 4);
-    matrix1.setPosition(x + xOffset, y + 0.5, z + zOffset);
+    matrix1.setPosition(x + xOffset, y + yOffset, z + zOffset);
     mesh.setMatrixAt(instanceId1, matrix1);
 
     const matrix2 = new THREE.Matrix4();
     matrix2.makeRotationY(-Math.PI / 4);
-    matrix2.setPosition(x + xOffset, y + 0.5, z + zOffset);
+    matrix2.setPosition(x + xOffset, y + yOffset, z + zOffset);
     mesh.setMatrixAt(instanceId2, matrix2);
     return [instanceId1, instanceId2];
 }

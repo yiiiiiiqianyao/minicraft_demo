@@ -34,11 +34,12 @@ export class Physics {
       // TODO 待优化 现在频繁计算
       PhysicsParams.accumulator -= PhysicsParams.stepSize;
       // 清除之前的碰撞辅助可视化
-      this.helpers?.clear();
+      if (this.helpers && this.helpers.visible) {
+        this.helpers.clear();
+      }
       // 玩家物理模拟
       this.playerPhysics.update();
       // 掉落物品物理模拟
-      // TODO 待优化性能
       this.dropPhysics.update();
     }
   }
